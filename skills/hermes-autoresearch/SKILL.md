@@ -128,6 +128,27 @@ cronjob create \
   --deliver "telegram:chat_id:thread_id"
 ```
 
+### Delivery Format Pitfalls
+
+**ĐỊNH DẠNG ĐÚNG:** `telegram:chat_id:thread_id`
+- Ví dụ: `telegram:1132914873:3764041476`
+- Dùng DẤU HAI CHẤM (`:`), KHÔNG phải dấu slash (`/`)
+
+**LỖI THƯỜNG GẶP:**
+```
+invalid literal for int(): '1132914873:3764041476/604'
+```
+→ Thread ID bị thừa suffix `/604` hoặc dùng `/` thay vì `:`
+
+**CÁCH SỬA:** Update job với deliver đúng:
+```bash
+cronjob update --job_id <id> --deliver "telegram:chat_id:thread_id"
+```
+
+**CÁCH DEBUG:** Kiểm tra `last_status` và `last_delivery_error`:
+- `last_status: ok` + `last_delivery_error` ≠ null → Job chạy OK nhưng gửi thất bại
+- `last_status: ok` + `last_delivery_error: null` → Job thành công hoàn toàn
+
 ## Constraints
 - MAX 30 phút chạy
 - KHÔNG sửa production code
