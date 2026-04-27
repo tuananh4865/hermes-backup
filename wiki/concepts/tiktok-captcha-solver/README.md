@@ -1,3 +1,11 @@
+---
+title: "TikTok CAPTCHA Solver — Miễn Phí 100%"
+created: 2026-04-28
+updated: 2026-04-28
+type: concept
+tags: [auto-filled]
+---
+
 # TikTok CAPTCHA Solver — Miễn Phí 100%
 
 > Toolkit miễn phí hoàn toàn để bypass TikTok CAPTCHA: puzzle slider, rotate, 3D shapes.
