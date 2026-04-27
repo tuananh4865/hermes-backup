@@ -1,0 +1,59 @@
+# Sensitive data
+*.key
+*.pem
+*.env
+.env
+secrets/
+credentials/
+
+# API keys
+api_key
+MINIMAX_API_KEY
+GITHUB_PAT
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+logs/
+
+# Large media
+*.mp4
+*.mov
+*.avi
+*.zip
+*.tar.gz
+*.tgz
+
+# Node
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sessions & large data
+sessions/
+*.session
+cron/output/
+trajectory_samples.jsonl
+
+# Large folders - store separately
+wiki/
+scripts/
+projects/
