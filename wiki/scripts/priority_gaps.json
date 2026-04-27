@@ -1,0 +1,121 @@
+[
+  {
+    "topic": "kubernetes",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "stt",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "rest",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "ollama",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "graphql",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "dpo",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "ci-cd",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 2,
+    "user_interest": 0
+  },
+  {
+    "topic": "apple-silicon",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 2,
+    "user_interest": 0
+  },
+  {
+    "topic": "tts",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "llama.cpp",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "testing",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "api",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "sqlite",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "docker",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "rlhf",
+    "score": 10.0,
+    "mapped_interest": null,
+    "connections": 0,
+    "user_interest": 0
+  },
+  {
+    "topic": "vector-db",
+    "score": 8.0,
+    "mapped_interest": "embedding",
+    "connections": 1,
+    "user_interest": 0
+  },
+  {
+    "topic": "logseq",
+    "score": 8.0,
+    "mapped_interest": null,
+    "connections": 1,
+    "user_interest": 0
+  }
+]

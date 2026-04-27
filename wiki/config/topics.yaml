@@ -1,0 +1,111 @@
+# Wiki Topics Configuration
+# Used by Morning Ritual cron for deep research
+
+topics:
+  # Core AI Agent Topics
+  - name: AI Agent Development
+    keywords:
+      - agentic AI
+      - autonomous AI
+      - AI agent frameworks
+      - multi-agent systems
+    priority: critical
+
+  - name: Self-Improving Agents
+    keywords:
+      - self-improving AI
+      - self-healing systems
+      - autonomous AI
+      - continuous learning agents
+    priority: critical
+
+  - name: Local LLM
+    keywords:
+      - LM Studio
+      - Ollama
+      - MLX
+      - local AI models
+      - llama.cpp
+    priority: high
+
+  - name: Hermes Agent
+    keywords:
+      - Hermes agent
+      - Claude Code
+      - AI coding agents
+    priority: high
+
+  # Technical Topics
+  - name: MCP (Model Context Protocol)
+    keywords:
+      - MCP protocol
+      - Model Context Protocol
+      - MCP ecosystem
+    priority: high
+
+  - name: Agent Frameworks
+    keywords:
+      - LangGraph
+      - CrewAI
+      - AutoGen
+      - LlamaIndex agents
+    priority: high
+
+  - name: RAG for Agents
+    keywords:
+      - RAG agents
+      - retrieval augmented generation
+      - agent memory
+    priority: medium
+
+  # Autonomous Systems
+  - name: Wiki Intelligence
+    keywords:
+      - knowledge base automation
+      - self-maintaining wiki
+      - LLM wiki
+    priority: high
+
+  - name: Agent Orchestration
+    keywords:
+      - agent orchestration
+      - multi-agent coordination
+      - agent pipelines
+    priority: medium
+
+# Research Sources (ordered by priority)
+sources:
+  - name: arxiv
+    priority: 95
+    url_pattern: "https://arxiv.org/search/?searchtype=all&query="
+
+  - name: github
+    priority: 85
+    url_pattern: "https://github.com/search?q="
+
+  - name: tech blogs
+    priority: 70
+    keywords:
+      - towardsdatascience
+      - huggingface.co/blog
+      - anthropic.com/research
+
+  - name: reddit
+    priority: 55
+    subreddits:
+      - r/LocalLLaMA
+      - r/MachineLearning
+      - r/ClaudeAI
+      - r/Artificial
+
+# Deep Research Settings
+research:
+  min_results_per_topic: 15
+  max_results_per_topic: 50
+  dedupe_by_url: true
+  require_citation: true
+
+# Update Schedule
+schedule:
+  full_research_days: 7    # Full deep research every N days
+  quick_scan_daily: true   # Quick topic scan daily

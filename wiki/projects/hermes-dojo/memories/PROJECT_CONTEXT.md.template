@@ -1,0 +1,128 @@
+# Project State Template
+
+## Project Information
+
+**Project:** {project_name}
+**Start Date:** {YYYY-MM-DD}
+**Last Updated:** {YYYY-MM-DD}
+**Hermes Version:** {version if applicable}
+
+## Current Task
+
+**Task:** {Brief description of what we're working on}
+
+**User Request:**
+```
+{Original request from user}
+```
+
+**Goal:**
+- [ ] {Specific outcome 1}
+- [ ] {Specific outcome 2}
+- [ ] {Specific outcome 3}
+
+---
+
+## Task Status
+
+| Phase | Status | Date Completed |
+|-------|--------|----------------|
+| Research | ✅ Done / 🔄 In Progress / ⏳ Pending | |
+| Plan | ✅ Done / 🔄 In Progress / ⏳ Pending | |
+| Implementation | ✅ Done / 🔄 In Progress / ⏳ Pending | |
+| Testing | ✅ Done / 🔄 In Progress / ⏳ Pending | |
+
+### Implementation Progress
+
+**Overall:** {X}% complete
+
+#### Steps Completed
+- [x] **{Step 1 description}** — {date}
+- [x] **{Step 2 description}** — {date}
+
+#### Steps In Progress
+- [ ] **{Step 3 description}** — Started: {date}
+  - Current work: {what is being done}
+  - Blocker: {if any}
+
+#### Steps Pending
+- [ ] **{Step 4 description}**
+- [ ] **{Step 5 description}**
+
+---
+
+## Decisions Made
+
+| Decision | Rationale | Date |
+|----------|-----------|------|
+| {Decision} | {Why this choice} | {YYYY-MM-DD} |
+| {Decision} | {Why this choice} | {YYYY-MM-DD} |
+
+---
+
+## Files Modified
+
+| File | Change | Date |
+|------|--------|------|
+| {file path} | {brief description} | {YYYY-MM-DD} |
+
+---
+
+## Blocker
+
+**Current Blocker:** {description}
+
+**Mitigation:** {what we're doing about it}
+
+---
+
+## Context for Next Session
+
+**What was happening:**
+{What work was in progress when we stopped}
+
+**What was being worked on:**
+{Current task details}
+
+**Where to continue from:**
+{Specific place to pick up}
+
+**What needs to happen next:**
+1. {Next action 1}
+2. {Next action 2}
+
+---
+
+## Testing
+
+**Test Status:**
+- [ ] Unit tests written
+- [ ] Unit tests passing
+- [ ] Integration tests written
+- [ ] Integration tests passing
+
+**Last Test Run:** {YYYY-MM-DD}
+**Result:** {Pass/Fail}
+
+---
+
+## Recent Changes
+
+| Date | Change | Files |
+|------|--------|-------|
+| {YYYY-MM-DD} | {Description} | {files} |
+| {YYYY-MM-DD} | {Description} | {files} |
+
+---
+
+## Notes
+
+{Any other relevant notes}
+
+---
+
+## Related
+
+- Research: [link to research artifact]
+- Plan: [link to plan artifact]
+- Repository: [link to repo if applicable]

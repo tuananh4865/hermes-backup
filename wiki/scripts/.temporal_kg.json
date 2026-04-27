@@ -1,0 +1,3562 @@
+{
+  "topics": {
+    "huggingface": {
+      "learned_at": "2026-04-09T16:02:57.068694",
+      "last_verified": "2026-04-09T16:02:57.068694",
+      "first_source": "concepts/huggingface.md",
+      "mention_count": 1,
+      "aliases": [
+        "huggingface"
+      ],
+      "tags": []
+    },
+    "models": {
+      "learned_at": "2026-04-09T16:02:57.068748",
+      "last_verified": "2026-04-09T16:02:57.071590",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "models"
+      ],
+      "tags": []
+    },
+    "embedding": {
+      "learned_at": "2026-04-09T16:02:57.068754",
+      "last_verified": "2026-04-09T16:02:57.071401",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "embedding"
+      ],
+      "tags": []
+    },
+    "fine-tuning": {
+      "learned_at": "2026-04-09T16:02:57.068758",
+      "last_verified": "2026-04-09T16:02:57.072033",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "fine-tuning"
+      ],
+      "tags": []
+    },
+    "tag:huggingface": {
+      "learned_at": "2026-04-09T16:02:57.068807",
+      "last_verified": "2026-04-09T16:02:57.068807",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:huggingface"
+      ],
+      "tags": []
+    },
+    "tag:auto-generated": {
+      "learned_at": "2026-04-09T16:02:57.068811",
+      "last_verified": "2026-04-09T16:02:57.072431",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:auto-generated"
+      ],
+      "tags": []
+    },
+    "mistake-log": {
+      "learned_at": "2026-04-09T16:02:57.068862",
+      "last_verified": "2026-04-09T16:02:57.068862",
+      "first_source": "concepts/mistake-log.md",
+      "mention_count": 1,
+      "aliases": [
+        "mistake-log"
+      ],
+      "tags": []
+    },
+    "projects/personal-finance-tracker/mistakes/001-date-format-mismatch": {
+      "learned_at": "2026-04-09T16:02:57.068871",
+      "last_verified": "2026-04-09T16:02:57.068871",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "projects/personal-finance-tracker/mistakes/001-date-format-mismatch"
+      ],
+      "tags": []
+    },
+    "retrospectives": {
+      "learned_at": "2026-04-09T16:02:57.068878",
+      "last_verified": "2026-04-09T16:02:57.070434",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "retrospectives"
+      ],
+      "tags": []
+    },
+    "self-healing-wiki": {
+      "learned_at": "2026-04-09T16:02:57.068882",
+      "last_verified": "2026-04-09T16:02:57.069125",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "self-healing-wiki"
+      ],
+      "tags": []
+    },
+    "project-management": {
+      "learned_at": "2026-04-09T16:02:57.068885",
+      "last_verified": "2026-04-09T16:02:57.071238",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "project-management"
+      ],
+      "tags": []
+    },
+    "tag:mistakes": {
+      "learned_at": "2026-04-09T16:02:57.068893",
+      "last_verified": "2026-04-09T16:02:57.073654",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:mistakes"
+      ],
+      "tags": []
+    },
+    "tag:learning": {
+      "learned_at": "2026-04-09T16:02:57.068896",
+      "last_verified": "2026-04-09T16:02:57.070457",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:learning"
+      ],
+      "tags": []
+    },
+    "tag:self-improvement": {
+      "learned_at": "2026-04-09T16:02:57.068900",
+      "last_verified": "2026-04-09T16:02:57.071717",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:self-improvement"
+      ],
+      "tags": []
+    },
+    "tag:meta": {
+      "learned_at": "2026-04-09T16:02:57.068904",
+      "last_verified": "2026-04-09T16:02:57.073671",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:meta"
+      ],
+      "tags": []
+    },
+    "email": {
+      "learned_at": "2026-04-09T16:02:57.068946",
+      "last_verified": "2026-04-09T16:02:57.068946",
+      "first_source": "concepts/email.md",
+      "mention_count": 1,
+      "aliases": [
+        "email"
+      ],
+      "tags": []
+    },
+    "deep-learning-theory": {
+      "learned_at": "2026-04-09T16:02:57.068995",
+      "last_verified": "2026-04-09T16:02:57.068995",
+      "first_source": "concepts/deep-learning-theory.md",
+      "mention_count": 1,
+      "aliases": [
+        "deep-learning-theory"
+      ],
+      "tags": []
+    },
+    "local-llm": {
+      "learned_at": "2026-04-09T16:02:57.069001",
+      "last_verified": "2026-04-09T16:02:57.070893",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "local-llm"
+      ],
+      "tags": []
+    },
+    "tag:deep-learning": {
+      "learned_at": "2026-04-09T16:02:57.069007",
+      "last_verified": "2026-04-09T16:02:57.069007",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:deep-learning"
+      ],
+      "tags": []
+    },
+    "tag:theory": {
+      "learned_at": "2026-04-09T16:02:57.069011",
+      "last_verified": "2026-04-09T16:02:57.069011",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:theory"
+      ],
+      "tags": []
+    },
+    "tag:neural-networks": {
+      "learned_at": "2026-04-09T16:02:57.069015",
+      "last_verified": "2026-04-09T16:02:57.069015",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:neural-networks"
+      ],
+      "tags": []
+    },
+    "tag:optimization": {
+      "learned_at": "2026-04-09T16:02:57.069018",
+      "last_verified": "2026-04-09T16:02:57.070711",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:optimization"
+      ],
+      "tags": []
+    },
+    "rag": {
+      "learned_at": "2026-04-09T16:02:57.069060",
+      "last_verified": "2026-04-09T16:02:57.069060",
+      "first_source": "concepts/rag.md",
+      "mention_count": 1,
+      "aliases": [
+        "rag"
+      ],
+      "tags": []
+    },
+    "knowledge-base": {
+      "learned_at": "2026-04-09T16:02:57.069064",
+      "last_verified": "2026-04-09T16:02:57.072733",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "knowledge-base"
+      ],
+      "tags": []
+    },
+    "search": {
+      "learned_at": "2026-04-09T16:02:57.069072",
+      "last_verified": "2026-04-09T16:02:57.069315",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "search"
+      ],
+      "tags": []
+    },
+    "tag:rag": {
+      "learned_at": "2026-04-09T16:02:57.069077",
+      "last_verified": "2026-04-09T16:02:57.072813",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:rag"
+      ],
+      "tags": []
+    },
+    "nonexistent-page": {
+      "learned_at": "2026-04-09T16:02:57.069132",
+      "last_verified": "2026-04-09T16:02:57.072956",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "nonexistent-page"
+      ],
+      "tags": []
+    },
+    "wikilink": {
+      "learned_at": "2026-04-09T16:02:57.069137",
+      "last_verified": "2026-04-09T16:02:57.072303",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "wikilink"
+      ],
+      "tags": []
+    },
+    "wiki": {
+      "learned_at": "2026-04-09T16:02:57.069142",
+      "last_verified": "2026-04-09T16:02:57.069940",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "wiki"
+      ],
+      "tags": []
+    },
+    "github": {
+      "learned_at": "2026-04-09T16:02:57.069152",
+      "last_verified": "2026-04-09T16:02:57.070613",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "github"
+      ],
+      "tags": []
+    },
+    "obsidian": {
+      "learned_at": "2026-04-09T16:02:57.069156",
+      "last_verified": "2026-04-09T16:02:57.071057",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "obsidian"
+      ],
+      "tags": []
+    },
+    "wiki-enhancement-roadmap": {
+      "learned_at": "2026-04-09T16:02:57.069163",
+      "last_verified": "2026-04-09T16:02:57.069404",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "wiki-enhancement-roadmap"
+      ],
+      "tags": []
+    },
+    "karpathy-llm-knowledge-base": {
+      "learned_at": "2026-04-09T16:02:57.069168",
+      "last_verified": "2026-04-09T16:02:57.069615",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "karpathy-llm-knowledge-base"
+      ],
+      "tags": []
+    },
+    "tag:wiki": {
+      "learned_at": "2026-04-09T16:02:57.069175",
+      "last_verified": "2026-04-09T16:02:57.072249",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:wiki"
+      ],
+      "tags": []
+    },
+    "tag:automation": {
+      "learned_at": "2026-04-09T16:02:57.069179",
+      "last_verified": "2026-04-09T16:02:57.073019",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:automation"
+      ],
+      "tags": []
+    },
+    "tag:self-healing": {
+      "learned_at": "2026-04-09T16:02:57.069183",
+      "last_verified": "2026-04-09T16:02:57.069183",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:self-healing"
+      ],
+      "tags": []
+    },
+    "tag:ai-agent": {
+      "learned_at": "2026-04-09T16:02:57.069187",
+      "last_verified": "2026-04-09T16:02:57.069187",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:ai-agent"
+      ],
+      "tags": []
+    },
+    "intelligent-wiki-roadmap": {
+      "learned_at": "2026-04-09T16:02:57.069235",
+      "last_verified": "2026-04-09T16:02:57.069235",
+      "first_source": "concepts/intelligent-wiki-roadmap.md",
+      "mention_count": 1,
+      "aliases": [
+        "intelligent-wiki-roadmap"
+      ],
+      "tags": []
+    },
+    "intelligent-wiki-architecture": {
+      "learned_at": "2026-04-09T16:02:57.069241",
+      "last_verified": "2026-04-09T16:02:57.071453",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "intelligent-wiki-architecture"
+      ],
+      "tags": []
+    },
+    "project-tracker": {
+      "learned_at": "2026-04-09T16:02:57.069247",
+      "last_verified": "2026-04-09T16:02:57.069472",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "project-tracker"
+      ],
+      "tags": []
+    },
+    "tag:roadmap": {
+      "learned_at": "2026-04-09T16:02:57.069265",
+      "last_verified": "2026-04-09T16:02:57.072257",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:roadmap"
+      ],
+      "tags": []
+    },
+    "tag:ai": {
+      "learned_at": "2026-04-09T16:02:57.069269",
+      "last_verified": "2026-04-09T16:02:57.069269",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:ai"
+      ],
+      "tags": []
+    },
+    "tag:self-improving": {
+      "learned_at": "2026-04-09T16:02:57.069273",
+      "last_verified": "2026-04-09T16:02:57.069273",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:self-improving"
+      ],
+      "tags": []
+    },
+    "tag:architecture": {
+      "learned_at": "2026-04-09T16:02:57.069278",
+      "last_verified": "2026-04-09T16:02:57.071490",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:architecture"
+      ],
+      "tags": []
+    },
+    "002-why-vue-alternative|considered-vue-but-chose-react": {
+      "learned_at": "2026-04-09T16:02:57.069359",
+      "last_verified": "2026-04-09T16:02:57.069359",
+      "first_source": "concepts/002-why-vue-alternative|considered-vue-but-chose-react.md",
+      "mention_count": 1,
+      "aliases": [
+        "002-why-vue-alternative|considered-vue-but-chose-react"
+      ],
+      "tags": []
+    },
+    "topic-workflow": {
+      "learned_at": "2026-04-09T16:02:57.069413",
+      "last_verified": "2026-04-09T16:02:57.070826",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "topic-workflow"
+      ],
+      "tags": []
+    },
+    "tag:enhancement": {
+      "learned_at": "2026-04-09T16:02:57.069432",
+      "last_verified": "2026-04-09T16:02:57.069432",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:enhancement"
+      ],
+      "tags": []
+    },
+    "tag:project": {
+      "learned_at": "2026-04-09T16:02:57.069479",
+      "last_verified": "2026-04-09T16:02:57.069479",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:project"
+      ],
+      "tags": []
+    },
+    "tag:tracker": {
+      "learned_at": "2026-04-09T16:02:57.069484",
+      "last_verified": "2026-04-09T16:02:57.069484",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:tracker"
+      ],
+      "tags": []
+    },
+    "tag:wiki-enhancement": {
+      "learned_at": "2026-04-09T16:02:57.069488",
+      "last_verified": "2026-04-09T16:02:57.069488",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:wiki-enhancement"
+      ],
+      "tags": []
+    },
+    "tag:intelligent-wiki": {
+      "learned_at": "2026-04-09T16:02:57.069493",
+      "last_verified": "2026-04-09T16:02:57.069493",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:intelligent-wiki"
+      ],
+      "tags": []
+    },
+    "dataset": {
+      "learned_at": "2026-04-09T16:02:57.069528",
+      "last_verified": "2026-04-09T16:02:57.069528",
+      "first_source": "concepts/dataset.md",
+      "mention_count": 1,
+      "aliases": [
+        "dataset"
+      ],
+      "tags": []
+    },
+    ".merge-plan": {
+      "learned_at": "2026-04-09T16:02:57.069581",
+      "last_verified": "2026-04-09T16:02:57.069581",
+      "first_source": "concepts/.merge-plan.md",
+      "mention_count": 1,
+      "aliases": [
+        ".merge-plan"
+      ],
+      "tags": []
+    },
+    "github-sync-setup": {
+      "learned_at": "2026-04-09T16:02:57.069623",
+      "last_verified": "2026-04-09T16:02:57.072665",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "github-sync-setup"
+      ],
+      "tags": []
+    },
+    "user-profile": {
+      "learned_at": "2026-04-09T16:02:57.069628",
+      "last_verified": "2026-04-09T16:02:57.070511",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "user-profile"
+      ],
+      "tags": []
+    },
+    "tag:karpathy": {
+      "learned_at": "2026-04-09T16:02:57.069634",
+      "last_verified": "2026-04-09T16:02:57.069634",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:karpathy"
+      ],
+      "tags": []
+    },
+    "tag:llm": {
+      "learned_at": "2026-04-09T16:02:57.069639",
+      "last_verified": "2026-04-09T16:02:57.072082",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:llm"
+      ],
+      "tags": []
+    },
+    "tag:knowledge-base": {
+      "learned_at": "2026-04-09T16:02:57.069645",
+      "last_verified": "2026-04-09T16:02:57.072804",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:knowledge-base"
+      ],
+      "tags": []
+    },
+    "tag:obsidian": {
+      "learned_at": "2026-04-09T16:02:57.069654",
+      "last_verified": "2026-04-09T16:02:57.072670",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:obsidian"
+      ],
+      "tags": []
+    },
+    "001-tech-stack|chose-next.js-+-prisma-+-sqlite": {
+      "learned_at": "2026-04-09T16:02:57.069690",
+      "last_verified": "2026-04-09T16:02:57.069690",
+      "first_source": "concepts/001-tech-stack|chose-next.js-+-prisma-+-sqlite.md",
+      "mention_count": 1,
+      "aliases": [
+        "001-tech-stack|chose-next.js-+-prisma-+-sqlite"
+      ],
+      "tags": []
+    },
+    "watchdog-system": {
+      "learned_at": "2026-04-09T16:02:57.069733",
+      "last_verified": "2026-04-09T16:02:57.069733",
+      "first_source": "concepts/watchdog-system.md",
+      "mention_count": 1,
+      "aliases": [
+        "watchdog-system"
+      ],
+      "tags": []
+    },
+    "wiki-self-evolution": {
+      "learned_at": "2026-04-09T16:02:57.069742",
+      "last_verified": "2026-04-09T16:02:57.071677",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "wiki-self-evolution"
+      ],
+      "tags": []
+    },
+    "wiki-master-plan": {
+      "learned_at": "2026-04-09T16:02:57.069747",
+      "last_verified": "2026-04-09T16:02:57.072145",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "wiki-master-plan"
+      ],
+      "tags": []
+    },
+    "tag:system": {
+      "learned_at": "2026-04-09T16:02:57.069763",
+      "last_verified": "2026-04-09T16:02:57.069763",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:system"
+      ],
+      "tags": []
+    },
+    "001-decision-name|link-to-decision-note": {
+      "learned_at": "2026-04-09T16:02:57.069800",
+      "last_verified": "2026-04-09T16:02:57.069800",
+      "first_source": "concepts/001-decision-name|link-to-decision-note.md",
+      "mention_count": 1,
+      "aliases": [
+        "001-decision-name|link-to-decision-note"
+      ],
+      "tags": []
+    },
+    "training": {
+      "learned_at": "2026-04-09T16:02:57.069842",
+      "last_verified": "2026-04-09T16:02:57.069842",
+      "first_source": "concepts/training.md",
+      "mention_count": 1,
+      "aliases": [
+        "training"
+      ],
+      "tags": []
+    },
+    "tag:training": {
+      "learned_at": "2026-04-09T16:02:57.069860",
+      "last_verified": "2026-04-09T16:02:57.072075",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:training"
+      ],
+      "tags": []
+    },
+    "pagename": {
+      "learned_at": "2026-04-09T16:02:57.069898",
+      "last_verified": "2026-04-09T16:02:57.069898",
+      "first_source": "concepts/pagename.md",
+      "mention_count": 1,
+      "aliases": [
+        "pagename"
+      ],
+      "tags": []
+    },
+    "automation": {
+      "learned_at": "2026-04-09T16:02:57.069953",
+      "last_verified": "2026-04-09T16:02:57.073006",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "automation"
+      ],
+      "tags": []
+    },
+    "lm-studio": {
+      "learned_at": "2026-04-09T16:02:57.069958",
+      "last_verified": "2026-04-09T16:02:57.071319",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "lm-studio"
+      ],
+      "tags": []
+    },
+    "tag:information-management": {
+      "learned_at": "2026-04-09T16:02:57.070000",
+      "last_verified": "2026-04-09T16:02:57.070000",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:information-management"
+      ],
+      "tags": []
+    },
+    "tag:retrospectives": {
+      "learned_at": "2026-04-09T16:02:57.070451",
+      "last_verified": "2026-04-09T16:02:57.070451",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:retrospectives"
+      ],
+      "tags": []
+    },
+    "tag:sessions": {
+      "learned_at": "2026-04-09T16:02:57.070462",
+      "last_verified": "2026-04-09T16:02:57.070462",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:sessions"
+      ],
+      "tags": []
+    },
+    "tag:personal": {
+      "learned_at": "2026-04-09T16:02:57.070527",
+      "last_verified": "2026-04-09T16:02:57.070527",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:personal"
+      ],
+      "tags": []
+    },
+    "tag:user-profile": {
+      "learned_at": "2026-04-09T16:02:57.070532",
+      "last_verified": "2026-04-09T16:02:57.070532",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:user-profile"
+      ],
+      "tags": []
+    },
+    "phase-3-name": {
+      "learned_at": "2026-04-09T16:02:57.070568",
+      "last_verified": "2026-04-09T16:02:57.070568",
+      "first_source": "concepts/phase-3-name.md",
+      "mention_count": 1,
+      "aliases": [
+        "phase-3-name"
+      ],
+      "tags": []
+    },
+    "tag:github": {
+      "learned_at": "2026-04-09T16:02:57.070632",
+      "last_verified": "2026-04-09T16:02:57.072687",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:github"
+      ],
+      "tags": []
+    },
+    "tag:git": {
+      "learned_at": "2026-04-09T16:02:57.070637",
+      "last_verified": "2026-04-09T16:02:57.071946",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:git"
+      ],
+      "tags": []
+    },
+    "tag:sync": {
+      "learned_at": "2026-04-09T16:02:57.070643",
+      "last_verified": "2026-04-09T16:02:57.072679",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:sync"
+      ],
+      "tags": []
+    },
+    "tag:collaboration": {
+      "learned_at": "2026-04-09T16:02:57.070648",
+      "last_verified": "2026-04-09T16:02:57.070648",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:collaboration"
+      ],
+      "tags": []
+    },
+    "apple-silicon-llm-optimization": {
+      "learned_at": "2026-04-09T16:02:57.070685",
+      "last_verified": "2026-04-09T16:02:57.070685",
+      "first_source": "concepts/apple-silicon-llm-optimization.md",
+      "mention_count": 1,
+      "aliases": [
+        "apple-silicon-llm-optimization"
+      ],
+      "tags": []
+    },
+    "tag:apple-silicon": {
+      "learned_at": "2026-04-09T16:02:57.070700",
+      "last_verified": "2026-04-09T16:02:57.070700",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:apple-silicon"
+      ],
+      "tags": []
+    },
+    "tag:mlx": {
+      "learned_at": "2026-04-09T16:02:57.070705",
+      "last_verified": "2026-04-09T16:02:57.070705",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:mlx"
+      ],
+      "tags": []
+    },
+    "tag:local-ai": {
+      "learned_at": "2026-04-09T16:02:57.070716",
+      "last_verified": "2026-04-09T16:02:57.071349",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:local-ai"
+      ],
+      "tags": []
+    },
+    "tag:ml": {
+      "learned_at": "2026-04-09T16:02:57.070721",
+      "last_verified": "2026-04-09T16:02:57.072067",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:ml"
+      ],
+      "tags": []
+    },
+    "lora": {
+      "learned_at": "2026-04-09T16:02:57.070758",
+      "last_verified": "2026-04-09T16:02:57.070758",
+      "first_source": "concepts/lora.md",
+      "mention_count": 1,
+      "aliases": [
+        "lora"
+      ],
+      "tags": []
+    },
+    "tag:lora": {
+      "learned_at": "2026-04-09T16:02:57.070784",
+      "last_verified": "2026-04-09T16:02:57.070784",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:lora"
+      ],
+      "tags": []
+    },
+    "tag:workflow": {
+      "learned_at": "2026-04-09T16:02:57.070842",
+      "last_verified": "2026-04-09T16:02:57.073036",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:workflow"
+      ],
+      "tags": []
+    },
+    "tag:topic-processing": {
+      "learned_at": "2026-04-09T16:02:57.070848",
+      "last_verified": "2026-04-09T16:02:57.070848",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:topic-processing"
+      ],
+      "tags": []
+    },
+    "tag:local-llm": {
+      "learned_at": "2026-04-09T16:02:57.070914",
+      "last_verified": "2026-04-09T16:02:57.070914",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:local-llm"
+      ],
+      "tags": []
+    },
+    "tag:inference": {
+      "learned_at": "2026-04-09T16:02:57.070926",
+      "last_verified": "2026-04-09T16:02:57.071366",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:inference"
+      ],
+      "tags": []
+    },
+    "tag:privacy": {
+      "learned_at": "2026-04-09T16:02:57.070931",
+      "last_verified": "2026-04-09T16:02:57.070931",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:privacy"
+      ],
+      "tags": []
+    },
+    "phase-2-name": {
+      "learned_at": "2026-04-09T16:02:57.070968",
+      "last_verified": "2026-04-09T16:02:57.070968",
+      "first_source": "concepts/phase-2-name.md",
+      "mention_count": 1,
+      "aliases": [
+        "phase-2-name"
+      ],
+      "tags": []
+    },
+    "karpathy-llm-knowledge-base|karpathy's-insight": {
+      "learned_at": "2026-04-09T16:02:57.071012",
+      "last_verified": "2026-04-09T16:02:57.071012",
+      "first_source": "concepts/karpathy-llm-knowledge-base|karpathy's-insight.md",
+      "mention_count": 1,
+      "aliases": [
+        "karpathy-llm-knowledge-base|karpathy's-insight"
+      ],
+      "tags": []
+    },
+    "wikilinks": {
+      "learned_at": "2026-04-09T16:02:57.071068",
+      "last_verified": "2026-04-09T16:02:57.072523",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "wikilinks"
+      ],
+      "tags": []
+    },
+    "double-bracket-links": {
+      "learned_at": "2026-04-09T16:02:57.071074",
+      "last_verified": "2026-04-09T16:02:57.072859",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "double bracket links",
+        "double-bracket-links"
+      ],
+      "tags": []
+    },
+    "obsidian-web-clipper": {
+      "learned_at": "2026-04-09T16:02:57.071080",
+      "last_verified": "2026-04-09T16:02:57.071080",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "obsidian-web-clipper"
+      ],
+      "tags": []
+    },
+    "core-brain-concepts": {
+      "learned_at": "2026-04-09T16:02:57.071100",
+      "last_verified": "2026-04-09T16:02:57.071164",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "core-brain-concepts"
+      ],
+      "tags": []
+    },
+    "tag:vault": {
+      "learned_at": "2026-04-09T16:02:57.071120",
+      "last_verified": "2026-04-09T16:02:57.071120",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:vault"
+      ],
+      "tags": []
+    },
+    "tag:note-taking": {
+      "learned_at": "2026-04-09T16:02:57.071126",
+      "last_verified": "2026-04-09T16:02:57.071126",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:note-taking"
+      ],
+      "tags": []
+    },
+    "tag:knowledge-management": {
+      "learned_at": "2026-04-09T16:02:57.071193",
+      "last_verified": "2026-04-09T16:02:57.071193",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:knowledge-management"
+      ],
+      "tags": []
+    },
+    "tag:personal-brain": {
+      "learned_at": "2026-04-09T16:02:57.071199",
+      "last_verified": "2026-04-09T16:02:57.071199",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:personal-brain"
+      ],
+      "tags": []
+    },
+    "projects/my-wiki-redesign/hub": {
+      "learned_at": "2026-04-09T16:02:57.071244",
+      "last_verified": "2026-04-09T16:02:57.071244",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "projects/my-wiki-redesign/hub"
+      ],
+      "tags": []
+    },
+    "projects/my-wiki-redesign/phase-1-init": {
+      "learned_at": "2026-04-09T16:02:57.071251",
+      "last_verified": "2026-04-09T16:02:57.071251",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "projects/my-wiki-redesign/phase-1-init"
+      ],
+      "tags": []
+    },
+    "projects/my-wiki-redesign/decisions/001-why-react": {
+      "learned_at": "2026-04-09T16:02:57.071257",
+      "last_verified": "2026-04-09T16:02:57.071257",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "projects/my-wiki-redesign/decisions/001-why-react"
+      ],
+      "tags": []
+    },
+    "tag:project-management": {
+      "learned_at": "2026-04-09T16:02:57.071270",
+      "last_verified": "2026-04-09T16:02:57.071270",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:project-management"
+      ],
+      "tags": []
+    },
+    "tag:methodology": {
+      "learned_at": "2026-04-09T16:02:57.071277",
+      "last_verified": "2026-04-09T16:02:57.071277",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:methodology"
+      ],
+      "tags": []
+    },
+    "tag:vibe-coding": {
+      "learned_at": "2026-04-09T16:02:57.071283",
+      "last_verified": "2026-04-09T16:02:57.071283",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:vibe-coding"
+      ],
+      "tags": []
+    },
+    "tag:lm-studio": {
+      "learned_at": "2026-04-09T16:02:57.071342",
+      "last_verified": "2026-04-09T16:02:57.071342",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:lm-studio"
+      ],
+      "tags": []
+    },
+    "tag:model-management": {
+      "learned_at": "2026-04-09T16:02:57.071357",
+      "last_verified": "2026-04-09T16:02:57.071357",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:model-management"
+      ],
+      "tags": []
+    },
+    "tag:agentic": {
+      "learned_at": "2026-04-09T16:02:57.071497",
+      "last_verified": "2026-04-09T16:02:57.071497",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:agentic"
+      ],
+      "tags": []
+    },
+    "tag:memory": {
+      "learned_at": "2026-04-09T16:02:57.071503",
+      "last_verified": "2026-04-09T16:02:57.071503",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:memory"
+      ],
+      "tags": []
+    },
+    "tag:knowledge-graph": {
+      "learned_at": "2026-04-09T16:02:57.071510",
+      "last_verified": "2026-04-09T16:02:57.071510",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:knowledge-graph"
+      ],
+      "tags": []
+    },
+    "clippings": {
+      "learned_at": "2026-04-09T16:02:57.071545",
+      "last_verified": "2026-04-09T16:02:57.071545",
+      "first_source": "concepts/clippings.md",
+      "mention_count": 1,
+      "aliases": [
+        "clippings"
+      ],
+      "tags": []
+    },
+    "tag:models": {
+      "learned_at": "2026-04-09T16:02:57.071625",
+      "last_verified": "2026-04-09T16:02:57.071625",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:models"
+      ],
+      "tags": []
+    },
+    "tag:machine-learning": {
+      "learned_at": "2026-04-09T16:02:57.071639",
+      "last_verified": "2026-04-09T16:02:57.071639",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:machine-learning"
+      ],
+      "tags": []
+    },
+    "multi-agent-wiki": {
+      "learned_at": "2026-04-09T16:02:57.071694",
+      "last_verified": "2026-04-09T16:02:57.071694",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "multi-agent-wiki"
+      ],
+      "tags": []
+    },
+    "hooks": {
+      "learned_at": "2026-04-09T16:02:57.071752",
+      "last_verified": "2026-04-09T16:02:57.071752",
+      "first_source": "concepts/hooks.md",
+      "mention_count": 1,
+      "aliases": [
+        "hooks"
+      ],
+      "tags": []
+    },
+    "synthetic-data": {
+      "learned_at": "2026-04-09T16:02:57.071797",
+      "last_verified": "2026-04-09T16:02:57.071797",
+      "first_source": "concepts/synthetic-data.md",
+      "mention_count": 1,
+      "aliases": [
+        "synthetic-data"
+      ],
+      "tags": []
+    },
+    "tag:synthetic-data": {
+      "learned_at": "2026-04-09T16:02:57.071815",
+      "last_verified": "2026-04-09T16:02:57.071815",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:synthetic-data"
+      ],
+      "tags": []
+    },
+    "tag:data-generation": {
+      "learned_at": "2026-04-09T16:02:57.071822",
+      "last_verified": "2026-04-09T16:02:57.071822",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:data-generation"
+      ],
+      "tags": []
+    },
+    "gateway": {
+      "learned_at": "2026-04-09T16:02:57.071873",
+      "last_verified": "2026-04-09T16:02:57.071873",
+      "first_source": "concepts/gateway.md",
+      "mention_count": 1,
+      "aliases": [
+        "gateway"
+      ],
+      "tags": []
+    },
+    "git": {
+      "learned_at": "2026-04-09T16:02:57.071919",
+      "last_verified": "2026-04-09T16:02:57.071919",
+      "first_source": "concepts/git.md",
+      "mention_count": 1,
+      "aliases": [
+        "git"
+      ],
+      "tags": []
+    },
+    "commit": {
+      "learned_at": "2026-04-09T16:02:57.071930",
+      "last_verified": "2026-04-09T16:02:57.072476",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "commit"
+      ],
+      "tags": []
+    },
+    "branch": {
+      "learned_at": "2026-04-09T16:02:57.071937",
+      "last_verified": "2026-04-09T16:02:57.072349",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "branch"
+      ],
+      "tags": []
+    },
+    "rss": {
+      "learned_at": "2026-04-09T16:02:57.071988",
+      "last_verified": "2026-04-09T16:02:57.071988",
+      "first_source": "concepts/rss.md",
+      "mention_count": 1,
+      "aliases": [
+        "rss"
+      ],
+      "tags": []
+    },
+    "tag:fine-tuning": {
+      "learned_at": "2026-04-09T16:02:57.072059",
+      "last_verified": "2026-04-09T16:02:57.072059",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:fine-tuning"
+      ],
+      "tags": []
+    },
+    "tag:peft": {
+      "learned_at": "2026-04-09T16:02:57.072090",
+      "last_verified": "2026-04-09T16:02:57.072090",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:peft"
+      ],
+      "tags": []
+    },
+    "projects/.../mistakes/001-date-format-mismatch\\": {
+      "learned_at": "2026-04-09T16:02:57.072160",
+      "last_verified": "2026-04-09T16:02:57.072160",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "projects/.../mistakes/001-date-format-mismatch\\"
+      ],
+      "tags": []
+    },
+    "topic": {
+      "learned_at": "2026-04-09T16:02:57.072187",
+      "last_verified": "2026-04-09T16:02:57.072187",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "topic"
+      ],
+      "tags": []
+    },
+    "tag:planning": {
+      "learned_at": "2026-04-09T16:02:57.072265",
+      "last_verified": "2026-04-09T16:02:57.072265",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:planning"
+      ],
+      "tags": []
+    },
+    "hermes-agent": {
+      "learned_at": "2026-04-09T16:02:57.072396",
+      "last_verified": "2026-04-09T16:02:57.072396",
+      "first_source": "concepts/hermes-agent.md",
+      "mention_count": 1,
+      "aliases": [
+        "hermes-agent"
+      ],
+      "tags": []
+    },
+    "hermes": {
+      "learned_at": "2026-04-09T16:02:57.072400",
+      "last_verified": "2026-04-09T16:02:57.072617",
+      "first_source": null,
+      "mention_count": 1,
+      "aliases": [
+        "hermes"
+      ],
+      "tags": []
+    },
+    "tag:hermes-agent": {
+      "learned_at": "2026-04-09T16:02:57.072423",
+      "last_verified": "2026-04-09T16:02:57.072423",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:hermes-agent"
+      ],
+      "tags": []
+    },
+    "transcript-system": {
+      "learned_at": "2026-04-09T16:02:57.072570",
+      "last_verified": "2026-04-09T16:02:57.072570",
+      "first_source": "concepts/transcript-system.md",
+      "mention_count": 1,
+      "aliases": [
+        "transcript-system"
+      ],
+      "tags": []
+    },
+    "tag:setup": {
+      "learned_at": "2026-04-09T16:02:57.072695",
+      "last_verified": "2026-04-09T16:02:57.072695",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:setup"
+      ],
+      "tags": []
+    },
+    "tag:information-retrieval": {
+      "learned_at": "2026-04-09T16:02:57.072822",
+      "last_verified": "2026-04-09T16:02:57.072822",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:information-retrieval"
+      ],
+      "tags": []
+    },
+    "apple-notes": {
+      "learned_at": "2026-04-09T16:02:57.072908",
+      "last_verified": "2026-04-09T16:02:57.072908",
+      "first_source": "concepts/apple-notes.md",
+      "mention_count": 1,
+      "aliases": [
+        "apple-notes"
+      ],
+      "tags": []
+    },
+    "tag:scripts": {
+      "learned_at": "2026-04-09T16:02:57.073028",
+      "last_verified": "2026-04-09T16:02:57.073028",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:scripts"
+      ],
+      "tags": []
+    },
+    "tag:cron": {
+      "learned_at": "2026-04-09T16:02:57.073044",
+      "last_verified": "2026-04-09T16:02:57.073044",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:cron"
+      ],
+      "tags": []
+    },
+    "hub": {
+      "learned_at": "2026-04-09T16:02:57.073247",
+      "last_verified": "2026-04-09T16:02:57.073385",
+      "first_source": "concepts/projects/my-first-project/hub.md",
+      "mention_count": 2,
+      "aliases": [
+        "hub"
+      ],
+      "tags": []
+    },
+    "phase-1-init": {
+      "learned_at": "2026-04-09T16:02:57.073335",
+      "last_verified": "2026-04-09T16:02:57.073335",
+      "first_source": "concepts/projects/my-wiki-redesign/phase-1-init.md",
+      "mention_count": 1,
+      "aliases": [
+        "phase-1-init"
+      ],
+      "tags": []
+    },
+    "001-why-react": {
+      "learned_at": "2026-04-09T16:02:57.073473",
+      "last_verified": "2026-04-09T16:02:57.073473",
+      "first_source": "concepts/projects/my-wiki-redesign/decisions/001-why-react.md",
+      "mention_count": 1,
+      "aliases": [
+        "001-why-react"
+      ],
+      "tags": []
+    },
+    "tags": {
+      "learned_at": "2026-04-09T16:02:57.073640",
+      "last_verified": "2026-04-09T16:02:57.073640",
+      "first_source": "concepts/mistakes/reference/tags.md",
+      "mention_count": 1,
+      "aliases": [
+        "tags"
+      ],
+      "tags": []
+    },
+    "tag:taxonomy": {
+      "learned_at": "2026-04-09T16:02:57.073663",
+      "last_verified": "2026-04-09T16:02:57.073663",
+      "first_source": null,
+      "mention_count": 0,
+      "aliases": [
+        "tag:taxonomy"
+      ],
+      "tags": []
+    }
+  },
+  "relationships": [
+    {
+      "from": "huggingface",
+      "to": "models",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068751",
+      "last_seen": "2026-04-09T16:02:57.068752"
+    },
+    {
+      "from": "huggingface",
+      "to": "embedding",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068755",
+      "last_seen": "2026-04-09T16:02:57.068756"
+    },
+    {
+      "from": "huggingface",
+      "to": "fine-tuning",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068759",
+      "last_seen": "2026-04-09T16:02:57.068760"
+    },
+    {
+      "from": "huggingface",
+      "to": "tag:huggingface",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068809",
+      "last_seen": "2026-04-09T16:02:57.068810"
+    },
+    {
+      "from": "huggingface",
+      "to": "tag:auto-generated",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068813",
+      "last_seen": "2026-04-09T16:02:57.068814"
+    },
+    {
+      "from": "mistake-log",
+      "to": "projects/personal-finance-tracker/mistakes/001-date-format-mismatch",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.068872",
+      "last_seen": "2026-04-09T16:02:57.068876"
+    },
+    {
+      "from": "mistake-log",
+      "to": "retrospectives",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068879",
+      "last_seen": "2026-04-09T16:02:57.068880"
+    },
+    {
+      "from": "mistake-log",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068883",
+      "last_seen": "2026-04-09T16:02:57.068884"
+    },
+    {
+      "from": "mistake-log",
+      "to": "project-management",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068887",
+      "last_seen": "2026-04-09T16:02:57.068888"
+    },
+    {
+      "from": "mistake-log",
+      "to": "tag:mistakes",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068895",
+      "last_seen": "2026-04-09T16:02:57.068895"
+    },
+    {
+      "from": "mistake-log",
+      "to": "tag:learning",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068898",
+      "last_seen": "2026-04-09T16:02:57.068899"
+    },
+    {
+      "from": "mistake-log",
+      "to": "tag:self-improvement",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068902",
+      "last_seen": "2026-04-09T16:02:57.068902"
+    },
+    {
+      "from": "mistake-log",
+      "to": "tag:meta",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.068905",
+      "last_seen": "2026-04-09T16:02:57.068906"
+    },
+    {
+      "from": "email",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.068951",
+      "last_seen": "2026-04-09T16:02:57.068955"
+    },
+    {
+      "from": "deep-learning-theory",
+      "to": "local-llm",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069002",
+      "last_seen": "2026-04-09T16:02:57.069003"
+    },
+    {
+      "from": "deep-learning-theory",
+      "to": "tag:deep-learning",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069009",
+      "last_seen": "2026-04-09T16:02:57.069010"
+    },
+    {
+      "from": "deep-learning-theory",
+      "to": "tag:theory",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069013",
+      "last_seen": "2026-04-09T16:02:57.069014"
+    },
+    {
+      "from": "deep-learning-theory",
+      "to": "tag:neural-networks",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069017",
+      "last_seen": "2026-04-09T16:02:57.069017"
+    },
+    {
+      "from": "deep-learning-theory",
+      "to": "tag:optimization",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069021",
+      "last_seen": "2026-04-09T16:02:57.069021"
+    },
+    {
+      "from": "rag",
+      "to": "knowledge-base",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069066",
+      "last_seen": "2026-04-09T16:02:57.069067"
+    },
+    {
+      "from": "rag",
+      "to": "embedding",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069069",
+      "last_seen": "2026-04-09T16:02:57.069070"
+    },
+    {
+      "from": "rag",
+      "to": "search",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069073",
+      "last_seen": "2026-04-09T16:02:57.069074"
+    },
+    {
+      "from": "rag",
+      "to": "tag:rag",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069079",
+      "last_seen": "2026-04-09T16:02:57.069080"
+    },
+    {
+      "from": "rag",
+      "to": "tag:auto-generated",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069083",
+      "last_seen": "2026-04-09T16:02:57.069084"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "nonexistent-page",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069134",
+      "last_seen": "2026-04-09T16:02:57.069135"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "wikilink",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069140",
+      "last_seen": "2026-04-09T16:02:57.069140"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069144",
+      "last_seen": "2026-04-09T16:02:57.069144"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "models",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069147",
+      "last_seen": "2026-04-09T16:02:57.069147"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "knowledge-base",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069150",
+      "last_seen": "2026-04-09T16:02:57.069150"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "github",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069154",
+      "last_seen": "2026-04-09T16:02:57.069154"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "obsidian",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069158",
+      "last_seen": "2026-04-09T16:02:57.069159"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "local-llm",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069161",
+      "last_seen": "2026-04-09T16:02:57.069162"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "wiki-enhancement-roadmap",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069165",
+      "last_seen": "2026-04-09T16:02:57.069166"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "karpathy-llm-knowledge-base",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069170",
+      "last_seen": "2026-04-09T16:02:57.069170"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "tag:wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069177",
+      "last_seen": "2026-04-09T16:02:57.069178"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "tag:automation",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069181",
+      "last_seen": "2026-04-09T16:02:57.069182"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "tag:self-healing",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069185",
+      "last_seen": "2026-04-09T16:02:57.069186"
+    },
+    {
+      "from": "self-healing-wiki",
+      "to": "tag:ai-agent",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069190",
+      "last_seen": "2026-04-09T16:02:57.069190"
+    },
+    {
+      "from": "intelligent-wiki-roadmap",
+      "to": "intelligent-wiki-architecture",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069244",
+      "last_seen": "2026-04-09T16:02:57.069244"
+    },
+    {
+      "from": "intelligent-wiki-roadmap",
+      "to": "project-tracker",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069249",
+      "last_seen": "2026-04-09T16:02:57.069250"
+    },
+    {
+      "from": "intelligent-wiki-roadmap",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069252",
+      "last_seen": "2026-04-09T16:02:57.069253"
+    },
+    {
+      "from": "intelligent-wiki-roadmap",
+      "to": "knowledge-base",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069255",
+      "last_seen": "2026-04-09T16:02:57.069256"
+    },
+    {
+      "from": "intelligent-wiki-roadmap",
+      "to": "tag:wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069263",
+      "last_seen": "2026-04-09T16:02:57.069264"
+    },
+    {
+      "from": "intelligent-wiki-roadmap",
+      "to": "tag:roadmap",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069267",
+      "last_seen": "2026-04-09T16:02:57.069268"
+    },
+    {
+      "from": "intelligent-wiki-roadmap",
+      "to": "tag:ai",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069272",
+      "last_seen": "2026-04-09T16:02:57.069272"
+    },
+    {
+      "from": "intelligent-wiki-roadmap",
+      "to": "tag:self-improving",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069276",
+      "last_seen": "2026-04-09T16:02:57.069277"
+    },
+    {
+      "from": "intelligent-wiki-roadmap",
+      "to": "tag:architecture",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069280",
+      "last_seen": "2026-04-09T16:02:57.069281"
+    },
+    {
+      "from": "search",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.069320",
+      "last_seen": "2026-04-09T16:02:57.069324"
+    },
+    {
+      "from": "002-why-vue-alternative|considered-vue-but-chose-react",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.069364",
+      "last_seen": "2026-04-09T16:02:57.069368"
+    },
+    {
+      "from": "wiki-enhancement-roadmap",
+      "to": "karpathy-llm-knowledge-base",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069411",
+      "last_seen": "2026-04-09T16:02:57.069411"
+    },
+    {
+      "from": "wiki-enhancement-roadmap",
+      "to": "topic-workflow",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069416",
+      "last_seen": "2026-04-09T16:02:57.069416"
+    },
+    {
+      "from": "wiki-enhancement-roadmap",
+      "to": "project-tracker",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069419",
+      "last_seen": "2026-04-09T16:02:57.069420"
+    },
+    {
+      "from": "wiki-enhancement-roadmap",
+      "to": "tag:wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069426",
+      "last_seen": "2026-04-09T16:02:57.069427"
+    },
+    {
+      "from": "wiki-enhancement-roadmap",
+      "to": "tag:roadmap",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069430",
+      "last_seen": "2026-04-09T16:02:57.069431"
+    },
+    {
+      "from": "wiki-enhancement-roadmap",
+      "to": "tag:enhancement",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069435",
+      "last_seen": "2026-04-09T16:02:57.069436"
+    },
+    {
+      "from": "project-tracker",
+      "to": "tag:project",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069482",
+      "last_seen": "2026-04-09T16:02:57.069483"
+    },
+    {
+      "from": "project-tracker",
+      "to": "tag:tracker",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069487",
+      "last_seen": "2026-04-09T16:02:57.069487"
+    },
+    {
+      "from": "project-tracker",
+      "to": "tag:wiki-enhancement",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069491",
+      "last_seen": "2026-04-09T16:02:57.069492"
+    },
+    {
+      "from": "project-tracker",
+      "to": "tag:intelligent-wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069496",
+      "last_seen": "2026-04-09T16:02:57.069496"
+    },
+    {
+      "from": "dataset",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.069533",
+      "last_seen": "2026-04-09T16:02:57.069537"
+    },
+    {
+      "from": "karpathy-llm-knowledge-base",
+      "to": "topic-workflow",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069621",
+      "last_seen": "2026-04-09T16:02:57.069621"
+    },
+    {
+      "from": "karpathy-llm-knowledge-base",
+      "to": "github-sync-setup",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069626",
+      "last_seen": "2026-04-09T16:02:57.069626"
+    },
+    {
+      "from": "karpathy-llm-knowledge-base",
+      "to": "user-profile",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069630",
+      "last_seen": "2026-04-09T16:02:57.069631"
+    },
+    {
+      "from": "karpathy-llm-knowledge-base",
+      "to": "tag:karpathy",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069637",
+      "last_seen": "2026-04-09T16:02:57.069638"
+    },
+    {
+      "from": "karpathy-llm-knowledge-base",
+      "to": "tag:llm",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069642",
+      "last_seen": "2026-04-09T16:02:57.069644"
+    },
+    {
+      "from": "karpathy-llm-knowledge-base",
+      "to": "tag:knowledge-base",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069648",
+      "last_seen": "2026-04-09T16:02:57.069649"
+    },
+    {
+      "from": "karpathy-llm-knowledge-base",
+      "to": "tag:rag",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069653",
+      "last_seen": "2026-04-09T16:02:57.069653"
+    },
+    {
+      "from": "karpathy-llm-knowledge-base",
+      "to": "tag:obsidian",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069657",
+      "last_seen": "2026-04-09T16:02:57.069658"
+    },
+    {
+      "from": "001-tech-stack|chose-next.js-+-prisma-+-sqlite",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.069695",
+      "last_seen": "2026-04-09T16:02:57.069699"
+    },
+    {
+      "from": "watchdog-system",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069740",
+      "last_seen": "2026-04-09T16:02:57.069740"
+    },
+    {
+      "from": "watchdog-system",
+      "to": "wiki-self-evolution",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069745",
+      "last_seen": "2026-04-09T16:02:57.069745"
+    },
+    {
+      "from": "watchdog-system",
+      "to": "wiki-master-plan",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069749",
+      "last_seen": "2026-04-09T16:02:57.069750"
+    },
+    {
+      "from": "watchdog-system",
+      "to": "tag:wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069756",
+      "last_seen": "2026-04-09T16:02:57.069757"
+    },
+    {
+      "from": "watchdog-system",
+      "to": "tag:automation",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069761",
+      "last_seen": "2026-04-09T16:02:57.069762"
+    },
+    {
+      "from": "watchdog-system",
+      "to": "tag:system",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069766",
+      "last_seen": "2026-04-09T16:02:57.069767"
+    },
+    {
+      "from": "001-decision-name|link-to-decision-note",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.069805",
+      "last_seen": "2026-04-09T16:02:57.069809"
+    },
+    {
+      "from": "training",
+      "to": "fine-tuning",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069848",
+      "last_seen": "2026-04-09T16:02:57.069848"
+    },
+    {
+      "from": "training",
+      "to": "dataset",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069853",
+      "last_seen": "2026-04-09T16:02:57.069854"
+    },
+    {
+      "from": "training",
+      "to": "models",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069857",
+      "last_seen": "2026-04-09T16:02:57.069857"
+    },
+    {
+      "from": "training",
+      "to": "tag:training",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069863",
+      "last_seen": "2026-04-09T16:02:57.069864"
+    },
+    {
+      "from": "training",
+      "to": "tag:auto-generated",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069868",
+      "last_seen": "2026-04-09T16:02:57.069869"
+    },
+    {
+      "from": "pagename",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.069903",
+      "last_seen": "2026-04-09T16:02:57.069907"
+    },
+    {
+      "from": "wiki",
+      "to": "user-profile",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069947",
+      "last_seen": "2026-04-09T16:02:57.069948"
+    },
+    {
+      "from": "wiki",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069951",
+      "last_seen": "2026-04-09T16:02:57.069952"
+    },
+    {
+      "from": "wiki",
+      "to": "automation",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069956",
+      "last_seen": "2026-04-09T16:02:57.069957"
+    },
+    {
+      "from": "wiki",
+      "to": "lm-studio",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069961",
+      "last_seen": "2026-04-09T16:02:57.069962"
+    },
+    {
+      "from": "wiki",
+      "to": "local-llm",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069965",
+      "last_seen": "2026-04-09T16:02:57.069966"
+    },
+    {
+      "from": "wiki",
+      "to": "knowledge-base",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069969",
+      "last_seen": "2026-04-09T16:02:57.069969"
+    },
+    {
+      "from": "wiki",
+      "to": "obsidian",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069973",
+      "last_seen": "2026-04-09T16:02:57.069973"
+    },
+    {
+      "from": "wiki",
+      "to": "karpathy-llm-knowledge-base",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069977",
+      "last_seen": "2026-04-09T16:02:57.069977"
+    },
+    {
+      "from": "wiki",
+      "to": "intelligent-wiki-roadmap",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069981",
+      "last_seen": "2026-04-09T16:02:57.069981"
+    },
+    {
+      "from": "wiki",
+      "to": "tag:wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069988",
+      "last_seen": "2026-04-09T16:02:57.069989"
+    },
+    {
+      "from": "wiki",
+      "to": "tag:knowledge-base",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.069998",
+      "last_seen": "2026-04-09T16:02:57.069999"
+    },
+    {
+      "from": "wiki",
+      "to": "tag:information-management",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070003",
+      "last_seen": "2026-04-09T16:02:57.070004"
+    },
+    {
+      "from": "retrospectives",
+      "to": "mistake-log",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070442",
+      "last_seen": "2026-04-09T16:02:57.070442"
+    },
+    {
+      "from": "retrospectives",
+      "to": "project-management",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070446",
+      "last_seen": "2026-04-09T16:02:57.070447"
+    },
+    {
+      "from": "retrospectives",
+      "to": "tag:retrospectives",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070455",
+      "last_seen": "2026-04-09T16:02:57.070455"
+    },
+    {
+      "from": "retrospectives",
+      "to": "tag:learning",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070460",
+      "last_seen": "2026-04-09T16:02:57.070461"
+    },
+    {
+      "from": "retrospectives",
+      "to": "tag:sessions",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070465",
+      "last_seen": "2026-04-09T16:02:57.070466"
+    },
+    {
+      "from": "retrospectives",
+      "to": "tag:meta",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070471",
+      "last_seen": "2026-04-09T16:02:57.070471"
+    },
+    {
+      "from": "user-profile",
+      "to": "intelligent-wiki-roadmap",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070518",
+      "last_seen": "2026-04-09T16:02:57.070519"
+    },
+    {
+      "from": "user-profile",
+      "to": "local-llm",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070522",
+      "last_seen": "2026-04-09T16:02:57.070523"
+    },
+    {
+      "from": "user-profile",
+      "to": "tag:personal",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070530",
+      "last_seen": "2026-04-09T16:02:57.070531"
+    },
+    {
+      "from": "user-profile",
+      "to": "tag:user-profile",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070535",
+      "last_seen": "2026-04-09T16:02:57.070536"
+    },
+    {
+      "from": "phase-3-name",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.070574",
+      "last_seen": "2026-04-09T16:02:57.070579"
+    },
+    {
+      "from": "github",
+      "to": "github-sync-setup",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.070619",
+      "last_seen": "2026-04-09T16:02:57.070624"
+    },
+    {
+      "from": "github",
+      "to": "wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070628",
+      "last_seen": "2026-04-09T16:02:57.070628"
+    },
+    {
+      "from": "github",
+      "to": "tag:github",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070635",
+      "last_seen": "2026-04-09T16:02:57.070636"
+    },
+    {
+      "from": "github",
+      "to": "tag:git",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070641",
+      "last_seen": "2026-04-09T16:02:57.070641"
+    },
+    {
+      "from": "github",
+      "to": "tag:sync",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070646",
+      "last_seen": "2026-04-09T16:02:57.070647"
+    },
+    {
+      "from": "github",
+      "to": "tag:collaboration",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070652",
+      "last_seen": "2026-04-09T16:02:57.070652"
+    },
+    {
+      "from": "apple-silicon-llm-optimization",
+      "to": "local-llm",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070691",
+      "last_seen": "2026-04-09T16:02:57.070692"
+    },
+    {
+      "from": "apple-silicon-llm-optimization",
+      "to": "lm-studio",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070696",
+      "last_seen": "2026-04-09T16:02:57.070696"
+    },
+    {
+      "from": "apple-silicon-llm-optimization",
+      "to": "tag:apple-silicon",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070703",
+      "last_seen": "2026-04-09T16:02:57.070704"
+    },
+    {
+      "from": "apple-silicon-llm-optimization",
+      "to": "tag:mlx",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070709",
+      "last_seen": "2026-04-09T16:02:57.070710"
+    },
+    {
+      "from": "apple-silicon-llm-optimization",
+      "to": "tag:optimization",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070714",
+      "last_seen": "2026-04-09T16:02:57.070715"
+    },
+    {
+      "from": "apple-silicon-llm-optimization",
+      "to": "tag:local-ai",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070720",
+      "last_seen": "2026-04-09T16:02:57.070720"
+    },
+    {
+      "from": "apple-silicon-llm-optimization",
+      "to": "tag:ml",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070725",
+      "last_seen": "2026-04-09T16:02:57.070726"
+    },
+    {
+      "from": "lora",
+      "to": "fine-tuning",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070765",
+      "last_seen": "2026-04-09T16:02:57.070766"
+    },
+    {
+      "from": "lora",
+      "to": "training",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070770",
+      "last_seen": "2026-04-09T16:02:57.070771"
+    },
+    {
+      "from": "lora",
+      "to": "models",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070775",
+      "last_seen": "2026-04-09T16:02:57.070775"
+    },
+    {
+      "from": "lora",
+      "to": "tag:lora",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070789",
+      "last_seen": "2026-04-09T16:02:57.070789"
+    },
+    {
+      "from": "lora",
+      "to": "tag:auto-generated",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070794",
+      "last_seen": "2026-04-09T16:02:57.070795"
+    },
+    {
+      "from": "topic-workflow",
+      "to": "karpathy-llm-knowledge-base",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070833",
+      "last_seen": "2026-04-09T16:02:57.070834"
+    },
+    {
+      "from": "topic-workflow",
+      "to": "user-profile",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070838",
+      "last_seen": "2026-04-09T16:02:57.070839"
+    },
+    {
+      "from": "topic-workflow",
+      "to": "tag:workflow",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070846",
+      "last_seen": "2026-04-09T16:02:57.070847"
+    },
+    {
+      "from": "topic-workflow",
+      "to": "tag:topic-processing",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070852",
+      "last_seen": "2026-04-09T16:02:57.070852"
+    },
+    {
+      "from": "topic-workflow",
+      "to": "tag:wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070857",
+      "last_seen": "2026-04-09T16:02:57.070858"
+    },
+    {
+      "from": "local-llm",
+      "to": "lm-studio",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070901",
+      "last_seen": "2026-04-09T16:02:57.070901"
+    },
+    {
+      "from": "local-llm",
+      "to": "models",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070906",
+      "last_seen": "2026-04-09T16:02:57.070906"
+    },
+    {
+      "from": "local-llm",
+      "to": "apple-silicon-llm-optimization",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070910",
+      "last_seen": "2026-04-09T16:02:57.070911"
+    },
+    {
+      "from": "local-llm",
+      "to": "tag:local-llm",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070919",
+      "last_seen": "2026-04-09T16:02:57.070919"
+    },
+    {
+      "from": "local-llm",
+      "to": "tag:llm",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070924",
+      "last_seen": "2026-04-09T16:02:57.070925"
+    },
+    {
+      "from": "local-llm",
+      "to": "tag:inference",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070930",
+      "last_seen": "2026-04-09T16:02:57.070930"
+    },
+    {
+      "from": "local-llm",
+      "to": "tag:privacy",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.070935",
+      "last_seen": "2026-04-09T16:02:57.070936"
+    },
+    {
+      "from": "phase-2-name",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.070975",
+      "last_seen": "2026-04-09T16:02:57.070980"
+    },
+    {
+      "from": "karpathy-llm-knowledge-base|karpathy's-insight",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.071018",
+      "last_seen": "2026-04-09T16:02:57.071023"
+    },
+    {
+      "from": "obsidian",
+      "to": "user-profile",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071065",
+      "last_seen": "2026-04-09T16:02:57.071066"
+    },
+    {
+      "from": "obsidian",
+      "to": "wikilinks",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.071072",
+      "last_seen": "2026-04-09T16:02:57.071089"
+    },
+    {
+      "from": "obsidian",
+      "to": "double-bracket-links",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071078",
+      "last_seen": "2026-04-09T16:02:57.071079"
+    },
+    {
+      "from": "obsidian",
+      "to": "obsidian-web-clipper",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.071084",
+      "last_seen": "2026-04-09T16:02:57.071099"
+    },
+    {
+      "from": "obsidian",
+      "to": "wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071094",
+      "last_seen": "2026-04-09T16:02:57.071094"
+    },
+    {
+      "from": "obsidian",
+      "to": "core-brain-concepts",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071104",
+      "last_seen": "2026-04-09T16:02:57.071105"
+    },
+    {
+      "from": "obsidian",
+      "to": "tag:obsidian",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071113",
+      "last_seen": "2026-04-09T16:02:57.071113"
+    },
+    {
+      "from": "obsidian",
+      "to": "tag:wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071119",
+      "last_seen": "2026-04-09T16:02:57.071119"
+    },
+    {
+      "from": "obsidian",
+      "to": "tag:vault",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071125",
+      "last_seen": "2026-04-09T16:02:57.071125"
+    },
+    {
+      "from": "obsidian",
+      "to": "tag:note-taking",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071131",
+      "last_seen": "2026-04-09T16:02:57.071131"
+    },
+    {
+      "from": "core-brain-concepts",
+      "to": "karpathy-llm-knowledge-base",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071172",
+      "last_seen": "2026-04-09T16:02:57.071173"
+    },
+    {
+      "from": "core-brain-concepts",
+      "to": "local-llm",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071177",
+      "last_seen": "2026-04-09T16:02:57.071178"
+    },
+    {
+      "from": "core-brain-concepts",
+      "to": "topic-workflow",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071183",
+      "last_seen": "2026-04-09T16:02:57.071183"
+    },
+    {
+      "from": "core-brain-concepts",
+      "to": "tag:wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071191",
+      "last_seen": "2026-04-09T16:02:57.071192"
+    },
+    {
+      "from": "core-brain-concepts",
+      "to": "tag:knowledge-management",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071197",
+      "last_seen": "2026-04-09T16:02:57.071198"
+    },
+    {
+      "from": "core-brain-concepts",
+      "to": "tag:personal-brain",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071203",
+      "last_seen": "2026-04-09T16:02:57.071204"
+    },
+    {
+      "from": "project-management",
+      "to": "projects/my-wiki-redesign/hub",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071248",
+      "last_seen": "2026-04-09T16:02:57.071249"
+    },
+    {
+      "from": "project-management",
+      "to": "projects/my-wiki-redesign/phase-1-init",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071255",
+      "last_seen": "2026-04-09T16:02:57.071255"
+    },
+    {
+      "from": "project-management",
+      "to": "projects/my-wiki-redesign/decisions/001-why-react",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071261",
+      "last_seen": "2026-04-09T16:02:57.071262"
+    },
+    {
+      "from": "project-management",
+      "to": "wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071266",
+      "last_seen": "2026-04-09T16:02:57.071267"
+    },
+    {
+      "from": "project-management",
+      "to": "tag:project-management",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071275",
+      "last_seen": "2026-04-09T16:02:57.071275"
+    },
+    {
+      "from": "project-management",
+      "to": "tag:methodology",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071281",
+      "last_seen": "2026-04-09T16:02:57.071282"
+    },
+    {
+      "from": "project-management",
+      "to": "tag:vibe-coding",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071287",
+      "last_seen": "2026-04-09T16:02:57.071288"
+    },
+    {
+      "from": "lm-studio",
+      "to": "local-llm",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071327",
+      "last_seen": "2026-04-09T16:02:57.071328"
+    },
+    {
+      "from": "lm-studio",
+      "to": "apple-silicon-llm-optimization",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071333",
+      "last_seen": "2026-04-09T16:02:57.071333"
+    },
+    {
+      "from": "lm-studio",
+      "to": "topic-workflow",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071338",
+      "last_seen": "2026-04-09T16:02:57.071339"
+    },
+    {
+      "from": "lm-studio",
+      "to": "tag:lm-studio",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071347",
+      "last_seen": "2026-04-09T16:02:57.071348"
+    },
+    {
+      "from": "lm-studio",
+      "to": "tag:local-ai",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071353",
+      "last_seen": "2026-04-09T16:02:57.071354"
+    },
+    {
+      "from": "lm-studio",
+      "to": "tag:model-management",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071364",
+      "last_seen": "2026-04-09T16:02:57.071364"
+    },
+    {
+      "from": "lm-studio",
+      "to": "tag:inference",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071371",
+      "last_seen": "2026-04-09T16:02:57.071371"
+    },
+    {
+      "from": "embedding",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.071409",
+      "last_seen": "2026-04-09T16:02:57.071415"
+    },
+    {
+      "from": "intelligent-wiki-architecture",
+      "to": "intelligent-wiki-roadmap",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071463",
+      "last_seen": "2026-04-09T16:02:57.071463"
+    },
+    {
+      "from": "intelligent-wiki-architecture",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071468",
+      "last_seen": "2026-04-09T16:02:57.071469"
+    },
+    {
+      "from": "intelligent-wiki-architecture",
+      "to": "project-tracker",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071474",
+      "last_seen": "2026-04-09T16:02:57.071475"
+    },
+    {
+      "from": "intelligent-wiki-architecture",
+      "to": "knowledge-base",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071479",
+      "last_seen": "2026-04-09T16:02:57.071480"
+    },
+    {
+      "from": "intelligent-wiki-architecture",
+      "to": "tag:wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071489",
+      "last_seen": "2026-04-09T16:02:57.071489"
+    },
+    {
+      "from": "intelligent-wiki-architecture",
+      "to": "tag:architecture",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071495",
+      "last_seen": "2026-04-09T16:02:57.071496"
+    },
+    {
+      "from": "intelligent-wiki-architecture",
+      "to": "tag:agentic",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071502",
+      "last_seen": "2026-04-09T16:02:57.071502"
+    },
+    {
+      "from": "intelligent-wiki-architecture",
+      "to": "tag:memory",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071508",
+      "last_seen": "2026-04-09T16:02:57.071509"
+    },
+    {
+      "from": "intelligent-wiki-architecture",
+      "to": "tag:knowledge-graph",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071515",
+      "last_seen": "2026-04-09T16:02:57.071516"
+    },
+    {
+      "from": "clippings",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.071552",
+      "last_seen": "2026-04-09T16:02:57.071559"
+    },
+    {
+      "from": "models",
+      "to": "wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071598",
+      "last_seen": "2026-04-09T16:02:57.071599"
+    },
+    {
+      "from": "models",
+      "to": "lm-studio",
+      "type": "related",
+      "strength": 0.7,
+      "learned_at": "2026-04-09T16:02:57.071604",
+      "last_seen": "2026-04-09T16:02:57.071616"
+    },
+    {
+      "from": "models",
+      "to": "local-llm",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071621",
+      "last_seen": "2026-04-09T16:02:57.071621"
+    },
+    {
+      "from": "models",
+      "to": "tag:models",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071631",
+      "last_seen": "2026-04-09T16:02:57.071631"
+    },
+    {
+      "from": "models",
+      "to": "tag:llm",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071638",
+      "last_seen": "2026-04-09T16:02:57.071638"
+    },
+    {
+      "from": "models",
+      "to": "tag:machine-learning",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071644",
+      "last_seen": "2026-04-09T16:02:57.071645"
+    },
+    {
+      "from": "wiki-self-evolution",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071686",
+      "last_seen": "2026-04-09T16:02:57.071686"
+    },
+    {
+      "from": "wiki-self-evolution",
+      "to": "watchdog-system",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071692",
+      "last_seen": "2026-04-09T16:02:57.071692"
+    },
+    {
+      "from": "wiki-self-evolution",
+      "to": "multi-agent-wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071699",
+      "last_seen": "2026-04-09T16:02:57.071700"
+    },
+    {
+      "from": "wiki-self-evolution",
+      "to": "tag:wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071708",
+      "last_seen": "2026-04-09T16:02:57.071709"
+    },
+    {
+      "from": "wiki-self-evolution",
+      "to": "tag:automation",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071715",
+      "last_seen": "2026-04-09T16:02:57.071716"
+    },
+    {
+      "from": "wiki-self-evolution",
+      "to": "tag:self-improvement",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071722",
+      "last_seen": "2026-04-09T16:02:57.071723"
+    },
+    {
+      "from": "hooks",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.071760",
+      "last_seen": "2026-04-09T16:02:57.071766"
+    },
+    {
+      "from": "synthetic-data",
+      "to": "fine-tuning",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071805",
+      "last_seen": "2026-04-09T16:02:57.071806"
+    },
+    {
+      "from": "synthetic-data",
+      "to": "karpathy-llm-knowledge-base",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071812",
+      "last_seen": "2026-04-09T16:02:57.071812"
+    },
+    {
+      "from": "synthetic-data",
+      "to": "tag:synthetic-data",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071821",
+      "last_seen": "2026-04-09T16:02:57.071821"
+    },
+    {
+      "from": "synthetic-data",
+      "to": "tag:data-generation",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071828",
+      "last_seen": "2026-04-09T16:02:57.071829"
+    },
+    {
+      "from": "synthetic-data",
+      "to": "tag:training",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071835",
+      "last_seen": "2026-04-09T16:02:57.071836"
+    },
+    {
+      "from": "synthetic-data",
+      "to": "tag:llm",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071842",
+      "last_seen": "2026-04-09T16:02:57.071843"
+    },
+    {
+      "from": "gateway",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.071882",
+      "last_seen": "2026-04-09T16:02:57.071888"
+    },
+    {
+      "from": "git",
+      "to": "github",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071927",
+      "last_seen": "2026-04-09T16:02:57.071928"
+    },
+    {
+      "from": "git",
+      "to": "commit",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071934",
+      "last_seen": "2026-04-09T16:02:57.071935"
+    },
+    {
+      "from": "git",
+      "to": "branch",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071942",
+      "last_seen": "2026-04-09T16:02:57.071943"
+    },
+    {
+      "from": "git",
+      "to": "tag:git",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071951",
+      "last_seen": "2026-04-09T16:02:57.071952"
+    },
+    {
+      "from": "git",
+      "to": "tag:auto-generated",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.071958",
+      "last_seen": "2026-04-09T16:02:57.071959"
+    },
+    {
+      "from": "rss",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.071996",
+      "last_seen": "2026-04-09T16:02:57.072002"
+    },
+    {
+      "from": "fine-tuning",
+      "to": "synthetic-data",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072042",
+      "last_seen": "2026-04-09T16:02:57.072043"
+    },
+    {
+      "from": "fine-tuning",
+      "to": "apple-silicon-llm-optimization",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072049",
+      "last_seen": "2026-04-09T16:02:57.072050"
+    },
+    {
+      "from": "fine-tuning",
+      "to": "local-llm",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072056",
+      "last_seen": "2026-04-09T16:02:57.072056"
+    },
+    {
+      "from": "fine-tuning",
+      "to": "tag:fine-tuning",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072066",
+      "last_seen": "2026-04-09T16:02:57.072066"
+    },
+    {
+      "from": "fine-tuning",
+      "to": "tag:ml",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072073",
+      "last_seen": "2026-04-09T16:02:57.072073"
+    },
+    {
+      "from": "fine-tuning",
+      "to": "tag:training",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072080",
+      "last_seen": "2026-04-09T16:02:57.072081"
+    },
+    {
+      "from": "fine-tuning",
+      "to": "tag:llm",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072088",
+      "last_seen": "2026-04-09T16:02:57.072089"
+    },
+    {
+      "from": "fine-tuning",
+      "to": "tag:peft",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072097",
+      "last_seen": "2026-04-09T16:02:57.072097"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "projects/.../mistakes/001-date-format-mismatch\\",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072166",
+      "last_seen": "2026-04-09T16:02:57.072166"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "watchdog-system",
+      "type": "related",
+      "strength": 0.7,
+      "learned_at": "2026-04-09T16:02:57.072173",
+      "last_seen": "2026-04-09T16:02:57.072186"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "topic",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072193",
+      "last_seen": "2026-04-09T16:02:57.072193"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "fine-tuning",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072200",
+      "last_seen": "2026-04-09T16:02:57.072213"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "lora",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072206",
+      "last_seen": "2026-04-09T16:02:57.072220"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "wiki-enhancement-roadmap",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072226",
+      "last_seen": "2026-04-09T16:02:57.072226"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072232",
+      "last_seen": "2026-04-09T16:02:57.072233"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "wiki-self-evolution",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072239",
+      "last_seen": "2026-04-09T16:02:57.072239"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "intelligent-wiki-architecture",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072246",
+      "last_seen": "2026-04-09T16:02:57.072246"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "tag:wiki",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072256",
+      "last_seen": "2026-04-09T16:02:57.072256"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "tag:roadmap",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072264",
+      "last_seen": "2026-04-09T16:02:57.072264"
+    },
+    {
+      "from": "wiki-master-plan",
+      "to": "tag:planning",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072271",
+      "last_seen": "2026-04-09T16:02:57.072272"
+    },
+    {
+      "from": "wikilink",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072312",
+      "last_seen": "2026-04-09T16:02:57.072319"
+    },
+    {
+      "from": "branch",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072358",
+      "last_seen": "2026-04-09T16:02:57.072366"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "hermes",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072406",
+      "last_seen": "2026-04-09T16:02:57.072407"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "gateway",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072413",
+      "last_seen": "2026-04-09T16:02:57.072414"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "hooks",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072420",
+      "last_seen": "2026-04-09T16:02:57.072420"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "tag:hermes-agent",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072430",
+      "last_seen": "2026-04-09T16:02:57.072430"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "tag:auto-generated",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072438",
+      "last_seen": "2026-04-09T16:02:57.072438"
+    },
+    {
+      "from": "commit",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072485",
+      "last_seen": "2026-04-09T16:02:57.072492"
+    },
+    {
+      "from": "wikilinks",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072532",
+      "last_seen": "2026-04-09T16:02:57.072539"
+    },
+    {
+      "from": "transcript-system",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072580",
+      "last_seen": "2026-04-09T16:02:57.072587"
+    },
+    {
+      "from": "hermes",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072626",
+      "last_seen": "2026-04-09T16:02:57.072633"
+    },
+    {
+      "from": "github-sync-setup",
+      "to": "tag:obsidian",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072677",
+      "last_seen": "2026-04-09T16:02:57.072678"
+    },
+    {
+      "from": "github-sync-setup",
+      "to": "tag:sync",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072685",
+      "last_seen": "2026-04-09T16:02:57.072686"
+    },
+    {
+      "from": "github-sync-setup",
+      "to": "tag:github",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072693",
+      "last_seen": "2026-04-09T16:02:57.072694"
+    },
+    {
+      "from": "github-sync-setup",
+      "to": "tag:setup",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072702",
+      "last_seen": "2026-04-09T16:02:57.072702"
+    },
+    {
+      "from": "knowledge-base",
+      "to": "wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072743",
+      "last_seen": "2026-04-09T16:02:57.072793"
+    },
+    {
+      "from": "knowledge-base",
+      "to": "user-profile",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072751",
+      "last_seen": "2026-04-09T16:02:57.072751"
+    },
+    {
+      "from": "knowledge-base",
+      "to": "karpathy-llm-knowledge-base",
+      "type": "related",
+      "strength": 0.7,
+      "learned_at": "2026-04-09T16:02:57.072758",
+      "last_seen": "2026-04-09T16:02:57.072800"
+    },
+    {
+      "from": "knowledge-base",
+      "to": "wikilinks",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072772",
+      "last_seen": "2026-04-09T16:02:57.072772"
+    },
+    {
+      "from": "knowledge-base",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072779",
+      "last_seen": "2026-04-09T16:02:57.072779"
+    },
+    {
+      "from": "knowledge-base",
+      "to": "automation",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072786",
+      "last_seen": "2026-04-09T16:02:57.072787"
+    },
+    {
+      "from": "knowledge-base",
+      "to": "tag:knowledge-base",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072811",
+      "last_seen": "2026-04-09T16:02:57.072812"
+    },
+    {
+      "from": "knowledge-base",
+      "to": "tag:rag",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072820",
+      "last_seen": "2026-04-09T16:02:57.072821"
+    },
+    {
+      "from": "knowledge-base",
+      "to": "tag:information-retrieval",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.072829",
+      "last_seen": "2026-04-09T16:02:57.072829"
+    },
+    {
+      "from": "double-bracket-links",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072868",
+      "last_seen": "2026-04-09T16:02:57.072876"
+    },
+    {
+      "from": "apple-notes",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072917",
+      "last_seen": "2026-04-09T16:02:57.072925"
+    },
+    {
+      "from": "nonexistent-page",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.072965",
+      "last_seen": "2026-04-09T16:02:57.072973"
+    },
+    {
+      "from": "automation",
+      "to": "wiki",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.073015",
+      "last_seen": "2026-04-09T16:02:57.073016"
+    },
+    {
+      "from": "automation",
+      "to": "tag:automation",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.073026",
+      "last_seen": "2026-04-09T16:02:57.073027"
+    },
+    {
+      "from": "automation",
+      "to": "tag:scripts",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.073035",
+      "last_seen": "2026-04-09T16:02:57.073035"
+    },
+    {
+      "from": "automation",
+      "to": "tag:workflow",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.073043",
+      "last_seen": "2026-04-09T16:02:57.073043"
+    },
+    {
+      "from": "automation",
+      "to": "tag:cron",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.073051",
+      "last_seen": "2026-04-09T16:02:57.073051"
+    },
+    {
+      "from": "hub",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.7999999999999999,
+      "learned_at": "2026-04-09T16:02:57.073256",
+      "last_seen": "2026-04-09T16:02:57.073401"
+    },
+    {
+      "from": "phase-1-init",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.073344",
+      "last_seen": "2026-04-09T16:02:57.073352"
+    },
+    {
+      "from": "001-why-react",
+      "to": "self-healing-wiki",
+      "type": "related",
+      "strength": 0.6,
+      "learned_at": "2026-04-09T16:02:57.073482",
+      "last_seen": "2026-04-09T16:02:57.073491"
+    },
+    {
+      "from": "tags",
+      "to": "mistake-log",
+      "type": "related",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.073650",
+      "last_seen": "2026-04-09T16:02:57.073650"
+    },
+    {
+      "from": "tags",
+      "to": "tag:mistakes",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.073661",
+      "last_seen": "2026-04-09T16:02:57.073661"
+    },
+    {
+      "from": "tags",
+      "to": "tag:taxonomy",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.073669",
+      "last_seen": "2026-04-09T16:02:57.073670"
+    },
+    {
+      "from": "tags",
+      "to": "tag:meta",
+      "type": "has_tag",
+      "strength": 0.5,
+      "learned_at": "2026-04-09T16:02:57.073678",
+      "last_seen": "2026-04-09T16:02:57.073678"
+    }
+  ],
+  "last_updated": "2026-04-09T16:02:57.073742"
+}

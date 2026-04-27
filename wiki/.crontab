@@ -1,0 +1,32 @@
+# ─── HERMES AGENT — AUTONOMOUS CRON SCHEDULE ─────────────────────────────
+# Updated: 2026-04-23 — Agentic AI Upgrade
+
+WIKI_ROOT=/Volumes/Storage-1/Hermes/wiki
+CRON_LOG=/Users/tuananh4865/.hermes/cron
+
+# ─── Proactive Research (NEW) ──────────────────────────────────────────
+# Proactive research on top interest areas — 7 AM daily
+0 7 * * * cd /Volumes/Storage-1/Hermes/wiki && /opt/homebrew/bin/python3.14 scripts/proactive_research_cron.py >> /Users/tuananh4865/.hermes/cron/proactive_research.log 2>&1
+
+# ─── Daily Agentic Core (NEW) ──────────────────────────────────────────
+# Run agentic core with top interest goal — 8 AM daily
+0 8 * * * cd /Volumes/Storage-1/Hermes/wiki && /opt/homebrew/bin/python3.14 scripts/hermes-agentic-core.py --proactive >> /Users/tuananh4865/.hermes/cron/agentic_core.log 2>&1
+
+# ─── Wiki Maintenance ───────────────────────────────────────────────────
+# Every 15 min — watchdog processor for new raw files
+*/15 * * * * cd /Volumes/Storage-1/Hermes/wiki && /opt/homebrew/bin/python3.14 scripts/watchdog_processor.py --batch >> /Users/tuananh4865/.hermes/cron/watchdog.log 2>&1
+
+# Every 2.5 hours — autonomous task checker + executor
+0 */2.5 * * * cd /Volumes/Storage-1/Hermes/wiki && /opt/homebrew/bin/python3.14 scripts/task_checker.py --autonomous >> /Users/tuananh4865/.hermes/cron/autonomous.log 2>&1
+
+# ─── Daily Digest ───────────────────────────────────────────────────────
+# Daily wiki ingest + self-heal — 6 AM daily
+0 6 * * * cd /Volumes/Storage-1/Hermes/wiki && /opt/homebrew/bin/python3.14 scripts/cron_daily_ingest.py >> /Users/tuananh4865/.hermes/cron/daily_ingest.log 2>&1
+
+# ─── LM Studio Agent ────────────────────────────────────────────────────
+# Every hour — process raw transcripts
+0 * * * * cd /Volumes/Storage-1/Hermes/wiki && /opt/homebrew/bin/python3.14 scripts/lmstudio_wiki_agent.py >> /Users/tuananh4865/.hermes/cron/lmstudio_agent.log 2>&1
+
+# ─── Hermes Dojo Self-Evolution ──────────────────────────────────────────
+# Daily self-evolution at 4 AM
+0 4 * * * cd /Volumes/Storage-1/Hermes/wiki && /opt/homebrew/bin/python3.14 scripts/hermes_dojo.py >> /Users/tuananh4865/.hermes/cron/dojo.log 2>&1

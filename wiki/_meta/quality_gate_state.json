@@ -1,0 +1,22 @@
+{
+  "last_run": "2026-04-13T02:10:29.976497",
+  "last_avg": 6.6,
+  "improved_count": 260,
+  "expansion_count": 0,
+  "avg_history": [
+    6.3,
+    6.4,
+    6.5,
+    6.5,
+    6.6,
+    6.6
+  ],
+  "critical_history": [
+    825,
+    823,
+    821,
+    818,
+    790,
+    740
+  ]
+}

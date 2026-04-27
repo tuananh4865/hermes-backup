@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "watched_urls": {
+    "https://arxiv.org/list/cs.AI/recent": "2026-04-27T06:00:01.253088",
+    "https://arxiv.org/list/cs.LG/recent": "2026-04-27T06:00:01.253098"
+  },
+  "proactive_research": {
+    "enabled": true,
+    "topics": [
+      "TikTok Shop Vietnam",
+      "Gen Z slang Vietnam 2026",
+      "Agentic AI trends",
+      "TikTok affiliate marketing"
+    ],
+    "last_scan": null
+  },
+  "interest_boost": {
+    "tiktok": 10,
+    "agentic-ai": 8,
+    "gen-z": 7,
+    "content-creation": 6
+  }
+}

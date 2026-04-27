@@ -1,0 +1,57 @@
+{
+  "topic_frequency": {
+    "github": 2,
+    "project": 3,
+    "wiki": 6,
+    "models": 4,
+    "lm-studio": 3,
+    "mlx": 3,
+    "fine-tuning": 1,
+    "automation": 3,
+    "transcript": 3,
+    "hermes": 3,
+    "mistake": 2,
+    "retrospective": 1,
+    "paper": 1,
+    "article": 1,
+    "rss": 1,
+    "email": 1,
+    "whisper": 1
+  },
+  "topic_dates": {
+    "github": 1775724434.7822874,
+    "project": 1775724434.7822874,
+    "wiki": 1775724434.7822874,
+    "models": 1775724434.7822874,
+    "lm-studio": 1775724434.7822874,
+    "mlx": 1775724434.7822874,
+    "fine-tuning": 1775724434.7822874,
+    "automation": 1775724434.7822874,
+    "transcript": 1775724434.7822874,
+    "hermes": 1775724434.7822874,
+    "mistake": 1775724434.7822874,
+    "retrospective": 1775724434.7822874,
+    "paper": 1775724434.7822874,
+    "article": 1775724434.7822874,
+    "rss": 1775724434.7822874,
+    "email": 1775724434.7822874,
+    "whisper": 1775703037.815656
+  },
+  "questions": [
+    "List c\u00e1c model \u0111ang load c\u1ee7a lm studio \u0111i  Yes   end` event.     Working Memory (RAM)  Episodic Memo",
+    "List c\u00e1c model \u0111ang load c\u1ee7a lm studio \u0111i  [Old tool output cleared to save context space]   [Old to"
+  ],
+  "corrections": [
+    {
+      "text": "List c\u00e1c model \u0111ang load c\u1ee7a lm studio \u0111i  Yes   end` event.     Working Memory (RAM)  Episodic Memo",
+      "line": 0,
+      "pattern": "s\u1eeda"
+    },
+    {
+      "text": "List c\u00e1c model \u0111ang load c\u1ee7a lm studio \u0111i  [Old tool output cleared to save context space]   [Old to",
+      "line": 0,
+      "pattern": "kh\u00f4ng ph\u1ea3i"
+    }
+  ],
+  "last_updated": "2026-04-09T15:49:13.203091"
+}

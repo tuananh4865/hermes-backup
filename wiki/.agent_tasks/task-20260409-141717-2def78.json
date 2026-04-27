@@ -1,0 +1,39 @@
+{
+  "id": "task-20260409-141717-2def78",
+  "name": "Improve wiki",
+  "description": "Improve wiki",
+  "sub_tasks": [
+    {
+      "id": "analyze_gaps",
+      "description": "Analyze gaps in wiki",
+      "priority": 1,
+      "deps": []
+    },
+    {
+      "id": "generate_content",
+      "description": "Generate new content",
+      "priority": 1,
+      "deps": [
+        "analyze_gaps"
+      ]
+    },
+    {
+      "id": "fix_links",
+      "description": "Fix broken links",
+      "priority": 2,
+      "deps": []
+    },
+    {
+      "id": "refresh_stale",
+      "description": "Refresh stale content",
+      "priority": 2,
+      "deps": []
+    }
+  ],
+  "status": "pending",
+  "created_at": "2026-04-09T14:17:17.638591",
+  "started_at": null,
+  "completed_at": null,
+  "results": {},
+  "conflicts": []
+}

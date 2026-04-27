@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Obsidian (partial - workspace.json changes too frequently)
+.obsidian/workspace.json
+.obsidian/graph.json
+!.obsidian/app.json
+!.obsidian/appearance.json
+!.obsidian/core-plugins.json
+
+# Wiki-specific ignores
+node_modules/
+transcripts/
+.processed*/
+raw/
+.processed/
+
+# Temp files
+*.tmp
+*.swp
+*~
+training_data/
+*.pyc
+__pycache__/
+watchdog.log
+watchdog.pid
+watchdog.out
+watchdog_event.json
+watchdog.pending
+transcripts/
+fine-tuned-wiki/
+.processed/
+hermes-agent-self-evolution/output/

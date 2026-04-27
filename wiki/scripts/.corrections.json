@@ -1,0 +1,771 @@
+{
+  "corrections": [
+    {
+      "text": "Anh g\u1eedi link repo n\u00e0y \u2014 ch\u01b0a bi\u1ebft g\u00ec th\u00eam",
+      "line": 6,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "general",
+      "timestamp": "2026-04-09T00:42:53.918307"
+    },
+    {
+      "text": "[2026-04-09 08:52:13] \ud83d\udc64 Anh: Em \u01a1i, h\u00f4m nay anh mu\u1ed1n test th\u1eed model m\u1edbi qwen3.5-2b-mlx tr\u00ean LM Studio xem sao",
+      "line": 1,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "lm-studio",
+      "timestamp": "2026-04-09T08:52:19.279511"
+    },
+    {
+      "text": "File c\u0169 ch\u01b0a c\u00f3 frontmatter. Hook m\u1edbi ch\u1ec9 trigger khi c\u00f3 message m\u1edbi. \u0110\u1ec3 test, m\u00ecnh c\u1ea7n trigger m\u1ed9t `agent:end` event.",
+      "line": 10,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "Kh\u00f4ng c\u1ea7n h\u1ecfi user v\u1edbi nh\u1eefng vi\u1ec7c nh\u1ecf",
+      "line": 124,
+      "type": "unnecessary",
+      "pattern": "kh\u00f4ng c\u1ea7n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "\u251c\u2500\u2500 Deterministic (kh\u00f4ng c\u1ea7n LLM cho simple tasks)",
+      "line": 146,
+      "type": "unnecessary",
+      "pattern": "kh\u00f4ng c\u1ea7n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "Anh mu\u1ed1n em tri\u1ec3n khai Phase 3 (watchdog/event-driven) lu\u00f4n kh\u00f4ng?",
+      "line": 161,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "macOS. S\u1ebd d\u00f9ng polling-based watchdog (kh\u00f4ng c\u1ea7n install th\u00eam package):",
+      "line": 165,
+      "type": "unnecessary",
+      "pattern": "kh\u00f4ng c\u1ea7n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "Anh mu\u1ed1n ti\u1ebfp Phase 4 (Self-Evolution) kh\u00f4ng?",
+      "line": 227,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "- Ho\u1eb7c Anh mu\u1ed1n d\u1eebng l\u1ea1i v\u00e0 test c\u00e1i g\u00ec?",
+      "line": 301,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "- 20 broken links (trong concepts/ \u2014 LM-generated pages c\u00f3 links \u0111\u1ebfn topics ch\u01b0a t\u1ed3n t\u1ea1i)",
+      "line": 319,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "# 2. Ho\u1eb7c b\u1ecf qua auto-generated pages t\u1eeb LM Studio (ch\u00fang c\u00f3 references \u0111\u1ebfn topics ch\u01b0a t\u1ed3n t\u1ea1i)",
+      "line": 326,
+      "type": "remove",
+      "pattern": "b\u1ecf",
+      "topic": "lm-studio",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "Anh mu\u1ed1n fix tr\u01b0\u1edbc hay qua Phase 5 lu\u00f4n?",
+      "line": 329,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "Anh mu\u1ed1n \u0111i ti\u1ebfp Phase 5 (Cross-Agent Coordination) kh\u00f4ng?",
+      "line": 362,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "trong c\u00e1c script em ch\u1ea1y c\u00f3 m\u1ed9t script n\u00e0o \u0111\u00f3 li\u00ean t\u1ee5c t\u1ea1o m\u1ed9t folder transcripts trong obsidian nh\u01b0ng n\u00f3 kh\u00f4ng ph\u1ea3i l\u00e0 th\u01b0 m\u1ee5c transcripts trong raw",
+      "line": 374,
+      "type": "negation",
+      "pattern": "kh\u00f4ng ph\u1ea3i",
+      "topic": "transcript",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "- Fixed mistake-log.md broken link",
+      "line": 387,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "S\u1eb5n s\u00e0ng cho Phase 5 ch\u01b0a Anh?",
+      "line": 398,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "**Anh mu\u1ed1n l\u00e0m g\u00ec ti\u1ebfp?**",
+      "line": 466,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "Anh mu\u1ed1n l\u00e0m g\u00ec ti\u1ebfp?",
+      "line": 588,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 14:39:31] \ud83d\udcac tool: {\"output\": \"---\\ntitle: Wiki Schema\\ncreated: 2026-04-08\\nupdated: 2026-04-09\\ntype: meta\\ntags: [meta, schema]\\n---\\n\\n# Wiki Schema \u2014 Personal Knowledge Base\\n\\n## Stru",
+      "line": 602,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "| `start-here.md` | Thi\u1ebfu mention v\u1ec1 scripts, watchdog, self-evolution, coordinator |",
+      "line": 607,
+      "type": "missing",
+      "pattern": "thi\u1ebfu",
+      "topic": "script",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 14:39:31] \ud83d\udcac tool: {\"content\": \"     1|---\\n     2|title: Wiki Index\\n     3|created: 2026-04-09\\n     4|updated: 2026-04-09\\n     5|type: meta\\n     6|tags: [meta, index]\\n     7|---\\n    ",
+      "line": 627,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "lm-studio",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "Anh mu\u1ed1n l\u00e0m g\u00ec ti\u1ebfp?",
+      "line": 680,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "Anh mu\u1ed1n l\u00e0m g\u00ec ti\u1ebfp?",
+      "line": 741,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 14:49:30] \ud83d\udc64 Anh: anh mu\u1ed1n em ti\u1ebfp t\u1ee5c nghi\u00ean c\u1ee9u c\u00e1i wiki n\u00e0y th\u00eam v\u00e0 brainstorm th\u00eam c\u00e1c t\u00ednh n\u0103ng ho\u1eb7c c\u1ea3i thi\u1ec7n c\u00e1c c\u00e1i c\u00f3 s\u1eb5n!",
+      "line": 742,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 14:49:30] \ud83d\udcac tool: {\"output\": \"----------------------------------------------------------------------\\n  \u2022 projects/personal-finance-tracker/retrospectives/001-2026-04-09.md \u2192 [[personal-fi",
+      "line": 747,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "| **4** | **Learning from Corrections** | Khi Anh s\u1eeda em = signal cho wiki h\u1ecdc | Low |",
+      "line": 779,
+      "type": "fix",
+      "pattern": "s\u1eeda",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "| **5** | **Fine-tune Pipeline ho\u00e0n ch\u1ec9nh** | generate_training_data.py + fine_tune.py \u0111\u00e3 c\u00f3, ch\u01b0a run | High |",
+      "line": 785,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "fine-tuning",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "- Hook khi Anh s\u1eeda em \u2192 ghi v\u00e0o `mistake-log` + update page quality score",
+      "line": 812,
+      "type": "fix",
+      "pattern": "s\u1eeda",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "- Pattern: S\u1eeda 3 l\u1ea7n c\u00f9ng 1 ch\u1ed7 = gap trong knowledge",
+      "line": 813,
+      "type": "fix",
+      "pattern": "s\u1eeda",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "Anh mu\u1ed1n em tri\u1ec3n khai \u00fd n\u00e0o tr\u01b0\u1edbc?",
+      "line": 822,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "| 4 | **Learning from Corrections** | Khi Anh s\u1eeda em \u2192 wiki h\u1ecdc |",
+      "line": 848,
+      "type": "fix",
+      "pattern": "s\u1eeda",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "## Anh mu\u1ed1n tri\u1ec3n khai t\u1eeb \u0111\u00e2u?",
+      "line": 886,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 15:26:26] \ud83d\udcac tool: {\"output\": \"======================================================================\\nWIKI LINT REPORT\\nGenerated: 2026-04-09 15:19:06\\nWiki path: /Users/tuananh4865/wiki\\n",
+      "line": 896,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "fine-tuning",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 15:26:26] \ud83d\udcac tool: {\"output\": \"---\\ntitle: \\\"List Model Ang - 2026-04-09\\\"\\ndate: 2026-04-09\\ntype: transcript\\ntags: [models, lm-studio]\\nsources: [raw/transcripts/2026-04-09-list-model-an",
+      "line": 908,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "lm-studio",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 15:26:26] \ud83d\udcac tool: {\"output\": \"======================================================================\\nWIKI LINT REPORT\\nGenerated: 2026-04-09 15:20:07\\nWiki path: /Users/tuananh4865/wiki\\n",
+      "line": 919,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "fine-tuning",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 15:26:26] \ud83d\udcac tool: {\"output\": \"---\\ntitle: \\\"2026-04-09 Session Retrospective\\\"\\ncreated: 2026-04-09\\nupdated: 2026-04-09\\ntype: retrospective\\nproject: personal-finance-tracker\\nphase: pha",
+      "line": 922,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 15:26:26] \ud83d\udcac tool: {\"output\": \"decisions\\nhub.md\\nmistakes\\nphase-1-init.md\\nphase-2-build.md\\nphase-3-launch.md\\nretrospectives\", \"exit_code\": 0, \"error\": null}",
+      "line": 924,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 15:26:26] \ud83d\udcac tool: {\"output\": \"./projects/personal-finance-tracker/retrospectives/001-2026-04-09.md:49:- [[mistakes/001-date-format-mismatch|Date format mismatch \u2014 2.5 hours debugging]]\\n./",
+      "line": 926,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "models",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "| `retrospective` | `[[mistakes/001...]]` | Should be `[[projects/.../mistakes/001...]]` |",
+      "line": 932,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "project",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "| `mistake-log.md` | `\\\\|` malformed | Should be `\\|` |",
+      "line": 933,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 15:26:26] \ud83d\udcac tool: {\"content\": \"     1|---\\n     2|title: Mistake Log\\n     3|created: 2026-04-09\\n     4|updated: 2026-04-09\\n     5|type: concept\\n     6|tags: [mistakes, learning, self-i",
+      "line": 939,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 15:26:26] \ud83d\udcac tool: {\"success\": true, \"diff\": \"--- a//Users/tuananh4865/wiki/concepts/mistake-log.md\\n+++ b//Users/tuananh4865/wiki/concepts/mistake-log.md\\n@@ -42,7 +42,7 @@\\n \\n | Date | M",
+      "line": 940,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 15:26:26] \ud83d\udcac tool: {\"success\": true, \"diff\": \"--- a//Users/tuananh4865/wiki/projects/personal-finance-tracker/retrospectives/001-2026-04-09.md\\n+++ b//Users/tuananh4865/wiki/projects/person",
+      "line": 941,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 15:26:26] \ud83d\udcac tool: {\"success\": true, \"diff\": \"--- a//Users/tuananh4865/wiki/projects/personal-finance-tracker/retrospectives/001-2026-04-09.md\\n+++ b//Users/tuananh4865/wiki/projects/person",
+      "line": 942,
+      "type": "mistake",
+      "pattern": "mistake",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 15:26:26] \ud83d\udcac tool: {\"output\": \"[main 53e7276] Phase 1.2: Ingest Pipeline - Article, Paper, RSS parsers\\n 30 files changed, 1614 insertions(+), 29 deletions(-)\\n create mode 100644 raw/artic",
+      "line": 982,
+      "type": "wait",
+      "pattern": "wait",
+      "topic": "github",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "**Phase 1 ho\u00e0n th\u00e0nh. Anh mu\u1ed1n ti\u1ebfp Phase 2 (Priority-weighted Self-Evolution) kh\u00f4ng?**",
+      "line": 1018,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T15:47:14.782287"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udc64 Anh: Ki\u1ec3m tra xem \u0111\u01b0\u1ee3c ch\u01b0a, anh mu\u1ed1n full conversation, h\u00e3y t\u00ecm c\u00e1ch th\u1ef1c hi\u1ec7n \u0111\u00fang y\u00eau c\u1ea7u c\u1ee7a anh \u0111i",
+      "line": 1,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:12:49.811907"
+    },
+    {
+      "text": "- Option C: Manual trigger khi Anh mu\u1ed1n",
+      "line": 103,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "Anh mu\u1ed1n integrate v\u00e0o \u0111\u00e2u? Telegram? CLI? Hay cron job \u0111\u1ec3 batch process?",
+      "line": 183,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udc64 Anh: Anh ch\u01b0a hi\u1ec3u c\u00e2u h\u1ecfi c\u1ee7a em",
+      "line": 184,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83e\udd16 Em: \u00dd em l\u00e0: Anh mu\u1ed1n transcript system ch\u1ea1y **t\u1ef1 \u0111\u1ed9ng** \u1edf \u0111\u00e2u trong Hermes?",
+      "line": 185,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "transcript",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "C\u00e1i anh c\u1ea7n l\u00e0: M\u1ed7i khi Anh v\u00e0 Em tr\u00f2 chuy\u1ec7n \u2192 t\u1ef1 \u0111\u1ed9ng l\u01b0u v\u00e0o wiki m\u00e0 kh\u00f4ng c\u1ea7n Anh ph\u1ea3i ch\u1ea1y l\u1ec7nh g\u00ec th\u1ee7 c\u00f4ng. \u0110\u00fang kh\u00f4ng?",
+      "line": 193,
+      "type": "unnecessary",
+      "pattern": "kh\u00f4ng c\u1ea7n",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "2. **Kh\u00f4ng s\u1eeda core code** \u2014 d\u00f9ng m\u1ed9t wrapper/hook",
+      "line": 216,
+      "type": "fix",
+      "pattern": "s\u1eeda",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "Nh\u01b0ng em nh\u1eadn ra v\u1ea5n \u0111\u1ec1: Message ch\u1ec9 l\u01b0u \u0111\u01b0\u1ee3c khi c\u00f3 \u0111\u1ee7 2 ng\u01b0\u1eddi (Anh + Em). N\u1ebfu l\u01b0u ngay sau message \u0111\u1ea7u ti\u00ean, ch\u01b0a c\u00f3 context \u0111\u1ea7y \u0111\u1ee7.",
+      "line": 218,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "- L\u01b0u raw message NGAY khi nh\u1eadn \u0111\u01b0\u1ee3c (kh\u00f4ng \u0111\u1ee3i response)",
+      "line": 221,
+      "type": "wait",
+      "pattern": "ch\u1edd|\u0111\u1ee3i",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83e\udd16 Em: Cron job \u0111ang ch\u1ea1y m\u1ed7i 5 ph\u00fat nh\u01b0ng s\u1ebd g\u1eedi k\u1ebft qu\u1ea3 v\u1ec1 Telegram m\u1ed7i l\u1ea7n ch\u1ea1y \u2014 s\u1ebd spam. S\u1eeda l\u1ea1i:",
+      "line": 235,
+      "type": "fix",
+      "pattern": "s\u1eeda",
+      "topic": "telegram",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "**V\u1ea5n \u0111\u1ec1 c\u00f2n l\u1ea1i**: Em v\u1eabn ch\u01b0a t\u00ecm \u0111\u01b0\u1ee3c ch\u1ed7 hook tr\u1ef1c ti\u1ebfp v\u00e0o message handler \u0111\u1ec3 append ngay v\u00e0o raw transcript. Cron ch\u1ec9 l\u00e0 gi\u1ea3i ph\u00e1p t\u1ea1m.",
+      "line": 276,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "transcript",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "**C\u1ea7n l\u00e0m th\u00eam**: T\u00edch h\u1ee3p tr\u1ef1c ti\u1ebfp v\u00e0o Hermes gateway \u0111\u1ec3 message \u0111\u01b0\u1ee3c append NGAY khi nh\u1eadn \u2014 kh\u00f4ng ph\u1ea3i \u0111\u1ee3i 5 ph\u00fat.",
+      "line": 278,
+      "type": "negation",
+      "pattern": "kh\u00f4ng ph\u1ea3i",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "Anh mu\u1ed1n em ti\u1ebfp t\u1ee5c t\u00ecm c\u00e1ch hook v\u00e0o gateway message flow kh\u00f4ng? Hay 5 ph\u00fat delay l\u00e0 ch\u1ea5p nh\u1eadn \u0111\u01b0\u1ee3c cho jetzt?",
+      "line": 280,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udcac tool: {\"content\": \"  2280|\\n  2281|        # \u2500\u2500 Claim this session before any await \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\\n  2282|        # Between here and _run_agent registering the real A",
+      "line": 284,
+      "type": "wait",
+      "pattern": "wait",
+      "topic": "transcript",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udc64 Anh: Anh mu\u1ed1n qu\u00e1 tr\u00ecnh n\u00e0y ph\u1ea3i \u0111\u01b0\u1ee3c th\u1ef1c hi\u1ec7n 1 c\u00e1ch th\u1ee5 \u0111\u1ed9ng kh\u00f4ng c\u1ea7n em hay anh ph\u1ea3i ch\u1ee7 \u0111\u1ed9ng d\u00f9ng c\u00f4ng c\u1ee5",
+      "line": 285,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83e\udd16 Em: Em hi\u1ec3u \u2014 ho\u00e0n to\u00e0n passive, kh\u00f4ng c\u1ea7n l\u1ec7nh g\u00ec. \u0110\u1ec3 t\u00ecm hi\u1ec3u hook system.",
+      "line": 286,
+      "type": "unnecessary",
+      "pattern": "kh\u00f4ng c\u1ea7n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udcac tool: {\"output\": \"/Users/tuananh4865/.hermes/hermes-agent/gateway/run.py:562:        from gateway.hooks import HookRegistry\\n/Users/tuananh4865/.hermes/hermes-agent/gateway/run",
+      "line": 289,
+      "type": "wait",
+      "pattern": "wait",
+      "topic": "github",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udcac tool: {\"content\": \"     1|\\\"\\\"\\\"\\n     2|Event Hook System\\n     3|\\n     4|A lightweight event-driven system that fires handlers at key lifecycle points.\\n     5|Hooks are dis",
+      "line": 291,
+      "type": "wait",
+      "pattern": "wait",
+      "topic": "script",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udcac tool: {\"content\": \"  2870|            # Emit agent:start hook\\n  2871|            hook_ctx = {\\n  2872|                \\\"platform\\\": source.platform.value if source.platform el",
+      "line": 294,
+      "type": "wait",
+      "pattern": "wait",
+      "topic": "models",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udcac tool: {\"content\": \"  2975|                    else:\\n  2976|                        display_reasoning = last_reasoning.strip()\\n  2977|                    response = f\\\"\ud83d\udcad **Rea",
+      "line": 295,
+      "type": "wait",
+      "pattern": "wait",
+      "topic": "transcript",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "**L\u01b0u \u00fd**: Hook hi\u1ec7n t\u1ea1i ghi message ng\u1eafn (500 chars max t\u1eeb gateway context). N\u1ebfu Anh mu\u1ed1n full conversation, c\u1ea7n th\u00eam b\u01b0\u1edbc format ri\u00eang. Nh\u01b0ng \u00edt nh\u1ea5t m\u1ecdi message \u0111\u1ec1u \u0111\u01b0\u1ee3c capture.",
+      "line": 335,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udc64 Anh: Ki\u1ec3m tra xem \u0111\u01b0\u1ee3c ch\u01b0a, anh mu\u1ed1n full conversation, h\u00e3y t\u00ecm c\u00e1ch th\u1ef1c hi\u1ec7n \u0111\u00fang y\u00eau c\u1ea7u c\u1ee7a anh \u0111i",
+      "line": 336,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83e\udd16 Em: Hook ch\u01b0a \u0111\u01b0\u1ee3c load v\u00ec gateway ch\u01b0a restart. Nh\u01b0ng tr\u01b0\u1edbc ti\u00ean, c\u1ea7n t\u00ecm full conversation \u2014 context ch\u1ec9 c\u00f3 500 chars kh\u00f4ng \u0111\u1ee7.",
+      "line": 339,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udcac tool: {\"output\": \"651:            history = self.session_store.load_transcript(old_session_id)\\n679:            # Build conversation history from transcript\\n2287:        # sam",
+      "line": 341,
+      "type": "wait",
+      "pattern": "wait",
+      "topic": "transcript",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "return await self._handle_mycommand(event)",
+      "line": 507,
+      "type": "wait",
+      "pattern": "wait",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udcac tool: {\"output\": \"3294:        # Emit session:end hook (session is ending)\\n3295:        await self.hooks.emit(\\\"session:end\\\", {\\n3301:        # Emit session:reset hook\\n3302:",
+      "line": 523,
+      "type": "wait",
+      "pattern": "wait",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udcac tool: {\"content\": \"  3290|                         platform=source.platform.value if source.platform else \\\"\\\")\\n  3291|        except Exception:\\n  3292|            pass\\n  32",
+      "line": 524,
+      "type": "wait",
+      "pattern": "wait",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:12:49] \ud83d\udcac tool: {\"output\": \"{\\\"role\\\": \\\"session_meta\\\", \\\"tools\\\": [{\\\"type\\\": \\\"function\\\", \\\"function\\\": {\\\"name\\\": \\\"browser_back\\\", \\\"description\\\": \\\"Navigate back to the previous ",
+      "line": 534,
+      "type": "wait",
+      "pattern": "wait",
+      "topic": "lm-studio",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "**Gi\u1edbi h\u1ea1n hi\u1ec7n t\u1ea1i**: Session ph\u1ea3i \u0111\u01b0\u1ee3c reset m\u1edbi trigger `session:end`. N\u1ebfu Anh mu\u1ed1n save ngay sau m\u1ed7i message (realtime), c\u1ea7n d\u00f9ng th\u00eam `agent:end` hook. Nh\u01b0ng `agent:end` ch\u1ec9 c\u00f3 context 500 chars.",
+      "line": 564,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "Gateway \u0111ang ch\u1ea1y. Ki\u1ec3m tra xem hook \u0111\u00e3 load ch\u01b0a:",
+      "line": 626,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:28:51] \ud83d\udcac tool: {\"output\": \"kill <pid>\\ncd ~/.hermes/hermes-agent && source venv/bin/activate && python -m gateway.run\\n```\\n\\nSau khi restart, m\u1ed7i khi Anh g\u1eedi `/new` ho\u1eb7c `/reset` \u0111\u1ec3 k\u1ebf",
+      "line": 630,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "**Hook \u0111\u00e3 active v\u00e0 working.** Kh\u00f4ng c\u1ea7n restart v\u00ec gateway \u0111\u00e3 load hook khi start bu\u1ed5i s\u00e1ng.",
+      "line": 647,
+      "type": "unnecessary",
+      "pattern": "kh\u00f4ng c\u1ea7n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:28:51] \ud83d\udcac tool: {\"todos\": [{\"id\": \"1\", \"content\": \"T\u1ea1o wiki page: realtime-transcript-system.md \u2705\", \"status\": \"completed\"}, {\"id\": \"2\", \"content\": \"Commit + push realtime-transcript-syst",
+      "line": 649,
+      "type": "unnecessary",
+      "pattern": "kh\u00f4ng c\u1ea7n",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:28:51] \ud83d\udcac tool: {\"content\": \"     1|---\\n     2|title: \\\"Realtime Transcript System\\\"\\n     3|date: 2026-04-09\\n     4|type: project\\n     5|status: completed\\n     6|tags: [hermes, wiki",
+      "line": 650,
+      "type": "unnecessary",
+      "pattern": "kh\u00f4ng c\u1ea7n",
+      "topic": "lm-studio",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "[2026-04-09 09:28:51] \ud83d\udcac tool: {\"success\": true, \"diff\": \"--- a//Users/tuananh4865/wiki/concepts/realtime-transcript-system.md\\n+++ b//Users/tuananh4865/wiki/concepts/realtime-transcript-system.md\\n@@ ",
+      "line": 651,
+      "type": "unnecessary",
+      "pattern": "kh\u00f4ng c\u1ea7n",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "M\u1ed7i message c\u1ee7a Anh v\u00e0 Em \u0111\u1ec1u \u0111\u01b0\u1ee3c save t\u1ef1 \u0111\u1ed9ng v\u00e0o wiki m\u00e0 kh\u00f4ng c\u1ea7n thao t\u00e1c th\u1ee7 c\u00f4ng.",
+      "line": 662,
+      "type": "unnecessary",
+      "pattern": "kh\u00f4ng c\u1ea7n",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "Anh mu\u1ed1n l\u00e0m b\u01b0\u1edbc n\u00e0o ti\u1ebfp?",
+      "line": 679,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "**2. Thi\u1ebfu search mechanism cho wiki**",
+      "line": 696,
+      "type": "missing",
+      "pattern": "thi\u1ebfu",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "1. **T\u00ecm ki\u1ebfm**: Anh mu\u1ed1n t\u00ecm ki\u1ebfm transcript b\u1eb1ng c\u00e1ch n\u00e0o?",
+      "line": 704,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "transcript",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "3. **Knowledge structure**: Anh mu\u1ed1n wiki ho\u1ea1t \u0111\u1ed9ng nh\u01b0 th\u1ebf n\u00e0o khi t\u00ecm ki\u1ebfm?",
+      "line": 714,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "Em mu\u1ed1n hi\u1ec3u r\u00f5 vision \u0111\u1ec3 thi\u1ebft k\u1ebf \u0111\u00fang, kh\u00f4ng ph\u1ea3i l\u00e0m l\u1ea1i nhi\u1ec1u l\u1ea7n.",
+      "line": 723,
+      "type": "negation",
+      "pattern": "kh\u00f4ng ph\u1ea3i",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "3. **Concept auto-creation** \u2014 Khi detect topic m\u1edbi ch\u01b0a c\u00f3 trong wiki, t\u1ef1 \u0111\u1ed9ng t\u1ea1o concept stub kh\u00f4ng?",
+      "line": 847,
+      "type": "not_yet",
+      "pattern": "ch\u01b0a",
+      "topic": "wiki",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    },
+    {
+      "text": "Anh mu\u1ed1n em implement theo h\u01b0\u1edbng n\u00e0y kh\u00f4ng?",
+      "line": 946,
+      "type": "preference",
+      "pattern": "anh mu\u1ed1n",
+      "topic": "general",
+      "timestamp": "2026-04-09T09:50:37.815656"
+    }
+  ],
+  "mistake_patterns": {
+    "general": 47,
+    "lm-studio": 6,
+    "transcript": 7,
+    "wiki": 18,
+    "script": 2,
+    "fine-tuning": 3,
+    "models": 2,
+    "project": 1,
+    "github": 2,
+    "telegram": 1
+  },
+  "page_quality_impact": {
+    "general": {
+      "corrections": 47,
+      "last_corrected": "2026-04-09T09:50:37.815656"
+    },
+    "lm-studio": {
+      "corrections": 6,
+      "last_corrected": "2026-04-09T09:50:37.815656"
+    },
+    "transcript": {
+      "corrections": 7,
+      "last_corrected": "2026-04-09T09:50:37.815656"
+    },
+    "wiki": {
+      "corrections": 18,
+      "last_corrected": "2026-04-09T09:50:37.815656"
+    },
+    "script": {
+      "corrections": 2,
+      "last_corrected": "2026-04-09T09:50:37.815656"
+    },
+    "fine-tuning": {
+      "corrections": 3,
+      "last_corrected": "2026-04-09T15:47:14.782287"
+    },
+    "models": {
+      "corrections": 2,
+      "last_corrected": "2026-04-09T09:50:37.815656"
+    },
+    "project": {
+      "corrections": 1,
+      "last_corrected": "2026-04-09T15:47:14.782287"
+    },
+    "github": {
+      "corrections": 2,
+      "last_corrected": "2026-04-09T09:50:37.815656"
+    },
+    "telegram": {
+      "corrections": 1,
+      "last_corrected": "2026-04-09T09:50:37.815656"
+    }
+  },
+  "last_updated": "2026-04-09T15:52:39.735104"
+}
