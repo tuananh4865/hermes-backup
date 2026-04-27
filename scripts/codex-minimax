@@ -1,0 +1,4 @@
+#!/bin/bash
+export MINIMAX_API_KEY="sk-cp-D-svOMfjSv0NAvAsW5sNQq6w9hLciRoHDlJqhSZyMFc69wj-g3sOHVPcDC4w14g-EiQBSSVRSsKAOqUXgezoY2Su73r_7VhieCsmhqqzhSwV1UPM-GwhU9A"
+cd /Volumes/Storage-1/Hermes/wiki
+exec codex -c 'model_provider=minimax' -c 'model=codex-MiniMax-M2.7' -c 'sandbox=read-only' "$@"

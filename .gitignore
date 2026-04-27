@@ -30,10 +30,17 @@ env/
 *.log
 logs/
 
-# Large media
+# Large media - EXCLUDE these from backup
 *.mp4
 *.mov
 *.avi
+*.mkv
+*.webm
+*.m4a
+*.mp3
+*.wav
+*.aac
+*.ogg
 *.zip
 *.tar.gz
 *.tgz
@@ -53,7 +60,15 @@ sessions/
 cron/output/
 trajectory_samples.jsonl
 
-# Large folders - store separately
+# Embedded repos - do NOT backup
+dflash/
+human-cli/
+rowboat/
+projects/*/
 wiki/
-scripts/
-projects/
+
+# Large cache/index - exclude from backup
+.processed/
+.search_index.json
+fine-tuned-wiki/
+*.safetensors
