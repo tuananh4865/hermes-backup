@@ -140,3 +140,7 @@ After EVERY task: if new learned info about Anh or his preferences → save to w
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The page mentions "Gen Z Slang 2026" but the content seems to mix 2026 slang with what might be 2024-2025 era references. The key insight section is dated 2026-04-25, but there's no information about:
+
+> **Auto-improvement note:** about-tuananh.md" - documenting knowledge about a Vietnamese content creator named Tuấn Anh and his preferences/operating philosophy for content creation.
+
+> **Auto-improvement note:** *Missing or outdated information:**

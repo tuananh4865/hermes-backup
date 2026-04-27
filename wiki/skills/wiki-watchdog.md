@@ -133,3 +133,5 @@ python3 ~/wiki/scripts/project_state.py checkpoint \
 > **Auto-improvement:** *Error handling and edge cases**: The skill describes a happy path but doesn't cover what happens when things go wrong. For example:
 
 > **Auto-improvement:** 2 concrete improvements. Let me analyze the current skill file and identify areas that could be improved.
+
+> **Auto-improvement:** 2 concrete improvements. Let me analyze the skill file for potential issues:

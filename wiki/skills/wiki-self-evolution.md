@@ -80,3 +80,5 @@ For each gap:
 > **Auto-improvement:** Evolution" - a process for running self-improvement cycles on a wiki.
 
 > **Auto-improvement:** *Trigger Conditions are vague**: The "gap analysis finds missing topics" doesn't specify who runs what analysis or when. There's no clear mechanism for detection.
+
+> **Auto-improvement:** evolution - a process for a wiki agent to improve itself. Looking at the content and the auto-improvement notes at the bottom, I can identify a few key issues:

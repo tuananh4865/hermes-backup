@@ -131,9 +131,9 @@ relationships:
 - [[multi-agent-wiki]] — Cross-agent coordination skill
 
 ## Hermes Agent
+- [[hermes-agent-self-evolution]] — Evolutionary self-improvement (DSPy + GEPA) (2026-04-27)
 - [[hermes-agent-complete-guide]] — Complete guide
 - [[hermes-agent-capabilities]] — System capabilities
-- [[hermes-agent-self-evolution]] — Self-evolution (DSPy + GEPA)
 - [[hermes-self-improvement-activation]] — Self-improvement features
 
 ## Meta
@@ -156,3 +156,7 @@ relationships:
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The `Last updated: 2026-04-23` date is in the future (current date context suggests we're around 2025, but I'll treat this as given). However, I notice there's a `[[hub]]` entry at the very bottom with no description or date, which seems incomplete.
+
+> **Auto-improvement note:** The page mentions "Total pages: ~151" but it's unclear if this is accurate
+
+> **Auto-improvement note:** Some entries don't have dates while others do (inconsistency)
