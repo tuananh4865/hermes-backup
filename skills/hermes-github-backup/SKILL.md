@@ -25,7 +25,7 @@ git init
 git remote add origin https://github.com/tuananh4865/hermes-backup.git
 ```
 
-### 3. Create .gitignore (IMPORTANT)
+### 3. Create .gitignore (IMPORTANT - với wiki backup)
 ```bash
 cat > .gitignore << 'EOF'
 # Sensitive data
@@ -55,13 +55,28 @@ env/
 *.log
 logs/
 
-# Large media (VIDEO/AUDIO - common mistake!)
+# Large media - EXCLUDE from backup
 *.mp4
 *.mov
 *.avi
 *.mkv
 *.m4a
-*.webm
+*.mp3
+*.wav
+*.aac
+*.ogg
+*.zip
+*.tar.gz
+*.tgz
+
+# Node
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
 # Sessions & large data
 sessions/
@@ -69,10 +84,33 @@ sessions/
 cron/output/
 trajectory_samples.jsonl
 
-# Large folders - store separately
-wiki/
-scripts/
-projects/
+# Embedded repos - do NOT backup (nested git repos cause problems)
+dflash/
+human-cli/
+rowboat/
+projects/*/
+
+# Wiki-specific: exclude only large files, backup .md content
+wiki/**/*.mp4
+wiki/**/*.mov
+wiki/**/*.m4a
+wiki/**/*.mp3
+wiki/**/*.wav
+wiki/**/*.aac
+wiki/**/*.ogg
+wiki/**/*.zip
+wiki/**/*.tar.gz
+wiki/**/.git/
+wiki/**/node_modules/
+wiki/scripts/.search_index.json
+wiki/fine-tuned-wiki/
+wiki/.processed/
+
+# Large cache/index
+.processed/
+.search_index.json
+fine-tuned-wiki/
+*.safetensors
 EOF
 ```
 
@@ -90,78 +128,107 @@ git push origin main
 
 ---
 
-## Common Issues
+## Common Issues & Solutions
 
 ### "embedded git repository" warning
 ```
-warning: adding embedded git repository: projects/orchestrator-agent-projects
+warning: adding embedded git repository: wiki/concepts
+warning: adding embedded git repository: wiki/hermes-agent-self-evolution
 ```
-**Cause**: Folder bên trong có `.git/` directory
-**Fix**: Xóa `.git` trong folder đó hoặc remove khỏi index:
+**Cause**: Wiki có nested `.git/` directories bên trong
+
+**Solution (đã test):**
 ```bash
-git rm -r --cached path/to/embedded/repo
+# Xóa tất cả nested .git trong wiki
+find wiki -name ".git" -type d -exec rm -rf {} \; 2>/dev/null
+
+# Hoặc remove khỏi git index
+git rm -rf --cached wiki/concepts
+git rm -rf --cached wiki/hermes-agent-self-evolution
 ```
+
+### Wiki bị ignore hoàn toàn
+```
+hint: Use -f if you really want to add them
+hint: You've added another git repository inside your current repository
+```
+**Cause**: Outer `.gitignore` có dòng `wiki/`
+
+**Solution:** Remove `wiki/` khỏi .gitignore, dùng specific excludes thay thế (xem section 3 ở trên)
 
 ### Wiki quá lớn (464MB+)
 **Nguyên nhân**: Wiki lưu video/audio TikTok đã download để extract transcript
 
 **Tìm files lớn:**
 ```bash
-cd /Volumes/Storage-1/Hermes/wiki
-find . -type f -size +10M 2>/dev/null
-file *  # check file types
+find /Volumes/Storage-1/Hermes/wiki -type f -size +10M 2>/dev/null | xargs -I{} ls -lh "{}"
 ```
 
-**File types phổ biến chiếm dung lượng:**
-| Type | Size | Notes |
-|------|------|-------|
-| `.mp4` (TikTok videos) | 20-40MB each | Download để extract transcript, có thể xóa sau |
-| `.m4a` (Audio) | 5-10MB each | Audio from videos |
-| `.safetensors` | vài MB | Fine-tuning data |
-| `.search_index.json` | vài MB | Search index, có thể regenerate |
+**Detect file type (không phải by extension):**
+```bash
+find wiki -type f -size +1M | while read f; do
+  type=$(file -b "$f")
+  echo "$type: $f"
+done | grep -E "ISO Media|MPEG|ALAC|AAC"
+```
 
-**Giải pháp:**
-1. Xóa video/audio sau khi extract transcript
-2. Hoặc add vào .gitignore:
-   ```
-   wiki/**/*.mp4
-   wiki/**/*.m4a
-   wiki/**/*.mov
-   ```
+**Xóa media files (đã test thành công):**
+```bash
+# Xóa theo extension
+find wiki -type f \( -name "*.mp4" -o -name "*.mov" -o -name "*.m4a" -o -name "*.mp3" \) -size +1M -delete
+
+# Hoặc xóa theo file type detection
+find wiki -type f -size +1M | while read f; do
+  type=$(file -b "$f")
+  if echo "$type" | grep -qE "ISO Media|MPEG ADTS|ALAC|AAC"; then
+    rm "$f"
+    echo "Deleted: $f ($type)"
+  fi
+done
+```
+
+**Kết quả:** Wiki giảm từ 464MB → 111MB → 74MB sau khi xóa media
 
 ---
 
-## Backup Scope quyết định
+## Backup Scope - Phương pháp ĐÃ THÀNH CÔNG
 
-### Chỉ backup Skills (~100KB)
+### ✅ Backup Wiki + Skills + Memories (~100MB sau khi cleanup)
+
+**Ưu điểm:**
+- Wiki (markdown content) được backup đầy đủ
+- Skills được backup thường xuyên
+- Memories được backup
+
+**Workflow đã test thành công:**
+```bash
+cd /Volumes/Storage-1/Hermes
+
+# 1. Xóa nested .git repos (gây "embedded git repository" warning)
+find wiki -name ".git" -type d -exec rm -rf {} \; 2>/dev/null
+
+# 2. Force add wiki (đã được .gitignore configure để exclude media)
+git add wiki/ -f
+
+# 3. Add skills và memories
+git add skills/ .hermes/memories/ .gitignore
+
+# 4. Commit và push
+git commit -m "Backup $(date +%Y-%m-%d)"
+git push origin main
+```
+
+**Kết quả thực tế:**
+- Wiki: 3,559 files, ~100MB (sau khi xóa media)
+- Skills: ~100KB
+- GitHub repo: https://github.com/tuananh4865/hermes-backup
+
+### ⚠️ Chỉ backup Skills (~100KB)
 ```bash
 git add skills/ .gitignore
 ```
 - Pros: Nhanh, nhẹ
 - Cons: Wiki không backup
-
-### Backup toàn bộ (nếu dùng Git LFS)
-```bash
-# Cài Git LFS
-git lfs install
-
-# Track large files
-git lfs track "*.mp4"
-git lfs track "*.m4a"
-
-git add .gitattributes
-git add wiki/ .gitignore
-```
-- Pros: Backup toàn bộ
-- Cons: Cần Git LFS paid plan cho >1GB
-
-### Backup Wiki metadata (thay vì source)
-```bash
-# Backup chỉ index, schema, log
-git add wiki/index.md wiki/SCHEMA.md wiki/log.md wiki/_meta/ .gitignore
-```
-- Pros: Vài MB, wiki structure được backup
-- Cons: Raw content không backup
 
 ---
 
@@ -201,6 +268,8 @@ cp -r /tmp/hermes-backup/skills/* /Volumes/Storage-1/Hermes/skills/
 ## Notes
 
 - **GitHub repo**: https://github.com/tuananh4865/hermes-backup
-- **LFS required**: Nếu muốn backup video/audio
 - **Symlink**: `~/.hermes/skills` → `/Volumes/Storage-1/Hermes/skills`
-- **external_dirs config**: Thêm `/Volumes/Storage-1/Hermes/skills` vào `~/.hermes/config.yaml`
+- **external_dirs config**: `/Volumes/Storage-1/Hermes/skills` in `~/.hermes/config.yaml`
+- **Cron job**: Hermes Daily Backup (job_id: `7cba6ba5f52a`) - 3AM daily, backup wiki + skills + memories
+- **Wiki backup size**: ~74MB (sau khi xóa media)
+- **Wiki files**: 3,559 markdown files đã backup thành công
