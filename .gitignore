@@ -65,7 +65,23 @@ dflash/
 human-cli/
 rowboat/
 projects/*/
-wiki/
+# wiki/ - backup wiki content directly
+
+# Wiki-specific: exclude only large media, NOT markdown content
+wiki/**/*.mp4
+wiki/**/*.mov
+wiki/**/*.m4a
+wiki/**/*.mp3
+wiki/**/*.wav
+wiki/**/*.aac
+wiki/**/*.ogg
+wiki/**/*.zip
+wiki/**/*.tar.gz
+wiki/**/.git/
+wiki/**/node_modules/
+wiki/scripts/.search_index.json
+wiki/fine-tuned-wiki/
+wiki/.processed/
 
 # Large cache/index - exclude from backup
 .processed/
