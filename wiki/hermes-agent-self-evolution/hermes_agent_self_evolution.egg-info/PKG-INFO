@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: hermes-agent-self-evolution
+Version: 0.1.0
+Summary: Evolutionary self-improvement for Hermes Agent — optimize skills, prompts, tool descriptions, and code using DSPy + GEPA
+Author-email: Nous Research <team@nousresearch.com>
+License: MIT
+Project-URL: Homepage, https://github.com/NousResearch/hermes-agent-self-evolution
+Project-URL: Repository, https://github.com/NousResearch/hermes-agent-self-evolution
+Keywords: llm,optimization,evolution,dspy,gepa,hermes,agent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: dspy>=3.0.0
+Requires-Dist: openai>=1.0.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: click>=8.0
+Requires-Dist: rich>=13.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21; extra == "dev"
+Provides-Extra: darwinian
+Requires-Dist: darwinian-evolver; extra == "darwinian"
+
+---
+title: Hermes Agent Self-Evolution README
+created: 2026-04-12
+updated: 2026-04-13
+type: concept
+tags: [[hermes, self-evolution, dspy, gepa]]
+---
+
+# Hermes Agent Self-Evolution README
+
+# Hermes Agent Self-Evolution
+
+**Evolutionary self-improvement for [[hermes-agent-complete-guide]].**
+
+Uses DSPy + GEPA (Genetic-Pareto Prompt Evolution) to automatically evolve and optimize Hermes Agent's skills, tool descriptions, system prompts, and code.
+
+## Related
+
+- [[hermes-agent-complete-guide]] — Complete guide (橙皮书)
+- [[hermes-agent-self-evolution]] — Self-evolution hub
+
+
+## Overview
+
+Brief overview of this concept.
+
+## Key Concepts
+
+- **Concept 1**: Description of the first key idea with practical context
+- **Concept 2**: Description of the second key idea
+- **Concept 3**: Description of the third key idea
+
+## Practical Applications
+
+How this topic is applied in real-world scenarios. Include at least one concrete example or use case.
+
+## Related Concepts
+
+hermes-agent-complete-guide
+hermes-agent-complete-guide
+
+
+## Related Concepts
+
+- [[hermes-agent-complete-guide]]
+- [[hermes-agent-complete-guide]]
+- [[hermes-agent-self-evolution]]

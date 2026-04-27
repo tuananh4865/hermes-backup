@@ -1,0 +1,243 @@
+{
+  "main": {
+    "id": "78bacfcbfaac7e83",
+    "type": "split",
+    "children": [
+      {
+        "id": "15674a346a9c78ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "40e056427d609a31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/transcripts/2026-04-27/23-10-10_telegram_Tuấn-Anh-anh-nhớ-rồi-check-.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "23-10-10_telegram_Tuấn-Anh-anh-nhớ-rồi-check-"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5923faa90f80f6d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "fe9bf9f185e5ec45",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9f0ca77225b56c5e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "cad4525ee7a224d5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:2026",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8822d67bcea512a2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 280.5
+  },
+  "right": {
+    "id": "3c387b9952c439fa",
+    "type": "split",
+    "children": [
+      {
+        "id": "542419af9c8459b2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "db4def5595e40812",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "0fc7bfccf7d3044c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "c96c226bc0401d11",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0f15073969a4e8d2",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "1680bfb7751ae534",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "83c767110bd8e86b",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "9f0ca77225b56c5e",
+  "lastOpenFiles": [
+    "concepts/hermes-wiki-session-context.md",
+    "concepts/git-workflow-management.md",
+    "concepts/thin-harness-fat-skills-philosophy.md",
+    "concepts/agent-development-best-practices.md",
+    "concepts/genetic-algorithms-in-ai.md",
+    "concepts/dspy-framework.md",
+    "concepts/skill-recommendation-tooling.md",
+    "concepts/software-architecture-patterns.md",
+    "concepts/knowledge-management-systems.md",
+    "concepts/project-management-methodologies.md",
+    "concepts/quality-assurance-metrics.md",
+    "concepts/tiktok-duymuoi-index.md.md",
+    "concepts/dspy.md",
+    "concepts/self-improvement.md",
+    "concepts/skill-insight-analyzer-tooling.md",
+    "concepts/hermes-agent-architecture-diagram.md",
+    "concepts/thin-harness,-fat-skills-philosophy.md",
+    "concepts/devops-knowledge-base.md",
+    "concepts/delegation-workflow.md",
+    "concepts/content-quality-metrics.md",
+    "concepts/batch-processing-strategy.md",
+    "concepts/batch-computing-techniques.md",
+    "concepts/parallel-processing-strategies.md",
+    "concepts/wiki-quality-metrics.md",
+    "concepts/distributed-systems-architecture.md",
+    "concepts/agile-workflow-principles.md",
+    "raw/transcripts/2026-04-27",
+    "raw/transcripts/2026-04-25",
+    "concepts/tiktok-captcha-solver/__pycache__/tiktok_solver.cpython-311.pyc",
+    "concepts/tiktok-captcha-solver/__pycache__/stealth_browser.cpython-311.pyc",
+    "concepts/tiktok-captcha-solver/__pycache__",
+    "concepts/tiktok-captcha-solver/examples/demo.py",
+    "concepts/tiktok-captcha-solver/examples",
+    "concepts/tiktok-captcha-solver/tiktok_solver.py",
+    "concepts/tiktok-captcha-solver/stealth_browser.py",
+    "concepts/tiktok-captcha-solver/human_drag.py",
+    "projects/nexus/screenshots/raw/phase2_home.png",
+    "projects/nexus/screenshots/raw/n5_final_test.png",
+    "projects/nexus/screenshots/raw/n5_v4.png",
+    "projects/nexus/screenshots/raw/n5_v3.png",
+    "projects/nexus/screenshots/raw/n5_v2.png",
+    "projects/nexus/screenshots/raw/n5_graph_21.png",
+    "projects/nexus/screenshots/raw/n5_final.png",
+    "projects/nexus/screenshots/raw/n5_test6.png",
+    "projects/nexus/screenshots/raw/n5_test5.png",
+    "projects/nexus/screenshots/raw/n5_test4.png"
+  ]
+}

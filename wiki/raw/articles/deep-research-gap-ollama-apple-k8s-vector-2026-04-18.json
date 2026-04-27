@@ -1,0 +1,964 @@
+{
+  "Round 1 - Ollama": [
+    {
+      "title": "LM Studio & Ollama: Local LLM Setup Guide - DevToolHub",
+      "url": "https://devtoolhub.com/install-lm-studio-ollama/",
+      "content": "Ollamalets you runLLMswith ... Installing LM Studio andOllamaallows anyone to runlocalLLMssecurely and efficiently on their own hardware.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "How to Install LLMs Locally Using Ollama \u2014 The Ultimate Easy",
+      "url": "https://www.digitalwebxpert.com/install-llms-locally-using-ollama/",
+      "content": "Whether you\u2019re a developer, researcher, content creator, or simply curious about AI, learning how to installLLMslocally usingOllamawill open up ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Build, Run, and Integrate Your Own LLM with Ollama -",
+      "url": "https://devstacktips.com/development/programming-languages/2025/08/01/build-run-and-integrate-your-own-llm-with-ollama/",
+      "content": "With just a Modelfile and a few commands, you can spin up an entirelylocaland customizedLLMusingOllama. ... howLLMscan work offline \u2014Ollama...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "How to setup local function calling with Ollama - Geeky Gadgets",
+      "url": "https://www.geeky-gadgets.com/function-calling-with-ollama/",
+      "content": "Setting uplocalfunction calling withLLMsusingOllamaand the Llama 3 model involves a series of steps, from installation andsetupto testing and ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "How to install Ollama LLM locally to run Llama 2, Code Llama -",
+      "url": "https://www.geeky-gadgets.com/how-to-install-ollama-locally/",
+      "content": "This article will provide a comprehensiveguideon how to install and useOllamato run Llama 2, Code Llama, and otherLLMmodels.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Step-by-Step Guide - How to use Ollama to run open-source LLM",
+      "url": "https://www.langchain.ca/blog/step-by-step-guide-how-to-use-ollama-to-run-open-source-llm-models-locally/",
+      "content": "Step-by-StepGuide- How to useOllamato run open-sourceLLMmodels locally ... Setting upOllamafor use is a straightforward process that ensures ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Setting Up an Ollama Server for Private LLMs | Pipeline-e",
+      "url": "https://pipeline-e.com/blog-ollama-server.html",
+      "content": "Ollamamakes it straightforward to runlocalLLMswith a clean API surface. ... Thisguidewalks through a production-friendlysetupwe use for ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Local LLMs on Your PC with Ollama + Open WebUI (3-Step Setup)",
+      "url": "https://upwarddynamism.com/ai-technology-tools/local-chatbot-ollama-open-webui/",
+      "content": "Heads-up: This tutorial focuses on runningOllamaand Open WebUI locally on your PC. ... localhost\u201d.) Opening them to the web as \u201cservers\u201d ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Llama.cpp vs Ollama \u2014 Best Local LLM Tool (2026) - Openxcell",
+      "url": "https://www.openxcell.com/blog/llama-cpp-vs-ollama/",
+      "content": "November 27, 2025 -Llama.cpp provides unmatched performance, full customization, and broad hardware support, while Ollama offers effortless installation, ready-to-use models, and a plug-and-play API, making it perfect for rapid prototyping and app de",
+      "_src": "ddgs"
+    },
+    {
+      "title": "I Switched From Ollama And LM Studio To llama.cpp And Absolutely Loving It",
+      "url": "https://itsfoss.com/llama-cpp/",
+      "content": "October 11, 2025 -Like Ollama, I can use a feature-rich CLI, plus Vulkan support in llama.cpp and it takes a lot less disk space, too.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Ollama vs. Llama.cpp: A Guide to Local LLM Performance",
+      "url": "https://www.arsturn.com/blog/ollama-vs-llama-cpp-which-should-you-use-for-local-llms",
+      "content": "August 12, 2025 -... Build a chatbot that saves time and increases customer satisfaction. Okay, so Llama.cpp is fast. But that speed comes at the cost of complexity. You have to be comfortable with the command line, compiling code, & managing files.O",
+      "_src": "ddgs"
+    },
+    {
+      "title": "llama.cpp vs. ollama: Running LLMs Locally for Enterprises",
+      "url": "https://picovoice.ai/blog/local-llms-llamacpp-ollama/",
+      "content": "July 23, 2024 -Yet, compared to commercial solutions, the documentation for llama.cpp and ollama may seem less comprehensive, especially for those who do not have machine learning expertise. This can make it more challenging for developers to resolve",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Ollama vs llama cpp: which framework is better for inference? \ud83d\udc4a - NeuralNet Solutions",
+      "url": "https://neuralnet.solutions/ollama-vs-llama-cpp-which-framework-is-better-for-inference",
+      "content": "November 7, 2025 -My personal recommendation? Start with Ollama for learning and prototyping, then migrate to llama.cpp when you need production-grade performance and scalability. And if you\u2019re looking for an enterprise solution to deploy your LLMs, ",
+      "_src": "ddgs"
+    },
+    {
+      "title": "llama.cpp vs Ollama 2026: Raw Performance vs Developer Experience | Morph",
+      "url": "https://www.morphllm.com/comparisons/llama-cpp-vs-ollama",
+      "content": "2 weeks ago -Ollama is a Go wrapper around it. Benchmarks show llama.cpp runs 15-30% faster with 20% less VRAM. Ollama gets you running in one command. Full comparison of performance, setup, quantization, API compatibility, and when the extra control",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Ollama vs Llama.cpp: Which One Should You Choose in 2025?",
+      "url": "https://blog.belsterns.com/post/ollama-vs-llama-cpp-which-one-should-you-choose-in-2025",
+      "content": "April 16, 2025 -... Ollama (short for Optimized LLaMA) is a newer C++ implementation, launched in July 2023 by Jeffrey Morgan. Built on llama.cpp,it focuses on further optimizing performance and usability, offering faster speeds and a smoother user e",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Hyperbolic on X: \"LLM Serving Frameworks: Ollama, vLLM, SGLang, and LLaMA.cpp Server\" / X",
+      "url": "https://x.com/hyperbolic_labs/status/1917283791485428205?lang=en",
+      "content": "To summarize,Ollama is best for ease of deployment and multi-model management on local machines; vLLM is best for high-throughput serving of LLMs in production (especially when sticking to a straightforward prompting interface); SGLang is best for cu",
+      "_src": "ddgs"
+    },
+    {
+      "title": "BestOllamaModelsin2026: Full Comparison, Storage... - Hyaking",
+      "url": "https://www.hyaking.com/best-ollama-models-2026-comparison/",
+      "content": "Short answer: whichOllamamodelisbest? For most people in2026, these are the most practical picks:BestOllamamodelfor coding: qwen3-coder:30b.BestOllamamodelfor reasoning and agent workflows: gpt-oss:20b.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "BrowseOllama'slibraryofmodels.",
+      "url": "https://ollama.com/library?sort=popular",
+      "content": "Ollama.ModelsDocs Pricing. Sign in Download.Gemma 4modelsare designed to deliver frontier-level performance at each size. They arewell-suited for reasoning, agentic workflows, coding, and multimodal understanding.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "BestOllamaLocalModelsfor OpenClaw in2026... - Clawdbook",
+      "url": "https://clawdbook.org/blog/openclaw-best-ollama-models-2026",
+      "content": "Smallmodels(<14B) are prone to issues. The community consensus is to start with at least 14B\u201332B, with 32B+ being more reliable. Top RecommendedOllamaModelsRanking (2026Community Consensus). Qwen3 Series / Qwen3-Coder (Top Pick).",
+      "_src": "ddgs"
+    },
+    {
+      "title": "BestLocal LLMModels2026| Developer Comparison",
+      "url": "https://www.sitepoint.com/best-local-llm-models-2026/",
+      "content": "Model-by-ModelBreakdown. How to Get Started withOllamaand LM Studio.Thebestlocal LLMmodelsfor developers in2026, includingLlama3.3, Mistral Small 3, Phi-4-mini, and Qwen 3, now deliver performance that rivals cloud-hosted alternatives on consumer har",
+      "_src": "ddgs"
+    },
+    {
+      "title": "WhichOllamaModelIsBestFor YOU? - YouTube",
+      "url": "https://www.youtube.com/watch?v=FQTorLqMyMU",
+      "content": "In this video, we explore the variousOllamamodelsavailable and help you determine which one isbestfor your custom needs.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "The Ultimate Guide toOllamaModels(April2026Edition): Why Local...",
+      "url": "https://practicalwebtools.com/blog/ollama-models-complete-guide-2025",
+      "content": "The definitive guide to all 100+Ollamamodels. CompareLlama3.3, DeepSeek-R1, Gemma 3, Qwen3, Mistral, and more. Includes hardware requirements, benchmarks, use cases, and recommendations for choosing the right local AImodel.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Ollama",
+      "url": "https://registry.ollama.ai/search",
+      "content": "Search formodelsonOllama.Gemma 4modelsare designed to deliver frontier-level performance at each size. They arewell-suited for reasoning, agentic workflows, coding, and multimodal understanding.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "OllamaModelsList 2025: 100+ModelsCompared - Skywork ai",
+      "url": "https://skywork.ai/blog/llm/ollama-models-list-2025-100-models-compared/",
+      "content": "OllamaModelList Overview (2025 Update).BestOllamaModels2025 (Top 10 Ranked).OllamaModelList Overview (2025 Update).Ollama\u2019s 2025libraryisn\u2019t just big\u2014it\u2019s thoughtful. Over 100modelslive here now, covering everything from quick tasks to heavy-duty wor",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Step-by-Step Guide to Run Llama 4 Locally with Tool Calling Enabled",
+      "url": "https://dev.to/nodeshiftcloud/step-by-step-guide-to-run-llama-4-locally-with-tool-calling-enabled-jg7",
+      "content": "Whether you're building assistants, agents, or research tools, the combination ofLlama4andOllamamakes it possible torunhighly capable modelslocallywithprecision and control.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "How to Run Llama 4 on Ollama (Scout and Maverick Guide)",
+      "url": "https://www.serverman.co.uk/ai/ollama/how-to-run-llama-4-on-ollama/",
+      "content": "Llama4is Meta's most capable open-weight model family to date, released in April 2026. It introduces a mixture-of-experts (MoE) architecture and native multimodal support \u2014 meaning it handles both text and images out of the box. Two variants are avai",
+      "_src": "ddgs"
+    },
+    {
+      "title": "How to Run LLMs Locally with Ollama in 11 Steps [2026]",
+      "url": "https://tech-insider.org/ollama-tutorial-run-llm-locally-2026/",
+      "content": "Learn how torunLLMslocallywithOllama. 11-step tutorial covers installation, Python integration, Docker deployment, and performance optimization.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Run Ollama Locally: Complete Installation Guide (2026)",
+      "url": "https://www.aitooldiscovery.com/how-to/run-ollama-locally",
+      "content": "Step-by-step guide to installOllamaon Linux, macOS, or Windows, pull your first model, and access the REST API. Includes GPU setup and troubleshooting.Ollamalets yourunlarge language models on your own hardware without sending data to external server",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Running LLMs Locally: Ollama, llama.cpp, and Self-Hosted AI for Developers",
+      "url": "https://daily.dev/blog/running-llms-locally-ollama-llama-cpp-self-hosted-ai-developers",
+      "content": "RunLLMs on local hardware for privacy, lower costs, and faster inference\u2014this guide coversOllama,llama.cpp, hardware, quantization, and deployment tips.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "GitHub - inusdaimary/Run-LLaMA-AI-Locally-with-Ollama",
+      "url": "https://github.com/inusdaimary/Run-LLaMA-AI-Locally-with-Ollama",
+      "content": "This repository provides a quick setup torunMeta'sLLaMAAI modelslocallyusingOllama, a simple and powerful runtime for large language models.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "How to Run and Customize LLMs Locally with Ollama",
+      "url": "https://www.freecodecamp.org/news/run-and-customize-llms-locally-with-ollama",
+      "content": "To understand how local LLMsrunon your machine, you have to look into the physical components of your computer. When youruna model likeLlama3 or Mistrallocally, your hardware transforms from a general-purpose machine into a specialized AI engine.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Run LLM Locally with Ollama and VS Code (Step-by-Step Guide)",
+      "url": "https://dailydevpost.com/blog/how-to-run-an-llm-locally-for-coding-with-ollama-and-vs-code",
+      "content": "If you care about privacy, predictable performance, and zero recurring AI cost, this is the cleanest way torunlarge language modellocallytoday. Let me show you how I actually use it.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "OllamaCourse \u2013 BuildAIApps Locally - YouTube",
+      "url": "https://www.youtube.com/watch?v=GWB9ApTPTv4",
+      "content": "Learn how to set up and useOllamato build powerfulAIapplicationslocally. This hands-on course covers pulling and customizing models, RESTAPIs, Python i...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "ollama/docs/api.md at main \u00b7ollama/ollama\u00b7 GitHub",
+      "url": "https://github.com/ollama/ollama/blob/main/docs/api.md",
+      "content": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models. -ollama/docs/api.md at main \u00b7ollama/ollama.Upload a model to a model library. Requires registering forollama.aiand adding a public key first.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Introduction -Ollama",
+      "url": "https://docs.ollama.com/api/introduction",
+      "content": "Ollama\u2019sAPIallows you to run and interact with models programatically. Get started. If you\u2019re just getting started, follow the quickstart documentation to get up and running withOllama\u2019sAPI. Base URL. After installation,Ollama\u2019sAPIis served by defaul",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Claude Code withOllama: No Cloud, No Limits / Habr",
+      "url": "https://habr.com/en/articles/988538/",
+      "content": "In January 2026,Ollamaadded support for the Anthropic MessagesAPI, enabling Claude Code to connect directly to anyOllamamodel.Ollamais a locally deployedAImodel runner that lets you download and run large language models on your own machine.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "How to UseOllamaAPIto Run LLMs | Built In",
+      "url": "https://builtin.com/articles/ollama-api",
+      "content": "OllamaAPIis an open-source platform that allows users to run large language models locally on their systems. It allows users to use the RESTAPIto generate responses.You can check them out at theAPIDocumentation ofOllama. Atutorialon how to useOllama.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "1.AgenticAI\u2014 Run Free LLM likeOllama/Deepseek in... | Medium",
+      "url": "https://prabhjeetlearning.medium.com/1-agentic-ai-run-free-llm-like-ollama-deepseek-in-your-local-system-25386b581b20",
+      "content": "Have you ever wanted to run powerfulAImodels right on your laptop without relying on externalAPIs? Thanks to tools likeOllama, this is now incredibly easy. The best part? You can use the popular, well-documented OpenAI Python client library to intera",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Build a LocalAgenticRAG App with Google EmbeddingGemma",
+      "url": "https://www.theunwindai.com/p/build-a-local-agentic-rag-app-with-google-embeddinggemma",
+      "content": "Thisapplicationimplements a fully localagenticRAG system that combines Google's EmbeddingGemma withLlama3.2 to create an intelligent document assistant.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "OllamaRESTAPIEndpoints - KodeKloud",
+      "url": "https://notes.kodekloud.com/docs/Running-Local-LLMs-With-Ollama/Building-AI-Applications/Ollama-REST-API-Endpoints/page",
+      "content": "BuildingAIApplications.OllamaRESTAPIEndpoints. Copy page. Integrate large language models intoapplicationsusing theOllamaRESTAPIfor text generation, chat, and model management over HTTP.",
+      "_src": "ddgs"
+    }
+  ],
+  "Round 2 - Apple Silicon MLX": [
+    {
+      "title": "Get started with MLX for Apple silicon - WWDC25 - Videos -",
+      "url": "https://developer.apple.com/videos/play/wwdc2025/315/",
+      "content": "To learn more about that, check out the session, \u201cExplore large languagemodelsonApplesiliconwithMLX\u201d. ...MLXin any of these languages to ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "We Built the Fastest LLM Decode Engine for Apple Silicon. Here",
+      "url": "https://vuink.com/post/ehanaljurer-d-dnv/blog/metalrt-fastest-llm-decode-engine-apple-silicon",
+      "content": "MetalRT andmlx-lm use the exact samemodelfiles, so this is a pure ... Why YourAppleSiliconLLM Isn\u2019t Reproducible: TheMLXDeterminism ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Meta Releases Llama 4: Here\u2019s the Hardware You\u2019ll Need to",
+      "url": "https://www.hardware-corner.net/meta-releases-llama-4-what-hardware/",
+      "content": "Below, we\u2019ll break down what you need for eachmodel, using bothMLX(AppleSilicon) and GGUF (AppleSilicon/PC) backends, with a focus on ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "GitHub - dorukgezici/pydantic-ai-mlx: Add MLX support to",
+      "url": "https://github.com/dorukgezici/pydantic-ai-mlx",
+      "content": "RunMLXcompatible HuggingFacemodelsonApplesiliconlocally with Pydantic AI. ...Apple'sMLXseems more performant onApplesiliconthanllama...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "GitHub - exo-explore/mlx-bitnet: 1.58 Bit LLM on Apple Silicon",
+      "url": "https://github.com/exo-explore/mlx-bitnet",
+      "content": "... of the 1.58 Bit LLM from the Microsoft Research paper \"The Era of 1-bit LLMs: All Large LanguageModelsare in 1.58 Bits\" onAppleSiliconusingMLX...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Ollama is now powered by MLX on Apple Silicon in preview \u00b7",
+      "url": "https://ollama.com/blog/mlx",
+      "content": "Today, we \u2019 re previewing the fastest way to run Ollama onApplesilicon, powered byMLX,Apple\u2019 s machine learning framework.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "From Ollama to MLX: Achieving 2-3x Performance on Apple Silicon",
+      "url": "https://evolvingviews.com/2026/01/from-ollama-to-mlx-achieving-2-3x-performance-on-apple-silicon/",
+      "content": "Unlock 2-3x faster AI onAppleSilicon! This post explores optimizingmodelswith Ollama andMLX, boosting performance for demanding applications.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Apple Releases Open Source MLX Framework for Efficient Machine",
+      "url": "https://www.gadgets360.com/laptops/news/apple-silicon-mlx-framework-open-source-efficient-machine-learning-4645755",
+      "content": "This has now been replaced byMLX, which allows users runningAppleSiliconcomputers to train and run theirmodelsdirectly on their own devices.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "UsingMLXatHuggingFace\u00b7HuggingFace",
+      "url": "https://huggingface.co/docs/hub/mlx",
+      "content": "Thanks toMLXHuggingFaceHub integration, you can loadMLXmodelswith a few lines of code. Installation.MLXcomes as a standalone package, and there\u2019s a subpackage calledMLX-LM withHuggingFaceintegration for Large LanguageModels.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "AcceleratingHuggingFacePre-trainedModelsonAppleSilicon...",
+      "url": "https://readmedium.com/accelerating-hugging-face-pre-trained-models-on-apple-silicon-using-mlx-lm-and-mps-eb7465e4f502",
+      "content": "MLXis designed to leverage the unique hardware acceleration capabilities ofApplesiliconchips (like the M1, M2, and their successors). It optimizesmodelexecution and memory management to take advantage ofApple\u2019s Metal API for more efficient computatio",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Run and Fine-Tune LLMs on Mac withMLX-LM 2026 | Markaicode",
+      "url": "https://markaicode.com/run-fine-tune-llms-mac-mlx-lm/",
+      "content": "MLX-LM lets you run and fine-tune LLMs directly onAppleSilicon\u2014 using the full unified memory pool, no discrete GPU required.Download and Run aModel.MLX-LM readsmodelsin theMLXformat, which the community maintains onHuggingFaceunder themlx-community ",
+      "_src": "ddgs"
+    },
+    {
+      "title": "UsingMLXfor LLMs onAppleSiliconSkill | Agent Skills",
+      "url": "https://agent-skills.md/skills/itsmostafa/llm-engineering-skills/mlx",
+      "content": "Use when working withmodelslocally on Mac, convertingHuggingFacemodelstoMLXformat, fine-tuning with LoRA/QLoRA onAppleSilicon, or servingmodelsvia HTTP API.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Run LLMs (Llama 3) onAppleSiliconwithMLX| Medium",
+      "url": "https://medium.com/@manuelescobar-dev/running-large-language-models-llama-3-on-apple-silicon-with-apples-mlx-framework-4f4ee6e15f31",
+      "content": "AppleSiliconExclusive:MLXis designed specifically forApplesilicon, limiting its use to compatible hardware.Download themodelfrom theHuggingFaceHub repository. If you want the quantizedmodel(for computers with less than 16 RAM)",
+      "_src": "ddgs"
+    },
+    {
+      "title": "GitHub - IrfanUruchi/mlx-models-: Index of myMLX-readymodel...",
+      "url": "https://github.com/IrfanUruchi/mlx-models-",
+      "content": "MLXModels(AppleSilicon).Notes. These GitHub repos contain documentation only (no weights). Licensing andmodelcards are provided in eachHuggingFacerepository. About. Index of myMLX-readymodelcollections forAppleSilicon.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "DockerModelRunner Brings vLLM to macOS withAppleSilicon",
+      "url": "https://www.linkedin.com/pulse/docker-model-runner-brings-vllm-macos-apple-silicon-docker-zsyfc",
+      "content": "vllm-metal works with safetensorsmodelsinMLXformat. Themlx-community onHuggingFacemaintains a large collection of quantizedmodelsoptimized forAppleSilicon. Some examples you can try",
+      "_src": "ddgs"
+    },
+    {
+      "title": "LM Studio 0.3.4 ships withAppleMLX| LM Studio Blog | LM Studio",
+      "url": "https://lmstudio.ai/blog/lmstudio-v0.3.4",
+      "content": "Search & download any supportedMLXLLM fromHuggingFace(just like you've been doing with GGUFmodels). UseMLXmodelsvia the Chat UI, or from your code using an OpenAI-like local server running on localhost. Enforce LLM responses in specific JSON formats ",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Performance of llama.cpp on Apple Silicon M-series - GitHub",
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/4167",
+      "content": "It can be useful to compare theperformancethatllama.cppachieves across the M-serieschipsand hopefully answer questions of people wondering if they should upgrade or not. Collecting info here just forAppleSilicon for simplicity. Similar collection for",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Local LLMs Apple Silicon Mac 2026 | M1 M2 M3 Guide - SitePoint",
+      "url": "https://www.sitepoint.com/local-llms-apple-silicon-mac-2026/",
+      "content": "Get maximumperformancefrom local LLMs on yourAppleSilicon Mac. Complete optimization guide for M1, M2, and M3chips.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Apple Silicon LLM Inference Optimization: The Complete Guide to Maximum ...",
+      "url": "https://blog.starmorph.com/blog/apple-silicon-llm-inference-optimization-guide",
+      "content": "A comprehensive guide to maximizing LLM inferenceperformanceonAppleSilicon \u2014 MLX vsllama.cppbenchmarks, quantization formats, RAM requirements, MoE models, speculative decoding, KV cache optimization, and the best models for every Mac configuration.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Mac: LLama2 model on Apple Silicon and GPU using llama.cpp - Fabian Lee",
+      "url": "https://fabianlee.org/2024/01/06/mac-llama2-model-on-apple-silicon-and-gpu-using-llama-cpp/",
+      "content": "Thellama.cppproject provides a C++ implementation for running LLama2 models, and takes advantage of theAppleintegrated GPU to offer a performant experience (seeMfamilyperformancespecs).",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Running LLaMA on Apple Silicon (M2 benchmarks)",
+      "url": "https://eduardstal.com/blog/03-2025_running-llama-on-apple-silicon",
+      "content": "Ollama is the friendliest runtime;llama.cppgives the most control; MLX\u2011LM is surprisingly competitive onAppleGPUs; MLC\u2011LLM is solid if you want a compiler toolchain and mobile targets.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "How to run llama.cpp on Mac in 2025: Local AI on Apple Silicon",
+      "url": "https://t81dev.medium.com/how-to-run-llama-cpp-on-mac-in-2025-local-ai-on-apple-silicon-2e4f8aba70e4",
+      "content": "Running large language models (LLMs) locally on your Mac has never been easier or faster, thanks tollama.cppandApple'spowerful M-serieschips(M1, M2, M3, M4, and beyond).",
+      "_src": "ddgs"
+    },
+    {
+      "title": "llama.cpp: Fast Local LLM Inference, Hardware Choices & Tuning",
+      "url": "https://www.clarifai.com/blog/ilama.cpp",
+      "content": "Run LLMs locally withllama.cpp. Learn hardware choices, installation, quantization, tuning, andperformanceoptimization.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "14-Minute Wait?! $10K Mac Studio Crawls with DeepSeek 671B + llama.cpp",
+      "url": "https://www.hardware-corner.net/mac-studio-m3-ultra-deepseek-llamacpp/",
+      "content": "Reports and benchmarks from the community suggest that MLX can offer substantially better prompt processingperformanceon M-serieschipscompared tollama.cpp, sometimes by a factor of 4-5x for models like DeepSeek 671B.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Mac M1 vs M2 vs M3 vs M4 for Running LLMs - Real Tests",
+      "url": "https://mljourney.com/mac-m1-vs-m2-vs-m3-vs-m4-for-running-llms-real-tests/",
+      "content": "Apple Silicon has transformed Mac computers into surprisingly capable machines for running large language models locally. But with four generations now available\u2014M1, M2, M3, and M4\u2014which one actually delivers the best experience forlocalLLMinference?",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Benchmarking local Ollama LLMs on Apple M4 Pro vs RTX 3060 laptop",
+      "url": "https://www.linkedin.com/pulse/benchmarking-local-ollama-llms-apple-m4-pro-vs-rtx-3060-dmitry-markov-6vlce",
+      "content": "This sweet spot forLLMexploration lets you effectively work withlocalmodels up to 30B parameters, though performance and bandwidth constraints become limiting factors beyond that.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Best Local LLM for Mac \u2014 Free Mac AI Compatibility Checker",
+      "url": "https://llmcheck.net/",
+      "content": "Find the bestlocalLLMto run on your Mac. Free hardware checker for Apple Silicon \u2014 get personalized AI model recommendations with direct download links for M1, M2, M3,M4Macs.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "GitHub - 05bmckay/local-llm-benchmark: 23 local LLMs benchmarked on a ...",
+      "url": "https://github.com/05bmckay/local-llm-benchmark",
+      "content": "We benchmarked 23localLLMsacross 35 tasks in 9 categories (coding, reasoning, agentic tool use, writing, PM, instruction following), then ran 4,000+ pairwise head-to-head matches judged by Claude to produce Elo rankings.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Best LLM for MacBook (2026): Top 15 Models Tested",
+      "url": "https://modelfit.io/guides/best-llm-for-macbook/",
+      "content": "We tested 15localLLMson every Mac chip from M1 toM4. See which Ollama model runs fastest on your RAM \u2014 8GB, 16GB, or 64GB+ \u2014 with realbenchmarks.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "The Best Local LLMs To Run On Every Mac (Apple Silicon)",
+      "url": "https://apxml.com/posts/best-local-llm-apple-silicon-mac",
+      "content": "For developers with Apple Silicon Macs, the unified memory architecture provides a unique advantage in efficiently running these powerful AI models. This guide provides a definitive breakdown of the bestLLMsyou can run on your specific Mac, from the ",
+      "_src": "ddgs"
+    },
+    {
+      "title": "GPU and Apple Silicone Benchmarks with Large Language Models",
+      "url": "https://www.hardware-corner.net/guides/gpu-benchmark-large-language-models/",
+      "content": "The data covers a set of GPUs, from Apple Silicon M series chips to Nvidia GPUs, helping you make an informed decision if you're considering using a large language model locally.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "The Ultimate Local LLM Guide: Running AI on Your M4 Mac or RTX 50 ...",
+      "url": "https://www.nullzen.dev/blog/local-llm-guide-m4-rtx50/",
+      "content": "LocalLLMshave reached a turning point: the latest models running onM4Macs or RTX 5090 GPUs now rival cloud APIs in quality while offering complete privacy and zero per-token costs.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "BestAgenticAIFrameworksin2026: A Definitive Information for...",
+      "url": "https://www.linkedin.com/pulse/best-agentic-ai-frameworks-2026-definitive-autonomous-jeet-parganiha-zhwif",
+      "content": "This guide presents the bestagenticAIframeworks, comparing their architecture, capabilities, and enterprise readiness. The focus is practical:frameworkswe can confidently use to build production-grade autonomousAIsystems. What Defines a High-Performa",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Agent ZeroAI: Open SourceAgenticFramework& Computer Assistant",
+      "url": "https://www.agent-zero.ai/",
+      "content": "AutonomousagenticAIthat runs on its own computer, uses and creates tools, learns, self-corrects, and executes transparent workflows. Agent Zero - Installation Guide Play video.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "GitHub - microsoft/autogen: A programmingframeworkforagenticAI",
+      "url": "https://github.com/microsoft/autogen",
+      "content": "AutoGen is aframeworkfor creating multi-agentAIapplications that can act autonomously or work alongside humans. Caution.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "AutoGen - Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/project/autogen/",
+      "content": "AutoGen is an open-source programmingframeworkfor buildingAIagents and facilitating cooperation among multiple agents to solve tasks. AutoGen aims to provide an easy-to-use and flexibleframeworkfor accelerating development and research onagenticAI.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Gemma 4 model card | GoogleAIfor Developers",
+      "url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "content": "They are well-suited for reasoning,agenticworkflows, coding, and multimodal understanding. The models employ a hybrid attention mechanism that interleaves local sliding window attention with full global attention, ensuring the final layer is always g",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Codex CLI: Running GPT-OSS and Local Coding Models... | Medium",
+      "url": "https://medium.com/superagentic-ai/codex-cli-running-gpt-oss-and-local-coding-models-with-ollama-lm-studio-and-mlx-4b796e39404b",
+      "content": "Full StackAgenticAICompany focuses on building agent dev tools for production-worthyAgenticAIsystems.On Apple Silicon machines, you can useMLXfor faster inference. You can download the models and start the server usingmlx-lm package.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Codex CLI: Running GPT-OSS and Local Coding... - DEV Community",
+      "url": "https://dev.to/shashikant86/codex-cli-running-gpt-oss-and-local-coding-models-with-ollama-lm-studio-and-mlx-403g",
+      "content": "By combining Codex CLI with providers like Ollama, LM Studio, andMLX, you get the best of both worlds: a unified developer experience with full freedom to choose between cloud and local inference. Final Thoughts. Codex CLI marks a shift in how develo",
+      "_src": "ddgs"
+    }
+  ],
+  "Round 3 - Kubernetes + DevOps AI": [
+    {
+      "title": "BestKubernetesAITools in2026",
+      "url": "https://metoro.io/blog/best-kubernetes-ai-tools",
+      "content": "Kubernetesis now a must-have for modern infrastructure, but managing it at scale is complex. Teams are increasingly usingAI-powered tools toautomatedebugging, optimize costs, and improve security across their clusters. What are the bestKubernetesAIto",
+      "_src": "ddgs"
+    },
+    {
+      "title": "AIAgentsinKubernetes: The Next Era of Cloud-NativeAutomation",
+      "url": "https://abdulmohamedm.medium.com/ai-agents-in-kubernetes-the-next-era-of-cloud-native-automation-13697d823869",
+      "content": "AIagentsinKubernetesare intelligent, self-learning systems designed toautomatecomplex cluster operations. Unlike traditionalautomationscripts,AIagentscan: Monitor and analyze cluster performance in real time. Predict and prevent failures before they ",
+      "_src": "ddgs"
+    },
+    {
+      "title": "TroubleshootingKuberneteswithAI- Part Two: Using the K8s MCP...",
+      "url": "https://www.perfectscale.io/blog/troubleshooting-kubernetes-with-ai",
+      "content": "Explore how to troubleshootKuberneteswithAIusing the MCP server, agentic frameworks, and multiple LLM providers for smarter, scalableautomation.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "CNCF 2025 report: 85% developers useKubernetes,AI... | LinkedIn",
+      "url": "https://www.linkedin.com/posts/pulumi_beyond-yaml-in-kubernetes-the-2026-automation-activity-7394496708732215296-l6om",
+      "content": "Beyond YAML inKubernetes: The2026AutomationEra.The key was integrating QwenAIdirectly with our cloud environment using Model Context Protocol (MCP) servers. This architecture allows for a significant shift, translating natural language objectives int",
+      "_src": "ddgs"
+    },
+    {
+      "title": "I built thisAIAgentin 2 hours (and got paid $1200) - YouTube",
+      "url": "https://www.youtube.com/watch?v=8C6iCpJ9HPo",
+      "content": "\u00a92026Google LLC.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "HireAIAutomationin Roanoke, Virginia",
+      "url": "https://plavno.io/solutions/automated-solutions/roanoke-va-ai-automation-2026",
+      "content": "Roanoke companies can modernize operations withAIautomation. Our team builds solutions using Python, TensorFlow, andKubernetes. We help Virginia firms reduce manual effort and improve data quality. The service fits local budgets and regulatory needs.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Observe Simplifies K8s Troubleshooting WithKubernetesExplorer",
+      "url": "https://thenewstack.io/observe-simplifies-k8s-troubleshooting-with-kubernetes-explorer/",
+      "content": "WithKubernetesExplorer feeding theKubernetesAIagentartifacts (like custom visualizations, OPAL, and telemetry data), it enables theagentto reason through, determine root causes, and offer resolution suggestions.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "MasteringAIPowered TaskAutomationin n8n (2026Guide)",
+      "url": "https://n8nnode.com/ai-powered-task-automation-n8n-guide/",
+      "content": "Learn how to buildAIpowered taskautomationin n8n. Master LLMs, LangChain nodes, and autonomousagentsto revolutionize your2026workflows with this guide.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "GPT-4| OpenAI",
+      "url": "https://openai.com/index/gpt-4/",
+      "content": "Following the research path from GPT, GPT\u20112, and GPT\u20113, our deep learning approach leverages more data and more computation to create increasingly sophisticated and capable language models.GPT-4Line Motif.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "GitHub - minosvasilias/godot-copilot: AI-assisted development for the...",
+      "url": "https://github.com/minosvasilias/godot-copilot",
+      "content": "GodotCopilotlogo and shader designed and written byGPT-4. AI-assisted development for the Godot engine. Compatible with 4.x and 3.x.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "MicrosoftCopilot: Your AI companion",
+      "url": "https://copilot.microsoft.com/",
+      "content": "MicrosoftCopilotis your companion to inform, entertain and inspire. Get advice, feedback and straightforward answers. TryCopilotnow.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "chatgpt.com/g/g-2DQzU5UZl-code-copilot",
+      "url": "https://chatgpt.com/g/g-2DQzU5UZl-code-copilot",
+      "content": "GPTCodeCopilot.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "GPTPilot\u2013 the Open Source GitHubCopilotAlternative?",
+      "url": "https://anakin.ai/blog/gpt-pilot/",
+      "content": "Looking Ahead: CanGPTPilotReplace Your GitHubCopilot?GPTPilotis not just atool; it's a glimpse into the future of software development, where AI and human developers work hand in hand.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "DarkGPT - Unrestricted AI Chatbot \u00b7 Free AI Chatbot",
+      "url": "https://miniapps.ai/darkgpt",
+      "content": "Try this and more free AI and ChatGPTtoolsand chatbots on miniapps.ai!",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Microsoft 365Copilot- Sign in",
+      "url": "https://m365.cloud.microsoft/",
+      "content": "Microsoft 365Copilotis your AI-first productivity assistant, helping you chat, search, create, and collaborate.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Humanize AI",
+      "url": "https://www.humanizeai.pro/",
+      "content": "This ai-to-human text converter effortlessly converts output from ChatGPT, Bard, Jasper, Grammarly,GPT4, and other AI text generators into text indistinguishable from human writing. Achieve 100% originality and enhance your content creation with the ",
+      "_src": "ddgs"
+    },
+    {
+      "title": "How to use Kubernetes' self-healing capability | TechTarget",
+      "url": "https://www.techtarget.com/searchitoperations/tip/How-to-use-Kubernetes-self-healing-capability",
+      "content": "WhileKubernetesbrings valuableself-healingcapabilities to container-based applications, it does have limitations.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Self-Healing: The Key to Fixing the Most Common Kubernetes",
+      "url": "https://simplayesports.com/self-healing-the-key-to-fixing-the-most-common/",
+      "content": "...self-healingcapability ofKubernetes...Kubernetescan attempt toself-heala situation like this by starting a new Pod to replace the failed one.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "AI-enhanced self-healing Kubernetes for scalable cloud",
+      "url": "https://journalwjaets.com/content/ai-enhanced-self-healing-kubernetes-scalable-cloud-operations",
+      "content": "By integrating Artificial Intelligence (AI) intoKubernetes, traditionalself-healingevolves into predictive, adaptive, andautonomousfunctionality.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Building Self-Healing Kubernetes Clusters that Learn",
+      "url": "https://dzone.com/articles/self-healing-kubernetes-clusters-agentic-ai",
+      "content": "Evolving from reactive Agent AI toautonomousAgentic AI: aself-healingKubernetessystem that learns from fixes and applies patterns automatically.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Self-Healing Software Systems - How Autonomous AI Detects,",
+      "url": "https://impalaintech.com/blog/self-healing-software-systems/",
+      "content": "Self-healingsoftware systems shift the model from reactive debugging to predictive,autonomousinfrastructure management \u2013 giving engineering ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "How to use Kubernetes",
+      "url": "https://serokell.io/blog/kubernetes-guide",
+      "content": "Controllers are theKubernetesbrain and are integral to itsself-healingcapability. ...Kuberneteshandles the complexity of managing these services ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "2026 Kubernetes Playbook: AI at Scale, Self\u2011Healing Clusters,",
+      "url": "https://www.fairwinds.com/blog/2026-kubernetes-playbook-ai-self-healing-clusters-growth",
+      "content": "...KubernetesPlaybook: AI at Scale, ... Thisself-healingbehavior is likely to be a defining characteristic of matureKubernetesplatforms in 2026.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Kubernetes vs Nomad: What to choose in 2023? - DTC Infotech Pvt",
+      "url": "https://dtcinfotech.com/kubernetes-vs-nomad-what-to-choose-in-2022/",
+      "content": "Scale sets and autoscaling groups are also included inKubernetesdeployment settings, which enableself-healingnodes.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "AI Workflow Automation Guide 2026 - DEV Community",
+      "url": "https://dev.to/jangwook_kim_e31e7291ad98/how-to-self-host-n8n-with-docker-ai-workflow-automation-guide-2026-3lec",
+      "content": "This guide walks you through self-hosting n8n withDockerCompose, from initial setup to a workingAIworkflowwith Ollama for local LLM inference. We will build a practicalAIagent that can search the web, process documents, and generate structured output",
+      "_src": "ddgs"
+    },
+    {
+      "title": "5 Docker Containers Every AI Developer Needs in 2026",
+      "url": "https://content.techgig.com/career-advice/docker-ai-containers-2026/articleshow/124733265.cms",
+      "content": "Learn how to build a scalable, modularAIinfrastructure in2026usingDocker. Explore five essential containers\u2014JupyterLab, Airflow, MLflow, Redis, and FastAPI\u2014that simplifyworkflows, ensure consistency, and streamline model development, deployment, and ",
+      "_src": "ddgs"
+    },
+    {
+      "title": "5 Docker Containers for Your AI Infrastructure - KDnuggets",
+      "url": "https://www.kdnuggets.com/5-docker-containers-for-your-ai-infrastructure",
+      "content": "Below are five of the most usefulDockercontainers that can help you build a powerfulAIinfrastructure in2026, without the need to wrestle with environment mismatches or missing dependencies.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Reproducible AI Environments with Docker \u00b7 Technical news about AI ...",
+      "url": "https://dasroot.net/posts/2026/02/reproducible-ai-environments-docker/",
+      "content": "Learn how to create reproducibleAIenvironments withDocker, ensuring consistency across development, testing, and production. Covers Dockerfile best practices, multi-stage builds, version control, and Kubernetes deployment security.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Docker for Full Stack Developers in 2026: Containers, Compose, and ...",
+      "url": "https://www.nucamp.co/blog/docker-for-full-stack-developers-in-2026-containers-compose-and-production-workflows",
+      "content": "Dockerfor Full StackDevelopers: a complete2026guide to containers, Compose, multi-stage builds, secure secrets, CI/CD pipelines, and deploymentworkflows.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Private AI Coding: OpenCode + Model Runner | Docker",
+      "url": "https://www.docker.com/blog/opencode-docker-model-runner-private-ai-coding/",
+      "content": "This post walks through how to configure OpenCode to useDockerModel Runner and explains why this setup enables a privacy-first and cost-aware approach toAI-assisted development.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "I built a local AI stack with 5 Docker containers, and now I'll never ...",
+      "url": "https://www.xda-developers.com/local-ai-stack-with-docker-containers/",
+      "content": "Here is the exactDockerstack I use to create a powerful local LLMworkflow. Ollama The core layer If my self-hostedAIstack were a body, Ollama would be the brain.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "How AI Changes the Developer Workflow in 2026",
+      "url": "https://www.turbogeek.co.uk/ai-developer-workflow-2026/",
+      "content": "AI& IT in2026\u2014 Full Series 1. Where Businesses Are Actually Investing inAIin20262. HowAIIs Reshaping theDeveloper'sDailyWorkflow3. Platform Engineering in the Age ofAI4. The Security Risks Businesses Aren't Talking About 5. The Hidden Risks of Embedd",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Bare-MetalLLM: \u0417\u0430\u043f\u0443\u0441\u043a \u0418\u0418 \u0431\u0435\u0437 \u041e\u0421 \u0432 2026 | \u041e\u0431\u0437\u043e\u0440... | AiManual",
+      "url": "https://ai-manual.ru/article/bare-metal-llm-kak-zapustit-yazyikovuyu-model-bez-operatsionnoj-sistemyi/",
+      "content": "Bare-Metalvs\u0422\u0440\u0430\u0434\u0438\u0446\u0438\u043e\u043d\u043d\u044b\u0439 \u0438\u043d\u0444\u0435\u0440\u0435\u043d\u0441: \u0442\u0430\u0431\u043b\u0438\u0446\u0430 \u0431\u043e\u043b\u0438.Bare-metalLLM\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0441\u044f \u0447\u0430\u0441\u0442\u044c\u044e firmware. \u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u044f \u043f\u043e \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438: \u0410\u043d\u0430\u043b\u0438\u0437 \u0432\u0440\u0435\u0434\u043e\u043d\u043e\u0441\u043d\u043e\u0433\u043e \u043a\u043e\u0434\u0430 \u0432 \u0438\u0437\u043e\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u043e\u0439 \u0441\u0440\u0435\u0434\u0435, \u0433\u0434\u0435 \u043d\u0435\u0442 \u041e\u0421, \u043a\u043e\u0442\u043e\u0440\u0443\u044e \u043c\u043e\u0436\u043d\u043e \u0441\u043a\u043e\u043c\u043f\u0440\u043e\u043c\u0435\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "PostgreSQL at Scale:BareMetalvsKubernetes\u2014 Yuri Osipov",
+      "url": "https://steadyops.best/articles/postgresatscale.html",
+      "content": "PostgreSQL high availability architectures:baremetalvsKubernetes. Over 18 years in infrastructure engineering, I\u2019ve repeatedly faced the same fundamental challenge: how to run stateful systems that don\u2019t just scale\u2014but remain available through any fa",
+      "_src": "ddgs"
+    },
+    {
+      "title": "From Hosted GPUs to DGX Spark: Rethinking Always-OnLLM...",
+      "url": "https://www.linkedin.com/pulse/from-hosted-gpus-dgx-spark-rethinking-always-on-llm-inference-thomas-uiz6c",
+      "content": "Kuberneteson Hosted GPU Podvs.Kuberneteson DGX. Running \"real\"Kubernetesis usually the next instinct after a single GPU pod, to try tools like NVIDIA AI Dynamo, AIBrix, Envoy AI Gateway, or KServe.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Kuberneteson the cloudvsonbaremetal... - DEV Community",
+      "url": "https://dev.to/skysingh04/kubernetes-on-the-cloud-vs-on-bare-metal-deception-101-25a7",
+      "content": "Onbaremetal, this YAML whispers into the void. Nobody's listening.Ingress \u2192 Often creates another load balancer. Your monthly AWS bill is basically a list of thingsKubernetescouldn't do by itself lmao. HowKubernetes\"Works\" onBareMetal.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Kubernetesvs.BareMetal: We Migrated Back to Dedicated... | Medium",
+      "url": "https://medium.com/@kp9810113/kubernetes-vs-bare-metal-we-migrated-back-to-dedicated-servers-and-saved-12k-month-220ee64c7dc9",
+      "content": "Kubernetesdid exactly what it was designed to do. The problem was what we were paying forversuswhat we were using. We were paying for an orchestrator built for chaos, and we were feeding it a calm system.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "From Zero to GenAI Cluster: Scalable Local LLMs with Docker...",
+      "url": "https://www.roastdev.com/post/from-zero-to-genai-cluster-scalable-local-llms-with-docker-kubernetes-and-gpu-scheduling",
+      "content": "AKubernetescluster with GPU-enabled nodes (e.g., via GKE, AKS, orbare-metal)The NVIDIA device plugin installed on the cluster",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Ollama: \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0435LLM\u2014 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430, \u043c\u043e\u0434\u0435\u043b\u0438, API",
+      "url": "https://vlad1kudelko.github.io/posts/2026/01/10-ollama/",
+      "content": "\u0422\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0432\u044b\u0437\u043e\u0432: \u0434\u0435\u043a\u0430\u0440\u0431\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u044fLLM. \u0412 \u043e\u0441\u043d\u043e\u0432\u0435 Ollama \u043b\u0435\u0436\u0438\u0442 ll\u0430ma.cpp \u2014 C++ \u0444\u0440\u0435\u0439\u043c\u0432\u043e\u0440\u043a, \u043e\u043f\u0442\u0438\u043c\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0434\u043b\u044f CPU/GPU \u0438\u043d\u0444\u0435\u0440\u0435\u043d\u0441\u0430. \u0410\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u043d\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f \u0437\u0434\u0435\u0441\u044c \u043d\u0435 \u0441\u043b\u0443\u0447\u0430\u0439\u043d\u044b, \u0430 \u043f\u0440\u043e\u0434\u0438\u043a\u0442\u043e\u0432\u0430\u043d\u044b \u0444\u0443\u043d\u0434\u0430\u043c\u0435\u043d\u0442\u0430\u043b\u044c\u043d\u044b\u043c\u0438 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u044f\u043c\u0438 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0445 \u0418\u0418-\u0441\u0438\u0441\u0442\u0435\u043c",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Surveiller l'inf\u00e9rencedesLLMen production (2026) : Prometheus...",
+      "url": "https://www.glukhov.org/fr/observability/monitoring-llm-inference-prometheus-grafana/",
+      "content": "D\u00e9couvrez comment surveiller l'inf\u00e9rencedes mod\u00e8les de langage en production \u00e0 l'aide de Prometheus et Grafana. Suivez le temps d'attente p95, le nombre de tokens par seconde, la dur\u00e9e de la file d'attente et l'utilisation du cache KV sur vLLM, TGI e",
+      "_src": "ddgs"
+    }
+  ],
+  "Round 4 - Vector DB + RAG": [
+    {
+      "title": "Pgvector vs. Pinecone: Vector Database Comparison | Tiger Data",
+      "url": "https://www.tigerdata.com/blog/pgvector-vs-pinecone",
+      "content": "Pineconeand PostgreSQL with thepgvectorextension are two of the most popularvectordatabasesto use when developing AI applications.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "A Guide to Pinecone Pricing | Tiger Data",
+      "url": "https://www.tigerdata.com/blog/a-guide-to-pinecone-pricing",
+      "content": "Unlike general-purposedatabaseswithvectorextensions like PostgreSQL withpgvector,Pineconefocuses exclusively onvectordata processing.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Pinecone Alternatives | Tiger Data",
+      "url": "https://www.tigerdata.com/blog/pinecone-alternatives",
+      "content": "Pineconeis a specializeddatabasebuilt to handlevectordata \u2014the numerical representations neural network applications use to understand content.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Best Vector Database Software: User Reviews from March 2026",
+      "url": "https://www.g2.com/categories/vector-database",
+      "content": "Relationaldatabasesretrieve results that are an exact match, whereasvectordatabaseshelp in complex search capabilities.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "What Is Pinecone Vector Database? Features, Pricing &",
+      "url": "https://www.velodb.io/glossary/pinecone-vector-database",
+      "content": "Now that we ve covered the fundamentals ofvectordatabases, let s look at what makesPineconea specific and popular choice in this space\u2014and ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "FAISS vs pgvector | Vector Database Comparison",
+      "url": "https://zilliz.com/comparison/faiss-vs-pgvector",
+      "content": "This FAISS vspgvectorcomparisonis written for engineers and technical teams evaluatingvectordatabasesfor real-world , production workloads .",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Vector DBs: Pinecone vs. Weaviate vs. Qdrant vs. pgvector -",
+      "url": "https://wearemicro.co/vector-database-comparison/",
+      "content": "Pineconehas become the \u201cdefault\u201d choice for teams that want a fully managed, cloud-nativevectordatabasewith minimal setup.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "pgvector Guide: Vector Search and RAG in PostgreSQL \u2013 Encore",
+      "url": "https://encore.dev/blog/you-probably-dont-need-a-vector-database",
+      "content": "...vectorsearch works under the hood, from embeddings to similarity search to RAG pipelines, and then shows what it looks like to build it onpgvector...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "What isRAG(Retrieval Augmented Generation)? | IBM",
+      "url": "https://www.ibm.com/think/topics/retrieval-augmented-generation",
+      "content": "ArchitectureRetrieval augmented generation (RAG)architecture. Discover provenarchitecturepatterns that accelerate the creation of technology solutions to meet your business challenges. Explorearchitecture. Tutorial Build aRAGagentto answer complex qu",
+      "_src": "ddgs"
+    },
+    {
+      "title": "RAGChatbot for SaaS Support | Build Smarter AIAgents",
+      "url": "https://chatrag.co/blog/build-a-rag-chatbot-for-smarter-saas-support",
+      "content": "Discover how to implement aRAGchatbot andRAGagentfor your SaaS platform. Automate customer support, enhance user experience, and scale efficiently.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Make YourRAGAgentsActually Work! (No More...) - YouTube",
+      "url": "https://www.youtube.com/watch?v=OejuvdyN_U8",
+      "content": "Access ALL video resources & get personalized help in my community:https://www.skool.com/agentic-labs/about?ref=3fd61190e13d426dbf4f3b38adc7de69In this Ag...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Amazon.com: AgenticArchitecturalPatterns for Building Multi-Agent...",
+      "url": "https://www.amazon.com/Agentic-Architectural-Patterns-Building-Multi-Agent-ebook/dp/B0FWJS2B31",
+      "content": "Table of ContentsThe Spectrum of LLM Adaptation forAgents:RAGto Fine-tuningAgentic AIArchitecture: Components and Interactions",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Build a multi-agentRAGsystem with Granite",
+      "url": "https://www.linkedin.com/pulse/build-multi-agent-rag-system-granite-ibm-watsonx-yxe6e",
+      "content": "The future of agenticRAGis multiagentRAG, where several specializedagentscollaborate to achieve optimal latency and efficiency. We will demonstrate this using a small, efficient model like Granite 3.1 and combine it with a modularagentarchitecture.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Chatbots andAgents| meta-llama/llama-cookbook | DeepWiki",
+      "url": "https://deepwiki.com/meta-llama/llama-cookbook/4.3-chatbots-and-agents",
+      "content": "LangGraphRAGAgentArchitecture.The Llama Cookbook provides severalRAGagentimplementations: Corrective-RAG(CRAG): Uses self-grading on retrieved documents and web-search fallback. Self-RAG: Adds self-grading to check for hallucinations and answer relev",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Discussion: AIAgentArchitecture/RAG... - DEV Community",
+      "url": "https://dev.to/tacit_71799acf6d056b5155c/discussion-ai-agent-architecture-rag-implementation-33e3",
+      "content": "Posted on Apr 2. Discussion: AIAgentArchitecture/RAGImplementation.The idea is to let users store their own records and provide a secure context API that only authorizedagentscan hit. It shifts the burden of data hosting from the developer to the use",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Discussion: AIAgentArchitecture/RAGImplementation from DEV...",
+      "url": "https://mytecharm.com.co/post/discussion-ai-agent-architecture-rag-implementation-msakf4",
+      "content": "The Context Window Problem: Why Self-Hosted Memory is the Next Dev Frontier Every dev building AIagentseventually hits the same wall: context management.Their content is backed by hands-on experimentation and industrybestpractices.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "LocalRAG:SearchYourDocumentswith a Private AI | InsiderLLM",
+      "url": "https://insiderllm.com/guides/local-rag-search-documents-private-ai/",
+      "content": "ollamacreatellama3.1-rag-f Modelfile.Hybridsearch: Combine semanticsearchwith keyword (BM25) for better retrieval. Metadata filtering: Onlysearchdocumentsfrom a specific date, author, or category. Pipeline integration: FeedRAGinto a larger applicatio",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Run DeepSeek R1LocallyWithOllama| Build aLocal... - YouTube",
+      "url": "https://www.youtube.com/watch?v=hOsZzcMYMLI",
+      "content": "In this tutorial, you\u2019ll learn how to download DeepSeek R1 on yourlocalmachine to securely query PDFdocumentsusing retrieval-augmented generation (RAG). ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Chat With YourDocuments& Files UsingOllama&RAG:LocalAI...",
+      "url": "https://askimo.chat/blog/ollama-rag-chat-with-documents-local-ai/",
+      "content": "#ollama#rag#localai #llama3 #mistral #phi3 #ollamaclient #ai-chat-client #documentsearch#pdf chat.HowRAGWorks withOllama. When you create a project in Askimo and enableRAG: Indexing: Your files are read, broken into chunks, and organized for fastsear",
+      "_src": "ddgs"
+    },
+    {
+      "title": "GitHub - ragu101/rag-ollama-opensearch:RAGPipeline:LocalLLM...",
+      "url": "https://github.com/ragu101/rag-ollama-opensearch",
+      "content": "RAGPipeline:LocalLLM withOllama& OpenSearch forDocument-Based Q&A. PyPDF2 for PDF text extraction. Features. Extracts text from PDFdocuments. Chunks the text for efficientsearch. Converts text into embeddings using SentenceTransformer...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Building a PrivateRAGSystem withOllama: Chat with... | Markaicode",
+      "url": "https://markaicode.com/ollama-rag-private-documents/",
+      "content": "Set up a fullylocalRAGpipeline usingOllama+ LlamaIndex or LangChain \u2014 no data leaves your machine. Covers embedding models, vector stores, chunking strategies, and retrieval quality benchmarks.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Build aLocalPDF Question-AnsweringRAGSystem with DeepSeek...",
+      "url": "https://apidog.com/blog/rag-deepseek-r1-ollama/",
+      "content": "Unlock powerfuldocumentsearchand Q&A capabilities by building your own Retrieval-Augmented Generation (RAG) pipeline for PDFs\u2014entirely on yourlocalmachine. In this guide, you'll learn how to leverage DeepSeek R1 andOllamafor fast, private, and...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Building aLocalRAGapi with LlamaIndex, Qdrant,Ollamaand FastAPI",
+      "url": "https://otmaneboughaba.com/posts/local-rag-api/",
+      "content": "LocalRagArchitectureLocalRAGPipeline Architecture. The projects consists of 4 major parts: BuildingRAGPipeline using Llamaindex. Setting up alocalQdrant instance using Docker. Downloading a quantized LLM from hugging face and running it as a server u",
+      "_src": "ddgs"
+    },
+    {
+      "title": "TuningLocalLLMs WithRAGUsingOllamaand Langchain",
+      "url": "https://itsfoss.com/local-llm-rag-ollama-langchain/",
+      "content": "DocumentRetrieval \u2013 Asearchalgorithm fetches relevant text chunks from a vector store. Contextual Response Generation \u2013 The retrieved text is fed into the LLM, guiding it to produce a more accurate and relevant answer.Building alocalRAGapplication wi",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Why Multi-Agent Systems Need Memory Engineering | MongoDB Blog",
+      "url": "https://www.mongodb.com/company/blog/technical/why-multi-agent-systems-need-memory-engineering",
+      "content": "While single-agentmemorymanagement remains an active area of research, techniques like retrieval-augmented generation (RAG) for semantic knowledge ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Agentic Memory Management: Building Persistent Long-Term Memory",
+      "url": "https://republichub.net/agentic-memory-management-building-persistent-long-term-memory-with-rag-and-episodic-memory/",
+      "content": "If you are learning how to design reliableagentsin an agentic AI course ,memorydesign is one of the firstarchitecturaldecisions that determines ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Agentic RAG with TypeScript | Advanced Memory Agent Tutorial -",
+      "url": "https://langbase.com/docs/examples/build-agentic-rag",
+      "content": "... memoryName = knowledge-base ; // Uploadagentarchitecture... Upload theagent-architectures.txt and langbase-faq.txt documents to the AImemory.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Continuum Memory Architectures for Long-Horizon LLM Agents",
+      "url": "https://arxiv.org/html/2601.09913v1",
+      "content": "Defines the properties required of persistentmemoryfor LLMagents, formalizing CMA as anarchitecturalclass. ...Agentframeworks have begun ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "AMA-Bench: Evaluating Long-Horizon Memory for Agentic",
+      "url": "https://arxiv.org/html/2602.22769v1",
+      "content": "To bridge this gap, we introduce AMA- Bench ( A gent M emory with A ny length), to evaluates long-horizonmemoryfor LLMs in real agentic ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "With 91% accuracy, open source Hindsight agentic memory",
+      "url": "https://www.dataworldbank.net/2025/12/16/with-91-accuracy-open-source-hindsight-agentic-memory-provides-20-20-vision-for-ai-agents-stuck-on-failing-rag/",
+      "content": "The shift fromRAGtoagentmemoryrepresents a fundamentalarchitecturalchange. ...RAGis dead, and I thinkagentmemoryis what \u2019 s going ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Architecture Archives - News from generation RAG",
+      "url": "https://ragaboutit.com/category/architecture/",
+      "content": "The Agentic Reasoning Layer: When Your StaticRAGSystem Needs Autonomous Decision-Making You \u2019 ve built aRAGsystem that retrieves documents ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "stackviv.ai/blog/ai-agent-memory-short-term-long-term",
+      "url": "https://stackviv.ai/blog/ai-agent-memory-short-term-long-term",
+      "content": "This is whymemoryin AIagentshas become one of the most active areas of research heading into2026. ... Anagentwith episodicmemorycan recall ...",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Best Embedding Models for RAG (2026): Ranked by MTEB Score ...",
+      "url": "https://blog.premai.io/best-embedding-models-for-rag-2026-ranked-by-mteb-score-cost-and-self-hosting/",
+      "content": "Mar 17,2026\u00b710bestembeddingmodelsforRAGin2026with MTEB benchmarks, cost per million tokens, max context length, dimensions, and a decision guide for your use case.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Which Embedding Model Should You Actually Use in 2026? I ...",
+      "url": "https://zc277584121.github.io/rag/2026/03/20/embedding-models-benchmark-2026.html",
+      "content": "Mar 20,2026\u00b7Still using OpenAI\u2019s text-embedding-3-small without a second thought? If you\u2019re buildingRAGor vector search systems, you\u2019ve probably noticed that newembeddingmodelsdrop every few weeks, each claiming SOTA on some leaderboard. But when it ",
+      "_src": "ddgs"
+    },
+    {
+      "title": "6 Best Open-Source Embedding Models You Can Run Locally (2026)",
+      "url": "https://hadidizflow.com/blog/2026-03-02-best-open-source-embedding-models-for-local-rag/",
+      "content": "Mar 2,2026\u00b76BestOpen-SourceEmbeddingModelsYou Can Run Locally (2026) Discover the top open-sourceembeddingmodelsfor semantic search andRAGthat you can self-host. Compare Jina, Qwen, and BAAI across quality, latency, and dimensions.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Best Embedding Model for RAG 2026: 10 Models Compared ...",
+      "url": "https://zilliz.com/blog/choose-embedding-model-rag-2026",
+      "content": "Mar 27,2026\u00b7We benchmarked 10embeddingmodelson cross-modal, cross-lingual, long-document, and dimension compression tasks. See which one fits yourRAGpipeline.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Best Embedding Models for RAG in 2026: Comparison & Guide",
+      "url": "https://webscraft.org/blog/embeddingmodeli-dlya-rag-u-2026-yak-obrati-porivnyannya-provayderiv?lang=en",
+      "content": "Mar 22,2026\u00b7Discover thebestembeddingmodelsforRAGin2026. Full comparison of OpenAI text-embedding-3, Cohereembed-v4, Voyage AI, Jina, Qwen3, BGE-M3 and more.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Best RAG Models (2026) | LocalVRAM",
+      "url": "https://localvram.com/en/guides/best-rag-models/",
+      "content": "PracticallocalRAGmodelpicks:embeddingmodelsplus generationmodelsranked by VRAM fit and measured signals.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "10 Best Embedding Models 2026: Complete Comparison Guide ...",
+      "url": "https://www.openxcell.com/blog/best-embedding-models/",
+      "content": "Jan 9,2026\u00b7A practical guide to thebestembeddingmodelsin2026. Compare features, performance, and use cases for building scalable AI systems.",
+      "_src": "ddgs"
+    },
+    {
+      "title": "Top 10 Multilingual Embedding Models for RAG",
+      "url": "https://research.aimultiple.com/multilingual-embedding-models/",
+      "content": "Why asymmetricmodelsperformbest: The query/passage prefix trains themodelto embed queries and documents in systematically different regions of ...",
+      "_src": "ddgs"
+    }
+  ]
+}

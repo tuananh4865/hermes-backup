@@ -1,0 +1,105 @@
+---
+title: Wiki Log
+created: 2026-04-09
+updated: 2026-04-09
+type: meta
+tags: [meta, log]
+---
+# Wiki Log
+> Chronological record of all wiki actions. Append-only.
+> Format: `## [YYYY-MM-DD] action | subject`
+> Actions: ingest, update, query, lint, create, archive, delete, refactor
+> Last updated: 2026-04-09
+## [2026-04-08] create | Wiki initialized
+- Domain: Personal knowledge base about the user and their interests
+- Structure created with SCHEMA.md, index.md, log.md
+- Initial pages: user-profile, learned-about-user, SCHEMA, index
+## [2026-04-08] ingest | GitHub sync setup complete
+- Created GitHub repo: https://github.com/tuananh4865/my-llm-wiki
+- Set up post-commit hook for auto-push
+- Added sync.sh script
+- Added .gitignore
+- Created github-sync-setup.md concept page
+- Updated index.md
+- Saved session transcript to raw/transcripts/conversations/2026-04-08-wiki-setup.md
+## [2026-04-08] update | Topic workflow established
+- User defined new workflow: raw capture → AI analysis → wiki save
+- Updated learned-about-user.md with this preference
+- Created topic-workflow.md concept page
+- Created raw transcript for this discussion
+## [2026-04-08] ingest | Karpathy LLM Knowledge Base topic (thorough read)
+- User shared datachaz tweet about Karpathy ditching RAG for Obsidian
+- Key insights: Wiki as persistent compounding artifact, 4-phase cycle
+- Updated karpathy-llm-knowledge-base.md with full details
+## [2026-04-08] ingest | Coherence-Guided Dead-Head Identification paper
+- Research: BKT Phase Transition, Kuramoto Model, Apple MLX
+- Key insight: ~30-47% attention heads can be dead in models
+## [2026-04-08] ingest | Coherence-Aware Pruning Implementation
+- Research: SVD Spectral Filtering, Rotation Compensation, LoRA compensation
+- Created coherence-aware-pruning-implementation.md
+## [2026-04-08] enhancement | Wiki Enhancement Roadmap
+- Created wiki-enhancement-roadmap.md with 6 enhancement ideas
+- Priority: Auto-Ingest → MLX Agent → Fine-tuning → Dead Knowledge → Coverage Map
+## [2026-04-09] ingest | Realtime Transcript System
+- Built wiki-transcript hook for passive transcript capture
+- Transcripts save to raw/transcripts/{date}/ with frontmatter + wikilinks
+## [2026-04-09] ingest | Self-Healing Wiki Foundation
+- Created wiki_self_heal.py, wiki_self_critique.py, wiki_gap_analyzer.py, wiki_cross_ref.py
+- Wiki health check: 51 broken links, 9 missing frontmatter, 17 orphans, 41 pages avg 6.3/10
+## [2026-04-09] ingest | Auto-Improve Script
+- Created wiki_auto_improve.py for autonomous content generation
+- Created pages: wiki.md, models.md, knowledge-base.md, github.md, obsidian.md, local-llm.md
+## [2026-04-09] refactor | Wiki structure cleanup
+- Removed transcripts/ (duplicate of raw/transcripts/)
+- Removed .processed_transcripts/, comparisons/, logs/, queries/
+- Moved entities/, projects/ into concepts/
+- Deleted junk files: a.md, nonexistent-page.md, page-*.md, image.png.md
+- Updated .gitignore: transcripts/, .processed/, fine-tuned-wiki/, __pycache__/
+- Cleaned log.md: removed duplicate entries
+- Updated SCHEMA.md and index.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md
+- raw/transcripts/2026-04-09-list-model-ang.md
+- transcripts/2026-04-09-list-model-ang.md

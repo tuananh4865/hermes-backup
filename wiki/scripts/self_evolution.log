@@ -1,0 +1,161 @@
+[2026-04-09 13:51:59] ============================================================
+[2026-04-09 13:51:59] WIKI SELF-EVOLUTION CYCLE STARTED
+[2026-04-09 13:51:59] ============================================================
+[2026-04-09 13:51:59] STEP: Gap Analysis
+[2026-04-09 13:51:59]   Found 0 gaps
+[2026-04-09 13:51:59] DRY RUN — skipping content generation
+[2026-04-09 13:51:59] STEP: Self-Critique
+[2026-04-09 13:52:22] ============================================================
+[2026-04-09 13:52:22] WIKI SELF-EVOLUTION CYCLE STARTED
+[2026-04-09 13:52:22] ============================================================
+[2026-04-09 13:52:22] STEP: Gap Analysis
+[2026-04-09 13:52:22]   Found 0 gaps
+[2026-04-09 13:52:22] DRY RUN — skipping content generation
+[2026-04-09 13:52:22] STEP: Self-Critique
+[2026-04-09 13:52:22]   Average score: 6.6/10, 14 low-quality pages
+[2026-04-09 13:52:22] STEP: Freshness Check
+[2026-04-09 13:52:22]   Found 8 stale pages
+[2026-04-09 13:52:22] STEP: Duplicate Detection
+[2026-04-09 13:52:23]   Found 0 potential duplicates
+[2026-04-09 13:52:23] ============================================================
+[2026-04-09 13:52:23] SELF-EVOLUTION CYCLE COMPLETE
+[2026-04-09 13:52:23]   Gaps found: 0
+[2026-04-09 13:52:23]   Pages created: 0
+[2026-04-09 13:52:23]   Avg quality: 6.6/10
+[2026-04-09 13:52:23]   Low quality pages: 14
+[2026-04-09 13:52:23]   Stale pages: 8
+[2026-04-09 13:52:23]   Duplicates: 0
+[2026-04-09 13:52:23]   Report saved to: /Users/tuananh4865/wiki/scripts/self_evolution_report.json
+[2026-04-09 13:52:23] ============================================================
+[2026-04-09 13:52:23] RECOMMENDATIONS:
+[2026-04-09 13:52:23]   [high] refresh_pages
+[2026-04-09 13:52:23]   [medium] update_stale_pages
+[2026-04-09 13:54:47] ============================================================
+[2026-04-09 13:54:47] WIKI SELF-EVOLUTION CYCLE STARTED
+[2026-04-09 13:54:47] ============================================================
+[2026-04-09 13:54:47] STEP: Gap Analysis
+[2026-04-09 13:54:47]   Found 3 gaps
+[2026-04-09 13:54:47] DRY RUN — skipping content generation
+[2026-04-09 13:54:47] STEP: Self-Critique
+[2026-04-09 13:54:47]   Average score: 6.6/10, 14 low-quality pages
+[2026-04-09 13:54:47] STEP: Freshness Check
+[2026-04-09 13:54:47]   Found 8 stale pages
+[2026-04-09 13:54:47] STEP: Duplicate Detection
+[2026-04-09 13:54:47]   Found 0 potential duplicates
+[2026-04-09 13:54:47] ============================================================
+[2026-04-09 13:54:47] SELF-EVOLUTION CYCLE COMPLETE
+[2026-04-09 13:54:47]   Gaps found: 3
+[2026-04-09 13:54:47]   Pages created: 0
+[2026-04-09 13:54:47]   Avg quality: 6.6/10
+[2026-04-09 13:54:47]   Low quality pages: 14
+[2026-04-09 13:54:47]   Stale pages: 8
+[2026-04-09 13:54:47]   Duplicates: 0
+[2026-04-09 13:54:47]   Report saved to: /Users/tuananh4865/wiki/scripts/self_evolution_report.json
+[2026-04-09 13:54:47] ============================================================
+[2026-04-09 13:54:47] RECOMMENDATIONS:
+[2026-04-09 13:54:47]   [high] refresh_pages
+[2026-04-09 13:54:47]   [medium] update_stale_pages
+[2026-04-09 13:54:47]   [medium] check_lm_studio_connection
+[2026-04-09 13:55:01] ============================================================
+[2026-04-09 13:55:01] WIKI SELF-EVOLUTION CYCLE STARTED
+[2026-04-09 13:55:01] ============================================================
+[2026-04-09 13:55:01] STEP: Gap Analysis
+[2026-04-09 13:55:01]   Found 3 gaps
+[2026-04-09 13:55:01] STEP: Auto-Improve (Content Generation)
+[2026-04-09 13:55:11]   Created 3 new pages
+[2026-04-09 13:55:11] STEP: Self-Critique
+[2026-04-09 13:55:11]   Average score: 6.7/10, 14 low-quality pages
+[2026-04-09 13:55:11] STEP: Freshness Check
+[2026-04-09 13:55:11]   Found 11 stale pages
+[2026-04-09 13:55:11] STEP: Duplicate Detection
+[2026-04-09 13:55:11]   Found 0 potential duplicates
+[2026-04-09 13:55:11] ============================================================
+[2026-04-09 13:55:11] SELF-EVOLUTION CYCLE COMPLETE
+[2026-04-09 13:55:11]   Gaps found: 3
+[2026-04-09 13:55:11]   Pages created: 3
+[2026-04-09 13:55:11]   Avg quality: 6.7/10
+[2026-04-09 13:55:11]   Low quality pages: 14
+[2026-04-09 13:55:11]   Stale pages: 11
+[2026-04-09 13:55:11]   Duplicates: 0
+[2026-04-09 13:55:11]   Report saved to: /Users/tuananh4865/wiki/scripts/self_evolution_report.json
+[2026-04-09 13:55:11] ============================================================
+[2026-04-09 13:55:11] RECOMMENDATIONS:
+[2026-04-09 13:55:11]   [high] refresh_pages
+[2026-04-09 13:55:11]   [medium] update_stale_pages
+[2026-04-09 14:07:53] ============================================================
+[2026-04-09 14:07:53] WIKI SELF-EVOLUTION CYCLE STARTED
+[2026-04-09 14:07:53] ============================================================
+[2026-04-09 14:07:53] STEP: Gap Analysis
+[2026-04-09 14:07:53]   Found 0 gaps
+[2026-04-09 14:07:53] DRY RUN — skipping content generation
+[2026-04-09 14:07:53] STEP: Self-Critique
+[2026-04-09 14:07:53]   Average score: 6.4/10, 43 low-quality pages
+[2026-04-09 14:07:53] STEP: Freshness Check
+[2026-04-09 14:07:54]   Found 30 stale pages
+[2026-04-09 14:07:54] STEP: Duplicate Detection
+[2026-04-09 14:07:54]   Found 0 potential duplicates
+[2026-04-09 14:07:54] ============================================================
+[2026-04-09 14:07:54] SELF-EVOLUTION CYCLE COMPLETE
+[2026-04-09 14:07:54]   Gaps found: 0
+[2026-04-09 14:07:54]   Pages created: 0
+[2026-04-09 14:07:54]   Avg quality: 6.4/10
+[2026-04-09 14:07:54]   Low quality pages: 43
+[2026-04-09 14:07:54]   Stale pages: 30
+[2026-04-09 14:07:54]   Duplicates: 0
+[2026-04-09 14:07:54]   Report saved to: /Users/tuananh4865/wiki/scripts/self_evolution_report.json
+[2026-04-09 14:07:54] ============================================================
+[2026-04-09 14:07:54] RECOMMENDATIONS:
+[2026-04-09 14:07:54]   [high] refresh_pages
+[2026-04-09 14:07:54]   [medium] update_stale_pages
+[2026-04-09 15:50:59] ============================================================
+[2026-04-09 15:50:59] WIKI SELF-EVOLUTION CYCLE STARTED
+[2026-04-09 15:50:59]   Mode: PRIORITY-WEIGHTED (by user interest)
+[2026-04-09 15:50:59] ============================================================
+[2026-04-09 15:50:59] STEP: Gap Analysis
+[2026-04-09 15:50:59]   Found 0 priority gaps (weighted by user interest)
+[2026-04-09 15:50:59] DRY RUN — skipping content generation
+[2026-04-09 15:50:59] STEP: Self-Critique
+[2026-04-09 15:50:59]   Average score: 6.5/10, 42 low-quality pages
+[2026-04-09 15:50:59] STEP: Freshness Check
+[2026-04-09 15:50:59]   Found 30 stale pages
+[2026-04-09 15:50:59] STEP: Duplicate Detection
+[2026-04-09 15:51:00]   Found 0 potential duplicates
+[2026-04-09 15:51:00] ============================================================
+[2026-04-09 15:51:00] SELF-EVOLUTION CYCLE COMPLETE
+[2026-04-09 15:51:00]   Gaps found: 0
+[2026-04-09 15:51:00]   Pages created: 0
+[2026-04-09 15:51:00]   Avg quality: 6.5/10
+[2026-04-09 15:51:00]   Low quality pages: 42
+[2026-04-09 15:51:00]   Stale pages: 30
+[2026-04-09 15:51:00]   Duplicates: 0
+[2026-04-09 15:51:00]   Report saved to: /Users/tuananh4865/wiki/scripts/self_evolution_report.json
+[2026-04-09 15:51:00] ============================================================
+[2026-04-09 15:51:00] RECOMMENDATIONS:
+[2026-04-09 15:51:00]   [high] refresh_pages
+[2026-04-09 15:51:00]   [medium] update_stale_pages
+[2026-04-12 22:04:01] ============================================================
+[2026-04-12 22:04:01] WIKI SELF-EVOLUTION CYCLE STARTED
+[2026-04-12 22:04:01] ============================================================
+[2026-04-12 22:04:01] STEP: Gap Analysis
+[2026-04-12 22:04:01]   Found 0 gaps
+[2026-04-12 22:04:01] STEP: Auto-Improve (Content Generation)
+[2026-04-12 22:04:01]   Created 0 new pages
+[2026-04-12 22:04:01] STEP: Self-Critique
+[2026-04-12 22:04:16]   Average score: 5.8/10, 422 low-quality pages
+[2026-04-12 22:04:16] STEP: Freshness Check
+[2026-04-12 22:04:16]   Found 378 stale pages
+[2026-04-12 22:04:16] STEP: Duplicate Detection
+[2026-04-12 22:04:20]   Found 0 potential duplicates
+[2026-04-12 22:04:20] ============================================================
+[2026-04-12 22:04:20] SELF-EVOLUTION CYCLE COMPLETE
+[2026-04-12 22:04:20]   Gaps found: 0
+[2026-04-12 22:04:20]   Pages created: 0
+[2026-04-12 22:04:20]   Avg quality: 5.8/10
+[2026-04-12 22:04:20]   Low quality pages: 422
+[2026-04-12 22:04:20]   Stale pages: 378
+[2026-04-12 22:04:20]   Duplicates: 0
+[2026-04-12 22:04:20]   Report saved to: /Users/tuananh4865/wiki/scripts/self_evolution_report.json
+[2026-04-12 22:04:20] ============================================================
+[2026-04-12 22:04:20] RECOMMENDATIONS:
+[2026-04-12 22:04:20]   [high] refresh_pages
+[2026-04-12 22:04:20]   [medium] update_stale_pages

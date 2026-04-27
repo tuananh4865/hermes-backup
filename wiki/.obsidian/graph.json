@@ -1,0 +1,58 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": false,
+  "showAttachments": true,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "self-healing",
+      "color": {
+        "a": 1,
+        "rgb": 16752333
+      }
+    },
+    {
+      "query": "duymuoi",
+      "color": {
+        "a": 1,
+        "rgb": 5431439
+      }
+    },
+    {
+      "query": "knowledge",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "karpathy",
+      "color": {
+        "a": 1,
+        "rgb": 14711890
+      }
+    },
+    {
+      "query": "code",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": -0.9,
+  "nodeSizeMultiplier": 0.986423611111111,
+  "lineSizeMultiplier": 1.10084201388889,
+  "collapse-forces": false,
+  "centerStrength": 0.646788194444445,
+  "repelStrength": 10.0572916666667,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.06213298821533678,
+  "close": true
+}

@@ -1,0 +1,14 @@
+[
+  "tests/test_wiki_lint.py::TestContradictionDetector::test_contradiction_runs",
+  "tests/test_wiki_lint.py::TestDuplicateDetector::test_duplicate_runs",
+  "tests/test_wiki_lint.py::TestFreshnessScore::test_freshness_runs",
+  "tests/test_wiki_lint.py::TestInterestSignalTracker::test_extract_topics",
+  "tests/test_wiki_lint.py::TestInterestSignalTracker::test_load_signals",
+  "tests/test_wiki_lint.py::TestSemanticSearch::test_bm25_score",
+  "tests/test_wiki_lint.py::TestSemanticSearch::test_chunk_text",
+  "tests/test_wiki_lint.py::TestSemanticSearch::test_tokenize",
+  "tests/test_wiki_lint.py::TestWikiLint::test_extract_wikilinks",
+  "tests/test_wiki_lint.py::TestWikiLint::test_lint_runs",
+  "tests/test_wiki_lint.py::TestWikiLint::test_parse_frontmatter",
+  "tests/test_wiki_lint.py::TestWikiLint::test_skip_dirs"
+]
