@@ -144,3 +144,7 @@ After EVERY task: if new learned info about Anh or his preferences → save to w
 > **Auto-improvement note:** about-tuananh.md" - documenting knowledge about a Vietnamese content creator named Tuấn Anh and his preferences/operating philosophy for content creation.
 
 > **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** *1. Missing or outdated information:**
+
+> **Auto-improvement note:** The file name says "learned-about-tuananh.md" suggesting it's a collection of learned information
