@@ -129,3 +129,7 @@ The following resources may help you develop a deeper understanding of this conc
 > **Auto-improvement note:** *Missing or outdated information**: The entire page is a placeholder stub with TODOs throughout. There's no actual content about TikTok viral scripts. The "Overview" section is generic placeholder text that doesn't specifically relate to TikTok viral scripts at all. All the substantive content areas are marked [TODO].
 
 > **Auto-improvement note:** *Unclear explanations or poor structure**: The structure follows a template which is fine, but the content is all generic boilerplate. The page lacks:
+
+> **Auto-improvement note:** viral-script.md" and identify specific improvements needed.
+
+> **Auto-improvement note:** *Missing or outdated information**: This is a placeholder stub with multiple [TODO] items. The entire content is generic placeholder text - there's no actual content about TikTok viral scripts. The content talks about "this concept" in vague terms without ever explaining what a TikTok viral script actually is.

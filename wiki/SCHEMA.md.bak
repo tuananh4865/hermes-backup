@@ -185,3 +185,7 @@ When new information conflicts with existing content:
 > **Auto-improvement note:** 3 specific improvements based on the criteria:
 
 > **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The frontmatter template has `sources` field pointing to `raw/articles/source-name.md` but the schema shows sources should be paths like `raw/articles/...` - this is consistent

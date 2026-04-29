@@ -173,3 +173,7 @@ relationships:
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The page mentions "Total pages: ~151" but there's no way to verify this
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page mentions "Last updated: 2026-04-23" but there are entries with dates up to 2026-04-29 and 2026-05, so the index itself is outdated

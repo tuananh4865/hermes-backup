@@ -189,3 +189,7 @@ When new information conflicts with existing content:
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The frontmatter template has `sources` field pointing to `raw/articles/source-name.md` but the schema shows sources should be paths like `raw/articles/...` - this is consistent
+
+> **Auto-improvement note:** 3 specific improvements. Let me analyze the content:
+
+> **Auto-improvement note:** *Missing or outdated information**: The page describes a 3-layer architecture but doesn't mention what happens with the log.md, index.md, or _meta/ folder in terms of their role. The architecture section shows these files but doesn't explain their purpose in the layered system.
