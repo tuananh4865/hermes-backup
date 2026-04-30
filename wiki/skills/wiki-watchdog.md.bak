@@ -137,3 +137,5 @@ python3 ~/wiki/scripts/project_state.py checkpoint \
 > **Auto-improvement:** 2 concrete improvements. Let me analyze the skill file for potential issues:
 
 > **Auto-improvement:** watchdog.md skill file and suggest 1-2 concrete improvements. Let me analyze the current skill file:
+
+> **Auto-improvement:** watchdog.md skill file and suggest 1-2 concrete improvements in JSON format. Let me analyze this skill file for potential issues:

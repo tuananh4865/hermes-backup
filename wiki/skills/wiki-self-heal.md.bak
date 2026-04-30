@@ -205,3 +205,5 @@ Run lint multiple times until count stabilizes.
 > **Auto-improvement:** fixing wiki issues (broken links, missing frontmatter, orphans). Let me identify areas for improvement:
 
 > **Auto-improvement:** 2 concrete improvements.
+
+> **Auto-improvement:** 2 concrete improvements. Let me analyze the document for clarity, completeness, and potential pitfalls.
