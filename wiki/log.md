@@ -13,7 +13,7 @@ relationship_count: 3
 > Chronological record of all wiki actions. Append-only.
 > Format: `## [YYYY-MM-DD] action | subject`
 > Actions: ingest, update, query, lint, create, archive, delete, refactor
-> Last updated: 2026-04-23
+> Last updated: 2026-04-30
 ## [2026-04-24] fix | Wiki session start — build_wiki_system_prompt() reads full wiki files
 - prompt_builder.py: _read_wiki_file() helper + build_wiki_system_prompt() reads all 5 session start files
 - Session start sequence: _meta/start-here.md, SCHEMA.md, index.md, log.md (last 20), entities/learned-about-tuananh.md
@@ -1306,3 +1306,7 @@ relationship_count: 3
 - concepts/tiktok-captcha-solver/stealth_browser.py — Playwright stealth wrapper
 - concepts/tiktok-captcha-solver/tiktok_solver.py — Orchestrator class
 - concepts/tiktok-captcha-solver/examples/demo.py — Usage examples
+## [2026-04-30] deep research | Pi Coding Agent — Minimal Terminal Coding Harness
+- raw/articles/pi-coding-agent-deep-research.md (25+ sources)
+- concepts/pi-coding-agent.md (summary)
+- entities/openclaw.md (OpenClaw entity — 358K stars, fastest-growing GitHub repo)

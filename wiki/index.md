@@ -10,7 +10,7 @@ relationships:
 # Wiki Index
 
 > Content catalog. Read this first to find pages.
-> Last updated: 2026-04-23 | Total pages: ~151
+> Last updated: 2026-04-30 | Total pages: ~153
 
 ## Entities
 
@@ -19,6 +19,8 @@ relationships:
 
 ### Products & Tools
 - [[remotion]] — Create videos programmatically using React (2026-04-13)
+- [[openclaw]] — Fastest-growing GitHub repo (358K stars), autonomous AI agent (2026-04-30)
+- [[pi-coding-agent]] — Minimal terminal coding harness (42K stars), engine of OpenClaw (2026-04-30)
 
 ### People
 - [[harrison-chase]] — CEO of LangChain, author of "Your Harness Your Memory"
