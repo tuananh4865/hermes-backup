@@ -179,3 +179,7 @@ relationships:
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The page mentions "Last updated: 2026-04-23" but there are entries with dates up to 2026-04-29 and 2026-05, so the index itself is outdated
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The last updated date is 2026-04-30, but we're in 2025 (based on current date context). This seems like a future date, which is inconsistent.
