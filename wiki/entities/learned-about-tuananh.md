@@ -154,3 +154,7 @@ After EVERY task: if new learned info about Anh or his preferences → save to w
 > **Auto-improvement note:** basic info about Tuấn Anh
 
 > **Auto-improvement note:** voice, pronouns, script structure, slang, things to avoid, feedback style
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page mentions "Gen Z Slang 2026" but the content doesn't feel properly curated or sourced - it has some examples but no clear methodology for keeping this updated

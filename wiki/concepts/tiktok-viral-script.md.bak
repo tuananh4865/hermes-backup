@@ -137,3 +137,7 @@ The following resources may help you develop a deeper understanding of this conc
 > **Auto-improvement note:** *Missing or outdated information**: The entire page is a placeholder stub - every section has [TODO] items. There's no actual content about TikTok viral scripts. The "Overview" section is generic and doesn't provide any TikTok-specific information.
 
 > **Auto-improvement note:** *Unclear explanations or poor structure**: The structure exists but contains no real content. The overview is a generic template paragraph that doesn't mention TikTok at all. All the specific information placeholders are empty.
+
+> **Auto-improvement note:** 3 specific improvements based on the criteria:
+
+> **Auto-improvement note:** created by a "self-healing-wiki" system. The entire content is generic and has multiple [TODO] markers indicating it needs real content.
