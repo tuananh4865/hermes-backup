@@ -2750,7 +2750,7 @@
     "concepts/spaced-repetition.md": "e9406a35242d",
     "concepts/selenium.md": "5c42ffa266ec",
     "concepts/cloudflare-pages.md": "f9b8ede3ce21",
-    "concepts/tiktok-viral-script.md": "12d7bb7a9e05",
+    "concepts/tiktok-viral-script.md": "c993f16e32a8",
     "concepts/inference-optimization.md": "052ecf417157",
     "concepts/functional-reactive-programming.md": "d039549ed5db",
     "concepts/command-pattern.md": "d3728736dfec",
@@ -3448,8 +3448,14 @@
     "raw/transcripts/2026-05-01/14-13-10_telegram_Tu\u1ea5n-Anh-httpsyoutube96.md": "1d9682596a15",
     "concepts/14-13-10_telegram_Tu\u1ea5n-Anh-httpsyoutube96.md": "945a9c02853f",
     "raw/transcripts/2026-05-01/14-59-22_telegram_Tu\u1ea5n-Anh-httpsgithubcom.md": "aa663efec5e4",
-    "concepts/14-59-22_telegram_Tu\u1ea5n-Anh-httpsgithubcom.md": "2236cf7126bc"
+    "concepts/14-59-22_telegram_Tu\u1ea5n-Anh-httpsgithubcom.md": "2236cf7126bc",
+    "raw/transcripts/2026-05-02/13-56-42_telegram_Tu\u1ea5n-Anh-G\u1eedi-\u1ea3nh-cap-m\u00e0n-h\u00ecn.md": "33570f1766eb",
+    "raw/transcripts/2026-05-02/13-48-42_telegram_Replying-to-C\u00e1i-n\u00e0y-l\u00e0-kyma.md": "fe374eef1253",
+    "raw/transcripts/2026-05-02/13-48-38_telegram_Tu\u1ea5n-Anh-Ch\u1ee5p-m\u00e0n-h\u00ecnh-g\u1eedi-\u0111.md": "89dc2f0a73d4",
+    "concepts/13-56-42_telegram_Tu\u1ea5n-Anh-G\u1eedi-\u1ea3nh-cap-m\u00e0n-h\u00ecn.md": "fb20b04af2dd",
+    "concepts/13-48-42_telegram_Replying-to-C\u00e1i-n\u00e0y-l\u00e0-kyma.md": "c59eb1c003e1",
+    "concepts/13-48-38_telegram_Tu\u1ea5n-Anh-Ch\u1ee5p-m\u00e0n-h\u00ecnh-g\u1eedi-\u0111.md": "8e3db7ecf8d1"
   },
-  "last_run": "2026-05-02T04:00:01.401006",
+  "last_run": "2026-05-03T03:00:04.006282",
   "processed_today": []
 }
