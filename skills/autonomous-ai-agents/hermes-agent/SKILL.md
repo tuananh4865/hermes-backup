@@ -660,7 +660,10 @@ hermes config set auxiliary.vision.model <model_name>
 ```
 
 ### Tuấn Anh's Vision Setup
-See `references/tuananh-vision-config.md` for his working LM Studio vision configuration (qwen3.5-0.8b at localhost:1234) and how to verify it's running.
+See `references/tuananh-vision-config.md` for his working LM Studio vision configuration and how to verify it's running.
+
+### Vision Model Benchmarks
+See `references/vision-model-benchmark.md` for cross-architecture benchmark results comparing gemma-4-e2b vs qwen3.5-0.8b via LM Studio. Key insight: gemma-4-e4b (~12s) beats gemma-4-e2b (~20s) and qwen3.5-0.8b (~27s) — larger model is faster due to heavier quantization and VL-specific optimization.
 
 ### Vision fails with MiniMax provider
 **Symptom:** `vision_analyze` returns "no image attached" even though image is valid.
