@@ -65,6 +65,15 @@ rg --files ~/Developer/browser-harness/agent-workspace/domain-skills
 - `browser-harness --setup` — re-run browser attach flow
 - `browser-harness --update -y` — pull latest, restart daemon (runs automatically when banner appears)
 
+## Website research workflow
+
+When the user asks to find/install something from a known domain:
+1. **Try browser first** — navigate directly in Chrome. Browser DNS ≠ terminal DNS. Terminal can't resolve a host doesn't mean Chrome can't reach it.
+2. **Skip terminal DNS checks** — don't `ping`, `nslookup`, or `curl` to test reachability before using the browser. The browser has its own DNS resolver and proxy settings.
+3. **Search as fallback** — if direct URL fails in browser, THEN search.
+
+**Pitfall**: You spent 20+ tool calls doing terminal DNS lookups (`ping`, `nslookup`, `curl`) before trying the browser. The browser's DNS is independent of the terminal's. Always try `browser_navigate` to the direct URL first.
+
 ## Design constraints
 
 - Coordinate clicks default — `Input.dispatchMouseEvent` passes through iframes/shadow/cross-origin
