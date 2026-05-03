@@ -10,5 +10,17 @@
     "state": "active",
     "use_count": 6,
     "view_count": 6
+  },
+  "hermes-autoresearch": {
+    "archived_at": null,
+    "created_at": "2026-05-03T19:05:17.552916+00:00",
+    "last_patched_at": null,
+    "last_used_at": "2026-05-03T19:05:17.555558+00:00",
+    "last_viewed_at": "2026-05-03T19:05:17.552943+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
   }
 }
