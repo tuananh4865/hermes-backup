@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/hermes-dojo/README.md",
+                "file": "projects/agentic-self-evolving-system/hub.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "hub"
             }
           }
         ]
@@ -177,7 +177,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,6 +194,7 @@
   },
   "active": "40e056427d609a31",
   "lastOpenFiles": [
+    "projects/hermes-dojo/README.md",
     "raw/transcripts/index.md",
     "raw/transcripts/2026-04-28/05-58-32_telegram_Replying-to-AutoResearch-đã.md",
     "raw/transcripts/2026-04-27/23-10-10_telegram_Tuấn-Anh-anh-nhớ-rồi-check-.md",
@@ -219,7 +221,6 @@
     "concepts/delegation-workflow.md",
     "concepts/content-quality-metrics.md",
     "concepts/batch-processing-strategy.md",
-    "concepts/batch-computing-techniques.md",
     "raw/transcripts/2026-04-27",
     "raw/transcripts/2026-04-25",
     "concepts/tiktok-captcha-solver/__pycache__/tiktok_solver.cpython-311.pyc",
