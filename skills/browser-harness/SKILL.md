@@ -74,6 +74,29 @@ When the user asks to find/install something from a known domain:
 
 **Pitfall**: You spent 20+ tool calls doing terminal DNS lookups (`ping`, `nslookup`, `curl`) before trying the browser. The browser's DNS is independent of the terminal's. Always try `browser_navigate` to the direct URL first.
 
+## Extracting direct download URLs
+
+When a site hides its download URL behind redirects or button clicks (e.g. FileHorse, Softpedia, Uptodown):
+
+1. Navigate to the download page in the browser
+2. Click the download button (may not trigger actual download, that's OK)
+3. Use `browser_console` to run JavaScript and find the actual URL:
+   ```javascript
+   document.querySelector('a[href*=".dmg"]')?.href
+   // or for any download
+   document.querySelector('a[href*="download"]')?.href
+   ```
+4. If no luck, broaden the search:
+   ```javascript
+   // Find any link pointing to known hosting domains
+   [...document.querySelectorAll('a[href]')].find(a => 
+     a.href.includes('gvt1') || a.href.includes('googlevideo') || a.href.includes('edgedl')
+   )?.href
+   ```
+5. Copy the URL and download directly via terminal with `curl -L -o`
+
+**Example from this session**: FileHorse's "Start Download" button didn't trigger a download, but `browser_console` revealed the direct URL: `https://edgedl.me.gvt1.com/edgedl/release2/.../Antigravity.dmg`
+
 ## Design constraints
 
 - Coordinate clicks default — `Input.dispatchMouseEvent` passes through iframes/shadow/cross-origin
