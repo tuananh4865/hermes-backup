@@ -591,7 +591,7 @@ grep "Auxiliary vision" ~/.hermes/logs/agent.log | tail -5
 auxiliary:
   vision:
     provider: custom
-    model: qwen3.5-0.8b
+    model: google/gemma-4-e4b
     base_url: http://localhost:1234/v1
     api_key: none
     timeout: 120
