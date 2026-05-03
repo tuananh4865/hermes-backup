@@ -74,6 +74,19 @@ When the user asks to find/install something from a known domain:
 
 **Pitfall**: You spent 20+ tool calls doing terminal DNS lookups (`ping`, `nslookup`, `curl`) before trying the browser. The browser's DNS is independent of the terminal's. Always try `browser_navigate` to the direct URL first.
 
+## Download workflow (REMEMBER THIS)
+
+When the user asks to "find X and install on Mac/PC":
+
+1. **Try direct URL in browser FIRST** — browser has independent DNS from terminal. Don't waste calls on `ping`/`nslookup`/`curl`.
+2. **Find download page via search** — use browser navigate to Google/Web search if direct URL fails.
+3. **Extract URL via `browser_console`** — never assume button clicks trigger downloads. Inspect element.
+4. **Download via `curl -L -o`** — get the URL, pipe to terminal.
+5. **Mount/unmount DMG, copy to /Applications** — standard macOS install.
+6. **Open app and screenshot** — `open /Applications/X.app` + `screencapture`.
+
+**Key lesson from Antigravity install**: The user had to correct me TWICE because I over-explained problems instead of trying solutions. DNS failing in terminal means NOTHING for browser. Just open browser → navigate → inspect → download → install → screenshot. Done.
+
 ## Extracting direct download URLs
 
 When a site hides its download URL behind redirects or button clicks (e.g. FileHorse, Softpedia, Uptodown):
