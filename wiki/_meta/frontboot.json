@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "watched_urls": {
-    "https://arxiv.org/list/cs.AI/recent": "2026-05-02T06:00:02.761110",
-    "https://arxiv.org/list/cs.LG/recent": "2026-05-02T06:00:02.761120"
+    "https://arxiv.org/list/cs.AI/recent": "2026-05-04T06:00:00.897375",
+    "https://arxiv.org/list/cs.LG/recent": "2026-05-04T06:00:00.897387"
   },
   "proactive_research": {
     "enabled": true,
