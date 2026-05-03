@@ -97,6 +97,9 @@ git commit -m "Backup folder: $(date +%Y-%m-%d)"
 git push origin main
 ```
 
+## Related Skills
+- `github-wiki-backup` — Specialized version for Hermes wiki + skills + memories backup. Use this one for the daily cron job.
+
 ## Pitfalls
 1. **Quên xóa nested .git** → "adding embedded git repository" warning
 2. **Không dùng -f flag** → Files bị gitignore block hoàn toàn

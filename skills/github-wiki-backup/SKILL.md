@@ -8,6 +8,61 @@ category: devops
 
 Backup wiki (hoặc knowledge base) lên GitHub với proper handling cho nested repos, media files, và large files.
 
+## Backup Scope (3 Components)
+
+The Hermes backup cron job backs up THREE separate components:
+
+| Component | Path | When to backup |
+|-----------|------|----------------|
+| Skills | `/Volumes/Storage-1/Hermes/skills/` + `.gitignore` | Only if `git status --short` shows changes |
+| Wiki | `/Volumes/Storage-1/Hermes/wiki/` | Always (transcripts accumulate daily) |
+| Memories | `/Volumes/Storage-1/Hermes/.hermes/memories/` | Only if `git diff` shows changes |
+
+## Complete Backup Workflow
+
+```bash
+#!/bin/bash
+set -e
+BASE="/Volumes/Storage-1/Hermes"
+cd "$BASE"
+
+# === 1. SKILLS (conditional) ===
+if git status --short skills/ .gitignore | grep -q .; then
+  echo "Backing up skills..."
+  git add skills/ .gitignore
+  git commit -m "Backup skills: $(date +%Y-%m-%d)"
+  git push origin main
+else
+  echo "Skills: no changes, skipping"
+fi
+
+# === 2. WIKI (always) ===
+echo "Backing up wiki..."
+find wiki -name ".git" -type d -exec rm -rf {} \; 2>/dev/null
+git add wiki/ -f
+git commit -m "Backup wiki: $(date +%Y-%m-%d)"
+git push origin main
+
+# === 3. MEMORIES (conditional) ===
+if git diff --stat .hermes/memories/ | grep -q "[0-9]"; then
+  echo "Backing up memories..."
+  git add .hermes/memories/ -f
+  git commit -m "Backup memories: $(date +%Y-%m-%d)"
+  git push origin main
+else
+  echo "Memories: no changes, skipping"
+fi
+```
+
+## Pre-flight Checks
+
+```bash
+# Before running, verify what's changed:
+git status --short skills/ .gitignore  # Skills + gitignore
+git status --short wiki/               # Wiki content
+git diff --stat .hermes/memories/      # Memories changes
+```
+
 ## Common Problems & Solutions
 
 ### Problem 1: Wiki bị ignore hoàn toàn
@@ -148,29 +203,8 @@ wiki/**/.git/
 | .git/ folder | ❌ Exclude | Never backup git internals |
 | node_modules/ | ❌ Exclude | Rebuildable |
 
-## Cron Job Setup
-
-```yaml
-name: Hermes Daily Backup
-schedule: "0 3 * * *"  # 3AM daily
-deliver: telegram:1132914873:3764041476/604
-
-prompt: |
-  # Backup toàn bộ Hermes Agent data lên GitHub
-  
-  ## Skills
-  cd /Volumes/Storage-1/Hermes
-  git add skills/ .gitignore
-  git commit -m "Backup skills: $(date +%Y-%m-%d)"
-  git push origin main
-  
-  ## Wiki
-  find wiki -name ".git" -type d -exec rm -rf {} \; 2>/dev/null
-  git add wiki/ -f
-  git commit -m "Backup wiki: $(date +%Y-%m-%d)"
-  git push origin main
-```
-
+## Related Skills
+- `github-large-folder-backup` — Generic version for any large folder (wiki, datasets, etc.)
 ## Verification Commands
 
 ```bash
@@ -186,3 +220,6 @@ du -sh wiki/*/ --exclude='.git' 2>/dev/null | sort -rh | head -10
 # Verify GitHub push
 gh repo view tuananh4865/hermes-backup --json diskUsage,pushedAt
 ```
+
+## Session Reference
+- `references/2026-05-04-session.md` — 2026-05-04 backup run: signals, anti-patterns, commit conditions
