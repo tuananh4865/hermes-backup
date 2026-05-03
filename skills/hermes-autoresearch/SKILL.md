@@ -38,16 +38,31 @@ Cron output:  ~/.hermes/cron/output
 ## Wiki Maintenance Commands
 
 ```bash
-# Health check (fast mode - skip slow broken links check)
 cd /Volumes/Storage-1/Hermes/wiki
+
+# Step 1: Fast health check (broken links SKIPPED in fast mode)
 python3 scripts/wiki_lint.py --fast
 
-# Auto-heal all issues (broken links, missing frontmatter)
+# Step 2: Run self-heal to fix issues
 python3 scripts/wiki_self_heal.py --fix --all
 
-# Full health check to verify fixes
+# Step 3: CRITICAL - Verify with FULL lint, not fast
+# self-heal may claim "No broken links" but full lint finds 375+
+# Only full lint detects broken wikilinks
 python3 scripts/wiki_lint.py
 ```
+
+### ⚠️ CRITICAL: fast vs full lint behavior
+- `--fast` mode: skips broken wikilink check AND orphan check
+- Full lint: finds ALL issues including 375+ broken wikilinks
+- **self-heal may report "No broken links found" but full lint still shows them**
+- Always verify with full lint after self-heal
+- If full lint still shows broken links after heal, the heal script has a bug — log as known issue
+
+### Orphan Pages
+- Orphan count grows ~20 per night (Telegram transcripts)
+- Low priority — don't spend time linking transcripts
+- Archive old orphans if they have no long-term value
 
 ## Metrics để Track
 
@@ -148,6 +163,11 @@ cronjob update --job_id <id> --deliver "telegram:chat_id:thread_id"
 **CÁCH DEBUG:** Kiểm tra `last_status` và `last_delivery_error`:
 - `last_status: ok` + `last_delivery_error` ≠ null → Job chạy OK nhưng gửi thất bại
 - `last_status: ok` + `last_delivery_error: null` → Job thành công hoàn toàn
+
+## Known Issues (autoresearch)
+- **self-heal vs lint discrepancy**: self-heal claims fixed but full lint still shows broken links — this is a script ordering/timing bug, not a real failure. Don't re-run, just note in report.
+- **Telegram polling conflict**: Multiple Hermes PIDs conflict on Telegram getUpdates — requires manual `kill -9`. Not fixable via cron.
+- **Gateway restart PID leak**: `hermes gateway restart` doesn't kill old processes — known bug, requires manual kill.
 
 ## Constraints
 - MAX 30 phút chạy
