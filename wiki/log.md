@@ -1306,7 +1306,9 @@ relationship_count: 3
 - concepts/tiktok-captcha-solver/stealth_browser.py — Playwright stealth wrapper
 - concepts/tiktok-captcha-solver/tiktok_solver.py — Orchestrator class
 - concepts/tiktok-captcha-solver/examples/demo.py — Usage examples
-## [2026-04-30] deep research | Pi Coding Agent — Minimal Terminal Coding Harness
-- raw/articles/pi-coding-agent-deep-research.md (25+ sources)
+## [2026-05-03] update | Hermes Agent git remote + browser/vision capabilities
+- Fixed git remote: origin → NousResearch/hermes-agent, added backup → tuananh4865 fork
+- Researched Hermes browser tools: navigate, snapshot, click, type, scroll, vision, cdp, dialog
+- Researched Hermes vision tool: auto-detect provider, SSRF protection, 50MB cap
+- Created [[hermes-agent-maintenance]] wiki page
 - concepts/pi-coding-agent.md (summary)
-- entities/openclaw.md (OpenClaw entity — 358K stars, fastest-growing GitHub repo)

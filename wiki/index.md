@@ -138,7 +138,8 @@ relationships:
 - [[multi-agent-wiki]] — Cross-agent coordination skill
 
 ## Hermes Agent
-- [[hermes-agent-self-evolution]] — Evolutionary self-improvement (DSPy + GEPA) (2026-04-27)
+- [[hermes-agent-self-evolution]] — Evolutionary self-improvement for Hermes Agent (2026-04-27)
+- [[hermes-agent-maintenance]] — Git remote setup, browser capabilities, vision tool (2026-05-03)
 - [[hermes-agent-complete-guide]] — Complete guide
 - [[hermes-agent-capabilities]] — System capabilities
 - [[hermes-self-improvement-activation]] — Self-improvement features
