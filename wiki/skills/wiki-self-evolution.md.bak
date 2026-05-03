@@ -88,3 +88,5 @@ For each gap:
 > **Auto-improvement:** *Vague trigger conditions**: The skill mentions "Gap analysis finds missing topics" but doesn't specify who/what runs this analysis, when it runs, or what the actual detection mechanism is. This is already noted in the auto-improvement comments.
 
 > **Auto-improvement:** *Vague trigger conditions**: The skill mentions "Gap analysis finds missing topics" but doesn't specify who/what runs this analysis. There's no clear mechanism for detection.
+
+> **Auto-improvement:** Evolution" - a process for a wiki agent to improve itself.

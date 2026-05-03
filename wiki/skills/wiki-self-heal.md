@@ -211,3 +211,5 @@ Run lint multiple times until count stabilizes.
 > **Auto-improvement:** 2 concrete improvements. Let me analyze the document for clarity, completeness, and potential pitfalls.
 
 > **Auto-improvement:** healing. I need to identify concrete improvements that would make it more effective, focusing on clarity, completeness, and avoiding pitfalls.
+
+> **Auto-improvement:** healing - auto-fixing broken links, missing frontmatter, orphans, and stale pages.

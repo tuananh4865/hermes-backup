@@ -153,3 +153,7 @@ After EVERY task: if new learned info about Anh or his preferences → save to w
 ## Related
 - [[tiktok-viral-script]] — TikTok script workflow
 - [[hermes-agent-complete-guide]] — Hermes Agent system
+
+> **Auto-improvement note:** a guide for working with a Vietnamese content creator named Tuấn Anh on TikTok.
+
+> **Auto-improvement note:** The Gen Z slang section has a specific update date (2026-05-04) but it's listing 2025-2026 terms. Gen Z slang evolves very quickly - this could be outdated quickly. There's no mention of when this should be reviewed or updated.

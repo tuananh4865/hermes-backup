@@ -192,3 +192,7 @@ relationships:
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The last updated date is 2026-04-30, which appears to be future-dated (we're before that in real time), suggesting this might be a test or placeholder
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The `[[epoxy-floor-prompt-template]]` entry appears to be truncated/incomplete - it ends with "(  " which suggests it's cut off
