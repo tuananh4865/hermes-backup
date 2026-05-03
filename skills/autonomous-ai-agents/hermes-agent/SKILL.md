@@ -627,6 +627,36 @@ hermes config set auxiliary.vision.provider <your_provider>
 hermes config set auxiliary.vision.model <model_name>
 ```
 
+### Vision fails with MiniMax provider
+**Symptom:** `vision_analyze` returns "no image attached" even though image is valid.
+
+**Root cause (2-layer problem):**
+1. MiniMax uses Anthropic-compatible endpoint (`/anthropic/v1/messages`) — Hermes HAS format conversion (`_convert_openai_images_to_anthropic` in `agent/auxiliary_client.py`) to transform OpenAI `image_url` blocks to Anthropic `image` blocks. This fix IS present and working.
+2. **More likely cause:** `auxiliary.vision.provider: auto` skips MiniMax because it's NOT in `_VISION_AUTO_PROVIDER_ORDER` (only `openrouter` and `nous` are). So if you have no OpenRouter/Nous API key, vision returns null.
+
+**Fix options (pick one):**
+```bash
+# Option A: Set OpenRouter for vision (requires OPENROUTER_API_KEY)
+hermes config set auxiliary.vision.provider openrouter
+hermes config set auxiliary.vision.model google/gemini-2.5-flash  # any vision-capable model
+
+# Option B: Force MiniMax for vision (needs vision-capable MiniMax model, not MiniMax-M2.7)
+hermes config set auxiliary.vision.provider minimax
+hermes config set auxiliary.vision.model <minimax-vision-model>  # must be a multimodal MiniMax model
+
+# Option C: Use custom endpoint (e.g. local LLaVA, Qwen-VL, Pixtral)
+hermes config set auxiliary.vision.provider custom
+hermes config set auxiliary.vision.base_url http://localhost:11434/v1  # ollama example
+hermes config set auxiliary.vision.model llama3.2-vision  # local vision model
+```
+
+**Debug:** Check which backend is actually used:
+```python
+from agent.auxiliary_client import resolve_vision_provider_client
+provider, client, model = resolve_vision_provider_client()
+print(f"Vision provider: {provider}, model: {model}, client: {client}")
+```
+
 ---
 
 ## Where to Find Things
