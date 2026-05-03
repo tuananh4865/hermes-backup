@@ -627,6 +627,9 @@ hermes config set auxiliary.vision.provider <your_provider>
 hermes config set auxiliary.vision.model <model_name>
 ```
 
+### Tuấn Anh's Vision Setup
+See `references/tuananh-vision-config.md` for his working LM Studio vision configuration (qwen3.5-0.8b at localhost:1234) and how to verify it's running.
+
 ### Vision fails with MiniMax provider
 **Symptom:** `vision_analyze` returns "no image attached" even though image is valid.
 
