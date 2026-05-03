@@ -576,6 +576,38 @@ terminal(command="tmux new-session -d -s resumed 'hermes --resume 20260225_14305
 
 ---
 
+## Vision Tool Troubleshooting
+
+### MiniMax M2.7 Has No Vision
+MiniMax-M2.7 is **text-only**. When `auxiliary.vision.provider: auto`, the auto-detect chain skips MiniMax for vision and falls back to OpenRouter/Nous or custom endpoint.
+
+**Diagnosis:**
+```bash
+grep "Auxiliary vision" ~/.hermes/logs/agent.log | tail -5
+```
+
+**Working configurations (2026-05-03):**
+```yaml
+auxiliary:
+  vision:
+    provider: custom
+    model: qwen3.5-0.8b
+    base_url: http://localhost:1234/v1
+    api_key: none
+    timeout: 120
+```
+
+**Fallback priority order:**
+1. Active provider if vision-capable (OpenRouter, Nous)
+2. OpenRouter (requires OPENROUTER_API_KEY)
+3. Nous Portal (OAuth)
+4. Custom endpoint with local multimodal model (qwen-vl, llava, pixtral)
+
+### Vision Speed (qwen3.5-0.8b via LM Studio)
+- Complex image (Google homepage): ~27 seconds
+- Small/simple images: faster
+- For faster vision, use larger model or cloud provider with vision (OpenRouter + google/gemini-2.5-flash)
+
 ## Troubleshooting
 
 ### Voice not working
