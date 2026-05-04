@@ -820,3 +820,98 @@ When checking agent status, look for:
 8. **Task Decomposition** - chia lớn thành nhỏ, input/output rõ ràng
 9. **Use FULL PATHS - NEVER symlinks** - ~/wiki ~/projects etc. fail in spawned agents
 10. **Agent Reporting v7** - agent phải báo cáo về Hermes trước khi mark done
+
+---
+
+## TELEGRAM MULTI-AGENT SETUP (Bot-to-Bot)
+
+### Architecture
+```
+User (Tuấn Anh)
+├── @HermesMainBot (CEO - default profile)
+├── @ContentDirectorBot (Content Lead - content-director profile)
+├── @ResearchLeadBot (Research Lead - research-lead profile)
+└── @SecurityEngineerBot (Security - security-engineer profile)
+```
+
+### Requirement: Bot-to-Bot Communication Mode
+**Telegram has enabled bot-to-bot communication as of 2026!**
+
+For bots to see each other's messages in groups:
+1. **Enable in @BotFather**: Send `/setjoingrammatic` → Select bot → Enable
+2. **Privacy mode OFF**: Bot must have privacy mode disabled OR be admin
+3. **Use @mention with command**: `/task@OtherBot` not just `@OtherBot`
+
+### Setup Steps
+
+**Step 1: Create Hermes profile per agent**
+```bash
+hermes profile create content-director --clone-from default
+hermes profile create research-lead --clone-from default
+hermes profile create security-engineer --clone-from default
+```
+
+**Step 2: Configure bot token in profile's .env**
+```bash
+# ~/.hermes/profiles/content-director/.env
+TELEGRAM_BOT_TOKEN=123456:ABCDefGhIJKlmNoPQRsTUVwxYZ
+TELEGRAM_ALLOWED_USERS=1132914873  # Tuấn Anh's Telegram ID
+TELEGRAM_HOME_CHANNEL=1132914873    # DM for updates
+```
+
+**Step 3: Start gateway for each profile**
+```bash
+hermes gateway --profile content-director start
+hermes gateway --profile research-lead start
+```
+
+**Step 4: Add all bots to same Telegram group**
+
+**Step 5: Inter-bot commands**
+When Hermes bot wants to delegate to another Hermes bot:
+- Use `/ping@OtherBot` for liveness
+- Use `/handoff@OtherBot` for task delegation
+- Reply to bot message for direct communication
+
+### Common Issue: "Unauthorized user"
+```
+WARNING: Dropping message from unauthorized user: user=8344881558 (ClawdBotZ1)
+```
+
+**Cause**: Bot IDs not in `TELEGRAM_ALLOWED_USERS`
+
+**Fix**: Add bot IDs to allowlist in .env:
+```
+TELEGRAM_ALLOWED_USERS=1132914873,8344881558
+```
+(Both human user ID AND other bot IDs need to be allowlisted)
+
+### Inter-Bot Collaboration Protocol
+Per Hermes issue #6419:
+- `[ACK]` - Acknowledgement
+- `[IN_PROGRESS]` - Task started
+- `[DONE]` - Task completed
+- `[BLOCKED]` - Cannot proceed
+
+### Profile Quick Reference
+| Profile | Bot Username | Role |
+|---------|---------------|------|
+| default | @TyayUno | CEO (Tuấn Anh) |
+| content-director | @SaturdayClawdBot | Content Lead |
+| research-lead | TBD | Research Lead |
+| security-engineer | TBD | Security Engineer |
+
+### Gateway Management
+```bash
+# Check status
+hermes gateway --profile content-director status
+
+# View logs
+tail -f ~/.hermes/profiles/content-director/logs/gateway.log
+
+# Restart
+hermes gateway --profile content-director restart
+
+# Stop
+hermes gateway --profile content-director stop
+```
