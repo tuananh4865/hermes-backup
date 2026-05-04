@@ -214,11 +214,6 @@ If goal is vague → user WILL push back → wasted session
 
 ## Known Issues
 
-- SHS = 0 có thể không đạt được nếu some skills truly need low confidence
-- Script path phải là absolute vì cron job chạy từ directory khác
-
----
-
 ## References
 
 - Karpathy AutoResearch: https://github.com/karpathy/autoresearch
@@ -238,3 +233,4 @@ If goal is vague → user WILL push back → wasted session
 
 - SHS metric may need refinement — not all low-confidence skills are bad
 - Script path must be absolute when invoked from cron (directory context differs)
+- Some 16 capabilities may overlap or have dependencies
