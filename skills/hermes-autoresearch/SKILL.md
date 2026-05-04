@@ -149,6 +149,19 @@ cronjob create \
   --skills ["hermes-autoresearch"]
 ```
 
+### Test ngay
+```bash
+# Test research.py
+python3 ~/.hermes/autoresearch/research.py
+
+# Test experiment loop (1 iteration)
+cd ~/.hermes/autoresearch
+git checkout -b autoresearch/test
+# Edit program.md với 1 idea
+python3 research.py > run.log 2>&1
+grep "^whs:" run.log
+```
+
 ---
 
 ## Key Differences from Karpathy
@@ -171,6 +184,9 @@ cronjob create \
 5. **Never stop**: Cứ chạy, agent tự stop khi đạt WHS = 0
 
 ---
+
+## References
+- [[references/karpathy-autoresearch]] — Research notes on Karpathy's AutoResearch pattern (source of this design)
 
 ## Files
 
