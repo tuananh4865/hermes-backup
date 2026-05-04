@@ -894,12 +894,61 @@ Per Hermes issue #6419:
 - `[BLOCKED]` - Cannot proceed
 
 ### Profile Quick Reference
-| Profile | Bot Username | Role |
-|---------|---------------|------|
-| default | @TyayUno | CEO (Tuấn Anh) |
-| content-director | @SaturdayClawdBot | Content Lead |
-| research-lead | TBD | Research Lead |
-| security-engineer | TBD | Security Engineer |
+| Profile | Bot Username | Token | Status |
+|---------|---------------|-------|--------|
+| default | @TyayUno | - | Primary |
+| content-director | @SaturdayClawdBot | 8594106827:... | ✅ Working |
+
+### Verified Working Setup (2026-05-04)
+```
+Bot: @SaturdayClawdBot
+Profile: ~/.hermes/profiles/content-director/
+Token: 8594106827:AAGu2sUPd-IgPiln7PaRAaSYP7JI-5kxiq4
+.env config:
+  TELEGRAM_BOT_TOKEN=8594106827:...
+  TELEGRAM_ALLOWED_USERS=*  # Required for bot-to-bot
+  TELEGRAM_HOME_CHANNEL=1132914873
+  HERMES_YOLO_MODE=true
+```
+
+### Bot Info Retrieval
+```bash
+# Get bot info from token
+curl -s "https://api.telegram.org/bot<TOKEN>/getMe"
+# Returns: id, is_bot, username, can_join_groups, can_read_all_group_messages
+```
+
+### Verified Bot-to-Bot Working (2026-05-04)
+- ClawdBotZ1 sent message to group → @SaturdayClawdBot received and responded ✅
+- Log shows: `inbound message: user=ClawdBotZ1`
+- Response: `response ready: ... api_calls=2 response=199 chars`
+- **Mention (@SaturdayClawdBot) trong group → Bot nhận được notification + respond** ✅
+- Hermes gửi message mention bằng `send_message` target=`telegram:-1003764041476:603` → Bot nhận ✅
+
+### How to Test Bot-to-Bot Mention
+```bash
+# Từ Hermes chính, mention bot khác trong group
+send_message action=send message="@SaturdayClawdBot test mention" target="telegram:-1003764041476:603"
+
+# Check bot logs
+tail -f ~/.hermes/profiles/content-director/logs/gateway.log | grep -E "(mention|inbound|response)"
+```
+
+### Next: Test với Second Bot
+Để test mention giữa 2 bot thực sự:
+1. Tạo bot thứ 2 qua @BotFather
+2. Setup profile mới
+3. Add cả 2 bot vào same group
+4. Bot A @mention Bot B → Bot B nhận và respond
+
+### Common Issue: "Unauthorized user"
+```
+WARNING: Dropping message from unauthorized user: user=8344881558 (ClawdBotZ1)
+```
+
+**Cause**: Bot IDs not in `TELEGRAM_ALLOWED_USERS`
+
+**Fix**: Set `TELEGRAM_ALLOWED_USERS=*` in .env to allow ALL users/bots
 
 ### Gateway Management
 ```bash
