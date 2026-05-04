@@ -700,6 +700,8 @@ print(f"Vision provider: {provider}, model: {model}, client: {client}")
 ## Tuấn Anh's Multi-Agent Setup
 See `references/multi-agent-setup.md` for detailed guide on creating agentic company with Telegram bots.
 
+**⚠️ COMMON ISSUE:** Bots respond to ALL messages instead of just @mentions — see "CRITICAL: Telegram Privacy Mode" section in that reference.
+
 
 | Looking for... | Location |
 |----------------|----------|
