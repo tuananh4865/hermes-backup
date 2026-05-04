@@ -5,12 +5,12 @@ updated: 2026-04-30
 type: concept
 tags: [agent, coding-agent, open-source, terminal]
 confidence: high
-relationships: [openclaw, claude-code, terminus, ai-agent-trends-2026-05]
+relationships: [claude-code, terminus, ai-agent-trends-2026-05]
 ---
 
 # Pi Coding Agent
 
-**Pi** là minimal terminal coding harness — một CLI agent được tạo bởi Mario Zechner (creator libGDX). Nổi tiếng vì là engine runtime của OpenClaw.
+**Pi** là minimal terminal coding harness — một CLI agent được tạo bởi Mario Zechner (creator libGDX).
 
 ## Key Facts
 
@@ -30,7 +30,7 @@ Pi **không có built-in:** sub-agents, plan mode, permission popups, MCP, backg
 
 ## Why Pi Went Viral
 
-1. **OpenClaw engine** — Pi là runtime của OpenClaw (358K stars, fastest-growing GitHub repo)
+1. **OpenClaw engine** — Pi là runtime của OpenClaw (358K stars)
 2. **Minimalism** — counter-trend với bloat của Claude Code và competitors
 3. **Extensibility** — TypeScript extensions with hot-reload, agent có thể tự viết extensions
 4. **Model freedom** — 15+ providers, 324 models, bao gồm MiniMax
@@ -47,7 +47,7 @@ Anthropic, OpenAI, Google, xAI, Mistral, Groq, Cerebras, Hugging Face, OpenRoute
 
 ## Related
 
-- [[openclaw]] — Viral project sử dụng Pi làm engine
+
 - [[claude-code]] — Agent đối thủ, "batteries included" approach
 - [[terminus]] — Minimal terminal harness competitor on Terminal-Bench
 - [[ai-agent-trends-2026-05]] — Agent landscape trends 2026

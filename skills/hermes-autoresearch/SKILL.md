@@ -1,177 +1,185 @@
 ---
-title: Hermes Agent Autoresearch
+title: Hermes Autoresearch — Karpathy-Style
 name: hermes-autoresearch
 created: 2026-04-27
-updated: 2026-04-27
+updated: 2026-05-04
 type: skill
-tags: [autoresearch, self-improvement, hermes-agent]
-description: AutoResearch pattern cho Hermes Agent - tự cải thiện mỗi đêm
-trigger: Cron job chạy tự động mỗi đêm
+tags: [autoresearch, self-improvement, karpathy-pattern]
+description: AutoResearch pattern lấy cảm hứng từ karpathy/autoresearch — tự cải thiện không ngừng mỗi đêm
+trigger: Cron job chạy tự động, NEVER STOP cho đến khi human interrupt
 ---
 
-# Hermes Agent Autoresearch
+# Hermes Autoresearch — Karpathy-Style
 
-> Pattern từ karpathy/autoresearch — áp dụng cho Hermes Agent
-> Chạy tự động mỗi đêm, không cần human in loop
+> Lấy cảm hứng từ [karpathy/autoresearch](https://github.com/karpathy/autoresearch)
+> Core idea: **give an agent a narrow scope + single metric + git memory = autonomous improvement**
 
-## Core Loop
+## Core Philosophy
 
-```
-1. Đọc program.md (hướng dẫn từ lần trước)
-2. Chạy self-improvement tasks
-3. Đo metrics
-4. Ghi log
-5. Cập nhật program.md nếu cần
-6. Lặp lại
-```
+Karpathy's insight: "You're not touching Python files. You're programming the `program.md`."
 
-## IMPORTANT PATHS (verified working)
+Tương tự với Hermes:
+- **KHÔNG modify code** — chỉ modify `program.md` (hướng dẫn cho agent)
+- **1 metric duy nhất** để optimize
+- **Git là memory** — rollback khi cần
+- **NEVER STOP** — cho đến khi human interrupt
 
-```
-Wiki:         /Volumes/Storage-1/Hermes/wiki
-Scripts:      /Volumes/Storage-1/Hermes/wiki/scripts
-Skills:       /Volumes/Storage-1/Hermes/skills  (symlinked to ~/.hermes/skills)
-Memories:     ~/.hermes/memories
-Cron output:  ~/.hermes/cron/output
-```
+---
 
-## Wiki Maintenance Commands
-
-```bash
-cd /Volumes/Storage-1/Hermes/wiki
-
-# Step 1: Fast health check (broken links SKIPPED in fast mode)
-python3 scripts/wiki_lint.py --fast
-
-# Step 2: Run self-heal to fix issues
-python3 scripts/wiki_self_heal.py --fix --all
-
-# Step 3: CRITICAL - Verify with FULL lint, not fast
-# self-heal may claim "No broken links" but full lint finds 375+
-# Only full lint detects broken wikilinks
-python3 scripts/wiki_lint.py
-```
-
-### ⚠️ CRITICAL: fast vs full lint behavior
-- `--fast` mode: skips broken wikilink check AND orphan check
-- Full lint: finds ALL issues including 375+ broken wikilinks
-- **self-heal may report "No broken links found" but full lint still shows them**
-- Always verify with full lint after self-heal
-- If full lint still shows broken links after heal, the heal script has a bug — log as known issue
-
-### Orphan Pages
-- Orphan count grows ~20 per night (Telegram transcripts)
-- Low priority — don't spend time linking transcripts
-- Archive old orphans if they have no long-term value
-
-## Metrics để Track
-
-| Metric | Target | Đo bằng |
-|--------|--------|---------|
-| Broken links | 0 | wiki_lint.py |
-| Pages missing frontmatter | 0 | wiki_lint.py |
-| Orphan pages | < 5% | wiki_lint.py |
-| Task success rate | > 90% | Session logs |
-| Retry count | Giảm qua thời gian | Memory |
-
-## Những việc làm mỗi đêm
-
-### 1. Wiki Maintenance
-```bash
-cd /Volumes/Storage-1/Hermes/wiki
-python3 scripts/wiki_lint.py --fast          # Report issues
-python3 scripts/wiki_self_heal.py --fix --all  # Auto-fix
-python3 scripts/wiki_lint.py                # Verify
-```
-- Check orphan pages — tạo links hoặc archive
-- Update freshness scores
-
-### 2. Skill Improvement
-- Review skills yếu (low confidence scores)
-- Research best practices cho từng skill domain
-- Update SKILL.md với findings
-- Thêm examples mới
-
-### 3. Knowledge Acquisition
-- Research AI agent trends mới nhất
-- Update wiki với concepts mới
-- Tìm và ingest有价值的内容
-- Update learned-about-tuananh.md nếu có patterns mới
-
-### 4. Self-Critique
-- Review lại errors từ session trước
-- Tìm patterns trong failures
-- Update memory với lessons learned
-- Đề xuất improvements cho workflow
-
-## Output Format
-
-Mỗi đêm tạo report:
+## Repository Structure
 
 ```
-# Autoresearch Nightly Report — YYYY-MM-DD
-
-## Metrics
-- Broken links: X (was Y)
-- Missing frontmatter: X (was Y)
-- Task success rate: X%
-- New wiki pages: X
-- Skills improved: X
-
-## Actions Taken
-1. [Action 1]
-2. [Action 2]
-
-## Findings
-- [Finding 1]
-- [Finding 2]
-
-## Next Steps
-1. [Step 1]
-2. [Step 2]
+~/.hermes/autoresearch/
+├── program.md          ← SKILL CHÍNH: human edit để program agent
+├── knowledge.md        ← persistent memory: patterns đã thử, results
+├── DISCARDED.md        ← những thứ đã thử và thất bại
+├── RESULTS.tsv         ← log: metric per experiment
+├── research.py         ← fixed: benchmark script để đo metric
+└── pyproject.toml     ← dependencies
 ```
+
+---
+
+## The Single Metric
+
+**Wiki Health Score (WHS)** — lower is better, 0 = perfect
+
+```
+WHS = broken_links × 10 + missing_frontmatter × 5 + orphan_pages × 1
+```
+
+Target: **WHS = 0**
+
+---
+
+## The Experiment Loop
+
+```
+LOOP FOREVER:
+1. Đọc program.md để hiểu current instructions
+2. Đọc knowledge.md để tránh lặp lại những gì đã thử
+3. Đọc DISCARDED.md để tránh những thất bại đã biết
+4. Sửa knowledge.md (bổ sung insights mới)
+5. Tune program.md với experimental idea
+6. git commit
+7. Chạy: python3 research.py > run.log 2>&1
+8. Đọc kết quả: grep "^whs:" run.log
+9. Nếu WHS improved (lower) → giữ thay đổi
+10. Nếu WHS same/worse → git reset
+11. Ghi vào RESULTS.tsv
+12. Lặp lại
+```
+
+---
+
+## Program.md Template
+
+```markdown
+# Hermes Autoresearch Program
+
+## Mission
+Improve Hermes Agent's wiki health by reducing broken links, missing frontmatter, and orphan pages.
+
+## Current Priority
+[Agent fill: what should we focus on tonight?]
+
+## Constraints
+- MAX 3 phút per experiment (để chạy được nhiều experiments)
+- KHÔNG sửa production code
+- KHÔNG xóa pages có giá trị
+- Nếu uncertain, DISCARD và note lý do
+
+## Experiment Ideas to Try
+[Human fill: những hướng nghiên cứu cụ thể]
+
+## What NOT to try again
+[From DISCARDED.md]
+```
+
+---
+
+## Research.py (Fixed)
+
+```python
+#!/usr/bin/env python3
+"""Fixed benchmark script - DO NOT MODIFY"""
+import subprocess
+import re
+
+def run_benchmark():
+    # Chạy wiki_lint.py và parse output
+    result = subprocess.run(
+        ["python3", "scripts/wiki_lint.py"],
+        capture_output=True, text=True,
+        cwd="/Volumes/Storage-1/Hermes/wiki"
+    )
+    
+    output = result.stdout + result.stderr
+    
+    # Parse metrics
+    broken_links = len(re.findall(r"broken.*link", output, re.I))
+    missing_fm = len(re.findall(r"missing.*frontmatter", output, re.I))
+    orphans = len(re.findall(r"orphan", output, re.I))
+    
+    whs = broken_links * 10 + missing_fm * 5 + orphans * 1
+    
+    print(f"whs: {whs}")
+    print(f"broken_links: {broken_links}")
+    print(f"missing_frontmatter: {missing_fm}")
+    print(f"orphans: {orphans}")
+    
+    return whs
+
+if __name__ == "__main__":
+    run_benchmark()
+```
+
+---
 
 ## Cron Job Setup
 
 ```bash
-# Create cron job
+# Create cron job - chạy mỗi đêm lúc 2AM
 cronjob create \
   --name "Hermes Autoresearch Nightly" \
-  --skill hermes-autoresearch \
+  --prompt "Run the autoresearch loop from ~/.hermes/autoresearch/program.md. READ program.md first, then execute the experiment loop. NEVER STOP until human interrupts. Report results to telegram when complete." \
   --schedule "0 2 * * *" \
   --repeat 30 \
-  --deliver "telegram:chat_id:thread_id"
+  --deliver "telegram:1132914873:3764041476" \
+  --skills ["hermes-autoresearch"]
 ```
 
-### Delivery Format Pitfalls
+---
 
-**ĐỊNH DẠNG ĐÚNG:** `telegram:chat_id:thread_id`
-- Ví dụ: `telegram:1132914873:3764041476`
-- Dùng DẤU HAI CHẤM (`:`), KHÔNG phải dấu slash (`/`)
+## Key Differences from Karpathy
 
-**LỖI THƯỜNG GẶP:**
-```
-invalid literal for int(): '1132914873:3764041476/604'
-```
-→ Thread ID bị thừa suffix `/604` hoặc dùng `/` thay vì `:`
+| Aspect | Karpathy AutoResearch | Hermes AutoResearch |
+|--------|----------------------|---------------------|
+| Domain | LLM training | Wiki health |
+| File to modify | train.py | program.md, knowledge.md |
+| Metric | val_bpb (bits per byte) | WHS (wiki health score) |
+| Time budget | 5 min per run | 3 min per experiment |
+| Target | Lower = better | Lower = better |
+| Memory | Git commits | knowledge.md + RESULTS.tsv |
 
-**CÁCH SỬA:** Update job với deliver đúng:
-```bash
-cronjob update --job_id <id> --deliver "telegram:chat_id:thread_id"
-```
+## Why This Works
 
-**CÁCH DEBUG:** Kiểm tra `last_status` và `last_delivery_error`:
-- `last_status: ok` + `last_delivery_error` ≠ null → Job chạy OK nhưng gửi thất bại
-- `last_status: ok` + `last_delivery_error: null` → Job thành công hoàn toàn
+1. **Narrow scope**: Chỉ tập trung vào wiki health, không lan man
+2. **Single metric**: Rõ ràng, không ambiguous
+3. **Fast iteration**: 3 min × ~20 experiments/giờ = nhiều data points
+4. **Git memory**: Rollback khi cần, never lose good state
+5. **Never stop**: Cứ chạy, agent tự stop khi đạt WHS = 0
 
-## Known Issues (autoresearch)
-- **self-heal vs lint discrepancy**: self-heal claims fixed but full lint still shows broken links — this is a script ordering/timing bug, not a real failure. Don't re-run, just note in report.
-- **Telegram polling conflict**: Multiple Hermes PIDs conflict on Telegram getUpdates — requires manual `kill -9`. Not fixable via cron.
-- **Gateway restart PID leak**: `hermes gateway restart` doesn't kill old processes — known bug, requires manual kill.
+---
 
-## Constraints
-- MAX 30 phút chạy
-- KHÔNG sửa production code
-- KHÔNG xóa important wiki pages
-- KHÔNG override user preferences
-- If uncertain, SKIP and note in report
+## Files
+
+- **program.md**: Hướng dẫn cho agent — human edit
+- **knowledge.md**: Tổng hợp insights từ experiments — agent update
+- **DISCARDED.md**: Những thứ đã thử thất bại
+- **RESULTS.tsv**: TSV log — commit hash, WHS, status, description
+
+## Known Issues
+
+- WHS = 0 có thể không đạt được nếu có orphan pages không thể link
+- Script path phải là absolute vì cron job chạy từ directory khác

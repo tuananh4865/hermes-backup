@@ -8,10 +8,9 @@ related:
   - [[apple-silicon-mlx]]
   - [[local-llm]]
   - [[ollama]]
-  - [[openclaw]]
   - [[llama-cpp]]
 sources:
-  - https://www.marc0.dev/en/blog/ai-agents/mac-mini-ai-server-ollama-openclaw-claude-code-complete-guide-2026-1770481256372
+  - https://www.marc0.dev/en/blog/ai-agents/mac-mini-ai-server-ollama-claude-code-complete-guide-2026
   - https://toolhalla.ai/blog/best-local-llms-mac-mini-m4-2026
   - https://blog.starmorph.com/blog/best-mac-mini-for-local-llms
   - https://like2byte.com/mac-mini-m4-local-llm-server-agency/
@@ -84,24 +83,6 @@ response = generate(model, tokenizer, prompt='Write a Python function')
 
 **MLX advantage:** 2-3x faster than Ollama for models that support MLX, with lower memory footprint due to Apple Silicon memory optimization.
 
-### OpenClaw (AI Agent Framework)
-OpenClaw runs autonomously on Mac Mini M4 as a local AI agent with full tool access.
-
-```bash
-# Install
-pip install openclaw
-
-# Configure with local Ollama
-claw config set provider ollama
-claw config set model qwen2.5:14b
-claw config set api_base http://localhost:11434
-
-# Run agent
-claw run "Research competitor pricing and summarize"
-```
-
-See [[openclaw]] and [[claude-code]] for more on local agent workflows.
-
 ### llama.cpp (CPU/GPU fallback)
 For models not supported by Ollama or MLX, llama.cpp provides reliable CPU inference:
 
@@ -127,9 +108,6 @@ brew install ollama homebrew/core/python@3.12
 
 # Optional: MLX for faster Apple Silicon inference
 pip install mlx-lm
-
-# Optional: OpenClaw for agent workflows
-pip install openclaw
 
 # Optional: OpenWebUI for chat interface
 brew install --cask openwebui
@@ -196,9 +174,9 @@ results = vectorstore.similarity_search("how does auth work?", k=3)
 ```
 
 ### 3. Autonomous Research Agent
-[[openclaw]] agent that can browse, search, and compile research reports without cloud APIs.
+Claude Code agent that can browse, search, and compile research reports without cloud APIs.
 
-**Stack:** OpenClaw + Ollama (qwen2.5:14b or mixtral:8x7b) + SearxNG for search.
+**Stack:** Claude Code + Ollama (qwen2.5:14b or mixtral:8x7b) + SearxNG for search.
 
 ### 4. AI Agency Stack
 For small agencies: multiple clients, each with their own isolated model instance. Mac Mini M4 Pro (48GB) can run 2-3 quantized models simultaneously.
@@ -223,14 +201,15 @@ For small agencies: multiple clients, each with their own isolated model instanc
 - **Memory ceiling** — Even 48GB limits you to ~33B models. 70B+ models run too slowly for practical use.
 - **No VRAM optimization** — Apple Silicon unified memory isn't as fast as dedicated GPU VRAM for large batch inference.
 - **Model support** — Some models (especially new releases) may not be available in Ollama format yet.
-- **Agent tool access** — OpenClaw on Mac is powerful but less mature than cloud-based agents like Claude Code.
+- **Agent tool access** — Claude Code on Mac is powerful but less mature than cloud-based agents.
 
 ## Related Concepts
 
 - [[apple-silicon-mlx]] — Apple Silicon ML framework for optimized inference
 - [[local-llm]] — General guide to running LLMs locally
 - [[ollama]] — Leading local LLM runtime
-- [[openclaw]] — Local AI agent framework
+## Local AI Agent Frameworks
+
 - [[llama-cpp]] — CPU-based inference (fallback)
 - [[claude-code]] — AI coding assistant (cloud or local)
 - [[coding-agents]] — Using AI agents for software development
@@ -238,5 +217,5 @@ For small agencies: multiple clients, each with their own isolated model instanc
 ## Further Reading
 
 - [Best Local LLMs for Mac Mini M4 2026](https://toolhalla.ai/blog/best-local-llms-mac-mini-m4-2026) — Comprehensive benchmarks
-- [Mac Mini AI Server Complete Guide](https://www.marc0.dev/en/blog/ai-agents/mac-mini-ai-server-ollama-openclaw-claude-code-complete-guide-2026-1770481256372) — Full setup walkthrough
+- [Mac Mini AI Server Complete Guide](https://www.marc0.dev/en/blog/ai-agents/mac-mini-ai-server-ollama-claude-code-complete-guide-2026) — Full setup walkthrough
 - [Apple Silicon LLM Inference Optimization Guide](https://blog.starmorph.com/blog/apple-silicon-llm-inference-optimization-guide) — Performance tuning

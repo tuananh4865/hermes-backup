@@ -85,7 +85,7 @@ MCP continues to consolidate its position as the canonical protocol for connecti
    URL: https://arxiv.org/pdf/2602.03128
    Snippet: Multi-agentLLMframeworksare widely used to accelerate the development ofagentsystems powered by large language models (LLMs). Theseframeworksimpose distinct architectural structures that govern howage
 11. [347] Mac Mini M4 AI Server: Local LLM + Agent Setup (2026)
-   URL: https://www.marc0.dev/en/blog/ai-agents/mac-mini-ai-server-ollama-openclaw-claude-code-complete-guide-2026-1770481256372
+
    Snippet: Ollama for LLMs, OpenClaw forAIagents, Claude Code for dev workflows. Hardware tiers $599-$2,000 tested. Your Mac Mini can runlocalAImodels, host 24/7agents, serve a private ChatGPT interface, and int
 12. [346] Claude Code: Agents, Commands, Skills, and Plugins Explained
    URL: https://devops-daily.com/posts/claude-code-agents-commands-skills-plugins-explained
@@ -154,7 +154,7 @@ The emerging pattern for one-person AI companies:
 3. **Expand [[apple-silicon-mlx]]** — Add Qwen3.5 benchmark data, M4 Max performance numbers
 4. **Create [[one-person-ai-company]]** — Document the business model, AI stack, case studies
 5. **Update [[multi-agent-systems]]** — Add CrewAI enterprise patterns, DeepLearning.AI course reference
-6. **Create [[openclaw]]** — Document as complement to Claude Code for local AI agent workflows
+
 
 ---
 

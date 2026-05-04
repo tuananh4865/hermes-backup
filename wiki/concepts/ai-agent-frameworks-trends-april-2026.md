@@ -10,8 +10,7 @@ relationships:
   - [[apple-silicon-mlx]]
   - [[llama-cpp]]
   - [[ollama]]
-  - [[openclaw]]
-  - [[multi-agent-systems]]
+  - [[pi-coding-agent]]
   - [[agentic-ai]]
 relationship_count: 11
 ---
@@ -178,7 +177,7 @@ For developers: **Mac Mini M4 + Ollama + OpenClaw** is the most cost-effective l
 - [[apple-silicon-mlx]] — Apple's MLX framework
 - [[llama-cpp]] — Cross-platform LLM inference
 - [[ollama]] — Simplest local LLM server
-- [[openclaw]] — Local AI agent framework
+- [[pi-coding-agent]] — Minimal terminal coding harness
 - [[multi-agent-systems]] — Architecture patterns
 - [[agentic-ai]] — Agentic AI paradigm
 
