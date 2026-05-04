@@ -195,7 +195,38 @@ grep "^whs:" run.log
 - **DISCARDED.md**: Những thứ đã thử thất bại
 - **RESULTS.tsv**: TSV log — commit hash, WHS, status, description
 
+## Skills Improvement Focus (2026-05-04)
+
+**Chủ đề: Tự cải thiện Hermes Agent skills mỗi đêm**
+
+### Baseline (2026-05-04)
+- SHS = 86
+- Total skills: 28
+- Low confidence: 28
+- Missing examples: 6
+
+### Single Metric: Skills Health Score (SHS)
+```
+SHS = stale_skills × 10 + missing_examples × 5 + broken_links × 3 + low_confidence × 2
+Target: SHS = 0
+```
+
+### Cron job đã update
+- Job ID: `a4b8e528983f`
+- Schedule: 2AM hàng đêm, 30 lần
+- Prompt: Skills improvement loop
+
+## Why This Works
+
+1. **Narrow scope**: Skills health = measurable, improvable
+2. **Single metric**: SHS clear, no ambiguity
+3. **Git memory**: Rollback when experiments fail
+4. **Never stop**: Agent experiments all night
+5. **Human edits program.md**: Guide the agent's focus
+
+---
+
 ## Known Issues
 
-- WHS = 0 có thể không đạt được nếu có orphan pages không thể link
+- SHS = 0 có thể không đạt được nếu some skills truly need low confidence
 - Script path phải là absolute vì cron job chạy từ directory khác
