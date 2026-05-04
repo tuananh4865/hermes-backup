@@ -150,9 +150,41 @@ After EVERY task: if new learned info about Anh or his preferences → save to w
 - Custom memory provider: `~/.hermes/plugins/memory/wiki_memory_provider.py`
 - [[hermes-wiki-session-context]] skill — implementation guide cho auto wiki read
 
+## Hermes Autoresearch (2026-05-04)
+Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch pattern.
+
+### Setup
+- Repo: `~/.hermes/autoresearch/`
+- Cron job: `a4b8e528983f` — 2AM hàng đêm, forever
+- Skill: `hermes-autoresearch`
+
+### 3 Research Focuses
+1. **Skills Improvement** — Improve ~/.hermes/skills/
+2. **AI Agents Research** — Document techniques, frameworks
+3. **Hermes Agentic Capabilities** — Develop 16 capabilities
+
+### 16 Agentic Capabilities (em TỰ CHỌN mỗi đêm)
+| Category | Capabilities |
+|----------|---------------|
+| Core Agentic | Self-Debugging, Self-Correction, Learning from Failures, Proactive Work |
+| Knowledge & Memory | Memory Optimization, Knowledge Acquisition, Context Management |
+| Skill & Tool | Skill Creation, Tool Use, Tool Creation |
+| Planning & Reasoning | Goal Decomposition, Planning, Priority Setting, Reasoning |
+| Collaboration | Multi-Agent Coordination, Delegation |
+
+### Decision Criteria (mỗi đêm)
+1. Highest impact cho công việc với anh
+2. Quickest improvement (feasible trong 1 night)
+3. Foundational (giúp cải thiện capabilities khác)
+
+### Success Criteria
+- Agentic_Score >= 100
+- HOẶC human interrupt
+
 ## Related
 - [[tiktok-viral-script]] — TikTok script workflow
 - [[hermes-agent-complete-guide]] — Hermes Agent system
+- [[hermes-autoresearch]] — Autoresearch skill
 
 > **Auto-improvement note:** a guide for working with a Vietnamese content creator named Tuấn Anh on TikTok.
 
