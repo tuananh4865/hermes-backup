@@ -90,15 +90,15 @@ Hermes_Score = self_debug_fixed × 10 + skills_created × 20 + mistakes_prevente
 
 ---
 
-## Metrics (Multi-dimensional)
+## Metrics
 
 ```
-TikTok_Score = trends_found × 10 + slang_added × 5 + patterns_found × 3
-Agents_Score = frameworks_found × 10 + patterns_found × 5 + techniques_added × 3
-Hermes_Score = features_proposed × 10 + features_implemented × 20 + wiki_pages_updated × 2
+Skills_Score = skills_improved × 10
+Agents_Score = frameworks × 10 + techniques × 5 + patterns × 3
+Hermes_Score = capabilities_improved × 20 + wiki_updated × 2
 ```
 
-**Note:** These are tracked qualitatively, not via script. Agent self-reports progress.
+**Note:** These are tracked qualitatively. Agent self-reports progress via telegram.
 
 ---
 
@@ -149,23 +149,21 @@ cronjob update --job_id a4b8e528983f --repeat 0  # 0 = infinite
 ```
 # Autoresearch Progress — HH:MM
 
-## TikTok Research
-- Slang found: N
-- Patterns documented: N
+Tonight's focus: [Capability em chọn]
+Why chosen: [Reason based on Anh's needs]
 
-## AI Agents Research  
-- Frameworks found: N
+## Skills Improvement
+- Skills improved: N
+
+## AI Agents Research
 - Techniques documented: N
 
-## Hermes Features
-- Proposed: N
-- Implemented: N
+## Hermes Agentic
+- Capabilities worked on: N
+- Score so far: X
 
-## Current focus
-[What you're working on right now]
-
-## Blockers
-[Any issues]
+## Next action
+[What I'm doing next]
 ```
 
 ---
@@ -223,4 +221,20 @@ If goal is vague → user WILL push back → wasted session
 
 ## References
 
-- `references/karpathy-autoresearch.md` — Karpathy's AutoResearch pattern research
+- Karpathy AutoResearch: https://github.com/karpathy/autoresearch
+- Key insight: `program.md` is the skill — human programs agent via markdown
+- Key insight: Git is memory — rollback on failure, commit on success
+- Key insight: NEVER STOP until goal achieved or human interrupts
+
+## Key Lessons Learned (2026-05-04)
+
+1. **Goal specificity is critical** — "make X more agentic" is TOO VAGUE. Must have metric + stop condition.
+2. **Em TỰ CHỌN** — User wants agent to autonomously decide capability priority based on impact to his work
+3. **16 capabilities scope** — Full list gives agent flexibility to choose what to improve
+4. **3 focuses**: Skills improvement (always), AI agents research, Hermes agentic (rotate)
+5. **Cron repeat=0** means infinite — run until goal achieved
+
+## Known Issues
+
+- SHS metric may need refinement — not all low-confidence skills are bad
+- Script path must be absolute when invoked from cron (directory context differs)
