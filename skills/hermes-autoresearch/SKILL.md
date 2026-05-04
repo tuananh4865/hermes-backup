@@ -5,7 +5,7 @@ created: 2026-04-27
 updated: 2026-05-04
 type: skill
 tags: [autoresearch, self-improvement, karpathy-pattern, agentic]
-description: Karpathy-style autonomous research loop — 3 focuses (TikTok + AI Agents + Hermes Agentic), infinite repeat, NEVER STOP
+description: Karpathy-style autonomous research loop — Skills Improvement + AI Agents + Hermes Agentic (16 capabilities, em TỰ CHỌN mỗi đêm), infinite repeat, NEVER STOP
 trigger: Cron job 2AM hàng đêm, run forever until goal achieved
 ---
 
@@ -38,26 +38,55 @@ trigger: Cron job 2AM hàng đêm, run forever until goal achieved
 
 ## Three Research Focuses
 
-### 1. TikTok Content Research
-- Monitor TikTok trends (2026 only)
-- Find new Gen Z slang (Vietnamese + English)
-- Research viral hooks, CTAs, script structures
-- Update wiki: `gen-z-slang-2026-04.md`, `tiktok-trends-*.md`
+### 1. Skills Improvement (PRIMARY — every night)
+Improve skills in `~/.hermes/skills/`
+
+Metrics:
+```
+SHS = stale_skills × 10 + missing_examples × 5 + broken_links × 3 + low_confidence × 2
+Target: SHS = 0
+```
+
+What to improve:
+- Add missing examples to skills
+- Fix broken `[[wikilinks]]`
+- Add pitfalls section
+- Verify commands still work
+- Raise confidence scores
 
 ### 2. AI Agents Research
-- Monitor AI agent landscape (LangChain, Mastra, Flowise, n8n)
-- Research agentic patterns (REPLOM, self-improvement, multi-agent)
-- Track MCP, A2A protocols, emerging frameworks
-- Update wiki: `ai-agent-trends-*.md`
+Research self-improvement patterns and agent frameworks.
 
-### 3. Hermes Agentic Features (PRIMARY)
-Develop NEW capabilities to make Hermes more autonomous:
-- Better memory/recall systems
-- Self-debugging capabilities
+Target: Document 5+ new techniques
+
+Focus areas:
+- Self-debugging patterns
+- Agent skill creation
+- Memory optimization
 - Multi-agent coordination
-- Proactive task execution
-- Autonomous decision making
 - Self-improvement loops
+- MCP, A2A protocols
+
+### 3. Hermes Agentic Features (em TỰ CHỌN mỗi đêm)
+**Em TỰ QUYẾT ĐỊNH** capability nào để improve, dựa trên:
+1. Highest impact cho công việc với anh
+2. Quickest improvement (feasible trong 1 night)
+3. Foundational (giúp cải thiện capabilities khác)
+
+**16 Agentic Capabilities:**
+
+| Category | Capability |
+|----------|------------|
+| Core | Self-Debugging, Self-Correction, Learning from Failures, Proactive Work |
+| Knowledge | Memory Optimization, Knowledge Acquisition, Context Management |
+| Skill/Tool | Skill Creation, Tool Use, Tool Creation |
+| Planning | Goal Decomposition, Planning, Priority Setting, Reasoning |
+| Collaboration | Multi-Agent Coordination, Delegation |
+
+Metrics:
+```
+Hermes_Score = self_debug_fixed × 10 + skills_created × 20 + mistakes_prevented × 5
+```
 
 ---
 
@@ -75,10 +104,11 @@ Hermes_Score = features_proposed × 10 + features_implemented × 20 + wiki_pages
 
 ## Success Criteria (STOP when ANY met)
 
-- `Hermes_Score >= 50` (proposed 5+ features, implemented 2+)
-- Found **10+** new Gen Z slang terms
+- `SHS = 0` (all skills healthy)
+- `Hermes_Score >= 50`
 - Documented **5+** new AI agent techniques
-- Implemented **1+** working Hermes prototype
+- Created **3+** new skills autonomously
+- Error resolution rate > 80%
 
 ---
 
