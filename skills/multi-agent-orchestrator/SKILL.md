@@ -898,6 +898,11 @@ Per Hermes issue #6419:
 |---------|---------------|-------|--------|
 | default | @TyayUno | - | Primary |
 | content-director | @SaturdayClawdBot | 8594106827:... | ✅ Working |
+| research-lead | @Researcher_Clawd_Bot | 8706108095:... | ✅ Working |
+
+### Bot Privacy Mode Fix (2026-05-04)
+**Issue**: Bot `can_read_all_group_messages: false` → cannot see bot-to-bot mentions
+**Fix**: @BotFather → /mybots → [Bot] → /setprivacy → Disable
 
 ### Verified Working Setup (2026-05-04)
 ```
@@ -924,6 +929,54 @@ curl -s "https://api.telegram.org/bot<TOKEN>/getMe"
 - Response: `response ready: ... api_calls=2 response=199 chars`
 - **Mention (@SaturdayClawdBot) trong group → Bot nhận được notification + respond** ✅
 - Hermes gửi message mention bằng `send_message` target=`telegram:-1003764041476:603` → Bot nhận ✅
+
+### Verified Bot-to-Bot Working (2026-05-04)
+- ClawdBotZ1 sent message to group → @SaturdayClawdBot received and responded ✅
+- Log shows: `inbound message: user=ClawdBotZ1`
+- Response: `response ready: ... api_calls=2 response=199 chars`
+- **Mention (@SaturdayClawdBot) trong group → Bot nhận được notification + respond** ✅
+- Hermes gửi message mention bằng `send_message` target=`telegram:-1003764041476:603` → Bot nhận ✅
+
+### Bot Profiles Setup (2026-05-04)
+| Profile | Bot Username | Bot Token | Status |
+|---------|--------------|-----------|--------|
+| default | @TyayUno | (main) | Primary |
+| content-director | @SaturdayClawdBot | 8594106827:... | ✅ Running |
+| research-lead | @Researcher_Clawd_Bot | 8706108095:... | ✅ Running |
+
+### Start Gateway for Profile
+```bash
+cd ~/.hermes/hermes-agent && ./venv/bin/python -m hermes_cli.main --profile <name> gateway run --replace 2>&1 &
+```
+
+### Create New Agent Profile
+```bash
+# Clone từ existing profile
+cp -r ~/.hermes/profiles/content-director ~/.hermes/profiles/<new-profile>
+
+# Hoặc dùng hermes CLI
+hermes profile create <name> --clone-from default
+
+# Configure .env với bot token
+echo "TELEGRAM_BOT_TOKEN=<token>" >> ~/.hermes/profiles/<name>/.env
+echo "TELEGRAM_ALLOWED_USERS=*" >> ~/.hermes/profiles/<name>/.env
+```
+
+### CRITICAL: Bot Privacy Mode Issue
+
+**Symptom**: Bot không nhận messages từ user/bot khác trong group
+```
+grep "can_read_all_group_messages" response:
+{"ok":true,"result":{"id":8706108095,"is_bot":true,"username":"Researcher_Clawd_Bot","can_read_all_group_messages":false,...}}
+```
+
+**Cause**: Telegram bot có 2 privacy modes:
+- `can_read_all_group_messages: false` (default) → Bot chỉ thấy @mention, commands, replies
+- `can_read_all_group_messages: true` → Bot thấy mọi messages
+
+**Fix**: Trong @BotFather → /mybots → Select bot → Group Privacy → **Disable**
+
+**Alternative Fix**: Set `TELEGRAM_ALLOWED_USERS=*` in .env để allow all users + bots
 
 ### How to Test Bot-to-Bot Mention
 ```bash

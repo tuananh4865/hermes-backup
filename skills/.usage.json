@@ -11,6 +11,18 @@
     "use_count": 6,
     "view_count": 6
   },
+  "gateway-manager": {
+    "archived_at": null,
+    "created_at": "2026-05-04T08:11:46.248124+00:00",
+    "last_patched_at": null,
+    "last_used_at": "2026-05-04T08:11:46.251484+00:00",
+    "last_viewed_at": "2026-05-04T08:11:46.248145+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "github-large-folder-backup": {
     "archived_at": null,
     "created_at": "2026-05-03T20:01:09.221397+00:00",
@@ -50,13 +62,13 @@
   "multi-agent-orchestrator": {
     "archived_at": null,
     "created_at": "2026-05-04T07:13:54.434376+00:00",
-    "last_patched_at": "2026-05-04T08:00:11.030640+00:00",
-    "last_used_at": "2026-05-04T07:59:47.505848+00:00",
-    "last_viewed_at": "2026-05-04T07:59:47.503744+00:00",
-    "patch_count": 3,
+    "last_patched_at": "2026-05-04T08:14:46.820750+00:00",
+    "last_used_at": "2026-05-04T08:14:02.249128+00:00",
+    "last_viewed_at": "2026-05-04T08:14:02.246882+00:00",
+    "patch_count": 6,
     "pinned": false,
     "state": "active",
-    "use_count": 4,
-    "view_count": 4
+    "use_count": 5,
+    "view_count": 5
   }
 }
