@@ -122,29 +122,69 @@ tail -f ~/.hermes/profiles/<name>/logs/gateway.error.log
 ```
 This tells Telegram to ONLY send messages to your bot when it's explicitly @mentioned.
 
-### Step 2: Verify Hermes Config
+### Step 2: Verify Hermes Config — `require_mention` MUST be in `telegram:` section
 ```yaml
-# In ~/.hermes/profiles/<name>/config.yaml
+# In ~/.hermes/config.yaml (MAIN gateway)
+# CORRECT: require_mention under telegram: section
 telegram:
-  require_mention: true  # Already correct by default
+  require_mention: true
+  channel_prompts: {}
+
+# WRONG: require_mention under discord: or other sections
+discord:
+  require_mention: true  # ← This does NOTHING for Telegram!
 ```
 
-**Why both needed:**
-- BotFather privacy: Controls what Telegram SENDS to your bot
-- Hermes `require_mention`: Controls how Hermes RESPONDS to received messages
-- If privacy is DISABLED, bot sees ALL messages → responds to ALL (unless you also filter in Hermes)
-- If privacy is ENABLED, bot ONLY sees @mentioned messages → `require_mention: true` works correctly
+**Common mistake:** `require_mention: true` often gets placed in wrong section (discord: instead of telegram:). Always verify it appears directly under `telegram:`.
+
+**After fixing config:** Restart gateway for changes to take effect:
+```bash
+hermes gateway restart
+```
+
+## CRITICAL: Multiple Bot Profiles in Same Group — "Unauthorized User" (2026-05-05)
+
+**Problem:** When running multiple bot profiles (e.g., content-director, research-lead) in the same Telegram group, bots get "Unauthorized user" errors and stop responding.
+
+**Root Cause:** The main gateway's `TELEGRAM_ALLOWED_USERS` does NOT include the other bot user IDs. Only Tuấn Anh's ID (1132914873) is allowed.
+
+**Solution:** Add all bot user IDs to main gateway's `TELEGRAM_ALLOWED_USERS`:
+```bash
+# In ~/.hermes/.env
+TELEGRAM_ALLOWED_USERS=1132914873,8594106827,8706108095
+# Format: Tuấn Anh's ID, bot1 ID, bot2 ID, ...
+```
+
+**Bot User IDs (as of 2026-05-05):**
+| Bot Name | User ID | Profile |
+|----------|---------|---------|
+| Saturday (Content Director) | 8594106827 | content-director |
+| ResearchClaw (Research Lead) | 8706108095 | research-lead |
+| Tuấn Anh (CEO) | 1132914873 | - |
 
 **Verification:**
 ```bash
-# Check bot's privacy setting via API
-curl "https://api.telegram.org/bot<TOKEN>/getMe" | jq .result.can_read_all_group_messages
+# Check logs for "Unauthorized user" errors
+tail -f ~/.hermes/logs/gateway.log | grep "Unauthorized"
 
-# can_read_all_group_messages: false = Privacy ENABLED (correct)
-# can_read_all_group_messages: true = Privacy DISABLED (wrong)
+# After fix, should see no Unauthorized errors
 ```
 
-**After changing privacy mode:** Restart the gateway for changes to take effect.
+## Agent-to-Agent Collaboration Rules (2026-05-05)
+
+When agents need to communicate in group chats, they MUST @mention the target agent. Without mention, Telegram privacy mode blocks delivery.
+
+**Rule:** Every agent's SOUL.md must include:
+```markdown
+### Agent-to-Agent Collaboration
+**CRITICAL RULE: When asking another agent for help, ALWAYS @mention them in the message.** Without a mention, the other agent won't receive the message due to Telegram privacy mode.
+```
+
+**In SOUL.md collaboration sections, add:**
+```markdown
+### With [Other Agent]
+- **IMPORTANT: Always @mention @BotUsername when requesting help**
+```
 
 ## Notes
 - Profile path: `~/.hermes/profiles/<name>/`
