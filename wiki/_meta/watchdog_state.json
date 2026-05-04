@@ -103,7 +103,7 @@
     "entities/coconote-founders.md": "4f43739709ad",
     "entities/duy-muoi.md": "30162af5d243",
     "entities/karpathy.md": "c1f7a235066e",
-    "entities/learned-about-tuananh.md": "e4d1b046b0a9",
+    "entities/learned-about-tuananh.md": "7053ec5405fd",
     "entities/remotion.md": "d116ecb040e2",
     "entities/granola.md": "ef46a8335cc8",
     "entities/deronin.md": "c3912edeb714",
@@ -2750,7 +2750,7 @@
     "concepts/spaced-repetition.md": "e9406a35242d",
     "concepts/selenium.md": "5c42ffa266ec",
     "concepts/cloudflare-pages.md": "f9b8ede3ce21",
-    "concepts/tiktok-viral-script.md": "73a2c58a5771",
+    "concepts/tiktok-viral-script.md": "4bd80961d097",
     "concepts/inference-optimization.md": "052ecf417157",
     "concepts/functional-reactive-programming.md": "d039549ed5db",
     "concepts/command-pattern.md": "d3728736dfec",
@@ -3584,6 +3584,6 @@
     "concepts/18-16-17_telegram_Tu\u1ea5n-Anh-Alo-em.md": "56678591eed4",
     "concepts/hermes-autoresearch.md": "cce98b1e9b1e"
   },
-  "last_run": "2026-05-05T04:00:00.835957",
+  "last_run": "2026-05-05T04:15:00.756002",
   "processed_today": []
 }
