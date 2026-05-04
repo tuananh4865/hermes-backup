@@ -1,28 +1,25 @@
 ---
-title: Hermes Autoresearch — Karpathy-Style
+title: Hermes Autoresearch — Agentic Research Loop
 name: hermes-autoresearch
 created: 2026-04-27
 updated: 2026-05-04
 type: skill
-tags: [autoresearch, self-improvement, karpathy-pattern]
-description: AutoResearch pattern lấy cảm hứng từ karpathy/autoresearch — tự cải thiện không ngừng mỗi đêm
-trigger: Cron job chạy tự động, NEVER STOP cho đến khi human interrupt
+tags: [autoresearch, self-improvement, karpathy-pattern, agentic]
+description: Karpathy-style autonomous research loop — 3 focuses (TikTok + AI Agents + Hermes Agentic), infinite repeat, NEVER STOP
+trigger: Cron job 2AM hàng đêm, run forever until goal achieved
 ---
 
-# Hermes Autoresearch — Karpathy-Style
+# Hermes Autoresearch — Agentic Research Loop
 
 > Lấy cảm hứng từ [karpathy/autoresearch](https://github.com/karpathy/autoresearch)
-> Core idea: **give an agent a narrow scope + single metric + git memory = autonomous improvement**
+> Core philosophy: **give an agent narrow scope + git memory + never stop = autonomous improvement**
 
-## Core Philosophy
+## Core Principles
 
-Karpathy's insight: "You're not touching Python files. You're programming the `program.md`."
-
-Tương tự với Hermes:
-- **KHÔNG modify code** — chỉ modify `program.md` (hướng dẫn cho agent)
-- **1 metric duy nhất** để optimize
-- **Git là memory** — rollback khi cần
-- **NEVER STOP** — cho đến khi human interrupt
+- **program.md is the skill** — human programs the agent via markdown
+- **Git is memory** — rollback on failure, commit on success
+- **NEVER STOP** — run until goal achieved or human interrupts
+- **Multi-dimensional research** — 3 focus areas simultaneously
 
 ---
 
@@ -30,203 +27,149 @@ Tương tự với Hermes:
 
 ```
 ~/.hermes/autoresearch/
-├── program.md          ← SKILL CHÍNH: human edit để program agent
-├── knowledge.md        ← persistent memory: patterns đã thử, results
-├── DISCARDED.md        ← những thứ đã thử và thất bại
-├── RESULTS.tsv         ← log: metric per experiment
-├── research.py         ← fixed: benchmark script để đo metric
-└── pyproject.toml     ← dependencies
+├── program.md          ← Agent instructions (human edits)
+├── knowledge.md        ← Persistent memory (insights, what worked/failed)
+├── DISCARDED.md        ← Failed experiments (avoid repeating)
+├── RESULTS.tsv         ← Log: commit, scores, status, description
+└── research.py         ← Optional: benchmark script (not always needed)
 ```
 
 ---
 
-## The Single Metric
+## Three Research Focuses
 
-**Wiki Health Score (WHS)** — lower is better, 0 = perfect
+### 1. TikTok Content Research
+- Monitor TikTok trends (2026 only)
+- Find new Gen Z slang (Vietnamese + English)
+- Research viral hooks, CTAs, script structures
+- Update wiki: `gen-z-slang-2026-04.md`, `tiktok-trends-*.md`
 
-```
-WHS = broken_links × 10 + missing_frontmatter × 5 + orphan_pages × 1
-```
+### 2. AI Agents Research
+- Monitor AI agent landscape (LangChain, Mastra, Flowise, n8n)
+- Research agentic patterns (REPLOM, self-improvement, multi-agent)
+- Track MCP, A2A protocols, emerging frameworks
+- Update wiki: `ai-agent-trends-*.md`
 
-Target: **WHS = 0**
-
----
-
-## The Experiment Loop
-
-```
-LOOP FOREVER:
-1. Đọc program.md để hiểu current instructions
-2. Đọc knowledge.md để tránh lặp lại những gì đã thử
-3. Đọc DISCARDED.md để tránh những thất bại đã biết
-4. Sửa knowledge.md (bổ sung insights mới)
-5. Tune program.md với experimental idea
-6. git commit
-7. Chạy: python3 research.py > run.log 2>&1
-8. Đọc kết quả: grep "^whs:" run.log
-9. Nếu WHS improved (lower) → giữ thay đổi
-10. Nếu WHS same/worse → git reset
-11. Ghi vào RESULTS.tsv
-12. Lặp lại
-```
+### 3. Hermes Agentic Features (PRIMARY)
+Develop NEW capabilities to make Hermes more autonomous:
+- Better memory/recall systems
+- Self-debugging capabilities
+- Multi-agent coordination
+- Proactive task execution
+- Autonomous decision making
+- Self-improvement loops
 
 ---
 
-## Program.md Template
+## Metrics (Multi-dimensional)
 
-```markdown
-# Hermes Autoresearch Program
-
-## Mission
-Improve Hermes Agent's wiki health by reducing broken links, missing frontmatter, and orphan pages.
-
-## Current Priority
-[Agent fill: what should we focus on tonight?]
-
-## Constraints
-- MAX 3 phút per experiment (để chạy được nhiều experiments)
-- KHÔNG sửa production code
-- KHÔNG xóa pages có giá trị
-- Nếu uncertain, DISCARD và note lý do
-
-## Experiment Ideas to Try
-[Human fill: những hướng nghiên cứu cụ thể]
-
-## What NOT to try again
-[From DISCARDED.md]
 ```
+TikTok_Score = trends_found × 10 + slang_added × 5 + patterns_found × 3
+Agents_Score = frameworks_found × 10 + patterns_found × 5 + techniques_added × 3
+Hermes_Score = features_proposed × 10 + features_implemented × 20 + wiki_pages_updated × 2
+```
+
+**Note:** These are tracked qualitatively, not via script. Agent self-reports progress.
 
 ---
 
-## Research.py (Fixed)
+## Success Criteria (STOP when ANY met)
 
-```python
-#!/usr/bin/env python3
-"""Fixed benchmark script - DO NOT MODIFY"""
-import subprocess
-import re
+- `Hermes_Score >= 50` (proposed 5+ features, implemented 2+)
+- Found **10+** new Gen Z slang terms
+- Documented **5+** new AI agent techniques
+- Implemented **1+** working Hermes prototype
 
-def run_benchmark():
-    # Chạy wiki_lint.py và parse output
-    result = subprocess.run(
-        ["python3", "scripts/wiki_lint.py"],
-        capture_output=True, text=True,
-        cwd="/Volumes/Storage-1/Hermes/wiki"
-    )
-    
-    output = result.stdout + result.stderr
-    
-    # Parse metrics
-    broken_links = len(re.findall(r"broken.*link", output, re.I))
-    missing_fm = len(re.findall(r"missing.*frontmatter", output, re.I))
-    orphans = len(re.findall(r"orphan", output, re.I))
-    
-    whs = broken_links * 10 + missing_fm * 5 + orphans * 1
-    
-    print(f"whs: {whs}")
-    print(f"broken_links: {broken_links}")
-    print(f"missing_frontmatter: {missing_fm}")
-    print(f"orphans: {orphans}")
-    
-    return whs
+---
 
-if __name__ == "__main__":
-    run_benchmark()
+## Experiment Loop
+
+```
+LOOP FOREVER (until success criteria met OR human interrupts):
+
+1. Read program.md, knowledge.md, DISCARDED.md
+2. Pick ONE focus area
+3. Research (web search, docs, experimentation)
+4. Implement or document findings
+5. Measure score improvement
+6. If improved → git commit
+7. If no progress → try different angle, git reset
+8. Update knowledge.md
+9. Every 30 min → send progress to telegram
+10. STOP ONLY when success criteria met OR human interrupts
 ```
 
 ---
 
-## Cron Job Setup
+## Cron Job Configuration
 
 ```bash
-# Create cron job - chạy mỗi đêm lúc 2AM
-cronjob create \
-  --name "Hermes Autoresearch Nightly" \
-  --prompt "Run the autoresearch loop from ~/.hermes/autoresearch/program.md. READ program.md first, then execute the experiment loop. NEVER STOP until human interrupts. Report results to telegram when complete." \
-  --schedule "0 2 * * *" \
-  --repeat 30 \
-  --deliver "telegram:1132914873:3764041476" \
-  --skills ["hermes-autoresearch"]
+# Job ID: a4b8e528983f
+# Schedule: 0 2 * * * (2AM daily)
+# Repeat: forever (vô hạn)
+# Deliver: telegram:1132914873:3764041476
+
+cronjob update --job_id a4b8e528983f --repeat 0  # 0 = infinite
 ```
 
-### Test ngay
-```bash
-# Test research.py
-python3 ~/.hermes/autoresearch/research.py
+---
 
-# Test experiment loop (1 iteration)
-cd ~/.hermes/autoresearch
-git checkout -b autoresearch/test
-# Edit program.md với 1 idea
-python3 research.py > run.log 2>&1
-grep "^whs:" run.log
+## Progress Reports (every 30 min to Telegram)
+
+```
+# Autoresearch Progress — HH:MM
+
+## TikTok Research
+- Slang found: N
+- Patterns documented: N
+
+## AI Agents Research  
+- Frameworks found: N
+- Techniques documented: N
+
+## Hermes Features
+- Proposed: N
+- Implemented: N
+
+## Current focus
+[What you're working on right now]
+
+## Blockers
+[Any issues]
 ```
 
 ---
 
 ## Key Differences from Karpathy
 
-| Aspect | Karpathy AutoResearch | Hermes AutoResearch |
+| Aspect | Karpathy AutoResearch | Hermes Autoresearch |
 |--------|----------------------|---------------------|
-| Domain | LLM training | Wiki health |
-| File to modify | train.py | program.md, knowledge.md |
-| Metric | val_bpb (bits per byte) | WHS (wiki health score) |
-| Time budget | 5 min per run | 3 min per experiment |
-| Target | Lower = better | Lower = better |
-| Memory | Git commits | knowledge.md + RESULTS.tsv |
-
-## Why This Works
-
-1. **Narrow scope**: Chỉ tập trung vào wiki health, không lan man
-2. **Single metric**: Rõ ràng, không ambiguous
-3. **Fast iteration**: 3 min × ~20 experiments/giờ = nhiều data points
-4. **Git memory**: Rollback khi cần, never lose good state
-5. **Never stop**: Cứ chạy, agent tự stop khi đạt WHS = 0
+| Domain | LLM training | 3 research focuses |
+| Metric | val_bpb (single) | Multi-dimensional scores |
+| Time | 5 min fixed | 5 min per experiment |
+| Stop | Never | Goal achieved or human |
+| Reports | None | Every 30 min to Telegram |
 
 ---
 
-## References
-- [[references/karpathy-autoresearch]] — Research notes on Karpathy's AutoResearch pattern (source of this design)
+## Important Paths
 
-## Files
-
-- **program.md**: Hướng dẫn cho agent — human edit
-- **knowledge.md**: Tổng hợp insights từ experiments — agent update
-- **DISCARDED.md**: Những thứ đã thử thất bại
-- **RESULTS.tsv**: TSV log — commit hash, WHS, status, description
-
-## Skills Improvement Focus (2026-05-04)
-
-**Chủ đề: Tự cải thiện Hermes Agent skills mỗi đêm**
-
-### Baseline (2026-05-04)
-- SHS = 86
-- Total skills: 28
-- Low confidence: 28
-- Missing examples: 6
-
-### Single Metric: Skills Health Score (SHS)
-```
-SHS = stale_skills × 10 + missing_examples × 5 + broken_links × 3 + low_confidence × 2
-Target: SHS = 0
-```
-
-### Cron job đã update
-- Job ID: `a4b8e528983f`
-- Schedule: 2AM hàng đêm, 30 lần
-- Prompt: Skills improvement loop
-
-## Why This Works
-
-1. **Narrow scope**: Skills health = measurable, improvable
-2. **Single metric**: SHS clear, no ambiguity
-3. **Git memory**: Rollback when experiments fail
-4. **Never stop**: Agent experiments all night
-5. **Human edits program.md**: Guide the agent's focus
+| Path | Purpose |
+|------|---------|
+| `~/.hermes/autoresearch/` | Autoresearch repo |
+| `~/.hermes/skills/` | Hermes skills |
+| `/Volumes/Storage-1/Hermes/wiki/` | Wiki knowledge base |
+| `~/.hermes/hermes-agent/` | Hermes gateway code |
 
 ---
 
 ## Known Issues
 
-- SHS = 0 có thể không đạt được nếu some skills truly need low confidence
-- Script path phải là absolute vì cron job chạy từ directory khác
+- Cron job runs from arbitrary directory — use absolute paths
+- Telegram reports every 30 min can be noisy — human can interrupt if too much
+
+---
+
+## References
+
+- `references/karpathy-autoresearch.md` — Karpathy's AutoResearch pattern research
