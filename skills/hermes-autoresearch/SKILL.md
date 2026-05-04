@@ -185,9 +185,18 @@ Why chosen: [Reason based on Anh's needs]
 | Path | Purpose |
 |------|---------|
 | `~/.hermes/autoresearch/` | Autoresearch repo |
+| `~/.hermes/autoresearch/AGENTIC_COMPANY_PLAN.md` | Vision for agentic company |
+| `~/.hermes/autoresearch/program.md` | Full 16 capabilities + decision framework |
 | `~/.hermes/skills/` | Hermes skills |
 | `/Volumes/Storage-1/Hermes/wiki/` | Wiki knowledge base |
 | `~/.hermes/hermes-agent/` | Hermes gateway code |
+
+## Cron Jobs
+
+| Job ID | Name | Schedule | Purpose |
+|--------|------|----------|---------|
+| a4b8e528983f | Autoresearch Nightly | 0 2 * * * (2AM) | Self-improvement loop, forever |
+| a5c02f2f0d87 | Hermes X Research | 0 7 * * * (7AM) | Daily X research, 50+ results |
 
 ---
 
