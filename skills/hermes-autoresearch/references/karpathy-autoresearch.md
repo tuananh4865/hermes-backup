@@ -1,74 +1,77 @@
 # Karpathy AutoResearch — Research Notes
 
 ## Source
-- Repo: https://github.com/karpathy/autoresearch
+- GitHub: https://github.com/karpathy/autoresearch
 - Stars: 78K+
 - Author: Andrej Karpathy
 
-## Core Insight
-"You're not touching Python files. You're programming the `program.md`."
-— karpathy/autoresearch README
+## Core Concept
+
+AI agents running research on single-GPU LLM training automatically. Give an agent a small but real setup and let it experiment autonomously overnight.
 
 ## Key Design Principles
 
 ### 1. Single File to Modify
-- Agent only touches `train.py` (for Karpathy's case) or `program.md` (for Hermes)
-- This keeps scope manageable and diffs reviewable
+The agent ONLY touches `train.py`. Everything is fair game: architecture, optimizer, hyperparameters, batch size, model size. This keeps scope manageable.
 
 ### 2. Fixed Time Budget
-- Karpathy: 5 minutes per experiment
-- Hermes: 3 minutes per experiment
-- Makes experiments directly comparable regardless of what agent changes
+Training always runs for exactly **5 minutes**, regardless of platform. This means:
+- ~12 experiments/hour
+- ~100 experiments while you sleep
+- Results directly comparable regardless of changes
+- Finds most optimal model for your time budget
 
 ### 3. Git is Memory
-- Every experiment = git commit
-- Failed experiments = git reset
-- Never lose good state
-- Branch per experiment session
+Every experiment is a commit. Failures can be rolled back cleanly. No need for external memory systems.
 
-### 4. Single Metric
-- Karpathy: val_bpb (validation bits per byte) — lower is better
-- Hermes: WHS (wiki health score) — lower is better
-
-### 5. NEVER STOP
-- Loop runs until human interrupts
-- Agent should not ask "should I continue?"
-- If stuck, try harder
-
-## Karpathy's program.md Structure
-
+### 4. Program.md is the Skill
 ```markdown
-# Mission
-[What the agent is trying to achieve]
-
-## Current state
-[Baseline measurements]
-
-## Constraints
-[What NOT to do]
-
-## Experiment Ideas
-[List of specific things to try]
-
-## Loop Instructions
-[Step-by-step experiment loop]
+# You're not touching Python files. 
+# You're programming the program.md
 ```
 
-## Why This Works
+The `program.md` is a super lightweight "skill" that programs the agent. Human edits this file to guide the agent.
 
-1. **Narrow scope**: Prevents agent from getting lost in ambiguity
-2. **Clear metric**: No debate about what "better" means
-3. **Fast iteration**: Many experiments per session = more data
-4. **Git memory**: Rollback prevents catastrophic mistakes
-5. **Autonomy**: Human doesn't need to be in the loop
+## The Experiment Loop
 
-## Comparison
+```
+LOOP FOREVER:
+1. Look at git state: current branch/commit
+2. Tune train.py with experimental idea
+3. git commit
+4. Run: uv run train.py > run.log 2>&1
+5. Read results: grep "^val_bpb:" run.log
+6. If val_bpb improved (lower) → keep
+7. If val_bpb same/worse → git reset
+8. Record in RESULTS.tsv
+9. Repeat
+```
 
-| Aspect | Karpathy | Hermes |
-|--------|----------|--------|
-| Domain | LLM training | Wiki health |
-| File to modify | train.py | program.md |
-| Metric | val_bpb | WHS |
-| Time budget | 5 min | 3 min |
-| Memory | Git | Git |
-| Loop | Forever | Forever |
+## Key Insight
+
+> "Once the experiment loop has begun, do NOT pause to ask the human if you should continue. The human might be asleep, or gone from a computer and expects you to continue working indefinitely until you are manually stopped. You are autonomous."
+
+## What Made It Work
+
+1. **Narrow scope**: One file, one metric
+2. **Single metric**: val_bpb (bits per byte) — lower is better
+3. **Fast iteration**: 5 min × many experiments = compounding improvement
+4. **Git memory**: Rollback when needed
+5. **Never stop**: Agent runs until human interrupts
+
+## Application to Hermes
+
+We adapted this pattern for Hermes Agent with:
+
+1. **3 research focuses** instead of 1
+2. **Multi-dimensional metrics** instead of single
+3. **Progress reports every 30 min** for visibility
+4. **program.md guides agent** (not hardcoded instructions)
+5. **Git is memory** (branch per session, commits per experiment)
+
+## Why Narrow Scope Matters
+
+From the article:
+> "When the objective function is ambiguous or multi-dimensional, the pattern breaks down. If success isn't a single number but a combination of factors — performance, latency, memory, code readability, user experience — the agent has no clean way to make keep/discard decisions."
+
+We addressed this with SUCCESS CRITERIA (stop when ANY met) rather than continuous optimization.
