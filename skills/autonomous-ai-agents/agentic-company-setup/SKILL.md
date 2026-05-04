@@ -91,15 +91,40 @@ Solution: Shared Telegram Group
 4. Use @mention to direct message specific agent
 ```
 
-## Content Director (Tested)
+## Content Director (Tested 2026-05-04)
 
 | Property | Value |
 |----------|-------|
-| Bot | @SaturdayClawdBot |
-| Token | 8594106827:AAGu2sUPd-IgPiln7PaRAaSYP7JI-5kxiq4 |
+| Bot | @ClawdZ1E_Bot |
+| Token | (current session token) |
 | Profile | content-director |
-| Gateway | Running (PID 83518) |
-| Status | ✅ Online 2026-05-04 |
+| Gateway | Running |
+| Status | ✅ Online — bot-to-bot working in thread 603 |
+
+## Research Lead (Tested 2026-05-04)
+
+| Property | Value |
+|----------|-------|
+| Bot | @Researcher_Clawd_Bot |
+| Token | `8706108095:AAGByOUlkf1_tjmun0bzKoif-K-gsSnyrd0` |
+| Profile | research-lead (pending setup) |
+| Gateway | Starting |
+| Status | ✅ Verified 2026-05-04 |
+
+## Inter-Bot Communication (Verified 2026-05-04)
+
+**Bot-to-bot messaging in Telegram supergroup topics WORKS:**
+- Use format: `telegram:-1003764041476:603` (NEGATIVE chat ID + thread ID)
+- Both bots must be admins in the supergroup
+- Both bots must be in the same thread/topic
+- @mention between bots WORKS — bot receives it via Telegram Bot API
+- Latency: ~39s for bot-to-bot round-trip (2 API calls)
+
+**Setup for new bot:**
+1. Create bot via @BotFather → copy token
+2. Add bot as admin to O-Lab supergroup
+3. Ensure bot is added to `channel_directory.json` (auto-updated by gateway)
+4. Use `telegram:-1003764041476:THREAD_ID` as target for send_message
 
 ## Role Definitions
 
