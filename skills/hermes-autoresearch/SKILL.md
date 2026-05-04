@@ -163,10 +163,31 @@ cronjob update --job_id a4b8e528983f --repeat 0  # 0 = infinite
 
 ---
 
+## Critical: Goal Specificity Rule
+
+**"Make X more agentic" = TOO VAGUE = WILL FAIL**
+
+Karpathy-style autonomy requires TREMENDOUS specificity:
+
+| ❌ Vague | ✅ Specific |
+|----------|------------|
+| "Make Hermes more agentic" | "Self-debugging: resolve 80% errors autonomously" |
+| "Improve skills" | "SHS = 0 (stale×10 + missing_examples×5 + broken_links×3 + low_conf×2)" |
+| "Research AI agents" | "Document 5 new techniques from arxiv/github" |
+
+**Rule:** Every goal MUST have:
+1. Metric formula (even if simplified)
+2. Concrete stop condition (exact number)
+3. Measurable output (wiki page, skill, prototype)
+
+If goal is vague → user WILL push back → wasted session
+
+---
+
 ## Known Issues
 
-- Cron job runs from arbitrary directory — use absolute paths
-- Telegram reports every 30 min can be noisy — human can interrupt if too much
+- SHS = 0 có thể không đạt được nếu some skills truly need low confidence
+- Script path phải là absolute vì cron job chạy từ directory khác
 
 ---
 
