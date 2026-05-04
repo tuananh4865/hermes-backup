@@ -131,6 +131,38 @@ Tell them what you created in plain prose:
 >
 > The dispatcher will pick up T1 and T2 now. T3 starts when both finish. You'll get a gateway ping when T4 completes. Use the dashboard or `hermes kanban tail <id>` to follow along.
 
+## CLI reference (common commands)
+
+```bash
+# Init + dashboard
+hermes kanban init               # auto-inits on first kanban <anything>
+hermes dashboard                 # opens http://127.0.0.1:9119 in browser
+
+# Create with full options
+hermes kanban create "title" \
+    --assignee <profile> \
+    --tenant <namespace> \     # tenant isolation (maps to HERMES_TENANT)
+    --priority <1-5> \          # 1=highest, 5=lowest
+    --parent <task_id> \        # dependency gate
+    --body "instructions"       # task body for worker context
+
+# Lifecycle
+hermes kanban claim <id>
+hermes kanban complete <id> --summary "what done" --metadata '{...}'
+hermes kanban block <id> "reason"   # human-in-the-loop
+hermes kanban unblock <id>
+
+# Monitoring
+hermes kanban show <id>             # full task detail
+hermes kanban runs <id>             # run history (all attempts)
+hermes kanban watch --kinds completed,gave_up,timed_out   # live event stream
+hermes kanban notify-subscribe --platform telegram --chat-id <id>
+```
+
+**Board columns**: Triage → Todo → Ready → In Progress → Blocked → Done
+
+Dashboard filter bar supports: search, tenant, assignee, "Lanes by profile" toggle, "Nudge dispatcher" button.
+
 ## Common patterns
 
 **Fan-out + fan-in (research → synthesize):** N `researcher` tasks with no parents, one `analyst` task with all of them as parents.
