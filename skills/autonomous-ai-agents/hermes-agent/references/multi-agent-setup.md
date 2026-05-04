@@ -106,6 +106,46 @@ tail -f ~/.hermes/profiles/<name>/logs/gateway.log
 tail -f ~/.hermes/profiles/<name>/logs/gateway.error.log
 ```
 
+## CRITICAL: Telegram Privacy Mode (2026-05-04)
+
+**Problem:** Bots respond to ALL messages instead of just @mentions, even with `require_mention: true` in config.
+
+**Root Cause:** Telegram bot privacy mode was DISABLED. When disabled, bots receive ALL messages in groups — Hermes can't filter because it never sees the "unmentioned" messages in the first place.
+
+**Solution — Two-step fix (MUST do both):**
+
+### Step 1: Enable Privacy Mode in BotFather
+```
+1. Open @BotFather in Telegram
+2. /mybots → Select your bot
+3. Bot Settings → Group Privacy → Enable
+```
+This tells Telegram to ONLY send messages to your bot when it's explicitly @mentioned.
+
+### Step 2: Verify Hermes Config
+```yaml
+# In ~/.hermes/profiles/<name>/config.yaml
+telegram:
+  require_mention: true  # Already correct by default
+```
+
+**Why both needed:**
+- BotFather privacy: Controls what Telegram SENDS to your bot
+- Hermes `require_mention`: Controls how Hermes RESPONDS to received messages
+- If privacy is DISABLED, bot sees ALL messages → responds to ALL (unless you also filter in Hermes)
+- If privacy is ENABLED, bot ONLY sees @mentioned messages → `require_mention: true` works correctly
+
+**Verification:**
+```bash
+# Check bot's privacy setting via API
+curl "https://api.telegram.org/bot<TOKEN>/getMe" | jq .result.can_read_all_group_messages
+
+# can_read_all_group_messages: false = Privacy ENABLED (correct)
+# can_read_all_group_messages: true = Privacy DISABLED (wrong)
+```
+
+**After changing privacy mode:** Restart the gateway for changes to take effect.
+
 ## Notes
 - Profile path: `~/.hermes/profiles/<name>/`
 - Profile config: `~/.hermes/profiles/<name>/config.yaml`
