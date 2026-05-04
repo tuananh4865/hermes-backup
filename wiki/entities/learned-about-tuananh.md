@@ -189,3 +189,7 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** a guide for working with a Vietnamese content creator named Tuấn Anh on TikTok.
 
 > **Auto-improvement note:** The Gen Z slang section has a specific update date (2026-05-04) but it's listing 2025-2026 terms. Gen Z slang evolves very quickly - this could be outdated quickly. There's no mention of when this should be reviewed or updated.
+
+> **Auto-improvement note:** The Gen Z slang list says "Updated 2026-05-04" which is a future date from my current perspective - this seems like it might be intentionally forward-dated, but it's worth noting
+
+> **Auto-improvement note:** Some TikTok-specific terms seem incomplete or could use more context

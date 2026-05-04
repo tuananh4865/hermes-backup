@@ -145,3 +145,5 @@ python3 ~/wiki/scripts/project_state.py checkpoint \
 > **Auto-improvement:** *Error handling is missing**: The skill describes a happy path but doesn't cover:
 
 > **Auto-improvement:** watchdog" agent and suggest 1-2 concrete improvements. Let me analyze this skill file for issues:
+
+> **Auto-improvement:** watchdog.md" and suggest 1-2 concrete improvements to make it more effective. I need to focus on clarity, completeness, and avoiding pitfalls.

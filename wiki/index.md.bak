@@ -19,8 +19,8 @@ relationships:
 
 ### Products & Tools
 - [[remotion]] — Create videos programmatically using React (2026-04-13)
-- [[openclaw]] — Fastest-growing GitHub repo (358K stars), autonomous AI agent (2026-04-30)
-- [[pi-coding-agent]] — Minimal terminal coding harness (42K stars), engine of OpenClaw (2026-04-30)
+
+- [[pi-coding-agent]] — Minimal terminal coding harness (42K stars) (2026-04-30)
 
 ### People
 - [[harrison-chase]] — CEO of LangChain, author of "Your Harness Your Memory"
@@ -192,3 +192,7 @@ relationships:
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The last updated date is 2026-04-30, which appears to be future-dated (we're before that in real time), suggesting this might be a test or placeholder
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The `[[epoxy-floor-prompt-template]]` entry appears to be truncated/incomplete - it ends with "(  " which suggests it's cut off

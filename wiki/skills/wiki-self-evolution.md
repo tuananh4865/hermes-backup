@@ -92,3 +92,5 @@ For each gap:
 > **Auto-improvement:** Evolution" - a process for a wiki agent to improve itself.
 
 > **Auto-improvement:** *Issues I can identify:**
+
+> **Auto-improvement:** 2 concrete improvements. Looking at the skill file, I can see:

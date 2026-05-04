@@ -196,3 +196,7 @@ relationships:
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The `[[epoxy-floor-prompt-template]]` entry appears to be truncated/incomplete - it ends with "(  " which suggests it's cut off
+
+> **Auto-improvement note:** *Broken/unclear links**: 
+
+> **Auto-improvement note:** `[[learned-about-tuananh]]` is mentioned under Entities → Tuấn Anh, but later in the index there's a TikTok Content section with multiple TikTok-related entries. Tuấn Anh appears to be a person associated with TikTok content (there's mention of "TikTok style" in that entry), but there's no clear connection or grouping. Also, some entries are duplicated (remotion appears twice - once under Products & Tools and once under Tools & Infrastructure).
