@@ -697,7 +697,9 @@ print(f"Vision provider: {provider}, model: {model}, client: {client}")
 
 ---
 
-## Where to Find Things
+## Tuấn Anh's Multi-Agent Setup
+See `references/multi-agent-setup.md` for detailed guide on creating agentic company with Telegram bots.
+
 
 | Looking for... | Location |
 |----------------|----------|
