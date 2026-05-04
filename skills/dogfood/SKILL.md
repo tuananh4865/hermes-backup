@@ -135,6 +135,19 @@ The report must include:
 
 Save the report to `{output_dir}/report.md`.
 
+## Pitfalls
+
+1. **Only testing happy paths** — always test empty states, error pages, 404s, and invalid inputs.
+2. **Skipping console errors** — silent JS errors are often the most critical bugs.
+3. **Not annotating screenshots** — without numbered element labels, it's hard to communicate which element was clicked.
+4. **Testing without a plan** — unstructured exploration misses entire features.
+5. **Not checking network tab** — failed API requests may not produce console errors.
+6. **Assuming consistent state** — always verify you're logged in/out as expected between flows.
+7. **Testing with cached data** — hard refresh (Cmd+Shift+R) before testing to clear cache.
+8. **Ignoring mobile view** — many bugs only appear at specific viewport sizes.
+9. **Reporting subjective opinions** — "this button looks ugly" is not a bug. Report objective functional/visual defects.
+10. **Forgetting edge cases** — very long text, special characters, rapid clicking, network interruption.
+
 ## Tools Reference
 
 | Tool | Purpose |

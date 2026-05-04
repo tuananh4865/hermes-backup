@@ -2,7 +2,7 @@
 title: Hermes Autoresearch — Agentic Research Loop
 name: hermes-autoresearch
 created: 2026-04-27
-updated: 2026-05-04
+updated: 2026-05-05
 type: skill
 tags: [autoresearch, self-improvement, karpathy-pattern, agentic]
 description: Karpathy-style autonomous research loop — Skills Improvement + AI Agents + Hermes Agentic (16 capabilities, em TỰ CHỌN mỗi đêm), infinite repeat, NEVER STOP
@@ -223,13 +223,51 @@ If goal is vague → user WILL push back → wasted session
 
 ## Known Issues
 
+- SHS metric may need refinement — not all low-confidence skills are bad
+- Script path must be absolute when invoked from cron (directory context differs)
+- Some 16 capabilities may overlap or have dependencies
+- Telegram polling conflict (multiple Hermes instances) — requires manual kill
+- TikTok headless browser CAPTCHA — real Chrome workaround confirmed
+
+## Pitfalls (AVOID THESE)
+
+1. **Vague goals** — "make X more agentic" will fail. Always use metric + stop condition.
+2. **Over-researching before acting** — 5 min max per experiment. If no clear action after 5 min, try different angle.
+3. **Git not used as memory** — Always `git commit` on success, `git reset` on failure. Without this, you lose progress tracking.
+4. **Skipping telegram reports** — Progress not visible to Anh = session appears unproductive.
+5. **Confusing "skills improvement" with "creating new skills"** — SHS measures existing skill health first.
+6. **Ignoring DISCARDED.md** — Failed experiments contain lessons. Re-reading prevents repeated mistakes.
+7. **Picking too many capabilities** — ONE capability per night. Spreading effort = no measurable progress.
+8. **Not checkpointing** — Long sessions risk context loss. Update TASK_STATE.md every 10 tool calls.
+9. **Conflicting cron jobs** — 2AM autoresearch and 7AM X research can overlap if autorseach runs long.
+10. **Wiki self-heal is NOT all-purpose** — `wiki_self_heal.py --fix --all` cannot repair:
+    - Stale Telegram transcript references (files deleted/moved)
+    - Orphaned pages (legitimate wiki pages with no inbound links)
+    - Broken wikilinks in `projects/` directory
+    - Run `wiki_lint.py --fast` first to get a quick health read, then full lint only if fast passes.
+
+**Revised Wiki Health Workflow (verified 2026-05-05):**
+```
+# Quick health check (2 min)
+python3 scripts/wiki_lint.py --fast
+
+# If fast passes (0 issues) → done
+# If fast shows issues → try self-heal
+python3 scripts/wiki_self_heal.py --fix --all
+
+# Full lint only for detailed report (not for blocking action)
+python3 scripts/wiki_lint.py
+```
+
+**Note:** 461 broken wikilinks persisting after self-heal is NORMAL for a wiki with many Telegram transcripts. The broken links are stale transcript references, not active content. Prioritize fixing broken links in `concepts/` and `entities/` over `projects/`.
+
+11. **Skills directory architecture** — `~/.hermes/skills/` has TWO types of directories:
+    - **Leaf skills** (e.g., `browser-harness`, `multi-agent-orchestrator`): Have `SKILL.md`, counted in SHS
+    - **Category directories** (e.g., `apple/`, `mlops/`, `creative/`): Group related skills, NO `SKILL.md` — this is intentional, NOT a gap. Example: `apple/` contains `apple-notes/`, `apple-reminders/`, `findmy/`, `imessage/` as separate skill subdirectories.
+    - When counting skills for SHS, count only leaf skills with `SKILL.md`.
+    - To list skills: use `skills_list()` tool, NOT `find ~/.hermes/skills -name SKILL.md` (returns 0 on some shells due to globbing issues).
+
 ## References
-
-- Karpathy AutoResearch: https://github.com/karpathy/autoresearch
-- Key insight: `program.md` is the skill — human programs agent via markdown
-- Key insight: Git is memory — rollback on failure, commit on success
-- Key insight: NEVER STOP until goal achieved or human interrupts
-
 ## Key Lessons Learned (2026-05-04)
 
 1. **Goal specificity is critical** — "make X more agentic" is TOO VAGUE. Must have metric + stop condition.

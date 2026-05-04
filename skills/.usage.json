@@ -11,6 +11,18 @@
     "use_count": 6,
     "view_count": 6
   },
+  "diagnose": {
+    "archived_at": null,
+    "created_at": "2026-05-04T19:03:19.836668+00:00",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": "2026-05-04T19:03:19.836682+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 1
+  },
   "gateway-manager": {
     "archived_at": null,
     "created_at": "2026-05-04T08:11:46.248124+00:00",
@@ -50,14 +62,14 @@
   "hermes-autoresearch": {
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
-    "last_patched_at": "2026-05-04T07:16:18.545460+00:00",
-    "last_used_at": "2026-05-04T08:14:51.125123+00:00",
-    "last_viewed_at": "2026-05-04T08:14:51.122875+00:00",
-    "patch_count": 22,
+    "last_patched_at": "2026-05-04T19:07:40.157853+00:00",
+    "last_used_at": "2026-05-04T19:08:11.380976+00:00",
+    "last_viewed_at": "2026-05-04T19:08:11.379200+00:00",
+    "patch_count": 28,
     "pinned": false,
     "state": "active",
-    "use_count": 10,
-    "view_count": 10
+    "use_count": 17,
+    "view_count": 16
   },
   "multi-agent-orchestrator": {
     "archived_at": null,
@@ -70,5 +82,17 @@
     "state": "active",
     "use_count": 5,
     "view_count": 5
+  },
+  "tdd": {
+    "archived_at": null,
+    "created_at": "2026-05-04T19:03:31.446781+00:00",
+    "last_patched_at": null,
+    "last_used_at": "2026-05-04T19:03:31.449514+00:00",
+    "last_viewed_at": "2026-05-04T19:03:31.446842+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
   }
 }

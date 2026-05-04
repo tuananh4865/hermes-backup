@@ -107,3 +107,16 @@ After all tests pass, look for [refactor candidates](refactoring.md):
 [ ] Code is minimal for this test
 [ ] No speculative features added
 ```
+
+## Pitfalls
+
+1. **Writing all tests first** — "horizontal slices" produce implementation-coupled tests. Always vertical: test → impl → repeat.
+2. **Testing implementation details** — if renaming a private method breaks tests, those tests are wrong.
+3. **Mocking too much** — heavy mocking = testing the mock, not the code. Prefer integration tests through real interfaces.
+4. **Refactoring while RED** — never refactor with failing tests. Get to GREEN first.
+5. **Testing speculative features** — only test what exists. Don't "anticipate" future tests.
+6. **Too many assertions per test** — one logical assertion per test. Multiple assertions hide which behavior failed.
+7. **Not confirming interface with user** — building the wrong interface wastes everything.
+8. **Skipping regression test on fix** — a bug without a test will return.
+9. **Testing at wrong seam** — a unit test that can't replicate the real bug chain gives false confidence.
+10. **Outrunning headlights** — committing to test structure before understanding the implementation.

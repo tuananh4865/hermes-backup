@@ -115,3 +115,66 @@ Required before declaring done:
 - [ ] The hypothesis that turned out correct is stated in the commit / PR message — so the next debugger learns
 
 **Then ask: what would have prevented this bug?** If the answer involves architectural change (no good test seam, tangled callers, hidden coupling) hand off to the `/improve-codebase-architecture` skill with the specifics. Make the recommendation **after** the fix is in, not before — you have more information now than when you started.
+
+## Examples
+
+### Example: Diagnosing a Flask API crash
+
+**Symptom**: POST /api/checkout returns 500 on production but not locally.
+
+**Phase 1 — Build feedback loop**:
+```python
+# Replay the exact request that failed
+import requests
+resp = requests.post('http://localhost:5000/api/checkout', json={
+  "cart_id": "abc123",
+  "payment_method": "card",
+  "amount": 99000
+})
+print(resp.status_code, resp.json())
+```
+Loop works: reproduces 500 locally.
+
+**Phase 2 — Reproduce**: Run the loop. Error: `KeyError: 'user_id'` in `checkout.py:47`.
+
+**Phase 3 — Hypothesise**:
+1. If `cart_id` not found in DB → should return 404 not 500 (rank #1)
+2. If `user_id` missing from cart object → null reference at line 47 (rank #2)
+3. If race condition in DB → intermittent, not 100% (rank #3)
+
+**Phase 4 — Instrument**: Add log at line 47: `logger.debug(f"[DEBUG-a4f2] cart object: {cart}")`. Rerun. Output shows `cart` has no `user_id` key.
+
+**Phase 5 — Fix**: The cart lookup returns a partial object when cart exists but user_id not populated. Add null check: `cart.get('user_id')` instead of `cart['user_id']`. Write regression test.
+
+**Phase 6 — Cleanup**: Remove `[DEBUG-a4f2]` logs. Commit with message: "Fix: KeyError in checkout when cart.user_id not populated — add .get() with fallback".
+
+### Example: Performance regression in list query
+
+**Symptom**: `/api/orders` takes 8s, was <1s last week.
+
+**Phase 1 — Build feedback loop**:
+```python
+import time, requests
+for _ in range(3):
+    start = time.time()
+    resp = requests.get('http://localhost:5000/api/orders?limit=100')
+    print(f"{time.time()-start:.2f}s — {resp.status_code}")
+```
+Baseline: 0.9s. Production: 8s.
+
+**Phase 3 — Hypothesise**:
+1. If missing database index on `orders.user_id` → full table scan (rank #1)
+2. If N+1 query problem → orders × items = many queries (rank #2)
+3. If new serializer slowness → JSON overhead (rank #3)
+
+**Phase 4 — Instrument**: Run `EXPLAIN QUERY PLAN` on the orders query. Output shows `SCAN TABLE orders` — no index used.
+
+**Phase 5 — Fix**: Add index: `CREATE INDEX IF NOT EXISTS idx_orders_user_id ON orders(user_id)`. Re-run loop: 0.95s.
+
+### Common Pitfalls
+
+1. **Skip Phase 1 (no loop)** — debugging without a feedback loop is guessing.
+2. **Fix before understanding** — "obvious" fixes often miss the real cause.
+3. **Change multiple variables** — instrument one thing at a time.
+4. **Forget to clean debug logs** — `[DEBUG-xxx]` tags left behind pollute production logs.
+5. **Skip regression test** — the bug WILL come back without a test.
