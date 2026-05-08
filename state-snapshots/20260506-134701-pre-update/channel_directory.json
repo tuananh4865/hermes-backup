@@ -1,0 +1,74 @@
+{
+  "updated_at": "2026-05-06T20:42:57.658336",
+  "platforms": {
+    "telegram": [
+      {
+        "id": "1132914873",
+        "name": "Tuấn Anh",
+        "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "-1003764041476",
+        "name": "O-Lab",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "-1003764041476:603",
+        "name": "O-Lab / topic 603",
+        "type": "group",
+        "thread_id": "603"
+      },
+      {
+        "id": "-1003764041476:1962",
+        "name": "O-Lab / topic 1962",
+        "type": "group",
+        "thread_id": "1962"
+      },
+      {
+        "id": "-1003764041476:1961",
+        "name": "O-Lab / topic 1961",
+        "type": "group",
+        "thread_id": "1961"
+      },
+      {
+        "id": "-1003764041476:604",
+        "name": "O-Lab / topic 604",
+        "type": "group",
+        "thread_id": "604"
+      },
+      {
+        "id": "-1003764041476:4081",
+        "name": "O-Lab / topic 4081",
+        "type": "group",
+        "thread_id": "4081"
+      },
+      {
+        "id": "-1003764041476:1",
+        "name": "O-Lab / topic 1",
+        "type": "group",
+        "thread_id": "1"
+      }
+    ],
+    "discord": [],
+    "whatsapp": [],
+    "slack": [],
+    "signal": [],
+    "mattermost": [],
+    "matrix": [],
+    "homeassistant": [],
+    "email": [],
+    "sms": [],
+    "dingtalk": [],
+    "feishu": [],
+    "wecom": [],
+    "wecom_callback": [],
+    "weixin": [],
+    "bluebubbles": [],
+    "qqbot": [],
+    "yuanbao": [],
+    "irc": [],
+    "teams": []
+  }
+}

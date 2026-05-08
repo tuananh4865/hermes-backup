@@ -1,0 +1,98 @@
+{
+  "agentic-company-setup": {
+    "archived_at": null,
+    "created_at": "2026-05-04T08:03:16.154646+00:00",
+    "last_patched_at": "2026-05-04T08:03:58.142561+00:00",
+    "last_used_at": "2026-05-04T08:03:16.155531+00:00",
+    "last_viewed_at": "2026-05-04T08:03:16.154660+00:00",
+    "patch_count": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "browser-harness": {
+    "archived_at": null,
+    "created_at": "2026-05-03T01:52:15.887993+00:00",
+    "last_patched_at": "2026-05-03T05:24:28.207640+00:00",
+    "last_used_at": "2026-05-03T15:20:03.912931+00:00",
+    "last_viewed_at": "2026-05-03T15:20:03.910733+00:00",
+    "patch_count": 3,
+    "pinned": false,
+    "state": "active",
+    "use_count": 6,
+    "view_count": 6
+  },
+  "gateway-manager": {
+    "archived_at": null,
+    "created_at": "2026-05-04T08:24:04.203796+00:00",
+    "last_patched_at": "2026-05-04T10:58:30.542450+00:00",
+    "last_used_at": "2026-05-04T10:55:29.740856+00:00",
+    "last_viewed_at": "2026-05-04T10:55:29.740244+00:00",
+    "patch_count": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
+  },
+  "github-large-folder-backup": {
+    "archived_at": null,
+    "created_at": "2026-05-03T20:01:09.221397+00:00",
+    "last_patched_at": "2026-05-03T20:02:11.569035+00:00",
+    "last_used_at": "2026-05-03T20:01:09.223031+00:00",
+    "last_viewed_at": "2026-05-03T20:01:09.221420+00:00",
+    "patch_count": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "github-wiki-backup": {
+    "archived_at": null,
+    "created_at": "2026-05-03T20:00:59.506718+00:00",
+    "last_patched_at": "2026-05-03T20:02:06.812969+00:00",
+    "last_used_at": "2026-05-03T20:00:59.508785+00:00",
+    "last_viewed_at": "2026-05-03T20:00:59.506745+00:00",
+    "patch_count": 4,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "hermes-autoresearch": {
+    "archived_at": null,
+    "created_at": "2026-05-03T19:05:17.552916+00:00",
+    "last_patched_at": "2026-05-04T07:16:18.545460+00:00",
+    "last_used_at": "2026-05-04T06:20:15.317235+00:00",
+    "last_viewed_at": "2026-05-04T06:20:15.314911+00:00",
+    "patch_count": 22,
+    "pinned": false,
+    "state": "active",
+    "use_count": 7,
+    "view_count": 7
+  },
+  "multi-agent-orchestrator": {
+    "archived_at": null,
+    "created_at": "2026-05-04T07:13:54.434376+00:00",
+    "last_patched_at": "2026-05-04T11:00:44.767927+00:00",
+    "last_used_at": "2026-05-04T11:00:05.896399+00:00",
+    "last_viewed_at": "2026-05-04T11:00:05.895270+00:00",
+    "patch_count": 8,
+    "pinned": false,
+    "state": "active",
+    "use_count": 9,
+    "view_count": 9
+  },
+  "tiktok-content-director": {
+    "archived_at": null,
+    "created_at": "2026-05-04T07:57:53.349871+00:00",
+    "last_patched_at": "2026-05-04T08:13:40.589400+00:00",
+    "last_used_at": "2026-05-04T08:15:01.172734+00:00",
+    "last_viewed_at": "2026-05-04T08:15:01.171318+00:00",
+    "patch_count": 3,
+    "pinned": false,
+    "state": "active",
+    "use_count": 5,
+    "view_count": 5
+  }
+}

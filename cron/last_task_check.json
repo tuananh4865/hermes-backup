@@ -1,0 +1,360 @@
+{
+  "timestamp": "2026-05-09T02:00:46.828666",
+  "wiki_tasks": {
+    "project_tasks": [
+      {
+        "text": "Section \"Linked to this note\" trong EditorView",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Hiện danh sách notes có ``",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Tap backlink → navigate tới note đó",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Folder model đã có (Folder.swift tồn tại)",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Folder list view",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Move note to folder",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Filter notes by folder",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Add/view tags trên note",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Tag input in editor",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Filter notes by tag",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Tag overview section",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Sort options: Last Modified, Title, Created",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Pin/unpin notes",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Pinned notes always on top",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Count notes — if > 50 and not Pro, block creation",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Show upsell banner when approaching limit",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      },
+      {
+        "text": "Upgrade button → SubscriptionView",
+        "source": "phase-2-core-features",
+        "priority": 70,
+        "type": "project"
+      }
+    ],
+    "wiki_improvements": [
+      {
+        "text": "Quality improvement: fix frontmatter, reduce meta-commentary",
+        "source": "wiki-enhancement-roadmap",
+        "priority": 50,
+        "type": "wiki"
+      },
+      {
+        "text": "Generate Q&A pairs từ wiki",
+        "source": "wiki-enhancement-roadmap",
+        "priority": 50,
+        "type": "wiki"
+      },
+      {
+        "text": "Fine-tune model nhỏ trên wiki content",
+        "source": "wiki-enhancement-roadmap",
+        "priority": 50,
+        "type": "wiki"
+      },
+      {
+        "text": "Kết quả: model \"know\" Anh's knowledge base",
+        "source": "wiki-enhancement-roadmap",
+        "priority": 50,
+        "type": "wiki"
+      },
+      {
+        "text": "Weekly lint script — Not scheduled",
+        "source": "wiki-enhancement-roadmap",
+        "priority": 50,
+        "type": "wiki"
+      }
+    ],
+    "top_gaps": [],
+    "empty": false
+  },
+  "system_tasks": [
+    {
+      "text": "Restart watchdog daemon",
+      "source": "system",
+      "priority": 80,
+      "type": "system"
+    }
+  ],
+  "autonomous_tasks": [],
+  "all_tasks": [
+    {
+      "text": "Restart watchdog daemon",
+      "source": "system",
+      "priority": 80,
+      "type": "system"
+    },
+    {
+      "text": "Section \"Linked to this note\" trong EditorView",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Hiện danh sách notes có ``",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Tap backlink → navigate tới note đó",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Folder model đã có (Folder.swift tồn tại)",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Folder list view",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Move note to folder",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Filter notes by folder",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Add/view tags trên note",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Tag input in editor",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Filter notes by tag",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Tag overview section",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Sort options: Last Modified, Title, Created",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Pin/unpin notes",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Pinned notes always on top",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Count notes — if > 50 and not Pro, block creation",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Show upsell banner when approaching limit",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Upgrade button → SubscriptionView",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Quality improvement: fix frontmatter, reduce meta-commentary",
+      "source": "wiki-enhancement-roadmap",
+      "priority": 50,
+      "type": "wiki"
+    },
+    {
+      "text": "Generate Q&A pairs từ wiki",
+      "source": "wiki-enhancement-roadmap",
+      "priority": 50,
+      "type": "wiki"
+    },
+    {
+      "text": "Fine-tune model nhỏ trên wiki content",
+      "source": "wiki-enhancement-roadmap",
+      "priority": 50,
+      "type": "wiki"
+    },
+    {
+      "text": "Kết quả: model \"know\" Anh's knowledge base",
+      "source": "wiki-enhancement-roadmap",
+      "priority": 50,
+      "type": "wiki"
+    },
+    {
+      "text": "Weekly lint script — Not scheduled",
+      "source": "wiki-enhancement-roadmap",
+      "priority": 50,
+      "type": "wiki"
+    }
+  ],
+  "top_tasks": [
+    {
+      "text": "Restart watchdog daemon",
+      "source": "system",
+      "priority": 80,
+      "type": "system"
+    },
+    {
+      "text": "Section \"Linked to this note\" trong EditorView",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Hiện danh sách notes có ``",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Tap backlink → navigate tới note đó",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Folder model đã có (Folder.swift tồn tại)",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Folder list view",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Move note to folder",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Filter notes by folder",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Add/view tags trên note",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    },
+    {
+      "text": "Tag input in editor",
+      "source": "phase-2-core-features",
+      "priority": 70,
+      "type": "project"
+    }
+  ],
+  "next_task": {
+    "text": "Restart watchdog daemon",
+    "source": "system",
+    "priority": 80,
+    "type": "system"
+  }
+}

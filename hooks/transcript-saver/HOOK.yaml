@@ -1,0 +1,4 @@
+name: transcript-saver
+description: Lưu transcript từng message vào wiki/raw/transcripts theo thời gian thực
+events:
+  - agent:end

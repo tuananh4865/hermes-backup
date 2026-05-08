@@ -1,0 +1,5 @@
+commit	whs	broken_links	missing_fm	orphans	status	description
+2f8bb54	4	0	0	0	DONE	Skills improved: hermes-autoresearch, engineering-diagnose, dogfood, engineering-tdd (pitfalls added)
+a7c3d21	0	0	0	0	DONE	Fixed 7 worker cron jobs - cleared hermes-autoresearch skill, set correct SOUL.md prompts. Orchestrator now runs Orchestrator SOUL.md correctly.
+b172978	0	0	0	0	DONE	Update knowledge.md with tonight's findings + cron fix verified
+c3f9e21	0	0	0	0	DONE	AI Agent research: 10 techniques documented (Multi-Agent Reflexion, HyperAgents, A2A/MCP/ACP protocols, Trace Learning, Self-Debugging, SWE-RL, Fallback Chain)

@@ -1,0 +1,38 @@
+{
+  "updated_at": "2026-05-04T18:20:31.875599",
+  "platforms": {
+    "telegram": [
+      {
+        "id": "-1003764041476:603",
+        "name": "O-Lab / topic 603",
+        "type": "group",
+        "thread_id": "603"
+      },
+      {
+        "id": "-1003764041476:1",
+        "name": "O-Lab / topic 1",
+        "type": "group",
+        "thread_id": "1"
+      }
+    ],
+    "discord": [],
+    "whatsapp": [],
+    "slack": [],
+    "signal": [],
+    "mattermost": [],
+    "matrix": [],
+    "homeassistant": [],
+    "email": [],
+    "sms": [],
+    "dingtalk": [],
+    "feishu": [],
+    "wecom": [],
+    "wecom_callback": [],
+    "weixin": [],
+    "bluebubbles": [],
+    "qqbot": [],
+    "yuanbao": [],
+    "irc": [],
+    "teams": []
+  }
+}

@@ -1,0 +1,18 @@
+Installing launchd service to: /Users/tuananh4865/Library/LaunchAgents/ai.hermes.gateway.plist
+Bootstrap failed: 5: Input/output error
+Try re-running the command as root for richer errors.
+Traceback (most recent call last):
+  File "/Users/tuananh4865/.local/bin/hermes", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/tuananh4865/.hermes/hermes-agent/hermes_cli/main.py", line 6385, in main
+    args.func(args)
+  File "/Users/tuananh4865/.hermes/hermes-agent/hermes_cli/main.py", line 790, in cmd_gateway
+    gateway_command(args)
+  File "/Users/tuananh4865/.hermes/hermes-agent/hermes_cli/gateway.py", line 2883, in gateway_command
+    launchd_install(force)
+  File "/Users/tuananh4865/.hermes/hermes-agent/hermes_cli/gateway.py", line 1426, in launchd_install
+    subprocess.run(["launchctl", "bootstrap", _launchd_domain(), str(plist_path)], check=True, timeout=30)
+  File "/Users/tuananh4865/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['launchctl', 'bootstrap', 'gui/501', '/Users/tuananh4865/Library/LaunchAgents/ai.hermes.gateway.plist']' returned non-zero exit status 5.

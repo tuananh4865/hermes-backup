@@ -1,0 +1,5 @@
+name: wiki-session-start
+description: Read wiki files and inject context at session start
+events:
+  - session:start
+  - gateway:startup

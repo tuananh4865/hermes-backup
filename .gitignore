@@ -1,0 +1,47 @@
+# Large binary databases
+*.db
+*.db-shm
+*.db-wal
+
+# Large cache files
+*.mp4
+*.mov
+*.m4a
+*.mp3
+*.wav
+*.aac
+*.ogg
+*.zip
+*.tar.gz
+*.tgz
+
+# OS files
+.DS_Store
+*.swp
+*.swo
+
+# Lock files
+*.lock
+auth.lock
+
+# Log files
+gateway.log
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# Screenshots (large images)
+cache/screenshots/*.png
+
+# Sessions (too large)
+sessions/
+
+# State files (too large)
+state.db
+
+# Auth files (contain secrets)
+auth.json
+profiles/**/auth.json
+state-snapshots/**/auth.json
