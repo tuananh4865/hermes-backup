@@ -50,7 +50,49 @@ Tonight's focus: **Skill Creation #8** — improving existing skills
 
 
 
-## Tonight's Findings (2026-05-09)
+## Tonight's Findings (2026-05-10)
+
+### System Status (02:00)
+- Wiki: ✅ 3637 files, 0 issues (wiki_lint --fast PASSED)
+- Skills: 136 skills healthy, SHS = 0
+- Workers: content-creator ✅, research-agent ✅ (cron outputs confirmed)
+- Autoresearch repo: main branch, clean
+
+### AI Agent Research — Memory Optimization (2026-05-10) — NEW ARXIV PAPERS
+
+**New techniques documented:**
+
+1. **DeltaMem (arXiv:2604.01560)** — RL-trained agentic memory management. Formulates memory updating as end-to-end task. Novel "Memory-based Levenshtein Distance" reward. Training-free version already outperforms baselines.
+
+2. **Unified Memory Agent / UMA (arXiv:2602.18493)** — End-to-end RL framework unifying memory operations + QA. Dual memory: compact core summary + Memory Bank (explicit CRUD). Ledger-QA benchmark for continuous state tracking. Joint optimization outperforms decoupled 2-stage.
+
+3. **Knowledge Access Beats Model Size (arXiv:2603.23013)** — 8B model + memory = 69% of 235B model performance at 4% cost. Up to 47% of user queries are semantically similar to prior interactions. Memory augments routing, not replaces it.
+
+4. **LatentMem (arXiv:2602.03036)** — Learnable multi-agent memory framework. Experience bank (raw trajectories) + memory composer (role-aware latent memories). LMPO (Latent Memory Policy Optimization). 50% fewer tokens, 2x speed. Solves memory homogenization + information overload.
+
+5. **AtomMem (arXiv:2601.08323)** — Reframes memory as CRUD decision-making problem. Learned via SFT + RL. 8B outperforms static memory workflows. Key insight: learned policy increases Create/Update/Delete, decreases Read over time.
+
+6. **MemReader (arXiv:2604.07877)** — Active memory extraction. MemReader-0.6B (distilled passive), MemReader-4B (ReAct active with GRPO). Explicit "think-act-observe" for memory writing decisions. State-of-the-art on LOCOMO, LongMemEval, HaluMem.
+
+7. **Agentic Memory / AgeMem (arXiv:2601.01885)** — Unified LTM + STM management. 5 memory ops as tool-based actions. 3-stage progressive RL (GRPO). 5 benchmarks: outperforms all baselines. Key: proactive summarization before context fills.
+
+8. **OCR-Agent (arXiv:2602.21053)** — Capability Reflection + Memory Reflection for VLM self-correction. Capability constraint filters capability hallucinations. Memory Reflection avoids repetitive attempts. +2.0 on InternVL3-8B English, +1.2 Chinese.
+
+**Key insight:** Memory optimization is moving toward LEARNED policies (RL/SFT) rather than heuristics. CRUD operations becoming standard memory interface. Unified STM/LTM management outperforms separate systems.
+
+**Sources:**
+- arXiv:2604.01560 — DeltaMem (Apr 2026)
+- arXiv:2602.18493 — UMA (Feb 2026)
+- arXiv:2603.23013 — Knowledge Access (Mar 2026)
+- arXiv:2602.03036 — LatentMem (Feb 2026)
+- arXiv:2601.08323 — AtomMem (Jan 2026)
+- arXiv:2604.07877 — MemReader (Apr 2026)
+- arXiv:2601.01885 — AgeMem (Jan 2026)
+- arXiv:2602.21053 — OCR-Agent (Feb 2026)
+
+---
+
+## Previous Night (2026-05-09)
 
 ### Skill Improvement: tiktok-viral-script
 - Added 3 complete example scripts (product discovery, warning hook, transformation)
@@ -58,43 +100,19 @@ Tonight's focus: **Skill Creation #8** — improving existing skills
 - Fixed broken relationship: xitter → xurl, added gen-z-slang-2026-04
 - Skill now: 289 lines (was 213)
 
-### AI Agent Research — Self-Improving Agents (2026-05-09) — NEW ARXIV PAPERS
+### AI Agent Research — Self-Improving Agents (2026-05-09)
 
-**New techniques documented:**
-
-1. **Experiential Reflective Learning (ERL)** — reflects on task trajectories + outcomes to generate transferable heuristics. Gaia2 benchmark: +7.8% over ReAct baseline. Key: selective retrieval essential.
-
-2. **In-Context Policy Optimization (ICPO)** — test-time scaling via multi-round self-reflection. ME-ICPO uses minimum-entropy selection for robust self-assessed rewards.
-
-3. **Trajectory-Informed Memory Generation** — 4-component pipeline: Trajectory Intelligence Extractor + Decision Attribution Analyzer + Contextual Learning Generator + Adaptive Memory Retrieval. AppWorld: +14.3pp goal completion, +28.5pp on complex tasks.
-
-4. **Hyperagents (Meta, Mar 2026)** — integrates task agent + meta agent (both editable). Metacognitive self-modification enables open-ended improvement. DGM-H outperforms DGM across coding, paper review, robotics, math grading.
-
-5. **MARS (Metacognitive Agent Reflective Self-improvement)** — principle-based (normative rules) + procedural (step-by-step strategies) reflection in SINGLE recurrence cycle. 6 benchmarks, outperforms SOTA with reduced compute.
-
-6. **RetroAgent** — hindsight self-reflection with dual intrinsic feedback: (1) intrinsic numerical feedback tracks subtask completion, (2) intrinsic language feedback distills reusable lessons. GRPO-trained agent comparisons: +18.3% ALFWorld, +15.4% WebShop, +27.1% Sokoban, +8.9% MineSweeper.
-
-7. **Group-Evolving Agents (GEA)** — group-centric evolution (not individual). Experience sharing within group → sustained progress. SWE-bench: 71.0% vs 56.7% baseline. Fixes framework-level bugs in 1.4 iterations avg (vs 5 for tree-based).
-
-8. **POLARIS** — recursive self-improvement for SMALL models via experience abstraction: failures → analysis → strategy synthesis → patch generation → patch integration. Bounded retries + conservative checks. Traceable memory.
-
-9. **Self-Optimizing Multi-Agent for Deep Research** — agents self-play different prompt combinations to optimize Deep Research systems. Matches/exceeds expert-crafted prompts.
-
-10. **Hierarchical Self-Evolving Multi-Agent** — Base LLM + SLM agent + Code-Gen LLM + Teacher-LLM. Escalation: reasoning → tool synthesis → evolution (CL/RL/GA). TaskCraft dataset: CL=fast recovery, RL=high difficulty, GA=diversity.
-
-**Key insight:** Self-improvement is moving from single-agent reflection to multi-agent collaboration + group evolution + hierarchical metacognition.
-
-**Sources:**
-- arXiv:2603.24639 — ERL (Mar 2026)
-- arXiv:2603.01335 — ICPO (Mar 2026)
-- arXiv:2603.10600 — Trajectory Memory (Mar 2026)
-- arXiv:2603.19461 — Hyperagents (Mar 2026)
-- arXiv:2601.11974 — MARS (Jan 2026)
-- arXiv:2603.08561 — RetroAgent (Mar 2026)
-- arXiv:2602.04837 — GEA (Feb 2026)
-- arXiv:2603.23129 — POLARIS (Mar 2026)
-- arXiv:2604.02988 — Self-Optimizing Multi-Agent (Apr 2026)
-- arXiv:2601.11658 — Hierarchical Self-Evolving (Jan 2026)
+**10 new techniques documented:**
+1. ERL (Experiential Reflective Learning)
+2. ICPO (In-Context Policy Optimization)
+3. Trajectory-Informed Memory Generation
+4. Hyperagents
+5. MARS
+6. RetroAgent
+7. GEA (Group-Evolving Agents)
+8. POLARIS
+9. Self-Optimizing Multi-Agent
+10. Hierarchical Self-Evolving Multi-Agent
 
 ### Session Log Analysis Status (2026-05-08)
 - Sessions directory: `~/Library/Application Support/hermes-agent/sessions/` — accessible (0 bytes, empty)

@@ -4,18 +4,88 @@
 > When `HEARTBEAT.md` and this doc conflict: **follow this doc**.
 > This file is the "source of truth" for orchestrator decision logic.
 
+## 🚨 MANDATORY PRE-FLIGHT CHECKS (Run BEFORE compiling any report)
+
+### 1. TRÁHN QA Gate
+```bash
+LATEST=$(ls -t ~/.hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
+if [ -n "$LATEST" ]; then
+    VIOLATIONS=$(grep -c "đỉnh nóc\|quất một phát\|đỉnh nóc kịch trần" "$LATEST" 2>/dev/null || echo "0")
+    if [ "$VIOLATIONS" -gt 0 ]; then
+        echo "🚨 TRÁHN BLOCK: $VIOLATIONS violation(s) in $LATEST"
+        grep -n "đỉnh nóc\|quất một phát" "$LATEST"
+        echo "FIX REQUIRED — edit file, re-scan, only then proceed"
+        # DO NOT deliver content until violations = 0
+    fi
+fi
+```
+
+### 2. Format Check
+```bash
+REPORT_LEN=$(echo "$REPORT_BODY" | wc -c)
+if [ "$REPORT_LEN" -gt 600 ]; then
+    echo "⚠️ Report too long ($REPORT_LEN chars). Strip to 3 bullets."
+    echo "Long content → write to file, put filepath in bullet."
+fi
+```
+
+**⚠️ PITFALL 16 (2026-05-09 — REPEATED from same session):** The TRÁHN gate and 600-char format check were documented in THIS DOC but NOT RUN in this session. Orchestrator delivered a ~800-char verbose report. **Pattern: Documentation ≠ Execution. Reading this doc ≠ Running the checks.**
+
+**⚠️ PITFALL 17 (2026-05-09):** Root cause identified — the orchestrator cron SOUL.md (`~/.hermes/workers/orchestrator/SOUL.md`) says to "load briefing rules" but cannot call `skill_view`. Cron jobs run with their own frozen system prompt context — they never load the briefing doc at runtime.
+
+**REQUIRED FIX — Inline critical rules into cron SOUL.md:** The cron job SOUL.md must contain the rules inline, not as a reference. Append this to `~/.hermes/workers/orchestrator/SOUL.md`:
+
+```
+## MANDATORY ENFORCEMENT (inline — no skill_view available in cron)
+
+### Pre-Delivery Gate (RUN THESE as commands, not read as notes)
+1. TRÁHN scan:
+   LATEST=$(ls -t ~/.hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
+   VIOLATIONS=$(grep -c "đỉnh nóc\|quất một phát\|đỉnh nóc kịch trần" "$LATEST" 2>/dev/null || echo "0")
+   → If VIOLATIONS > 0: FIX inline with sed, re-scan, block until clean
+2. Format check:
+   REPORT_LEN=$(echo "$REPORT_BODY" | wc -c)
+   → If > 600 chars: strip to 3 bullets, one line each
+3. Deliver only after BOTH gates pass
+
+### 3-Bullet Format (NON-NEGOTIABLE)
+Format: "Hoàn thành | Đang làm | Cần quyết định"
+• Bullet 1: ONE LINE — Hoàn thành
+• Bullet 2: ONE LINE — Đang làm  
+• Bullet 3: ONE LINE — Cần quyết định
+Long content → write to file at ~/hermes/workers/orchestrator/outputs/YYYY-MM-DD-report.md, put path in bullet
+```
+
+**⚠️ PITFALL 18 (2026-05-09):** HEARTBEAT.md also conflicts — says "[SILENT] if all sources empty" but this is wrong. The CORRECT rule: `[SILENT]` only when ALL worker outputs/ truly empty AND no system changes today. Any missed worker cron = "Cần xử lý" bullet, NEVER silent suppression. The briefing doc has the correct rule; HEARTBEAT.md has the wrong rule.
+
+---
+
 > **⚠️ PITFALL 6 (2026-05-08):** Today's orchestrator cron compiled a detailed multi-paragraph report instead of following the 3-bullet rule. HEARTBEAT says "Brief: 3 bullets max, Format: Hoàn thành | Đang làm | Cần quyết định". The orchestrator must deliver CONCISE bullets, not verbose narrative. If detailed content needs sharing, attach it as a separate file reference — never bury it in the telegram message.
 
 ## Morning Brief (8-9AM) — for Anh
 
-**Source files to check BEFORE compiling:**
-- `~/.hermes/cron/output/{job_id}/` — actual cron output files (most reliable)
-- `~/hermes/workers/content-creator/outputs/` — scripts produced
-- `~/hermes/workers/research-agent/outputs/` — research produced
-- `~/hermes/workers/memory/PENDING_TASKS.md` — current tasks
-- `~/hermes/workers/memory/MEMORY.md` — project/area layer
-- `~/.hermes/cron/autonomous.log` — overnight cron results
-- `~/.hermes/cron/dojo.log` — nightly self-evolution results
+**⚠️ SOURCE PRIORITY (confirmed 2026-05-09):** There are TWO output locations — cron dirs and shared outputs/. **Cron dirs are PRIMARY, shared outputs/ are SECONDARY/fallback.**
+
+| Priority | Source | When to Use |
+|----------|--------|-------------|
+| **PRIMARY** | `~/.hermes/cron/output/{job_id}/` | Always check first — workers fire and write here |
+| SECONDARY | `~/hermes/workers/*/outputs/` | Fallback only — often EMPTY even when workers ran |
+| SECONDARY | `~/.hermes/workers/memory/PENDING_TASKS.md` | Task tracking |
+| SECONDARY | `~/.hermes/workers/memory/MEMORY.md` | PARA system |
+| SECONDARY | `~/.hermes/cron/autonomous.log` | Overnight cron results |
+| SECONDARY | `~/.hermes/cron/dojo.log` | Nightly self-evolution |
+
+**Canonical check sequence (every orchestrator briefing):**
+```bash
+# PRIMARY — cron output dirs (workers actually wrote here)
+ls -la ~/.hermes/cron/output/
+
+# SECONDARY — shared outputs/ (often empty even when workers ran)
+ls -la ~/.hermes/workers/content-creator/outputs/
+ls -la ~/.hermes/workers/research-agent/outputs/
+```
+
+**If cron dir has files but shared outputs/ is empty → cron dir is authoritative.** Workers fire → write to cron dir → orchestrator reads from there. Shared outputs/ may never fill — this is a known architecture gap, NOT a sign workers didn't run.
 
 **Output format for Anh (3 bullets max — NEVER verbose narrative):**
 ```
@@ -90,6 +160,41 @@ Hoàn thành | Đang làm | Cần quyết định
 - Creative direction (what product to promote, which angle)
 - Anything that changes revenue strategy
 
+**⚠️ PITFALL 14 (2026-05-09): HEARTBEAT "Today" ≠ Actual Today**
+
+**Symptom:** HEARTBEAT.md shows "Today's Activity" but it's actually referencing YESTERDAY's content because the heartbeat wasn't updated. Example:
+```
+# HEARTBEAT says:
+## Today's Activity
+- Evening brief summary (May 8)
+
+## Today's Focus (Content Creator)
+- Weekend aesthetic + Kẹp Tóc Nơ Bong Bóng (May 9)
+
+# Reality:
+- It's actually May 9, so "Today" in heartbeat IS correct for morning
+- BUT "Evening brief summary (May 8)" is YESTERDAY's content
+```
+
+**Root cause:** HEARTBEAT isn't being updated by workers automatically — it's manually updated by orchestrator during health checks. Stale heartbeat = stale "today" references.
+
+**Detection:**
+```bash
+# Check if heartbeat was actually updated today
+grep "Last Updated" ~/.hermes/workers/content-creator/HEARTBEAT.md
+# If yesterday's date → heartbeat is stale
+
+# Verify by checking actual output timestamps
+ls -lt ~/.hermes/workers/content-creator/outputs/*.md | head -3
+```
+
+**Rule:** Never trust HEARTBEAT "Today" labels. Always cross-reference with:
+1. Actual file timestamps
+2. File header date (each brief starts with `**Date:** YYYY-MM-DD`)
+3. Cron output dir timestamps
+
+**HEARTBEAT is a STATUS TRACKING document, not a CONTENT document.** Read outputs/ for content, read HEARTBEAT only for status/health signals.
+
 **⚠️ CRITICAL: HEARTBEAT.md vs This Doc — Use This Doc**
 
 The orchestrator cron job (`a4b8e528983f`) runs with the `HEARTBEAT.md` rule set:
@@ -107,20 +212,54 @@ Known conflict: **2026-05-08** — Orchestrator cron found Research Agent missed
 
 ### Worker-Completion QA Checklist (MANDATORY for every briefing)
 
+**⚠️ TIMING RULE (2026-05-09):** Morning orchestrator runs at 9AM. It compiles:
+- Previous day's evening output (May 8 evening, May 9 morning)
+- It CANNOT have current day's evening content (that fires at 6PM)
+
+**Confusion matrix:**
+| Orchestrator runtime | Can contain morning (8AM) | Can contain evening (6PM) |
+|---------------------|--------------------------|-------------------------|
+| 9AM morning run | ✅ YES (current day) | ❌ NO (fires later today) |
+| 6PM evening run | ✅ YES (same day) | ❌ NO (fires later today) |
+| 9PM nightly run | ✅ YES (today) | ✅ YES (today) |
+
+**Source audit procedure (2026-05-09 refinement):**
+
+```bash
+# STEP 1: List ALL worker output files by timestamp
+find ~/.hermes/workers -name "*.md" -newer /tmp/$(date -v-1d +%Y-%m-%d) 2>/dev/null
+
+# STEP 2: Attribute to correct worker — read file header to verify
+head -3 ~/.hermes/workers/*/outputs/*.md 2>/dev/null | grep -E "(Research Analyst|Content Creator|---)"
+
+# STEP 3: Cross-reference with cron output (authoritative)
+ls -la ~/.hermes/cron/output/*/2026-05-09*.md 2>/dev/null
+```
+
+**Source misattribution pattern (KNOWN ISSUE):** Research-agent outputs may appear in content-creator/outputs/ or vice versa. Always read file header to confirm true source, not just directory name.
+
+**HEARTBEAT staleness detection:**
+- HEARTBEAT.md shows "Last Updated" timestamp
+- If HEARTBEAT shows yesterday's date but cron ran today → worker may have fired but didn't update heartbeat
+- Check cron output dir for actual files if HEARTBEAT seems stale
+
 Before finalizing report, verify EACH worker ran today:
 
 ```bash
 # Check each expected output — compare timestamps with current date
 ls -la ~/.hermes/workers/content-creator/outputs/   # Should have YYYY-MM-DD files
 ls -la ~/.hermes/workers/research-agent/outputs/      # Should have YYYY-MM-DD files
+
+# Check cron output too (primary source — workers write here first)
+ls -la ~/.hermes/cron/output/*/2026-05-09*.md 2>/dev/null
 ```
 
-| Worker | Expected | Status |
-|--------|----------|--------|
-| Content Creator Morning | 8AM | ✅/❌ Today's file? |
-| Content Creator Evening | 6PM | ✅/❌ Today's file? |
-| Research Analyst Morning | 8:30AM | ✅/❌ Today's file? |
-| Research Analyst Evening | 6:30PM | ✅/❌ Today's file? |
+| Worker | Expected | Morning Run (9AM) | Evening Run (6PM) |
+|--------|----------|------------------|-------------------|
+| Content Creator Morning | 8AM | ✅/❌ Today's file? | N/A |
+| Content Creator Evening | 6PM | ❌ NOT YET | ✅/❌ Today's file? |
+| Research Analyst Morning | 8:30AM | ✅/❌ Today's file? | N/A |
+| Research Analyst Evening | 6:30PM | ❌ NOT YET | ✅/❌ Today's file? |
 
 **❌ MISSING worker run → must appear in "Cần xử lý" section, not just noted in passing.**
 
@@ -159,12 +298,6 @@ ls -la ~/.hermes/workers/research-agent/outputs/      # Should have YYYY-MM-DD f
 **⚠️ PITFALL 13 (2026-05-08 evening — REPEATED FAILURE):** Despite PITFALL 8 + PITFALL 6 + PITFALL 9 all documenting the 3-bullet rule and QA correction protocol, Script 2 (Vòng Tay May Mắn) in the May 8 evening brief still contained "đỉnh nóc kịch trần". The orchestrator identified the TRÁHN violation but did NOT correct it inline before compiling the report. Pattern: documentation alone does not enforce behavior. The MANDATORY PRE-DELIVERY ENFORCEMENT gate (see above) is now the enforced mechanism — it MUST block delivery if TRÁHN violations are found.
 
 **This protocol is now ENFORCED at the orchestrator level:** Any script failing QA must be corrected before it can appear in any report to Anh. No exceptions.
-
-**🔴 ACTION REQUIRED (next orchestrator run):** File `~/.hermes/workers/content-creator/outputs/2026-05-07-evening-content.md` still contains the TRÁHN violation "đỉnh nóc luôn" in Script 2 (Charm/Trinket Review). Fix with:
-```bash
-sed -i '' 's/đỉnh nóc luôn/ngon vậy/g' ~/.hermes/workers/content-creator/outputs/2026-05-07-evening-content.md
-```
-Then verify: `grep -n "đỉnh nóc" ~/.hermes/workers/content-creator/outputs/2026-05-07-evening-content.md` should return nothing.
 
 **If workers set up but outputs empty → flag it explicitly:**
 ```

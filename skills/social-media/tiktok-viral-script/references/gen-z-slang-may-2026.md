@@ -1,25 +1,29 @@
 # Gen Z Slang & Trends Reference — May 2026
 
-> Captured from research May 8, 2026. Update weekly — slang changes fast.
+> Captured from research May 8-9, 2026. Update weekly — slang changes fast.
 
-## Hot Terms (Use These)
+## Hot Terms (Use These — May 9 Update)
 
-| Term | Meaning | Usage |
-|------|---------|-------|
-| **nam thư** | Toxic/flirty person to avoid | "⚠️ Cảnh báo có nam thư" — dating red flag turned comedy |
-| **ra dại** | Going wild/excited over something small | "Ôm mình ra dại luôn" — positive excitement |
-| **meoxink** | Cute girl / pretty kitty | Vietnamese original, 10M+ views |
-| **lọ** | HOT — biến tấu từ "lỏ" (kém chất lượng → viral meaning flip to HOT) | "Sản phẩm này lọ cực" — viral May 2026 |
-| **chuzz** | Worse/uglier version of someone (self-deprecating) | "Đây là ảnh chuzz của mình" |
-| **các mom ơi** | Thân mật gọi cộng đồng | Từ TikToker Tuấn Dương, still trending |
-| **6 7** | Nonsense hype phrase | Random punchline |
-| **to6** | Toxic (Việt hóa) | |
-| **delulu is the solulu** | Ảo tưởng là giải pháp | Still going strong |
-| **main character energy** | Sống như nhân vật chính | Still trending |
-| **hơi bị** | Really, quite (intensifier) | "Hơi bị đẹp" |
-| **phét** | Exaggerate, brag, lie | |
-| **gato** | Jealous | |
-| **chill** | Relax | |
+| Term | Origin | Meaning | Usage |
+|------|--------|---------|-------|
+| **Trình là gì mà trình ai chấm** | Từ song "Trình" của HIEUTHUHAI (Nov 2024), viral cực mạnh May 2026 | "Ai có quyền đánh giá anh?" | "Ối dồi ôi, trình là gì mà trình ai chấm!" — đáp trả khi bị kritik |
+| **Ối dồi ôi** | Từ HIEUTHUHAI "Trình" | Thốt ra khi không tin được | Surprise/disbelief — đi với "trình" phrase |
+| **nam thư** | Dating culture → TikTok comedy | Toxic/flirty person to avoid | "⚠️ Cảnh báo có nam thư" — dating red flag turned comedy |
+| **ra dại** | Vietnamese Gen Z original | Going wild/excited over something small | "Ôm mình ra dại luôn" — positive excitement |
+| **meoxink** | Vietnamese Gen Z original | Cute girl / pretty kitty | Vietnamese original, 10M+ views |
+| **lọ** | Biến tấu từ "lỏ" (kém chất lượng → viral meaning flip to HOT) | HOT | "Sản phẩm này lọ cực" — viral May 2026 |
+| **các mom ơi** | TikToker Tuấn Dương (2025) | Thân mật gọi cộng đồng | Still trending May 2026 |
+| **6 7** | Global Gen Z | Nonsense hype phrase | Random punchline |
+| **to6** | Vietnamese Gen Z | Toxic (Việt hóa) | |
+| **delulu is the solulu** | Global | Ảo tưởng là giải pháp | Still going strong |
+| **main character energy** | Global | Sống như nhân vật chính | Still trending |
+| **hơi bị** | Vietnamese Gen Z | Really, quite (intensifier) | "Hơi bị đẹp" — use sparingly |
+| **phét** | Vietnamese Gen Z | Exaggerate, brag, lie | |
+| **gato** | Vietnamese Gen Z (ghen tị ăn tức ở) | Jealous | |
+| **chill** | Global | Relax | |
+
+**Newly added May 9:** Trình là gì mà trình ai chấm + Ối dồi ôi (from HIEUTHUHAI "Trình" song, Nov 2024)
+**Source:** gak.vn — "What is Trình on TikTok Vietnam" (2026)
 
 ## Dead Phrases (Never Use)
 
@@ -28,53 +32,52 @@
 - ❌ "đỉnh nóc luôn" — FINISHED (use "ngon vậy", "hơi bị ok", "ước gì")
 - ❌ Template scripts that repeat structure — AVOID
 - ❌ "đã X là Y" cấu trúc cứng nhắc — use conversational flow
+- ❌ "Bốc trúng sít rịt" — Fading out May 2026
 
 ## Hot Sounds (Vietnam — May 2026)
 
 | # | Sound | 7-Day Creates | Why It Works |
 |---|-------|---------------|--------------|
 | 1 | **Wind (Instrumental)** — Winner P336 | 440 | Chill, adaptable background |
-| 2 | **Lùi Lại Lấy Đà** (Hyper V Remix) | 294 | Upbeat, viral dance potential |
-| 3 | **Piano Solo Cherry Blossom** | 237 | Aesthetic, soft vibes |
-| 4 | **Sound Review Xuân Bính Ngọ** | viral | Documentary-style review voice |
+| 2 | **Lùi Lại Lấy Đà** (Hyper V Remix) — Thống | 294 | Upbeat, viral dance potential |
+| 3 | **Piano Solo Cherry Blossom** — Sumochi | 237 | Aesthetic, soft vibes |
 
-## 🚨 FASTEST RISING: "âm thanh gốc - Kiều Chi"
-- **24h growth:** 28 creates (almost ALL recent = early growth phase)
-- **7-day total:** 29 creates
-- **Status:** EARLY GROWTH — best time to ride the wave
-- **Action:** Check this sound tomorrow if still rising, use it for Day 2+ content
-- **Source:** chartex.com/tiktok/sounds/24-hours-growth/vietnam
+## 🚨 NEW SOUNDS (May 4-9 viral)
 
-## NEW Trending Sound: "Cầm Điện Thoại Và Gọi Ngay Cho Nó"
+### "Sound Các Câu Nói Buồn Của Úc Phượng"
+- **Format:** Slow, emotional voice → contrast with normal/funny video
+- **Comedy:** Nội dung thật: hết tiền → ghép sound buồn → thành "bi kịch cuộc đời"
+- **Best for:** Product reveals with emotional storytelling, "twist" reveals
+- **Voice:** Chậm, trầm, hơi "kịch nhưng thật"
+- **Source:** 35express.org (May 4, 2026)
 
+### "Cầm Điện Thoại Và Gọi Ngay Cho Nó"
 - **Format:** Căng thẳng, trầm, dứt khoát như trong phim
 - **Comedy:** Tạo cảm giác drama nhưng nội dung thực tế rất nhỏ nhặt
 - **Best for:** Reaction videos, unexpected reveals, product discoveries
 - **Source:** 35express.org (March 2026)
 
-## NEW Trending Hook: "Cảnh Báo Có Nam Thư"
+## NEW Hook (May 9): "Trình Là Gì Mà Trình Ai Chấm?"
+- **Origin:** Từ song "Trình" của rapper HIEUTHUHAI (Nov 2024)
+- **Meaning:** "Ai đánh giá được anh?" — đáp trả khi bị chỉ trích
+- **Key phrase:** "Ối dồi ôi, trình là gì mà trình ai chấm?"
+- **Usage:** Phòng thủ khi bị krit, khoe thành quả, nói xấu sau
+- **Source:** gak.vn (2026)
 
-- **Format:** ⚠️ Cảnh báo: có nam thư → zoom in / "né gấp"
-- **Comedy:** Biến dating red flags thành "cảnh báo nguy hiểm"
-- **Best for:** Product reviews where the "danger" is actually something cute/affordable
-- **Source:** 35express.org (May 5, 2026)
-
-## Trending Products (May 8, 2026) — With GMV Data
+## Trending Products (May 9, 2026)
 
 | Product | 7-Day Orders | Price (₫) | GMV | Notes |
 |---------|-------------|-----------|-----|-------|
 | Dây Buộc Tóc Nhồi Bông Hình Thú | 56.37K | 23,299 | — | #1 ALL categories |
-| Đồng Hồ Tặng (Chỉ 1 hộp) | 34.35K | 34,990 | — | Limited 1-box gimmick |
-| Hộp Đựng Trang Sức Asimi | 32.73K | 51,500 | — | Jewelry storage trending |
-| Vòng Tay May Mắn (Quà Tặng) | 26.61K | 62,983 | — | Gift positioning |
-| Dây Chun Buộc Tóc 10gram | 22.61K | 10,000 | ₫279M | Low price, high volume |
 | Nhẫn Moissanite Hở | 22.34K | 91,999 | — | High-value = better commission |
-| Charm Chữ Mini Trang Trí | 21.56K | 1,644 | ₫270M | 164K total units — consistent seller |
-| Kẹp Tóc Nơ Bong Bóng | 19.16K | 36,250 | ₫3.38B | HIGHEST GMV — best commission potential |
+| Charm Chữ Mini Trang Trí | 21.56K | 1,644 | ₫270M | 164K total units — consistent |
+| Kẹp Tóc Nơ Bong Bóng | 19.16K | 36,250 | ₫3.38B | HIGHEST GMV — best commission |
+| Đèn LED RGB 5M | TRENDING | ~149,000 | — | Weekend home decor spike |
+| Mi Giả Lookme Star | VIRAL | ~6x hộp | — | Beauty breakout |
 
 ### GMV vs Volume Analysis
-- **Charm Chữ Mini**: 164K total units but only 21K weekly = consistent multi-order buyers = great for repeat affiliate
-- **Kẹp Tóc Nơ Bong Bóng**: ₫3.38B GMV despite only 19K orders = highest value per order = best commission potential
+- **Charm Chữ Mini**: 164K total units but only 21K weekly = consistent multi-order buyers
+- **Kẹp Tóc Nơ Bong Bóng**: ₫3.38B GMV despite only 19K orders = highest value per order
 
 ## Market Economics (May 2026)
 
@@ -87,21 +90,18 @@
 
 **Rule: Only promote products with 15%+ commission or 60%+ gross margin**
 
-## Demographic Split
-- Gen Z (18-24): 25.6% of users — drive VIRALITY, impulsive, price-sensitive
-- Millennials (25-34): 40.3% of users — drive REVENUE, higher AOV, repeat purchases
-- Strategy: Gen Z hooks for reach → Millennial products for revenue
+## Weekend Strategy (Saturday/Sunday)
 
-## Top 5 Viral Hooks (May 2026)
+| Day | Audience | Focus | Sound |
+|-----|----------|-------|-------|
+| Saturday | Higher female | Aesthetic, beauty, accessories | Piano Solo Cherry Blossom |
+| Sunday | Gen Z active | ra dại moments, POV discovery | Lùi Lại Lấy Đà |
 
-1. **"⚠️ Cảnh báo..." Hook** → Works for product reviews, funny situations
-2. **"Cầm điện thoại và gọi ngay cho nó" Hook** → Drama tension → funny reveal
-3. **"This Changed My Direction" Hook** → Transformation, before/after
-4. **"POV: Anh vừa phát hiện..." Hook** → Product discovery, personal
-5. **"Quay chưa xong mà đã..." Hook** → Urgency/scarcity, Gen Z
+**Key:** Weekend = home decor spike (Đèn LED RGB). "POV meoxink" + "ra dại" reaction = weekend viral combo.
 
 ## Sources
 - Products: https://findniche.com/tiktok/trending-products-vn
 - Sounds: https://chartex.com/tiktok/sounds/7-days/vietnam
 - Trends: https://35express.org (search "trend")
 - Slang: https://trykaiwa.com/blog/vietnamese-gen-z-slang-phrases-2026
+- Trình origin: https://gak.vn/en/articles/what-is-trinh-on-tiktok-vietnam

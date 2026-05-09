@@ -234,16 +234,16 @@
       13648
     ],
     "hermes-autoresearch/SKILL.md": [
-      1778267153831927303,
-      45905
+      1778346351132642656,
+      46783
     ],
     "hermes-external-skills-setup/SKILL.md": [
       1778215664737474284,
       2235
     ],
     "hermes-github-backup/SKILL.md": [
-      1778216066196657693,
-      7940
+      1778270651458385076,
+      9208
     ],
     "knowledge-management/gbrain-lmstudio-embedding/SKILL.md": [
       1778215664672876800,
@@ -390,8 +390,8 @@
       2272
     ],
     "multi-agent-orchestrator/SKILL.md": [
-      1778223984773890198,
-      39071
+      1778346381545153200,
+      44353
     ],
     "note-taking/obsidian/SKILL.md": [
       1778215664743124513,
@@ -469,9 +469,13 @@
       1778215664842531665,
       2678
     ],
+    "social-media/research-analyst/SKILL.md": [
+      1778346397922009058,
+      7622
+    ],
     "social-media/tiktok-viral-script/SKILL.md": [
-      1778267007880836065,
-      13170
+      1778346410774070703,
+      18446
     ],
     "social-media/xitter/SKILL.md": [
       1778215664675189267,
@@ -2188,6 +2192,19 @@
       "category": "smart-home",
       "frontmatter_name": "openhue",
       "description": "Control Philips Hue lights, scenes, rooms via OpenHue CLI.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "research-analyst",
+      "category": "social-media",
+      "frontmatter_name": "research-analyst",
+      "description": "Market research and monetization opportunity analysis for...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

@@ -100,7 +100,30 @@ Trải nghiệm timeline — kể chuyện, KHÔNG liệt kê specs
 - Body: Kể chuyện, storytelling — KHÔNG liệt kê specs
 - CTA: Casual, thân mật
 
-### Gen Z Slang Rules
+### Gen Z Slang Update (May 9, 2026)
+
+### NEW (confirmed viral May 4-9)
+- **Trình là gì mà trình ai chấm** — From HIEUTHUHAI song (Nov 2024), viral May 2026. "Ai có quyền đánh giá anh?" — đáp trả khi bị chỉ trích. Key phrase: "Ối dồi ôi, trình là gì mà trình ai chấm!"
+- **Ối dồi ôi** — Thốt ra khi không tin được (surprise/disbelief)
+- **Nam thư** — Toxic/flirty person to avoid
+- **Ra dại** — Điên cuồng vì vui
+- **Trình là gì mà trình ai chấm** — From HIEUTHUHAI song, viral May 2026. "Ối dồi ôi, trình là gì mà trình ai chấm!"
+- **Ối dồi ôi** — Thốt ra khi không tin được
+- **Nam thư** — Toxic/flirty person to avoid
+- **Ra dại** — Điên cuồng vì vui
+- **lọ** — HOT (from "lỏ", viral May 2026)
+- **Các mom ơi** — Cách gọi thân mật
+- **Các mom ơi** — Cách gọi thân mật
+
+### Still Valid
+- Meoxink, chuzz, delulu is the solulu, main character energy, green/red flag
+
+### DEAD (never use)
+- "quất một phát" — FINISHED
+- "đỉnh nóc kịch trần" — FINISHED
+- "Bốc trúng sít rịt" — Fading out
+
+## Gen Z Slang Rules
 - Use CURRENT slang — research fresh each session
 - Hot May 2026: nam thư, ra dại, meoxink, lọ (HOT from "lỏ"), chuzz, các mom ơi
 - DEAD (never use): "quất một phát", "đỉnh nóc kịch trần", template scripts
@@ -154,6 +177,7 @@ As of May 2026, TikTok's algorithm has shifted weighting from entertainment sign
 - [ ] Script is UNIQUE — no template repetition
 - [ ] **Has a "click moment" — viewer wants to see product price/detail**
 - [ ] **Completion rate optimized — every second earns the next**
+- [ ] **Has trust signal, not just entertainment** — Personal experience or social proof present
 
 ### QA-CORRECT-BEFORE-DELIVERY Protocol (2026-05-08 — MANDATORY)
 
@@ -165,10 +189,60 @@ As of May 2026, TikTok's algorithm has shifted weighting from entertainment sign
 
 **NEVER report a failed script to Anh without correcting it first.** "Flagged for correction" is not a valid end state — the corrected version must be what gets delivered.
 
+**MANDATORY ENFORCEMENT (add to every session involving scripts):**
+
+Before ANY script content is delivered, run:
+```bash
+# TRÁHN scan
+SCRIPT_FILE="$1"  # or find latest
+VIOLATIONS=$(grep -c "đỉnh nóc\|quất một phát\|đỉnh nóc kịch trần" "$SCRIPT_FILE" 2>/dev/null || echo "0")
+if [ "$VIOLATIONS" -gt 0 ]; then
+    echo "🚨 TRÁHN BLOCK: $VIOLATIONS violation(s)"
+    grep -n "đỉnh nóc\|quất một phát" "$SCRIPT_FILE"
+    echo "FIX REQUIRED — edit file inline, re-scan, only then proceed"
+    exit 1
+fi
+echo "✅ TRÁHN PASS"
+```
+
 **Known TRÁHN violations (verify these in EVERY script):**
 - ❌ "đỉnh nóc" or "đỉnh nóc kịch trần" → replace with "ngon vậy", "hơi bị ok", etc.
 - ❌ "quất một phát" → replace with action phrasing
 - ❌ "đã X là Y" cấu trúc cứng nhắc → replace with conversational
+
+**⚠️ PITFALL (2026-05-09):** Despite QA-CORRECT-BEFORE-DELIVERY being documented since 2026-05-08, the orchestrator still delivered content with TRÁHN violations in this session. The protocol was documented but not executed as a runtime gate. This skill now has the enforcement script above — use it.
+
+**Known TRÁHN violations (verify these in EVERY script):**
+- ❌ "đỉnh nóc" or "đỉnh nóc kịch trần" → replace with "ngon vậy", "hơi bị ok", etc.
+- ❌ "quất một phát" → replace with action phrasing
+- ❌ "đã X là Y" cấu trúc cứng nhắc → replace with conversational
+## 🚨 CRITICAL FINDING: Gen Z ≠ Revenue (May 9, 2026)
+
+**This is the single most important insight for content strategy.**
+
+From academic research (Tra Vinh University, 394 respondents, SEM analysis):
+
+| Factor | Beta | P-value | Significance |
+|--------|------|---------|--------------|
+| **KOL/KOC Influence** | 0.580 | <0.001 | ✅ MOST IMPORTANT |
+| Content Trust | 0.301 | <0.001 | ✅ Important |
+| Entertainment Value | 0.014 | 0.790 | ❌ ZERO — not significant |
+
+**⚠️ Entertainment does NOT drive purchases.** Gen Z buys because they trust the person recommending, NOT because content is entertaining.
+
+**Practical implications:**
+- Funny/entertaining scripts get views but **don't convert**
+- Authentic personal recommendation scripts **convert better**
+- "Trust me because I actually used it" > "This product is so amazing everyone needs it"
+
+**Script strategy shift:**
+- Lead with PERSONAL EXPERIENCE ("anh đã dùng 2 tuần...")
+- Add SOCIAL PROOF ("164K đơn trong 7 ngày" or "bạn mình cũng mua rồi")
+- Keep it REAL — Gen Z smells fake marketing from miles away
+- **Stop chasing "funny viral" → Focus on trust-building content**
+
+---
+
 ## Critical Research Finding (May 2026)
 
 ### Gen Z Purchase Behavior — What Actually Drives Buying
@@ -193,19 +267,46 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - Lead with PERSONAL EXPERIENCE ("anh đã dùng 2 tuần...")
 - Add SOCIAL PROOF ("164K đơn trong 7 ngày" or "bạn mình cũng mua rồi")
 - Keep it REAL — Gen Z smells fake marketing from miles away
+## 🚨 NEW TREND (May 4 viral): "Sound Các Câu Nói Buồn Của Úc Phượng"
+- **Meaning:** Sad, dramatic voice over mundane content
+- **Format:** Slow, emotional voice → contrast with normal/funny video
+- **Why it viral:** Contrast humor — sad music + everyday content = comedy
+- **Comedy technique:** Nội dung thật: hết tiền → ghép sound buồn → thành "bi kịch cuộc đời"
+- **Best for:** Product reveals with emotional storytelling, "twist" reveals
+- **Voice:** Chậm, trầm, hơi "kịch nhưng thật"
+- **Source:** 35express.org (May 4, 2026)
+
+## Weekend Strategy (Saturday/Sunday Specific)
+- **Higher female engagement** on weekends
+- **Focus:** Aesthetic products, beauty, accessories
+- **Gen Z drives virality** Sat/Sun → Millennials convert Mon-Fri
+- **Sound strategy:** Piano Solo Cherry Blossom (soft aesthetic) for morning/afternoon, upbeat (Lùi Lại Lấy Đà) for evening
+- **Hook focus:** POV meoxink, ra dại reaction, aesthetic reveal
 
 ## Sources
 - Products: https://findniche.com/tiktok/trending-products-vn
 - Sounds: https://chartex.com/tiktok/sounds/7-days/vietnam
 - Trends: https://35express.org (search "trend")
 - Slang: https://trykaiwa.com/blog/vietnamese-gen-z-slang-phrases-2026
-- Algorithm: https://zonflip.com/tiktok-shops-may-2026-algorithm-decoded (May 2026 update)
-- CHR System: https://dembuon.vn/threads/cap-nhat-chinh-sach-affiliate-tiktok-2026
+- **Algorithm May 2026 (FULL):** See `references/tiktok-algorithm-may-2026.md` — comprehensive CHR, fee math, commerce signals, completion rate, demographic split
 - Gen Z Research: Tra Vinh University Journal of Science — "Factors Affecting Gen Z Online Purchase Intention on TikTok Shop"
 - Product research: https://findniche.com/tiktok/trending-products-vn
 
 ## Output Paths
-- Morning briefs: `~/hermes/workers/content-creator/outputs/YYYY-MM-DD-morning-brief.md`
+
+**⚠️ CRITICAL: Always use absolute paths in cron/worker context (2026-05-10)**
+
+Tilde (`~`) does NOT expand in cron environment. ALWAYS use full paths:
+```bash
+# WRONG (tilde doesn't expand in cron):
+~/hermes/workers/content-creator/outputs/
+
+# CORRECT (always use full path):
+/Users/tuananh4865/hermes/workers/content-creator/outputs/
+```
+
+- Morning briefs: `/Users/tuananh4865/hermes/workers/content-creator/outputs/YYYY-MM-DD-morning-brief.md`
+- Evening briefs: `/Users/tuananh4865/hermes/workers/content-creator/outputs/YYYY-MM-DD-evening-brief.md`
 - Wiki log: Append to `/Volumes/Storage-1/Hermes/wiki/log.md` with `## [YYYY-MM-DD] cron | content-creator-morning-brief`
 
 ## Pitfalls (AVOID THESE)
@@ -227,9 +328,10 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - ❌ **Ignoring CHR** — partnering with red-CHR creators = affiliate content dies in algorithmic dead zone
 
 ### Algorithm Mistakes
-- ❌ **Entertainment-focused scripts** — "entertainment value" has ZERO statistical impact on purchases (beta=0.014, p=0.790)
+- ❌ **Entertainment-focused scripts** — "entertainment value" has ZERO statistical impact on purchases (beta=0.014, p=0.790). Views ≠ revenue. Stop chasing funny viral.
 - ❌ **Generic viral hooks** — "This is amazing everyone needs this" = no trust signal
 - ❌ **No "click moment"** — if viewer doesn't want to see price/detail, algorithm won't push
+- ❌ **Generic discovery hooks without trust** — must add personal experience or social proof
 
 ### Voice & Style Mistakes
 - ❌ **Polished/formal tone** — sounds fake to Gen Z. Authentic roughness > corporate polish
@@ -287,3 +389,4 @@ Anh thì biết rồi, vì anh đã bán được 2 tuần nay."
 - [[hermes-autoresearch]] — Autoresearch skill for nightly research runs
 - [[xurl]] — X/Twitter trends research (separate platform)
 - [[gen-z-slang-2026-04]] — Gen Z slang reference (updated May 2026)
+- `scripts/tráhn-qa-gate.sh` — Runtime TRÁHN enforcement (exit 1 = block delivery)

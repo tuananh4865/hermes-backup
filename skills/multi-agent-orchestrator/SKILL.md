@@ -751,7 +751,7 @@ When checking agent status, look for:
 | Commands go to wrong pane | Pane index assumed incorrectly | Always run `tmux list-panes -F` first |
 | User can't see agents | Spawned in wrong session | Open Terminal app |
 
-### CRITICAL: Symlinks don't resolve in spawned agents!
+**⚠️ CRITICAL PATH BUG (2026-05-09):** `~/hermes/workers/*/outputs/` uses tilde but cron runs in different $HOME context → paths DON'T resolve → files appear missing even when they exist. **ALWAYS use `/Users/tuananh4865/hermes/workers/*/outputs/` (full path) when checking worker outputs in cron context.**
 
 **PROBLEM**: Commands like `find ~/wiki -name '*.md'` return 0 results inside Claude Code spawned shells because symlinks don't resolve properly in the spawned environment.
 
@@ -841,12 +841,22 @@ When checking agent status, look for:
 12. **QA-CORRECT-BEFORE-DELIVERY (2026-05-08 lesson):** When a script QA check fails, CORRECT the script inline BEFORE reporting to Anh. Never flag a QA failure without fixing it first. "Flagged for correction" is not a valid end state — the corrected version must be what gets delivered.
 
 ### CRON ORCHESTRATOR — Authoritative Rule Source
+### CRON ORCHESTRATOR — Authoritative Rule Source
 
-**⚠️ KNOWN CONFLICT (2026-05-08):** The orchestrator cron job (`a4b8e528983f`) uses `HEARTBEAT.md` which says:
+**⚠️ MANDATORY STARTUP SEQUENCE (2026-05-09):** Every orchestrator cron run MUST begin by loading the briefing doc:
+```
+skill_view(name=multi-agent-orchestrator, file_path=references/orchestrator-briefing.md)
+```
+This is NOT optional. The briefing doc is the "source of truth" and contains:
+- 3-bullet format enforcement (600 char HARD LIMIT)
+- [SILENT] decision tree (ONLY when ALL dirs empty + no changes)
+- TRÁHN QA enforcement gate (block delivery if violations found)
+- Worker output gap detection (workers → cron output dirs, NOT shared outputs/)
+
+**⚠️ KNOWN CONFLICT (2026-05-08):** The orchestrator cron job may use `HEARTBEAT.md` which says:
 > "If ALL sources empty → [SILENT]"
 
 **This conflicts with `references/orchestrator-briefing.md` which has the CORRECT richer logic.**
-
 When this happens: the cron runs, finds a real issue (missed worker), but applies HEARTBEAT's simplistic rule and sends `[SILENT]`.
 
 **Rule**: The briefing reference (`references/orchestrator-briefing.md`) is ALWAYS the authoritative source. If `HEARTBEAT.md` and this doc conflict, follow this doc. The briefing doc should be loaded by the orchestrator cron at startup.
@@ -856,6 +866,8 @@ When this happens: the cron runs, finds a real issue (missed worker), but applie
 2. **Any missed worker cron = "Cần xử lý" bullet, NEVER silent suppression**
 3. Worker output EXISTS (>1KB) = always report it, never suppress as "nothing new"
 4. Script QA pass is MANDATORY before sending content to Anh
+
+**⚠️ May 9 Morning Brief Finding:** Research Agent last produced output May 6 evening. By May 9 that's ~46h gap. Content Creator and Research Agent cron outputs exist in `~/.hermes/cron/output/{job_id}/` but shared `outputs/` dirs are EMPTY. This confirms Pitfall 18 — workers fire but don't write to shared dirs. Orchestrator must check BOTH cron output dirs AND shared outputs/ when compiling briefings.
 
 ## PITFALL 10 (2026-05-08): Verbose Output Still Happened Despite Documentation
 
@@ -873,6 +885,91 @@ fi
 ```
 
 **3-bullet format is NON-NEGOTIABLE.** Each bullet = 1 line. Long content → write to file, put path in bullet. Never send prose paragraphs to Anh via Telegram.
+
+## PITFALL 15 (2026-05-09): TRÁHN QA Gate Exists But Was NOT Executed
+
+Despite the TRÁHN QA gate being documented in `references/orchestrator-briefing.md` with explicit `exit 1` blocking mechanism, the orchestrator in this session STILL delivered content with violations:
+
+- Violations were **identified** (grep found "đỉnh nóc" phrases)
+- But the delivery was **NOT blocked** — content went through anyway
+- The gate was documented but not actually invoked
+
+**Root cause:** The QA gate exists as a procedural note in the briefing doc, but there's no ENFORCEMENT step wired into the orchestrator's execution flow. The orchestrator reads the docs but doesn't auto-run the gate commands.
+
+**Required fix (MANDATORY — patch the briefing doc itself, not just this skill):**
+
+The briefing doc's TRÁHN gate must be converted from "documentation" to "enforced step." Add at the TOP of the briefing doc:
+
+```markdown
+# MANDATORY PRE-FLIGHT CHECKS (run BEFORE compiling any report)
+
+## 1. TRÁHN QA Gate
+LATEST=$(ls -t ~/.hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
+if [ -n "$LATEST" ]; then
+    VIOLATIONS=$(grep -c "đỉnh nóc\|quất một phát\|đỉnh nóc kịch trần" "$LATEST" 2>/dev/null || echo "0")
+    if [ "$VIOLATIONS" -gt 0 ]; then
+        echo "🚨 TRÁHN BLOCK: $VIOLATIONS violation(s) in $LATEST"
+        grep -n "đỉnh nóc\|quất một phát" "$LATEST"
+        echo "FIX REQUIRED — edit file, re-scan, only then proceed"
+        # DO NOT deliver content until violations = 0
+    fi
+fi
+```
+
+**Pattern failure:** "Documentation exists" ≠ "Enforcement happens." The orchestrator must have the gate as an actual runtime check, not just a written rule.
+
+## PITFALL 16 (2026-05-09): Pre-flight Checks Documented But NOT Executed
+
+**Symptom**: Briefing doc has TRÁHN QA gate + 3-bullet enforcement documented, but orchestrator STILL delivered verbose content with violations.
+
+**Pattern**: "Documentation exists" ≠ "Enforcement happens."
+
+**Root cause**: Cron sessions run with frozen SOUL.md — they CANNOT call `skill_view()` to load the briefing doc. Rules are documented but never loaded.
+
+**Required fix**: The rules MUST be inlined in the cron prompt itself, not in a separate reference doc that requires skill_view.
+
+## PITFALL 17 (2026-05-10): Path Resolution in Cron Context
+
+**Symptom**: `ls -la ~/hermes/workers/*/outputs/` returns empty in cron, but files exist.
+
+**Root cause**: Tilde (`~`) does NOT expand in cron environment. Cron runs with different shell context where `$HOME` may not be set correctly.
+
+**Affected paths**:
+- `~/hermes/workers/*/outputs/`
+- `~/.hermes/cron/output/`
+
+**Fix**: Always use absolute paths in cron context:
+```bash
+# WRONG:
+ls -la ~/hermes/workers/*/outputs/
+
+# CORRECT (cron context):
+ls -la /Users/tuananh4865/hermes/workers/*/outputs/
+ls -la /Users/tuananh4865/.hermes/cron/output/
+```
+
+**Verification in cron**:
+```bash
+echo $HOME  # May return empty or different value
+# Always use /Users/tuananh4865 instead of ~
+```
+
+## PITFALL 18 (2026-05-10): Cron = Frozen SOUL.md, skill_view() Unavailable
+
+**Symptom**: Briefing doc rules exist (`references/orchestrator-briefing.md`) but orchestrator ignores them in cron sessions.
+
+**Root cause**: Cron sessions use frozen SOUL.md snapshot. They CANNOT call `skill_view()` at runtime. The briefing doc reference is useless in cron context.
+
+**Architecture insight**:
+- **Interactive session**: `skill_view()` loads briefing → rules enforced ✅
+- **Cron session**: Briefing doc never loaded → rules NOT enforced ❌
+
+**Fix options**:
+1. **Inline the rules** in cron prompts (not reference docs)
+2. **Accept limitation** — cron orchestrator may not follow all briefing rules
+3. **Use different mechanism** — perhaps pre-compile briefing into cron prompt at creation time
+
+**Key insight for future**: Documentation in skill ≠ Enforcement in cron. When writing rules for cron behavior, inline them directly in the prompt, not in separate reference files.
 
 ## PITFALL 11 (2026-05-08): watchdog_processor.py Path.write_text() Bug
 

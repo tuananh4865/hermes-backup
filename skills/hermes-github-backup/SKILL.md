@@ -179,7 +179,41 @@ git commit -m "Initial backup"
 git push origin main
 ```
 
-### 6. Cron Job (auto backup 3AM daily)
+### 6. Critical: Secret Scanning Block (auth.json)
+
+GitHub Secret Scanning auto-blocks pushes containing `auth.json` files even on `--force` push. The remote rejects with:
+```
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: Push cannot contain secrets
+remote:   — GitHub Personal Access Token —
+remote:   locations:
+remote:     - commit: XXXXXX path: profiles/research-lead/auth.json:12
+```
+
+**Prevention — .gitignore MUST include auth files:**
+```gitignore
+# Auth files (contain secrets — BLOCKED by GitHub secret scanning)
+auth.json
+profiles/**/auth.json
+state-snapshots/**/auth.json
+```
+
+**Fix if push is blocked:**
+```bash
+# 1. Update .gitignore to exclude auth files
+echo -e "\n# Auth files (contain secrets)\nauth.json\nprofiles/**/auth.json\nstate-snapshots/**/auth.json" >> .gitignore
+
+# 2. Remove cached auth files from git index
+git rm --cached -f auth.json profiles/**/auth.json state-snapshots/**/auth.json 2>/dev/null
+
+# 3. Amend the commit (removes auth files from history)
+git commit --amend -m "Backup hermes full: $(date +%Y-%m-%d)"
+
+# 4. Push again
+git push origin main --force
+```
+
+### 7. Cron Job (auto backup 3AM daily)
 ```bash
 cd ~/.hermes
 git add .
@@ -327,6 +361,9 @@ cp -r /tmp/hermes-backup/skills/* /Volumes/Storage-1/Hermes/skills/
 ```
 
 ---
+
+## Related
+- `references/secret-scanning-fix-2026-05-09.md` — Resolution for GitHub Secret Scanning block on first push
 
 ## Notes
 
