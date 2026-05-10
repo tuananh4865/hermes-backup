@@ -1,7 +1,7 @@
 ---
 name: hermes-agent
 description: "Configure, extend, or contribute to Hermes Agent."
-version: 2.0.0
+version: 2.1.0
 author: Hermes Agent + Teknium
 license: MIT
 metadata:
@@ -585,17 +585,31 @@ MiniMax-M2.7 is **text-only**. When `auxiliary.vision.provider: auto`, the auto-
 ```bash
 grep "Auxiliary vision" ~/.hermes/logs/agent.log | tail -5
 ```
+## Working Vision Configs for LM Studio (2026-05-10)
 
-**Working configurations (2026-05-03):**
+### Preferred: gemma-4-e2b (Tuấn Anh's choice)
 ```yaml
 auxiliary:
   vision:
     provider: custom
-    model: google/gemma-4-e4b
+    model: google/gemma-4-e2b
     base_url: http://localhost:1234/v1
-    api_key: none
+    api_key: no-key      # NOT "none" — LM Studio rejects "none"
     timeout: 120
 ```
+**Verified 2026-05-10:** Works with properly formatted PNG/JPEG images (tested with Google logo). Requires valid images — tiny 1x1 test PNGs or malformed base64 fail with "Invalid image detected".
+
+### Alternative: glm-4.6v-flash
+```yaml
+auxiliary:
+  vision:
+    provider: custom
+    model: zai-org/glm-4.6v-flash
+    base_url: http://localhost:1234/v1
+    api_key: no-key
+    timeout: 120
+```
+**Verified:** Reliable, "v" suffix guarantees multimodal support.
 
 **Fallback priority order:**
 1. Active provider if vision-capable (OpenRouter, Nous)
@@ -603,10 +617,8 @@ auxiliary:
 3. Nous Portal (OAuth)
 4. Custom endpoint with local multimodal model (qwen-vl, llava, pixtral)
 
-### Vision Speed (qwen3.5-0.8b via LM Studio)
-- Complex image (Google homepage): ~27 seconds
-- Small/simple images: faster
-- For faster vision, use larger model or cloud provider with vision (OpenRouter + google/gemini-2.5-flash)
+### Vision Speed (via LM Studio)
+Speed depends on the vision-capable model used. For fast vision, use a vision-capable model (glm-4.6v-flash, qwen-vl, pixtral) rather than text-only models.
 
 ## Troubleshooting
 
@@ -664,6 +676,11 @@ Path("log.md").append_text(text)
 ```
 See `references/python314-path-api.md` for full details.
 
+### `hermes update` fails: "Not a git repository"
+**Symptom:** `✗ Not a git repository. Please reinstall:` — the `~/.hermes/hermes-agent/` directory exists but has no `.git/`.
+
+**Fix:** See `references/hermes-update-failure.md` for the step-by-step workflow (rm → git clone → install).
+
 ### Gateway issues
 Check logs first:
 ```bash
@@ -688,10 +705,64 @@ hermes config set auxiliary.vision.model <model_name>
 ```
 
 ### Tuấn Anh's Vision Setup
-See `references/tuananh-vision-config.md` for his working LM Studio vision configuration and how to verify it's running.
+**Updated 2026-05-10:** gemma-4-e2b IS vision-capable (verified). `.env` file overrides config.yaml — all three locations must agree. See `references/tuananh-vision-config.md` for working configs and triple-location env var fix.
+
+### LM Studio Vision Crash Debugging
+**Critical (2026-05-10):** Many LM Studio models are text-only and crash on image input with `OSError: broken data stream when reading image file`.
+
+**gemma-4-e2b DOES support vision** (verified 2026-05-10) — works with real PNG/JPEG images. Earlier failures were due to: (1) tiny 1x1 test PNGs too small for gemma-4's processor, (2) malformed base64 strings.
+
+**Only models with "v" in the name** (glm-4.6v-flash, qwen-vl, pixtral) reliably support vision on LM Studio — BUT gemma-4-e2b is the exception (verified working 2026-05-10).
+
+**Triple-location env var override (CRITICAL):** The `.env` file overrides config.yaml. If you change config.yaml but `.env` has the old value, the gateway still uses the stale env var. See `references/lm-studio-vision-crash-debug.md` for full diagnosis + fix workflow.
+
+### Triple-Location Env Var Override (CRITICAL — 2026-05-10)
+
+**Problem:** `AUXILIARY_VISION_MODEL` exists in 3 locations. Changing config.yaml is NOT enough — stale values persist.
+
+| Location | Example | Override Power |
+|----------|---------|---------------|
+| `~/.hermes/config.yaml` | `auxiliary.vision.model: google/gemma-4-e2b` | Base config |
+| `~/.hermes/.env` | `AUXILIARY_VISION_MODEL=google/gemma-4-e2b` | **Highest** — loaded with `override=True` at module import |
+| `~/Library/LaunchAgents/ai.hermes.gateway.plist` | `EnvironmentVariables.AUXILIARY_VISION_MODEL` | Launchd startup |
+
+**Precedence (highest to lowest):**
+1. `.env` — loaded at Python module import with `override=True`
+2. `config.yaml` — written to env vars at gateway startup
+3. plist `EnvironmentVariables` — only read at launchd start
+
+**Symptom:** You change `config.yaml` to `google/gemma-4-e2b`, restart the gateway, but vision still uses the old `google/gemma-4-e4b`. The running process has the stale `.env` value.
+
+**Fix — ALL THREE must agree:**
+```bash
+# 1. Update config.yaml
+hermes config set auxiliary.vision.model google/gemma-4-e2b
+
+# 2. Update .env (CRITICAL — this overrides config.yaml)
+echo "AUXILIARY_VISION_MODEL=google/gemma-4-e2b" >> ~/.hermes/.env
+
+# 3. Update plist if it exists
+# Edit ~/Library/LaunchAgents/ai.hermes.gateway.plist
+# Restart via launchctl
+```
+
+**Verification:**
+```bash
+# Check which value the GATEWAY PROCESS is actually using
+ps aux | grep hermes | grep gateway
+# Then check /proc/<pid>/environ or use:
+grep AUXILIARY ~/.hermes/.env
+```
+
+**Restart behavior:**
+- `launchctl` restart reads `.env` fresh — config.yaml changes take effect after this
+- Gateway processes spawned before the restart still have stale env vars
+- After restart, verify with: `grep "Vision provider" ~/.hermes/logs/agent.log | tail -3`
+
+**Why this matters:** Text-only models (gemma-4-e4b) crash on image input with "The model has crashed". Only vision-capable models should be set. The triple-location issue causes silent failures.
 
 ### Vision Model Benchmarks
-See `references/vision-model-benchmark.md` for cross-architecture benchmark results comparing gemma-4-e2b vs qwen3.5-0.8b via LM Studio. Key insight: gemma-4-e4b (~12s) beats gemma-4-e2b (~20s) and qwen3.5-0.8b (~27s) — larger model is faster due to heavier quantization and VL-specific optimization.
+See `references/vision-model-benchmark.md` for cross-architecture benchmark results. **NOTE:** Benchmarks on text-only models (gemma-4-e4b, qwen3.5-0.8b) are irrelevant for vision — these models CRASH on image input. Only vision-capable models should be tested. Exception: `google/gemma-4-e2b` DOES support vision (verified 2026-05-10) — not "v" in name but works with real PNG/JPEG images.
 
 ### Vision fails with MiniMax provider
 **Symptom:** `vision_analyze` returns "no image attached" even though image is valid.

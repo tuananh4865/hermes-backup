@@ -49,24 +49,42 @@
 | Single | ₫80,000 | 3.75% | Low margin |
 | 5-item bundle | ₫400,000 | 0.75%/item | 5x revenue |
 
-## Top Products (May 9, 2026)
+## Top Products (May 10, 2026)
 
 | Product | 7-Day Orders | Price | GMV | Commission |
 |---------|-------------|-------|-----|------------|
-| Dây Buộc Tóc Nhồi Bông | 56.37K | ₫23,299 | #1 | 10-15% |
-| Kẹp Tóc Nơ Bong Bóng | 19.16K | ₫36,250 | ₫3.38B | 10-15% |
-| Charm Chữ Mini | 21.56K | ₫1,644 | ₫270M | 10-15% |
-| Vòng Tay May Mắn | 26.61K | ₫62,983 | — | 15-20% |
+| Dây Buộc Tóc Nhồi Bông | 56.37K | ₫23,299 | #1 ALL | 10-15% |
+| Đồng Hồ (quà tặng) | 34.35K | ₫34,990 | — | 15-20% |
 | Hộp Đựng Trang Sức Asimi | 32.73K | ₫51,500 | — | 15-20% |
+| Dây Chun Buộc Tóc 10gram | 27.94K | ₫10,000 | ₫279M | 10-15% |
+| Charm Chữ Mini | 21.56K | ₫1,644 | ₫270M | 10-15% |
 
-## Key Research Finding
+### BREAKING: Jelly Skin (Summer 2026)
+- **#JellySkin2026** — billions of views
+- "Da mọng nước" replacing "Glass Skin"
+- Core: Hyaluronic Acid (HA) serum
+- Commission: 12-18%
+- **Angle:** "Trước da dầu bóng loáng, sau = da thật ẩm mượt"
 
-**Gen Z ≠ Revenue (IJRPR 2025)**
+### BREAKING: Sunscreen Peak
+- Cell Fusion C: +337% growth
+- Anessa: +24%, Sunplay: +34%
+- Window: May-August
 
+## Key Research Findings
+
+### Gen Z ≠ Revenue (IJRPR 2025)
 | Factor | Beta | P-value | Significance |
 |--------|------|---------|--------------|
 | KOL/KOC Influence | 0.580 | <0.001 | MOST IMPORTANT |
 | Content Trust | 0.301 | <0.001 | Important |
 | Entertainment Value | 0.014 | 0.790 | ZERO |
 
-**Strategy:** Gen Z drives virality. Millennials drive revenue.
+### NEW: Expertise > Attractiveness (Nature, May 6, 2026)
+**"Substance over superficiality: how influencer credibility attributes drive social commerce purchase intentions of Vietnamese youth"**
+- Study: 442 respondents, ages 16-30, 6-month longitudinal
+- **Expertise = highest predictor of purchase intention**
+- **Credibility = strong**
+- **Attractiveness = NOT significant**
+
+**=> Người bán KHÔNG cần đẹp, CẦN có kiến thức và uy tín**

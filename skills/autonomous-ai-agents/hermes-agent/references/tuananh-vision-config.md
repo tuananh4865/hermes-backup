@@ -2,44 +2,42 @@
 
 ## Current Working Setup
 
-Vision tool is configured to use **LM Studio local server** with a multimodal small model:
+Vision tool is configured to use **LM Studio local server** with a multimodal model:
 
 ```yaml
 auxiliary:
   vision:
     provider: custom
-    model: qwen3.5-0.8b
+    model: zai-org/glm-4.6v-flash
     base_url: http://localhost:1234/v1
-    api_key: none
+    api_key: no-key
     timeout: 120
     download_timeout: 30
 ```
 
-## How to Verify Vision is Working
+## Critical: Not All Models Support Vision
+
+LM Studio serves multiple models — most are TEXT-ONLY and will crash on image input.
+The error: `BadRequestError: The model has crashed without additional information.`
+
+**Model compatibility (LM Studio, tested 2026-05-10):**
+| Model | Vision | Status |
+|-------|--------|--------|
+| `zai-org/glm-4.6v-flash` | ✅ | Working — "The pixel is red" |
+| `google/gemma-4-e4b` | ❌ | Crashes on image input |
+| `google/gemma-4-e2b` | ❌ | Crashes on image input |
+| `qwen3.5-0.8b` | ❌ | Crashes on image input |
+| `qwen/qwen3.5-9b` | ❌ | Text-only |
+
+**Rule:** Model name must contain "v" (e.g., `glm-4.6v`, `qwen-vl`, `llava`, `pixtral`) to indicate vision capability.
+
+## How to Verify
 
 ```bash
-# Check logs for current vision provider
-grep "Auxiliary vision" ~/.hermes/logs/agent.log | tail -5
+# Check which model is actually being used
+grep "Auxiliary vision" ~/.hermes/logs/agent.log | tail -3
 ```
-
-Expected output when working:
-```
-Auxiliary vision: using custom (qwen3.5-0.8b) at http://localhost:1234/v1/
-```
-
-## Common Mistake: Over-diagnosing
-
-**Symptom:** Agent spends too much time investigating vision when it's already working.
-
-**Lesson:** Before digging into provider code, check the actual config and logs first:
-1. `cat ~/.hermes/config.yaml | grep -A8 "auxiliary:"`
-2. `grep "Auxiliary vision" ~/.hermes/logs/agent.log | tail -3`
-
-**Tuấn Anh's environment specifics:**
-- Main model: `MiniMax-M2.7` (text-only, no vision) — confirmed
-- Vision backend: **LM Studio** (`qwen3.5-0.8b`) at `localhost:1234` — this is what actually handles vision
-- No OpenRouter key needed for vision when using local backend
 
 ## Related
 
-- [[hermes-agent]] skill — Troubleshooting section has detailed MiniMax vision fix documentation
+- [[hermes-agent]] skill — Troubleshooting section has detailed vision fix documentation

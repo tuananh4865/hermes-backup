@@ -61,12 +61,39 @@ Research discovers new slang but it often stays in worker outputs, never syncing
 
 **Why this matters:** Gen Z slang evolves weekly. If research finds slang on Monday but it never gets synced to the authoritative source, future sessions use stale vocabulary in scripts → content feels outdated → Anh rejects scripts.
 
-**Current slang state (2026-05-10):**
-- learned-about-tuananh.md says "Updated 2026-05-04"
-- May 9 briefing has new terms not yet synced: "Ối dồi ôi", "Ra dại", "Nam thư", "lọ (HOT)", "Các mom ơi"
-- → This is the gap to close tonight
+**Gen Z Slang Sync — MANDATORY STEP (2026-05-10 fix)**
 
-### 2. AI Agents Research
+The evening Orchestrator Monitor correctly noted "Gen Z slang list marked 'Updated 2026-05-04' — cần verify". The root cause: workers USE fresh slang in outputs but there's no automated sync back to `entities/learned-about-tuananh.md`.
+
+**CRITICAL PATH BUG (2026-05-10):** The content-creator outputs are at `/Users/tuananh4865/.hermes/workers/content-creator/outputs/` (NOT the tilde path which doesn't expand in cron). The `/Volumes/Storage-1/Hermes/workers/content-creator/outputs/` is a different directory accessible from the wiki machine.
+
+**MANDATORY SYNCHRONIZATION LOOP — add to every autoresearch session:**
+```bash
+# 1. Check content-creator outputs (use ABSOLUTE path — tilde doesn't expand in cron)
+WORKER_OUTPUT=$(ls -t /Users/tuananh4865/.hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
+if [ -n "$WORKER_OUTPUT" ]; then
+    # 2. Check if slang was used that's newer than wiki file's updated date
+    LATEST_SLANG=$(grep -iE "(Ối dồi ôi|Ra dại|Nam thư|lọ.*HOT|Các mom ơi|meoxink|Trình là gì)" "$WORKER_OUTPUT" 2>/dev/null | head -5)
+    if [ -n "$LATEST_SLANG" ]; then
+        echo "FOUND newer slang in worker output:"
+        echo "$LATEST_SLANG"
+        echo "→ Must update entities/learned-about-tuananh.md Gen Z Slang section"
+    fi
+fi
+```
+
+**Direct paths for slang sync:**
+- Worker outputs: `/Users/tuananh4865/.hermes/workers/content-creator/outputs/`
+- Wiki entity file: `/Volumes/Storage-1/Hermes/wiki/entities/learned-about-tuananh.md`
+- When slang is found in worker output → patch the wiki file's Gen Z Slang section
+
+**Current slang status (2026-05-10):**
+- `learned-about-tuananh.md` updated: 2026-05-10 — authoritative wiki entity with full slang list
+- `tiktok-viral-script` skill — embedded slang list synced May 9-10, used by Content Creator
+- **Sync pattern confirmed working**: Autoresearch patches wiki entity from worker outputs; skill embeds slang for reference; both stay current
+- Slang evolution tracked in: worker outputs → autoresearch knowledge.md → wiki entity
+
+### Gen Z Slang Rules
 Research self-improvement patterns and agent frameworks.
 
 Target: Document 5+ new techniques
@@ -922,6 +949,7 @@ cronjob create --name "Job Name" --prompt "..." --schedule "..." --skills [...] 
 - `references/three-focus-structure.md` — **SKILL.md companion** — 3-focus research structure explained
 - `references/proactive-research-cron.md` — **7AM research cron bug** — python3.14 not found fix
 - `references/x-research-methodology.md` — **X Research methodology** (critical: direct X posts don't appear in web search, must use indirect sources)
+- `references/x-research-hermes-2026-05-10.md` — **Hermes Agent X research results** (May 10): 140K stars, v2026.5.7 release, use cases, competitor analysis, memory optimization papers
 - `references/cron-prompt-vs-skill.md` — CRITICAL: Cron prompt vs Skill distinction
 - `references/felix-model-setup-checklist.md` — Verification steps cho Felix/agentic company setup
 - `references/session-continuity-gap.md` — **Session continuity gap** (2026-05-06): TASK_STATE.md never written, no pre-compact checkpoint, context compression loses work-in-progress. See this BEFORE working on memory/session features.

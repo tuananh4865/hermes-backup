@@ -114,24 +114,31 @@ Save to: `~/hermes/workers/content-creator/outputs/YYYY-MM-DD-evening-research-b
 - 5-item bundle ₫400,000 → fee = 0.75% per item
 - **Result: 5x revenue, same fixed cost**
 
+### EXPERTISE > ATTRACTIVENESS (May 10, 2026 — CRITICAL UPDATE)
+
+**Study:** Nature Scientific Reports (May 6, 2026) — 442 respondents, ages 16-30, Vietnamese Gen Z
+
+> Gen Z prioritizes **expertise and trustworthiness** over attractiveness in influencers
+
+**Implication:** Người bán KHÔNG cần đẹp, CẦN có kiến thức và uy tín. Content nên showcase KNOWLEDGE, không phải looks.
+
+### ALGORITHM MAY 2026 CONFIRMED (May 10, 2026)
+
+**From ZonFlip (May 3, 2026):**
+1. **Commerce layer = Content layer** — not a bolt-on anymore
+2. **Commerce signals dominant:** product clicks, add-to-cart, purchases weighted MORE than likes/shares
+3. Hook "mua ngay" — KHÔNG còn tác dụng (algorithm detects pressure as manipulation)
+4. **Video 60-180 giây** preferred
+5. **Follower-first testing:** new videos shown to followers FIRST before FYP
+6. Niche consistency critical — 45% lower reach if off-topic
+
+**70%+ Completion Rate Bar:**
+- Below 50%: Very limited distribution
+- 50-70%: Moderate
+- 70%+: Strong, potential virality
+- 85%+: **4× distribution multiplier**
+
 ### IMMEDIATE ACTION ITEMS (This Week)
-
-1. [ ] **Audit ALL affiliate partners' CHR scores** — RED CHR = algorithmic dead zone for your content
-2. [ ] **Hair appliances (máy uốn tóc, dập phồng tóc PRO 2026)** — breakout category, low competition, 12-18% commission
-3. [ ] **Drop products with <15% commission** — they lose money after fee stack
-4. [ ] **Bundle low-price items (5+ units)** — offsets ₫3,000/order fixed fee
-
-## Gen Z vs Millennial Split (Research Finding)
-
-From academic research (IJRPR 2025, Cimigo 2025):
-
-| Driver | Beta | Significance |
-|--------|------|--------------|
-| KOL/KOC Influence | 0.580 | MOST IMPORTANT |
-| Content Trust | 0.301 | Important |
-| Entertainment Value | 0.014 | ZERO — not significant |
-
-**Implication:** Stop chasing "funny viral" → Focus on trust-building content
 
 | Cohort | Role | Strategy |
 |--------|------|----------|

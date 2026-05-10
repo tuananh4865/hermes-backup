@@ -1,21 +1,39 @@
-TikTok Script: "anh" + "mấy con vợ". Max 25s. Feedback: "được chưa" hoặc chỉ ra sai. Gen Z slang: ngon vãi, toang, đỉnh, vuýp. TRÁNH: "đã X là Y", lặp script cũ, "quất một phát".
+Modified files: SKILL.md
 §
-Vision: gemma-4-e2b (~20s) qua LM Studio localhost:1234. MiniMax-M2.7: text-only, NO vision. Config: auxiliary.vision.provider=custom, model=google/gemma-4-e2b, base_url=http://localhost:1234/v1
+Modified files: browser-harness, SKILL.md
 §
-Tuấn Anh research preference: chỉ search/citation từ 2026. Không dùng kết quả 2024-2025. Priority: latest information.
+Task 'Review the conversation above and update two things:  **Memory**: who the user is. Did the user reveal persona, desires,' — 1 turns
 §
-MANDATORY SESSION START: wiki start-here.md → SCHEMA.md → index.md → log.md (last 20) → learned-about-tuananh.md. Sau mỗi task: save new learnings to wiki immediately.
-
-Tuấn Anh Philosophy: "Deliver perfect result by any means necessary". KHÔNG hỏi, KHÔNG list options, OWN the task. Rule #4: QA everything before proceeding.
+Task 'Review the conversation above and update two things:  **Memory**: who the user is. Did the user reveal persona, desires, preferences, personal details' — session 20260510, 1 turns
 §
-LM Studio models thực tế: google/gemma-4-e2b, qwen3.5-0.8b-mlx, qwen3.6-35b-a3b. DEFAULT_MODEL trong lmstudio_wiki_agent.py không khớp - cần update. LM Studio server: http://192.168.0.187:1234/v1
+Modified files: with, SKILL.md
 §
-Gateway code: ~/.hermes/hermes-agent/gateway/run.py. Hook để add wiki session start: `session:start` event tại line ~3416 (trong `_handle_message_with_agent()`), triggered khi `_is_new_session`. Cron scripts ở /Volumes/Storage-1/Hermes/wiki/.crontab.
+Modified files: Skills
 §
-Antigravity: /Applications/Antigravity.app, ~/Downloads/Antigravity.dmg (195MB, v1.23.2). macOS blocks unsigned → click "Open".
+Modified files: completely
 §
-Hermes = Orchestrator (2026-05-05): workers content-creator + research-agent. Cron: 9AM briefing, 2h agent monitor, 9PM consolidation. Workers: 8AM/6PM briefs + reports. Felix = autonomous AI company. Workers thật sự tạo 2026-05-06: ~/hermes/workers/{content-creator,research-agent,orchestrator,memory}/ với SOUL.md + HEARTBEAT.md + outputs/. Cron duplicate 90c50d1a2d3c đã xóa - chỉ còn a4b8e528983f (2AM Autoresearch).
+Modified files: with
 §
-ByteRover (brv CLI): Verified 2026-05-06. NO account needed — uses LM Studio. Setup: `brv providers connect openai-compatible --base-url http://localhost:1234/v1 --model google/gemma-4-e2b --api-key "no-key"`. gemma-4-e2b ✅ ~76s curate/query. LM Studio: localhost:1234 (Mac Mini 192.168.0.187 DOWN)."
+Modified files: from, reference
 §
-Task 'Anh ơi test memory hooks' — session verify_f, 1 turns
+Task 'hermes update ⚕ Updating Hermes Agent...  ✗ Not a git repository. Please reinstall:   curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes' — session 20260510, 9 turns
+§
+Anh Tuấn Anh xác nhận 2026-05-10: google/gemma-4-e2b VẪN hoạt động với vision trên LM Studio — không phải text-only như em chẩn đoán. Nếu thấy lỗi vision với gemma, CẦU HỎI anh trước khi đổi model.
+§
+Task 'Review the conversation above and consider saving to memory if appropriate.  Focus on: 1. Has the user revealed things a' — 1 turns
+§
+Task 'Review the conversation above and consider saving to memory if appropriate.  Focus on: 1. Has the user revealed things about themselves — their person' — session 20260510, 1 turns
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260510, 1 turns
+§
+Modified files: SKILL.md, config.yaml
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260510, 1 turns
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260510, 1 turns
+§
+Modified files: note, reflect, model, SKILL.md, config.yaml
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260511, 1 turns
+§
+Modified files: reference, config.yaml

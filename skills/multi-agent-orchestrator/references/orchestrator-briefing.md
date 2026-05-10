@@ -8,7 +8,9 @@
 
 ### 1. TRÁHN QA Gate
 ```bash
-LATEST=$(ls -t ~/.hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
+# CRITICAL: Use ABSOLUTE PATH — tilde (~) does NOT expand in cron context!
+# $HOME in cron = /var/empty, so ~/hermes/... returns nothing
+LATEST=$(ls -t /Users/tuananh4865/hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
 if [ -n "$LATEST" ]; then
     VIOLATIONS=$(grep -c "đỉnh nóc\|quất một phát\|đỉnh nóc kịch trần" "$LATEST" 2>/dev/null || echo "0")
     if [ "$VIOLATIONS" -gt 0 ]; then
@@ -39,8 +41,8 @@ fi
 ## MANDATORY ENFORCEMENT (inline — no skill_view available in cron)
 
 ### Pre-Delivery Gate (RUN THESE as commands, not read as notes)
-1. TRÁHN scan:
-   LATEST=$(ls -t ~/.hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
+1. TRÁHN scan (use ABSOLUTE paths — tilde fails in cron!):
+   LATEST=$(ls -t /Users/tuananh4865/hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
    VIOLATIONS=$(grep -c "đỉnh nóc\|quất một phát\|đỉnh nóc kịch trần" "$LATEST" 2>/dev/null || echo "0")
    → If VIOLATIONS > 0: FIX inline with sed, re-scan, block until clean
 2. Format check:
@@ -56,7 +58,11 @@ Format: "Hoàn thành | Đang làm | Cần quyết định"
 Long content → write to file at ~/hermes/workers/orchestrator/outputs/YYYY-MM-DD-report.md, put path in bullet
 ```
 
-**⚠️ PITFALL 18 (2026-05-09):** HEARTBEAT.md also conflicts — says "[SILENT] if all sources empty" but this is wrong. The CORRECT rule: `[SILENT]` only when ALL worker outputs/ truly empty AND no system changes today. Any missed worker cron = "Cần xử lý" bullet, NEVER silent suppression. The briefing doc has the correct rule; HEARTBEAT.md has the wrong rule.
+**⚠️ PITFALL 18 (2026-05-09):** Cron sessions cannot call `skill_view()` — briefing doc is never loaded at runtime. Rules documented in briefing ≠ rules enforced in cron. The MANDATORY ENFORCEMENT section must be inlined directly in cron SOUL.md prompts.
+
+**⚠️ PITFALL 19 (2026-05-10):** The TRÁHN QA gate itself was broken in cron context — used `~/.hermes/...` paths which resolve to nothing when `$HOME=/var/empty`. All gates in cron context MUST use `/Users/tuananh4865/hermes/...` absolute paths. The gate would `exit 0` (pass) because `ls` found nothing → `$LATEST` empty → no violations checked → content delivered without QA. **Root cause of May 9-10 TRÁHN failures: gate was structurally broken, not just unenforced.**
+
+**⚠️ PITFALL 20 (2026-05-10):** Orchestrator cron found Research Agent output May 8 (2026-05-08-evening-brief.md) and Content Creator output May 7 (2026-05-07-evening-content.md) — both VALID and recent. But `ls ~/hermes/workers/*/outputs/` showed empty because tilde doesn't resolve in cron. Using `/Users/tuananh4865/hermes/workers/*/outputs/` (absolute) showed files correctly. **Same pattern as Pitfall 17 but now confirmed affecting QA gate itself.**
 
 ---
 
@@ -78,11 +84,11 @@ Long content → write to file at ~/hermes/workers/orchestrator/outputs/YYYY-MM-
 **Canonical check sequence (every orchestrator briefing):**
 ```bash
 # PRIMARY — cron output dirs (workers actually wrote here)
-ls -la ~/.hermes/cron/output/
+ls -la /Users/tuananh4865/.hermes/cron/output/
 
 # SECONDARY — shared outputs/ (often empty even when workers ran)
-ls -la ~/.hermes/workers/content-creator/outputs/
-ls -la ~/.hermes/workers/research-agent/outputs/
+ls -la /Users/tuananh4865/hermes/workers/content-creator/outputs/
+ls -la /Users/tuananh4865/hermes/workers/research-agent/outputs/
 ```
 
 **If cron dir has files but shared outputs/ is empty → cron dir is authoritative.** Workers fire → write to cron dir → orchestrator reads from there. Shared outputs/ may never fill — this is a known architecture gap, NOT a sign workers didn't run.
@@ -181,11 +187,11 @@ Hoàn thành | Đang làm | Cần quyết định
 **Detection:**
 ```bash
 # Check if heartbeat was actually updated today
-grep "Last Updated" ~/.hermes/workers/content-creator/HEARTBEAT.md
+grep "Last Updated" /Users/tuananh4865/hermes/workers/content-creator/HEARTBEAT.md
 # If yesterday's date → heartbeat is stale
 
 # Verify by checking actual output timestamps
-ls -lt ~/.hermes/workers/content-creator/outputs/*.md | head -3
+ls -lt /Users/tuananh4865/hermes/workers/content-creator/outputs/*.md | head -3
 ```
 
 **Rule:** Never trust HEARTBEAT "Today" labels. Always cross-reference with:
@@ -227,13 +233,13 @@ Known conflict: **2026-05-08** — Orchestrator cron found Research Agent missed
 
 ```bash
 # STEP 1: List ALL worker output files by timestamp
-find ~/.hermes/workers -name "*.md" -newer /tmp/$(date -v-1d +%Y-%m-%d) 2>/dev/null
+find /Users/tuananh4865/hermes/workers -name "*.md" -newer /tmp/$(date -v-1d +%Y-%m-%d) 2>/dev/null
 
 # STEP 2: Attribute to correct worker — read file header to verify
-head -3 ~/.hermes/workers/*/outputs/*.md 2>/dev/null | grep -E "(Research Analyst|Content Creator|---)"
+head -3 /Users/tuananh4865/hermes/workers/*/outputs/*.md 2>/dev/null | grep -E "(Research Analyst|Content Creator|---)"
 
 # STEP 3: Cross-reference with cron output (authoritative)
-ls -la ~/.hermes/cron/output/*/2026-05-09*.md 2>/dev/null
+ls -la /Users/tuananh4865/.hermes/cron/output/*/2026-05-09*.md 2>/dev/null
 ```
 
 **Source misattribution pattern (KNOWN ISSUE):** Research-agent outputs may appear in content-creator/outputs/ or vice versa. Always read file header to confirm true source, not just directory name.
@@ -247,11 +253,11 @@ Before finalizing report, verify EACH worker ran today:
 
 ```bash
 # Check each expected output — compare timestamps with current date
-ls -la ~/.hermes/workers/content-creator/outputs/   # Should have YYYY-MM-DD files
-ls -la ~/.hermes/workers/research-agent/outputs/      # Should have YYYY-MM-DD files
+ls -la /Users/tuananh4865/hermes/workers/content-creator/outputs/   # Should have YYYY-MM-DD files
+ls -la /Users/tuananh4865/hermes/workers/research-agent/outputs/      # Should have YYYY-MM-DD files
 
 # Check cron output too (primary source — workers write here first)
-ls -la ~/.hermes/cron/output/*/2026-05-09*.md 2>/dev/null
+ls -la /Users/tuananh4865/.hermes/cron/output/*/2026-05-09*.md 2>/dev/null
 ```
 
 | Worker | Expected | Morning Run (9AM) | Evening Run (6PM) |
@@ -314,12 +320,12 @@ From multi-agent-orchestrator SKILL.md — run BEFORE any status claim:
 # 1. System cron is running
 ps aux | grep cron | grep -v grep
 
-# 2. Output directory has recent files (CRITICAL: empty dirs = workers not producing)
-ls -la ~/.hermes/workers/content-creator/outputs/
-ls -la ~/.hermes/workers/research-agent/outputs/
+# 2. Output directory has recent files (use ABSOLUTE paths — tilde fails in cron!)
+ls -la /Users/tuananh4865/hermes/workers/content-creator/outputs/
+ls -la /Users/tuananh4865/hermes/workers/research-agent/outputs/
 
 # 3. Worker directories populated
-ls -la ~/.hermes/workers/{worker-name}/
+ls -la /Users/tuananh4865/hermes/workers/{worker-name}/
 ```
 
 **"Workers configured" (SOUL.md + HEARTBEAT.md exist) ≠ "Workers running" (outputs/ has files)**
@@ -332,12 +338,12 @@ This is the #1 false positive to avoid in briefings.
 When reviewing `autonomous.log` for morning briefing:
 
 ```
-tail -50 ~/.hermes/cron/autonomous.log | grep -E "2026-05-07|script|content|TikTok|report|worker"
+tail -50 /Users/tuananh4865/.hermes/cron/autonomous.log | grep -E "2026-05-07|script|content|TikTok|report|worker"
 ```
 
 When reviewing `dojo.log`:
 ```
-tail -30 ~/.hermes/cron/dojo.log | grep -E "complete|improved|committed"
+tail -30 /Users/tuananh4865/.hermes/cron/dojo.log | grep -E "complete|improved|committed"
 ```
 
 ### System Tasks with Priority 80+ — Act or Flag
@@ -384,7 +390,7 @@ Orchestrator runs every 2h. Morning brief (9AM) already reported content outputs
 
 ## Pending Tasks Format
 
-Source: `~/.hermes/workers/memory/PENDING_TASKS.md`
+Source: `/Users/tuananh4865/hermes/workers/memory/PENDING_TASKS.md`
 
 ```markdown
 ## Current Tasks
@@ -442,7 +448,7 @@ If current tasks = empty AND recent completions = empty AND blockers = none → 
 
 **Detection**: Check `~/.hermes/cron/autonomous.log` for:
 ```
-grep "Executing highest priority task" ~/.hermes/cron/autonomous.log | tail -5
+grep "Executing highest priority task" /Users/tuananh4865/.hermes/cron/autonomous.log | tail -5
 ```
 If same task appears 3+ times consecutively → loop detected.
 
@@ -476,7 +482,8 @@ Before ANY report containing scripts is sent to Anh, you MUST run this gate:
 
 ```bash
 # GATE 1: TRÁHN Scan
-LATEST=$(ls -t ~/.hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
+# CRITICAL: Use ABSOLUTE PATH — tilde (~) does NOT expand in cron context!
+LATEST=$(ls -t /Users/tuananh4865/hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
 [ -z "$LATEST" ] && echo "ERROR: No content file found" && exit 1
 
 VIOLATIONS=$(grep -c "đỉnh nóc\|quất một phát\|đỉnh nóc kịch trần" "$LATEST" 2>/dev/null || echo "0")
@@ -487,7 +494,7 @@ if [ "$VIOLATIONS" -gt 0 ]; then
     exit 1  # BLOCK delivery until fixed
 fi
 
-# GATE 2: Format Check  
+# GATE 2: Format Check 
 REPORT_LEN=$(echo "$REPORT_BODY" | wc -c)
 if [ "$REPORT_LEN" -gt 600 ]; then
     echo "⚠️ Report too long ($REPORT_LEN chars). Strip to 3 bullets."

@@ -2,7 +2,7 @@
 title: Hermes GitHub Backup Setup
 name: hermes-github-backup
 created: 2026-04-28
-updated: 2026-05-08
+updated: 2026-05-10
 type: skill
 tags: [github, backup, git, hermes-agent]
 description: Setup GitHub backup cho Hermes Agent data lên GitHub repo riêng
@@ -361,8 +361,30 @@ cp -r /tmp/hermes-backup/skills/* /Volumes/Storage-1/Hermes/skills/
 ```
 
 ---
+## Telegram Reporting
+
+**Chat ID**: `3764041476` (Telegram thread for backup reports)
+
+**Pre-flight check** (do this before sending):
+```bash
+if [ -z "$TG_BOT_TOKEN" ]; then
+  echo "⚠️ TG_BOT_TOKEN not set — skipping Telegram notification"
+fi
+```
+
+**Send notification** (only if `TG_BOT_TOKEN` is set):
+```bash
+curl -s -X POST "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage" \
+  -d "chat_id=3764041476" \
+  -d "text=<message>"
+```
+
+**Failure mode**: If `TG_BOT_TOKEN` is not set, backup still completes — just skip Telegram. Never block on missing env var.
+
+---
 
 ## Related
+
 - `references/secret-scanning-fix-2026-05-09.md` — Resolution for GitHub Secret Scanning block on first push
 
 ## Notes

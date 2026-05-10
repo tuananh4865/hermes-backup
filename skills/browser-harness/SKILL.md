@@ -41,6 +41,78 @@ print(page_info())
 - **After goto**: always `wait_for_load()`.
 - **Auth wall**: redirected to login → stop and ask the user. Don't type credentials.
 
+## ⚠️ TikTok — Logged-in Chrome Works
+
+**When the user is logged into their Chrome account, TikTok works fine with NO CAPTCHA.**
+
+The CAPTCHA only blocks when:
+- Chrome is NOT logged into TikTok
+- Using an anonymous/incognito session
+
+**What works (logged-in Chrome):**
+```python
+# Get profile stats
+goto_url("https://www.tiktok.com/@username")
+text = js("document.body.innerText")  # → "13.3M\nFollower\n156.5M\nLượt thích"
+
+# Get all video links with view counts (sorted)
+all_videos = js("""
+(function() {
+    const links = Array.from(document.querySelectorAll('a[href*="/video/"]'))
+        .filter(a => /\\d+[MK]/.test(a.innerText?.trim() || ''))
+        .map(a => {
+            const viewText = a.innerText?.trim() || '0';
+            let views = 0;
+            if (viewText.includes('M')) views = parseFloat(viewText) * 1000000;
+            else if (viewText.includes('K')) views = parseFloat(viewText) * 1000;
+            return { href: a.href, views: Math.floor(views), viewText };
+        });
+    links.sort((a, b) => b.views - a.views);
+    return links.slice(0, 15);
+})()
+""")
+
+# Get video page engagement metrics
+goto_url("https://www.tiktok.com/@user/video/ID")
+full_text = js("document.body.innerText")  
+# → "8.8M\n719K\n532.6K\n355.2K" (likes/comments/shares/saves)
+
+# Click a video
+click_at_xy(x, y)  # Use screenshot to find coordinates
+```
+
+**Key finding from session 2026-05-10:** TikTok video view counts appear INSIDE the anchor text of video links (e.g., "25.2M", "37.9M") — these are visible in `innerText` but NOT in `href` or other attributes. Use the regex `/\\d+[MK]/` to filter for videos.
+
+**⚠️ CAPTCHA only blocks when Chrome is NOT logged in.** If you see puzzle slider → check if user's Chrome is logged in. If not logged in → stop browser approach, use web search instead.
+
+**Full working technique (verified 2026-05-10):**
+```python
+# Get ALL videos from a profile sorted by views
+all_videos = js("""
+(function() {
+    const links = Array.from(document.querySelectorAll('a[href*="/video/"]'))
+        .filter(a => {
+            const text = a.innerText?.trim() || '';
+            return /\\d+[MK]/.test(text);
+        })
+        .map(a => {
+            const viewText = a.innerText?.trim() || '0';
+            let views = 0;
+            if (viewText.includes('M')) views = parseFloat(viewText) * 1000000;
+            else if (viewText.includes('K')) views = parseFloat(viewText) * 1000;
+            return { href: a.href, views: Math.floor(views), viewText: viewText };
+        });
+    links.sort((a, b) => b.views - a.views);
+    return links.slice(0, 15);
+})()
+""")
+# Result: [{'href': 'https://www.tiktok.com/@user/video/7442647063118073106', 'views': 533500000, 'viewText': '533.5M'}, ...]
+```
+
+**Cannot do:**
+- Any action requiring TikTok login verification mid-session (solve SMS/email OTP)
+- Bypassing TikTok's fraud detection if triggered
+
 ## Interaction skills (domain-agnostic)
 
 Location: `~/Developer/browser-harness/interaction-skills/`
@@ -64,6 +136,21 @@ rg --files ~/Developer/browser-harness/agent-workspace/domain-skills
 - `browser-harness --doctor` — version, install mode, daemon + Chrome state
 - `browser-harness --setup` — re-run browser attach flow
 - `browser-harness --update -y` — pull latest, restart daemon (runs automatically when banner appears)
+
+### TikTok Research Reference
+For TikTok creator/content research (viral videos, stats, trends): use `mcp_exa_web_search_exa` instead of direct browser navigation. See `references/tiktok-scraping-research.md` for the workflow and known limitations.
+
+**⚠️ TikTok CAPTCHA trap — PREVENTED THIS SESSION:**
+Initial attempts failed with CAPTCHA puzzle slider because:
+- Browser harness was connecting to a fresh Chrome instance (not the user's logged-in Chrome)
+- The user's actual Chrome at `chrome://inspect/#remote-debugging` was already logged into TikTok
+
+**What to do:**
+1. Run `browser-harness --doctor` — check "active browser connections — 1" means you're using user's real Chrome
+2. If CAPTCHA appears, verify user's Chrome is at TikTok and logged in
+3. The key difference: user's real logged-in Chrome bypasses all CAPTCHA, unauthenticated Chrome gets blocked
+
+**Verification: Is this the user's real Chrome?** Check `browser-harness --doctor` output shows "default — active page: ... TikTok ..." — if it shows TikTok already open, you're on user's session.
 
 ## Website research workflow
 

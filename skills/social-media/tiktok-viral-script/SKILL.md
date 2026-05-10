@@ -4,7 +4,7 @@ title: TikTok Viral Script
 description: Research trending TikTok content and write viral scripts in Tuấn Anh's voice — hook, body, CTA structure for TikTok Shop Vietnam affiliate content.
 trigger: When Anh asks to write a TikTok script, research trending products/sounds, or create content calendar.
 created: 2026-05-08
-updated: 2026-05-09
+updated: 2026-05-11
 type: skill
 tags: [tiktok, content, vietnam, social-media]
 confidence: high
@@ -66,8 +66,8 @@ Output path: ~/hermes/workers/content-creator/outputs/YYYY-MM-DD-[morning/evenin
 9. Tomorrow's focus preview
 
 **Output files:**
-- Brief: `~/hermes/workers/content-creator/outputs/YYYY-MM-DD-[morning/evening]-brief.md`
-- Heartbeat: `~/hermes/workers/content-creator/HEARTBEAT.md` (status tracking)
+- Brief: `/Users/tuananh4865/.hermes/workers/content-creator/outputs/YYYY-MM-DD-[morning/evening]-brief.md`
+- Heartbeat: `/Users/tuananh4865/.hermes/workers/content-creator/HEARTBEAT.md` (status tracking)
 
 ### Step 4: Write Individual Scripts
 Per script request:
@@ -100,23 +100,18 @@ Trải nghiệm timeline — kể chuyện, KHÔNG liệt kê specs
 - Body: Kể chuyện, storytelling — KHÔNG liệt kê specs
 - CTA: Casual, thân mật
 
-### Gen Z Slang Update (May 9, 2026)
+### Gen Z Slang Update (May 10, 2026)
 
-### NEW (confirmed viral May 4-9)
-- **Trình là gì mà trình ai chấm** — From HIEUTHUHAI song (Nov 2024), viral May 2026. "Ai có quyền đánh giá anh?" — đáp trả khi bị chỉ trích. Key phrase: "Ối dồi ôi, trình là gì mà trình ai chấm!"
+### NEW (confirmed viral May 10)
+- **Trình là gì mà trình ai chấm** — From HIEUTHUHAI song (Nov 2024), viral May 2026. "Ối dồi ôi, trình là gì mà trình ai chấm!" — đáp trả khi bị chỉ trích
 - **Ối dồi ôi** — Thốt ra khi không tin được (surprise/disbelief)
 - **Nam thư** — Toxic/flirty person to avoid
-- **Ra dại** — Điên cuồng vì vui
-- **Trình là gì mà trình ai chấm** — From HIEUTHUHAI song, viral May 2026. "Ối dồi ôi, trình là gì mà trình ai chấm!"
-- **Ối dồi ôi** — Thốt ra khi không tin được
-- **Nam thư** — Toxic/flirty person to avoid
-- **Ra dại** — Điên cuồng vì vui
+- **Ra dại** — Điên cuồng vì vui (going wild from joy)
 - **lọ** — HOT (from "lỏ", viral May 2026)
-- **Các mom ơi** — Cách gọi thân mật
-- **Các mom ơi** — Cách gọi thân mật
+- **Các mom ơi** — Cách gọi thân mật (variation of "mấy con vợ")
 
-### Still Valid
-- Meoxink, chuzz, delulu is the solulu, main character energy, green/red flag
+### Still Valid (from May 9)
+- meoxink, chuzz, delulu is the solulu, main character energy, green/red flag, lỏ vãi
 
 ### DEAD (never use)
 - "quất một phát" — FINISHED
@@ -295,19 +290,24 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 ## Output Paths
 
 **⚠️ CRITICAL: Always use absolute paths in cron/worker context (2026-05-10)**
+- Tilde (`~`) does NOT expand in cron environment ($HOME=/var/empty)
+- Workers write to `/Users/tuananh4865/.hermes/workers/*/outputs/` (local Mac path)
+- Wiki is at `/Volumes/Storage-1/Hermes/wiki/` (separate volume)
+- The cron output dir is `/Users/tuananh4865/.hermes/cron/output/{job_id}/`
+- See `references/worker-output-path-architecture.md` for full architecture
 
-Tilde (`~`) does NOT expand in cron environment. ALWAYS use full paths:
+**Actual worker output locations by cron job ID:**
+| Cron ID | Worker | Schedule | Path |
+|---------|--------|----------|------|
+| `ce3701b4dcdd` | Content Creator Morning | 8AM | `/Users/tuananh4865/.hermes/cron/output/ce3701b4dcdd/` |
+| `50bc2c2dfbb3` | Content Creator Evening | 6PM | `/Users/tuananh4865/.hermes/cron/output/50bc2c2dfbb3/` |
+| `e4fb0c36e9f7` | Research Analyst Morning | 8:30AM | `/Users/tuananh4865/.hermes/cron/output/e4fb0c36e9f7/` |
+| `1c425ba42980` | Research Analyst Evening | 6:30PM | `/Users/tuananh4865/.hermes/cron/output/1c425ba42980/` |
+
+**Cron output dir — list today's files:**
 ```bash
-# WRONG (tilde doesn't expand in cron):
-~/hermes/workers/content-creator/outputs/
-
-# CORRECT (always use full path):
-/Users/tuananh4865/hermes/workers/content-creator/outputs/
+ls -lt /Users/tuananh4865/.hermes/cron/output/*/2026-$(date +%Y-%m-%d)*.md 2>/dev/null
 ```
-
-- Morning briefs: `/Users/tuananh4865/hermes/workers/content-creator/outputs/YYYY-MM-DD-morning-brief.md`
-- Evening briefs: `/Users/tuananh4865/hermes/workers/content-creator/outputs/YYYY-MM-DD-evening-brief.md`
-- Wiki log: Append to `/Volumes/Storage-1/Hermes/wiki/log.md` with `## [YYYY-MM-DD] cron | content-creator-morning-brief`
 
 ## Pitfalls (AVOID THESE)
 
@@ -390,3 +390,35 @@ Anh thì biết rồi, vì anh đã bán được 2 tuần nay."
 - [[xurl]] — X/Twitter trends research (separate platform)
 - [[gen-z-slang-2026-04]] — Gen Z slang reference (updated May 2026)
 - `scripts/tráhn-qa-gate.sh` — Runtime TRÁHN enforcement (exit 1 = block delivery)
+- `references/tiktok-browser-access.md` — TikTok CAPTCHA workarounds, competitor research via news scraping
+
+## Fail-Fast Protocol (2026-05-10)
+
+**Signal:** After 2 `browser-harness` attempts, if `page_info()` returns CAPTCHA ("Drag the slider") → **HARD STOP** on browser approach. Switch to web search + news scraping immediately.
+
+**Why waste more attempts:** TikTok's CAPTCHA is deterministic for CDP sessions — retrying the same approach yields identical results. Each additional attempt risks IP temporary block and session contamination.
+
+**Detection method:**
+```python
+# browser-harness
+goto_url("https://www.tiktok.com/@username")
+wait_for_load()
+text = js("document.body.innerText")
+# If contains "Drag the slider" or "puzzle" → CAPTCHA detected
+# If shows only profile stats (followers, likes) but no video links → partial block
+```
+
+**Correct sequence:**
+1. Try `browser-harness` → get profile text
+2. If CAPTCHA present → try 1 more refresh with wait(5)
+3. If still CAPTCHA after 2 attempts → hard stop, switch to `mcp_exa_web_search_exa` + news site parsing
+4. Report findings with "Data from [source] on [date]" notation
+
+**Session example (today):** Lê Tuấn Khang profile research:
+- Browser opened profile → CAPTCHA detected
+- Tried `js()` to extract video links → empty array
+- Tried clicking/slider solutions → failed
+- Switched to `mcp_exa_web_search_exa` → got complete viral video data from news sites
+- **Result:** 300M view viral video identified, profile stats confirmed, full competitor brief delivered
+
+**Key insight:** Profile stats (13.3M followers, 156.5M likes) pass through HTML. Video-level data blocked by CAPTCHA. Use news sites for historical video metrics.

@@ -376,6 +376,14 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** Clear structure with the three-layer architecture
 
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** The schema mentions "Based on Karpathy's LLM Wiki pattern" but doesn't provide a link to this source
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The file mentions "Based on Karpathy's LLM Wiki pattern (llm-wiki skill)" but doesn't provide a link or reference to this source
+
 === index.md ===
 ---
 confidence: high
@@ -531,8 +539,9 @@ relationships:
 - [[start-here]] — Startup instructions for AI agent sessions
 
 ## Queries (Filed Research)
-- [[tiktok-shop-monetization-research-2026-05]] — TikTok Shop Vietnam monetization: fees, commissions, Gen Z behavior (2026-05-07)
-- [[tiktok-shop-morning-research-2026-05-08]] — Morning brief: summer beauty, graduation gifts, fee math refinement (2026-05-08)
+||- [[tiktok-shop-research-2026-05-10]] — Jelly Skin breakout, expertise > looks, algorithm confirmed, 70%+ completion bar (2026-05-10)
+||- [[tiktok-shop-research-2026-05-09]] — CHR system, commerce signals, Hair appliances breakout (2026-05-09)
+||- [[tiktok-shop-monetization-research-2026-05]] — TikTok Shop Vietnam: 60%+ margin survival, fee structure 12.5-14.5%, Gen Z trust > entertainment (2026-05-07)
 
 > **Auto-improvement note:** *Missing or outdated information:**
 
@@ -598,33 +607,41 @@ relationships:
 
 > **Auto-improvement note:** The Tuấn Anh entry is under "Entities" but later entries like Blake Anderson, Dan Martell, etc. are under "People". This inconsistency suggests some organizational issues.
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The Tuấn Anh entry says "TikTok style, operating rules (2026-04-23)" but then there's a TikTok Content section below. The TikTok entries mention "Vietnam Reali-TEA" but there's no clear connection to Tuấn Anh's profile
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page shows "Last updated: 2026-05-07" which is in the future from my perspective (current date is 2025-12-26). This seems odd but could be intentional.
+
 === log.md (last 20 lines) ===
-- Portable Fan: summer relevance, "hơi bị đáng mua"
+- Key findings: CHR system now active (200-1000 green), commerce signals > entertainment, Hair appliances breakout
+- Output: ~/hermes/workers/research-agent/outputs/2026-05-09-evening-brief.md
 
-### Revenue Context
-- Affiliate commissions: 10-25% depending on category
-- Platform fees: 12.5-14.5% (March 2026 jump from 2-3%)
-- Total fees: 15-25% of revenue
-- Price sweet spot: $15-30 (₫375K-750K)
+## [2026-05-09] daily_review | Hermes Daily Review
+- Task: Daily session review May 9, 2026
+- Sessions processed: 21 regular sessions + cron sessions
+- GitHub backup: 8382 files backed up
+- Key findings:
+  - GitHub Secret Scanning blocks auth.json in --force push (fix documented)
+  - Gen Z ≠ Revenue: KOL influence drives virality, Millennials drive revenue
+  - CHR system active: RED CHR = algorithmic dead zone
+  - Hermes v0.13 Tenacity Release discovered
+  - 10 new arXiv techniques for self-improving agents
+- Skills updated: multi-agent-orchestrator, tiktok-viral-script, research-analyst, hermes-autoresearch, hermes-github-backup
+- Report: ~/.hermes/cron/output/daily_review_2026-05-09.md
 
-### System Status
-- Wiki: 3,520 files, healthy
-- Workers: content-creator + research-agent operational
-- Orchestrator: monitoring 25 pending Nexus tasks
-- Watchdog daemon: needs restart (priority task [80])
+## [2026-05-10] cron | daily_review_0am
+- Task: Daily session review for 2026-05-09
+- Status: completed
 
-
-
-## [2026-05-08] query | Research Analyst Morning Brief
-- Research: Summer beauty trends, Vietnam TikTok Shop data, graduation season, fee math refinement
-- Report: wiki/queries/tiktok-shop-morning-research-2026-05-08.md
-- Index: Updated Queries section
 
 === learned-about-tuananh.md ===
 ---
 title: Learned About Tuấn Anh
 created: 2026-04-23
-updated: 2026-05-08
+updated: 2026-05-10
 type: entity
 tags: [person]
 confidence: high
@@ -651,7 +668,7 @@ relationships: [tiktok-content, hermes-agent]
 - CTA: "Mua ủng hộ anh đi mấy con vợ chứ"
 - Max 25 giây
 
-### Gen Z Slang 2026 (Updated 2026-05-04)
+### Gen Z Slang 2026 (Updated 2026-05-10)
 #### Vietnamese Gen Z Hot 2025-2026
 - **To6** — toxic (Việt hóa từ tiếng Anh "toxic")
 - **Bốc trúng sít rịt** — blind box lucky/unlucky draw
@@ -674,8 +691,11 @@ relationships: [tiktok-content, hermes-agent]
 - **Green flag / Red flag** — tín hiệu tốt/xấu trong relationships
 - **Situationship** — lửng lơ không cam kết
 - **Ốc, Đỉnh, Toang** — đỉnh (peak), toang (ruin/spoil)
-- **lỏ vãi** — ironic "tacky/cheap" (used for comedy)
+- **vãi** — intensifier cực mạnh (mềm dai vãi, lỏ vãi)
+- **lỏ vãi** — ironic "tacky/cheap" (used for comedy, May 2026)
 - **lọ** — HOT (updated from "lỏ", viral May 2026)
+- **đỉnh nóc** — peak (dùng tiết chế, KHÔNG phải "đỉnh nóc kịch trần")
+- **ưng quá trời** — love it so much
 
 #### Global Gen Z 2026
 - Skibidi, Gyatt, Brain rot, Rizz, 6 7, Delulu, Aura farming, 69ing, Gyatt
@@ -830,3 +850,11 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The Gen Z slang list has specific date "Updated 2026-05-04" but we don't know what was before
+
+> **Auto-improvement note:** 3 specific improvements. Let me analyze the content:
+
+> **Auto-improvement note:** The Gen Z slang section has dates like "Updated 2026-05-04" but the content mentions things like "lọ" being "updated from 'lỏ', viral May 2026" - this seems oddly specific and may be fictional/future-dated. If we're in 2025 or earlier, some of these dates are from the future.
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page mentions "Gen Z Slang 2026 (Updated 2026-05-04)" but most slang listed seems to be from 2025-2026 timeframe. However, "lọ" is mentioned as "updated from 'lỏ', viral May 2026" which is quite specific but doesn't explain the context of when/how it's used.

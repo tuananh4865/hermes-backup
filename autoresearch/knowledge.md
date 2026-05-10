@@ -50,7 +50,44 @@ Tonight's focus: **Skill Creation #8** — improving existing skills
 
 
 
-## Tonight's Findings (2026-05-10)
+## Tonight's Findings (2026-05-11)
+
+### System Status (02:00)
+- Wiki: ✅ 3638 files, 0 issues (wiki_lint --fast PASSED)
+- Skills: 138 skills listed (SHS = 0)
+- Workers: content-creator/outputs/ EMPTY - workers not writing to shared dir
+- Cron outputs from yesterday confirmed at ~/.hermes/cron/output/
+- Daily review for May 10 confirmed: 58 sessions, Gen Z slang updated
+
+### AI Agent Research — Self-Optimizing + Multi-Agent RL (May 2026)
+
+**New techniques documented:**
+
+1. **Self-Optimizing Multi-Agent (arXiv:2604.02988)** — Self-play + prompt optimization for deep research. Agents explore different prompt combinations to match/exceed expert-crafted prompts.
+
+2. **MAS2 (arXiv ICLR 2026)** — Self-Generative, Self-Configuring, Self-Rectifying Multi-Agent. Tri-agent: generator-implementer-rectifier. CTO (Collaborative Tree Optimization) trains meta-agents.
+
+3. **MARTI-MARS² (arXiv:2602.07848)** — Multi-Agent Reinforced Training and Inference. Self-play scaling via RL. Novel scaling law: single → homogeneous multi-role → heterogeneous multi-agent = higher RL ceiling.
+
+4. **TPGO (arXiv:2604.20714)** — Textual Parameter Graph Optimization. Self-improving MAS using "textual gradients" + GRAO (Group Relative Agent Optimization). Learn from historical optimization experiences.
+
+5. **MARFT (ICLR 2026)** — Multi-Agent Reinforcement Fine-Tuning. Extends MARL to LaMAS (LLM-based Agent MAS). Flex-MG formalization + Action-level/Token-level MARFT.
+
+6. **SCMA (arXiv:2601.21919)** — Self-Compression via MARL for Chain-of-Thought. Segmentation Agent + Scoring Agent collaborate to penalize redundant reasoning.
+
+7. **HyEvo (arXiv:2603.19639)** — Self-Evolving Hybrid Agentic Workflows. LLM nodes + deterministic code nodes. Multi-island evolutionary strategy with reflect-then-generate.
+
+8. **AWO (arXiv:2601.22037)** — Agent Workflow Optimization. Meta-tools bundle redundant tool sequences into single invocations. 11.9% fewer LLM calls, 4.2pp higher success.
+
+9. **TOOLSELF (arXiv:2602.07883)** — Tool-driven self-reconfiguration. Unified task execution + self-adjustment into single action space. 24.1% average gain.
+
+10. **Combee (arXiv:2604.04247)** — Scalable parallel prompt learning. Map-Shuffle-Reduce paradigm for self-improving agents. 17× speedup.
+
+**Key insight:** Self-improvement in multi-agent systems is moving toward: (1) RL-based optimization of agent configurations, (2) self-referential/meta-cognitive modification, (3) learned memory policies replacing heuristics.
+
+---
+
+## Previous Night (2026-05-10)
 
 ### System Status (02:00)
 - Wiki: ✅ 3637 files, 0 issues (wiki_lint --fast PASSED)

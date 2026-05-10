@@ -964,12 +964,43 @@ echo $HOME  # May return empty or different value
 - **Interactive session**: `skill_view()` loads briefing → rules enforced ✅
 - **Cron session**: Briefing doc never loaded → rules NOT enforced ❌
 
-**Fix options**:
-1. **Inline the rules** in cron prompts (not reference docs)
-2. **Accept limitation** — cron orchestrator may not follow all briefing rules
-3. **Use different mechanism** — perhaps pre-compile briefing into cron prompt at creation time
+**Fix (CONFIRMED WORKING — May 10)**: Inline critical rules directly in SOUL.md. The cron SOUL.md at `~/.hermes/workers/orchestrator/SOUL.md` now has a "MANDATORY ENFORCEMENT" section with:
+1. TRÁHN gate (absolute path, no tilde)
+2. 3-bullet format enforcement
+3. Pre-delivery QA check
 
-**Key insight for future**: Documentation in skill ≠ Enforcement in cron. When writing rules for cron behavior, inline them directly in the prompt, not in separate reference files.
+**This is the working architecture** — briefing doc remains as documentation for human review, but cron SOUL.md has the actual enforceable rules inlined.
+
+## PITFALL 21 (2026-05-10): Dual-Output-Path Architecture — CONFIRMED WORKING ✅
+
+**Symptom**: `~/hermes/workers/*/outputs/` appears empty in cron, but `~/.hermes/cron/output/{job_id}/` has files.
+
+**Root cause**: Workers write to TWO locations:
+1. **Primary**: `~/.hermes/cron/output/{job_id}/YYYY-MM-DD-*.md` — where workers actually write
+2. **Secondary**: `~/hermes/workers/*/outputs/` — often EMPTY even when workers ran
+
+**Architecture confirmed May 10 — WORKING ✅:**
+- Content Creator Morning Brief: `cron/output/a4b8e528983f/2026-05-10-*.md` (primary) ✅
+- Content Creator Morning Brief: `workers/content-creator/outputs/2026-05-10-morning-brief.md` (secondary) ✅  
+- Research Agent Evening: `workers/research-agent/outputs/2026-05-09-evening-brief.md` (secondary) ✅
+
+**May 10 Orchestrator Report — CONFIRMED CONCISE ✅:**
+- 3-section format (Hoàn thành | Đang làm | Cần quyết định) = good
+- 3-bullet max per section = good  
+- Long content → write to file, path in bullet = good
+- Report was brief and actionable ✅
+
+**Check BOTH paths when compiling briefings:**
+```bash
+# PRIMARY — cron output dirs (workers write here first)
+ls -la /Users/tuananh4865/.hermes/cron/output/*/2026-05-10*.md 2>/dev/null
+
+# SECONDARY — shared outputs/ (confirmation copy)
+ls -la /Users/tuananh4865/.hermes/workers/content-creator/outputs/
+ls -la /Users/tuananh4865/.hermes/workers/research-agent/outputs/
+```
+
+**Rule**: If cron dir has files → workers RAN. If shared outputs/ is empty → copy didn't execute, but work was still done.
 
 ## PITFALL 11 (2026-05-08): watchdog_processor.py Path.write_text() Bug
 

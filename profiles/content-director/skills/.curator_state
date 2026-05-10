@@ -1,8 +1,8 @@
 {
-  "last_report_path": null,
-  "last_run_at": "2026-05-03T01:11:18.587408+00:00",
-  "last_run_duration_seconds": null,
-  "last_run_summary": "deferred first run — curator seeded, will run after one interval; use `hermes curator run --dry-run` to preview now",
+  "last_report_path": "/Users/tuananh4865/.hermes/profiles/content-director/logs/curator/20260510-020258",
+  "last_run_at": "2026-05-10T02:02:58.162759+00:00",
+  "last_run_duration_seconds": 850.168727,
+  "last_run_summary": "auto: no changes; llm: All consolidation complete. Here is the final summary:\n\n---\n\n## Consolidation Summary\n\n**5 new umbrella skills created**, each with labeled subsection links to absorbed content:\n\n1. **`github-backup`** — Unified GitHub backup skill covering…",
   "paused": false,
-  "run_count": 0
+  "run_count": 1
 }
