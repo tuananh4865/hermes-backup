@@ -6,7 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [tool] install [HIGH]
 - [preference] thử cách nào?
 - [preference] thể bypass tự động được.
 - [preference] em làm gì tiếp? Xem chi tiết video nào, phân tích nội dung?
@@ -36,6 +35,7 @@ Focus on:
 - [file] updates:** [HIGH]
 - 2026-05-10: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [file] md [HIGH]
+- 2026-05-11: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [SESSIONS] — session history summaries
 - 2026-05-11: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking
