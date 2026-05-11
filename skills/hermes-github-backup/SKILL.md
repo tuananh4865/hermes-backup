@@ -2,7 +2,7 @@
 title: Hermes GitHub Backup Setup
 name: hermes-github-backup
 created: 2026-04-28
-updated: 2026-05-10
+updated: 2026-05-11
 type: skill
 tags: [github, backup, git, hermes-agent]
 description: Setup GitHub backup cho Hermes Agent data lên GitHub repo riêng
@@ -363,23 +363,34 @@ cp -r /tmp/hermes-backup/skills/* /Volumes/Storage-1/Hermes/skills/
 ---
 ## Telegram Reporting
 
-**Chat ID**: `3764041476` (Telegram thread for backup reports)
+**Chat ID**: `1132914873` (Tuấn Anh DM)
+**Thread ID**: `3764041476` (reply_to_message_id for threading)
+**Bot**: `ClawdZ1E_Bot`
+
+**Get token from .env** (IMPORTANT: variable name is `TELEGRAM_BOT_TOKEN`, NOT `TG_BOT_TOKEN`):
+```bash
+TELEGRAM_BOT_TOKEN=$(grep "^TELEGRAM_BOT_TOKEN=" ~/.hermes/.env | cut -d= -f2)
+```
 
 **Pre-flight check** (do this before sending):
 ```bash
-if [ -z "$TG_BOT_TOKEN" ]; then
-  echo "⚠️ TG_BOT_TOKEN not set — skipping Telegram notification"
+if [ -z "$TELEGRAM_BOT_TOKEN" ]; then
+    echo "⚠️ TELEGRAM_BOT_TOKEN not set — skipping Telegram notification"
 fi
 ```
 
-**Send notification** (only if `TG_BOT_TOKEN` is set):
+**Send notification** (only if `TELEGRAM_BOT_TOKEN` is set):
 ```bash
-curl -s -X POST "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage" \
-  -d "chat_id=3764041476" \
+TELEGRAM_BOT_TOKEN=$(grep "^TELEGRAM_BOT_TOKEN=" ~/.hermes/.env | cut -d= -f2)
+curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+  -d "chat_id=1132914873" \
+  -d "reply_to_message_id=3764041476" \
   -d "text=<message>"
 ```
 
-**Failure mode**: If `TG_BOT_TOKEN` is not set, backup still completes — just skip Telegram. Never block on missing env var.
+**Failure mode**: If `TELEGRAM_BOT_TOKEN` is not set, backup still completes — just skip Telegram. Never block on missing env var.
+
+**Common error**: `{"ok":false,"error_code":404,"description":"Not Found"}` means wrong token or wrong bot API URL. Verify token is correct in `~/.hermes/.env`.
 
 ---
 

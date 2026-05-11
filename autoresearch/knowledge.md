@@ -55,35 +55,42 @@ Tonight's focus: **Skill Creation #8** — improving existing skills
 ### System Status (02:00)
 - Wiki: ✅ 3638 files, 0 issues (wiki_lint --fast PASSED)
 - Skills: 138 skills listed (SHS = 0)
-- Workers: content-creator/outputs/ EMPTY - workers not writing to shared dir
+- Workers: content-creator/outputs/ EMPTY - workers not writing to shared dir (cron output works)
 - Cron outputs from yesterday confirmed at ~/.hermes/cron/output/
 - Daily review for May 10 confirmed: 58 sessions, Gen Z slang updated
+- Content Creator morning brief (May 10) confirmed slang: "Ra dại", "Cuối tuần rồi mấy con vợ ơi"
 
-### AI Agent Research — Self-Optimizing + Multi-Agent RL (May 2026)
+### AI Agent Research — Self-Evolving + RL-based Memory (May 2026)
 
 **New techniques documented:**
 
-1. **Self-Optimizing Multi-Agent (arXiv:2604.02988)** — Self-play + prompt optimization for deep research. Agents explore different prompt combinations to match/exceed expert-crafted prompts.
+1. **SAGE (Skill Augmented GRPO for Self-Evolution)** — RL framework enabling agents to learn skills across task chains and reuse them. 2x success rates when utilizing learned skills from skill library. Sequential Rollout mechanism.
 
-2. **MAS2 (arXiv ICLR 2026)** — Self-Generative, Self-Configuring, Self-Rectifying Multi-Agent. Tri-agent: generator-implementer-rectifier. CTO (Collaborative Tree Optimization) trains meta-agents.
+2. **Self-Evolving Software Agents (arXiv:2604.27264)** — BDI-LLM architecture combining Belief-Desire-Intention reasoning with LLMs. Automated evolution module operates alongside reasoning loop, enabling autonomous evolution of goals, reasoning, and executable code.
 
-3. **MARTI-MARS² (arXiv:2602.07848)** — Multi-Agent Reinforced Training and Inference. Self-play scaling via RL. Novel scaling law: single → homogeneous multi-role → heterogeneous multi-agent = higher RL ceiling.
+3. **Memory-R1** — RL framework equipping LLMs with ability to actively manage external memory. Agents trained when to store, retrieve, update, summarize, discard. 5 memory ops as callable tools.
 
-4. **TPGO (arXiv:2604.20714)** — Textual Parameter Graph Optimization. Self-improving MAS using "textual gradients" + GRAO (Group Relative Agent Optimization). Learn from historical optimization experiences.
+4. **SISL (Self-Improving Skill Learning)** — Skill-based meta-RL framework for robust skill learning from noisy/suboptimal offline data. Addresses imperfect demonstration learning.
 
-5. **MARFT (ICLR 2026)** — Multi-Agent Reinforcement Fine-Tuning. Extends MARL to LaMAS (LLM-based Agent MAS). Flex-MG formalization + Action-level/Token-level MARFT.
+5. **Real-Time Procedural Learning** — State-indexed procedural memory letting agents learn from past experiences, improving accuracy and reliability over time.
 
-6. **SCMA (arXiv:2601.21919)** — Self-Compression via MARL for Chain-of-Thought. Segmentation Agent + Scoring Agent collaborate to penalize redundant reasoning.
+6. **SAGE (Multi-Agent Self-Evolution, arXiv:2603.15255)** — Closed-loop framework with 4 agents: Challenger, Planner, Executor, Reflector for generalized reasoning evolution.
 
-7. **HyEvo (arXiv:2603.19639)** — Self-Evolving Hybrid Agentic Workflows. LLM nodes + deterministic code nodes. Multi-island evolutionary strategy with reflect-then-generate.
+**Key insight:** Self-improvement paradigm shifting from heuristic-based to RL-trained policies. Memory operations (store/retrieve/update/summarize/discard) becoming standard callable tools trained via GRPO/PPO. BDI reasoning + LLM = autonomous goal/reasoning evolution.
 
-8. **AWO (arXiv:2601.22037)** — Agent Workflow Optimization. Meta-tools bundle redundant tool sequences into single invocations. 11.9% fewer LLM calls, 4.2pp higher success.
+---
 
-9. **TOOLSELF (arXiv:2602.07883)** — Tool-driven self-reconfiguration. Unified task execution + self-adjustment into single action space. 24.1% average gain.
+## Previous Night (2026-05-10) — CORRECTED
 
-10. **Combee (arXiv:2604.04247)** — Scalable parallel prompt learning. Map-Shuffle-Reduce paradigm for self-improving agents. 17× speedup.
+### System Status (02:00)
+- Wiki: ✅ 3637 files, 0 issues
+- Skills: 136 skills healthy, SHS = 0
+- Workers: content-creator ✅, research-agent ✅ (cron outputs confirmed)
+- Autoresearch repo: main branch, clean
 
-**Key insight:** Self-improvement in multi-agent systems is moving toward: (1) RL-based optimization of agent configurations, (2) self-referential/meta-cognitive modification, (3) learned memory policies replacing heuristics.
+### AI Agent Research — Memory Optimization (2026-05-10)
+
+**8 new techniques documented:** DeltaMem, UMA, Knowledge Access Beats Model Size, LatentMem, AtomMem, MemReader, AgeMem, OCR-Agent.
 
 ---
 

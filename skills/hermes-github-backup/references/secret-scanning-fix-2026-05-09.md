@@ -45,3 +45,29 @@ git push origin main --force
 
 ## Prevention
 Always add auth exclusions to .gitignore BEFORE first push. Auth files are now excluded for all future backups.
+
+---
+
+## Telegram Notification Failure — Wrong env var name (2026-05-11)
+
+**Symptom**: `{"ok":false,"error_code":404,"description":"Not Found"}` — bot API URL not found.
+
+**Root cause**: The code used `TG_BOT_TOKEN` but the actual env var in `~/.hermes/.env` is `TELEGRAM_BOT_TOKEN`.
+
+**Fix**: Always fetch from `.env` explicitly:
+```bash
+TELEGRAM_BOT_TOKEN=$(grep "^TELEGRAM_BOT_TOKEN=" ~/.hermes/.env | cut -d= -f2)
+```
+
+**Wrong**:
+```bash
+curl ... -d "chat_id=$TG_BOT_TOKEN/..."  # TG_BOT_TOKEN is not set
+```
+
+**Correct**:
+```bash
+TELEGRAM_BOT_TOKEN=$(grep "^TELEGRAM_BOT_TOKEN=" ~/.hermes/.env | cut -d= -f2)
+curl ... "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage"
+```
+
+**Success response**: `{"ok":true,"result":{"message_id":55722,...}}`

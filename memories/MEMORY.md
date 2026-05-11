@@ -1,11 +1,3 @@
-Modified files: browser-harness, SKILL.md
-§
-Task 'Review the conversation above and update two things:  **Memory**: who the user is. Did the user reveal persona, desires,' — 1 turns
-§
-Task 'Review the conversation above and update two things:  **Memory**: who the user is. Did the user reveal persona, desires, preferences, personal details' — session 20260510, 1 turns
-§
-Modified files: with, SKILL.md
-§
 Modified files: Skills
 §
 Modified files: completely
@@ -35,5 +27,13 @@ Modified files: note, reflect, model, SKILL.md, config.yaml
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260511, 1 turns
 §
 Modified files: reference, config.yaml
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260511, 1 turns
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260511, 1 turns
+§
+Modified files: show, SKILL.md
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260511, 1 turns
 §
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260511, 1 turns
