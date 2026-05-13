@@ -59,6 +59,9 @@
 | Ối dồi ôi | disbelief | Vietnamese reaction |
 | Nam thư | toxic person | Cảnh báo nguy hiểm |
 | Ra dại | wild with joy | Fandom reaction |
+| **thơm vãi** | so fragrant (intensifier) | Body Mist hook — "thơm vãi mà rẻ" |
+| **sống nổi** | survive (heat) | Cooling products — "đi đường không sống nổi" |
+| **pin trâu** | long battery life | Electronics — "pin trâu vãi" |
 
 ## Teen Code
 - iu = yêu, bít/bjt = biết, j = gì, nha = nhé

@@ -6,12 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- 2026-05-13: tạo ảnh được không?
-- [file] issue [HIGH]
-- [file] workaround [HIGH]
-- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [tool] worker [HIGH]
-- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [project] as [HIGH]
 - 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
@@ -32,10 +26,16 @@
 - 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [tool] in [HIGH]
 - [file] was [HIGH]
-- [file] md [HIGH]
 - 2026-05-14: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [file] from
 - [file] May
+- 2026-05-14: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [file] at [HIGH]
+- 2026-05-14: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [file] added:**
+- [file] architecture:
+- [file] md
+- [preference] sống nổi")
 § [SESSIONS] — session history summaries
 - 2026-05-14: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking
