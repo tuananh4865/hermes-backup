@@ -239,3 +239,65 @@ result = subprocess.run(
 12. **MCMA** — Meta-cognitive memory abstraction. Memory Copilot via DPO. +25.07% ALFWorld.
 
 **Key insight:** Self-improvement shifting from heuristic → RL-trained policies. Self-diagnosis is the bottleneck, not experience accumulation. Memory operations as callable tools trained via GRPO.
+
+## Tonight's Findings (2026-05-14)
+
+### System Status (02:00)
+- Wiki: ✅ 0 issues — fixed missing frontmatter on references/self-improving-agents-may-2026.md
+- Skills: 138 skills, SHS = 0
+- Workers: Content Creator last ran May 13 18:02, Research Agent last ran May 12 14:08 (both stale)
+- Gen Z slang: May 13 content has "thơm vãi", "sống nổi", "pin trâu" — already in wiki entity
+
+### AI Agent Research — Multi-Agent Coordination (May 2026)
+
+**8 NEW techniques found:**
+
+1. **SECP (Self-Evolving Coordination Protocol)** — arxiv:2602.02170
+   - Bounded self-modification of coordination protocols while preserving formal invariants
+   - Coverage increased from 2→3 accepted proposals after 1 recursive modification
+   - Byzantine fault tolerance, O(n²) message complexity
+
+2. **TPGO (Textual Parameter Graph Optimization)** — arxiv:2604.20714
+   - Multi-agent system optimization as graph evolution problem
+   - Textual gradients (structured NL feedback from execution traces)
+   - GRAO (Group Relative Agent Optimization) — learns from historical optimization experiences
+
+3. **CORAL (Autonomous Multi-Agent Evolution)** — arxiv:2604.01658
+   - Shared persistent memory + asynchronous multi-agent execution + heartbeat-based interventions
+   - 10× fewer evaluations than fixed evolutionary search baselines
+   - Kernel engineering: 1363→1103 cycles (20% gain)
+
+4. **REDEREF (Training-Free Agentic Coordination)** — arxiv:2603.13256
+   - Thompson sampling for belief-guided delegation
+   - Reflection-driven re-routing via calibrated LLM judge
+   - 28% token reduction, 17% fewer agent calls, 19% faster time-to-success
+
+5. **Pressure-Field Coordination** — arxiv:2601.08129
+   - O(1) coordination overhead via shared artifact state
+   - Agents operate locally, coordination emerges from quality signals
+   - Temporal decay prevents premature convergence (96.7% vs 86.7%)
+
+6. **Symphony-Coord** — arxiv:2602.00966
+   - Decentralized multi-agent via online contextual bandit (LinUCB)
+   - Two-stage dynamic beacon protocol (screening + adaptive routing)
+   - Sublinear regret bounds, self-healing under distribution shifts
+
+7. **EvoMaster (Foundational Evolving Agent Framework)** — arxiv:2604.17406
+   - Iterative self-critique + hypothesis refinement across experimental cycles
+   - Multi-agent collaborative evolution (solver/critic/rewriter roles)
+   - 41.1% on Humanity's Last Exam, 75.8% MLE-Bench Lite
+
+8. **Self-Optimizing MAS for Deep Research** — arxiv:2604.02988
+   - Multi-agent Deep Research systems self-play prompt combinations
+   - Matches/exceeds expert-crafted prompts via exploration
+   - Orchestrator + parallel worker agents architecture
+
+### Hermes Agentic Focus Tonight
+- Capability: Multi-Agent Coordination (highest impact for current workflow)
+- Found 8 new techniques to add to orchestrator skill
+- Workers stalled since May 12-13 — orchestrator can detect but not recover autonomously
+
+### Priority Actions
+1. Add 8 new multi-agent coordination techniques to multi-agent-orchestrator skill
+2. Build worker-stall-recovery.sh for autonomous worker restart
+3. Gen Z slang already current — no sync needed tonight

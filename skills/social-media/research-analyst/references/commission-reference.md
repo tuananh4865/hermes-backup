@@ -49,6 +49,22 @@
 | Single | ₫80,000 | 3.75% | Low margin |
 | 5-item bundle | ₫400,000 | 0.75%/item | 5x revenue |
 
+## Summer Cooling Product Margins (May 14, 2026)
+
+**Window: May-August — heat wave multiplier active NOW.**
+
+| Product | Margin | Cost → Sell | Notes |
+|---------|--------|-------------|-------|
+| Neck Fan Bladeless USB-C | **64%+** | ₫30-80K → ₫100-200K | Heat wave = 2-5× conversion |
+| Cooling Cervical Pillow | **65%** | ₫50-100K → ₫150-300K | Mother's Day angle validated |
+| Mini Cooler/Mist Fan | **60%+** | ₫40-70K → ₫100-180K | 2-in-1 spray + fan |
+| Mini Humidifier | **60%** | ₫35-60K → ₫90-150K | "Nhà thuê muốn đẹp" angle |
+| Cooling Neck Ring | TBD | ₫30-60K → ₫60-100K | Outdoor, reusable, demo-friendly |
+
+**Source: May 14 orchestrator session — confirmed trending via FindNiche**
+
+---
+
 ## Top Products (May 10, 2026)
 
 | Product | 7-Day Orders | Price | GMV | Commission |
@@ -58,6 +74,9 @@
 | Hộp Đựng Trang Sức Asimi | 32.73K | ₫51,500 | — | 15-20% |
 | Dây Chun Buộc Tóc 10gram | 27.94K | ₫10,000 | ₫279M | 10-15% |
 | Charm Chữ Mini | 21.56K | ₫1,644 | ₫270M | 10-15% |
+| **Nơ Bong Bóng Cỡ Lớn** | 19.16K | ₫36,250 | **₫3.38B GMV** | 10-15% |
+
+**Updated May 14:** Nơ Bong Bóng wedding angle = ₫3.38B GMV confirmed. Wedding season + gifting angle still hot.
 
 ### BREAKING: Jelly Skin (Summer 2026)
 - **#JellySkin2026** — billions of views

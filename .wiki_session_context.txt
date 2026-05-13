@@ -551,6 +551,7 @@ relationships:
 - [[start-here]] — Startup instructions for AI agent sessions
 
 ## Queries (Filed Research)
+| [[tiktok-shop-research-2026-05-13]] | Post-Mother's Day pivot, Nơ Bong Bóng ₫3.38B GMV, Home Supplies breakout, Summer Cooling acceleration, Beauty deep dive, lọ = HOT (2026-05-13)
 | [[tiktok-shop-research-2026-05-12]] | Commerce-first algorithm, Search dominance 48-65%, Home Supplies breakout, Summer cooling 2-5× conversion, Gen Z slang, LIVE commerce 3× (2026-05-12)
 | [[tiktok-shop-research-2026-05-11]] | Jelly Skin breakout, expertise > looks, algorithm confirmed, 70%+ completion bar (2026-05-10)
 | [[tiktok-shop-research-2026-05-09]] | CHR system, commerce signals, Hair appliances breakout (2026-05-09)

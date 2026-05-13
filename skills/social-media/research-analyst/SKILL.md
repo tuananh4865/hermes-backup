@@ -4,7 +4,7 @@ name: research-analyst
 description: Market research and monetization opportunity analysis for TikTok Shop Vietnam — commission math, product validation, fee structure analysis, competitor research. Runs as evening cron for the content-creator business.
 trigger: Evening research cron (6PM) or when Anh asks for market analysis, product research, or monetization strategy.
 created: 2026-05-09
-updated: 2026-05-09
+updated: 2026-05-14
 type: skill
 tags: [tiktok, research, monetization, vietnam, social-media]
 confidence: high
@@ -82,10 +82,12 @@ Save to: `~/hermes/workers/content-creator/outputs/YYYY-MM-DD-evening-research-b
 | Source | Purpose |
 |--------|---------|
 | https://findniche.com/tiktok/trending-products-vn | Real-time product orders/GMV |
+| https://fastmoss.com/ | TikTok product analytics, GMV data |
 | https://metric.vn/insights/ | Market research, category trends |
 | https://blog.investvietnam.co/ | TikTok Shop economics, fee structure |
-| https://hunteragency.vn/ | Vietnam-specific TikTok strategies |
-| https://tanphatdigital.com | TikTok affiliate commission data |
+| https://slangloom.com/vietnamese-slang/ | Gen Z slang (comprehensive, May 2026) |
+| https://trykaiwa.com/blog/vietnamese-gen-z-slang-phrases-2026 | Gen Z slang (structured) |
+| https://gendigi.vn/ | TikTok affiliate case studies (Jacklyn $108K) |
 
 ## Fee Structure (May 2026 — CRITICAL)
 
@@ -114,6 +116,49 @@ Save to: `~/hermes/workers/content-creator/outputs/YYYY-MM-DD-evening-research-b
 - 5-item bundle ₫400,000 → fee = 0.75% per item
 - **Result: 5x revenue, same fixed cost**
 
+### Case Studies (REAL DATA — May 14, 2026)
+
+#### Coolmate — ₫14.61B Booking Revenue
+- **62.6% of total revenue** (₫23.34B) from affiliate/booking
+- 1,370 active KOC creators
+- 369 new videos/day
+- **Avg per KOC: ₫10.66M/month**
+- **Avg per video: ₫1.32M revenue**
+- **Formula:** Revenue = KOC × Videos × CR × AOV
+- **Key insight:** Volume + data + optimization beats hoping for viral
+
+#### Jacklyn — $108K/month Affiliate
+- Failed dropshipping → succeeded TikTok affiliate
+- Key: Start creating in 4 hours (don't over-study)
+- Uses TikTok Creator Marketplace for trending products + competitor analysis
+- Studies competitor videos with highest conversion rates
+
+#### Diep Lam Anh — ₫1.4M GMV, 20× ROAS
+- "Million Mission" campaign
+- Full-funnel strategy with Shop Ads
+- Community interaction tactics before campaign
+- LIVE reminder notifications
+- Reached 5M+ users
+
+#### Micro vs Macro Creator Performance
+| Tier | Commission | Engagement | Best For |
+|------|------------|------------|----------|
+| Micro (10K-100K) | 15-20% | **14%** | **Best ROI — 60% higher conversion** |
+| Mid (100K-500K) | 20-25% | 7% | Volume scaling |
+| Macro (500K+) | 25%+ | 5% | Brand awareness |
+
+**Key insight:** Micro-influencers beat macro on conversion efficiency due to authenticity.
+
+### Summer Cooling Product Margins (May 14, 2026)
+| Product | Margin | Cost → Sell | Notes |
+|---------|--------|-------------|-------|
+| Neck Fan Bladeless USB-C | **64%** | ₫30-80K → ₫100-200K | Heat wave = 2-5× conversion |
+| Cooling Cervical Pillow | **65%** | ₫50-100K → ₫150-300K | Mother's Day angle validated |
+| Mini Cooler/Mist Fan | 60%+ | ₫40-70K → ₫100-180K | 2-in-1 spray + fan |
+| Mini Humidifier | 60% | ₫35-60K → ₫90-150K | "Nhà thuê muốn đẹp" angle |
+
+**Window: May-August** — heat wave multiplier active NOW.
+
 ### EXPERTISE > ATTRACTIVENESS (May 10, 2026 — CRITICAL UPDATE)
 
 **Study:** Nature Scientific Reports (May 6, 2026) — 442 respondents, ages 16-30, Vietnamese Gen Z
@@ -121,6 +166,18 @@ Save to: `~/hermes/workers/content-creator/outputs/YYYY-MM-DD-evening-research-b
 > Gen Z prioritizes **expertise and trustworthiness** over attractiveness in influencers
 
 **Implication:** Người bán KHÔNG cần đẹp, CẦN có kiến thức và uy tín. Content nên showcase KNOWLEDGE, không phải looks.
+
+### Coolmate Case Study (Real Numbers)
+| Metric | Value |
+|--------|-------|
+| Booking revenue | ₫14.61B (62.6% of total ₫23.34B) |
+| Active KOC | 1,370 |
+| Videos/day | 369 |
+| Avg/KOC/month | ₫10.66M |
+| Avg/video | ₫1.32M |
+
+**Formula:** `Revenue = KOC × Videos × CR × AOV`
+**Insight:** Volume + data + optimization beats viral hoping. Coolmate system > viral gambling.
 
 ### ALGORITHM MAY 2026 CONFIRMED (May 10, 2026)
 

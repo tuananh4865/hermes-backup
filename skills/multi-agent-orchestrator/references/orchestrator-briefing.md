@@ -128,15 +128,32 @@ Hoàn thành | Đang làm | Cần quyết định
 | Orchestrator Monitor (2h) | orchestrator | ✅ 6 runs confirmed today |
 | Orchestrator Nightly (9PM) | orchestrator | ⏳ Next: 21:00 today |
 
-**⚠️ [SILENT] Decision Tree — CRITICAL (updated 2026-05-08):**
+**⚠️ [SILENT] Decision Tree — CRITICAL (updated 2026-05-14):**
 
 | Condition | Action |
 |-----------|--------|
-| ALL worker outputs/ empty AND no system changes | `[SILENT]` |
-| Content Creator produced morning brief (file exists + >1KB) | **REPORT IT** — never suppress |
-| Research Agent produced output | **REPORT IT** |
+| ALL worker outputs/ empty AND orchestrator produced no direct brief | `[SILENT]` |
+| Worker outputs present | **REPORT THEM** — never suppress |
+| Workers stalled (no recent output) BUT orchestrator produced direct brief | **REPORT THE ORCHESTRATOR BRIEF** — do NOT suppress |
+| Orchestrator compiled status from own research | **REPORT IT** — this IS the deliverable |
 | Any worker has new deliverable | **REPORT IT** |
-| Orchestrator ran and compiled status | **REPORT IT** (not "nothing new") |
+
+**⚠️ PITFALL 23 (2026-05-14):** Orchestrator correctly detected workers stalled (content-creator: May 13 evening, research-agent: May 12 afternoon), flagged it in report. BUT then sent `[SILENT]` despite having compiled a direct evening brief (Summer Cooling + Beauty data + Gen Z slang). **Root cause:** Decision tree said "if all worker outputs empty → [SILENT]" but didn't explicitly address: "orchestrator produced its OWN direct brief = deliver it."
+
+**Corrected logic:**
+```
+if worker_outputs_exist AND orchestrator_brief_exists:
+    → report both
+elif worker_outputs_exist:
+    → report workers
+elif orchestrator_brief_exists:  # workers stalled but orchestrator filled gap
+    → report orchestrator brief
+    → add "Workers stalled — orchestrator direct production" bullet
+else:
+    → [SILENT]
+```
+
+**Key distinction:** Worker stall ≠ no content to deliver. Orchestrator's fallback production IS the deliverable when workers are down.
 
 **⚠️ PITFALL (2026-05-07):** Orchestrator midday check found Content Creator's morning brief (8,376 bytes) but sent `[SILENT]`. Mistaken logic: "I checked = nothing new" when the actual content WAS the morning brief. **Never suppress when worker output exists.**
 

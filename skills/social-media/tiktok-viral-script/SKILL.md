@@ -4,7 +4,7 @@ title: TikTok Viral Script
 description: Research trending TikTok content and write viral scripts in Tuấn Anh's voice — hook, body, CTA structure for TikTok Shop Vietnam affiliate content.
 trigger: When Anh asks to write a TikTok script, research trending products/sounds, or create content calendar.
 created: 2026-05-08
-updated: 2026-05-11
+updated: 2026-05-14
 type: skill
 tags: [tiktok, content, vietnam, social-media]
 confidence: high
@@ -24,7 +24,25 @@ Write viral TikTok Shop scripts in Tuấn Anh's authentic Vietnamese voice.
 ## Workflow
 
 ### Step 1: Research (MANDATORY before any script)
-Research 3 areas in parallel using web search:
+
+**⚠️ CRITICAL (2026-05-13): When Anh shares a URL first — READ IT BEFORE researching.**
+User's workflow: URL shared → Extract/read content → Confirm understanding → Then research if asked.
+
+**Why this matters:** In 2026-05-13 session, agent assumed @ecom_linus tweet was about "TikTok algorithm" without reading it. The tweet was actually about AI UGC + affiliate marketing. User had to correct twice.
+
+**Correct sequence when URL is shared:**
+```
+1. web_extract or browser_navigate to read the URL content
+2. Summarize what it's about — confirm with user
+3. Only THEN do deep research if user asks
+```
+
+**If extraction fails (400 error, paywall, etc.):**
+- Try browser_navigate → read content from rendered page
+- If browser also blocked → report failure honestly, ask user to paste content
+- NEVER proceed with research assuming what the URL contains
+
+**Research 3 areas in parallel using web search:**
 1. **TikTok Shop Vietnam trending products** — use FindNiche or FastMoss data
 2. **Vietnam TikTok trending sounds** — chartex.com/vietnam, 35express.org
 3. **Gen Z Vietnamese slang** — current slang terms, what's hot vs dead
@@ -34,15 +52,19 @@ From research, identify 3-5 viral hooks currently working:
 - Format: `Hook Type → Template text → Best for`
 - Prioritize NEW trends (within 7 days) over stale ones
 
-### Step 3: Create Daily Briefs (Morning + Evening)
-When running as cron job or daily research, produce TWO briefs:
+### Step 3: Create Daily Content (Morning + Evening)
+When running as cron job or daily research, produce content files:
 
-**Morning Brief (8AM)** — Focus: trending products + sounds + hooks for today's content
-**Evening Brief (6PM)** — Focus: deeper analysis + scripts for tonight + next-day preview
+**Morning (8AM)** — Scripts for today + updated 7-day plan
+**Evening (6PM)** — Scripts for tonight + next-day preview
 
 ```
-Output path: ~/hermes/workers/content-creator/outputs/YYYY-MM-DD-[morning/evening]-brief.md
+Output path: ~/hermes/workers/content-creator/outputs/YYYY-MM-DD-[morning/evening]-content.md
 ```
+
+**⚠️ FILENAME NOTE:** The skill previously said "*-brief.md" but actual output is "*-content.md". 
+- Research Agent outputs: `*-brief.md` (market analysis)
+- Content Creator outputs: `*-content.md` (scripts + calendar)
 
 **Morning brief structure:**
 1. Platform pulse (market status, key stats)
@@ -66,7 +88,8 @@ Output path: ~/hermes/workers/content-creator/outputs/YYYY-MM-DD-[morning/evenin
 9. Tomorrow's focus preview
 
 **Output files:**
-- Brief: `/Users/tuananh4865/.hermes/workers/content-creator/outputs/YYYY-MM-DD-[morning/evening]-brief.md`
+- Morning brief: `/Users/tuananh4865/.hermes/workers/content-creator/outputs/YYYY-MM-DD-morning-brief.md`
+- Evening brief: `/Users/tuananh4865/.hermes/workers/content-creator/outputs/YYYY-MM-DD-evening-brief.md`
 - Heartbeat: `/Users/tuananh4865/.hermes/workers/content-creator/HEARTBEAT.md` (status tracking)
 
 ### Step 4: Write Individual Scripts
@@ -100,9 +123,41 @@ Trải nghiệm timeline — kể chuyện, KHÔNG liệt kê specs
 - Body: Kể chuyện, storytelling — KHÔNG liệt kê specs
 - CTA: Casual, thân mật
 
-### Gen Z Slang Update (May 10, 2026)
+### Gen Z Slang Update (May 14, 2026 — from May 14 orchestrator session research)
 
-### NEW (confirmed viral May 10)
+### 🚨 CRITICAL DISTINCTION: "LỌ" vs "LỎ" — TWO COMPLETELY DIFFERENT MEANINGS!
+**Source: TCC Agency (May 5, 2026) — This was poorly documented until May 14**
+
+| Từ | Nghĩa | Dùng khi |
+|-----|-------|----------|
+| **lọ** | HOT 🔥 | Cái gì cool, đỉnh, viral, trending |
+| **lỏ** | KÉM ❌ | Cái gì fail, không ok, chất lượng kém |
+
+**⚠️ SCRIPT-KILLING ERROR TO AVOID:**
+- ❌ "Sản phẩm này lỏ quá" → NGƯỜI NÓI ĐANG NÓI NÓ KÉM
+- ✅ "Sản phẩm này lắm lọ quá" → NGƯỜI NÓI ĐANG KHEN NÓ HOT
+
+**Các biến thể:**
+- **lọd** — biến thể meme của "lỏ" (fail)
+- **lỏ vãi** — cực kỳ kém (nhấn mạnh mức độ)
+- **lỏ nhẹ** — fail nhẹ (ý trêu chọc)
+- **hơi lỏ** — hơi fail (nhẹ hơn)
+- **lọ** — HOT (đỉnh, cool) ≠ "lỏ"
+
+### 🔥 TOP PRIORITY (135M+ TikTok posts)
+- **SÍT RỊT** — "secret", 135M+ posts, USE IN EVERY SCRIPT
+
+### NEW (found May 13-14 — from evening content)
+- **thơm vãi** — sensory intensifier for fragrance (like "mát vãi" but for smell). Pattern: [sensory adjective] + "vãi" = extreme. mát vãi, thơm vãi, ngon vãi, xinh vãi
+- **pin trâu** — long battery life (buffalo = strong/enduring)
+- **sống nổi** — survive (heat), used for cooling products
+- **ướt mát** — wet cool sensation (spray/mist products)
+- **ra dại** — Điên cuồng vì vui (going wild from joy) — still hot
+- **lọ** — HOT 🔥 (NOT "lỏ"!) — viral May 2026, still hot
+- **nấu xói** — emerging Gen Z slang (May 14, meaning still emerging)
+
+### 🌍 Global Trend (May 12-13, 2026)
+- **#StandBanhMi** — "Stand By Me" → "Stand Banh Mi" on TikTok. Tourists eating banh mi on Vietnamese streets + lyric twist. Vietnamese street food going global. Content angle: "đời thường, du lịch, khám phá" = globally resonant.
 - **Trình là gì mà trình ai chấm** — From HIEUTHUHAI song (Nov 2024), viral May 2026. "Ối dồi ôi, trình là gì mà trình ai chấm!" — đáp trả khi bị chỉ trích
 - **Ối dồi ôi** — Thốt ra khi không tin được (surprise/disbelief)
 - **Nam thư** — Toxic/flirty person to avoid
@@ -118,8 +173,11 @@ Trải nghiệm timeline — kể chuyện, KHÔNG liệt kê specs
 - "đỉnh nóc kịch trần" — FINISHED
 - "Bốc trúng sít rịt" — Fading out
 
+### Intensifiers
+- **vãi** — extreme intensifier (mềm dai vãi, lỏ vãi, thơm vãi, mát vãi)
+- **hơi bị** — really, quite (use sparingly)
+
 ## Gen Z Slang Rules
-- Use CURRENT slang — research fresh each session
 - Hot May 2026: nam thư, ra dại, meoxink, lọ (HOT from "lỏ"), chuzz, các mom ơi
 - DEAD (never use): "quất một phát", "đỉnh nóc kịch trần", template scripts
 - Intensifiers: "hơi bị", "vãi cộng đồng mạng"
@@ -283,17 +341,26 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - Sounds: https://chartex.com/tiktok/sounds/7-days/vietnam
 - Trends: https://35express.org (search "trend")
 - Slang: https://trykaiwa.com/blog/vietnamese-gen-z-slang-phrases-2026
-- **Algorithm May 2026 (FULL):** See `references/tiktok-algorithm-may-2026.md` — comprehensive CHR, fee math, commerce signals, completion rate, demographic split
+- `references/tiktok-algorithm-may-2026.md` — comprehensive CHR, fee math, commerce signals, completion rate, demographic split
+- `references/tiktok-trending-products-may-13-2026.md` — Body Mist LACOON, Cooling Neck Ring, Mini Cooler 2nd push, #StandBanhMi, "thơm vãi" sensory intensifier (May 13 session findings)
+- `references/may-14-2026-findings.md` — LỌ vs LỎ critical distinction, Summer Cooling margins, FindNiche top products, Gen Z slang update (May 14 orchestrator session)
+- **Ecom_Linus AI UGC Model:** See `references/ecom-linus-affiliate-model.md` — Glitchy setup, Vietnam affiliate networks, AI tools stack, angle research methodology
+- **Ecom_Linus AI UGC Model:** See `references/ecom-linus-affiliate-model.md` — Glitchy setup, Vietnam affiliate networks, AI tools stack, angle research methodology
 - Gen Z Research: Tra Vinh University Journal of Science — "Factors Affecting Gen Z Online Purchase Intention on TikTok Shop"
 - Product research: https://findniche.com/tiktok/trending-products-vn
 
 ## Output Paths
 
-**⚠️ CRITICAL: Always use absolute paths in cron/worker context (2026-05-10)**
-- Tilde (`~`) does NOT expand in cron environment ($HOME=/var/empty)
-- Workers write to `/Users/tuananh4865/.hermes/workers/*/outputs/` (local Mac path)
+**⚠️ CRITICAL: Workers use TWO path variants — check BOTH (2026-05-13)**
+- Workers write to `/Users/tuananh4865/hermes/workers/*/outputs/` (primary)
+- BUT the skill docs and some checks look at `/Users/tuananh4865/.hermes/workers/*/outputs/`
+- These may be the SAME directory (symlink) or DIFFERENT — always check both
 - Wiki is at `/Volumes/Storage-1/Hermes/wiki/` (separate volume)
 - The cron output dir is `/Users/tuananh4865/.hermes/cron/output/{job_id}/`
+
+**⚠️ CRITICAL: Always use absolute paths in cron/worker context (2026-05-10)**
+- Tilde (`~`) does NOT expand in cron environment ($HOME=/var/empty)
+- Workers write to `/Users/tuananh4865/hermes/workers/*/outputs/` (local Mac path)
 - See `references/worker-output-path-architecture.md` for full architecture
 
 **Actual worker output locations by cron job ID:**
@@ -316,6 +383,7 @@ ls -lt /Users/tuananh4865/.hermes/cron/output/*/2026-$(date +%Y-%m-%d)*.md 2>/de
 - ❌ **Template repetition** — using same hook structure as previous script. Each script MUST be unique
 - ❌ **Dead phrases** — "đỉnh nóc kịch trần", "quất một phát", "đã X là Y" = instantly dated
 - ❌ **"Mua ngay!" CTA** — too pushy, triggers algorithm pressure detection, lower distribution
+- ❌ **Evening content without demo** — 6PM is prime filming time. Evening scripts should have physically demonstrable moments ("thử xem nào", "bật lên demo", "quay lại đây") rather than just description. Morning scripts can describe; evening scripts should SHOW.
 
 ### Pronoun Mistakes (INSTANT REJECT)
 - ❌ "mấy đứa", "mấy chị", "các bạn", "các bạn ơi" — NEVER use these
@@ -326,6 +394,8 @@ ls -lt /Users/tuananh4865/.hermes/cron/output/*/2026-$(date +%Y-%m-%d)*.md 2>/de
 - ❌ **Skipping research** — writing script without fresh Gen Z slang research = outdated voice
 - ❌ **Using stale trends** — trends older than 7 days = missed opportunity
 - ❌ **Ignoring CHR** — partnering with red-CHR creators = affiliate content dies in algorithmic dead zone
+- ❌ **Assuming URL content** — seeing a URL and assuming what it says without reading it first. The user is sharing content for a REASON — read it and confirm your understanding before acting. In 2026-05-13, agent assumed @ecom_linus tweet was about TikTok algorithm when it was actually about AI UGC affiliate marketing. This caused wasted research effort and user had to correct twice.
+- ❌ **Single-path worker check** — checking only one path variant when workers can write to two different paths. Always check BOTH `/Users/tuananh4865/hermes/workers/*/outputs/` AND `/Users/tuananh4865/.hermes/workers/*/outputs/`. Workers may have fired (cron output exists) but written to a different path than expected.
 
 ### Algorithm Mistakes
 - ❌ **Entertainment-focused scripts** — "entertainment value" has ZERO statistical impact on purchases (beta=0.014, p=0.790). Views ≠ revenue. Stop chasing funny viral.
@@ -391,6 +461,7 @@ Anh thì biết rồi, vì anh đã bán được 2 tuần nay."
 - [[gen-z-slang-2026-04]] — Gen Z slang reference (updated May 2026)
 - `scripts/tráhn-qa-gate.sh` — Runtime TRÁHN enforcement (exit 1 = block delivery)
 - `references/tiktok-browser-access.md` — TikTok CAPTCHA workarounds, competitor research via news scraping
+- `references/worker-dual-path-discovery.md` — Worker output dual-path issue: `/hermes/workers/` vs `/.hermes/workers/` (2026-05-13)
 
 ## Fail-Fast Protocol (2026-05-10)
 

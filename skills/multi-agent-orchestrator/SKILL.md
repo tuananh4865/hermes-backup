@@ -971,6 +971,53 @@ echo $HOME  # May return empty or different value
 
 **This is the working architecture** — briefing doc remains as documentation for human review, but cron SOUL.md has the actual enforceable rules inlined.
 
+## PITFALL 22 (2026-05-14): Worker Stall Recovery — Orchestrator Can Detect But Not Recover
+
+**Symptom**: Workers go stale (last output May 13 evening, nothing May 14), orchestrator detects gap, compiles direct brief, but cannot autonomously restart workers.
+
+**Root cause**: Orchestrator has MONITORING (detects stalls via file timestamps) but lacks RECOVERY (no restart/nudge mechanism).
+
+**Detection method (already working — May 14 confirmed)**:
+```bash
+# Check worker freshness
+LAST_CONTENT=$(ls -t ~/.hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
+LAST_DATE=$(date -r "$LAST_CONTENT" +%Y-%m-%d 2>/dev/null)
+DAYS_OLD=$(echo $(($(date +%s) - $(date -r "$LAST_CONTENT" +%s 2>/dev/null || echo 0))) / 86400)
+
+if [ "$DAYS_OLD" -gt 1 ]; then
+    echo "⚠️ Worker stalled: $DAYS_OLD days since last output"
+fi
+```
+
+**What orchestrator CAN do when workers stall (May 14 confirmed — worked)**:
+1. Detect stall via file timestamp gap
+2. Compile direct brief from own research (fallback production)
+3. Flag "Cần xử lý" in report to Anh
+4. Document the gap in HEARTBEAT
+
+**What orchestrator CANNOT do (gap)**:
+- Autonomously restart worker cron jobs
+- Trigger worker via signal without human setup
+- Recover from worker crash without Anh intervention
+
+**Required setup for autonomous recovery (NOT yet built)**:
+```bash
+# Option A: Worker self-restart (worker checks own HEARTBEAT, re-triggers if stale)
+# Add to worker cron: check_stale_and_restart.sh
+
+# Option B: Orchestrator trigger (orchestrator sends signal to worker)
+# Requires: worker listening on some signal/interrupt mechanism
+
+# Option C: Cron job restart via system (orchestrator calls cron utility)
+# Requires: Hermes cron access + restart permissions
+```
+
+**Current state (May 14)**: Orchestrator fallback production ✅, autonomous restart ❌
+
+**Next step**: Build `scripts/worker-stall-recovery.sh` that orchestrator can invoke to attempt worker restart. Until then, report "Cần xử lý" to Anh when workers stall > 1 day.
+
+---
+
 ## PITFALL 21 (2026-05-10): Dual-Output-Path Architecture — CONFIRMED WORKING ✅
 
 **Symptom**: `~/hermes/workers/*/outputs/` appears empty in cron, but `~/.hermes/cron/output/{job_id}/` has files.
