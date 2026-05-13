@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-11T06:00:47.169751",
+  "timestamp": "2026-05-13T06:00:49.915873",
   "wiki_tasks": {
     "project_tasks": [
       {
@@ -148,7 +148,14 @@
       "type": "system"
     }
   ],
-  "autonomous_tasks": [],
+  "autonomous_tasks": [
+    {
+      "text": "Refresh priority gaps analysis (stale 4 days)",
+      "source": "autonomous",
+      "priority": 60,
+      "type": "autonomous"
+    }
+  ],
   "all_tasks": [
     {
       "text": "Restart watchdog daemon",
@@ -257,6 +264,12 @@
       "source": "phase-2-core-features",
       "priority": 70,
       "type": "project"
+    },
+    {
+      "text": "Refresh priority gaps analysis (stale 4 days)",
+      "source": "autonomous",
+      "priority": 60,
+      "type": "autonomous"
     },
     {
       "text": "Quality improvement: fix frontmatter, reduce meta-commentary",

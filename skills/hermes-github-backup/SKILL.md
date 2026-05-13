@@ -42,18 +42,30 @@ These must be in wiki's `.gitignore` to prevent cross-contamination.
 3. Local/remote diverged → force push `git push origin main --force`
 4. After any force push, verify: `git status` should show clean
 
-## Current Backup Cron (2026-05-08)
+## Current Backup Cron (2026-05-13)
 
 **Hermes Backup Job ID**: `7cba6ba5f52a` — Hermes Daily Backup, 3AM daily
 **Wiki Backup**: SEPARATE — wiki syncs to `my-llm-wiki` via its own mechanism (manual or separate cron)
 
-**Hermes backup command**:
+**Hermes backup command (with safety check)**:
 ```bash
 cd ~/.hermes
+
+# SAFETY: Abort any in-progress rebase before backing up
+# (a mid-rebase state causes git add . to stage rebase files as "changes")
+if git status | grep -q "rebase\|rebasing"; then
+    git rebase --abort 2>/dev/null
+fi
+
 git add .
 git commit -m "Backup hermes full: $(date +%Y-%m-%d)"
 git push origin main
 ```
+
+**Why the rebase check matters:**
+- If a previous session was mid-rebase when interrupted, `git add .` stages those partial rebase files
+- `git commit` then wraps rebasing state into a commit — corrupting history
+- Always `git rebase --abort` first if ANY rebase state is detected
 
 **What gets backed up**:
 - `~/.hermes/skills/` — all 55 skills

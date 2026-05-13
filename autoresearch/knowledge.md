@@ -212,3 +212,30 @@ result = subprocess.run(
 ## Git
 - Autoresearch repo: ~/.hermes/autoresearch
 - Backup remote: git@github.com:tuananh4865/hermes-backup.git
+
+## Tonight's Findings (2026-05-13)
+
+### System Status (02:00)
+- Wiki: ✅ 3638 files, 0 issues (wiki_lint --fast PASSED)
+- Skills: 138 skills, SHS = 0
+- Workers: last ran May 10 (orchestrator not firing properly)
+- Gen Z slang: verified fresh in learned-about-tuananh.md (updated 2026-05-11)
+
+### AI Agent Research — Self-Improving Agents (May 2026)
+
+**12 new techniques documented:**
+
+1. **ERL (Experiential Reflective Learning)** — Reflects on trajectories to generate reusable heuristics. +7.8% on Gaia2. Selective retrieval critical.
+2. **Polaris (Gödel Agent)** — Policy-level self-repair for small LMs via experience abstraction. 7B achieves consistent gains.
+3. **Self-Consolidation** — Contrastive reflection + self-consolidation distills textual experience into latent space.
+4. **ReflexiCoder** — RL-zero internalizes self-debugging into model weights. No external oracles needed.
+5. **RetroAgent** — Dual intrinsic feedback (numerical + language). SimUtil-UCB retrieval. +18.3% ALFWorld.
+6. **MARS** — Single recurrence cycle self-improvement. Principle-based + procedural reflection.
+7. **AEL** — Two-timescale bandit + LLM reflection. Key: self-diagnosis is bottleneck (58% memory+reflection gain).
+8. **DeepVerifier** — Test-time verification scaling. DRA Failure Taxonomy (5 categories, 13 subcats). +8-11% GAIA.
+9. **ICPO** — In-context policy optimization. ME-ICPO with minimum-entropy response selection.
+10. **MemPO** — Self-memory policy optimization. 25.98% F1 gain, 67.58% token reduction.
+11. **EMPO²** — Hybrid on/off-policy RL. 128.6% improvement over GRPO on ScienceWorld.
+12. **MCMA** — Meta-cognitive memory abstraction. Memory Copilot via DPO. +25.07% ALFWorld.
+
+**Key insight:** Self-improvement shifting from heuristic → RL-trained policies. Self-diagnosis is the bottleneck, not experience accumulation. Memory operations as callable tools trained via GRPO.

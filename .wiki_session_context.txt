@@ -384,6 +384,18 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** The file mentions "Based on Karpathy's LLM Wiki pattern (llm-wiki skill)" but doesn't provide a link or reference to this source
 
+> **Auto-improvement note:** *Architecture/Structure**: Clear three-layer architecture with good folder structure
+
+> **Auto-improvement note:** *Conventions**: Good list of 8 conventions covering filenames, frontmatter, wikilinks, etc.
+
+> **Auto-improvement note:** 3 specific improvements. Let me analyze the content:
+
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** The document mentions "Based on Karpathy's LLM Wiki pattern (llm-wiki skill)" but doesn't provide a link or reference to the original source
+
 === index.md ===
 ---
 confidence: high
@@ -539,9 +551,10 @@ relationships:
 - [[start-here]] — Startup instructions for AI agent sessions
 
 ## Queries (Filed Research)
-||- [[tiktok-shop-research-2026-05-10]] — Jelly Skin breakout, expertise > looks, algorithm confirmed, 70%+ completion bar (2026-05-10)
-||- [[tiktok-shop-research-2026-05-09]] — CHR system, commerce signals, Hair appliances breakout (2026-05-09)
-||- [[tiktok-shop-monetization-research-2026-05]] — TikTok Shop Vietnam: 60%+ margin survival, fee structure 12.5-14.5%, Gen Z trust > entertainment (2026-05-07)
+| [[tiktok-shop-research-2026-05-12]] | Commerce-first algorithm, Search dominance 48-65%, Home Supplies breakout, Summer cooling 2-5× conversion, Gen Z slang, LIVE commerce 3× (2026-05-12)
+| [[tiktok-shop-research-2026-05-11]] | Jelly Skin breakout, expertise > looks, algorithm confirmed, 70%+ completion bar (2026-05-10)
+| [[tiktok-shop-research-2026-05-09]] | CHR system, commerce signals, Hair appliances breakout (2026-05-09)
+| [[tiktok-shop-monetization-research-2026-05]] | TikTok Shop Vietnam: 60%+ margin survival, fee structure 12.5-14.5%, Gen Z trust > entertainment (2026-05-07)
 
 > **Auto-improvement note:** *Missing or outdated information:**
 
@@ -615,33 +628,45 @@ relationships:
 
 > **Auto-improvement note:** The page shows "Last updated: 2026-05-07" which is in the future from my perspective (current date is 2025-12-26). This seems odd but could be intentional.
 
-=== log.md (last 20 lines) ===
-- Key findings: CHR system now active (200-1000 green), commerce signals > entertainment, Hair appliances breakout
-- Output: ~/hermes/workers/research-agent/outputs/2026-05-09-evening-brief.md
+> **Auto-improvement note:** *Missing or outdated information:**
 
-## [2026-05-09] daily_review | Hermes Daily Review
-- Task: Daily session review May 9, 2026
-- Sessions processed: 21 regular sessions + cron sessions
-- GitHub backup: 8382 files backed up
-- Key findings:
-  - GitHub Secret Scanning blocks auth.json in --force push (fix documented)
-  - Gen Z ≠ Revenue: KOL influence drives virality, Millennials drive revenue
-  - CHR system active: RED CHR = algorithmic dead zone
-  - Hermes v0.13 Tenacity Release discovered
-  - 10 new arXiv techniques for self-improving agents
-- Skills updated: multi-agent-orchestrator, tiktok-viral-script, research-analyst, hermes-autoresearch, hermes-github-backup
+> **Auto-improvement note:** The page mentions "Total pages: ~156" but this could be inaccurate since it's marked with "~" suggesting uncertainty
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page mentions "Total pages: ~156" but this could be outdated - need verification
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page mentions "Total pages: ~156" but this is likely outdated - no date for when this count was updated
+
+=== log.md (last 20 lines) ===
 - Report: ~/.hermes/cron/output/daily_review_2026-05-09.md
 
 ## [2026-05-10] cron | daily_review_0am
 - Task: Daily session review for 2026-05-09
 - Status: completed
 
+## [2026-05-11] cron | daily_review_0am
+- Task: Daily session review for 2026-05-11
+- Sessions: 53 total
+- Content Creator: 6 scripts (LED Lights, Nơ Bong Bóng, Charm Mini, Sunscreen, Jelly Skin, Hair Accessories)
+- Research: Home Supplies breakout, Furniture emerging, Summer cooling 2-5× conversion
+- Gen Z slang: SÍT RỊT (135M posts), KHÓ QUÁ BỎ QUA, Meoxink, LAN BODY/LAN SẸO
+- Algorithm: 70%+ completion rate, CHR Preview Live (April 30), 5-Second Ad Law
+- Report: ~/.hermes/cron/output/daily_review_2026-05-11.md
+
+## [2026-05-12] daily_review | Hermes Daily Review
+- Task: Daily session review for 2026-05-11
+- Status: completed
+- Report: ~/.hermes/cron/output/daily_review_2026-05-11.md
+
 
 === learned-about-tuananh.md ===
 ---
 title: Learned About Tuấn Anh
 created: 2026-04-23
-updated: 2026-05-10
+updated: 2026-05-11
 type: entity
 tags: [person]
 confidence: high
@@ -668,7 +693,7 @@ relationships: [tiktok-content, hermes-agent]
 - CTA: "Mua ủng hộ anh đi mấy con vợ chứ"
 - Max 25 giây
 
-### Gen Z Slang 2026 (Updated 2026-05-10)
+### Gen Z Slang 2026 (Updated 2026-05-11)
 #### Vietnamese Gen Z Hot 2025-2026
 - **To6** — toxic (Việt hóa từ tiếng Anh "toxic")
 - **Bốc trúng sít rịt** — blind box lucky/unlucky draw
@@ -705,6 +730,23 @@ relationships: [tiktok-content, hermes-agent]
 - "Quay tok" — recording TikToks
 - "Sound này hay quá" — this sound is so good
 - "Trend này" — this trend
+- **Trình là gì mà trình ai chấm** — HIEUTHUHAI meme
+- **Ối dồi ôi** — disbelief
+- **lọ** — HOT (viral May 2026)
+- **Nam thư** — toxic person
+- **Ra dại** — wild with joy
+- **Các mom ơi** — casual greeting (May 2026 update)
+
+#### Gen Z Slang HOT May 11, 2026 (NEW)
+- **SÍT RỊT** — secret (from "secret"), 135M+ TikTok posts 🔥🔥🔥
+- **KHÓ QUÁ BỎ QUA** — "too hard, skip it", laid-back give-up attitude
+- **LAN BODY / LAN SẸO** — content hook formats (localized TikTok)
+- **Nấu xói** — emerging Gen Z slang
+- **BTH** — "bình thường" (texting abbreviation)
+- **Meoxink** — Mèo Xinh, Gen Z girl archetype, pretty kitty identity
+- **Chằm Zn** — "chằm" + Zn (zinc) = lightweight depression mood, tired but humorous
+- **Tẻn tẻn** — cute/adorable behavior, from HURRYKNG rapper fanbase
+- **Đứa trẻ nổi loạn** — rebellion aesthetic (May 2026 trend)
 
 #### Teen code cơ bản
 - iu = yêu, bít/bjt = biết, j = gì, nha = nhé
@@ -858,3 +900,15 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The page mentions "Gen Z Slang 2026 (Updated 2026-05-04)" but most slang listed seems to be from 2025-2026 timeframe. However, "lọ" is mentioned as "updated from 'lỏ', viral May 2026" which is quite specific but doesn't explain the context of when/how it's used.
+
+> **Auto-improvement note:** about-tuananh.md" for quality improvements.
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** 3 specific improvements.
+
+> **Auto-improvement note:** The document mentions Gen Z slang but could be more current - it says "Updated 2026-05-11" and "May 11, 2026" but we're reviewing current state. Some slang might already be outdated.
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Who" section is quite sparse. There's no information about when they started, their follower count, notable achievements, or collaboration history.

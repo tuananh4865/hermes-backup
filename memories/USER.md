@@ -6,10 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [model] crash
-- [model] has
-- [model] vision
-- [model] multimodal
 - [model] zai-org/glm-4.6v-flash
 - [preference] hỗ trợ vision — model crash khi nhận image input với lỗi `"model has crashed without additional information"`.
 - 2026-05-10: hermes update
@@ -36,7 +32,11 @@ Focus on:
 - [file] md [HIGH]
 - 2026-05-11: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - 2026-05-11: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-§ [SESSIONS] — session history summaries
 - 2026-05-11: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [project] with [HIGH]
+- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+§ [SESSIONS] — session history summaries
+- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved
