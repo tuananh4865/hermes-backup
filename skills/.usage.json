@@ -138,14 +138,14 @@
   "hermes-autoresearch": {
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
-    "last_patched_at": "2026-05-13T19:05:09.705340+00:00",
-    "last_used_at": "2026-05-14T19:00:15.401549+00:00",
-    "last_viewed_at": "2026-05-14T03:04:09.578632+00:00",
-    "patch_count": 166,
+    "last_patched_at": "2026-05-14T19:15:16.388831+00:00",
+    "last_used_at": "2026-05-14T19:11:36.368596+00:00",
+    "last_viewed_at": "2026-05-14T19:11:36.367182+00:00",
+    "patch_count": 169,
     "pinned": false,
     "state": "active",
-    "use_count": 156,
-    "view_count": 142
+    "use_count": 158,
+    "view_count": 144
   },
   "hermes-github-backup": {
     "archived_at": null,
@@ -202,13 +202,13 @@
     "created_at": "2026-05-08T01:06:44.513231+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-05-14T09:01:01.869794+00:00",
-    "last_used_at": "2026-05-14T08:58:09.510201+00:00",
-    "last_viewed_at": "2026-05-14T08:58:09.508769+00:00",
+    "last_used_at": "2026-05-14T19:16:46.351782+00:00",
+    "last_viewed_at": "2026-05-14T19:16:46.350172+00:00",
     "patch_count": 70,
     "pinned": false,
     "state": "active",
-    "use_count": 92,
-    "view_count": 91
+    "use_count": 94,
+    "view_count": 93
   },
   "xitter": {
     "archived_at": null,

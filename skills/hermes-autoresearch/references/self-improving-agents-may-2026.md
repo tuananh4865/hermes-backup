@@ -76,6 +76,26 @@
 - +25.07% ALFWorld, +7.92% ScienceWorld
 - Source: arXiv:2601.07470
 
+### 13. LSE (Learning to Self-Evolve)
+- RL framework trains LLMs to improve their own contexts at test time
+- Tree-guided evolution loop for multi-round refinement
+- 4B model outperforms GPT-5/Claude Sonnet 4.5 on Text-to-SQL (BIRD) + MMLU-Redux
+- Source: arXiv:2603.18620
+
+### 14. HyperAgents / DGM-H (Darwin Gödel Machine — Hyperagents)
+- Metacognitive self-modification: meta agent modifies BOTH task agent AND itself
+- Eliminates domain-specific alignment assumption of original DGM
+- Improves across: coding, paper review, robotics reward design, Olympiad math grading
+- Key: meta-level modification procedure is itself editable → can improve how it generates improvements
+- Source: arXiv:2603.19461
+
+### 15. Self-Guide (Co-Evolving Internal Reward + Policy)
+- Agent generates self-guidance signal at inference → converts to step-level reward for training
+- Co-evolving loop: better policy → better guidance → better reward → better policy
+- GRPO co-evolution: +8% over environment reward-only baselines
+- Stage-wise trust schedule stabilizes co-evolution
+- Source: arXiv:2604.03098
+
 ## Key Insights
 
 1. **Self-improvement paradigm shift**: From heuristic-based → RL-trained policies
@@ -83,6 +103,8 @@
 3. **Failure learning**: Contrastive reflection captures error-prone patterns (Self-Consolidation)
 4. **Single-cycle improvement**: MARS achieves in 1 cycle what others need multi-turn loops
 5. **Memory operations as tools**: CRUD operations becoming standard callable actions trained via GRPO/PPO
+6. **Metacognitive self-modification**: HyperAgents shows meta-level procedure is itself editable — can improve how it generates future improvements (not just task performance)
+7. **Co-evolving rewards**: Self-Guide demonstrates policy + internal reward can co-evolve — better policy → better guidance → stronger reward → better policy
 
 ## Sources
 - arXiv:2603.24639 — ERL (Mar 2026)
