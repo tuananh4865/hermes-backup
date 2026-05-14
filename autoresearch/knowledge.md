@@ -50,15 +50,44 @@ Tonight's focus: **Skill Creation #8** — improving existing skills
 
 
 
-## Tonight's Findings (2026-05-11)
+## Tonight's Findings (2026-05-15)
+
+### System Status (02:00)
+- Wiki: ✅ wiki_lint --fast PASSED (0 issues)
+- Full lint: 811 issues (671 broken wikilinks, 140 orphans)
+- Skills: 139 skills listed, SHS = 0
+- Workers: content-creator outputs/ LAST OUTPUT May 14 morning (7009 bytes) — workers firing
+- Gen Z slang: wiki entity updated May 14, latest worker output May 14 confirmed fresh
+
+### AI Agent Research — Self-Improving Techniques (May 15, 2026)
+
+**New techniques documented:**
+
+1. **ERL (Experiential Reflective Learning)** — distills trajectories into reusable heuristics, selective retrieval essential, outperforms ExpeL/AutoGuide on Gaia2 (+7.8%)
+
+2. **LSE (Learning to Self-Evolve)** — RL framework trains LLMs to improve their own contexts at test time. Tree-guided evolution loop. 4B model outperforms GPT-5/Claude Sonnet 4.5 on Text-to-SQL (BIRD) and MMLU-Redux.
+
+3. **HyperAgents (DGM-H)** — metacognitive self-modification: meta agent modifies BOTH task agent AND itself. Eliminates domain-specific alignment assumption of DGM. Improves across coding, paper review, robotics reward design, Olympiad math grading.
+
+4. **Self-Guide** — co-evolving internal reward + policy. Agent generates self-guidance signal at inference, converts to step-level reward for training. GRPO co-evolution yields 8% over environment reward-only baselines.
+
+5. **MARS (Metacognitive Agent Reflective Self-improvement)** — principle-based + procedural reflection in SINGLE recurrence cycle. 6 benchmarks, outperforms recursive self-evolving systems with less compute.
+
+6. **ICPO (In-Context Policy Optimization)** — test-time scaling via multi-round self-reflection. ME-ICPO uses minimum-entropy response selection for robust self-assessed rewards. Math reasoning top-tier.
+
+7. **RetroAgent** — hindsight retrospection with dual intrinsic feedback: (i) Intrinsic Numerical Feedback (scalar reward for incremental subtask progress), (ii) Intrinsic Language Feedback (distills lessons into memory). SimUtil-UCB balances exploitation/exploration of lessons.
+
+**Key insight:** Self-improvement paradigm fully shifted to RL-trained policies. Memory operations becoming learned. Metacognitive self-modification (HyperAgents) enabling open-ended improvement on ANY computable task.
+
+---
+
+## Previous Night (2026-05-14)
 
 ### System Status (02:00)
 - Wiki: ✅ 3638 files, 0 issues (wiki_lint --fast PASSED)
-- Skills: 138 skills listed (SHS = 0)
-- Workers: content-creator/outputs/ EMPTY - workers not writing to shared dir (cron output works)
-- Cron outputs from yesterday confirmed at ~/.hermes/cron/output/
-- Daily review for May 10 confirmed: 58 sessions, Gen Z slang updated
-- Content Creator morning brief (May 10) confirmed slang: "Ra dại", "Cuối tuần rồi mấy con vợ ơi"
+- Skills: 139 skills listed (SHS = 0)
+- Workers: content-creator/outputs/ May 14 morning (7009 bytes) confirmed fresh
+- Content Creator May 14 morning: 3 scripts (Kem Chống Nắng SPF50+, Body Mist LACOON, Neck Fan InnoYO)
 
 ### AI Agent Research — Self-Evolving + RL-based Memory (May 2026)
 

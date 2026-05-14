@@ -3,6 +3,7 @@
   "last_run_at": "2026-05-10T02:07:37.640328+00:00",
   "last_run_duration_seconds": 21.743039,
   "last_run_summary": "auto: no changes; llm: These are the only two agent-created skills, and they are **clearly distinct class-level umbrellas** — not siblings that need merging:\n\n| Skill | Class | Scope |\n|-------|-------|-------|\n| `research-analyst` | Market/economic analysis | Co…",
+  "last_run_summary_shown_at": "2026-05-10T02:07:37.640328+00:00",
   "paused": false,
   "run_count": 1
 }

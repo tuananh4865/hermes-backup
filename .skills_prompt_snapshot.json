@@ -22,8 +22,8 @@
       2442
     ],
     "apple/macos-computer-use/SKILL.md": [
-      1778403333670051194,
-      7309
+      1778746627612069286,
+      12783
     ],
     "autonomous-ai-agents/agentic-company-setup/SKILL.md": [
       1778471609741039186,
@@ -38,7 +38,7 @@
       4557
     ],
     "autonomous-ai-agents/hermes-agent/SKILL.md": [
-      1778616037100197876,
+      1778702449011787336,
       40387
     ],
     "autonomous-ai-agents/opencode/SKILL.md": [
@@ -52,6 +52,10 @@
     "browser-harness/SKILL.md": [
       1778616037100455916,
       9401
+    ],
+    "business/business-opportunity-research/SKILL.md": [
+      1778732459623034413,
+      6318
     ],
     "creative/architecture-diagram/SKILL.md": [
       1778471610455197201,
@@ -142,8 +146,8 @@
       9180
     ],
     "devops/kanban-worker/SKILL.md": [
-      1778616037100545999,
-      8631
+      1778741294344985311,
+      10030
     ],
     "devops/webhook-subscriptions/SKILL.md": [
       1778471610457372667,
@@ -238,7 +242,7 @@
       13683
     ],
     "hermes-autoresearch/SKILL.md": [
-      1778691874784846029,
+      1778702449012322799,
       52019
     ],
     "hermes-external-skills-setup/SKILL.md": [
@@ -246,8 +250,8 @@
       2235
     ],
     "hermes-github-backup/SKILL.md": [
-      1778616115269752016,
-      10882
+      1778702516393755476,
+      11604
     ],
     "knowledge-management/gbrain-lmstudio-embedding/SKILL.md": [
       1778471609748359794,
@@ -394,7 +398,7 @@
       2272
     ],
     "multi-agent-orchestrator/SKILL.md": [
-      1778681105814075533,
+      1778702449014097900,
       47953
     ],
     "note-taking/obsidian/SKILL.md": [
@@ -478,12 +482,12 @@
       2713
     ],
     "social-media/research-analyst/SKILL.md": [
-      1778672259376466142,
-      10343
+      1778749371258159861,
+      10546
     ],
     "social-media/tiktok-viral-script/SKILL.md": [
-      1778691883602032941,
-      25664
+      1778749261866350204,
+      26487
     ],
     "social-media/xitter/SKILL.md": [
       1778471609758044577,
@@ -542,8 +546,8 @@
       7229
     ],
     "terminal/chrome-tabs-applescript/SKILL.md": [
-      1778471609758205911,
-      2189
+      1778744560179441542,
+      3484
     ],
     "transcript-cleanup/SKILL.md": [
       1778471609758272162,
@@ -850,6 +854,19 @@
       "category": "browser-harness",
       "frontmatter_name": "browser-harness",
       "description": "Direct browser control via CDP. Use when the user wants t...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "business-opportunity-research",
+      "category": "business",
+      "frontmatter_name": "business-opportunity-research",
+      "description": "Discover, validate, and evaluate new income stream opport...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

@@ -112,21 +112,45 @@ held keys.
   - `cmd+shift+g` go to path (Finder)
   - Arrow keys: `up`, `down`, `left`, `right`, optionally with modifiers.
 
+## Chrome tab introspection — use osascript, not computer_use
+
+For reading Chrome tabs and window state, `osascript` is **faster and more
+reliable** than `computer_use` capture + AX tree:
+
+```bash
+# Front window name
+osascript -e 'tell application "Google Chrome" to get name of front window'
+
+# All tab names of front window
+osascript -e 'tell application "Google Chrome" to get name of every tab of front window'
+
+# All tab URLs of front window
+osascript -e 'tell application "Google Chrome" to get URL of every tab of front window'
+
+# All tabs across ALL windows
+osascript -e 'tell application "Google Chrome" to get URL of every tab of every window'
+
+# Specific tab (1-based index)
+osascript -e 'tell application "Google Chrome" to get URL of tab 5 of front window'
+```
+
+Use `computer_use` only when you need to **act** on the Chrome window
+(click, type, scroll). For inspection — `osascript` every time.
+
 ## Drag & drop
 
-Prefer element indices:
+The `drag` action is supported in the schema but the cua-driver backend
+returns an error: `drag is not supported by the cua-driver backend.`
 
-```
-computer_use(action="drag", from_element=3, to_element=17)
-```
+Workaround: use `scroll` to position the viewport, then `click` +
+modifier keys to simulate drag behavior, or ask the user to do it manually.
 
-For a rubber-band selection on empty canvas, use coordinates:
+The `drag` action returns an error from the backend:
+`{"ok": false, "action": "drag", "message": "drag is not supported by the cua-driver backend."}`
 
-```
-computer_use(action="drag",
-             from_coordinate=[100, 200],
-             to_coordinate=[400, 500])
-```
+Do NOT use element-index drag. For rubber-band selection on empty canvas,
+use `scroll` to position the viewport, then `click` + `key` arrow keys to
+move items, or manual user intervention.
 
 ## Scroll
 
@@ -174,6 +198,41 @@ your conversation context.
 - Don't interact with the user's browser tabs that are clearly personal
   (email, banking, Messages) unless that's the actual task.
 
+## Setup — enable the tool first
+
+`computer_use` ships **disabled** by default. Activate it with:
+
+```bash
+hermes tools enable computer_use
+```
+
+Check status:
+```bash
+hermes tools list | grep computer_use   # → ✓ enabled = ready
+cua-driver --version                     # → 0.1.5 (installed binary)
+```
+
+**Version note:** The backend pins `HERMES_CUA_DRIVER_VERSION=0.5.0` but the
+installed binary may report 0.1.5 (upstream script installs an older revision).
+The backend handles this gracefully — downgrade features but still works.
+
+## TCC Permissions Check
+
+Run this before troubleshooting permission issues:
+
+```bash
+cua-driver check_permissions
+```
+
+⚠️ When run outside the CuaDriver daemon process, TCC may show "NOT granted"
+even though CuaDriver.app itself has permissions. Start the daemon first for
+authoritative results:
+
+```bash
+open -n -g -a CuaDriver --args serve
+cua-driver check_permissions
+```
+
 ## Failure modes
 
 - **"cua-driver not installed"** — Run `hermes tools` and enable Computer
@@ -189,6 +248,39 @@ your conversation context.
   that matches the dangerous-pattern block list (`curl ... | bash`,
   `sudo rm -rf`, etc.). Break the command up or reconsider.
 
+## browser-harness vs real Chrome — critical distinction
+
+**`browser-harness` fails on login-gated sites** (X/Twitter, TikTok, Facebook,
+etc.) because it connects to a fresh Chrome instance or separate profile that
+is NOT logged in. The browser opens the login page and ignores navigation to
+authenticated content.
+
+**The user's real Chrome (already logged in) requires a different approach:**
+
+| Tool | Works on logged-in sites? | How |
+|------|---------------------------|-----|
+| `browser-harness` (CDP) | ❌ No — unauthenticated | Separate Chrome instance |
+| `osascript` (AppleScript) | ✅ Yes — reads real Chrome | Queries app directly |
+| `computer_use` (cua-driver) | ✅ Yes — drives real Chrome | Targets user's running apps |
+
+**Workflow for login-gated sites:**
+1. Use `osascript` to inspect tabs and get current URL
+2. Use `computer_use` with `app="Google Chrome"` to act on the real Chrome window
+3. Never use `browser_navigate` for X/TikTok/etc. — it will just show login page
+
+**Finding the right window:**
+```bash
+# Get window IDs and PIDs of on-screen windows
+echo '{"on_screen_only": true}' | cua-driver list_windows
+# → z_index: lowest = frontmost on macOS
+# → Use window_id + pid for target operations
+```
+
+**When osascript shows the right URL but browser-harness shows login:**
+→ This confirms browser-harness is on a separate instance. Switch to
+`computer_use(action="capture", app="Google Chrome")` to work with the real
+logged-in Chrome.
+
 ## When NOT to use `computer_use`
 
 - Web automation you can do via `browser_*` tools — those use a real
@@ -199,3 +291,42 @@ your conversation context.
 - File edits — use `read_file` / `write_file` / `patch`, not `type` into
   an editor window.
 - Shell commands — use `terminal`, not `type` into Terminal.app.
+
+## Debugging — X.com / login-gated sites
+
+**Problem:** `capture(mode='som', app='Google Chrome')` shows Chrome's real
+logged-in window (z_index frontmost), but element labels are empty
+(`''`) because Chrome renders dynamically via WebArea. SOM overlay on
+the PNG screenshot is the actual click target — not the AX indices.
+
+**Chrome window hierarchy** (from `cua-driver list_windows` with MCP
+structuredContent):
+```
+31837 7044 Google Chrome (21) Home / X z=17  ← frontmost (lowest z_index)
+31837 7048 Google Chrome (248) BẤT QUÁ NHÂN GIAN z=16
+```
+When no window_id is specified, the backend picks the frontmost on-screen
+window.
+
+**screenshot tool doesn't work with MCP window IDs.** The `screenshot`
+tool uses an older integer-only window ID scheme; the `get_window_state`
+tool (used by `capture`) uses the new MCP pid+window_id format. If you see
+"no shareable window with id XXXX", use `capture(mode='som', app='Google Chrome')`
+instead — it calls `get_window_state` internally and handles the format
+correctly.
+
+**osascript scroll for X/Twitter timeline:**
+```bash
+# Scroll down the X timeline (Cmd+ArrowDown)
+osascript -e 'tell application "System Events" to keystroke key code 125 using {command down}'
+```
+More reliable than `computer_use(action='scroll', ...)` on web feeds because
+it sends the key to the frontmost Chrome window directly.
+
+**drag is not supported** by the cua-driver backend. Returns:
+`{"ok": false, "action": "drag", "message": "drag is not supported by the cua-driver backend."}`
+
+**All element bounds are (0,0,0,0)** — accessibility tree coordinates are
+not real pixel positions. The SOM screenshot overlay provides the actual
+click targets. For X, use the screenshot to find the post, then click by
+coordinate or by navigating to the visible element.

@@ -228,10 +228,30 @@ git push origin main --force
 ### 7. Cron Job (auto backup 3AM daily)
 ```bash
 cd ~/.hermes
+
+# SAFETY: Abort any in-progress rebase before backing up
+if git status | grep -q "rebase\|rebasing"; then
+    git rebase --abort 2>/dev/null
+fi
+
 git add .
 git commit -m "Backup hermes full: $(date +%Y-%m-%d)"
 git push origin main
 ```
+
+**Recovery when push is rejected (non-fast-forward):**
+```bash
+# Option 1: Abort any mid-rebase, then force push (preferred — preserves local state)
+git rebase --abort 2>/dev/null
+git push origin main --force
+
+# Option 2: Pull with rebase, handle conflicts, continue
+git pull --rebase origin main
+# If conflicts → git rebase --abort (discard remote changes and force push)
+# If clean → git push origin main
+```
+
+**Why force push is safe here:** This is a personal backup repo — no collaborators. Force push replaces remote with local, which is the intended behavior.
 
 **Note**: Skills live natively at `~/.hermes/skills/` — no symlink, no external_dirs needed.
 

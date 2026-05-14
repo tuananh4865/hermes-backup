@@ -10,6 +10,7 @@
 ```bash
 # CRITICAL: Use ABSOLUTE PATH — tilde (~) does NOT expand in cron context!
 # $HOME in cron = /var/empty, so ~/hermes/... returns nothing
+# ALL paths in cron context MUST use /Users/tuananh4865/hermes/...
 LATEST=$(ls -t /Users/tuananh4865/hermes/workers/content-creator/outputs/*.md 2>/dev/null | head -1)
 if [ -n "$LATEST" ]; then
     VIOLATIONS=$(grep -c "đỉnh nóc\|quất một phát\|đỉnh nóc kịch trần" "$LATEST" 2>/dev/null || echo "0")
@@ -138,22 +139,35 @@ Hoàn thành | Đang làm | Cần quyết định
 | Orchestrator compiled status from own research | **REPORT IT** — this IS the deliverable |
 | Any worker has new deliverable | **REPORT IT** |
 
-**⚠️ PITFALL 23 (2026-05-14):** Orchestrator correctly detected workers stalled (content-creator: May 13 evening, research-agent: May 12 afternoon), flagged it in report. BUT then sent `[SILENT]` despite having compiled a direct evening brief (Summer Cooling + Beauty data + Gen Z slang). **Root cause:** Decision tree said "if all worker outputs empty → [SILENT]" but didn't explicitly address: "orchestrator produced its OWN direct brief = deliver it."
+**⚠️ PITFALL 23 (2026-05-14):** Orchestrator detected workers stalled (CC: May 13 evening ~34h gap, RA: May 12 afternoon ~62h gap), compiled direct report (Summer Cooling NOW window, Neck Fan 64% margin, Gen Z slang: lọ=hot, ra dại, chả quyên, nấu xói), BUT still sent `[SILENT]`.
 
-**Corrected logic:**
+**Root cause:** HEARTBEAT-based decision tree only says "if all empty → [SILENT]". It doesn't handle: "orchestrator produced its own direct report = DELIVER IT".
+
+**HARD RULE — [SILENT] Decision Logic (corrected):**
 ```
-if worker_outputs_exist AND orchestrator_brief_exists:
-    → report both
+# CRON ORCHESTRATOR [SILENT] DECISION TREE — USE THIS, NOT HEARTBEAT
+
+if orchestrator_own_report_exists:
+    # Workers stalled BUT orchestrator filled the gap = ALWAYS DELIVER
+    → DELIVER the orchestrator report
+    → Include "Workers: CC ~34h, RA ~62h" as note inside report
 elif worker_outputs_exist:
-    → report workers
-elif orchestrator_brief_exists:  # workers stalled but orchestrator filled gap
-    → report orchestrator brief
-    → add "Workers stalled — orchestrator direct production" bullet
+    → report worker outputs
 else:
     → [SILENT]
 ```
 
-**Key distinction:** Worker stall ≠ no content to deliver. Orchestrator's fallback production IS the deliverable when workers are down.
+**Key insight:** Orchestrator's fallback production IS the deliverable. Worker stall ≠ no content. Only `[SILENT]` when NEITHER workers NOR orchestrator produced anything.
+
+**Confirmed state (2026-05-14 04:00):**
+| Source | Status |
+|--------|--------|
+| Content Creator | ⚠️ Stalled since May 13 18:02 (~34h) |
+| Research Agent | ⚠️ Stalled since May 12 14:08 (~62h) |
+| Orchestrator direct | ✅ Compiled (Summer Cooling + Beauty + slang) |
+| Dojo | ✅ Ran (4 pages, 3 skills) |
+
+**⚠️ TRÁHN QA Gate Path Bug:** The gate at top of this doc uses `~/hermes/workers/content-creator/outputs/*.md` — tilde (`~`) does NOT expand in cron context where `$HOME=/var/empty`. ALL path references in cron context MUST use absolute `/Users/tuananh4865/hermes/workers/content-creator/outputs/*.md`.
 
 **⚠️ PITFALL (2026-05-07):** Orchestrator midday check found Content Creator's morning brief (8,376 bytes) but sent `[SILENT]`. Mistaken logic: "I checked = nothing new" when the actual content WAS the morning brief. **Never suppress when worker output exists.**
 

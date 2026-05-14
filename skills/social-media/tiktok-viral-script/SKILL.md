@@ -4,7 +4,7 @@ title: TikTok Viral Script
 description: Research trending TikTok content and write viral scripts in Tuấn Anh's voice — hook, body, CTA structure for TikTok Shop Vietnam affiliate content.
 trigger: When Anh asks to write a TikTok script, research trending products/sounds, or create content calendar.
 created: 2026-05-08
-updated: 2026-05-14
+updated: 2026-05-15
 type: skill
 tags: [tiktok, content, vietnam, social-media]
 confidence: high
@@ -125,8 +125,19 @@ Trải nghiệm timeline — kể chuyện, KHÔNG liệt kê specs
 
 ### Gen Z Slang Update (May 14, 2026 — from May 14 orchestrator session research)
 
-### 🚨 CRITICAL DISTINCTION: "LỌ" vs "LỎ" — TWO COMPLETELY DIFFERENT MEANINGS!
-**Source: TCC Agency (May 5, 2026) — This was poorly documented until May 14**
+### 🚨🚨 TRÁHN-VIOLATION LEVEL: "LỌ" vs "LỎ" — SCRIPT-KILLING ERROR!
+**Source: TCC Agency (May 5, 2026). Confirmed again in May 15 morning research — this distinction keeps getting missed.**
+
+| Từ | Nghĩa | Dùng khi |
+|-----|-------|----------|
+| **lọ** | HOT 🔥 | Cái gì cool, đỉnh, viral, trending |
+| **lỏ** | KÉM ❌ | Cái gì fail, không ok, chất lượng kém |
+
+**⚠️ THIS IS A TRÁHN VIOLATION — BLOCK DELIVERY if detected:**
+- ❌ "Sản phẩm này lỏ quá" (meaning HOT) → WRONG → Gen Z will roast you
+- ✅ "Sản phẩm này lắm lọ quá" → means HOT 🔥
+- ❌ "video này lỏ quá" (meaning viral) → WRONG → means the video is FAIL
+- ✅ "video này lọ quá" → means the video is fire 🔥
 
 | Từ | Nghĩa | Dùng khi |
 |-----|-------|----------|
@@ -342,9 +353,10 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - Trends: https://35express.org (search "trend")
 - Slang: https://trykaiwa.com/blog/vietnamese-gen-z-slang-phrases-2026
 - `references/tiktok-algorithm-may-2026.md` — comprehensive CHR, fee math, commerce signals, completion rate, demographic split
+- `references/tiktok-shop-product-links-may-2026.md` — Real TikTok Shop product links by trending keyword (May 14-15, 2026). Affiliate-ready PDP links for cooling products, beauty, lifestyle. Built from actual Shopee/TikTok search data.
 - `references/tiktok-trending-products-may-13-2026.md` — Body Mist LACOON, Cooling Neck Ring, Mini Cooler 2nd push, #StandBanhMi, "thơm vãi" sensory intensifier (May 13 session findings)
 - `references/may-14-2026-findings.md` — LỌ vs LỎ critical distinction, Summer Cooling margins, FindNiche top products, Gen Z slang update (May 14 orchestrator session)
-- **Ecom_Linus AI UGC Model:** See `references/ecom-linus-affiliate-model.md` — Glitchy setup, Vietnam affiliate networks, AI tools stack, angle research methodology
+- `references/may-15-2026-findings.md` — Sunscreen ASUNMEE SPF50+ push, Summer peak data (+21% GMV), Top products chart, weekend calendar (May 15 session)
 - **Ecom_Linus AI UGC Model:** See `references/ecom-linus-affiliate-model.md` — Glitchy setup, Vietnam affiliate networks, AI tools stack, angle research methodology
 - Gen Z Research: Tra Vinh University Journal of Science — "Factors Affecting Gen Z Online Purchase Intention on TikTok Shop"
 - Product research: https://findniche.com/tiktok/trending-products-vn

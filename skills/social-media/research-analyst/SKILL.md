@@ -88,6 +88,7 @@ Save to: `~/hermes/workers/content-creator/outputs/YYYY-MM-DD-evening-research-b
 | https://slangloom.com/vietnamese-slang/ | Gen Z slang (comprehensive, May 2026) |
 | https://trykaiwa.com/blog/vietnamese-gen-z-slang-phrases-2026 | Gen Z slang (structured) |
 | https://gendigi.vn/ | TikTok affiliate case studies (Jacklyn $108K) |
+| `references/tiktok-shop-product-links-may-2026.md` | **NEW** — Real TikTok Shop product links by trending keyword (May 14-15, 2026). Use for product validation + commission math before recommending.
 
 ## Fee Structure (May 2026 — CRITICAL)
 

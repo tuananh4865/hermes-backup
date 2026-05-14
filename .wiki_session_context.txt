@@ -396,6 +396,8 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** The document mentions "Based on Karpathy's LLM Wiki pattern (llm-wiki skill)" but doesn't provide a link or reference to the original source
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
 === index.md ===
 ---
 confidence: high
@@ -550,12 +552,12 @@ relationships:
 - [[log]] — Activity log
 - [[start-here]] — Startup instructions for AI agent sessions
 
-## Queries (Filed Research)
-| [[tiktok-shop-research-2026-05-13]] | Post-Mother's Day pivot, Nơ Bong Bóng ₫3.38B GMV, Home Supplies breakout, Summer Cooling acceleration, Beauty deep dive, lọ = HOT (2026-05-13)
-| [[tiktok-shop-research-2026-05-12]] | Commerce-first algorithm, Search dominance 48-65%, Home Supplies breakout, Summer cooling 2-5× conversion, Gen Z slang, LIVE commerce 3× (2026-05-12)
-| [[tiktok-shop-research-2026-05-11]] | Jelly Skin breakout, expertise > looks, algorithm confirmed, 70%+ completion bar (2026-05-10)
-| [[tiktok-shop-research-2026-05-09]] | CHR system, commerce signals, Hair appliances breakout (2026-05-09)
-| [[tiktok-shop-monetization-research-2026-05]] | TikTok Shop Vietnam: 60%+ margin survival, fee structure 12.5-14.5%, Gen Z trust > entertainment (2026-05-07)
+|| [[tiktok-shop-research-2026-05-14]] | Summer Cooling NOW window, Neck Fan 64% margin, Gen Z slang update (lọ, ra dại, chả quyên), Coolmate 1,370 KOC model, LIVE 3× conversion (2026-05-14) |
+|| [[tiktok-shop-research-2026-05-13]] | Post-Mother's Day pivot, Nơ Bong Bóng ₫3.38B GMV, Home Supplies breakout, Summer Cooling acceleration, Beauty deep dive, lọ = HOT (2026-05-13) |
+|| [[tiktok-shop-research-2026-05-12]] | Commerce-first algorithm, Search dominance 48-65%, Home Supplies breakout, Summer cooling 2-5× conversion, Gen Z slang, LIVE commerce 3× (2026-05-12)
+| [[tiktok-shop-research-2026-05-11]] | Jelly Skin breakout, expertise > looks, algorithm confirmed, 70%+ completion bar (2026-05-10) |
+| [[tiktok-shop-research-2026-05-09]] | CHR system, commerce signals, Hair appliances breakout (2026-05-09) |
+| [[tiktok-shop-monetization-research-2026-05]] | TikTok Shop Vietnam: 60%+ margin survival, fee structure 12.5-14.5%, Gen Z trust > entertainment (2026-05-07) |
 
 > **Auto-improvement note:** *Missing or outdated information:**
 
@@ -641,14 +643,11 @@ relationships:
 
 > **Auto-improvement note:** The page mentions "Total pages: ~156" but this is likely outdated - no date for when this count was updated
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page mentions "Total pages: ~156" but doesn't provide a way to verify this
+
 === log.md (last 20 lines) ===
-- Report: ~/.hermes/cron/output/daily_review_2026-05-09.md
-
-## [2026-05-10] cron | daily_review_0am
-- Task: Daily session review for 2026-05-09
-- Status: completed
-
-## [2026-05-11] cron | daily_review_0am
 - Task: Daily session review for 2026-05-11
 - Sessions: 53 total
 - Content Creator: 6 scripts (LED Lights, Nơ Bong Bóng, Charm Mini, Sunscreen, Jelly Skin, Hair Accessories)
@@ -662,6 +661,13 @@ relationships:
 - Status: completed
 - Report: ~/.hermes/cron/output/daily_review_2026-05-11.md
 
+## [2026-05-14] research | TikTok Shop Research May 14 Morning Brief
+- Summer Cooling NOW window confirmed (37-40°C Vietnam)
+- Trending: Quạt Mini Sò Lạnh 6000mAh, INNOYO Neck Fan, Body Mist LACOON, Chiếu Mây Lạnh
+- Trending sounds: Wind Instrumental (P336), Lùi Lại Lấy Đà, Xuân Bính Ngọ (new), Úc Phượng Sound Buồn
+- Gen Z slang update: lọ, ra dại, chả quyên, sít rịt, khó quá bỏ qua
+- Output: ~/hermes/workers/research-agent/outputs/2026-05-14-morning-brief.md
+- Wiki: concepts/tiktok-shop-research-2026-05-14.md
 
 === learned-about-tuananh.md ===
 ---
@@ -913,3 +919,7 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The "Who" section is quite sparse. There's no information about when they started, their follower count, notable achievements, or collaboration history.
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The slang list has dates (2025-2026, May 2026, May 11, 2026) but some entries are dated while others aren't - inconsistent dating

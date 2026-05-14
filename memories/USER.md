@@ -6,37 +6,37 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [project] as [HIGH]
-- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [file] variants:
-- [file] and
-- [file] warning
-- [file] check
-- [file] bug
-- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-13:
-- [file] created:** [HIGH]
-- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [file] updated
-- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-13: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [tool] in [HIGH]
-- [file] was [HIGH]
+- [tool] enabled [HIGH]
 - 2026-05-14: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [file] from
-- [file] May
 - 2026-05-14: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [file] at [HIGH]
 - 2026-05-14: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [file] added:**
-- [file] architecture:
+- [tool] vs
+- [file] created:**
+- 2026-05-14: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [tool] the [HIGH]
+- [preference] you to operate? [HIGH]
+- 2026-05-14: Review the conversation above and consider saving to memory if appropriate.
+Focus on:
+1. Has the us
+- [preference] 1. **Login X trên browser-harness** (cần credentials)
+- [preference] cách nào? Hay đăng nhập X trên Chrome rồi dùng computer_use để scroll?
+- [preference] đăng nhập (bị redirect về trang login). Còn Chrome thật của mấy con vợ đã đăng nhập rồi (thấy `(21) Home / X` ở frontmost window).
+- [preference] em scroll xuống bài post ~50 và comment gì đó phù hợp với nội dung.
+- [tool] result [HIGH]
+- [tool] outputs [HIGH]
+- [preference] thấy em điều khiển chrome thật [HIGH]
+- [file] không [HIGH]
+- [preference] em dùng **AppleScript + Vision** để: [HIGH]
+- [preference] điều khiển được Chrome thật của mấy con vợ.** [HIGH]
+- [preference] login | X.com yêu cầu đăng nhập → bị redirect | [HIGH]
+- [preference] chụp được ảnh để xem nội dung | [HIGH]
+- [preference] phải Chrome đang dùng X [HIGH]
+- [preference] đăng nhập X [HIGH]
+- 2026-05-14: Mở chrome và vào X
 - [file] md
-- [preference] sống nổi")
-§ [SESSIONS] — session history summaries
 - 2026-05-14: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [tool] whitelist [HIGH]
+§ [SESSIONS] — session history summaries
+- 2026-05-15: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved
