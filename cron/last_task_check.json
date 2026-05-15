@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-15T02:00:47.913919",
+  "timestamp": "2026-05-15T06:00:48.065682",
   "wiki_tasks": {
     "project_tasks": [
       {
@@ -145,12 +145,6 @@
       "text": "Restart watchdog daemon",
       "source": "system",
       "priority": 80,
-      "type": "system"
-    },
-    {
-      "text": "Commit 19 uncommitted changes",
-      "source": "system",
-      "priority": 40,
       "type": "system"
     }
   ],
@@ -306,12 +300,6 @@
       "source": "wiki-enhancement-roadmap",
       "priority": 50,
       "type": "wiki"
-    },
-    {
-      "text": "Commit 19 uncommitted changes",
-      "source": "system",
-      "priority": 40,
-      "type": "system"
     }
   ],
   "top_tasks": [
