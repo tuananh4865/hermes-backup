@@ -43,23 +43,50 @@ Tonight's focus: **Skill Creation #8** — improving existing skills
 - Scripts: /Volumes/Storage-1/Hermes/wiki/scripts
 - Hermes code: ~/.hermes/hermes-agent/
 
-## Research Sources
-- TikTok: web search for "TikTok trends 2026", "Gen Z slang 2026"
-- AI Agents: arxiv.org, github.com/trending, Hacker News
-- Hermes: ~/.hermes/hermes-agent/gateway/, ~/.hermes/skills/
-
-
-
-## Tonight's Findings (2026-05-15)
+### Tonight's Findings (2026-05-16)
 
 ### System Status (02:00)
 - Wiki: ✅ wiki_lint --fast PASSED (0 issues)
-- Full lint: 811 issues (671 broken wikilinks, 140 orphans)
 - Skills: 139 skills listed, SHS = 0
-- Workers: content-creator outputs/ LAST OUTPUT May 14 morning (7009 bytes) — workers firing
-- Gen Z slang: wiki entity updated May 14, latest worker output May 14 confirmed fresh
+- Workers: content-creator outputs/ LAST OUTPUT May 14 morning (7009 bytes) — 2+ days since last fire
+- Gen Z slang: wiki entity updated May 11, workers dead → web search fallback
+- Session logs: ~/Library/Application Support/hermes-agent/sessions/ not accessible (empty/missing)
 
-### AI Agent Research — Self-Improving Techniques (May 15, 2026)
+### Gen Z Slang May 16 — Web Search Fallback (Workers Dead)
+**Source:** Web search (workers last fired May 14, cannot sync from output)
+
+**New/reconfirmed terms from web search:**
+| Slang | Meaning | Source |
+|-------|---------|--------|
+| Đỉnh | peak, amazing | migaku.com Mar 2026 |
+| Toang | screwed, something went wrong | migaku.com Mar 2026 |
+| Còn cái nịt | unlucky, nothing left | TikTok discover |
+| Tấm chiếu mới | what behind the ears (confusion) | TikTok discover |
+| Ông trời/Ối trời ơi | surprise/disbelief | Kaiwa Jan 2026 |
+| Thả thính | drop a hint/flirt | Kaiwa Jan 2026 |
+| Flex | show off | Kaiwa Jan 2026 |
+| Slay | killing it | Kaiwa Jan 2026 |
+| Lầy | playful, teasing | Kaiwa Jan 2026 |
+
+**Key insight:** Gen Z slang research from web search shows DIFFERENT terms than worker output. Worker outputs focus on TikTok-specific viral slang (SÍT RỊT, lọ, ra dại) while web search surfaces broader internet slang (Đỉnh, Toang, Còn cái nịt). Both pools are valid — workers have more current TikTok trends, web search has broader coverage.
+
+**Slang evolution status:**
+- Wiki entity: updated May 11 (authoritative)
+- tiktok-viral-script skill: embedded slang synced May 9-15
+- Workers: dead since May 14
+- Web search: broader internet slang coverage
+- Both sources valid for different purposes
+
+### AI Agent Research — Self-Improving Techniques (May 16, 2026)
+
+Research focus tonight: **Self-Debugging** capability — understanding the latest self-improving agent frameworks.
+
+**Key resources found:**
+- arxiv.org/abs/2603.24639 — ERL (Experiential Reflective Learning), +7.8% over ReAct on Gaia2
+- arxiv.org/abs/2512.02731 — Self-Improving AI through Self-Play (STaR, SPIN, Reflexion, GANs, AlphaZero as GVU operator)
+- arxiv.org/html/2603.18073v1 — Continually Self-Improving AI (graph-based augmentation)
+- github.com/EvoAgentX/Awesome-Self-Evolving-Agents — visual taxonomy of agent evolution techniques
+- Self-Improving AI Agents: The 2026 Guide (o-mega.ai)
 
 **New techniques documented:**
 
@@ -236,13 +263,47 @@ result = subprocess.run(
 - Sessions directory not found at expected path
 - Daily log directory exists but empty (no entries)
 - MEMORY.md last updated May 5
-
+---
 
 ## Git
 - Autoresearch repo: ~/.hermes/autoresearch
 - Backup remote: git@github.com:tuananh4865/hermes-backup.git
 
-## Tonight's Findings (2026-05-13)
+## Tonight's Findings (2026-05-15)
+
+### System Status (02:00)
+- Wiki: ✅ clean
+- Skills: 139 skills, SHS = 0
+- Workers: STALE since May 11 (4 days) — content-creator/outputs/ last May 11
+- Gen Z slang: wiki entity May 11, found "lỏ/lọ" new variants from May 5 web search
+
+### Hermes X Research — May 15, 2026
+- Hermes Agent: **150,290 stars** (up from 131.8K on May 10), global rank #47
+- v2026.5.7 "The Tenacity Release" (May 7): Kanban multi-agent, /goal persistent, checkpoints v2, 8 P0 security fixes
+- v2026.4.30 "The Curator Release": Autonomous skill library maintenance, 57% TUI cold start reduction
+
+### AI Agent Frameworks Comparison (2026)
+
+| Framework | Score | Stars | Latency | Best For |
+|-----------|-------|-------|---------|----------|
+| LangGraph | 44/50 | 130K | ~1.2s | Complex workflows, enterprise |
+| CrewAI | 38/50 | 46K | ~1.8s | Rapid prototyping |
+| AutoGen | 35/50 | 55K | ~2.1s | Research (WARNING: 6 months silent) |
+
+### Self-Improving Agent Tools Found
+
+1. **Cognify** — Auto-tunes LangChain/DSPy. 2.8x quality, 10x cost reduction
+2. **autoresearch-agents** (hwchase17) — LangSmith-powered autonomous agent optimization
+3. **self-evolving-codegen** — 5-agent pipeline with evaluator→analyzer→evolver→tracker. Gen 0→1: 0.506→0.921
+4. **Autogenesis** — RSPL+SEPL protocol layers for versioned agent evolution
+
+### Gen Z Slang Update
+- "lỏ vãi", "lọ" (HOT, May 5, 2026) — already in wiki entity
+- "toang" — already in wiki entity
+
+---
+
+## Previous Night (2026-05-13)
 
 ### System Status (02:00)
 - Wiki: ✅ 3638 files, 0 issues (wiki_lint --fast PASSED)

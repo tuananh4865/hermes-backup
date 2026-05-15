@@ -398,6 +398,10 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** *Missing or outdated information:**
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The frontmatter template doesn't show the `relationships` field properly defined in the relationships section - it's mentioned in the template but not in the schema description
+
 === index.md ===
 ---
 confidence: high
@@ -646,6 +650,10 @@ relationships:
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The page mentions "Total pages: ~156" but doesn't provide a way to verify this
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "TikTok Content" section is incomplete - the last entry `[[tiktok-viral-script]]` has a trailing hyphen and no description, which seems incomplete
 
 === log.md (last 20 lines) ===
 - Task: Daily session review for 2026-05-11
@@ -923,3 +931,7 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The slang list has dates (2025-2026, May 2026, May 11, 2026) but some entries are dated while others aren't - inconsistent dating
+
+> **Auto-improvement note:** The document mentions Gen Z slang but seems incomplete - there are some terms that could use more context or verification
+
+> **Auto-improvement note:** Some slang entries lack examples of usage in context

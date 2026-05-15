@@ -1,0 +1,207 @@
+{
+  "unlocks": {
+    "actually_read_the_logs": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "autonomous_avalanche": {
+      "evidence": null,
+      "first_tier": "Gold",
+      "unlocked_at": 1778818771
+    },
+    "browser_possession": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "cache_hit_appreciator": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "claude_confidant": {
+      "evidence": null,
+      "first_tier": "Diamond",
+      "unlocked_at": 1778818771
+    },
+    "codex_conjurer": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "config_surgeon": {
+      "evidence": null,
+      "first_tier": "Gold",
+      "unlocked_at": 1778818771
+    },
+    "context_dragon": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "dependency_hell_tourist": {
+      "evidence": null,
+      "first_tier": null,
+      "unlocked_at": 1778818771
+    },
+    "file_archaeologist": {
+      "evidence": null,
+      "first_tier": "Silver",
+      "unlocked_at": 1778818771
+    },
+    "forgot_the_env_var": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "gateway_dweller": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "gemini_cartographer": {
+      "evidence": null,
+      "first_tier": "Silver",
+      "unlocked_at": 1778818771
+    },
+    "let_him_cook": {
+      "evidence": {
+        "session_id": "20260423_203624_ee0b12fa",
+        "title": "<think> The user is sharing a conversation about setting up an Agentic AI sys...",
+        "value": 232
+      },
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "marathon_operator": {
+      "evidence": null,
+      "first_tier": "Silver",
+      "unlocked_at": 1778818771
+    },
+    "model_hopper": {
+      "evidence": null,
+      "first_tier": "Silver",
+      "unlocked_at": 1778818771
+    },
+    "model_sommelier": {
+      "evidence": null,
+      "first_tier": "Olympian",
+      "unlocked_at": 1778818771
+    },
+    "night_shift_operator": {
+      "evidence": null,
+      "first_tier": "Silver",
+      "unlocked_at": 1778818771
+    },
+    "one_character_fix": {
+      "evidence": null,
+      "first_tier": null,
+      "unlocked_at": 1778818771
+    },
+    "openrouter_enjoyer": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "patch_wizard": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "permission_denied_any_percent": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "plugin_goblin": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "provider_polyglot": {
+      "evidence": null,
+      "first_tier": "Silver",
+      "unlocked_at": 1778818771
+    },
+    "rabbit_hole_certified": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "rebase_acrobat": {
+      "evidence": null,
+      "first_tier": "Diamond",
+      "unlocked_at": 1778818771
+    },
+    "red_text_connoisseur": {
+      "evidence": null,
+      "first_tier": "Silver",
+      "unlocked_at": 1778818771
+    },
+    "rollback_wizard": {
+      "evidence": null,
+      "first_tier": "Silver",
+      "unlocked_at": 1778818771
+    },
+    "screenshot_hunter": {
+      "evidence": null,
+      "first_tier": "Diamond",
+      "unlocked_at": 1778818771
+    },
+    "skillsmith": {
+      "evidence": null,
+      "first_tier": "Silver",
+      "unlocked_at": 1778818771
+    },
+    "stack_trace_sommelier": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "subagent_commander": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "supposed_to_be_quick": {
+      "evidence": {
+        "session_id": "20260510_221437_4b04b8",
+        "title": "Updating Hermes Agent #2",
+        "value": 404
+      },
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "terminal_goblin": {
+      "evidence": null,
+      "first_tier": "Silver",
+      "unlocked_at": 1778818771
+    },
+    "test_suite_tamer": {
+      "evidence": null,
+      "first_tier": "Gold",
+      "unlocked_at": 1778818771
+    },
+    "the_fix_was_restarting": {
+      "evidence": null,
+      "first_tier": null,
+      "unlocked_at": 1778818771
+    },
+    "toolset_cartographer": {
+      "evidence": null,
+      "first_tier": "Diamond",
+      "unlocked_at": 1778818771
+    },
+    "weekend_warrior": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    },
+    "yaml_colon_incident": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1778818771
+    }
+  }
+}

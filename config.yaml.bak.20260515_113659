@@ -11,7 +11,7 @@ credential_pool_strategies: {}
 toolsets:
 - hermes-cli
 agent:
-  max_turns: 90
+  max_turns: 300
   gateway_timeout: 1800
   restart_drain_timeout: 60
   api_max_retries: 3
@@ -95,7 +95,7 @@ tool_loop_guardrails:
     idempotent_no_progress: 5
 compression:
   enabled: true
-  threshold: 0.5
+  threshold: 0.75
   target_ratio: 0.2
   protect_last_n: 20
   hygiene_hard_message_limit: 400
@@ -290,7 +290,7 @@ memory:
   user_profile_enabled: true
   memory_char_limit: 2200
   user_char_limit: 1375
-  provider: byterover
+  provider: wiki
   nudge_interval: 5
   flush_min_turns: 3
 delegation:
@@ -522,9 +522,7 @@ custom_providers:
     qwen3.6-35b-a3b:
       context_length: 64000
 plugins:
-  enabled:
-  - disk-cleanup
-  disabled: []
+  enabled: []
 known_plugin_toolsets:
   cli:
   - spotify
