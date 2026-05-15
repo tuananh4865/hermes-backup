@@ -1,9 +1,9 @@
 {
-  "curationsSinceDream": 2,
-  "lastDreamAt": null,
-  "lastDreamLogId": null,
+  "curationsSinceDream": 0,
+  "lastDreamAt": "2026-05-15T19:29:56.174Z",
+  "lastDreamLogId": "drm-1778873075902",
   "pendingMerges": [],
   "staleSummaryPaths": [],
-  "totalDreams": 0,
+  "totalDreams": 1,
   "version": 1
 }

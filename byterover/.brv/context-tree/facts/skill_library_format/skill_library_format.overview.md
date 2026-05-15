@@ -1,0 +1,4 @@
+- The target structure for the Skill Library Format is CLASS-LEVEL skills, each containing a rich SKILL.md and a `references/` directory for session-specific details.
+- The library design explicitly avoids being a long, flat list of narrow one-session-one-skill entries.
+- The overall goal is to curate facts related to the Skill Library Format concept through extraction, deduplication, grouping, and curation.
+- Key entities include CLASS-LEVEL skills and structured documentation (`SKILL.md`, `references/`).

@@ -1,0 +1,3 @@
+- This document addresses specific skill content and references existing documentation for certain skills.
+- The `tiktok-viral-script` skill is noted as already documenting a dual-path worker output architecture.
+- The focus of this fact extraction is on identifying and cataloging specific, detailed skill information.

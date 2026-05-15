@@ -1,0 +1,5 @@
+- The Skill Update Strategy defines a clear preference order for updating skills to maintain system integrity and structure.
+- The preferred action sequence is: 1. Update a currently-loaded skill.
+- Secondarily, the strategy allows for updating an existing umbrella skill.
+- The lowest priority update method is adding a support file.
+- This strategy governs how changes are applied within the skill library context.

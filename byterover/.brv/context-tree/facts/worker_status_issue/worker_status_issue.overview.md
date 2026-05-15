@@ -1,0 +1,3 @@
+- The Worker Status Issue fact clarifies that specific historical events (e.g., Workers dead May 14) should be classified as a valid business or system issue.
+- This classification explicitly distinguishes such issues from skill gaps.
+- The purpose of this fact is to prevent miscategorization of operational incidents as skill deficiencies.

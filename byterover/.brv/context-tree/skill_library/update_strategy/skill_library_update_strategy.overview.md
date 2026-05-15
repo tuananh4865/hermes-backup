@@ -1,0 +1,9 @@
+- Key points:
+    - The strategy mandates shifting the skill library structure to CLASS-LEVEL skills rather than narrow, one-session entries.
+    - Defined clear signals for skill updates (e.g., style/tone correction, workflow changes, new techniques).
+    - Established a preference order for action when updating skills (1. Update loaded skill, 2. Update umbrella skill, 3. Add support file).
+- Structure / sections summary:
+    - The document outlines the strategy for updating the skill library based on user feedback signals.
+- Notable entities, patterns, or decisions mentioned:
+    - Decision to adopt CLASS-LEVEL skills structure.
+    - Focus on capturing explicit corrections and emerging patterns as first-class skill signals.

@@ -1,0 +1,139 @@
+{
+  "active_context": [
+    {
+      "order": 3,
+      "path": "_index.md",
+      "tokens": 440,
+      "type": "summary"
+    },
+    {
+      "order": 2,
+      "path": "facts/_index.md",
+      "tokens": 480,
+      "type": "summary"
+    },
+    {
+      "order": 2,
+      "path": "skill_library/_index.md",
+      "tokens": 292,
+      "type": "summary"
+    },
+    {
+      "order": 1,
+      "path": "facts/fallback_mechanism/_index.md",
+      "tokens": 70,
+      "type": "summary"
+    },
+    {
+      "order": 1,
+      "path": "facts/reviewed_skills/_index.md",
+      "tokens": 76,
+      "type": "summary"
+    },
+    {
+      "order": 1,
+      "path": "facts/skill_library_format/_index.md",
+      "tokens": 160,
+      "type": "summary"
+    },
+    {
+      "order": 1,
+      "path": "facts/skill_update_strategy/_index.md",
+      "tokens": 148,
+      "type": "summary"
+    },
+    {
+      "order": 1,
+      "path": "facts/specific_skill_content/_index.md",
+      "tokens": 118,
+      "type": "summary"
+    },
+    {
+      "order": 1,
+      "path": "facts/user_feedback_signals/_index.md",
+      "tokens": 207,
+      "type": "summary"
+    },
+    {
+      "abstractPath": "facts/fallback_mechanism/fallback_mechanism.abstract.md",
+      "abstractTokens": 25,
+      "importance": 50,
+      "path": "facts/fallback_mechanism/fallback_mechanism.md",
+      "tokens": 25,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/reviewed_skills/reviewed_skills.abstract.md",
+      "abstractTokens": 22,
+      "importance": 50,
+      "path": "facts/reviewed_skills/reviewed_skills.md",
+      "tokens": 22,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/skill_library_format/skill_library_format.abstract.md",
+      "abstractTokens": 42,
+      "importance": 50,
+      "path": "facts/skill_library_format/skill_library_format.md",
+      "tokens": 42,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/skill_update_strategy/skill_update_strategy.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/skill_update_strategy/skill_update_strategy.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/specific_skill_content/specific_skill_content.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/specific_skill_content/specific_skill_content.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/user_feedback_signals/user_feedback_signals.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/user_feedback_signals/user_feedback_signals.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/user_interaction/user_interaction.abstract.md",
+      "abstractTokens": 31,
+      "importance": 50,
+      "path": "facts/user_interaction/user_interaction.md",
+      "tokens": 31,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/worker_status_issue/worker_status_issue.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/worker_status_issue/worker_status_issue.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "skill_library/update_strategy/skill_library_update_strategy.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "skill_library/update_strategy/skill_library_update_strategy.md",
+      "tokens": 0,
+      "type": "context"
+    }
+  ],
+  "generated_at": "2026-05-15T19:29:56.172Z",
+  "lane_tokens": {
+    "contexts": 120,
+    "stubs": 0,
+    "summaries": 1991
+  },
+  "source_fingerprint": "00ef7032010942d258138e8853dcc0caadeb6520c15dbe30f5af454518d79a69",
+  "total_tokens": 2111,
+  "version": 1
+}

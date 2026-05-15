@@ -1,0 +1,4 @@
+- User corrections concerning style, tone, format, legibility, or verbosity are designated as FIRST-CLASS skill signals.
+- Corrections related to workflow, approach, or sequence of steps must be encoded either as a pitfall or an explicit step within the governing skill.
+- The concept focuses on identifying and structuring user feedback signals for incorporation into skills.
+- User feedback is categorized based on whether it affects presentation/style or process/workflow.

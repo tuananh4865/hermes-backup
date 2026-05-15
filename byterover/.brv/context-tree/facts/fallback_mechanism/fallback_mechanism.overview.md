@@ -1,0 +1,7 @@
+- Key points:
+    - The fallback skill for 'Gen Z slang' has a confirmed web search fallback path.
+- Structure / sections summary:
+    - Facts are grouped by the subject: Fallback Mechanism.
+- Notable entities, patterns, or decisions mentioned:
+    - The specific skill involved is the 'Gen Z slang fallback skill'.
+    - Confirmation status: The web search fallback path is confirmed to work.

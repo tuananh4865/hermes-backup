@@ -1,0 +1,1 @@
+The Skill Library Format requires class-level skills, each containing a rich SKILL.md and a references directory for session-specific details, avoiding long flat lists.
