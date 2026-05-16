@@ -43,68 +43,44 @@ Tonight's focus: **Skill Creation #8** — improving existing skills
 - Scripts: /Volumes/Storage-1/Hermes/wiki/scripts
 - Hermes code: ~/.hermes/hermes-agent/
 
-### Tonight's Findings (2026-05-16)
+### Tonight's Findings (2026-05-17)
 
 ### System Status (02:00)
-- Wiki: ✅ wiki_lint --fast PASSED (0 issues)
-- Skills: 139 skills listed, SHS = 0
-- Workers: content-creator outputs/ LAST OUTPUT May 14 morning (7009 bytes) — 2+ days since last fire
-- Gen Z slang: wiki entity updated May 11, workers dead → web search fallback
-- Session logs: ~/Library/Application Support/hermes-agent/sessions/ not accessible (empty/missing)
+- Wiki: ⚠️ 1 issue — missing frontmatter on hermes-x-research-2026-05-16.md (FIXED)
+- Skills: 142 skills healthy, SHS = 0
+- Workers: content-creator outputs/ LAST OUTPUT May 14 morning (7009 bytes) — 3 days stale
+- Gen Z slang: May 14 content has "lọ", "SÍT RỊT" — already in wiki entity, no new terms to sync
+- Session logs: ~/Library/Application Support/hermes-agent/sessions/ not accessible (empty)
 
-### Gen Z Slang May 16 — Web Search Fallback (Workers Dead)
-**Source:** Web search (workers last fired May 14, cannot sync from output)
+### AI Agent Research — Self-Debugging (May 17, 2026)
 
-**New/reconfirmed terms from web search:**
-| Slang | Meaning | Source |
-|-------|---------|--------|
-| Đỉnh | peak, amazing | migaku.com Mar 2026 |
-| Toang | screwed, something went wrong | migaku.com Mar 2026 |
-| Còn cái nịt | unlucky, nothing left | TikTok discover |
-| Tấm chiếu mới | what behind the ears (confusion) | TikTok discover |
-| Ông trời/Ối trời ơi | surprise/disbelief | Kaiwa Jan 2026 |
-| Thả thính | drop a hint/flirt | Kaiwa Jan 2026 |
-| Flex | show off | Kaiwa Jan 2026 |
-| Slay | killing it | Kaiwa Jan 2026 |
-| Lầy | playful, teasing | Kaiwa Jan 2026 |
+Research focus tonight: **Self-Debugging** capability — latest arXiv techniques.
 
-**Key insight:** Gen Z slang research from web search shows DIFFERENT terms than worker output. Worker outputs focus on TikTok-specific viral slang (SÍT RỊT, lọ, ra dại) while web search surfaces broader internet slang (Đỉnh, Toang, Còn cái nịt). Both pools are valid — workers have more current TikTok trends, web search has broader coverage.
+**7 new techniques documented in self-debugging-techniques-may-2026.md:**
 
-**Slang evolution status:**
-- Wiki entity: updated May 11 (authoritative)
-- tiktok-viral-script skill: embedded slang synced May 9-15
-- Workers: dead since May 14
-- Web search: broader internet slang coverage
-- Both sources valid for different purposes
+1. **ReflexiCoder** (arxiv:2603.05863) — RL-zero trains reflection-correction trajectory into model weights. No external oracles needed at inference.
 
-### AI Agent Research — Self-Improving Techniques (May 16, 2026)
+2. **Polaris** (arxiv:2603.23129) — Gödel agents: inspect policy → trace → modify → test loop. Experience abstraction distills failures into reusable strategies. 7B model consistent gains.
 
-Research focus tonight: **Self-Debugging** capability — understanding the latest self-improving agent frameworks.
+3. **DebugRepair** (arxiv:2604.19305) — LLM-based APR with simulated instrumentation. Test semantic purification + LLM-inserted breakpoints + hierarchical patch refinement.
 
-**Key resources found:**
-- arxiv.org/abs/2603.24639 — ERL (Experiential Reflective Learning), +7.8% over ReAct on Gaia2
-- arxiv.org/abs/2512.02731 — Self-Improving AI through Self-Play (STaR, SPIN, Reflexion, GANs, AlphaZero as GVU operator)
-- arxiv.org/html/2603.18073v1 — Continually Self-Improving AI (graph-based augmentation)
-- github.com/EvoAgentX/Awesome-Self-Evolving-Agents — visual taxonomy of agent evolution techniques
-- Self-Improving AI Agents: The 2026 Guide (o-mega.ai)
+4. **SelfHeal** (arxiv:2604.17699) — Multi-agent bug fix for LLM agents. Fix agent + critic agent. Internal fix rules + external web search. Gemini 3 Pro outperforms all baselines.
 
-**New techniques documented:**
+5. **ErrorProbe** (arxiv:2604.17658) — Self-improving error diagnosis in multi-agent systems. 3-stage: MAST taxonomy → backward tracing → multi-agent diagnosis. Verified episodic memory prevents corruption.
 
-1. **ERL (Experiential Reflective Learning)** — distills trajectories into reusable heuristics, selective retrieval essential, outperforms ExpeL/AutoGuide on Gaia2 (+7.8%)
+6. **DeepVerifier** (arxiv:2601.15808) — Test-time rubric-guided verification. DRA Failure Taxonomy (5 categories, 13 subcats). +8-11% on GAIA/XBench-DeepResearch.
 
-2. **LSE (Learning to Self-Evolve)** — RL framework trains LLMs to improve their own contexts at test time. Tree-guided evolution loop. 4B model outperforms GPT-5/Claude Sonnet 4.5 on Text-to-SQL (BIRD) and MMLU-Redux.
+7. **ERL** (arxiv:2603.24639) — Experiential Reflective Learning. Heuristics from trajectories. +7.8% on Gaia2. Selective retrieval essential.
 
-3. **HyperAgents (DGM-H)** — metacognitive self-modification: meta agent modifies BOTH task agent AND itself. Eliminates domain-specific alignment assumption of DGM. Improves across coding, paper review, robotics reward design, Olympiad math grading.
+**Key insight:** Self-debugging paradigm shift — from external feedback → self-generated verification, from response-level → policy-level changes, from single agent → multi-agent diagnosis teams.
 
-4. **Self-Guide** — co-evolving internal reward + policy. Agent generates self-guidance signal at inference, converts to step-level reward for training. GRPO co-evolution yields 8% over environment reward-only baselines.
+### Wiki Fix Applied
+- Added missing frontmatter to queries/hermes-x-research-2026-05-16.md
 
-5. **MARS (Metacognitive Agent Reflective Self-improvement)** — principle-based + procedural reflection in SINGLE recurrence cycle. 6 benchmarks, outperforms recursive self-evolving systems with less compute.
-
-6. **ICPO (In-Context Policy Optimization)** — test-time scaling via multi-round self-reflection. ME-ICPO uses minimum-entropy response selection for robust self-assessed rewards. Math reasoning top-tier.
-
-7. **RetroAgent** — hindsight retrospection with dual intrinsic feedback: (i) Intrinsic Numerical Feedback (scalar reward for incremental subtask progress), (ii) Intrinsic Language Feedback (distills lessons into memory). SimUtil-UCB balances exploitation/exploration of lessons.
-
-**Key insight:** Self-improvement paradigm fully shifted to RL-trained policies. Memory operations becoming learned. Metacognitive self-modification (HyperAgents) enabling open-ended improvement on ANY computable task.
+### Gen Z Slang Status
+- Worker output May 14: "lọ" (HOT), "SÍT RỊT" (135M+ posts) — both already in wiki entity
+- No new slang terms to sync tonight
+- Workers stale since May 14 (3 days) — content-creator still producing but not firing
 
 ---
 
