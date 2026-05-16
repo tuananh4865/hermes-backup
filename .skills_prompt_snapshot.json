@@ -38,8 +38,8 @@
       4557
     ],
     "autonomous-ai-agents/hermes-agent/SKILL.md": [
-      1778702449011787336,
-      40387
+      1778951043511282790,
+      41462
     ],
     "autonomous-ai-agents/opencode/SKILL.md": [
       1778471610455093284,
@@ -54,8 +54,8 @@
       9401
     ],
     "business/business-opportunity-research/SKILL.md": [
-      1778732459623034413,
-      6318
+      1778903962841886751,
+      6484
     ],
     "creative/architecture-diagram/SKILL.md": [
       1778471610455197201,
@@ -82,8 +82,8 @@
       19859
     ],
     "creative/comfyui/SKILL.md": [
-      1778215664768427063,
-      23856
+      1778944754002700641,
+      24287
     ],
     "creative/creative-ideation/SKILL.md": [
       1778471610455839328,
@@ -242,8 +242,8 @@
       13683
     ],
     "hermes-autoresearch/SKILL.md": [
-      1778803510784090763,
-      52385
+      1778951069269779698,
+      53576
     ],
     "hermes-external-skills-setup/SKILL.md": [
       1778471609747975043,
@@ -256,6 +256,10 @@
     "knowledge-management/gbrain-lmstudio-embedding/SKILL.md": [
       1778471609748359794,
       10797
+    ],
+    "knowledge-management/hermes-memory/SKILL.md": [
+      1778887472783446781,
+      3677
     ],
     "leisure/find-nearby/SKILL.md": [
       1778471609748467128,
@@ -292,6 +296,10 @@
     "media/youtube-transcript-extractor/SKILL.md": [
       1778616037100935748,
       1658
+    ],
+    "memory/byterover-agentic-memory/SKILL.md": [
+      1778951164459982016,
+      5890
     ],
     "misc-git-guardrails-claude-code/SKILL.md": [
       1778471609748875505,
@@ -438,8 +446,8 @@
       1414
     ],
     "productivity/notion/SKILL.md": [
-      1778471610460661386,
-      5236
+      1778944754002990686,
+      14597
     ],
     "productivity/ocr-and-documents/SKILL.md": [
       1778471610460756178,
@@ -508,6 +516,10 @@
     "software-development/hermes-agent-skill-authoring/SKILL.md": [
       1778471610461638556,
       7618
+    ],
+    "software-development/hermes-maintenance/SKILL.md": [
+      1778951050268485967,
+      5946
     ],
     "software-development/node-inspect-debugger/SKILL.md": [
       1778471610461733432,
@@ -1649,6 +1661,19 @@
       }
     },
     {
+      "skill_name": "hermes-memory",
+      "category": "knowledge-management",
+      "frontmatter_name": "hermes-memory",
+      "description": "ByteRover-powered agent memory — auto-capture, query, and...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "find-nearby",
       "category": "leisure",
       "frontmatter_name": "find-nearby",
@@ -1781,6 +1806,19 @@
       "category": "media",
       "frontmatter_name": "youtube-transcript-extractor",
       "description": "Extract full transcripts from YouTube videos for content ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "byterover-agentic-memory",
+      "category": "memory",
+      "frontmatter_name": "byterover-agentic-memory",
+      "description": "Agentic memory management with ByteRover — auto-save, aut...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -2319,7 +2357,7 @@
       "skill_name": "notion",
       "category": "productivity",
       "frontmatter_name": "notion",
-      "description": "Notion API via curl: pages, databases, blocks, search.",
+      "description": "Notion API + ntn CLI: pages, databases, markdown, Workers.",
       "platforms": [
         "linux",
         "macos",
@@ -2593,6 +2631,23 @@
       "category": "software-development",
       "frontmatter_name": "hermes-agent-skill-authoring",
       "description": "Author in-repo SKILL.md: frontmatter, validator, structure.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "hermes-maintenance",
+      "category": "software-development",
+      "frontmatter_name": "hermes-maintenance",
+      "description": "Use when Anh asks to clean up temp files, free disk space...",
       "platforms": [
         "linux",
         "macos",

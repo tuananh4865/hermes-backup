@@ -1,0 +1,7 @@
+- Key points:
+    - Auto sync is managed by a cron job.
+    - The auto sync process runs daily at 1 AM.
+- Structure / sections summary:
+    - Facts are grouped under the domain 'Auto sync'.
+- Notable entities, patterns, or decisions mentioned:
+    - Defines the schedule and mechanism for the automated knowledge synchronization (daily run at 1 AM via cron job).

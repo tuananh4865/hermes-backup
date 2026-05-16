@@ -1,0 +1,13 @@
+- Key points:
+    - The document groups system facts under the 'Health check' subject.
+    - Only one unique fact is documented in this knowledge base.
+    - A daily health check is executed by a cron job.
+    - The scheduled time for the health check is 6 AM.
+- Structure / sections summary:
+    - Reason (Context for the facts).
+    - Raw Concept (Details on the task, changes, flow, timestamp, and author of fact creation).
+    - Narrative (Summary of structure and highlights).
+    - Facts (The list of actual documented facts).
+- Notable entities, patterns, or decisions:
+    - Domain: Health check.
+    - Mechanism: Cron job is used to run the daily health check.

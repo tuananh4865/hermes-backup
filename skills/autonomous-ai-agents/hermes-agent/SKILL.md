@@ -681,6 +681,18 @@ See `references/python314-path-api.md` for full details.
 
 **Fix:** See `references/hermes-update-failure.md` for the step-by-step workflow (rm → git clone → install).
 
+### User Path References — Ask Immediately for Exact Path
+**Signal:** User says "judge model in /goal" or references a path you can't find. You search extensively instead of asking.
+
+**Lesson:** When user references a specific path, directory, or location you cannot locate, **ask for the exact path immediately** rather than running extensive searches. User does not like being asked "where is it?" after searching failed.
+
+**Pitfall:** Don't say "I can't find /goal, can you tell me where it is?" in a way that implies extensive searching happened. Just ask once, directly: "What is the full path to /goal?"
+
+### ALL Models Must Use MiniMax (Including Judge Model)
+**Signal:** User complained "judge model sao lại không dùng của minimax luôn mà lại dùng model khác vậy" — ALL models including judge/auxiliary must use minimax.
+
+**Requirement:** When configuring any model (judge, auxiliary, vision, etc.), always use MiniMax provider unless user explicitly specifies otherwise. MiniMax-M2.7 is the default and only acceptable model for user-facing work.
+
 ### Gateway issues
 Check logs first:
 ```bash

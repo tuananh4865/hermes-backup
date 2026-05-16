@@ -115,12 +115,43 @@ if [ -n "$CC_LAST" ]; then
 fi
 ```
 
-**Current slang status (2026-05-13):**
-- `learned-about-tuananh.md` updated: 2026-05-11 — authoritative wiki entity with full slang list
-- `tiktok-viral-script` skill — embedded slang list synced May 9-11
-- **⚠️ Workers last fired May 10 (3+ days ago)** — slang sync cannot run from worker output
-- **Fallback:** When workers dead, do web search for Gen Z slang trends instead of relying on worker output
-- Slang evolution tracked in: worker outputs → web search fallback → autoresearch knowledge.md → wiki entity
+**⚠️ WORKER DEATH CONFIRMED (2026-05-16):** Workers stopped firing around May 11 (5+ days ago). Content Creator output directory still has May 11 files but no new ones since. Fallback: do web search for Gen Z slang instead of relying on worker output.
+
+**Wiki index update — WRONG SECTION NAME (2026-05-16 fix):**
+
+The X research session tried to find `## TikTok Research` in `index.md` — THIS SECTION DOES NOT EXIST. The actual TikTok section header is `### TikTok Content` (line ~88 in index.md).
+
+**Correct patch pattern:**
+```bash
+# WRONG — section doesn't exist:
+patch /Volumes/Storage-1/Hermes/wiki/index.md \
+  --old_string "## TikTok Research" \
+  --new_string "## Hermes X Research"
+
+# CORRECT — find the actual TikTok section (### TikTok Content):
+# Look for the TikTok section header and add Hermes X Research as a sibling
+# The index.md structure has:
+#   ### AI Engineering (line ~77)
+#   ### TikTok Content (line ~88) ← this is the TikTok section
+#   ### Auto-Ingest (line ~97)
+# Add new research sections ABOVE ### Auto-Ingest or as new ### sections
+```
+
+**Wiki index sections (verified 2026-05-16):**
+```
+77|### AI Engineering
+...
+86|- [[intelligent-wiki-roadmap]]
+87|
+88|### TikTok Content   ← TikTok section header
+89|- [[tiktok-algorithm-2026]]
+...
+97|### Auto-Ingest
+98|- [[email]]
+99|- [[rss]]
+```
+
+**Rule:** Before patching wiki index.md, READ the file first to find the actual section header. Never assume section names — verify by reading lines ~77-100.
 
 ### Gen Z Slang Rules
 Research self-improvement patterns and agent frameworks.
@@ -990,6 +1021,7 @@ cronjob create --name "Job Name" --prompt "..." --schedule "..." --skills [...] 
 - `references/daily-session-review.md` — **Daily session review methodology** (0AM cron, session extraction framework, wiki update targets)
 - `references/self-improving-agents-2026.md` — **AI agent self-improvement techniques** (older, Jan-Apr 2026): Multi-Agent Reflexion, HyperAgents, A2A/MCP/ACP protocols, Trace Learning, Self-Debugging, SWE-RL, Fallback Chain.
 - `references/gen-z-slang-may-2026.md` — **Gen Z slang May 2026** (2026-05-13): lọ etymology, Chằm Zn, SÍT RỊT, KHÓ QUÁ BỎ QUA, Hồng hài nhi, Dịu Kha. Full table of verified Vietnamese Gen Z terms with sources.
+- `references/wiki-index-structure.md` — **Wiki index section headers** (2026-05-16): Verified actual headers in index.md. TikTok section = `### TikTok Content`, NOT `### TikTok Research`. How to add new research sections.
 - `references/self-improving-agents-may-2026.md` — **12 NEW arXiv techniques** (May 13): ERL, Polaris, Self-Consolidation, ReflexiCoder, RetroAgent, MARS, AEL, DeepVerifier, ICPO, MemPO, EMPO², MCMA. Self-improvement paradigm shift from heuristic → RL-trained policies.
 - `references/memory-optimization-agents-may-2026.md` — **8 NEW arXiv techniques** (May 10): DeltaMem, UMA, Knowledge Access > Model Size, LatentMem, AtomMem, MemReader, AgeMem, OCR-Agent. Memory optimization shifting from heuristics → learned policies.
 - `references/hermes-v0.13-tenacity-release.md` — **v0.13.0 major release** (2026-05-09): Durable Kanban multi-agent, /goal persistent command, checkpoints v2, 8 P0 security fixes, 691 likes on release announcement.

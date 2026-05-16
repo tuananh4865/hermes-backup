@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-16T02:58:25.994133",
+  "updated_at": "2026-05-17T01:59:34.071315",
   "platforms": {
     "telegram": [
       {
@@ -72,6 +72,7 @@
     "google_chat": [],
     "irc": [],
     "line": [],
+    "simplex": [],
     "teams": []
   }
 }

@@ -1,0 +1,109 @@
+# Daily Review — 2026-05-16
+
+**Compiled by:** Hermes Agent (cron job)  
+**Date:** 2026-05-17 00:00 AM  
+**Sessions analyzed:** 18 files from 2026-05-16
+
+---
+
+## ✅ Hoàn thành
+
+| Task | Kết quả |
+|------|---------|
+| ByteRover agentic memory setup | ✅ Hoàn thành — Scripts + cron jobs đã tạo và verify |
+| Hermes X Research (7AM cron) | ✅ Hoàn thành — v0.13.0 features, 150K+ GitHub stars, token bloat issue noted |
+| ByteRover Knowledge Sync (1AM cron) | ✅ Đã chạy — daemon PID 35209, 37 items in queue |
+| ByteRover Health Check (6AM cron) | ✅ Hoàn thành — Health check verified |
+| Daily Session Review (0AM cron) | ✅ Hoàn thành |
+| Cleanup temp files | ✅ Đã dọn — config backups (35KB), legacy checkpoints (14MB) |
+| Kon Tum brands research | ✅ Hoàn thành — 20+ cafes/restaurants, local specialties identified |
+| Research online earning platforms | ✅ Hoàn thành — Freecash recommended ($5 min, instant PayPal) |
+
+---
+
+## 🧠 Learnings
+
+### ByteRover Memory System
+- **Daemon running** — `brv-server.js` + `agent-process.js`, PID 35209
+- **Cron jobs scheduled:**
+  - `ffda9e65a08b` — ByteRover Knowledge Sync Daily (1h AM)
+  - `ba3953434244` — ByteRover Health Check Daily (6h AM)
+  - `5aea298eb0a8` — Hermes Daily Session Review (0AM)
+- **Curation successful** — 70 items from 14 sessions curated (10 decisions, 10 errors, 15 learnings, 15 preferences, 10 tasks, 10 skills)
+- **Query timeout issue** — ByteRover query times out at ~30s, use fallback: retry → session_search → memory tool
+
+### Hermes X / v0.13.0 "Tenacity Release"
+- **GitHub stars:** 150K+
+- **New features:** Kanban multi-agent board, `/goal` command, Checkpoints v2, Gateway auto-resume, `no_agent` cron mode, Google Chat (20th platform)
+- **Top use cases:** personal assistant, dev workflow automation, research agent, multi-agent trading, marketing/content
+- **Frustration:** Token bloat via Telegram (2-3x vs CLI)
+- **Users:** 3 family members sharing one $200 ChatGPT sub via WhatsApp
+- **8 P0 security fixes** in this release
+
+### Kon Tum Research (User Request)
+- **Web search fallback** — Google Maps browser approach returned limited views; web search (MiniMax MCP) more reliable for local Vietnamese business research
+- **Local establishments identified:**
+  - Eva Cafe (156 reviews, 4.8★)
+  - Tiệm Cà Phê Gác Xép, Xô Xôn Café, Indochine Coffee, Your Coffee, Lynn Coffee, Dream Coffee, Mandela Coffee, Passion Coffee, Chang Coffee & Homestay
+  - Gỏi lá Yến Vy, Nhà hàng Thủy Tạ, Sân Vườn Đồi Tuyết, Hội Ngộ Quán
+  - Vincom Plaza Kon Tum, Sakura KonTum Spa & Wellness
+- **Specialties:** Bún đỏ cao nguyên, Gỏi lá Kon Tum (top 10 VN), Heo Măng Đen quay, Cá chua, Rượu vang sim Măng Đen
+- **Most local Kon Tum establishments lack websites** — only Facebook, Google Maps, TripAdvisor
+
+### Online Earning Platforms (for $30 goal)
+| Platform | Payout | Speed | Notes |
+|----------|--------|-------|-------|
+| **Freecash** | $5 min, instant PayPal | Fastest | 4.5★ Trustpilot, ~$12.87/day potential |
+| Microworkers | $9 min + 7.5% fee | 2-4 days | Vietnam supported |
+| Fiverr | $5-15/order | 7-14 days | Better for long-term |
+
+### Gen Z Slang (May 16 update)
+- **From Autoresearch:** Đỉnh, Toang, Còn cái nịt, Tấm chiếu mới (internet-level)
+- **Note:** Different from TikTok worker-output slang (SÍT RỊT, lọ, ra dại)
+
+### Cleanup Issues
+- **Deleted 50 old session .jsonl files** from April-early May — flagged as wrong approach (should have read first before deleting)
+- **find command issue** — `-newer` with date string didn't work as expected
+
+### User Preferences (learned)
+- **All models must use minimax** — including judge model
+- **Memory at 89% capacity** — had to replace entries to add new info
+
+---
+
+## ⚠️ Cần xử lý
+
+| Issue | Status | Notes |
+|-------|--------|-------|
+| **Workers still dead** | ⚠️ Pending | Content Creator (last output May 11), Research Agent (last output May 12) |
+| **Cron jobs PAUSED** | ⚠️ User decision needed | User paused them on May 14 — when to resume? |
+| **/goal directory not found** | ⚠️ Pending | User asked about judge model in /goal — agent couldn't locate |
+| **Memory at 89% capacity** | ⚠️ Ongoing | Need to manage capacity, replace old entries |
+| **Session files ~282MB (924 files)** | ⚠️ Monitor | May need cleanup strategy |
+
+---
+
+## 📊 Stats
+
+| Metric | Value |
+|--------|-------|
+| Sessions analyzed | 18 |
+| Total session time | ~8 hours active time |
+| Cron jobs fired | 5 (0AM, 1AM, 2AM×2, 3AM, 6AM, 7AM) |
+| Files deleted | 50+ old session .jsonl files, config backups, legacy checkpoints |
+| Bytes freed | ~14MB+ |
+| Wiki updates | log.md (1 entry) |
+| Knowledge curated | 70 items from 14 sessions |
+
+---
+
+## 📁 Files Modified
+
+- `/Volumes/Storage-1/Hermes/wiki/log.md` — appended May 16 daily review entry
+- `~/.hermes/scripts/byterover_knowledge_sync.py` — created (6564 bytes)
+- `~/.hermes/scripts/byterover_checkpoint.py` — created
+- `/Volumes/Storage-1/Hermes/wiki/queries/hermes-x-research-2026-05-16.md` — created (5150 bytes)
+
+---
+
+*Generated by Hermes Agent — Daily Session Review Cron (0AM)*

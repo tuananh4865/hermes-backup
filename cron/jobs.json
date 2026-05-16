@@ -18,7 +18,7 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
@@ -26,7 +26,7 @@
       "paused_reason": null,
       "created_at": "2026-04-27T21:38:04.126445+07:00",
       "next_run_at": "2026-05-17T03:00:00+07:00",
-      "last_run_at": "2026-05-15T03:01:38.916092+07:00",
+      "last_run_at": "2026-05-16T03:00:58.366615+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -61,7 +61,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T10:33:31.370315+07:00",
-      "next_run_at": "2026-05-17T02:00:00+07:00",
+      "next_run_at": "2026-05-18T02:00:00+07:00",
       "last_run_at": "2026-05-16T02:04:20.184214+07:00",
       "last_status": "ok",
       "last_error": null,
@@ -97,15 +97,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T13:51:06.979177+07:00",
-      "next_run_at": "2026-05-16T07:00:00+07:00",
-      "last_run_at": "2026-05-15T07:03:30.325130+07:00",
+      "next_run_at": "2026-05-17T07:00:00+07:00",
+      "last_run_at": "2026-05-16T07:02:49.266433+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -426,15 +426,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": 999,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-08T08:42:19.421587+07:00",
-      "next_run_at": "2026-05-17T00:00:00+07:00",
-      "last_run_at": "2026-05-16T00:06:41.245487+07:00",
+      "next_run_at": "2026-05-18T00:00:00+07:00",
+      "last_run_at": "2026-05-17T00:05:20.131929+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -447,7 +447,81 @@
       },
       "enabled_toolsets": null,
       "workdir": null
+    },
+    {
+      "id": "ffda9e65a08b",
+      "name": "ByteRover Knowledge Sync Daily",
+      "prompt": "# ByteRover Knowledge Sync \u2014 Daily\n\n## Mission\n\u0110\u1ecdc t\u1ea5t c\u1ea3 session logs t\u1eeb h\u00f4m qua, tr\u00edch xu\u1ea5t facts/preferences/learnings, curate v\u00e0o ByteRover.\n\n## Script\nCh\u1ea1y: `python3 ~/.hermes/scripts/byterover_knowledge_sync.py --days-ago 1`\n\n## Output\nScript s\u1ebd t\u1ef1 \u0111\u1ed9ng:\n1. T\u00ecm sessions t\u1eeb h\u00f4m qua\n2. Tr\u00edch xu\u1ea5t user facts, preferences, learnings, tasks completed\n3. Curate v\u00e0o ByteRover\n4. Query ki\u1ebfn th\u1ee9c c\u0169 \u0111\u1ec3 verify\n5. Report k\u1ebft qu\u1ea3\n\n## Schedule\n`0 1 * * *` \u2014 M\u1ed7i ng\u00e0y 1h s\u00e1ng",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "python3 ~/.hermes/scripts/byterover_knowledge_sync.py --days-ago 1",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 1 * * *",
+        "display": "0 1 * * *"
+      },
+      "schedule_display": "0 1 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-16T06:21:26.217689+07:00",
+      "next_run_at": "2026-05-18T01:00:00+07:00",
+      "last_run_at": "2026-05-17T01:00:27.932293+07:00",
+      "last_status": "error",
+      "last_error": "Script not found: /Users/tuananh4865/.hermes/scripts/python3 ~/.hermes/scripts/byterover_knowledge_sync.py --days-ago 1",
+      "last_delivery_error": null,
+      "deliver": "telegram:1132914873",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "ba3953434244",
+      "name": "ByteRover Health Check Daily",
+      "prompt": "# ByteRover Health Check \u2014 Daily\n\n## Mission\nKi\u1ec3m tra ByteRover memory, query ki\u1ebfn th\u1ee9c c\u0169, verify consistency.\n\n## Script\n```bash\n#!/bin/bash\necho \"=== ByteRover Health Check ===\"\nbrv status\necho \"\"\necho \"=== Query: User Preferences ===\"\nbrv query \"user preferences\" 2>/dev/null | head -20\necho \"\"\necho \"=== Query: Recent Learnings ===\"\nbrv query \"learned tasks\" 2>/dev/null | head -20\necho \"\"\necho \"=== Query: Skills Created ===\"\nbrv query \"skills created\" 2>/dev/null | head -20\necho \"\"\necho \"=== Query Log Stats ===\"\nbrv query-log 2>/dev/null | head -30\n```\n\n## Schedule\n`0 6 * * *` \u2014 M\u1ed7i ng\u00e0y 6h s\u00e1ng",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "#!/bin/bash\necho \"=== ByteRover Health Check ===\"\nbrv status\necho \"\"\necho \"=== Recent Curate History ===\"\nbrv curate view --since 24h 2>/dev/null | head -30\necho \"\"\necho \"=== ByteRover Space Stats ===\"\ndu -sh ~/.hermes/byterover/ 2>/dev/null",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * *",
+        "display": "0 6 * * *"
+      },
+      "schedule_display": "0 6 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-16T06:21:27.227280+07:00",
+      "next_run_at": "2026-05-17T06:00:00+07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:1132914873",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-05-16T03:00:26.291111+07:00"
+  "updated_at": "2026-05-17T02:00:34.225377+07:00"
 }

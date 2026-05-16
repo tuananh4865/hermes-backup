@@ -3,56 +3,78 @@
     {
       "order": 3,
       "path": "_index.md",
-      "tokens": 440,
+      "tokens": 700,
       "type": "summary"
     },
     {
       "order": 2,
       "path": "facts/_index.md",
-      "tokens": 480,
+      "tokens": 712,
       "type": "summary"
     },
     {
       "order": 2,
       "path": "skill_library/_index.md",
-      "tokens": 292,
+      "tokens": 277,
+      "type": "summary"
+    },
+    {
+      "order": 2,
+      "path": "unknown_domain/_index.md",
+      "tokens": 130,
       "type": "summary"
     },
     {
       "order": 1,
-      "path": "facts/fallback_mechanism/_index.md",
-      "tokens": 70,
+      "path": "facts/auto_sync/_index.md",
+      "tokens": 86,
       "type": "summary"
     },
     {
       "order": 1,
-      "path": "facts/reviewed_skills/_index.md",
-      "tokens": 76,
+      "path": "facts/byterover_checkpoint_py/_index.md",
+      "tokens": 65,
       "type": "summary"
     },
     {
-      "order": 1,
-      "path": "facts/skill_library_format/_index.md",
-      "tokens": 160,
-      "type": "summary"
+      "abstractPath": "facts/auto_sync/auto_sync.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/auto_sync/auto_sync.md",
+      "tokens": 0,
+      "type": "context"
     },
     {
-      "order": 1,
-      "path": "facts/skill_update_strategy/_index.md",
-      "tokens": 148,
-      "type": "summary"
+      "abstractPath": "facts/byterover_agentic_memory/byterover_agentic_memory.abstract.md",
+      "abstractTokens": 29,
+      "importance": 50,
+      "path": "facts/byterover_agentic_memory/byterover_agentic_memory.md",
+      "tokens": 29,
+      "type": "context"
     },
     {
-      "order": 1,
-      "path": "facts/specific_skill_content/_index.md",
-      "tokens": 118,
-      "type": "summary"
+      "abstractPath": "facts/byterover_agentic_memory_skill/byterover_agentic_memory_skill.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/byterover_agentic_memory_skill/byterover_agentic_memory_skill.md",
+      "tokens": 0,
+      "type": "context"
     },
     {
-      "order": 1,
-      "path": "facts/user_feedback_signals/_index.md",
-      "tokens": 207,
-      "type": "summary"
+      "abstractPath": "facts/byterover_checkpoint_py/byterover_checkpoint_py.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/byterover_checkpoint_py/byterover_checkpoint_py.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/byterover_knowledge_sync_py/byterover_knowledge_sync_py.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/byterover_knowledge_sync_py/byterover_knowledge_sync_py.md",
+      "tokens": 0,
+      "type": "context"
     },
     {
       "abstractPath": "facts/fallback_mechanism/fallback_mechanism.abstract.md",
@@ -60,6 +82,14 @@
       "importance": 50,
       "path": "facts/fallback_mechanism/fallback_mechanism.md",
       "tokens": 25,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/health_check/health_check.abstract.md",
+      "abstractTokens": 15,
+      "importance": 50,
+      "path": "facts/health_check/health_check.md",
+      "tokens": 15,
       "type": "context"
     },
     {
@@ -119,21 +149,41 @@
       "type": "context"
     },
     {
+      "importance": 50,
+      "path": "skill_library/formalized-skill-library-update-workflow.md",
+      "tokens": 285,
+      "type": "context"
+    },
+    {
       "abstractPath": "skill_library/update_strategy/skill_library_update_strategy.abstract.md",
       "abstractTokens": 0,
       "importance": 50,
       "path": "skill_library/update_strategy/skill_library_update_strategy.md",
       "tokens": 0,
       "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "unknown_domain/unknown_topic/context.md",
+      "tokens": 32,
+      "type": "context"
+    },
+    {
+      "abstractPath": "unknown_domain/unknown_topic/curated_content_from_rlm_context.abstract.md",
+      "abstractTokens": 42,
+      "importance": 50,
+      "path": "unknown_domain/unknown_topic/curated_content_from_rlm_context.md",
+      "tokens": 42,
+      "type": "context"
     }
   ],
-  "generated_at": "2026-05-15T19:29:56.172Z",
+  "generated_at": "2026-05-16T14:01:18.331Z",
   "lane_tokens": {
-    "contexts": 120,
+    "contexts": 523,
     "stubs": 0,
-    "summaries": 1991
+    "summaries": 1970
   },
-  "source_fingerprint": "00ef7032010942d258138e8853dcc0caadeb6520c15dbe30f5af454518d79a69",
-  "total_tokens": 2111,
+  "source_fingerprint": "5c166b90f1ca10d4e34e3f7c5ef309d0b673854842c22a6b049452178dcf3139",
+  "total_tokens": 2493,
   "version": 1
 }

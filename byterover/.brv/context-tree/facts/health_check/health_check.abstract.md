@@ -1,0 +1,1 @@
+A cron job runs a daily health check for the system at 6 AM.

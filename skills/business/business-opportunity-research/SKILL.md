@@ -106,6 +106,7 @@ Pursue / Pivot / Discard — with reasoning
 - `references/roblox-ai-monetization.md` — Roblox + AI income paths, AI tools (Roblox Assistant, Lux AI, MCP), revenue splits, case studies, success metrics
 - `references/affiliate-ai-monetization.md` — Affiliate + AI income paths, AI tools for automation, high-ticket programs, recurring commission strategy
 - `references/automation-reality.md` — Why "100% automation" is marketing fiction, what's actually automatable, what requires human intervention
+- `references/microtask-platforms.md` — Fast $30 income: Freecash (instant PayPal), Microworkers, Fiverr (slower). Platforms, min payouts, timeline to first dollar
 
 ## Output Format
 

@@ -52,14 +52,27 @@
     "archived_at": null,
     "created_at": "2026-05-14T04:20:59.625052+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-05-14T04:22:44.648801+00:00",
-    "last_used_at": null,
-    "last_viewed_at": null,
-    "patch_count": 3,
+    "last_patched_at": "2026-05-16T17:05:30.043578+00:00",
+    "last_used_at": "2026-05-16T17:05:09.684167+00:00",
+    "last_viewed_at": "2026-05-16T17:05:09.683119+00:00",
+    "patch_count": 7,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 2,
+    "view_count": 2
+  },
+  "byterover-agentic-memory": {
+    "archived_at": null,
+    "created_at": "2026-05-15T23:25:42.875183+00:00",
+    "created_by": null,
+    "last_patched_at": "2026-05-16T17:06:29.086943+00:00",
+    "last_used_at": "2026-05-16T17:06:47.543218+00:00",
+    "last_viewed_at": "2026-05-16T17:06:47.542462+00:00",
+    "patch_count": 10,
+    "pinned": false,
+    "state": "active",
+    "use_count": 9,
+    "view_count": 9
   },
   "chrome-tabs-applescript": {
     "archived_at": null,
@@ -138,14 +151,14 @@
   "hermes-autoresearch": {
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
-    "last_patched_at": "2026-05-15T00:05:10.785838+00:00",
-    "last_used_at": "2026-05-15T19:00:54.188038+00:00",
-    "last_viewed_at": "2026-05-15T00:04:19.297226+00:00",
-    "patch_count": 172,
+    "last_patched_at": "2026-05-16T17:04:29.271894+00:00",
+    "last_used_at": "2026-05-16T19:00:34.265064+00:00",
+    "last_viewed_at": "2026-05-16T17:05:43.178959+00:00",
+    "patch_count": 175,
     "pinned": false,
     "state": "active",
-    "use_count": 161,
-    "view_count": 145
+    "use_count": 165,
+    "view_count": 147
   },
   "hermes-github-backup": {
     "archived_at": null,
@@ -159,6 +172,32 @@
     "state": "active",
     "use_count": 12,
     "view_count": 12
+  },
+  "hermes-maintenance": {
+    "archived_at": null,
+    "created_at": "2026-05-16T17:04:10.269615+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": "2026-05-16T17:04:23.013936+00:00",
+    "last_viewed_at": "2026-05-16T17:04:23.012958+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "hermes-memory": {
+    "archived_at": null,
+    "created_at": "2026-05-15T23:24:32.785378+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-05-15T23:24:50.588193+00:00",
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 2,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
   },
   "multi-agent-orchestrator": {
     "archived_at": null,

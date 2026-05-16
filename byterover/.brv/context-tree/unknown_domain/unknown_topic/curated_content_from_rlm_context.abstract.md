@@ -1,0 +1,1 @@
+The document describes the process of consolidating knowledge by applying single-pass extraction and deduplication to a context variable and updating the context tree.
