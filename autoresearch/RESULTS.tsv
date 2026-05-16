@@ -9,3 +9,4 @@ abc1234	0	0	0	0	DONE	Self-Evolving + RL Memory: 6 techniques (SAGE skill library
 dc52c02	0	0	0	0	DONE	Autoresearch 2026-05-13: 12 new self-improving agent techniques (ERL, Polaris, Self-Consolidation, ReflexiCoder, RetroAgent, MARS, AEL, DeepVerifier, ICPO, MemPO, EMPO2, MCMA). Wiki clean SHS=0 (138 skills). Gen Z slang May 2026 verified fresh.
 c15ed75a2	0	0	0	0	DONE	Autoresearch 2026-05-15: 7 new self-improving agent techniques (ERL, LSE, HyperAgents, Self-Guide, MARS, ICPO, RetroAgent). Wiki clean SHS=0 (139 skills).
 9fdcfccb7	0	0	0	0	DONE	Autoresearch 2026-05-16: Gen Z slang web search fallback (workers dead 2+ days). AI agent self-improvement research. SHS=0 (139 skills).
+7d4991873	0	0	0	0	DONE	Autoresearch 2026-05-17: 7 self-debugging techniques (ReflexiCoder, Polaris, DebugRepair, SelfHeal, ErrorProbe, DeepVerifier, ERL). Wiki fix. SHS=0 (142 skills).
