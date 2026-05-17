@@ -56,9 +56,37 @@ openclaw --version          # CLI version
         }
       }
     }
+  },
+  "secrets": {
+    "providers": {
+      "PROVIDER_NAME": {
+        "source": "env",
+        "allowlist": ["ENV_VAR_NAME"]
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "PROVIDER_NAME": {
+        "baseUrl": "https://api.minimax.io/anthropic",
+        "apiKey": {
+          "source": "env",
+          "provider": "PROVIDER_NAME",
+          "id": "ENV_VAR_NAME"
+        },
+        "models": [
+          {
+            "id": "MODEL_ID",
+            "name": "Model Display Name"
+          }
+        ]
+      }
+    }
   }
 }
 ```
+
+> ⚠️ **CRITICAL**: MiniMax baseUrl MUST end with `/anthropic` — the OpenAI-compatible endpoint (`https://api.minimax.io/v1`) returns 404 for all model requests. The plugin hardcodes `MINIMAX_API_BASE_URL = "https://api.minimax.io/anthropic"` internally, but custom providers must also use the Anthropic path.
 
 ### 3. Start Gateway
 ```bash
@@ -135,6 +163,36 @@ openclaw gateway restart
 **Cause**: Device identity not configured
 **Fix**: Run `openclaw gateway probe` or access dashboard to authenticate
 **Note**: Telegram bot still works even if gateway shows "unreachable"
+
+### "Secret provider 'minimax' is not configured"
+**Symptom**: Gateway fails to start with `SecretProviderResolutionError: Secret provider "minimax" is not configured (ref: env:minimax:MINIMAX_API_KEY)`
+**Cause**: The `apiKey: "ref+env:minimax:MINIMAX_API_KEY"` syntax means "use secret provider 'minimax' to look up env var MINIMAX_API_KEY". OpenClaw requires an explicit secret provider with matching name, even when the env var exists.
+**Fix**: Add a `secrets.providers.minimax` block to openclaw.json:
+```bash
+openclaw config set secrets.providers.minimax --json '{"source":"env","allowlist":["MINIMAX_API_KEY"]}'
+openclaw gateway restart
+```
+This adds to config:
+```json
+"secrets": {
+  "providers": {
+    "minimax": {
+      "source": "env",
+      "allowlist": ["MINIMAX_API_KEY"]
+    }
+  }
+}
+```
+**Verification**: `openclaw secrets audit` should show minimax as REF_RESOLVED (not REF_UNRESOLVED).
+
+### MiniMax baseUrl 404 "model_not_found"
+**Symptom**: All model requests fail with `HTTP 404: page not found`, `FailoverError: model_not_found`, `chain_exhausted`
+**Cause**: Custom provider baseUrl uses `https://api.minimax.io/v1` (OpenAI path). MiniMax only responds to `https://api.minimax.io/anthropic` (Anthropic-compatible path).
+**Fix**: Update the baseUrl in models.providers.minimax to use the `/anthropic` path:
+```json
+"baseUrl": "https://api.minimax.io/anthropic"
+```
+**Verification**: `curl -s -X POST "https://api.minimax.io/anthropic/v1/messages" -H "Authorization: Bearer $MINIMAX_API_KEY" -d '{"model":"MiniMax-M2.7","max_tokens":10,"messages":[{"role":"user","content":"hi"}]}'` should return a valid response.
 
 ### clawhub install fails
 **Issue**: "Skill not found or unavailable" — rate limit or wrong slug

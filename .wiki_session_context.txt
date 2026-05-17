@@ -698,7 +698,7 @@ relationships:
 ---
 title: Learned About Tuấn Anh
 created: 2026-04-23
-updated: 2026-05-11
+updated: 2026-05-18
 type: entity
 tags: [person]
 confidence: high
@@ -779,6 +779,14 @@ relationships: [tiktok-content, hermes-agent]
 - **Chằm Zn** — "chằm" + Zn (zinc) = lightweight depression mood, tired but humorous
 - **Tẻn tẻn** — cute/adorable behavior, from HURRYKNG rapper fanbase
 - **Đứa trẻ nổi loạn** — rebellion aesthetic (May 2026 trend)
+
+#### Gen Z Slang May 18, 2026 (UPDATED)
+- **Xịn sò** — high quality, impressive, stylish (from slangloom May 2026)
+- **Kèo** — deal, plan, arrangement (from slangloom May 2026)
+- **Quẩy** — party hard, energetic dancing (from slangloom May 2026)
+- **Tạch** — fail, didn't work out (from slangloom May 2026)
+- **Tấu hài** — acting like a comedian unintentionally, funny fail (from slangloom May 2026)
+- **Hết nước chấm** — extremely good, unbelievably amazing (from slangloom May 2026)
 
 #### Teen code cơ bản
 - iu = yêu, bít/bjt = biết, j = gì, nha = nhé
