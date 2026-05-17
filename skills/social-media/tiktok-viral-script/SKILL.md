@@ -467,15 +467,42 @@ Anh thì biết rồi, vì anh đã bán được 2 tuần nay."
 "Mua link in bio đi, giao nhanh lắm luôn"
 ```
 
+## X/Twitter Integration — Absorbed from `xitter`
+
+`xitter` (third-party x-cli wrapper) is **deprecated**. All X/Twitter operations should use `xurl` instead.
+
+**Why:** `xurl` is the official X developer platform CLI, maintained by X's team, supports OAuth 2.0 PKCE with auto-refresh, covers a larger API surface (DMs, media, raw v2 endpoints), and uses the official API rather than a third-party Python wrapper.
+
+**Migration:** If you see `xitter` referenced, update to use `xurl` commands instead.
+
+## Research Analyst — Absorbed into content-creator
+
+This skill has been merged into `tiktok-viral-script` as section **Research Analyst Workflow**.
+
+The content-creator workflow is a two-role system:
+- **Research Analyst** = market economics, commission math, product validation, fee analysis (evening research cron)
+- **Content Creator** = scripts, trends, daily calendars, Gen Z slang
+
+Both roles are part of the same content-creator business. They are documented together in this single skill under their respective sections.
+
+Key references absorbed from `research-analyst`:
+- Fee structure (12.5-14.5% platform, 5% transaction, ₫3,000/order — May 2026)
+- Commission survival math (60%+ gross margin OR 15%+ commission required)
+- Coolmate case study (₫14.61B booking revenue, 1,370 KOCs, 369 videos/day)
+- Summer Cooling margins (neck fan 64%, cooling pillow 65%)
+- Gen Z ≠ revenue insight (entertainment beta=0.014, KOL influence beta=0.580)
+- Platform fee trajectory (2024: 2-3% → 2027E: 15-17%)
+
+See: `references/commission-reference.md` (absorbed from research-analyst)
+
 ## Related
-- [[hermes-autoresearch]] — Autoresearch skill for nightly research runs
+- [[hermes-autoresearch]] — Autoresearch loop for nightly research runs
 - [[xurl]] — X/Twitter trends research (separate platform)
-- [[gen-z-slang-2026-04]] — Gen Z slang reference (updated May 2026)
 - `scripts/tráhn-qa-gate.sh` — Runtime TRÁHN enforcement (exit 1 = block delivery)
 - `references/tiktok-browser-access.md` — TikTok CAPTCHA workarounds, competitor research via news scraping
 - `references/worker-dual-path-discovery.md` — Worker output dual-path issue: `/hermes/workers/` vs `/.hermes/workers/` (2026-05-13)
 
-## Fail-Fast Protocol (2026-05-10)
+## Fail-Fast Protocol
 
 **Signal:** After 2 `browser-harness` attempts, if `page_info()` returns CAPTCHA ("Drag the slider") → **HARD STOP** on browser approach. Switch to web search + news scraping immediately.
 

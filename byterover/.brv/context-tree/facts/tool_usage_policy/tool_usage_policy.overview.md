@@ -1,0 +1,9 @@
+- Key points:
+    - The Tool Usage Policy strictly limits the available tools.
+    - Only memory and skill management tools are permitted for calling.
+    - Attempts to call other tools will result in denial at runtime.
+- Structure / sections summary:
+    - Defines the constraints and rules governing tool invocation.
+- Notable entities, patterns, or decisions mentioned:
+    - Constraint: Only memory and skill management tools are allowed.
+    - Enforcement: Other tools are denied at runtime.

@@ -1,0 +1,7 @@
+- Key points:
+    - The `baoyu-infographic` skill received an update to support animated video production workflows.
+    - This new capability allows users to request outputs like "clip" or "animation".
+- Structure / sections summary:
+    - Contains facts detailing the changes made to the `baoyu-infographic` skill.
+- Notable entities, patterns, or decisions:
+    - Feature addition: Integration of an animated video production workflow into the infographic generation process.

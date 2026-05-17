@@ -1,0 +1,3 @@
+- Key Points: TryMata offers payouts ranging from $5 to $30 per test.
+- Structure Summary: The knowledge base is structured by subject, specifically focusing on TryMata facts.
+- Notable Entities: TryMata; Payout range ($5-$30/test).

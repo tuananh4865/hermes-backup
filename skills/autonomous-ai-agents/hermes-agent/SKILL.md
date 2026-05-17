@@ -823,6 +823,11 @@ See `references/memory-architecture.md` for full 6-layer memory stack breakdown.
 
 **⚠️ Memory extraction is EVENT-DRIVEN only** — `on_pre_compress` + `on_session_end`. NOT per-turn.
 
+**⚠️ CRITICAL: 3 Memory Architecture Gaps (2026-05-17)** — See `references/memory-provider-architecture-gaps.md` for details:
+1. `on_session_switch()` defined in MemoryManager but NEVER called from `run_agent._compress_context()`
+2. `on_post_compress()` does NOT exist — checkpoint written but not restored after compression
+3. Proactive retrieval only triggers on user query, not between turns
+
 ## ByteRover Setup (Local-First, No Account Required)
 
 **Critical discovery (2026-05-06):** The error "No provider connected" does NOT mean you need a ByteRover account. It means you need to connect a third-party LLM provider (MiniMax, OpenRouter, etc.) using an API key you already have.

@@ -1,0 +1,1 @@
+The closing sequence is characterized by a title fade, a zoom-in on the number +46,041, and falling stars in the background.

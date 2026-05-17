@@ -1,0 +1,1 @@
+Alamy provides photographers with a commission of 40-60% on sold photos.

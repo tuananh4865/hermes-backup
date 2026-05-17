@@ -1,0 +1,32 @@
+---
+title: SHUTTERSTOCK
+summary: Knowledge base for Shutterstock derived from extracted facts.
+tags: []
+related: []
+keywords: []
+createdAt: '2026-05-17T03:29:29.680Z'
+updatedAt: '2026-05-17T03:29:29.680Z'
+---
+## Reason
+Curated facts related to Shutterstock
+
+## Raw Concept
+**Task:**
+Document factual knowledge about Shutterstock
+
+**Flow:**
+Fact extraction -> Deduplication -> Grouping -> Curation
+
+**Timestamp:** 2026-05-17
+
+**Author:** RLM Context Processor
+
+## Narrative
+### Structure
+Structured facts grouped by subject: Shutterstock
+
+### Highlights
+Processed 1 unique factual statements for the 'Shutterstock' topic.
+
+## Facts
+- **Shutterstock**: Shutterstock pays 15-40% royalty on sold photos.

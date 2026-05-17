@@ -1,0 +1,1 @@
+UserTesting provides test payouts ranging from $10 to $60 per test.

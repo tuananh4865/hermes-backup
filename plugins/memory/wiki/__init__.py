@@ -210,7 +210,16 @@ class WikiMemoryProvider:
         cached = self._session_cache.get("recent_sessions", "")
         if cached:
             parts.append(f"### Recent Session Context\n{cached}\n")
-        
+
+        # Proactive retrieval: if we have cached context from on_post_compress,
+        # inject it here so the next turn continues seamlessly after compression
+        if self._session_cache.get("has_proactive_context"):
+            proactive_topics = self._session_cache.get("proactive_topics", [])
+            for topic in proactive_topics:
+                cached_proactive = self._session_cache.get(f"proactive_{topic}", "")
+                if cached_proactive:
+                    parts.append(cached_proactive)
+
         return "\n\n".join(parts) if parts else ""
 
     def get_tool_schemas(self) -> List[Dict[str, Any]]:
@@ -1441,6 +1450,172 @@ _This checkpoint was written automatically by WikiMemoryProvider before context 
             self._auto_extract_to_memory(summary)
         except Exception as e:
             logger.warning("[wiki] on_pre_compress memory extract failed: %s", e)
+
+    def on_session_switch(
+        self,
+        new_session_id: str,
+        *,
+        parent_session_id: str = "",
+        reset: bool = False,
+        **kwargs,
+    ) -> None:
+        """
+        Called when session_id rotates (context compression, /new, /resume, /branch).
+        Reset per-session state and flush pending writes to the old session_id.
+        """
+        try:
+            logger.info(
+                "[wiki] on_session_switch: %s → %s (parent=%s, reset=%s)",
+                self._session_id, new_session_id, parent_session_id, reset,
+            )
+
+            # Flush any pending writes for the old session
+            if self._conversation_buffer:
+                self._write_rolling_checkpoint()
+
+            # Reset per-session state for new session
+            old_session_id = self._session_id
+            self._session_id = new_session_id
+            self._turn_count = 0
+            self._tool_call_count = 0
+            self._last_checkpoint_turn = 0
+            self._current_task = ""
+            self._files_modified = []
+            self._decisions = []
+            self._blocked = []
+            self._next_steps = []
+            self._conversation_buffer = []
+            self._session_start_time = datetime.now()
+
+            # If reset=True (user-initiated /new or /reset), also clear cached
+            # context so old session's data doesn't leak into new session
+            if reset:
+                self._session_cache.clear()
+                logger.info("[wiki] Session switch with reset=True — cache cleared")
+
+        except Exception as e:
+            logger.warning("[wiki] on_session_switch failed: %s", e)
+
+    def on_post_compress(
+        self,
+        old_session_id: str,
+        compressed_messages: List[Dict[str, Any]],
+    ) -> str:
+        """
+        Called AFTER context compression completes.
+        Reads the pre-compact checkpoint and returns structured context
+        to be injected into the new session's memory context.
+
+        This is the recovery path — the compressed context loses fine-grained
+        task state, so we restore it from the checkpoint file.
+        """
+        try:
+            checkpoint_path = CHECKPOINT_DIR / f"pre_compact_{old_session_id}.md"
+            if not checkpoint_path.exists():
+                logger.debug("[wiki] on_post_compress: no checkpoint found for %s", old_session_id)
+                return ""
+
+            content = checkpoint_path.read_text(encoding="utf-8")
+
+            # Parse task state from checkpoint
+            task_match = re.search(r"## Current Task\s*\n(.+?)(?=\n##|\n---\n|$)", content, re.DOTALL)
+            decisions_match = re.search(r"### Decisions Made\s*\n(.+?)(?=\n###|\n---\n|$)", content, re.DOTALL)
+            next_steps_match = re.search(r"## Next Steps — DO NOT LOSE\s*\n(.+?)(?=\n##|\n---\n|$)", content, re.DOTALL)
+            files_match = re.search(r"### Files Modified.*?\n(.+?)(?=\n###|\n---\n|$)", content, re.DOTALL)
+
+            current_task = task_match.group(1).strip() if task_match else ""
+            decisions = decisions_match.group(1).strip() if decisions_match else ""
+            next_steps = next_steps_match.group(1).strip() if next_steps_match else ""
+            files = files_match.group(1).strip() if files_match else ""
+
+            # Build structured recovery context
+            recovery = []
+            if current_task:
+                recovery.append(f"**Continuing task:** {current_task}")
+            if decisions and decisions != "_None_":
+                recovery.append(f"**Prior decisions:** {decisions}")
+            if next_steps and next_steps != "_Continue normally_":
+                recovery.append(f"**Next steps:** {next_steps}")
+            if files and files != "_None_":
+                recovery.append(f"**Files modified:** {files}")
+
+            result = "\n".join(recovery)
+            if result:
+                logger.info("[wiki] on_post_compress: restored context for %s", old_session_id)
+
+            # Also trigger proactive retrieval to warm up cache for new session
+            self._proactive_retrieve_from_checkpoint(checkpoint_path)
+
+            return result
+
+        except Exception as e:
+            logger.warning("[wiki] on_post_compress failed: %s", e)
+            return ""
+
+    def _proactive_retrieve_from_checkpoint(self, checkpoint_path: Path) -> None:
+        """
+        Read a pre-compact checkpoint and proactively query wiki for
+        relevant context, caching results for the next prefetch() call.
+        """
+        try:
+            content = checkpoint_path.read_text(encoding="utf-8")
+
+            # Extract task from checkpoint
+            task_match = re.search(r"## Current Task\s*\n(.+?)(?=\n##|\n---\n|$)", content, re.DOTALL)
+            current_task = task_match.group(1).strip() if task_match else ""
+
+            if not current_task:
+                return
+
+            # Parse decisions and next steps for additional topics
+            decisions_match = re.search(r"### Decisions Made\s*\n(.+?)(?=\n###|\n---\n|$)", content, re.DOTALL)
+            next_steps_match = re.search(r"## Next Steps — DO NOT LOSE\s*\n(.+?)(?=\n##|\n---\n|$)", content, re.DOTALL)
+
+            topics = []
+            if current_task:
+                topics.append(current_task[:200])
+            if decisions_match:
+                # Extract individual decisions as topics
+                decisions = decisions_match.group(1)
+                for line in decisions.split("\n"):
+                    line = line.strip().lstrip("-*")
+                    if line and line != "_None_" and len(line) > 5:
+                        topics.append(line[:100])
+            if next_steps_match:
+                next_steps = next_steps_match.group(1)
+                for line in next_steps.split("\n"):
+                    line = line.strip().lstrip("-*")
+                    if line and line != "_Continue normally_" and len(line) > 5:
+                        topics.append(line[:100])
+
+            # Deduplicate and limit
+            seen = set()
+            unique_topics = []
+            for t in topics:
+                norm = t.lower()[:50]
+                if norm not in seen and t:
+                    seen.add(norm)
+                    unique_topics.append(t)
+            unique_topics = unique_topics[:8]  # Max 8 queries
+
+            # Retrieve and cache
+            cached_results = []
+            for topic in unique_topics:
+                result = self.retrieve_relevant_memory(topic, k=3)
+                if result:
+                    self._session_cache[f"proactive_{topic[:50]}"] = result
+                    cached_results.append(topic[:50])
+
+            if cached_results:
+                self._session_cache["has_proactive_context"] = True
+                self._session_cache["proactive_topics"] = cached_results
+                logger.info(
+                    "[wiki] Proactive retrieval: %d topics cached for next prefetch",
+                    len(cached_results),
+                )
+
+        except Exception as e:
+            logger.debug("[wiki] _proactive_retrieve_from_checkpoint failed: %s", e)
 
     def shutdown(self) -> None:
         """Clean shutdown — write final checkpoint."""

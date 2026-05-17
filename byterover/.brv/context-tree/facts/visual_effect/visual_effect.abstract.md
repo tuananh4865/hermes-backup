@@ -1,0 +1,1 @@
+The visual effect documentation notes that a scanline effect is utilized to achieve a modern look.

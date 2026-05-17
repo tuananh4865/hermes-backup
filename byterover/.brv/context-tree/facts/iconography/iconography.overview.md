@@ -1,0 +1,8 @@
+- Key points:
+    - The document consolidates facts related to Iconography.
+    - A specific change was implemented regarding symbols.
+    - Total 11 unique facts were extracted and organized.
+- Structure / sections summary:
+    - The document focuses on consolidating factual statements for the subject 'Iconography'.
+- Notable entities, patterns, or decisions mentioned:
+    - Previous symbols have been replaced by 5-pointed gold stars.

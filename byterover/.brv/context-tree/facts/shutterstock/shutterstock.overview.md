@@ -1,0 +1,3 @@
+- Key Points: Shutterstock pays a royalty of 15% to 40% on sold photos.
+- Structure Summary: The knowledge base is structured by subject, specifically focusing on Shutterstock facts.
+- Notable Entities: Shutterstock; Royalty rate (15-40%).

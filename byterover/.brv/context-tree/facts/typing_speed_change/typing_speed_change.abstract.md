@@ -1,0 +1,1 @@
+This knowledge base entry contains curated facts related to changes in typing speed.

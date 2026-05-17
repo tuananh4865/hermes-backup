@@ -132,7 +132,70 @@ infographic/{topic-slug}/
 └── infographic.png
 ```
 
-Slug: 2-4 words kebab-case from topic. Conflict: append `-YYYYMMDD-HHMMSS`.
+Slug: 2-4 words kebab-case from topic. Conflict: append `-YYYYMMDD-HHMMSS` to subsequent runs.
+
+## Animated Video Output (for "clip" requests)
+
+When the user asks for an animated infographic video ("clip", "animation", "chuyển động"), use the **PIL frames + ffmpeg** pipeline instead of manim or moviepy TextClip. On this macOS environment, manim requires complex C extension compilation and moviepy TextClip has font rendering issues with emoji.
+
+### Animated Video Workflow
+
+1. **Design frames** — Write a `render_frame(slide_type, data, progress)` function using PIL `ImageDraw` for each frame. `progress` ranges 0.0→1.0 within a slide's animation timeline.
+
+2. **Generate frames** — For each slide at 30fps:
+   ```python
+   from PIL import Image, ImageDraw, ImageFont
+   FONT = "/System/Library/Fonts/Menlo.ttc"  # Available on macOS
+   # Render at 1920×1080, iterate over frame_num / total_frames as progress
+   ```
+
+3. **Stitch with ffmpeg**:
+   ```bash
+   ffmpeg -y -framerate 30 -i frames/frame_%04d.png \
+     -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p output.mp4
+   ```
+
+### Animation Patterns (PIL frame-by-frame)
+
+| Effect | Implementation |
+|--------|---------------|
+| Slide in from left | `x = int(-400 + 500 * min(1.0, t))` |
+| Fade in | `alpha = min(1.0, t)` — skip draw when alpha < threshold |
+| Type-in text | `draw.text((x,y), text[:visible_chars], ...)` |
+| Scale zoom | `size = int(base_size * zoom)` |
+| Staggered items | `delay = i * 0.1; if progress > delay: t = (progress - delay) / 0.3` |
+| Floating stars | `y = int(base_y + offset * direction) % H` |
+| Bar expand | `w = int(W * min(1.0, progress * 3))` |
+
+### Dynamic Section Positioning (avoid overlap)
+
+When rendering multi-section slides (e.g., "KEY FEATURES" followed by "WHY IT'S TRENDING"), **calculate section positions dynamically** based on actual content, never hardcode fixed Y offsets.
+
+```python
+# CORRECT — dynamic positioning
+num_features = len(repo_data["features"])
+feat_spacing = min(38, 600 // num_features)  # auto-fit based on count
+feat_end_y = 360 + num_features * feat_spacing
+why_y = feat_end_y + 20  # positioned AFTER features, no overlap
+
+# WRONG — hardcoded offsets lead to overlap when content length varies
+draw.text((80, 580), "WHY IT'S TRENDING")  # fixed y, overlaps on long features
+```
+
+### Typing Speed Guidelines
+
+- **Fast typing** (TYPE_END=0.12 → ~0.72s at 6s slide): good for short content, maintains engagement
+- **Standard typing** (TYPE_END=0.18 → ~1.08s): safer for longer content / older viewers
+- **Pause phase** (between TYPE_END and PAUSE_END): should be 55-65% of slide duration for readability
+- **Rule of thumb**: typing phase ≤ 20% of slide, pause phase ≥ 50% of slide, transition ≤ 30%
+
+### Design Principles for Animated Infographics
+
+- **Breathing room** — every element needs time to land. `wait()` after reveals.
+- **Opacity layering** — primary at full, context at 40%, structure at 15%.
+- **Stagger over simultaneity** — items enter one-by-one, 0.1-0.15s apart.
+- **No identical slides** — vary color dominant, layout position, entry animation per slide.
+- **3-second minimum per key point** — viewer needs time to absorb.
 
 ## Core Principles
 

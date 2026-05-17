@@ -1,0 +1,8 @@
+- Key points:
+    - Defines the distinct scope and purpose for two primary skills.
+    - `manim-video` is scoped for programmatic animation, emphasizing math and technical focus.
+    - `baoyu-infographic` is scoped for data-driven informational visuals.
+- Structure / sections summary:
+    - Provides a definition of the scope for different skills within the system.
+- Notable entities, patterns, or decisions:
+    - Scope distinction: Clear separation of responsibilities between `manim-video` (technical/math focus) and `baoyu-infographic` (data visualization).

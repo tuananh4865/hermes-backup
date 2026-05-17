@@ -1,0 +1,8 @@
+- Key points:
+    - Alamy provides a commission on sold photos.
+    - The commission rate ranges from 40% to 60%.
+- Structure / sections summary:
+    - The knowledge base is structured by grouping facts under the subject 'Alamy'.
+- Notable entities, patterns, or decisions mentioned:
+    - Entity: Alamy.
+    - Pattern: Commission structure (40-60%).

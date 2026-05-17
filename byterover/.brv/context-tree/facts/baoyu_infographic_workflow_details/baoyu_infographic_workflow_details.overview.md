@@ -1,0 +1,9 @@
+- Key points:
+    - The new `baoyu-infographic` workflow incorporates several visual patterns for rendering.
+    - Specific patterns include `render_frame()` with progress, Stagger, slide-in, fade, zoom, and type-in effects.
+    - The process utilizes a 30fps frame generation pipeline followed by an ffmpeg stitch operation.
+- Structure / sections summary:
+    - Details the specific components and patterns of the updated `baoyu-infographic` workflow.
+- Notable entities, patterns, or decisions:
+    - Workflow pattern: Defined set of animation/rendering techniques (Stagger, fade, zoom, etc.).
+    - Technical pipeline: Use of a 30fps frame generation followed by an ffmpeg stitch pipeline.

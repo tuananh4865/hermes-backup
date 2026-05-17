@@ -1,9 +1,122 @@
 {
-  "curationsSinceDream": 8,
-  "lastDreamAt": "2026-05-16T14:01:18.333Z",
-  "lastDreamLogId": "drm-1778939691594",
+  "curationsSinceDream": 16,
+  "lastDreamAt": "2026-05-17T03:54:18.249Z",
+  "lastDreamLogId": "drm-1778989473041",
   "pendingMerges": [],
-  "staleSummaryPaths": [],
-  "totalDreams": 2,
+  "staleSummaryPaths": [
+    {
+      "enqueuedAt": 1779009443631,
+      "path": "facts/closing_sequence/closing_sequence.md"
+    },
+    {
+      "enqueuedAt": 1779009443631,
+      "path": "facts/file_size/file_size.md"
+    },
+    {
+      "enqueuedAt": 1779009443631,
+      "path": "facts/repo_slides_animations/repo_slides_animations.md"
+    },
+    {
+      "enqueuedAt": 1779009443631,
+      "path": "facts/title_animation/title_animation.md"
+    },
+    {
+      "enqueuedAt": 1779009443631,
+      "path": "facts/technical_specs/technical_specs.md"
+    },
+    {
+      "enqueuedAt": 1779009443631,
+      "path": "facts/video_length_and_structure/video_length_and_structure.md"
+    },
+    {
+      "enqueuedAt": 1779009666536,
+      "path": "facts/baoyu_infographic_skill_update/baoyu_infographic_skill_update.md"
+    },
+    {
+      "enqueuedAt": 1779009666536,
+      "path": "facts/baoyu_infographic_workflow_details/baoyu_infographic_workflow_details.md"
+    },
+    {
+      "enqueuedAt": 1779009666536,
+      "path": "facts/emergent_techniques/emergent_techniques.md"
+    },
+    {
+      "enqueuedAt": 1779009666536,
+      "path": "facts/handling_workflow_corrections/handling_workflow_corrections.md"
+    },
+    {
+      "enqueuedAt": 1779009666536,
+      "path": "facts/manim_video_skill_update/manim_video_skill_update.md"
+    },
+    {
+      "enqueuedAt": 1779009666536,
+      "path": "facts/handling_outdated_skills/handling_outdated_skills.md"
+    },
+    {
+      "enqueuedAt": 1779009666536,
+      "path": "facts/skill_library_design/skill_library_design.md"
+    },
+    {
+      "enqueuedAt": 1779009666536,
+      "path": "facts/skill_scope_definition/skill_scope_definition.md"
+    },
+    {
+      "enqueuedAt": 1779009666536,
+      "path": "facts/skill_update_preference_order/skill_update_preference_order.md"
+    },
+    {
+      "enqueuedAt": 1779009666536,
+      "path": "facts/user_feedback_signals/user_feedback_signals.md"
+    },
+    {
+      "enqueuedAt": 1779021746217,
+      "path": "facts/animation_detail/animation_detail.md"
+    },
+    {
+      "enqueuedAt": 1779021746217,
+      "path": "facts/duration/duration.md"
+    },
+    {
+      "enqueuedAt": 1779021746217,
+      "path": "facts/iconography/iconography.md"
+    },
+    {
+      "enqueuedAt": 1779021746217,
+      "path": "facts/reading_pause/reading_pause.md"
+    },
+    {
+      "enqueuedAt": 1779021746217,
+      "path": "facts/text_display/text_display.md"
+    },
+    {
+      "enqueuedAt": 1779021746217,
+      "path": "facts/video_file/video_file.md"
+    },
+    {
+      "enqueuedAt": 1779021746217,
+      "path": "facts/zoom_effect/zoom_effect.md"
+    },
+    {
+      "enqueuedAt": 1779021746217,
+      "path": "facts/visual_effect/visual_effect.md"
+    },
+    {
+      "enqueuedAt": 1779028085378,
+      "path": "facts/key_features_end_position/key_features_end_position.md"
+    },
+    {
+      "enqueuedAt": 1779028085378,
+      "path": "facts/typing_duration/typing_duration.md"
+    },
+    {
+      "enqueuedAt": 1779028085378,
+      "path": "facts/typing_speed_change/typing_speed_change.md"
+    },
+    {
+      "enqueuedAt": 1779028085378,
+      "path": "facts/why_it_s_trending_position/why_it_s_trending_position.md"
+    }
+  ],
+  "totalDreams": 3,
   "version": 1
 }

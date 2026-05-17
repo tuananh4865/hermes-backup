@@ -1,0 +1,8 @@
+- Key points:
+    - DoorDash is a service offering delivery services.
+    - Potential earnings for users range from $15 to $25 per delivery.
+- Structure / sections summary:
+    - The knowledge base is structured by grouping facts under the subject 'DoorDash'.
+- Notable entities, patterns, or decisions mentioned:
+    - Entity: DoorDash.
+    - Pattern: Earnings potential ($15-$25/delivery).

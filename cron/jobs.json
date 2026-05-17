@@ -18,7 +18,7 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 18
+        "completed": 19
       },
       "enabled": true,
       "state": "scheduled",
@@ -26,7 +26,7 @@
       "paused_reason": null,
       "created_at": "2026-04-27T21:38:04.126445+07:00",
       "next_run_at": "2026-05-18T03:00:00+07:00",
-      "last_run_at": "2026-05-16T03:00:58.366615+07:00",
+      "last_run_at": "2026-05-17T03:00:41.844114+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -61,7 +61,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T10:33:31.370315+07:00",
-      "next_run_at": "2026-05-18T02:00:00+07:00",
+      "next_run_at": "2026-05-19T02:00:00+07:00",
       "last_run_at": "2026-05-17T02:04:02.695143+07:00",
       "last_status": "ok",
       "last_error": null,
@@ -97,15 +97,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T13:51:06.979177+07:00",
-      "next_run_at": "2026-05-17T07:00:00+07:00",
-      "last_run_at": "2026-05-16T07:02:49.266433+07:00",
+      "next_run_at": "2026-05-18T07:00:00+07:00",
+      "last_run_at": "2026-05-17T07:01:36.120699+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -426,15 +426,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": 999,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-08T08:42:19.421587+07:00",
-      "next_run_at": "2026-05-18T00:00:00+07:00",
-      "last_run_at": "2026-05-17T00:05:20.131929+07:00",
+      "next_run_at": "2026-05-19T00:00:00+07:00",
+      "last_run_at": "2026-05-18T00:08:09.175464+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -468,15 +468,15 @@
       "schedule_display": "0 1 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T06:21:26.217689+07:00",
-      "next_run_at": "2026-05-18T01:00:00+07:00",
-      "last_run_at": "2026-05-17T01:00:27.932293+07:00",
+      "next_run_at": "2026-05-19T01:00:00+07:00",
+      "last_run_at": "2026-05-18T01:00:13.336589+07:00",
       "last_status": "error",
       "last_error": "Script not found: /Users/tuananh4865/.hermes/scripts/python3 ~/.hermes/scripts/byterover_knowledge_sync.py --days-ago 1",
       "last_delivery_error": null,
@@ -505,23 +505,65 @@
       "schedule_display": "0 6 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-16T06:21:27.227280+07:00",
-      "next_run_at": "2026-05-17T06:00:00+07:00",
-      "last_run_at": null,
-      "last_status": null,
-      "last_error": null,
+      "next_run_at": "2026-05-18T06:00:00+07:00",
+      "last_run_at": "2026-05-17T06:00:03.730508+07:00",
+      "last_status": "error",
+      "last_error": "Script not found: /Users/tuananh4865/.hermes/scripts/#!/bin/bash\necho \"=== ByteRover Health Check ===\"\nbrv status\necho \"\"\necho \"=== Recent Curate History ===\"\nbrv curate view --since 24h 2>/dev/null | head -30\necho \"\"\necho \"=== ByteRover Space Stats ===\"\ndu -sh ~/.hermes/byterover/ 2>/dev/null",
       "last_delivery_error": null,
       "deliver": "telegram:1132914873",
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null
+    },
+    {
+      "id": "a2786fb20bac",
+      "name": "Wiki Health Daily",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "wiki_health.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
+      },
+      "schedule_display": "0 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-18T01:09:51.272803+07:00",
+      "next_run_at": "2026-05-18T04:00:00+07:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:1132914873",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "603"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-05-17T03:00:10.482403+07:00"
+  "updated_at": "2026-05-18T02:00:19.806806+07:00"
 }

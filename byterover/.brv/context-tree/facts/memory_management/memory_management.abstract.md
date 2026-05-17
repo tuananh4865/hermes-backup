@@ -1,0 +1,1 @@
+Memory management involves reviewing conversations to determine if information should be saved to memory.

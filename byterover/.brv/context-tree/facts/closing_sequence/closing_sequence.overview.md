@@ -1,0 +1,9 @@
+- Key Points:
+    - The document focuses on curating extracted facts related to the "Closing Sequence."
+    - Only one specific fact was successfully documented.
+    - The closing sequence includes visual and numerical elements.
+- Structure / Sections Summary:
+    - The process follows a flow: Fact extraction -> Deduplication -> Grouping -> Curation.
+    - Facts are grouped by subject (Closing Sequence).
+- Notable Entities, Patterns, or Decisions:
+    - Closing Sequence components include: a title fade, the number +46,041 zooming in, and falling stars in the background.

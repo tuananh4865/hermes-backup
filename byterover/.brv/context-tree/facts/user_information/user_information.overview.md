@@ -1,0 +1,7 @@
+- Key points:
+    - The goal of User Information curation is to identify personal details worth remembering.
+    - Focus areas include the user's persona, desires, preferences, and personal details.
+- Structure / sections summary:
+    - The document defines the scope for gathering facts about the user.
+- Notable entities, patterns, or decisions mentioned:
+    - Entities to track: Persona, desires, preferences, and personal details.

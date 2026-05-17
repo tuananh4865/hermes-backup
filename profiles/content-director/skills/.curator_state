@@ -1,8 +1,9 @@
 {
-  "last_report_path": "/Users/tuananh4865/.hermes/profiles/content-director/logs/curator/20260510-020258",
-  "last_run_at": "2026-05-10T02:02:58.162759+00:00",
-  "last_run_duration_seconds": 850.168727,
-  "last_run_summary": "auto: no changes; llm: All consolidation complete. Here is the final summary:\n\n---\n\n## Consolidation Summary\n\n**5 new umbrella skills created**, each with labeled subsection links to absorbed content:\n\n1. **`github-backup`** — Unified GitHub backup skill covering…",
+  "last_report_path": "/Users/tuananh4865/.hermes/profiles/content-director/logs/curator/20260517-023706",
+  "last_run_at": "2026-05-17T02:37:06.131586+00:00",
+  "last_run_duration_seconds": 0.374642,
+  "last_run_summary": "auto: no changes; llm: skipped (no candidates)",
+  "last_run_summary_shown_at": null,
   "paused": false,
-  "run_count": 1
+  "run_count": 2
 }

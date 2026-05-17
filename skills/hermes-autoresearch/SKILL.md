@@ -364,7 +364,18 @@ cronjob list | grep {job_id}
 ```
 | 5aea298eb0a8 | Daily Session Review | 0 0 * * * (0AM) | Read yesterday's sessions, extract decisions/revenue/learnings, update wiki + knowledge graph, index for retrieval, report to Telegram |
 
-### ✅ WORKER CRON VERIFIED WORKING (2026-05-07)
+### ByteRover Self-Improvement Review (2026-05-18)
+
+**What happened:** ByteRover memory system auto-detected that `learned-about-tuananh.md` was updated (likely by a previous session's auto-save). The system sent a notification: "User profile updated" — this is an INFO-level notification, NOT a problem.
+
+**Anh's question:** "Wiki trong memory provider có phải dựa trên skill llm-wiki của Karpathy không?"
+
+**Answer:** CÓ và KHÔNG.
+- `WikiMemoryProvider` (plugin tại `~/.hermes/plugins/memory/wiki/__init__.py`) **inspired by** Karpathy's LLM Wiki pattern — cùng directory structure, frontmatter convention, interlinked markdown.
+- `llm-wiki` skill là **documentation pattern** (cách build/query wiki). WikiMemoryProvider là **implementation** (Python code xử lý memory operations).
+- Không nhầm lẫn: skill ≠ plugin. Skill = documentation, Plugin = executable code.
+
+**Auto-improvement pattern confirmed working:** ByteRover saves new knowledge after each session and checks/reverifies old knowledge periodically. This is the intended auto behavior — NOT something to call `brv_curate` manually for.
 
 **Content Creator Morning cron (ce3701b4dcdd) RAN SUCCESSFULLY at 8AM on 2026-05-07:**
 - Output file: `~/.hermes/workers/content-creator/outputs/2026-05-07-morning-brief.md` (8376 bytes)

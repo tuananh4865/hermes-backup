@@ -1,0 +1,8 @@
+- Key points:
+    - The target shape for the skill library is CLASS-LEVEL skills.
+    - Each skill must include a rich SKILL.md file.
+    - A `references/` directory is required for session-specific details.
+- Structure / sections summary:
+    - Fact collection is organized by subject: Skill Library Design.
+- Notable entities, patterns, or decisions mentioned:
+    - The core design principle involves structuring skills at the class level.

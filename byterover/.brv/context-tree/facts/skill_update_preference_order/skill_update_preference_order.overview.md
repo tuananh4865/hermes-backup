@@ -1,0 +1,8 @@
+- Key points:
+    - Defines a specific preference order for skill updates.
+    - The priority sequence is: 1. Update a currently-loaded skill; 2. Update an existing umbrella skill; 3. Add a support file.
+    - The document serves to curate factual statements regarding the Skill Update Preference Order.
+- Structure / sections summary:
+    - The knowledge file organizes facts by subject, specifically focusing on the Skill Update Preference Order.
+- Notable entities, patterns, or decisions:
+    - Decision point: Established a clear hierarchy for skill update operations.

@@ -1,0 +1,8 @@
+- Key points:
+    - Rover is a service for pet walking and care.
+    - Potential earnings for pet walking range from $15 to $30 per walk.
+- Structure / sections summary:
+    - The knowledge base is structured by grouping facts under the subject 'Rover'.
+- Notable entities, patterns, or decisions mentioned:
+    - Entity: Rover.
+    - Pattern: Earnings potential ($15-$30/walk).

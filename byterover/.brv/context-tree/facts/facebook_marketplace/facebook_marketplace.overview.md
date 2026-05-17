@@ -1,0 +1,7 @@
+- Key points:
+    - Facebook Marketplace allows users to sell old items without incurring a fee.
+- Structure / sections summary:
+    - The knowledge base is structured by grouping facts under the subject 'Facebook Marketplace'.
+- Notable entities, patterns, or decisions mentioned:
+    - Entity: Facebook Marketplace.
+    - Pattern: Selling old items with no fee.

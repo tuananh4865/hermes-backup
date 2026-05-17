@@ -1,0 +1,6 @@
+- Key points:
+    - The file size of the video is 1.2MB.
+- Structure / sections summary:
+    - Facts are grouped under the subject "File Size".
+- Notable entities, patterns, or decisions mentioned:
+    - Specific metric for the video's storage size (1.2MB).

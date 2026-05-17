@@ -1,0 +1,8 @@
+- Key points:
+    - The document consolidates facts related to Visual Effect.
+    - A specific visual filter is used for aesthetic purposes.
+    - Total 11 unique facts were extracted and organized.
+- Structure / sections summary:
+    - The structure is dedicated to consolidating factual statements for 'Visual Effect'.
+- Notable entities, patterns, or decisions mentioned:
+    - A scanline effect is employed to achieve a modern look.

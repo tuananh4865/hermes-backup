@@ -1,0 +1,10 @@
+- Key points:
+    - The document consolidates facts related to Animation Detail.
+    - Specific visual effects are applied within the motion graphic.
+    - Total 11 unique facts were extracted and organized.
+- Structure / sections summary:
+    - The structure is dedicated to consolidating factual statements for 'Animation Detail'.
+- Notable entities, patterns, or decisions mentioned:
+    - Motion graphic features a top accent bar expanding from the left with a glow.
+    - The rank number utilizes a pulse effect.
+    - Stars float evenly around the content.

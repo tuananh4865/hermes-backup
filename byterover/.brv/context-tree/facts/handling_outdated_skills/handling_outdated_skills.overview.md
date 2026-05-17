@@ -1,0 +1,6 @@
+- Key points:
+    - Skills that are loaded but found to be wrong, missing steps, or outdated require immediate patching.
+- Structure / sections summary:
+    - Fact collection is organized by subject: Handling Outdated Skills.
+- Notable entities, patterns, or decisions mentioned:
+    - A strict policy of immediate patching is enforced for any identified outdated or incorrect skills.

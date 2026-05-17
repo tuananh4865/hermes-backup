@@ -1,0 +1,11 @@
+- Key points:
+    - The document contains curated facts specifically related to "Typing speed change".
+    - It holds 1 unique fact categorized under this subject.
+    - The data processing flow involves Extraction, Deduplication, and Grouping.
+- Structure / sections summary:
+    - Title: TYPING SPEED CHANGE
+    - Reason: Curated facts for Typing speed change
+    - Raw Concept: Details the task (Document extracted facts), changes (Extracted factual data), and flow (Extraction -> Deduplication -> Grouping).
+    - Narrative: Groups facts under the subject "Typing speed change".
+- Notable entities, patterns, or decisions mentioned:
+    - The primary pattern is the curation of factual data through a defined extraction and grouping process.

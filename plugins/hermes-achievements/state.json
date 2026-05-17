@@ -119,6 +119,11 @@
       "first_tier": "Copper",
       "unlocked_at": 1778818771
     },
+    "port_3000_taken": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1779029028
+    },
     "provider_polyglot": {
       "evidence": null,
       "first_tier": "Silver",

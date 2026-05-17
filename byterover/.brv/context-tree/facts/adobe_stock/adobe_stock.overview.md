@@ -1,0 +1,3 @@
+- Key Points: Adobe Stock pays a royalty of 33% on sold photos.
+- Structure Summary: The knowledge base is structured by subject, specifically focusing on Adobe Stock facts.
+- Notable Entities: Adobe Stock; Royalty rate (33%).

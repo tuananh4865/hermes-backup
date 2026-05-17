@@ -1,0 +1,6 @@
+- Key points:
+    - Workflow corrections must be encoded either as a pitfall or an explicit step within the governing skill.
+- Structure / sections summary:
+    - Fact collection is organized by subject: Handling Workflow Corrections.
+- Notable entities, patterns, or decisions mentioned:
+    - Workflow corrections are treated as mandatory elements (pitfalls or steps) to ensure process accuracy.

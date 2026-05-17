@@ -3,44 +3,72 @@
     {
       "order": 3,
       "path": "_index.md",
-      "tokens": 700,
+      "tokens": 805,
+      "type": "summary"
+    },
+    {
+      "order": 2,
+      "path": "curation/_index.md",
+      "tokens": 194,
       "type": "summary"
     },
     {
       "order": 2,
       "path": "facts/_index.md",
-      "tokens": 712,
+      "tokens": 979,
       "type": "summary"
     },
     {
-      "order": 2,
-      "path": "skill_library/_index.md",
-      "tokens": 277,
-      "type": "summary"
+      "importance": 50,
+      "path": "curation/consistent-rlm-curation-workflow.md",
+      "tokens": 276,
+      "type": "context"
     },
     {
-      "order": 2,
-      "path": "unknown_domain/_index.md",
-      "tokens": 130,
-      "type": "summary"
+      "abstractPath": "facts/adobe_stock/adobe_stock.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/adobe_stock/adobe_stock.md",
+      "tokens": 0,
+      "type": "context"
     },
     {
-      "order": 1,
-      "path": "facts/auto_sync/_index.md",
-      "tokens": 86,
-      "type": "summary"
+      "abstractPath": "facts/alamy/alamy.abstract.md",
+      "abstractTokens": 18,
+      "importance": 50,
+      "path": "facts/alamy/alamy.md",
+      "tokens": 18,
+      "type": "context"
     },
     {
-      "order": 1,
-      "path": "facts/byterover_checkpoint_py/_index.md",
-      "tokens": 65,
-      "type": "summary"
+      "abstractPath": "facts/animation_detail/animation_detail.abstract.md",
+      "abstractTokens": 36,
+      "importance": 50,
+      "path": "facts/animation_detail/animation_detail.md",
+      "tokens": 36,
+      "type": "context"
     },
     {
       "abstractPath": "facts/auto_sync/auto_sync.abstract.md",
       "abstractTokens": 0,
       "importance": 50,
       "path": "facts/auto_sync/auto_sync.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/baoyu_infographic_skill_update/baoyu_infographic_skill_update.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/baoyu_infographic_skill_update/baoyu_infographic_skill_update.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/baoyu_infographic_workflow_details/baoyu_infographic_workflow_details.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/baoyu_infographic_workflow_details/baoyu_infographic_workflow_details.md",
       "tokens": 0,
       "type": "context"
     },
@@ -77,11 +105,75 @@
       "type": "context"
     },
     {
+      "abstractPath": "facts/closing_sequence/closing_sequence.abstract.md",
+      "abstractTokens": 31,
+      "importance": 50,
+      "path": "facts/closing_sequence/closing_sequence.md",
+      "tokens": 31,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/doordash/doordash.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/doordash/doordash.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/duration/duration.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/duration/duration.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/emergent_techniques/emergent_techniques.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/emergent_techniques/emergent_techniques.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/facebook_marketplace/facebook_marketplace.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/facebook_marketplace/facebook_marketplace.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
       "abstractPath": "facts/fallback_mechanism/fallback_mechanism.abstract.md",
       "abstractTokens": 25,
       "importance": 50,
       "path": "facts/fallback_mechanism/fallback_mechanism.md",
       "tokens": 25,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/file_size/file_size.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/file_size/file_size.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/handling_outdated_skills/handling_outdated_skills.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/handling_outdated_skills/handling_outdated_skills.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/handling_workflow_corrections/handling_workflow_corrections.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/handling_workflow_corrections/handling_workflow_corrections.md",
+      "tokens": 0,
       "type": "context"
     },
     {
@@ -93,6 +185,62 @@
       "type": "context"
     },
     {
+      "abstractPath": "facts/iconography/iconography.abstract.md",
+      "abstractTokens": 22,
+      "importance": 50,
+      "path": "facts/iconography/iconography.md",
+      "tokens": 22,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/key_features_end_position/key_features_end_position.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/key_features_end_position/key_features_end_position.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/manim_video_skill_update/manim_video_skill_update.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/manim_video_skill_update/manim_video_skill_update.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/memory_management/memory_management.abstract.md",
+      "abstractTokens": 26,
+      "importance": 50,
+      "path": "facts/memory_management/memory_management.md",
+      "tokens": 26,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/memory_saving_status/memory_saving_status.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/memory_saving_status/memory_saving_status.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/reading_pause/reading_pause.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/reading_pause/reading_pause.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/repo_slides_animations/repo_slides_animations.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/repo_slides_animations/repo_slides_animations.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
       "abstractPath": "facts/reviewed_skills/reviewed_skills.abstract.md",
       "abstractTokens": 22,
       "importance": 50,
@@ -101,11 +249,51 @@
       "type": "context"
     },
     {
+      "abstractPath": "facts/rover/rover.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/rover/rover.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/shutterstock/shutterstock.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/shutterstock/shutterstock.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/skill_library_design/skill_library_design.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/skill_library_design/skill_library_design.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
       "abstractPath": "facts/skill_library_format/skill_library_format.abstract.md",
       "abstractTokens": 42,
       "importance": 50,
       "path": "facts/skill_library_format/skill_library_format.md",
       "tokens": 42,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/skill_scope_definition/skill_scope_definition.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/skill_scope_definition/skill_scope_definition.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/skill_update_preference_order/skill_update_preference_order.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/skill_update_preference_order/skill_update_preference_order.md",
+      "tokens": 0,
       "type": "context"
     },
     {
@@ -125,10 +313,90 @@
       "type": "context"
     },
     {
+      "abstractPath": "facts/taskrabbit/taskrabbit.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/taskrabbit/taskrabbit.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/technical_specs/technical_specs.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/technical_specs/technical_specs.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/text_display/text_display.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/text_display/text_display.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/title_animation/title_animation.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/title_animation/title_animation.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/tool_usage_policy/tool_usage_policy.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/tool_usage_policy/tool_usage_policy.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/trymata/trymata.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/trymata/trymata.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/typing_duration/typing_duration.abstract.md",
+      "abstractTokens": 19,
+      "importance": 50,
+      "path": "facts/typing_duration/typing_duration.md",
+      "tokens": 19,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/typing_speed_change/typing_speed_change.abstract.md",
+      "abstractTokens": 21,
+      "importance": 50,
+      "path": "facts/typing_speed_change/typing_speed_change.md",
+      "tokens": 21,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/user_expectations/user_expectations.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/user_expectations/user_expectations.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
       "abstractPath": "facts/user_feedback_signals/user_feedback_signals.abstract.md",
       "abstractTokens": 0,
       "importance": 50,
       "path": "facts/user_feedback_signals/user_feedback_signals.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/user_information/user_information.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/user_information/user_information.md",
       "tokens": 0,
       "type": "context"
     },
@@ -141,10 +409,66 @@
       "type": "context"
     },
     {
+      "abstractPath": "facts/userlytics/userlytics.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/userlytics/userlytics.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/usertesting/usertesting.abstract.md",
+      "abstractTokens": 17,
+      "importance": 50,
+      "path": "facts/usertesting/usertesting.md",
+      "tokens": 17,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/video_file/video_file.abstract.md",
+      "abstractTokens": 21,
+      "importance": 50,
+      "path": "facts/video_file/video_file.md",
+      "tokens": 21,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/video_length_and_structure/video_length_and_structure.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/video_length_and_structure/video_length_and_structure.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/visual_effect/visual_effect.abstract.md",
+      "abstractTokens": 25,
+      "importance": 50,
+      "path": "facts/visual_effect/visual_effect.md",
+      "tokens": 25,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/why_it_s_trending_position/why_it_s_trending_position.abstract.md",
+      "abstractTokens": 24,
+      "importance": 50,
+      "path": "facts/why_it_s_trending_position/why_it_s_trending_position.md",
+      "tokens": 24,
+      "type": "context"
+    },
+    {
       "abstractPath": "facts/worker_status_issue/worker_status_issue.abstract.md",
       "abstractTokens": 0,
       "importance": 50,
       "path": "facts/worker_status_issue/worker_status_issue.md",
+      "tokens": 0,
+      "type": "context"
+    },
+    {
+      "abstractPath": "facts/zoom_effect/zoom_effect.abstract.md",
+      "abstractTokens": 0,
+      "importance": 50,
+      "path": "facts/zoom_effect/zoom_effect.md",
       "tokens": 0,
       "type": "context"
     },
@@ -164,6 +488,12 @@
     },
     {
       "importance": 50,
+      "path": "skill_library/user-feedback-driven-skill-library-evolution.md",
+      "tokens": 261,
+      "type": "context"
+    },
+    {
+      "importance": 50,
       "path": "unknown_domain/unknown_topic/context.md",
       "tokens": 32,
       "type": "context"
@@ -175,15 +505,23 @@
       "path": "unknown_domain/unknown_topic/curated_content_from_rlm_context.md",
       "tokens": 42,
       "type": "context"
+    },
+    {
+      "abstractPath": "unknown_domain/unknown_topic/curated_content_from_rlm_extraction.abstract.md",
+      "abstractTokens": 47,
+      "importance": 50,
+      "path": "unknown_domain/unknown_topic/curated_content_from_rlm_extraction.md",
+      "tokens": 47,
+      "type": "context"
     }
   ],
-  "generated_at": "2026-05-16T14:01:18.331Z",
+  "generated_at": "2026-05-17T14:30:06.735Z",
   "lane_tokens": {
-    "contexts": 523,
+    "contexts": 1367,
     "stubs": 0,
-    "summaries": 1970
+    "summaries": 1978
   },
-  "source_fingerprint": "5c166b90f1ca10d4e34e3f7c5ef309d0b673854842c22a6b049452178dcf3139",
-  "total_tokens": 2493,
+  "source_fingerprint": "508e1767761d923bbb0df57e8efddc5e2236060ad45da9ba6c9db28c7ab94e27",
+  "total_tokens": 3345,
   "version": 1
 }

@@ -1,27 +1,34 @@
 ---
-children_hash: 21cd126fbe7b3e1ad1f2c10de50a8fa3f2685c2a166dce2dde0f8051c1c2986c
-compression_ratio: 0.4410828025477707
+children_hash: ac45d499ef7dc245d413099d6886aa9ad02bfe32d0c0d7836e77f6cb3e0a18f7
+compression_ratio: 0.4026996625421822
 condensation_order: 2
-covers: [formalized-skill-library-update-workflow.md, update_strategy/_index.md]
-covers_token_total: 628
+covers: [formalized-skill-library-update-workflow.md, update_strategy/_index.md, user-feedback-driven-skill-library-evolution.md]
+covers_token_total: 889
 summary_level: d2
-token_count: 277
+token_count: 358
 type: summary
 ---
-# Skill Library Update Strategy Overview
+## Skill Library Update Workflow Overview
 
-This strategy governs the evolution of the skill library by formalizing a prioritized execution sequence based on user feedback signals. The underlying curation process follows an Extraction $\rightarrow$ Deduplication $\rightarrow$ Grouping $\rightarrow$ Curation flow.
+The evolution of the skill library is governed by a strict, prioritized execution sequence driven by user feedback signals.
 
-## Core Changes
-The library structure has been updated to utilize CLASS-LEVEL skills, relying on rich `SKILL.md` files and references instead of narrow entries. Clear signals are defined for updates, including style/tone corrections, workflow changes, new techniques, and outdated skills.
+### Core Workflow
+The overall process follows a three-step workflow defined in `formalized-skill_library_update_workflow.md`:
+1. User Feedback
+2. Signal Identification
+3. Preference Order Execution (Update/Patch/Add)
 
-## Update Workflow
-The process strictly follows the sequence: User Feedback $\rightarrow$ Signal Identification $\rightarrow$ Preference Order Execution (Update/Patch/Add).
+This sequence is also confirmed by `user-feedback-driven-skill_library_evolution.md`, establishing user interaction data as the primary driver for skill refinement. The underlying curation process involves Extraction $\rightarrow$ Deduplication $\rightarrow$ Grouping $\rightarrow$ Curation.
 
-## Update Preference Order
-Updates are executed in a strict priority order:
+### Update Strategy
+The strategy outlined in `update_strategy/_index.md` focuses on supporting active learning through class-level skills and explicit signal capture. Key changes include:
+*   **Structure:** Restructuring the library to use CLASS-LEVEL skills, leveraging rich `SKILL.md` files and references instead of narrow entries.
+*   **Signal Definition:** Defining clear signals for updates, covering style/tone corrections, workflow changes, new techniques, and outdated skills.
+
+### Preference Order Execution
+The execution preference order dictates the sequence of updates:
 1. Update loaded skill
 2. Update umbrella skill
 3. Add support file
 
-This strategy requires tracking user feedback signals across multiple sessions to inform the updates. For detailed workflow steps, refer to `formalized-skill-library-update-workflow.md`.
+This strategy requires tracking user feedback across multiple sessions to inform all update sequences.

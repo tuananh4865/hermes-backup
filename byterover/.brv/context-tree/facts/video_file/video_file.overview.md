@@ -1,0 +1,9 @@
+- Key points:
+    - The document consolidates facts for the 'Video File'.
+    - A specific video file path is recorded.
+    - The consolidation process follows a flow: Extraction -> Grouping -> Deduplication -> Curation.
+- Structure / sections summary:
+    - Consolidated facts for the subject 'Video File'.
+    - Highlights 11 unique facts extracted and organized.
+- Notable entities, patterns, or decisions mentioned:
+    - Video file path: MEDIA:/tmp/github-top5/github_trending_v3.mp4

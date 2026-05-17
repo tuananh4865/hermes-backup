@@ -1,0 +1,1 @@
+Animation detail facts describe motion graphic elements, including an expanding glowing accent bar, a pulsing rank number, and floating stars.

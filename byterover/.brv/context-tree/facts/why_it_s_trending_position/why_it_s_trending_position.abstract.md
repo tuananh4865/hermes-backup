@@ -1,0 +1,1 @@
+This knowledge base entry contains curated facts explaining why a specific position is trending.

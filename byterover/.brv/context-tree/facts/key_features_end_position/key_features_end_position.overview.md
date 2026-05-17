@@ -1,0 +1,11 @@
+- Key points:
+    - The document contains curated facts related to "KEY FEATURES end position".
+    - It holds 1 unique fact categorized under this subject.
+    - The data processing flow involves Extraction, Deduplication, and Grouping.
+- Structure / sections summary:
+    - Title: KEY FEATURES END POSITION
+    - Reason: Curated facts for KEY FEATURES end position
+    - Raw Concept: Details the task (Document extracted facts), changes (Extracted factual data), and flow (Extraction -> Deduplication -> Grouping).
+    - Narrative: Groups facts under the subject "KEY FEATURES end position".
+- Notable entities, patterns, or decisions mentioned:
+    - The primary pattern is the curation of factual data through a defined extraction and grouping process.

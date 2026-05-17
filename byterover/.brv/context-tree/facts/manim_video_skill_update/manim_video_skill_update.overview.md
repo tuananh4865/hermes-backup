@@ -1,0 +1,8 @@
+- Key points:
+    - The `manim-video` skill was updated to include a fallback mechanism for macOS when C extension compilation fails.
+    - This fallback utilizes PIL+ffmpeg for handling installation failures.
+    - A specific macOS font, `/System/Library/Fonts/Menlo.ttc`, was added as the working font.
+- Structure / sections summary:
+    - Focuses on factual statements related to the update of the `manim-video` skill.
+- Notable entities, patterns, or decisions:
+    - Technical decision: Implementation of a fallback mechanism (PIL+ffmpeg) for cross-platform compatibility (macOS installation issues).

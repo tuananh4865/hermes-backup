@@ -10792,6 +10792,20 @@ class AIAgent:
                     reset=False,
                     reason="compression",
                 )
+                # After session switch, trigger post-compress recovery.
+                # This reads the pre-compact checkpoint and injects task state
+                # into the new session's memory cache so prefetch() can recover it.
+                _post_ctx = self._memory_manager.on_post_compress(
+                    _old_sid, compressed,
+                )
+                if _post_ctx:
+                    # Prepend recovery context to the compressed messages so it's
+                    # in the model's context for the next turn.  This ensures
+                    # on_pre_compress state is not lost after compression.
+                    compressed.insert(0, {
+                        "role": "system",
+                        "content": f"[CONTEXT RECOVERY]\n{_post_ctx}",
+                    })
         except Exception as _me_err:
             logger.debug("memory manager on_session_switch (compression): %s", _me_err)
 

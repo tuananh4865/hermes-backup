@@ -1,0 +1,347 @@
+{
+  "timestamp": "2026-05-18T01:59:50.819347",
+  "total_files": 3720,
+  "total_issues": 1049,
+  "results": {
+    "missing_frontmatter": {
+      "missing": null,
+      "count": 0,
+      "broken": null,
+      "stale": null,
+      "orphans": null,
+      "self_refs": null,
+      "inconsistencies": null,
+      "duplicates": null
+    },
+    "stale_pages": {
+      "stale": null,
+      "count": 0,
+      "broken": null,
+      "orphans": null,
+      "self_refs": null,
+      "inconsistencies": null,
+      "duplicates": null,
+      "missing": null
+    },
+    "broken_links": {
+      "broken": null,
+      "count": 742,
+      "stale": null,
+      "orphans": null,
+      "self_refs": null,
+      "inconsistencies": null,
+      "duplicates": null,
+      "missing": null
+    },
+    "orphan_pages": {
+      "orphans": null,
+      "count": 218,
+      "broken": null,
+      "stale": null,
+      "self_refs": null,
+      "inconsistencies": null,
+      "duplicates": null,
+      "missing": null
+    },
+    "duplicate_titles": {
+      "duplicates": {
+        "script viral — combo 200 cái khẩu trang 5d thịnh phát": [
+          "learning/san-pham-khau-trang-5d-thinh-phat-HOOK6-9.md",
+          "learning/san-pham-khau-trang-5d-thinh-phat-200-cai-GENZ.md"
+        ],
+        "7629733084010695956": [
+          "learning/tiktok-viral-script/transcripts/2026-04-21/trinhmeow/7629733084010695956.md",
+          "learning/tiktok-viral-script/transcripts/2026-04-19/trinhmeow/7629733084010695956.md"
+        ],
+        "7628586917017324820": [
+          "learning/tiktok-viral-script/transcripts/2026-04-17/trinhmeow/7628586917017324820.md",
+          "learning/tiktok-viral-script/transcripts/2026-04-20/trinhmeow/7628586917017324820.md"
+        ],
+        "phân tích: kem body chống nắng mizumi — trinh meow": [
+          "learning/tiktok-viral-script/analysis/2026-04-17/trinhmeow/7628586917017324820-analysis.md",
+          "learning/tiktok-viral-script/analysis/2026-04-20/trinhmeow/7628586917017324820-analysis.md"
+        ],
+        "phân tích: top sản phẩm xứng đáng viral — trinh meow": [
+          "learning/tiktok-viral-script/analysis/2026-04-16/trinhmeow/7624764613246160149-analysis.md",
+          "learning/tiktok-viral-script/analysis/2026-04-18/trinhmeow/7624764613246160149-analysis.md"
+        ],
+        "wiki quality campaign": [
+          "projects/wiki-quality-campaign/hub.md",
+          "concepts/wiki-quality-campaign.md"
+        ],
+        "tiktok content strategy": [
+          "projects/tiktok-content-strategy/hub.md",
+          "concepts/tiktok-content-strategy.md"
+        ],
+        "nexus — obsidian competitor": [
+          "projects/nexus/index.md",
+          "projects/nexus/hub.md"
+        ],
+        "my wiki redesign plan": [
+          "projects/my-wiki-redesign/plan.md",
+          "concepts/projects/my-wiki-redesign/plan.md"
+        ],
+        "hermes dojo": [
+          "projects/hermes-dojo/README.md",
+          "projects/hermes-dojo/hub.md"
+        ],
+        "surgical change protocol": [
+          "projects/hermes-dojo/skills/behavior/surgical-change-protocol/SKILL.md",
+          "concepts/surgical-change-protocol.md"
+        ],
+        "memory manage": [
+          "projects/hermes-dojo/skills/memory/memory-manage/SKILL.md",
+          "concepts/memory-manage.md"
+        ],
+        "update project state": [
+          "projects/hermes-dojo/skills/memory/update-project-state/SKILL.md",
+          "concepts/update-project-state.md"
+        ],
+        "mistake logging": [
+          "projects/hermes-dojo/skills/memory/mistake-logging/SKILL.md",
+          "concepts/mistake-logging.md"
+        ],
+        "contradiction resolution": [
+          "projects/hermes-dojo/skills/quality/contradiction-resolution/SKILL.md",
+          "concepts/contradiction-resolution.md"
+        ],
+        "wiki quality score": [
+          "projects/hermes-dojo/skills/quality/wiki-quality-score/SKILL.md",
+          "concepts/wiki-quality-score.md"
+        ],
+        "periodic nudge": [
+          "projects/hermes-dojo/skills/lifecycle/periodic-nudge/SKILL.md",
+          "concepts/periodic-nudge.md"
+        ],
+        "graph query": [
+          "projects/hermes-dojo/skills/lifecycle/graph-query/SKILL.md",
+          "concepts/graph-query.md"
+        ],
+        "skill from experience": [
+          "projects/hermes-dojo/skills/lifecycle/skill-from-experience/SKILL.md",
+          "concepts/skill-from-experience.md"
+        ],
+        "crystallization": [
+          "projects/hermes-dojo/skills/lifecycle/crystallization/SKILL.md",
+          "concepts/crystallization.md"
+        ],
+        "entity extraction": [
+          "projects/hermes-dojo/skills/lifecycle/entity-extraction/SKILL.md",
+          "concepts/entity-extraction.md"
+        ],
+        "weekly review": [
+          "projects/hermes-dojo/skills/proactive/weekly-review/SKILL.md",
+          "concepts/weekly-review.md"
+        ],
+        "pattern discovery": [
+          "projects/hermes-dojo/skills/proactive/pattern-discovery/SKILL.md",
+          "concepts/pattern-discovery.md"
+        ],
+        "stale detection": [
+          "projects/hermes-dojo/skills/proactive/stale-detection/SKILL.md",
+          "concepts/stale-detection.md"
+        ],
+        "daily review": [
+          "projects/hermes-dojo/skills/proactive/daily-review/SKILL.md",
+          "concepts/daily-review.md"
+        ],
+        "implement command": [
+          "projects/hermes-dojo/skills/process/implement-command/SKILL.md",
+          "concepts/implement-command.md"
+        ],
+        "plan command": [
+          "projects/hermes-dojo/skills/process/plan-command/SKILL.md",
+          "concepts/plan-command.md"
+        ],
+        "cascade prevention": [
+          "projects/hermes-dojo/skills/process/cascade-prevention/SKILL.md",
+          "concepts/cascade-prevention.md"
+        ],
+        "research command": [
+          "projects/hermes-dojo/skills/process/research-command/SKILL.md",
+          "concepts/research-command.md"
+        ],
+        "wiki quality improvement": [
+          "projects/wiki-quality-improvement/hub.md",
+          "concepts/wiki-quality-improvement.md"
+        ],
+        "wiki self-maintaining system": [
+          "projects/wiki-self-maintaining/hub.md",
+          "concepts/Wiki Self-Maintaining System.md"
+        ],
+        "chatgpt": [
+          "concepts/chatgpt.md",
+          "entities/chatgpt.md"
+        ],
+        "llm agents": [
+          "concepts/llm-agents.md",
+          "concepts/llm-agents,-agents,-llm.md"
+        ],
+        "hugging face": [
+          "concepts/huggingface.md",
+          "concepts/hugging-face.md"
+        ],
+        "ai agent trends — 2026-04-15": [
+          "concepts/ai-agent-trends-2026-04-15.md",
+          "concepts/ai-agent-trends-2026-april-15.md"
+        ],
+        "transformer architecture": [
+          "concepts/transformer.md",
+          "concepts/transformer-architecture.md"
+        ],
+        "async i/o": [
+          "concepts/async-io.md",
+          "concepts/async-i-o.md"
+        ],
+        "ai agent trends — april 2026": [
+          "concepts/ai-agent-trends-2026-april-17-v2.md",
+          "concepts/ai-agent-trends-april-2026.md",
+          "concepts/ai-agent-trends-2026-april-21.md",
+          "concepts/ai-agent-trends-2026-april-16.md",
+          "concepts/ai-agent-trends-2026-april-17.md"
+        ],
+        "ai agent trends 2026-04-20": [
+          "concepts/ai-agent-trends-2026-april-20.md",
+          "concepts/ai-agent-trends-2026-04-20.md"
+        ],
+        "openapi specification": [
+          "concepts/openapi-specification.md",
+          "concepts/openapi.md"
+        ],
+        "hermes dojo agentic system": [
+          "concepts/Hermes Dojo Agentic System.md",
+          "concepts/Hermes Dojo Agentic System_1.md"
+        ],
+        "anthropic": [
+          "concepts/anthropic.md",
+          "entities/anthropic.md"
+        ],
+        "tailwind css": [
+          "concepts/tailwindcss.md",
+          "concepts/tailwind-css.md"
+        ],
+        "assembly language": [
+          "concepts/assembly.md",
+          "concepts/assembly-language.md"
+        ],
+        "hermes agent self-evolution": [
+          "concepts/hermes-agent-self-evolution.md",
+          "entities/hermes-agent-self-evolution.md"
+        ],
+        "llama.cpp": [
+          "concepts/llama.cpp.md",
+          "concepts/llama-cpp.md"
+        ],
+        "agentic ai agent — báo cáo nghiên cứu 2025-2026": [
+          "concepts/agentic-ai-agent-2026.md",
+          "concepts/agentic-ai-2025-2026.md"
+        ],
+        "rubber duck debugging": [
+          "concepts/rubber-duck-debugging,-debugging,-problem-solving.md",
+          "concepts/rubber-duck-debugging.md"
+        ],
+        "vue.js": [
+          "concepts/vue.md",
+          "concepts/vue.js.md"
+        ],
+        "next.js": [
+          "concepts/next.js.md",
+          "concepts/nextjs.md"
+        ],
+        "oauth 2.0": [
+          "concepts/OAuth-2.0.md",
+          "concepts/oauth.md"
+        ],
+        "worker_threads": [
+          "concepts/worker-threads.md",
+          "concepts/worker_threads.md"
+        ],
+        "rowboat": [
+          "concepts/rowboat.md",
+          "concepts/_drafts/rowboat.md"
+        ],
+        "vector databases": [
+          "concepts/vector-db.md",
+          "concepts/vector-databases.md"
+        ],
+        "ai safety": [
+          "concepts/safety.md",
+          "concepts/ai-safety.md"
+        ],
+        "ai agent trends — spring 2026": [
+          "concepts/ai-agent-trends-spring-2026.md",
+          "concepts/ai-agent-trends-2026-spring.md"
+        ],
+        "mcp — model context protocol": [
+          "concepts/mcp-model-context-protocol.md",
+          "concepts/mcp-(model-context-protocol).md"
+        ],
+        "self-improving ai agents": [
+          "concepts/self-improving-ai-agents.md",
+          "concepts/self-improving-agents.md"
+        ],
+        "reinforcement learning from human feedback": [
+          "concepts/Reinforcement-Learning-from-Human-Feedback.md",
+          "concepts/rlhf.md"
+        ],
+        "constitutional ai": [
+          "concepts/Constitutional-AI.md",
+          "concepts/constitutional-ai,-ai-safety,-alignment.md"
+        ],
+        "a/b testing": [
+          "concepts/a-b-testing.md",
+          "concepts/ab-testing.md"
+        ],
+        "tree of thoughts (tot)": [
+          "concepts/Tree-of-Thoughts.md",
+          "concepts/tree-of-thoughts,-reasoning,-prompting.md"
+        ],
+        "hermes agent self-evolution integration and dojo system": [
+          "concepts/Hermes Agent Self-Evolution and Dojo System.md",
+          "concepts/Hermes Agent Self-Evolution Integration and Dojo System.md"
+        ],
+        "new relic": [
+          "concepts/new-relic.md",
+          "concepts/newrelic.md"
+        ],
+        "model context protocol (mcp)": [
+          "concepts/model-context-protocol-mcp.md",
+          "concepts/model-context-protocol.md"
+        ],
+        "large language model": [
+          "concepts/llm.md",
+          "concepts/Large-Language-Model.md"
+        ],
+        "vercel ai sdk": [
+          "concepts/vercel-ai-sdk.md",
+          "entities/vercel-ai.md"
+        ],
+        "rest api": [
+          "concepts/REST-API.md",
+          "concepts/rest.md"
+        ]
+      },
+      "count": 68
+    },
+    "self_refs": {
+      "self_refs": null,
+      "count": 20,
+      "broken": null,
+      "stale": null,
+      "orphans": null,
+      "inconsistencies": null,
+      "duplicates": null,
+      "missing": null
+    },
+    "date_inconsistencies": {
+      "inconsistencies": null,
+      "count": 1,
+      "broken": null,
+      "stale": null,
+      "orphans": null,
+      "self_refs": null,
+      "duplicates": null,
+      "missing": null
+    }
+  }
+}

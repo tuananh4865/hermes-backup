@@ -1,0 +1,1 @@
+The video file path is specified as MEDIA:/tmp/github-top5/github_trending_v3.mp4.

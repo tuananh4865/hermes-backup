@@ -1,0 +1,8 @@
+- Key points:
+    - TaskRabbit is a service platform for tasks.
+    - Potential earnings for task completion range from $30 to $100 per task.
+- Structure / sections summary:
+    - The knowledge base is structured by grouping facts under the subject 'TaskRabbit'.
+- Notable entities, patterns, or decisions mentioned:
+    - Entity: TaskRabbit.
+    - Pattern: Earnings potential ($30-$100/task).

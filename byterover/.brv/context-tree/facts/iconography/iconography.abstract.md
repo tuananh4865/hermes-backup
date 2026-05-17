@@ -1,0 +1,1 @@
+Iconography facts state that previous symbols have been replaced by 5-pointed gold stars.

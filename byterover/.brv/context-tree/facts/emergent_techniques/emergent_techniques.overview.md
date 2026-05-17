@@ -1,0 +1,6 @@
+- Key points:
+    - Emergent techniques include non-trivial techniques, fixes, workarounds, debugging paths, and tool-usage patterns.
+- Structure / sections summary:
+    - Fact collection is organized by subject: Emergent Techniques.
+- Notable entities, patterns, or decisions mentioned:
+    - The knowledge base must capture complex, non-standard solutions (workarounds, debugging paths) alongside standard techniques.

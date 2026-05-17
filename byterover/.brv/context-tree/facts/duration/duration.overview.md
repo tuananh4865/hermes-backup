@@ -1,0 +1,9 @@
+- Key points:
+    - The document consolidates facts related to the video duration.
+    - The total video duration is 38.5 seconds.
+    - The duration calculation is specified as 7 slides multiplied by 5.5 seconds each.
+- Structure / sections summary:
+    - Consolidated facts for the subject 'Duration'.
+    - Highlights 11 unique facts extracted and organized.
+- Notable entities, patterns, or decisions mentioned:
+    - Duration: 38.5 seconds (calculated from 7 slides × 5.5 seconds).

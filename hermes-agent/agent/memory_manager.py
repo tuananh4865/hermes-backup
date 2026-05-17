@@ -454,6 +454,29 @@ class MemoryManager:
                 )
         return "\n\n".join(parts)
 
+    def on_post_compress(
+        self, old_session_id: str, compressed_messages: List[Dict[str, Any]]
+    ) -> str:
+        """Notify all providers after context compression completes.
+
+        Returns combined recovery context from providers to inject into
+        the new session. Empty string if no provider contributes.
+        """
+        parts = []
+        for provider in self._providers:
+            try:
+                # Only call if the provider has on_post_compress implemented
+                if hasattr(provider, "on_post_compress"):
+                    result = provider.on_post_compress(old_session_id, compressed_messages)
+                    if result and result.strip():
+                        parts.append(result)
+            except Exception as e:
+                logger.debug(
+                    "Memory provider '%s' on_post_compress failed: %s",
+                    provider.name, e,
+                )
+        return "\n\n".join(parts)
+
     @staticmethod
     def _provider_memory_write_metadata_mode(provider: MemoryProvider) -> str:
         """Return how to pass metadata to a provider's memory-write hook."""

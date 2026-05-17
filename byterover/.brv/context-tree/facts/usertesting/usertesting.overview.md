@@ -1,0 +1,3 @@
+- Key Points: UserTesting offers payouts ranging from $10 to $60 per test.
+- Structure Summary: The knowledge base is structured by subject, specifically focusing on UserTesting facts.
+- Notable Entities: UserTesting; Payout range ($10-$60/test).

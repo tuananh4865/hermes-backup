@@ -1,0 +1,10 @@
+- Key points:
+    - The document consolidates facts regarding the technical specifications of the video.
+    - Technical specs include resolution and frame rate details.
+    - The consolidation process follows a flow: Extraction -> Grouping -> Deduplication -> Curation.
+- Structure / sections summary:
+    - Consolidated facts for the subject 'Technical Specs'.
+    - Highlights 11 unique facts extracted and organized.
+- Notable entities, patterns, or decisions mentioned:
+    - Resolution: 1920×1080
+    - Frame Rate: 30fps

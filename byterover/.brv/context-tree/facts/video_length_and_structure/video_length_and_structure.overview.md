@@ -1,0 +1,8 @@
+- Key points:
+    - The total video duration is 28 seconds.
+    - The video consists of 7 slides.
+    - Each slide has a duration of 4 seconds.
+- Structure / sections summary:
+    - Facts are grouped under the subject "Video Length and Structure".
+- Notable entities, patterns, or decisions mentioned:
+    - Specific timing metrics defining the video composition (28s total, 7 slides @ 4s each).

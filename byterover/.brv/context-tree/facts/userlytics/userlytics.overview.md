@@ -1,0 +1,3 @@
+- Key Points: Userlytics offers payouts ranging from $5 to $90 per test.
+- Structure Summary: The knowledge base is structured by subject, specifically focusing on Userlytics facts.
+- Notable Entities: Userlytics; Payout range ($5-$90/test).

@@ -1,0 +1,7 @@
+- Key points:
+    - User Expectations focus on how the user wants the AI to operate.
+    - This includes expectations regarding behavior, work style, and operational methods.
+- Structure / sections summary:
+    - The document outlines criteria for identifying user expectations.
+- Notable entities, patterns, or decisions mentioned:
+    - Focus areas: Behavioral expectations, work style, and desired operational methods.

@@ -1,0 +1,7 @@
+- Key points:
+    - Title animations include several visual effects.
+    - Specific effects mentioned are a Fire emoji scale up, title slide in from the left, subtitle fade in, and stars floating up.
+- Structure / sections summary:
+    - Facts are grouped under the subject "Title Animation".
+- Notable entities, patterns, or decisions mentioned:
+    - A set of distinct visual elements used for title animations (e.g., emojis, slide transitions, fading effects).

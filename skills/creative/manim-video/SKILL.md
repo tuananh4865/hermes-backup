@@ -31,6 +31,29 @@ This is educational cinema. Every frame teaches. Every animation reveals structu
 
 Run `scripts/setup.sh` to verify all dependencies. Requires: Python 3.10+, Manim Community Edition v0.20+ (`pip install manim`), LaTeX (`texlive-full` on Linux, `mactex` on macOS), and ffmpeg. Reference docs tested against Manim CE v0.20.1.
 
+### Fallback: PIL + ffmpeg (macOS / no-manim)
+
+If manim installation fails (C extension compilation errors, missing LaTeX), use the **PIL frames + ffmpeg** pipeline instead. This is reliable on macOS with system fonts:
+
+```bash
+# Generate 1920×1080 frames with PIL
+python3 -c "
+from PIL import Image, ImageDraw, ImageFont
+FONT = '/System/Library/Fonts/Menlo.ttc'
+f = ImageFont.truetype(FONT, 72)
+img = Image.new('RGB', (1920, 1080), '#0d1117')
+draw = ImageDraw.Draw(img)
+draw.text((100, 100), 'HELLO', fill='white', font=f)
+img.save('frames/frame_0001.png')
+"
+
+# Stitch to video
+ffmpeg -y -framerate 30 -i frames/frame_%04d.png \
+  -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p output.mp4
+```
+
+**Key font on macOS:** `/System/Library/Fonts/Menlo.ttc` — avoid `/System/Library/Fonts/Monaco.dfont` which may fail to load on some setups.
+
 ## Modes
 
 | Mode | Input | Output | Reference |
@@ -66,6 +89,213 @@ PLAN --> CODE --> RENDER --> STITCH --> AUDIO (optional) --> REVIEW
 4. **STITCH** — ffmpeg concat of scene clips into `final.mp4`
 5. **AUDIO** (optional) — Add voiceover and/or background music via ffmpeg. See `references/rendering.md`
 6. **REVIEW** — Render preview stills, verify against plan, adjust
+
+### Glow Star with Multi-Layer Glow
+
+```python
+def draw_star(draw, cx, cy, r, color, glow_alpha=0):
+    """Draw a 5-pointed star with optional glow layers"""
+    points = []
+    for i in range(10):
+        angle = math.pi * i / 5 - math.pi / 2
+        radius = r if i % 2 == 0 else r * 0.4
+        x = cx + radius * math.cos(angle)
+        y = cy + radius * math.sin(angle)
+        points.append((x, y))
+    # Glow layers (soft outer glow)
+    if glow_alpha > 0:
+        for layer in range(3, 0, -1):
+            expand = layer * 2
+            glow_points = []
+            for i in range(10):
+                angle = math.pi * i / 5 - math.pi / 2
+                radius = r * (1 + expand * 0.3) if i % 2 == 0 else r * 0.4 * (1 + expand * 0.3)
+                x = cx + radius * math.cos(angle)
+                y = cy + radius * math.sin(angle)
+                glow_points.append((x, y))
+            alpha = int(glow_alpha * 40 / layer)
+            if alpha > 0:
+                draw.polygon(glow_points, fill=(255, 215, 0, alpha))
+    draw.polygon(points, fill=color)
+```
+
+### Star Motion Trail (Vệt Mờ)
+
+```python
+def draw_star_trail(draw, cx, cy, r, color, vy, progress, intensity=1.0):
+    """Draw star with motion trail (vệt mờ nhẹ nhàng)"""
+    trail_count = 4
+    for t in range(trail_count, 0, -1):
+        trail_y = cy - vy * t * 3
+        trail_alpha = intensity * (t / trail_count) * 0.4
+        trail_r = r * (0.5 + 0.5 * t / trail_count)
+        for layer in range(2, 0, -1):
+            expand = layer
+            glow_r = trail_r * (1 + expand * 0.5)
+            glow_points = []
+            for i in range(10):
+                angle = math.pi * i / 5 - math.pi / 2
+                radius = glow_r if i % 2 == 0 else glow_r * 0.4
+                x = cx + radius * math.cos(angle)
+                y = trail_y + radius * math.sin(angle)
+                glow_points.append((x, y))
+            alpha = int(trail_alpha * 30 / layer)
+            if alpha > 0:
+                draw.polygon(glow_points, fill=(255, 215, 0, alpha))
+        draw_star(draw, cx, trail_y, trail_r, color, glow_alpha=trail_alpha * 0.5)
+    draw_star(draw, cx, cy, r, color, glow_alpha=int(intensity * 0.8))
+```
+
+### Centered Text Helper
+
+```python
+def center_text(draw, text, font, y, color):
+    """Draw text centered horizontally"""
+    bbox = draw.textbbox((0, 0), text, font=font)
+    tw = bbox[2] - bbox[0]
+    x = (W - tw) // 2
+    draw.text((x, y), text, fill=color, font=font)
+    return x, bbox[3] - bbox[1]
+```
+
+### Layout Overlap Prevention (Dynamic Y Calculation)
+
+```python
+# Features section - calculate spacing dynamically based on item count
+num_features = len(repo_data["features"])
+feat_spacing = min(38, 600 // num_features)  # auto-fit based on count
+feat_end_y = 360 + num_features * feat_spacing
+
+# Secondary section (WHY IT'S TRENDING) must start AFTER features block
+why_y = feat_end_y + 20  # 20px buffer
+draw.text((80, why_y), "📈 WHY IT'S TRENDING", fill=GOLD, font=f_small)
+for i, info in enumerate(repo_data["more_info"]):
+    typing_text(f"• {info}", 100, why_y + 33 + i * 32, f_small, TEXT_COLOR, ...)
+```
+
+### Winner Prominence (Crown + Extra Glow)
+
+```python
+is_winner = repo_data.get("rank") == "#1"
+
+if is_winner:
+    # Extra glow layers
+    for glow_i in range(5, 0, -1):
+        draw.text((75 - glow_i, 50), repo_data["rank"], fill=c_hex + "40", font=f_rank_p)
+    draw_glow(draw, 75, 50, repo_data["rank"], f_rank_p, c_hex, 4)
+    draw.text((80, 55), repo_data["rank"], fill=c_hex, font=f_rank_p)
+
+    # Crown emoji
+    f_crown = load_font(50)
+    draw.text((175, 55), "👑", fill=GOLD, font=f_crown)
+
+    # Larger name font
+    name_size = 52 if is_winner else 44
+```
+
+### RGBA with Alpha for Glow Effects
+
+When using RGBA for transparency, convert to RGB for saving:
+
+```python
+img = Image.new('RGBA', (W, H), (13, 17, 23, 255))  # BG color with full alpha
+# ... draw with alpha values ...
+rgb_img = Image.new('RGB', (W, H), BG_HEX)
+rgb_img.paste(img, mask=img.split()[3])
+return rgb_img
+```
+
+### Scanline Overlay (Subtle CRT Effect)
+
+```python
+for y in range(0, H, 5):
+    draw.line([(0, y), (W, y)], fill=(0, 0, 0, 15))
+```
+
+### Glow Pulse Animation
+
+```python
+def glow_star_pulse(i, progress, base_size=8):
+    """Calculate star glow intensity with pulse"""
+    pulse = 0.6 + 0.4 * math.sin(progress * 3 + i * 0.7)
+    size = base_size + (i % 4) * 3
+    return size, pulse
+```
+
+## PIL + ffmpeg Fallback (macOS / No-LaTeX)
+
+When manim installation fails (C extension errors, missing LaTeX) or when only simple info-card slides are needed, use the **PIL frames + ffmpeg** pipeline. Reliable on macOS with system fonts, frame-accurate animation timing.
+
+### Core Pattern
+
+```python
+from PIL import Image, ImageDraw, ImageFont
+import subprocess, os, math
+
+W, H = 1920, 1080
+FONT_PATH = "/System/Library/Fonts/Menlo.ttc"  # macOS safe default
+BG_HEX = "#0d1117"
+
+def load_font(size):
+    try:
+        return ImageFont.truetype(FONT_PATH, size)
+    except:
+        return None
+
+def typing_text(draw, text, x, y, font, color, progress, progress_start, type_end):
+    """Draw text with typing effect — progress 0..1"""
+    if progress < progress_start:
+        return
+    t = min(1.0, (progress - progress_start) / type_end)
+    chars = int(len(text) * t)
+    if chars > 0:
+        draw.text((x, y), text[:chars], fill=color, font=font)
+
+def draw_star(draw, cx, cy, r, color):
+    """Draw a 5-pointed star"""
+    points = []
+    for i in range(10):
+        angle = math.pi * i / 5 - math.pi / 2
+        radius = r if i % 2 == 0 else r * 0.4
+        points.append((cx + radius * math.cos(angle), cy + radius * math.sin(angle)))
+    draw.polygon(points, fill=color)
+
+def draw_glow(draw, x, y, text, font, color, size=3):
+    """Draw text with glow effect"""
+    for i in range(size, 0, -1):
+        for dx, dy in [(-i, 0), (i, 0), (0, -i), (0, i)]:
+            draw.text((x + dx, y + dy), text, fill=color, font=font)
+```
+
+### Timing Presets for Typing Animation
+
+| Preset | TYPE_END | PAUSE_END | Result at 6s/slide |
+|--------|----------|-----------|-------------------|
+| Fast typing | 0.12 | 0.73 | 0.72s type + 3.66s read + 1.62s transition |
+| Medium typing | 0.18 | 0.73 | 1.08s type + 3.30s read + 1.62s transition |
+| Slow typing | 0.25 | 0.70 | 1.50s type + 2.70s read + 1.80s transition |
+
+### Layout Overlap Prevention
+
+When revealing multi-section content (features → "WHY IT'S TRENDING" → link), calculate final Y positions BEFORE coding. Features at y=360, 6 items × 42px = ends at ~580. "WHY IT'S TRENDING" at y=580 → overlaps. Fix: place secondary section at y=635+, items at y=668 with 34px spacing.
+
+### Scanline Overlay
+
+```python
+for y in range(0, H, 5):
+    draw.line([(0, y), (W, y)], fill=(0, 0, 0, 20))
+```
+
+### When to Use PIL+ffmpeg vs Manim
+
+| Scenario | Tool |
+|----------|------|
+| Math animations, geometric proofs | Manim |
+| Info-card slides, repo showcases | PIL+ffmpeg |
+| Text-heavy typing effects on dark BG | PIL+ffmpeg |
+| 3D objects, camera moves | Manim |
+
+**macOS font:** `/System/Library/Fonts/Menlo.ttc` — avoid `Monaco.dfont`.
 
 ## Project Structure
 
@@ -124,6 +354,34 @@ MathTex(r"\nabla L")                                            # math (uses LaT
 ```
 
 Minimum `font_size=18` for readability.
+
+## Layout Pitfalls (Progressive Disclosure)
+
+When building slides that reveal content in stages (e.g., features → "WHY IT'S TRENDING" → link), calculate the final Y position BEFORE writing animation code. Progressive sections that pile up can overlap if spacing is underestimated.
+
+**Common overlap pattern:**
+- Features section starts at y=320, renders 6 items × 42px spacing = ends at ~580
+- "WHY IT'S TRENDING" placed at y=580 → overlaps last feature
+- Fix: place secondary section at y=635+ (below the features block)
+
+**Calculation rule:** If section A starts at Y and reveals N items at S px spacing, section B must start at Y + (N × S) + buffer. For 6 features at 42px = 252px + header buffer → section B starts ≥ 580 + buffer.
+
+**Safe spacing values for 1080p slides:**
+- Feature item: 42px line height, header at +5px above first item
+- "WHY IT'S TRENDING" header: y=635, items at y=668 with 34px spacing
+- GitHub link: y=H-80 (bottom safe zone)
+
+## Timing Presets (Typing + Pause)
+
+For text-reveal animations where the user wants fast typing followed by a long pause to read:
+
+| Preset | TYPE_END | PAUSE_END | Use case |
+|--------|----------|-----------|----------|
+| Fast typing | 0.12 (12% of slide) | 0.73 (73%) | Quick clips, social media |
+| Medium typing | 0.18 (18%) | 0.73 | Standard explainer |
+| Slow typing | 0.25 (25%) | 0.70 | Educational, detailed |
+
+At 6s/slide: TYPE_END=0.12 → ~0.72s typing, PAUSE_END=0.73 → ~3.66s reading time.
 
 ### Per-Scene Variation
 
@@ -190,6 +448,37 @@ ffmpeg -y -f concat -safe 0 -i concat.txt -c copy final.mp4
 ```bash
 manim -ql --format=png -s script.py Scene2_CoreConcept  # preview still
 ```
+
+## Fallback: Simple Slideshow Video (when Manim unavailable)
+
+If `manim` is not installed and `pip install manimce` fails (common on macOS — pycairo build error even when cairo/pango are installed via brew), use this lightweight alternative for simple info-card style content:
+
+```bash
+# 1. Generate slides with Python + Pillow
+python3 - << 'EOF'
+from PIL import Image, ImageDraw, ImageFont
+
+def make_slide(filename, rank, color, repo, tags, tagline, features, standout):
+    img = Image.new('RGB', (1920, 1080), '#0d1117')
+    draw = ImageDraw.Draw(img)
+    font = lambda s: ImageFont.truetype('/System/Library/Fonts/Monaco.dfont', s)
+    # ... layout logic ...
+    img.save(filename)
+
+slides = [('s1.png', '#1', '#83C167', 'repo/name', 'tags', 'tagline', [...], 'standout'), ...]
+for s in slides: make_slide(*s)
+EOF
+
+# 2. Compile to MP4 with ffmpeg
+ffmpeg -y -framerate 1/3 -i slide%d.png \
+  -vf "scale=1920:1080,setsar=1,format=yuv420p" \
+  -c:v libx264 -preset medium -crf 18 \
+  final.mp4
+```
+
+**When to use this vs full Manim**:
+- Manim: Animated explanations, math, geometry, algorithm visualization
+- PIL+ffmpeg: Static info cards, repo showcases, data comparison slides, team metrics
 
 ## Critical Implementation Notes
 

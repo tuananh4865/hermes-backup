@@ -97,6 +97,47 @@ Common patterns:
 - Non-trivial fix discovered → save for future reference
 - Project context established → save for continuity
 
+## WikiMemoryProvider Architecture
+
+The WikiMemoryProvider (`~/.hermes/plugins/memory/wiki/__init__.py`) is the **active write loop** that supplements ByteRover. It has these lifecycle hooks:
+
+### Exists ✅
+| Hook | When | What it does |
+|------|------|-------------|
+| `sync_turn()` | After every turn | Accumulates conversation + triggers rolling checkpoint every N turns |
+| `_sync_fact_realtime()` | After every turn | Writes key facts to MEMORY.md in real-time (survives crash/compression) |
+| `_warm_session_search()` | On initialize | Pre-loads recent sessions from SQLite FTS5 |
+| `on_pre_compress()` | Before context compression | Writes `~/.hermes/checkpoints/pre_compact_<session_id>.md` |
+| `on_session_end()` | On session end | Writes rolling checkpoint + appends to wiki/log.md + TASK_STATE.md |
+| `prefetch()` | On every user query | Hybrid BM25+semantic retrieval, topic-parsing, injects into system prompt |
+
+### Missing ❌ — Resolved ✅
+| Hook | Needed for | Status |
+|------|-----------|--------|
+| `on_post_compress()` | Read the `pre_compact_*.md` checkpoint AFTER compression and inject task state into fresh context | **RESOLVED** — implemented at line 1499 in `~/.hermes/plugins/memory/wiki/__init__.py`. Checkpoint is read post-compaction via `_proactive_retrieve_from_checkpoint()` |
+
+### Checkpoint Recovery Flow
+```
+on_pre_compress()  → writes pre_compact_<session>.md
+[compression happens]
+on_post_compress() → reads pre_compact_<session>.md → _proactive_retrieve_from_checkpoint()
+                        → injects structured task state into fresh context
+```
+
+**⚠️ PITFALL**: Session state is NOT lost after compaction anymore — the recovery loop is complete.
+
+### Checkpoint Files
+```
+~/.hermes/checkpoints/
+├── pre_compact_<session_id>.md    # Written by on_pre_compress() — NOT read after compaction
+├── session_state_<session_id>.md  # Written by on_session_end()
+├── TASK_STATE.md                   # Current task progress
+└── DECISION_LOG.md                 # Session decisions log
+```
+
+### Real-Time Memory Sync (Every Turn)
+Every turn calls `_sync_fact_realtime()` which writes to `~/.hermes/memories/MEMORY.md` — a rolling bounded log (last 20 entries). This survives compaction and process crash.
+
 ## Related
 
 - `hermes-agent` — for gateway and agent configuration

@@ -290,7 +290,7 @@ memory:
   user_profile_enabled: true
   memory_char_limit: 2200
   user_char_limit: 1375
-  provider: byterover
+  provider: wiki
   nudge_interval: 5
   flush_min_turns: 3
 delegation:
@@ -298,6 +298,7 @@ delegation:
   provider: ''
   base_url: ''
   api_key: ''
+  api_mode: ''
   inherit_mcp_toolsets: true
   max_iterations: 50
   child_timeout_seconds: 600
@@ -338,6 +339,8 @@ discord:
   allowed_channels: ''
   auto_thread: true
   thread_require_mention: false
+  history_backfill: true
+  history_backfill_limit: 50
   reactions: true
   channel_prompts: {}
   dm_role_auth_guild: ''
@@ -431,6 +434,10 @@ lsp:
   wait_timeout: 5.0
   install_strategy: auto
   servers: {}
+x_search:
+  model: grok-4.20-reasoning
+  timeout_seconds: 180
+  retries: 2
 _config_version: 23
 self_learning:
   complexity_weights:

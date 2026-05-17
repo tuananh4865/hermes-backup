@@ -367,3 +367,49 @@ result = subprocess.run(
 1. Add 8 new multi-agent coordination techniques to multi-agent-orchestrator skill
 2. Build worker-stall-recovery.sh for autonomous worker restart
 3. Gen Z slang already current — no sync needed tonight
+
+---
+
+## Tonight's Findings (2026-05-18)
+
+### System Status (02:00)
+- Wiki: ✅ 0 issues (3701 files, wiki_lint --fast PASSED)
+- Skills: 141 skills healthy, SHS = 0
+- Workers: STALE — last output May 13 evening (9301 bytes), 5+ days old
+- Gen Z slang: Updated with 6 new terms from slangloom.com May 2026
+
+### Gen Z Slang Sync (May 18, 2026)
+**Source:** slangloom.com (published May 11, 2026) — "Vietnamese Slang: The Ultimate 2K26 Guide"
+
+**New terms added:**
+- **Xịn sò** — high quality, impressive, stylish
+- **Kèo** — deal, plan, arrangement
+- **Quẩy** — party hard, energetic dancing
+- **Tạch** — fail, didn't work out
+- **Tấu hài** — acting like a comedian unintentionally
+- **Hết nước chấm** — extremely good, unbelievably amazing
+
+**Worker status:** Workers stale since May 13 (5+ days). Used web search fallback per MANDATORY death detection rule.
+
+### AI Agent Research — Self-Improving Agents (May 18, 2026)
+**Focus:** Self-Improving Agents ecosystem survey
+
+**Key findings from o-mega.ai 2026 guide:**
+
+1. **HyperAgents (Meta, UBC, Oxford, NYU — arxiv:2603.19461)**
+   - Transfers self-improvement strategies across DOMAINS (robotics → math grading)
+   - imp@50 = 0.630 on novel domain
+   - Self-improving improvement loop: agents learn to improve improving
+
+2. **SWE-RL** — Software engineering RL for autonomous code improvement
+
+3. **AlphaEvolve** — Google's evolutionary algorithm for discovering algorithms
+
+4. **ACE (Agentic Context Engineering — arxiv:2510.04618)**
+   - Treats contexts as evolving playbooks
+   - Accumulates, refines, organizes context over time
+
+**Paradigm shift confirmed:** Self-improving agents moving from single-task to cross-domain strategy transfer. HyperAgents demonstrates that "learning to improve" can generalize.
+
+### Reference Document Updated
+- `references/self-improving-agents-2026.md` — Updated with HyperAgents, ACE, SWE-RL, AlphaEvolve
