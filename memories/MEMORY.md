@@ -1,7 +1,3 @@
-Modified files: openclaw-deep-research, SKILL.md
-§
-Task '[Tuấn Anh] Sao lại là launch agent? Anh không hiểu! Tại sao không phải là gateway' — 1 turns
-§
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260518, 1 turns
 §
 Task '[Tuấn Anh] em thử mention nó xem' — 1 turns
@@ -37,3 +33,7 @@ Modified files: SKILL.md
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260519, 1 turns
 §
 Modified files: SKILL.md
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260519, 1 turns
+§
+Modified files: hermes-autoresearch, skill
