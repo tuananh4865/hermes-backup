@@ -126,6 +126,7 @@ class WikiMemoryProvider:
             logger.info("[wiki] Created structured USER.md")
 
         self._load_wiki_context()
+        self._load_project_summary()
         self._warm_session_search()
 
     # ─── Original Methods ───────────────────────────────────────────
@@ -181,6 +182,110 @@ class WikiMemoryProvider:
         except Exception as e:
             logger.warning("[wiki] session_search warm-up failed: %s", e)
             self._session_cache["recent_sessions"] = ""
+
+    def _load_project_summary(self) -> None:
+        """Scan projects/ directory and append active project summary to system_prompt_block."""
+        try:
+            wiki_root = _get_wiki_root()
+            projects_dir = wiki_root / "projects"
+            if not projects_dir.exists():
+                return
+
+            active = []
+            for subdir in sorted(projects_dir.iterdir()):
+                if not subdir.is_dir() or subdir.name.startswith("_"):
+                    continue
+                hub = subdir / "hub.md"
+                if hub.exists():
+                    content = hub.read_text(encoding="utf-8", errors="replace")
+                    # Extract key metadata
+                    title = subdir.name.replace("-", " ").replace("_", " ").title()
+                    status = ""
+                    phase = ""
+                    updated = ""
+                    for line in content.split("\n")[:30]:
+                        if line.startswith("**Status**:"):
+                            status = line.split("**Status**:")[1].strip()
+                        elif line.startswith("**Phase**:"):
+                            phase = line.split("**Phase**:")[1].strip()
+                        elif line.startswith("updated:"):
+                            updated = line.replace("updated:", "").strip()
+                    entry = f"- `{subdir.name}`"
+                    if status:
+                        entry += f" [{status}]"
+                    if phase:
+                        entry += f" — {phase}"
+                    active.append(entry)
+
+            if active:
+                projects_block = "\n### Projects\n" + "\n".join(active) + "\n"
+                self._system_prompt_block += projects_block
+                logger.info("[wiki] Scanned %d active projects", len(active))
+        except Exception as e:
+            logger.debug("[wiki] _load_project_summary failed: %s", e)
+
+    def _git_push_async(self) -> None:
+        """
+        Non-blocking git add + push to my-llm-wiki.
+        Runs in background thread so it never blocks the agent.
+        """
+        import subprocess
+        try:
+            wiki_root = _get_wiki_root()
+            result = subprocess.run(
+                ["git", "add", "-A"],
+                cwd=str(wiki_root),
+                capture_output=True,
+                timeout=30,
+            )
+            if result.returncode != 0:
+                logger.warning("[wiki] git add failed: %s", result.stderr.decode())
+                return
+            result = subprocess.run(
+                ["git", "diff", "--cached", "--stat"],
+                cwd=str(wiki_root),
+                capture_output=True,
+                timeout=10,
+            )
+            if not result.stdout.strip():
+                logger.debug("[wiki] No changes to push")
+                return
+            result = subprocess.run(
+                ["git", "commit", "-m", f"[auto] Wiki sync {datetime.now().strftime('%Y-%m-%d %H:%M')}"],
+                cwd=str(wiki_root),
+                capture_output=True,
+                timeout=30,
+                env={**__import__("os").environ, "GIT_AUTHOR_NAME": "HermesAgent", "GIT_AUTHOR_EMAIL": "hermes@tuananh.local"},
+            )
+            result = subprocess.run(
+                ["git", "push", "origin", "main"],
+                cwd=str(wiki_root),
+                capture_output=True,
+                timeout=60,
+            )
+            if result.returncode == 0:
+                logger.info("[wiki] Auto-push to GitHub succeeded")
+            else:
+                logger.warning("[wiki] git push failed: %s", result.stderr.decode())
+        except Exception as e:
+            logger.debug("[wiki] _git_push_async failed: %s", e)
+
+    def _trigger_git_push(self) -> None:
+        """Trigger non-blocking git push (for on_session_end)."""
+        t = threading.Thread(target=self._git_push_async, daemon=True, name="wiki-git-push")
+        t.start()
+
+    _last_push_time: float = 0.0
+
+    def _maybe_git_push(self) -> None:
+        """Rate-limited: only push if 5+ minutes since last push."""
+        import time
+        now = time.monotonic()
+        if now - self._last_push_time < 300:  # 5 minutes
+            return
+        self._last_push_time = now
+        t = threading.Thread(target=self._git_push_async, daemon=True, name="wiki-git-push-rate-limited")
+        t.start()
 
     def system_prompt_block(self) -> str:
         return self._system_prompt_block
@@ -359,6 +464,8 @@ class WikiMemoryProvider:
 
             logger.info("[wiki] Rolling checkpoint written: %s (turn %d)",
                         checkpoint_path, self._turn_count)
+            # Rate-limited git push (only if 5+ minutes since last)
+            self._maybe_git_push()
         except Exception as e:
             logger.warning("[wiki] Failed to write rolling checkpoint: %s", e)
 
@@ -515,6 +622,7 @@ timestamp: {timestamp}
             os.replace(tmp_path, log_path)
 
             logger.info("[wiki] Appended session to log.md")
+            self._trigger_git_push()  # Non-blocking auto-push
         except Exception as e:
             logger.warning("[wiki] Failed to append to log.md: %s", e)
 

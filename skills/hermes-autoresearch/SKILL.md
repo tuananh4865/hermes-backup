@@ -1023,6 +1023,7 @@ cronjob create --name "Job Name" --prompt "..." --schedule "..." --skills [...] 
 - `references/x-research-hermes-2026-05-10.md` — **Hermes Agent X research results** (May 10): 140K stars, v2026.5.7 release, use cases, competitor analysis, memory optimization papers
 - `references/ai-agent-frameworks-2026.md` — AI agent frameworks comparison (LangGraph/CrewAI/AutoGen), Cognify, self-evolving-codegen, Autogenesis
 - `references/x-research-hermes-2026-05-15.md` — **Hermes X research** (May 15): 150K stars (up 18K), v0.13.0 Tenacity Release, LangGraph/CrewAI/AutoGen comparison (44/38/35 scores), Cognify, self-evolving-codegen
+- `references/x-research-hermes-2026-05-18.md` — **Hermes X research** (May 18): 154,687 stars (↑4,397 in 3 days), v2026.5.16, Ralph Loop + Hallucination Gate, Hermex Chrome extension, enterprise memory differentiation
 - `references/cron-prompt-vs-skill.md` — CRITICAL: Cron prompt vs Skill distinction
 - `references/felix-model-setup-checklist.md` — Verification steps cho Felix/agentic company setup
 - `references/session-continuity-gap.md` — **Session continuity gap** (2026-05-06): TASK_STATE.md never written, no pre-compact checkpoint, context compression loses work-in-progress. See this BEFORE working on memory/session features.

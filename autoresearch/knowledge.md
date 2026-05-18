@@ -413,3 +413,60 @@ result = subprocess.run(
 
 ### Reference Document Updated
 - `references/self-improving-agents-2026.md` — Updated with HyperAgents, ACE, SWE-RL, AlphaEvolve
+
+---
+
+## Autoresearch 2026-05-19
+
+### System Status (02:00)
+- Wiki: ✅ Clean (0 issues, SHS = 0)
+- Skills: 142 skills healthy
+- Workers: ⚠️ STALE 8+ days — Content Creator (May 11), Research Agent (May 11)
+
+### Gen Z Slang Status
+- Workers dead → used web search fallback (per MANDATORY death detection)
+- slangloom.com May 11 source: 6 terms already in wiki (Xịn sò, Kèo, Quẩy, Tạch, Tấu hài, Hết nước chấm)
+- tcc-agency.com "lọ" article (May 5) — already tracked
+- No NEW slang found from web search (slang evolves slower in May 19 week vs May 18)
+- **No slang sync needed** — wiki Gen Z section (updated May 18) is current
+
+### AI Agent Research — 6 NEW Self-Debugging Techniques
+
+1. **DebugRepair (arXiv:2604.19305)** — Self-directed debugging with runtime evidence
+   - Test semantic purification + simulated instrumentation + debugging-driven conversational repair
+   - Key: patches refine using intermediate runtime states, not just pass/fail
+
+2. **ReflexiCoder (arXiv:2603.05863)** — RL framework for self-reflection/self-correction
+   - Teaches model "how to debug" via RL-zero training, internalizes error detection
+   - Shifts from external test loop → intrinsic cognitive skill
+
+3. **Polaris (arXiv:2603.23129)** — Gödel agent for small language models
+   - Policy repair via experience abstraction — failures become policy updates
+   - 7B model with Polaris competitive with larger baselines
+
+4. **ErrorProbe (arXiv:2604.17658)** — Multi-agent failure attribution
+   - Symptom-driven backward tracing + verified episodic memory
+   - 3-agent team (Strategist, Investigator, Arbiter) for error localization
+
+5. **TraceCoder (arXiv:2602.06875)** — Trace-driven collaborative debugging
+   - Instruments code with diagnostic probes → causal analysis → HLLM from past failures
+   - 34.43% relative improvement in Pass@1
+
+6. **Debug2Fix (arXiv:2602.18571)** — Interactive debugging for coding agents
+   - Integrates debuggers (Java/Python) into agent framework via subagent architecture
+   - Makes weaker models (GPT-5, Haiku 4.5) match stronger models (Sonnet 4.5)
+
+**Key paradigm shift:** Self-debugging moving from response-level (retry) → policy-level (learn to debug).
+
+### Hermes Agentic Capability Worked On
+**Self-Debugging** — High impact, foundational for other capabilities
+- Documented 6 new techniques from arXiv May 2026
+- These techniques could be implemented in Hermes gateway hooks
+
+### Recommendations
+1. **Workers need restart** — 8+ days stale, cron jobs may need re-enabling
+2. **Consider implementing ErrorProbe pattern** — multi-agent diagnosis for complex failures
+3. **TraceCoder approach** — add instrumentation hooks to Hermes for self-debugging
+
+### Git Commit
+- Status: CLEAN (wiki clean, skills healthy, no blocking issues)

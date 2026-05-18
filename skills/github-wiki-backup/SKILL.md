@@ -8,18 +8,151 @@ category: devops
 
 Backup wiki (hoặc knowledge base) lên GitHub với proper handling cho nested repos, media files, và large files.
 
-## Current Architecture (2026-05-08)
+## Current Architecture (2026-05-18 — UPDATED)
 
 | Component | Sync Method | GitHub Repo | Local Path |
 |-----------|-------------|-------------|------------|
-| Wiki | Obsidian plugin (auto, every minute) | `my-llm-wiki` | `/Volumes/Storage-1/Hermes/wiki/` (FLATTENED — content at root) |
-| Hermes (full) | Cron 3AM backup | `hermes-backup` | `~/.hermes/` |
+| Wiki | **Independent git repo** (was: inside parent repo) | `my-llm-wiki` | `/Volumes/Storage-1/Hermes/wiki/` (is the repo root) |
 
-**Wiki is NOT backed up via cron** — Obsidian plugin handles wiki sync automatically.
+**MAJOR CHANGE (2026-05-18):** Wiki is now its OWN independent git repo. `.git/` lives directly at `/Volumes/Storage-1/Hermes/wiki/.git/`. Previously `.git/` was at `/Volumes/Storage-1/Hermes/` (parent level) with wiki as a subfolder. This meant pushing wiki also pushed `.hermes`, `memories`, `workers`, `scripts`, `skills`, `projects` — everything in the parent.
 
-**Wiki repo is FLATTENED** (2026-05-08): Content (`concepts/`, `entities/`, `raw/`, etc.) lives at ROOT of `my-llm-wiki` repo — NOT inside a `wiki/` subfolder.
+**Solution (Option A — CHOSEN):** Reset wiki directory → init fresh independent git repo → force push only wiki content → GitHub root = wiki content (no parent folders).
 
-Hermes cron backup (3AM) backs up full `~/.hermes/` to `hermes-backup` repo — includes skills, memories, config, workers, sessions.
+**GitHub repo structure AFTER independence push (2026-05-18):**
+```
+my-llm-wiki/           ← repo root — ONLY wiki content
+├── .agent_tasks/
+├── .crontab/
+├── .gitignore
+├── .obsidian/
+├── SCHEMA.md
+├── SCHEMA.md.bak
+├── WIKI_IMPROVEMENT_PLAN.md
+├── _meta/
+├── auto-ingest/
+├── concepts/          ← 6642+ files (mostly stubs)
+├── config/
+├── entities/
+├── hermes-agent-self-evolution/
+├── index.md
+├── index.md.bak
+├── learn/
+├── learning/
+├── log.md
+├── outputs/
+├── projects/
+├── queries/
+├── references/
+├── scripts/
+├── skills/
+├── sync.sh/
+├── test-agent-output/
+└── tests/
+```
+
+**Parent folders NO LONGER on GitHub:** `.hermes/`, `memories/`, `projects/`, `scripts/`, `skills/`, `workers/`, `wiki/` (as subfolder — gone)
+
+### Option A: Make Wiki Its Own Independent Repo (CHOSEN)
+
+Use when: you need to push ONLY wiki content and exclude parent folders (`.hermes`, `memories`, `workers`, etc.)
+
+```bash
+WIKI_PATH="/Volumes/Storage-1/Hermes/wiki"
+GITHUB_REPO="https://github.com/tuananh4865/my-llm-wiki.git"
+GIT_EMAIL="tuananh4865@gmail.com"
+GIT_NAME="TuanAnh"
+
+cd "$WIKI_PATH"
+
+# Step 1: Reset — remove old git state completely (including .git at PARENT level if any)
+# WARNING: This removes .git/ in the wiki directory. Parent repo is untouched.
+rm -rf .git
+
+# Step 2: Init fresh independent git repo
+git init
+git config user.email "$GIT_EMAIL"
+git config user.name "$GIT_NAME"
+
+# Step 3: Add remote
+git remote add origin "$GITHUB_REPO"
+
+# Step 4: Verify what's about to be staged (should ONLY be wiki content)
+git add -n . | head -50
+# Expected: .obsidian/, SCHEMA.md, index.md, concepts/, entities/, scripts/, skills/, projects/, queries/, references/, learning/, log.md, _meta/, auto-ingest/, outputs/, etc.
+# WRONG if you see: ../.hermes/, ../memories/, ../workers/, ../projects/, ../scripts/, ../skills/
+
+# Step 5: Stage all wiki content
+git add .
+git status --short | wc -l  # Should be ~7000+ files (wiki content only)
+
+# Step 6: Commit
+git commit -m "Initial wiki content - full knowledge base"
+
+# Step 7: Force push (GitHub likely has old commits with parent folders)
+git push origin main --force
+
+# Step 8: Verify GitHub structure
+gh api repos/tuananh4865/my-llm-wiki/contents/ --jq '.[].name' | sort
+# Should NOT contain: .hermes, memories, workers
+# Should contain: SCHEMA.md, index.md, concepts/, entities/, scripts/, skills/, etc.
+```
+
+### Option B: Keep Wiki Inside Parent Repo (OLD approach — DEPRECATED)
+
+Use when: you want to backup wiki as part of parent repo backup.
+
+```bash
+# This is the old approach — kept for reference only
+# Parent repo .git is at /Volumes/Storage-1/Hermes/.git
+# Wiki path: /Volumes/Storage-1/Hermes/wiki
+# GitHub repo: my-llm-wiki (with wiki/ as subfolder)
+
+# Step 1: Remove any nested .git repos inside wiki
+find wiki -name ".git" -type d -exec rm -rf {} \; 2>/dev/null
+
+# Step 2: Add proper .gitignore in wiki dir to exclude parent folders
+# (see .gitignore template below)
+
+# Step 3: Stage and push
+cd /Volumes/Storage-1/Hermes
+git add wiki/ -f
+git commit -m "Backup wiki: $(date +%Y-%m-%d)"
+git push origin main
+```
+
+### .gitignore for Independent Wiki Repo
+
+Place at `/Volumes/Storage-1/Hermes/wiki/.gitignore`:
+
+```gitignore
+# Obsidian cache
+.obsidian/
+
+# Cache/temp
+.processed/
+.pytest_cache/
+*.bak
+*.tmp
+
+# Scripts (not wiki content — generated by agent, not authored content)
+scripts/
+
+# Large media files (exclude from backup)
+*.mp4
+*.mov
+*.m4a
+*.mp3
+*.wav
+*.aac
+*.ogg
+*.zip
+*.tar.gz
+
+# Obsidian search index
+.search_index.json
+```
+
+**NOTE:** Since wiki is now independent, parent folder exclusions (../.hermes/, etc.) are NO LONGER needed. The independent repo only tracks wiki content.
 
 ## Wiki Git Remote
 
@@ -34,38 +167,33 @@ cd /Volumes/Storage-1/Hermes/wiki
 git remote set-url origin https://github.com/tuananh4865/my-llm-wiki.git
 ```
 
-## Wiki Git Remote
+**Verify repo structure (2026-05-18):**
+```bash
+# Check what the wiki repo tracks at root level
+gh api repos/tuananh4865/my-llm-wiki/contents/ | python3 -c "import json,sys; data=json.load(sys.stdin); [print(f'{d[\"type\"]:6} {d[\"name\"]}') for d in data]"
 
-```
-Wiki remote: https://github.com/tuananh4865/my-llm-wiki.git
-NOT: https://github.com/tuananh4865/hermes-backup.git  ← WRONG (was fixed 2026-05-08)
+# Expected output:
+# file    .gitignore
+# dir     .hermes
+# file    hermes-agent-architecture.html
+# dir     memories
+# dir     projects
+# dir     scripts
+# dir     skills
+# dir     wiki              ← wiki content inside repo
+# dir     workers
 ```
 
-**If wiki remote is wrong:**
+**Check what's tracked at wiki root level:**
 ```bash
 cd /Volumes/Storage-1/Hermes/wiki
-git remote set-url origin https://github.com/tuananh4865/my-llm-wiki.git
-```
-
-**Check current remote:**
-```bash
-cd /Volumes/Storage-1/Hermes/wiki && git remote -v
-```
-
-## Wiki .gitignore — CRITICAL (2026-05-08)
-
-After repo flattening (2026-05-08), wiki's `.gitignore` must be at wiki root. It MUST exclude parent directories:
-
-```bash
-# From INSIDE wiki folder, check if parent dirs are being tracked:
-git status --short | grep -E "^\?\?"
-
+git status --short | head -20
 # If you see ../.hermes/, ../memories/, etc. → .gitignore is missing parent exclusions
 ```
 
-**Correct .gitignore for wiki (at wiki root, not /Volumes/Storage-1/Hermes/.gitignore):**
+**Correct .gitignore for wiki (at `/Volumes/Storage-1/Hermes/wiki/.gitignore`):**
 ```gitignore
-# Exclude parent directories — CRITICAL
+# Exclude parent directories — CRITICAL (wiki is a subfolder in the repo)
 ../.hermes/
 ../memories/
 ../projects/
@@ -73,6 +201,7 @@ git status --short | grep -E "^\?\?"
 ../skills/
 ../workers/
 ../.gitignore
+../.DS_Store
 
 # Obsidian cache
 .obsidian/
@@ -82,6 +211,10 @@ git status --short | grep -E "^\?\?"
 .pytest_cache/
 *.bak
 *.tmp
+
+# Scripts (not wiki content)
+scripts/
+skills/
 
 
 ## Clean Wiki Stray Files
@@ -280,6 +413,7 @@ wiki/**/.git/
 
 ## Related Skills
 - `github-large-folder-backup` — Generic version for any large folder (wiki, datasets, etc.)
+
 ## Verification Commands
 
 ```bash
@@ -294,8 +428,13 @@ du -sh wiki/*/ --exclude='.git' 2>/dev/null | sort -rh | head -10
 
 # Verify GitHub push
 gh repo view tuananh4865/hermes-backup --json diskUsage,pushedAt
-```
 
+# Check repo structure via GitHub API
+gh api repos/tuananh4865/my-llm-wiki/contents/ | python3 -c "import json,sys; data=json.load(sys.stdin); [print(f'{d[\"type\"]:6} {d[\"name\"]}') for d in data]"
+```
 ## Session Reference
+- `references/wiki-repo-structure-2026-05-18.md` — Discovery: wiki/ is inside parent repo, .git at parent level
+- `references/wiki-independence-2026-05-18.md` — Wiki independence operation (Option A): make wiki its own independent repo
 - `references/2026-05-04-session.md` — 2026-05-04 backup run: signals, anti-patterns, commit conditions
 - `references/wiki-repo-flatten-2026-05-08.md` — Wiki repo flattening: move `wiki/*` to root, force push
+- `references/wiki-repo-structure-2026-05-18.md` — Discovery: wiki/ is a subfolder in repo, not root

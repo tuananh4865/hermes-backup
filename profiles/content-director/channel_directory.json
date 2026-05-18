@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-18T02:58:48.504201",
+  "updated_at": "2026-05-19T02:01:08.110354",
   "platforms": {
     "telegram": [
       {
@@ -13,6 +13,12 @@
         "name": "O-Lab / topic 1",
         "type": "group",
         "thread_id": "1"
+      },
+      {
+        "id": "1132914873",
+        "name": "Tuấn Anh",
+        "type": "dm",
+        "thread_id": null
       }
     ],
     "discord": [],
@@ -36,6 +42,7 @@
     "google_chat": [],
     "irc": [],
     "line": [],
+    "simplex": [],
     "teams": []
   }
 }

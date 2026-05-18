@@ -52,10 +52,15 @@ openclaw --version          # CLI version
       "groupPolicy": "open",
       "groups": {
         "*": {
-          "requireMention": false
+          "requireMention": true
         }
       }
     }
+  },
+  "commands": {
+    "ownerAllowFrom": [
+      "telegram:YOUR_TELEGRAM_USER_ID"
+    ]
   },
   "secrets": {
     "providers": {
@@ -143,7 +148,61 @@ openclaw skills list        # List skills
 npx openclaw status         # Alternative status
 ```
 
+## Daemon Management Commands
+```bash
+# Verify LaunchAgent status (macOS)
+launchctl print gui/$(id -u) 2>&1 | grep -A3 "ai.openclaw.gateway"
+# Expected: pid XXXX (pe) ai.openclaw.gateway — enabled
+
+# Check if daemon is running
+ps aux | grep openclaw | grep -v grep
+
+# Full status with npx
+cd ~/.openclaw && npx openclaw status
+```
+
 ## Known Issues & Pitfalls
+
+## Known Issues & Pitfalls
+
+### Telegram "Bot not initialized" retry loop
+**Symptom**: JSON log `/tmp/openclaw/openclaw-YYYY-MM-DD.log` floods with:
+```
+"spooled update N handler failed; keeping for retry: Bot not initialized!
+Either call `await bot.init()`, or directly set the `botInfo` option"
+```
+Gateway.log shows Telegram auto-restarting repeatedly (attempt 1/10, 2/10...).
+**Fix**: `cd ~/.openclaw && npx openclaw gateway restart` — clears the stuck Telegram provider session.
+**Verification**: After restart, gateway.log should show `starting provider (@BotName)` once, no retry loop.
+
+### ResearchClaw bot responds to ALL messages (no mention required)
+**Symptom**: Bot replies to every message in group, not just @mentions — spamming the channel
+**Root cause**: `openclaw.json` has `"requireMention": false` under `channels.telegram.groups.*`
+**Fix**:
+```bash
+# 1. Edit config
+sed -i '' 's/"requireMention": false/"requireMention": true/' ~/.openclaw/openclaw.json
+
+# 2. Restart gateway
+cd ~/.openclaw && npx openclaw gateway restart
+```
+**Verification**:
+```bash
+# Confirm the setting is true
+grep -A2 '"groups"' ~/.openclaw/openclaw.json
+# Should show: "requireMention": true
+
+# Check logs after restart — bot should only show "inbound message" for @mentioned messages
+tail -50 ~/.openclaw/logs/gateway.log | grep -i "inbound"
+```
+
+### Two log files — different purposes
+| File | Purpose | Format |
+|------|---------|--------|
+| `~/.openclaw/logs/gateway.log` | Human-readable summary | plain text |
+| `/tmp/openclaw/openclaw-YYYY-MM-DD.log` | Structured JSON details | JSON (use for debugging) |
+
+When troubleshooting Telegram issues: check both. The JSON log has the full error; gateway.log has the readable summary.
 
 ### "Requested agent harness 'codex' is not registered"
 **Symptom**: Bot shows ⚠️ "Something went wrong while processing your request"
@@ -158,6 +217,38 @@ openclaw gateway restart
 ### Gateway crashes immediately
 **Cause**: Invalid config (missing `gateway.mode` field)
 **Fix**: Add `"gateway.mode": "local"` to openclaw.json
+
+### Config warnings cause gateway degradation
+**Symptom**: Gateway starts and responds to health checks (`{"ok":true,"status":"live"}`) but Telegram bot silently fails to reply to @mentions. JSON logs show `"reason":"no-mention"` even when the bot was correctly @mentioned. Config validation shows warnings like `Key 'mcpServers' was ignored — not recognized`.
+**Root cause**: `openclaw.json` contains a `mcpServers` section (copy-pasted from template or previous config). OpenClaw does NOT support `mcpServers` as a top-level config key — unrecognized keys produce warnings and cause the config to be partially invalid, which breaks mention detection in Telegram groups.
+**Fix**:
+```bash
+# 1. Remove the mcpServers section from openclaw.json
+# Look for and delete the entire "mcpServers" block (starts at line with "mcpServers": {)
+
+# 2. Restart gateway
+launchctl unload ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+launchctl load ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+
+# 3. Verify no config warnings
+cd ~/.openclaw && npx openclaw config validate
+
+# 4. Test mention in Telegram group
+```
+**Note**: Even if `npx openclaw config validate` shows warnings, the gateway may still start and show `{"ok":true,"status":"live"}` — the config warnings are subtle and don't block startup entirely, but they break group mention detection. Always check the logs for unrecognized key warnings after modifying config.
+
+### Stalled Session — bot receives but never responds
+**Symptom**: JSON log shows `stalled session` entries:
+```
+15:09:47 stalled session: sessionId=92af056c... sessionKey=agent:main:telegram:group:... topic=4081 state=processing age=13
+15:10:17 stalled session age=16s (still stuck)
+```
+Bot receives messages and starts processing, but hangs forever — never replies.
+**Fix**:
+```bash
+cd ~/.openclaw && npx openclaw gateway restart
+```
+**Verify**: After restart, JSON log should show `⇄ res ✓` within seconds of inbound messages.
 
 ### Gateway token unauthorized
 **Cause**: Device identity not configured
@@ -204,6 +295,54 @@ This adds to config:
 ### Skills needs setup
 **Issue**: Skills show "needs setup" 
 **Fix**: Run `openclaw skills install <skill-name>` for each
+
+### Telegram "Bot not initialized" — spam-restart loop
+[See references/launchagent-env-var.md]
+
+### MINIMAX_API_KEY missing — LaunchAgent env var issue
+**Symptom**: Gateway fails to start with:
+```
+SecretRefResolutionError: Environment variable "MINIMAX_API_KEY" is missing or empty.
+Gateway failed to start: Startup failed: required secrets are unavailable.
+```
+**Root cause**: `npx openclaw gateway start` on macOS actually triggers a LaunchAgent (`launchd`) service. Launchd services do NOT inherit shell environment variables — they run in an isolated context with only the env vars defined in the plist file.
+
+**Fix**: Add env vars directly to the LaunchAgent plist at `~/Library/LaunchAgents/ai.openclaw.gateway.plist`:
+```bash
+# 1. Read current plist
+cat ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+
+# 2. Edit and add EnvironmentVariables dict:
+# MINIMAX_API_KEY, TELEGRAM_ALLOW_BOTS, HERMES_YOLO_MODE, etc.
+
+# 3. Reload the service
+launchctl unload ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+launchctl load ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+
+# 4. Verify gateway starts
+sleep 8 && curl -s http://localhost:18789/health
+# Expected: {"ok":true,"status":"live"}
+```
+**Key insight**: User asked "Sao lại là launch agent? Tại sao không phải là gateway?" — The answer: `openclaw gateway start` on macOS spawns a background launchd service, not a direct process. The gateway process IS running fine — it's the launchd wrapper that doesn't have the env vars.
+
+**⚠️ CRITICAL PITFALL — MINIMAX_API_KEY truncation**:
+When reading `~/.hermes/.env` via `grep` or `cat`, the MINIMAX_API_KEY value appears TRUNCATED in terminal output (e.g., `sk-cp-...hU9A` instead of the full 125-char key). Naively copying this output leads to a broken plist with a 13-char key instead of 125.
+
+**Correct approach** — use binary read to extract the actual key:
+```python
+with open('/Users/tuananh4865/.hermes/.env', 'rb') as f:
+    data = f.read()
+start = data.find(b'MINIMAX_API_KEY=') + len(b'MINIMAX_API_KEY=')
+end = data.find(b'\n', start)
+key = data[start:end].decode('utf-8')  # Full 125-char key
+```
+
+**Verification**: After writing plist, key length must be 125 chars, not 13. Use:
+```bash
+grep -a "MINIMAX_API_KEY=" ~/.hermes/.env | wc -c  # Should be ~142 (incl prefix + newline)
+```
+
+**Verification**: Check logs at `/tmp/openclaw/openclaw-YYYY-MM-DD.log` for `[SECRETS_RELOADER_DEGRADED]`. After fix, should see `gateway: auto-enabled plugins...` and `starting...` without secrets errors.
 
 ## Skills Available (2026.5.12)
 20/59 ready including:

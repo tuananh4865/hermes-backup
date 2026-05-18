@@ -21,26 +21,46 @@ trigger: Khi cần backup hoặc restore Hermes data
 - **No wiki** — wiki backup SEPARATE via its own cron
 - Wiki path: `/Volumes/Storage-1/Hermes/wiki/` → backup to `https://github.com/tuananh4865/my-llm-wiki`
 
-## Wiki Backup Architecture
+## Wiki Backup Architecture (2026-05-18 updated)
 
-**Wiki repo**: `https://github.com/tuananh4865/my-llm-wiki` (NOT `hermes-backup`)
-**Wiki path**: `/Volumes/Storage-1/Hermes/wiki/`
-**Wiki backup**: SEPARATE from hermes backup. Wiki has its own sync mechanism.
+**PROBLEM DISCOVERED 2026-05-18:** Wiki is INSIDE a parent git repo — `.git/` is at `/Volumes/Storage-1/Hermes/`, NOT in `wiki/`. The parent repo tracks BOTH wiki content AND `.hermes`, `memories`, `projects`, `workers`, etc. — NOT what Anh wants.
 
-**CRITICAL: Wiki .gitignore entries** (required to prevent tracking hermes data):
+**SOLUTION (Option A — User approved 2026-05-18):** Make wiki its own independent repo.
+
+**Pre-execution verification:**
+```bash
+# Confirm .git is NOT in wiki/
+ls -la /Volumes/Storage-1/Hermes/wiki/.git 2>/dev/null || echo "NO .git in wiki/ — OK to proceed"
+
+# Confirm parent repo tracks other folders besides wiki
+cd /Volumes/Storage-1/Hermes && git ls-files | grep -v "^wiki/" | wc -l
+# If > 0, parent tracks .hermes, memories, etc. — separation needed
 ```
-# Hermes data (not wiki)
-../skills/
-../workers/
-../.hermes/
-```
-These must be in wiki's `.gitignore` to prevent cross-contamination.
 
-**Fix for "wiki tracking skills/workers" issue (2026-05-08)**:
-1. Wiki remote was pointing to `hermes-backup` → fixed to `my-llm-wiki`
-2. Wiki was tracking `../skills/` and `../workers/` → unstaged + added to `.gitignore`
-3. Local/remote diverged → force push `git push origin main --force`
-4. After any force push, verify: `git status` should show clean
+**Wiki independence steps (execute in wiki folder):**
+```bash
+cd /Volumes/Storage-1/Hermes/wiki
+
+# Step 1: Init fresh git (no .git exists in wiki/ yet)
+git init
+
+# Step 2: Set remote to my-llm-wiki
+git remote add origin https://github.com/tuananh4865/my-llm-wiki.git
+
+# Step 3: Verify tracked files (~6800+ wiki files only)
+git ls-files | wc -l
+
+# Step 4: Push as main branch
+git branch -M main
+git push origin main
+```
+
+**After separation:**
+- Wiki becomes independent repo — pushes go to `my-llm-wiki` as ROOT (not inside `wiki/` subfolder)
+- Parent repo at `/Volumes/Storage-1/Hermes/` continues separately (can be archived or managed independently)
+- Wiki scripts remain functional — they use absolute paths `/Volumes/Storage-1/Hermes/wiki/`
+
+**See `references/wiki-independence-2026-05-18.md` in `github-wiki-backup` skill for full operation details.
 
 ## Current Backup Cron (2026-05-13)
 
@@ -433,8 +453,8 @@ curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" 
 ## Notes
 
 - **Hermes backup repo**: https://github.com/tuananh4865/hermes-backup (full ~/.hermes backup)
-- **Wiki repo**: https://github.com/tuananh4865/my-llm-wiki (separate wiki backup)
+- **Wiki repo**: https://github.com/tuananh4865/my-llm-wiki (wiki independence operation IN PROGRESS — see github-wiki-backup skill)
+- **Wiki independence operation**: `references/wiki-independence-2026-05-18.md` in `github-wiki-backup` skill — full procedure to make wiki its own independent repo
 - **Skills location**: `~/.hermes/skills/` (55 skills, native location)
 - **external_dirs config**: `external_dirs: []` (cleared 2026-05-08)
 - **Cron job**: Hermes Daily Backup (job_id: `7cba6ba5f52a`) - 3AM daily, backup full `~/.hermes/`
-- **Wiki backup**: Separate from hermes — wiki syncs to `my-llm-wiki`

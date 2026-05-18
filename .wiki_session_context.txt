@@ -410,6 +410,10 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** *Missing or outdated information:**
 
+> **Auto-improvement note:** 3 specific improvements. Let me analyze the current content:
+
+> **Auto-improvement note:** *Current Content Analysis:**
+
 === index.md ===
 ---
 confidence: high
@@ -506,6 +510,10 @@ relationships:
 - [[tiktok-trends-2026-04-29]] — Reali-Tea, TikTok as search engine, Gen Z content shifts (2026-04-29)
 - [[tiktok-trends-2026-04-30]] — Authentic over polished, "This Changed My Direction", Gen Z slang update (2026-04-30)
 - [[gen-z-slang-2026-04]] — Vietnamese + English Gen Z slang, Chuzz, Gyatt, đỉnh, toang (2026-04-29)
+
+### Hermes X Research
+- [[hermes-x-research-2026-05-18]] — Hermes Agent X research: v2026.5.16 Tenacity Release, 154K stars, Kanban multi-agent, /goal, hallucination gate (2026-05-18)
+- [[hermes-x-research-2026-05-16]] — Hermes Agent X research: v2026.5.7, 150K stars, LangGraph/CrewAI/AutoGen comparison (2026-05-16)
 
 ### Auto-Ingest
 - [[email]] — Email forwarding setup
@@ -671,6 +679,10 @@ relationships:
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The "TikTok Content" section has a page about `tiktok-viral-script` but the description is incomplete/truncated: "Pipeline thu thập transcript + nâng cấp công thức viral mỗi ngày" - this seems fine actually
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Tuấn Anh" section under Entities is somewhat oddly placed - it's a person's name but listed under "Entities" rather than "People"
 
 === log.md (last 20 lines) ===
 - Task: Daily session review for 2026-05-11
@@ -968,3 +980,7 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** 3 specific improvements based on the criteria:
 
 > **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Gen Z Slang 2026 (Updated 2026-05-11)" section has multiple updates with different dates (May 11, 2026 and May 18, 2026), which is confusing and suggests disorganization

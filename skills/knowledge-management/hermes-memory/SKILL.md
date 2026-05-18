@@ -97,9 +97,46 @@ Common patterns:
 - Non-trivial fix discovered → save for future reference
 - Project context established → save for continuity
 
-## WikiMemoryProvider Architecture
+### WikiMemoryProvider Architecture
 
 The WikiMemoryProvider (`~/.hermes/plugins/memory/wiki/__init__.py`) is the **active write loop** that supplements ByteRover. It has these lifecycle hooks:
+
+### What WikiMemoryProvider Does at Session Start ✅
+
+`initialize()` calls `_load_wiki_context()` which loads exactly the 5 files from `start-here.md`:
+
+```
+WIKI_STARTUP_FILES = [
+    ("_meta/start-here.md", False),
+    ("SCHEMA.md", False),
+    ("index.md", False),
+    ("log.md", True),           # last 20 lines only
+    ("entities/learned-about-tuananh.md", False),
+]
+```
+
+This matches `start-here.md`'s "Session Startup Sequence" items 1-5 exactly. ✅
+
+### What WikiMemoryProvider Does NOT Do (gap) ❌
+
+| Missing | start-here.md says | Reality |
+|---------|-------------------|---------|
+| **Projects scan** | "6. Scan projects/ directory → Quick check for active projects" | WikiMemoryProvider only injects files into system prompt, does NOT scan `projects/` or present active projects to user |
+| **User project selection** | "7. Present project summary → Let Anh choose which project to work on" | Not automated — user has to manually say "work on project X" |
+| **Git push auto-sync** | None (this is our own addition) | Only writes local files, no auto-git-push after wiki writes |
+
+### Gap Resolution — RESOLVED 2026-05-18 ✅
+
+Both gaps have been implemented:
+
+| Missing | Resolution | Implementation |
+|---------|------------|----------------|
+| **Projects scan** | ✅ Added | `_load_project_summary()` in `WikiMemoryProvider.initialize()` — scans `projects/` subdirs, reads `hub.md` for each, injects active projects list into system prompt |
+| **Git push auto-sync** | ✅ Added | `_git_push_async()` (daemon thread), `_trigger_git_push()` (session-end immediate), `_maybe_git_push()` (checkpoint rate-limited 5min) |
+| **User project selection** | Manual | User says what they want; system prompt includes projects list |
+| **Telegram bot messages** | ✅ Fixed | Disabled privacy mode via @BotFather — Hermes now reads messages from other bots in group |
+
+### Checkpoint Recovery Flow
 
 ### Exists ✅
 | Hook | When | What it does |
@@ -137,6 +174,106 @@ on_post_compress() → reads pre_compact_<session>.md → _proactive_retrieve_fr
 
 ### Real-Time Memory Sync (Every Turn)
 Every turn calls `_sync_fact_realtime()` which writes to `~/.hermes/memories/MEMORY.md` — a rolling bounded log (last 20 entries). This survives compaction and process crash.
+
+## Wiki Self-Heal (Auto-Fix Broken Wikilinks)
+
+### CRITICAL Bug: Case-Sensitivity (2026-05-18)
+
+**Symptom:** `wiki_self_heal.py --fix --links` báo "Created X stubs" nhưng count = 0 dù có 5500+ broken links.
+
+**Root cause:** Two bugs working together:
+1. `_safe_slug()` trả về `"Foundation"` (case nguyên) nhưng `get_existing_pages()` lowercase hết → `"foundation"`. Kết quả: `"Foundation" not in existing_pages` = True → link bị đánh là "broken" dù page tồn tại.
+2. Path-separator links (`[[projects/foo]]`) bị skip thay vì convert thành `projects-foo`.
+
+**Fix in `wiki_self_heal.py`:**
+```python
+# Patched: _safe_slug() line ~265 — MUST return lowercase
+def _safe_slug(title: str) -> str:
+    normalized = re.sub(r'[\[\]`"\*_]', '', title.strip())
+    return normalized.replace("/", "-").lower()  # ← .lower() is critical
+
+# Patched: get_existing_pages() line ~192 — handle path-based wikilinks
+pages.add(full_stem.replace("/", "-"))  # ← Convert path/ to path-
+```
+
+**Result after fix:** 0 broken links (từ 5531), stubs created = 0 (vì links đã match existing pages).
+
+**⚠️ PITFALL: Two tools, different counts — always run both**
+
+| Tool | Broken Link Count | Regex/Logic | Use |
+|------|-------------------|-------------|-----|
+| `wiki_self_heal.py --fix --links` | 0 after fix | Slug-based match, lowercase | Auto-fix stubs |
+| `wiki_semantic_health.py` | 743 | Filename-based, reports edge cases | Edge case audit |
+
+**Why discrepancy:** `semantic_health` catches edge cases self_heal misses:
+- Empty wikilinks: `[[...]]`
+- Raw/ path links: `[[raw/transcripts/...]]` (raw/ intentionally excluded)
+- Self-referential: `[[self-healing-wiki]]` in self page
+- Links with spaces: `[[double brackets]]` — link text contains space, breaks slug match
+
+**Correct workflow:** Run BOTH — self_heal for fix, semantic_health for edge case audit.
+Never trust only one tool's count.
+
+### Two Health Tools, Different Counts
+
+| Tool | Broken Link Count | Regex/Logic |
+|------|-------------------|-------------|
+| `wiki_self_heal.py` | 0 after fix | Slug-based match, lowercase |
+| `wiki_semantic_health.py` | 743 | Filename-based, reports edge cases |
+
+**Why discrepancy:** `semantic_health` catches edge cases the other misses:
+- Empty wikilinks: `[[...]]`
+- Raw/ path links: `[[raw/transcripts/...]]` (raw/ is intentionally excluded from wiki)
+- Self-referential: `[[self-healing-wiki]]` in `concepts/self-healing-wiki.md`
+- Links with spaces: `[[double brackets]]`
+
+**Action:** Run BOTH — `self_heal.py --fix --links` for auto-fix, `semantic_health.py` for edge case audit.
+
+### Cron Auto-Fix (4AM)
+
+**Before (2026-05-18):** `wiki_health.sh` chỉ chạy `wiki_semantic_health.py` (detect-only, no fix).
+
+**After (2026-05-18):** Two phases:
+1. Phase 1: `wiki_semantic_health.py` → health score + JSON report
+2. Phase 2: `wiki_self_heal.py --fix --links` → auto-fix broken wikilinks + log stubs count
+
+### Related Files
+- `/Volumes/Storage-1/Hermes/wiki/scripts/wiki_self_heal.py` — auto-fix broken links
+- `/Volumes/Storage-1/Hermes/wiki/scripts/wiki_semantic_health.py` — health scoring + edge case audit
+- `~/.hermes/scripts/wiki_health.sh` — cron script (48 lines, patched 2026-05-18)
+
+### Path Separator Bug in `wiki_semantic_health.py` (RESOLVED 2026-05-18)
+
+**Symptom:** `wiki_semantic_health.py` báo 743 broken wikilinks — false positives từ path-separator links như `[[skills/index]]`, `[[projects/nexus]]`.
+
+**Root cause:** Lines 143, 167, 221 dùng regex capture group `${target}` nhưng **không normalize `/` thành `-`**. Kết quả `[[skills/index]]` → `skills/index` (slash giữ nguyên) → không khớp filename `skills-index.md` → báo broken.
+
+**Fix (2026-05-18):** Thêm `.replace("/", "-")` vào 3 lines:
+```python
+# Line 143, 167, 221 — BEFORE:
+target_normalized = re.sub(r'[\[\]`"*_]', '', m.group(1).strip())
+
+# AFTER (PATCHED):
+target_normalized = re.sub(r'[\[\]`"*_]', '', m.group(1).strip().replace("/", "-"))
+```
+
+**Commit:** `e82432b` — "fix: normalize / to - in wikilink path separator (lines 143,167,221)"
+
+**Note:** Đây là bug RIÊNG BIỆT với `_safe_slug()` case-sensitivity bug trong `wiki_self_heal.py`. Cả hai đều gây false positive broken link reports nhưng có nguyên nhân khác nhau.
+
+### Remaining Issues (743 broken per semantic_health)
+
+Sau khi fix path separator, `wiki_semantic_health.py` vẫn báo ~743 broken links — đây là edge cases THỰC SỰ mà `wiki_self_heal.py` không xử lý:
+
+| Type | Example | Action |
+|------|---------|--------|
+| Empty wikilinks | `[[...]]` in `projects/nexus/SPEC.md` | Manual review — may be draft content |
+| Raw/ links | `[[raw/transcripts/...]]` | Intentional — raw/ excluded from wiki |
+| Self-referential | `[[self-healing-wiki]]` in self page | Manual review — ignore in audit |
+| Missing concepts | `[[assembly]]` | Create content stub with real info |
+| 389 bad stubs | `projects-...`, `raw-...`, `knowledge_graph.py.md` | Need cleanup — from early path-separator bug run |
+
+**⚠️ Action item:** 389 bad stubs cần được xóa khỏi `concepts/` — đây là artifacts từ lúc path separator bug chưa fix, tạo stubs với tên sai.
 
 ## Related
 

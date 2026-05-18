@@ -693,6 +693,19 @@ See `references/python314-path-api.md` for full details.
 
 **Requirement:** When configuring any model (judge, auxiliary, vision, etc.), always use MiniMax provider unless user explicitly specifies otherwise. MiniMax-M2.7 is the default and only acceptable model for user-facing work.
 
+### Solution First, Explanation Never (Unless Asked)
+**Signal:** User says "Tại sao không phải là gateway?", "Sao lại là launch agent?" — expressing frustration at technical layer explanations.
+
+**Rule:** When a fix is found, deliver the solution directly. Do NOT explain the underlying mechanism unless the user explicitly asks. The user does not care WHY the problem happened — they care that it is fixed.
+
+**Example:**
+- ❌ "Vấn đề là OpenClaw chạy qua launchd service nên không inherit env vars..."
+- ✅ "Đã fix. Gateway đang live ✅"
+
+**When explanation IS needed (rare):** Keep it to one sentence. Do not diagram the architecture. Do not explain the difference between launchd and a regular process. If the user wants depth, they will ask.
+
+**This applies to ALL technical explanations:** launchd, launch agent, environment variables, process models, architecture layers — all of it. Solution first. One sentence max. Never volunteer technical depth.
+
 ### Gateway issues
 Check logs first:
 ```bash

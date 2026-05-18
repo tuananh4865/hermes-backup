@@ -5542,6 +5542,7 @@ class GatewayRunner:
         }
         # Bots admitted by {PLATFORM}_ALLOW_BOTS bypass the human allowlist (#4466).
         platform_allow_bots_map = {
+            Platform.TELEGRAM: "TELEGRAM_ALLOW_BOTS",
             Platform.DISCORD: "DISCORD_ALLOW_BOTS",
             Platform.FEISHU: "FEISHU_ALLOW_BOTS",
         }

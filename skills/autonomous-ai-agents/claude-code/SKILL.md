@@ -716,6 +716,30 @@ Use `/context` in interactive mode to see a colored grid of context usage. Key t
 10. **Start new sessions for distinct tasks** — sessions last 5 hours; fresh context is more efficient.
 11. **Use `--no-session-persistence`** in CI to avoid accumulating saved sessions on disk.
 
+## Installation Fix — Corrupt/Empty Binary
+
+Khi chạy `claude` bị "permission denied" hoặc symlink trỏ đến file 0 byte:
+
+```bash
+# 1. Identify corruption
+ls -la ~/.local/bin/claude   # symlink → 0 byte file
+which claude                  # đường dẫn nào đang dùng
+
+# 2. Xóa corrupt installation
+rm ~/.local/bin/claude
+rm -rf ~/.local/share/claude   # nếu có
+
+# 3. Reinstall via npm
+npm install -g @anthropic-ai/claude-code
+
+# 4. Verify
+claude --version
+```
+
+**Nguyên nhân thường gặp:** Symlink cũ trỏ đến file rỗng (0 bytes), thường do update/đặt lại npm package bị gián đoạn.
+
+**Lưu ý:** Cài qua npm → message "Auto-updates controlled by env var" là **bình thường**, không phải lỗi. Claude vẫn hoạt động. Muốn auto-update thật sự → cài bằng Homebrew: `brew install claude-code`.
+
 ## Pitfalls & Gotchas
 
 1. **Interactive mode REQUIRES tmux** — Claude Code is a full TUI app. Using `pty=true` alone in Hermes terminal works but tmux gives you `capture-pane` for monitoring and `send-keys` for input, which is essential for orchestration.
@@ -730,6 +754,8 @@ Use `/context` in interactive mode to see a colored grid of context usage. Key t
 10. **Slash commands (like `/commit`) only work in interactive mode** — in `-p` mode, describe the task in natural language instead.
 11. **`--bare` skips OAuth** — requires `ANTHROPIC_API_KEY` env var or an `apiKeyHelper` in settings.
 12. **Context degradation is real** — AI output quality measurably degrades above 70% context window usage. Monitor with `/context` and proactively `/compact`.
+13. **NPM install shows "Auto-updates controlled by env var"** — expected behavior, Claude vẫn hoạt động. Auto-update chỉ hoạt động khi cài qua Homebrew installer.
+14. **Permission denied with 0 byte binary** — corrupt install, fix the same way: remove and `npm install -g @anthropic-ai/claude-code`
 
 ## Rules for Hermes Agents
 

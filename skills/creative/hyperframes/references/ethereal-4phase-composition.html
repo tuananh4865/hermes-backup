@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Tech Ethereal Motion</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/CustomEase.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+      
+      /* Phase 1 - Dark Tech Sphere */
+      #p1-bg { position: absolute; width: 1920px; height: 1080px; background: #000; }
+      .p1-blob { position: absolute; border-radius: 50%; filter: blur(80px); transform: scale(0); }
+      .blob-a { width: 600px; height: 600px; background: radial-gradient(circle,#1a3a6e 0%,transparent 70%); top: 200px; left: 660px; }
+      .blob-b { width: 400px; height: 400px; background: radial-gradient(circle,#0d5cbc 0%,transparent 70%); top: 300px; left: 760px; }
+      .p1-ray { position: absolute; width: 2px; height: 0; background: linear-gradient(180deg,rgba(255,255,255,0.8) 0%,transparent 100%); top: 240px; left: 959px; transform-origin: top center; opacity: 0; }
+      .ray-1 { transform: rotate(-40deg); }
+      .ray-2 { transform: rotate(-20deg); }
+      .ray-3 { transform: rotate(0deg); }
+      .ray-4 { transform: rotate(20deg); }
+      .ray-5 { transform: rotate(40deg); }
+      #p1-vert { position: absolute; width: 2px; height: 0; background: linear-gradient(180deg,#fff 0%,rgba(163,201,255,0.6) 50%,transparent 100%); left: 959px; top: 240px; opacity: 0; }
+      #p1-horizon { position: absolute; width: 0; height: 2px; background: linear-gradient(90deg,transparent 0%,rgba(26,50,84,0.8) 40%,#fff 50%,rgba(26,50,84,0.8) 60%,transparent 100%); top: 540px; left: 360px; filter: blur(1px); opacity: 0; }
+      #p1-orb { position: absolute; width: 0; height: 0; border-radius: 50%; background: radial-gradient(circle at 40% 35%,#fff 0%,#a3c9ff 15%,#4a90e2 40%,#1a5cb8 70%,#0a2a5e 100%); top: 540px; left: 960px; transform: translate(-50%,-50%) scale(0); box-shadow: 0 0 100px rgba(74,144,226,0.8),0 0 200px rgba(74,144,226,0.5),0 0 400px rgba(74,144,226,0.3),inset 0 0 80px rgba(255,255,255,0.3); }
+      .p1-sphere { position: absolute; border-radius: 50%; transform: scale(0); }
+      .p1-s1 { width: 80px; height: 80px; background: radial-gradient(circle at 30% 30%,#6ba3ff,#1a4a8a); top: 420px; left: 520px; box-shadow: 0 0 40px rgba(74,144,226,0.6); }
+      .p1-s2 { width: 50px; height: 50px; background: radial-gradient(circle at 30% 30%,#a3c9ff,#2a6ab8); top: 280px; left: 680px; box-shadow: 0 0 30px rgba(74,144,226,0.5); }
+      .p1-s3 { width: 100px; height: 100px; background: radial-gradient(circle at 30% 30%,#87ceeb,#1a5a9a); top: 500px; left: 1100px; box-shadow: 0 0 50px rgba(74,144,226,0.5); }
+      .p1-s4 { width: 35px; height: 35px; background: radial-gradient(circle at 30% 30%,#c3e0ff,#3a7ac8); top: 350px; left: 1180px; box-shadow: 0 0 20px rgba(74,144,226,0.4); }
+      .p1-s5 { width: 60px; height: 60px; background: radial-gradient(circle at 30% 30%,#7ab8ff,#1a5ca8); top: 200px; left: 900px; box-shadow: 0 0 35px rgba(74,144,226,0.5); }
+      .p1-s6 { width: 45px; height: 45px; background: radial-gradient(circle at 30% 30%,#9acfff,#2a6ab8); top: 580px; left: 780px; box-shadow: 0 0 25px rgba(74,144,226,0.4); }
+      .p1-s7 { width: 70px; height: 70px; background: radial-gradient(circle at 30% 30%,#6ba3ff,#1a4a8a); top: 160px; left: 1100px; box-shadow: 0 0 40px rgba(74,144,226,0.5); }
+      .p1-s8 { width: 40px; height: 40px; background: radial-gradient(circle at 30% 30%,#b3d4ff,#3a7ac8); top: 620px; left: 1250px; box-shadow: 0 0 22px rgba(74,144,226,0.4); }
+      .p1-micro { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,0.9); transform: scale(0); }
+      #p1-title { position: absolute; font-size: 64px; font-weight: 700; letter-spacing: 0.12em; color: #fff; text-transform: uppercase; top: 820px; left: 960px; transform: translateX(-50%) translateY(30px); opacity: 0; text-shadow: 0 0 60px rgba(74,144,226,0.8),0 0 120px rgba(74,144,226,0.4); }
+      #p1-sub { position: absolute; font-size: 20px; font-weight: 300; letter-spacing: 0.4em; color: rgba(163,201,255,0.8); text-transform: uppercase; top: 895px; left: 960px; transform: translateX(-50%) translateY(20px); opacity: 0; }
+
+      /* Phase 2 - Glassmorphism UI */
+      #p2-bg { position: absolute; width: 1920px; height: 1080px; background: linear-gradient(135deg,#0a0a1a 0%,#1a1a3a 50%,#0a1525 100%); opacity: 0; }
+      .p2-bokeh { position: absolute; border-radius: 50%; filter: blur(60px); transform: scale(0); }
+      .p2-b1 { width: 500px; height: 500px; background: radial-gradient(circle,rgba(99,102,241,0.6) 0%,transparent 70%); bottom: -100px; right: -100px; }
+      .p2-b2 { width: 400px; height: 400px; background: radial-gradient(circle,rgba(168,85,247,0.5) 0%,transparent 70%); top: -50px; left: 200px; }
+      .p2-b3 { width: 350px; height: 350px; background: radial-gradient(circle,rgba(59,130,246,0.5) 0%,transparent 70%); bottom: 100px; left: 100px; }
+      #p2-glass { position: absolute; width: 1200px; height: 700px; background: rgba(255,255,255,0.06); backdrop-filter: blur(40px); border: 1px solid rgba(255,255,255,0.12); border-radius: 24px; top: 190px; left: 360px; transform: translateY(-60px); opacity: 0; box-shadow: 0 40px 100px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.1); }
+      #p2-header { position: absolute; width: 100%; height: 60px; background: linear-gradient(90deg,rgba(64,81,255,0.8),rgba(30,43,153,0.9)); border-radius: 24px 24px 0 0; transform: translateY(-60px); opacity: 0; }
+      .p2-win { position: absolute; width: 14px; height: 14px; border-radius: 50%; top: 22px; }
+      .p2-wr { background: #FF5F56; left: 30px; }
+      .p2-wy { background: #FFBD2E; left: 55px; }
+      .p2-wg { background: #27C93F; left: 80px; }
+      #p2-sidebar { position: absolute; width: 80px; height: calc(100% - 60px); background: rgba(255,255,255,0.03); border-right: 1px solid rgba(255,255,255,0.08); top: 60px; transform: translateX(-100px); opacity: 0; }
+      .p2-si { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; margin: 15px auto; }
+      #p2-content { position: absolute; left: 80px; top: 60px; width: calc(100% - 80px); height: calc(100% - 60px); opacity: 0; }
+      #p2-circle { position: absolute; width: 280px; height: 280px; border-radius: 50%; background: linear-gradient(135deg,#FFD179 0%,#FF9A62 50%,#FF7051 100%); top: 180px; left: 460px; transform: scale(0); box-shadow: 0 0 80px rgba(255,154,98,0.6),inset 0 -20px 40px rgba(255,112,81,0.4); }
+      #p2-selbox { position: absolute; width: 320px; height: 320px; border: 1px solid rgba(0,0,0,0.8); border-radius: 4px; top: 160px; left: 440px; transform: scale(0.8) rotate(-5deg); opacity: 0; }
+      .p2-h { position: absolute; width: 10px; height: 10px; background: #fff; border: 1px solid #000; border-radius: 50%; }
+      .h-tl { top: -5px; left: -5px; }
+      .h-t { top: -5px; left: calc(50% - 5px); }
+      .h-tr { top: -5px; right: -5px; }
+      .h-l { top: calc(50% - 5px); left: -5px; }
+      .h-r { top: calc(50% - 5px); right: -5px; }
+      .h-bl { bottom: -5px; left: -5px; }
+      .h-b { bottom: -5px; left: calc(50% - 5px); }
+      .h-br { bottom: -5px; right: -5px; }
+      .p2-panel { position: absolute; background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transform: translateX(40px); opacity: 0; }
+      #p2-pt { width: 200px; height: 120px; right: 60px; top: 100px; }
+      #p2-pb { width: 200px; height: 150px; right: 60px; top: 240px; }
+      #p2-grad { width: 60px; height: 60px; border-radius: 50%; background: radial-gradient(circle,#2979FF,#A3C2FF); position: absolute; top: 20px; left: 20px; box-shadow: 0 0 30px rgba(41,121,255,0.5); }
+      .p2-pl { position: absolute; height: 8px; background: rgba(255,255,255,0.15); border-radius: 4px; }
+
+      /* Phase 3 - Ethereal Light */
+      #p3-bg { position: absolute; width: 1920px; height: 1080px; background: linear-gradient(180deg,#b2a7fd 0%,#c4b8ff 30%,#e9f2ff 60%,#f5f0ff 100%); opacity: 0; }
+      #p3-bloom { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle,rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.4) 30%,transparent 70%); top: -100px; left: 660px; filter: blur(40px); transform: scale(0); }
+      #p3-streak { position: absolute; width: 0; height: 20px; background: linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.8) 40%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.8) 60%,transparent 100%); top: 280px; left: 560px; filter: blur(10px); transform: rotate(-8deg) translateX(-200px); opacity: 0; }
+      .p3-flare { position: absolute; border-radius: 50%; background: radial-gradient(circle,rgba(255,255,255,0.9) 0%,rgba(255,200,100,0.3) 50%,transparent 70%); transform: scale(0); }
+      .p3-f1 { width: 100px; height: 100px; top: 200px; left: 900px; }
+      .p3-f2 { width: 60px; height: 60px; top: 250px; left: 1100px; }
+      .p3-pane { position: absolute; background: rgba(255,255,255,0.25); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.4); border-radius: 16px; transform: translateY(80px) rotate(0deg); opacity: 0; }
+      .p3-p1 { width: 400px; height: 250px; top: 200px; left: 200px; transform: translateY(80px) rotate(-8deg); }
+      .p3-p2 { width: 350px; height: 200px; top: 300px; right: 180px; transform: translateY(80px) rotate(5deg); }
+      .p3-p3 { width: 500px; height: 300px; bottom: 200px; left: 700px; transform: translateY(80px) rotate(-3deg); }
+      #p3-s1 { position: absolute; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle at 35% 35%,#fff 0%,#3A62F8 40%,#1a3a9a 100%); top: 150px; right: 300px; transform: scale(0); box-shadow: 0 0 80px rgba(58,98,248,0.6),0 0 160px rgba(58,98,248,0.3); }
+      #p3-s2 { position: absolute; width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle at 35% 35%,#fff 0%,#C09470 40%,#8a6540 100%); bottom: 350px; left: 400px; transform: scale(0); box-shadow: 0 0 60px rgba(192,148,112,0.5); }
+      .p3-dust { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,0.8); transform: scale(0); }
+      #p3-title { position: absolute; font-size: 72px; font-weight: 700; letter-spacing: 0.1em; color: #1a1a4a; text-align: center; top: 700px; left: 960px; transform: translateX(-50%) translateY(40px); opacity: 0; }
+      #p3-sub { position: absolute; font-size: 24px; font-weight: 300; letter-spacing: 0.3em; color: rgba(26,26,74,0.7); text-align: center; top: 780px; left: 960px; transform: translateX(-50%) translateY(30px); opacity: 0; }
+
+      /* Phase 4 - Clean Reveal */
+      #p4-bg { position: absolute; width: 1920px; height: 1080px; background: #000; opacity: 0; }
+      #p4-logo { position: absolute; width: 200px; height: 200px; top: 340px; left: 760px; transform: scale(0); }
+      .p4-ring { position: absolute; border-radius: 50%; border: 4px solid transparent; transform: scale(0); }
+      .p4-r1 { width: 200px; height: 200px; border-color: rgba(0,181,173,0.8); top: 0; left: 0; }
+      .p4-r2 { width: 160px; height: 160px; border-color: rgba(0,140,149,0.9); top: 20px; left: 20px; }
+      .p4-r3 { width: 120px; height: 120px; border-color: #00B5AD; top: 40px; left: 40px; }
+      .p4-core { position: absolute; width: 60px; height: 60px; background: #00B5AD; border-radius: 50%; top: 70px; left: 70px; transform: scale(0); box-shadow: 0 0 40px rgba(0,181,173,0.8); }
+      #p4-text { position: absolute; font-size: 48px; font-weight: 700; letter-spacing: 0.2em; color: #fff; text-transform: uppercase; top: 570px; left: 960px; transform: translateX(-50%) translateY(20px); opacity: 0; }
+      #p4-sub { position: absolute; font-size: 18px; font-weight: 400; letter-spacing: 0.4em; color: rgba(255,255,255,0.7); text-transform: uppercase; top: 630px; left: 960px; transform: translateX(-50%) translateY(15px); opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <!-- Phase 1 -->
+    <div id="p1-bg" data-composition-id="main-graphics" data-width="1920" data-height="1080">
+      <div class="p1-blob blob-a"></div>
+      <div class="p1-blob blob-b"></div>
+      <div class="p1-ray ray-1"></div>
+      <div class="p1-ray ray-2"></div>
+      <div class="p1-ray ray-3"></div>
+      <div class="p1-ray ray-4"></div>
+      <div class="p1-ray ray-5"></div>
+      <div id="p1-vert"></div>
+      <div id="p1-horizon"></div>
+      <div id="p1-orb"></div>
+      <div class="p1-sphere p1-s1"></div>
+      <div class="p1-sphere p1-s2"></div>
+      <div class="p1-sphere p1-s3"></div>
+      <div class="p1-sphere p1-s4"></div>
+      <div class="p1-sphere p1-s5"></div>
+      <div class="p1-sphere p1-s6"></div>
+      <div class="p1-sphere p1-s7"></div>
+      <div class="p1-sphere p1-s8"></div>
+      <div class="p1-micro" style="top:300px;left:400px;"></div>
+      <div class="p1-micro" style="top:500px;left:600px;"></div>
+      <div class="p1-micro" style="top:200px;left:800px;"></div>
+      <div class="p1-micro" style="top:600px;left:1000px;"></div>
+      <div class="p1-micro" style="top:400px;left:1200px;"></div>
+      <div class="p1-micro" style="top:700px;left:500px;"></div>
+      <div class="p1-micro" style="top:250px;left:1100px;"></div>
+      <div class="p1-micro" style="top:550px;left:1300px;"></div>
+      <div class="p1-micro" style="top:180px;left:700px;"></div>
+      <div class="p1-micro" style="top:650px;left:900px;"></div>
+      <div class="p1-micro" style="top:350px;left:1400px;"></div>
+      <div class="p1-micro" style="top:480px;left:350px;"></div>
+      <div id="p1-title">TECH ETHEREAL</div>
+      <div id="p1-sub">Motion Graphics 2026</div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div id="p2-bg">
+      <div class="p2-bokeh p2-b1"></div>
+      <div class="p2-bokeh p2-b2"></div>
+      <div class="p2-bokeh p2-b3"></div>
+      <div id="p2-glass">
+        <div id="p2-header">
+          <div class="p2-win p2-wr"></div>
+          <div class="p2-win p2-wy"></div>
+          <div class="p2-win p2-wg"></div>
+        </div>
+        <div id="p2-sidebar">
+          <div class="p2-si"></div>
+          <div class="p2-si"></div>
+          <div class="p2-si"></div>
+          <div class="p2-si"></div>
+          <div class="p2-si"></div>
+        </div>
+        <div id="p2-content">
+          <div id="p2-circle"></div>
+          <div id="p2-selbox">
+            <div class="p2-h h-tl"></div>
+            <div class="p2-h h-t"></div>
+            <div class="p2-h h-tr"></div>
+            <div class="p2-h h-l"></div>
+            <div class="p2-h h-r"></div>
+            <div class="p2-h h-bl"></div>
+            <div class="p2-h h-b"></div>
+            <div class="p2-h h-br"></div>
+          </div>
+          <div id="p2-pt" class="p2-panel">
+            <div id="p2-grad"></div>
+            <div class="p2-pl" style="width:100px;top:30px;left:100px;"></div>
+            <div class="p2-pl" style="width:80px;top:50px;left:100px;"></div>
+            <div class="p2-pl" style="width:60px;top:70px;left:100px;"></div>
+          </div>
+          <div id="p2-pb" class="p2-panel">
+            <div class="p2-pl" style="width:120px;top:20px;left:20px;"></div>
+            <div class="p2-pl" style="width:100px;top:45px;left:20px;"></div>
+            <div class="p2-pl" style="width:140px;top:70px;left:20px;"></div>
+            <div class="p2-pl" style="width:90px;top:95px;left:20px;"></div>
+            <div class="p2-pl" style="width:110px;top:120px;left:20px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div id="p3-bg">
+      <div id="p3-bloom"></div>
+      <div id="p3-streak"></div>
+      <div class="p3-flare p3-f1"></div>
+      <div class="p3-flare p3-f2"></div>
+      <div class="p3-pane p3-p1"></div>
+      <div class="p3-pane p3-p2"></div>
+      <div class="p3-pane p3-p3"></div>
+      <div id="p3-s1"></div>
+      <div id="p3-s2"></div>
+      <div class="p3-dust" style="top:200px;left:300px;"></div>
+      <div class="p3-dust" style="top:350px;left:500px;"></div>
+      <div class="p3-dust" style="top:450px;left:700px;"></div>
+      <div class="p3-dust" style="top:250px;left:900px;"></div>
+      <div class="p3-dust" style="top:400px;left:1100px;"></div>
+      <div class="p3-dust" style="top:550px;left:1300px;"></div>
+      <div class="p3-dust" style="top:300px;left:1500px;"></div>
+      <div class="p3-dust" style="top:500px;left:200px;"></div>
+      <div class="p3-dust" style="top:600px;left:400px;"></div>
+      <div class="p3-dust" style="top:150px;left:600px;"></div>
+      <div class="p3-dust" style="top:380px;left:800px;"></div>
+      <div class="p3-dust" style="top:520px;left:1000px;"></div>
+      <div id="p3-title">ETHEREAL</div>
+      <div id="p3-sub">Light & Motion</div>
+    </div>
+
+    <!-- Phase 4 -->
+    <div id="p4-bg">
+      <div id="p4-logo">
+        <div class="p4-ring p4-r1"></div>
+        <div class="p4-ring p4-r2"></div>
+        <div class="p4-ring p4-r3"></div>
+        <div class="p4-core"></div>
+      </div>
+      <div id="p4-text">HYPERFRAMES</div>
+      <div id="p4-sub">Motion Graphics Engine</div>
+    </div>
+
+    <script>
+      gsap.registerPlugin();
+      CustomEase && CustomEase.create("ethereal", "M0,0 C0.05,0 0.15,0.75 0.2,0.9 0.3,1 0.7,1 0.8,1 0.9,1 1,1 1,1");
+      
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main-graphics"] = tl;
+
+      /* ===== PHASE 1: DARK TECH SPHERE (0-10s) ===== */
+      tl.to(".blob-a", { scale: 1, duration: 3, ease: "power3.out" }, 0);
+      tl.to(".blob-b", { scale: 1, duration: 2.5, ease: "power3.out" }, 0.3);
+      tl.to(".p1-ray", { height: 300, opacity: 0.6, duration: 0.8, stagger: 0.08, ease: "power3.out" }, 1);
+      tl.to(".p1-ray", { opacity: 0, duration: 0.6, stagger: 0.05, ease: "power2.in" }, 2.5);
+      tl.to("#p1-vert", { height: 500, opacity: 0.6, duration: 1.5, ease: "power2.out" }, 1.2);
+      tl.to("#p1-horizon", { width: 1200, opacity: 0.8, duration: 1.2, ease: "power3.out" }, 1.8);
+      tl.to("#p1-orb", { scale: 1, duration: 2, ease: "back.out(1.2)" }, 2);
+      tl.to("#p1-orb", { boxShadow: "0 0 140px rgba(74,144,226,1),0 0 280px rgba(74,144,226,0.7),0 0 500px rgba(74,144,226,0.5),inset 0 0 100px rgba(255,255,255,0.5)", duration: 1.5, ease: "sine.inOut", yoyo: true, repeat: 2 }, 3);
+      
+      // Floating spheres pop in with stagger and float
+      tl.to(".p1-s1", { scale: 1, duration: 1, ease: "back.out(1.5)" }, 2.2);
+      tl.to(".p1-s1", { y: -15, duration: 2, ease: "sine.inOut", yoyo: true, repeat: 2 }, 3.5);
+      tl.to(".p1-s2", { scale: 1, duration: 1, ease: "back.out(1.5)" }, 2.4);
+      tl.to(".p1-s2", { y: 12, duration: 2.5, ease: "sine.inOut", yoyo: true, repeat: 2 }, 3.8);
+      tl.to(".p1-s3", { scale: 1, duration: 1, ease: "back.out(1.5)" }, 2.6);
+      tl.to(".p1-s3", { y: -20, duration: 2.2, ease: "sine.inOut", yoyo: true, repeat: 2 }, 4);
+      tl.to(".p1-s4", { scale: 1, duration: 0.8, ease: "back.out(1.5)" }, 2.8);
+      tl.to(".p1-s4", { y: 10, duration: 1.8, ease: "sine.inOut", yoyo: true, repeat: 2 }, 4.2);
+      tl.to(".p1-s5", { scale: 1, duration: 1, ease: "back.out(1.5)" }, 3);
+      tl.to(".p1-s5", { y: -18, duration: 2.3, ease: "sine.inOut", yoyo: true, repeat: 2 }, 4.5);
+      tl.to(".p1-s6", { scale: 1, duration: 0.8, ease: "back.out(1.5)" }, 3.2);
+      tl.to(".p1-s6", { y: 14, duration: 2, ease: "sine.inOut", yoyo: true, repeat: 2 }, 4.8);
+      tl.to(".p1-s7", { scale: 1, duration: 1, ease: "back.out(1.5)" }, 3.4);
+      tl.to(".p1-s7", { y: -12, duration: 2.5, ease: "sine.inOut", yoyo: true, repeat: 2 }, 5);
+      tl.to(".p1-s8", { scale: 1, duration: 0.8, ease: "back.out(1.5)" }, 3.6);
+      tl.to(".p1-s8", { y: 16, duration: 1.9, ease: "sine.inOut", yoyo: true, repeat: 2 }, 5.2);
+      
+      // Micro particles
+      tl.to(".p1-micro", { scale: 1, opacity: 0.8, duration: 1, stagger: { each: 0.07, from: "random" }, ease: "power2.out" }, 2.5);
+      tl.to(".p1-micro", { opacity: 0, duration: 1, stagger: { each: 0.05, from: "random" }, ease: "power2.in" }, 7);
+      
+      // Title and subtitle slide up + fade
+      tl.to("#p1-title", { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }, 4.5);
+      tl.to("#p1-sub", { y: 0, opacity: 0.8, duration: 1.5, ease: "power3.out" }, 4.8);
+      tl.to("#p1-bg", { opacity: 0, duration: 2, ease: "power2.inOut" }, 8);
+
+      /* ===== PHASE 2: GLASSMORPHISM UI (10-20s) ===== */
+      tl.to("#p2-bg", { opacity: 1, duration: 1, ease: "power2.out" }, 10);
+      tl.to(".p2-b1", { scale: 1.2, duration: 3, ease: "power2.out" }, 10.2);
+      tl.to(".p2-b2", { scale: 1.1, duration: 2.5, ease: "power2.out" }, 10.5);
+      tl.to(".p2-b3", { scale: 1, duration: 2.8, ease: "power2.out" }, 10.8);
+      tl.to("#p2-glass", { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }, 10.5);
+      tl.to("#p2-header", { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, 11.2);
+      tl.to("#p2-sidebar", { x: 0, opacity: 1, duration: 1, ease: "back.out(1.3)" }, 11.5);
+      tl.to("#p2-content", { opacity: 1, duration: 0.8, ease: "power2.out" }, 11.8);
+      tl.to("#p2-circle", { scale: 1, duration: 1.2, ease: "back.out(1.4)" }, 12.2);
+      tl.to("#p2-circle", { y: -10, duration: 2, ease: "sine.inOut", yoyo: true, repeat: 3 }, 13);
+      tl.to("#p2-selbox", { scale: 1, rotation: 0, opacity: 1, duration: 0.8, ease: "back.out(1.5)" }, 12.8);
+      tl.to(".p2-panel", { x: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out" }, 13.2);
+      tl.to("#p2-bg", { opacity: 0, duration: 2, ease: "power2.inOut" }, 18);
+
+      /* ===== PHASE 3: ETHEREAL LIGHT (20-26s) ===== */
+      tl.to("#p3-bg", { opacity: 1, duration: 1.5, ease: "power2.out" }, 20);
+      tl.to("#p3-bloom", { scale: 1, duration: 3, ease: "power3.out" }, 20.2);
+      tl.to("#p3-streak", { width: 800, x: 0, opacity: 0.8, duration: 1.5, ease: "power3.out" }, 20.8);
+      tl.to(".p3-flare", { scale: 1, duration: 1, stagger: 0.2, ease: "back.out(2)" }, 21.2);
+      tl.to(".p3-pane", { y: 0, opacity: 0.5, duration: 2, stagger: 0.25, ease: "power3.out" }, 21);
+      tl.to("#p3-s1", { scale: 1, duration: 1.5, ease: "back.out(1.3)" }, 21.5);
+      tl.to("#p3-s1", { rotation: 360, duration: 12, ease: "none", repeat: 1 }, 22.5);
+      tl.to("#p3-s2", { scale: 1, duration: 1.2, ease: "back.out(1.4)" }, 21.8);
+      tl.to("#p3-s2", { rotation: -360, duration: 10, ease: "none", repeat: 1 }, 22.8);
+      tl.to(".p3-dust", { scale: 1, opacity: 0.7, duration: 1, stagger: { each: 0.06, from: "random" }, ease: "power2.out" }, 21.5);
+      tl.to("#p3-title", { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }, 22.5);
+      tl.to("#p3-sub", { y: 0, opacity: 0.7, duration: 1.5, ease: "power3.out" }, 23);
+      tl.to("#p3-bg", { opacity: 0, duration: 2, ease: "power2.inOut" }, 24);
+
+      /* ===== PHASE 4: CLEAN REVEAL (26-30s) ===== */
+      tl.to("#p4-bg", { opacity: 1, duration: 1, ease: "power2.out" }, 26);
+      tl.to("#p4-logo", { scale: 1, duration: 0.1 }, 26.5);
+      tl.to(".p4-r1", { scale: 1, duration: 1.2, ease: "back.out(1.8)" }, 26.6);
+      tl.to(".p4-r2", { scale: 1, duration: 1.1, ease: "back.out(1.5)" }, 26.9);
+      tl.to(".p4-r3", { scale: 1, duration: 1, ease: "back.out(1.3)" }, 27.2);
+      tl.to(".p4-core", { scale: 1, duration: 0.8, ease: "back.out(2.5)" }, 27.4);
+      tl.to(".p4-core", { boxShadow: "0 0 100px rgba(0,181,173,1)", duration: 0.8, ease: "sine.inOut", yoyo: true, repeat: 3 }, 27.8);
+      tl.to("#p4-text", { y: 0, opacity: 1, duration: 1.2, ease: "power3.out" }, 27.8);
+      tl.to("#p4-sub", { y: 0, opacity: 0.7, duration: 1.2, ease: "power3.out" }, 28.2);
+    </script>
+  </body>
+</html>
