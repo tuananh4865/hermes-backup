@@ -27,26 +27,26 @@
     "archived_at": null,
     "created_at": "2026-05-03T01:52:15.887993+00:00",
     "last_patched_at": "2026-05-10T17:08:46.427765+00:00",
-    "last_used_at": "2026-05-14T07:39:01.184431+00:00",
-    "last_viewed_at": "2026-05-14T07:39:01.183350+00:00",
+    "last_used_at": "2026-05-19T17:06:32.751069+00:00",
+    "last_viewed_at": "2026-05-19T17:06:32.749513+00:00",
     "patch_count": 16,
     "pinned": false,
     "state": "active",
-    "use_count": 17,
-    "view_count": 16
+    "use_count": 18,
+    "view_count": 17
   },
   "browser-harness-install": {
     "archived_at": null,
     "created_at": "2026-05-10T13:19:27.167515+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-05-10T13:19:27.167530+00:00",
-    "last_viewed_at": null,
+    "last_used_at": "2026-05-19T17:06:46.385716+00:00",
+    "last_viewed_at": "2026-05-19T17:06:46.384676+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 0
+    "use_count": 2,
+    "view_count": 1
   },
   "business-opportunity-research": {
     "archived_at": null,
@@ -151,14 +151,14 @@
   "hermes-autoresearch": {
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
-    "last_patched_at": "2026-05-18T19:06:09.738495+00:00",
-    "last_used_at": "2026-05-18T19:05:24.945523+00:00",
-    "last_viewed_at": "2026-05-18T19:05:24.944038+00:00",
-    "patch_count": 181,
+    "last_patched_at": "2026-05-19T17:07:30.643540+00:00",
+    "last_used_at": "2026-05-19T19:00:53.783327+00:00",
+    "last_viewed_at": "2026-05-19T17:06:32.748661+00:00",
+    "patch_count": 182,
     "pinned": false,
     "state": "active",
-    "use_count": 180,
-    "view_count": 158
+    "use_count": 183,
+    "view_count": 159
   },
   "hermes-external-skills-setup": {
     "archived_at": null,
@@ -254,14 +254,14 @@
     "archived_at": null,
     "created_at": "2026-05-17T18:15:32.084304+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-05-18T15:59:24.738720+00:00",
-    "last_used_at": "2026-05-18T17:05:40.408538+00:00",
-    "last_viewed_at": "2026-05-18T17:05:40.407418+00:00",
-    "patch_count": 26,
+    "last_patched_at": "2026-05-19T04:29:40.709988+00:00",
+    "last_used_at": "2026-05-19T17:06:54.779652+00:00",
+    "last_viewed_at": "2026-05-19T17:06:54.778684+00:00",
+    "patch_count": 28,
     "pinned": false,
     "state": "active",
-    "use_count": 27,
-    "view_count": 27
+    "use_count": 29,
+    "view_count": 29
   },
   "research-analyst": {
     "archived_at": null,

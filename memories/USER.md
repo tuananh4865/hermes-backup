@@ -6,9 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [preference] có skill nào bị loaded hay consulted liên quan [HIGH]
-- 2026-05-18: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [tool] fix [HIGH]
 - [tool] reinstall [HIGH]
 - 2026-05-18: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [project] correctly [HIGH]
@@ -35,8 +32,11 @@
 - [file] ** [HIGH]
 - [file] didn't [HIGH]
 - [file] finally [HIGH]
-- [file] md [HIGH]
-§ [SESSIONS] — session history summaries
 - 2026-05-19: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [file] md
+- [file] json
+- 2026-05-19: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+§ [SESSIONS] — session history summaries
+- 2026-05-20: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

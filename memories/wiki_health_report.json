@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-05-18T15:58:46.092452",
-  "total_files": 6936,
-  "total_issues": 1668,
+  "timestamp": "2026-05-19T04:00:09.973691",
+  "total_files": 6973,
+  "total_issues": 1742,
   "results": {
     "missing_frontmatter": {
       "missing": null,
@@ -25,7 +25,7 @@
     },
     "broken_links": {
       "broken": null,
-      "count": 12,
+      "count": 86,
       "stale": null,
       "orphans": null,
       "self_refs": null,
@@ -48,6 +48,124 @@
         "script viral — combo 200 cái khẩu trang 5d thịnh phát": [
           "learning/san-pham-khau-trang-5d-thinh-phat-HOOK6-9.md",
           "learning/san-pham-khau-trang-5d-thinh-phat-200-cai-GENZ.md"
+        ],
+        "phân tích: kem body chống nắng mizumi — trinh meow": [
+          "learning/tiktok-viral-script/analysis/2026-04-17/trinhmeow/7628586917017324820-analysis.md",
+          "learning/tiktok-viral-script/analysis/2026-04-20/trinhmeow/7628586917017324820-analysis.md"
+        ],
+        "phân tích: top sản phẩm xứng đáng viral — trinh meow": [
+          "learning/tiktok-viral-script/analysis/2026-04-16/trinhmeow/7624764613246160149-analysis.md",
+          "learning/tiktok-viral-script/analysis/2026-04-18/trinhmeow/7624764613246160149-analysis.md"
+        ],
+        "wiki quality campaign": [
+          "projects/wiki-quality-campaign/hub.md",
+          "concepts/Wiki Quality Campaign.md",
+          "concepts/wiki-quality-campaign.md",
+          "concepts/wikiqualitycampaign.md"
+        ],
+        "tiktok content strategy": [
+          "projects/tiktok-content-strategy/hub.md",
+          "concepts/tiktok-content-strategy.md"
+        ],
+        "nexus — obsidian competitor": [
+          "projects/nexus/index.md",
+          "projects/nexus/hub.md"
+        ],
+        "my wiki redesign plan": [
+          "projects/my-wiki-redesign/plan.md",
+          "concepts/projects/my-wiki-redesign/plan.md"
+        ],
+        "hermes dojo": [
+          "projects/hermes-dojo/README.md",
+          "projects/hermes-dojo/hub.md",
+          "concepts/hermesdojo.md",
+          "concepts/Hermes Dojo.md"
+        ],
+        "surgical change protocol": [
+          "projects/hermes-dojo/skills/behavior/surgical-change-protocol/SKILL.md",
+          "concepts/surgical-change-protocol.md"
+        ],
+        "memory manage": [
+          "projects/hermes-dojo/skills/memory/memory-manage/SKILL.md",
+          "concepts/memory-manage.md"
+        ],
+        "update project state": [
+          "projects/hermes-dojo/skills/memory/update-project-state/SKILL.md",
+          "concepts/update-project-state.md"
+        ],
+        "mistake logging": [
+          "projects/hermes-dojo/skills/memory/mistake-logging/SKILL.md",
+          "concepts/mistake-logging.md"
+        ],
+        "contradiction resolution": [
+          "projects/hermes-dojo/skills/quality/contradiction-resolution/SKILL.md",
+          "concepts/contradiction-resolution.md"
+        ],
+        "wiki quality score": [
+          "projects/hermes-dojo/skills/quality/wiki-quality-score/SKILL.md",
+          "concepts/wiki-quality-score.md"
+        ],
+        "periodic nudge": [
+          "projects/hermes-dojo/skills/lifecycle/periodic-nudge/SKILL.md",
+          "concepts/periodic-nudge.md"
+        ],
+        "graph query": [
+          "projects/hermes-dojo/skills/lifecycle/graph-query/SKILL.md",
+          "concepts/graph-query.md"
+        ],
+        "skill from experience": [
+          "projects/hermes-dojo/skills/lifecycle/skill-from-experience/SKILL.md",
+          "concepts/skill-from-experience.md"
+        ],
+        "crystallization": [
+          "projects/hermes-dojo/skills/lifecycle/crystallization/SKILL.md",
+          "concepts/crystallization.md"
+        ],
+        "entity extraction": [
+          "projects/hermes-dojo/skills/lifecycle/entity-extraction/SKILL.md",
+          "concepts/entity-extraction.md"
+        ],
+        "weekly review": [
+          "projects/hermes-dojo/skills/proactive/weekly-review/SKILL.md",
+          "concepts/weekly-review.md"
+        ],
+        "pattern discovery": [
+          "projects/hermes-dojo/skills/proactive/pattern-discovery/SKILL.md",
+          "concepts/pattern-discovery.md"
+        ],
+        "stale detection": [
+          "projects/hermes-dojo/skills/proactive/stale-detection/SKILL.md",
+          "concepts/stale-detection.md"
+        ],
+        "daily review": [
+          "projects/hermes-dojo/skills/proactive/daily-review/SKILL.md",
+          "concepts/daily-review.md"
+        ],
+        "implement command": [
+          "projects/hermes-dojo/skills/process/implement-command/SKILL.md",
+          "concepts/implement-command.md"
+        ],
+        "plan command": [
+          "projects/hermes-dojo/skills/process/plan-command/SKILL.md",
+          "concepts/plan-command.md"
+        ],
+        "cascade prevention": [
+          "projects/hermes-dojo/skills/process/cascade-prevention/SKILL.md",
+          "concepts/cascadeprevention.md",
+          "concepts/cascade-prevention.md",
+          "concepts/cascade prevention.md"
+        ],
+        "research command": [
+          "projects/hermes-dojo/skills/process/research-command/SKILL.md",
+          "concepts/research-command.md"
+        ],
+        "wiki quality improvement": [
+          "projects/wiki-quality-improvement/hub.md",
+          "concepts/wiki-quality-improvement.md"
+        ],
+        "wiki self-maintaining system": [
+          "projects/wiki-self-maintaining/hub.md",
+          "concepts/Wiki Self-Maintaining System.md"
         ],
         "directory protocol": [
           "concepts/Directory Protocol.md",
@@ -73,10 +191,6 @@
           "concepts/formal-verification.md",
           "concepts/formal verification.md",
           "concepts/formalverification.md"
-        ],
-        "weekly review": [
-          "concepts/weekly-review.md",
-          "projects/hermes-dojo/skills/proactive/weekly-review/SKILL.md"
         ],
         "data compression": [
           "concepts/Data Compression.md",
@@ -283,10 +397,6 @@
           "concepts/purefunction.md",
           "concepts/Pure Function.md",
           "concepts/pure-function.md"
-        ],
-        "daily review": [
-          "concepts/daily-review.md",
-          "projects/hermes-dojo/skills/proactive/daily-review/SKILL.md"
         ],
         "technical writing": [
           "concepts/technical-writing.md",
@@ -1011,10 +1121,6 @@
           "concepts/http-sms-api.md",
           "concepts/httpsmsapi.md"
         ],
-        "wiki self-maintaining system": [
-          "concepts/Wiki Self-Maintaining System.md",
-          "projects/wiki-self-maintaining/hub.md"
-        ],
         "ai agent trends — april 2026": [
           "concepts/ai-agent-trends-2026-april-17-v2.md",
           "concepts/ai-agent-trends-april-2026.md",
@@ -1571,10 +1677,6 @@
           "concepts/claudecodebestpractices.md",
           "concepts/claude-code-best-practices.md"
         ],
-        "plan command": [
-          "concepts/plan-command.md",
-          "projects/hermes-dojo/skills/process/plan-command/SKILL.md"
-        ],
         "distributed computing": [
           "concepts/Distributed Computing.md",
           "concepts/distributed-computing.md",
@@ -1979,10 +2081,6 @@
           "concepts/postmessageapi.md",
           "concepts/Post Message API.md",
           "concepts/post-message-api.md"
-        ],
-        "wiki quality improvement": [
-          "concepts/wiki-quality-improvement.md",
-          "projects/wiki-quality-improvement/hub.md"
         ],
         "process scheduling": [
           "concepts/Process Scheduling.md",
@@ -3023,12 +3121,6 @@
           "concepts/Computer Vision.md",
           "concepts/computer-vision.md"
         ],
-        "hermes dojo": [
-          "concepts/hermesdojo.md",
-          "concepts/Hermes Dojo.md",
-          "projects/hermes-dojo/README.md",
-          "projects/hermes-dojo/hub.md"
-        ],
         "feed reader": [
           "concepts/feed-reader.md",
           "concepts/Feed Reader.md",
@@ -3067,10 +3159,6 @@
           "concepts/Circuit Breaker.md",
           "concepts/circuit-breaker.md",
           "concepts/circuitbreaker.md"
-        ],
-        "mistake logging": [
-          "concepts/mistake-logging.md",
-          "projects/hermes-dojo/skills/memory/mistake-logging/SKILL.md"
         ],
         "r→p→i methodology": [
           "concepts/r→p→i-methodology.md",
@@ -3176,12 +3264,6 @@
           "concepts/pestel-analysis.md",
           "concepts/pestelanalysis.md"
         ],
-        "wiki quality campaign": [
-          "concepts/Wiki Quality Campaign.md",
-          "concepts/wiki-quality-campaign.md",
-          "concepts/wikiqualitycampaign.md",
-          "projects/wiki-quality-campaign/hub.md"
-        ],
         "binary search algorithm": [
           "concepts/binary-search-algorithm.md",
           "concepts/binarysearchalgorithm.md",
@@ -3220,10 +3302,6 @@
           "concepts/[cloudflare-workers,edge-computing,serverless.md",
           "concepts/[cloudflare-workers, edge-computing, serverless.md",
           "concepts/[cloudflare-workers,-edge-computing,-serverless.md"
-        ],
-        "surgical change protocol": [
-          "concepts/surgical-change-protocol.md",
-          "projects/hermes-dojo/skills/behavior/surgical-change-protocol/SKILL.md"
         ],
         "error tracking": [
           "concepts/Error Tracking.md",
@@ -3363,10 +3441,6 @@
           "concepts/modelevaluation.md",
           "concepts/model-evaluation.md",
           "concepts/Model Evaluation.md"
-        ],
-        "periodic nudge": [
-          "concepts/periodic-nudge.md",
-          "projects/hermes-dojo/skills/lifecycle/periodic-nudge/SKILL.md"
         ],
         "base cap": [
           "concepts/basecap.md",
@@ -3648,10 +3722,6 @@
           "concepts/eventualconsistency.md",
           "concepts/eventual-consistency.md",
           "concepts/Eventual Consistency.md"
-        ],
-        "tiktok content strategy": [
-          "concepts/tiktok-content-strategy.md",
-          "projects/tiktok-content-strategy/hub.md"
         ],
         "little o": [
           "concepts/Little O.md",
@@ -4638,10 +4708,6 @@
           "concepts/Vector DB.md",
           "concepts/vectordb.md"
         ],
-        "stale detection": [
-          "concepts/stale-detection.md",
-          "projects/hermes-dojo/skills/proactive/stale-detection/SKILL.md"
-        ],
         "skip list": [
           "concepts/skip-list.md",
           "concepts/skiplist.md",
@@ -4930,12 +4996,6 @@
           "concepts/[react-hooks,react,javascript.md",
           "concepts/[react-hooks, react, javascript.md",
           "concepts/[react-hooks,-react,-javascript.md"
-        ],
-        "cascade prevention": [
-          "concepts/cascadeprevention.md",
-          "concepts/cascade-prevention.md",
-          "concepts/cascade prevention.md",
-          "projects/hermes-dojo/skills/process/cascade-prevention/SKILL.md"
         ],
         "standard deviation": [
           "concepts/standard-deviation.md",
@@ -5626,10 +5686,6 @@
           "concepts/Quick Sort.md",
           "concepts/quick-sort.md",
           "concepts/quicksort.md"
-        ],
-        "memory manage": [
-          "concepts/memory-manage.md",
-          "projects/hermes-dojo/skills/memory/memory-manage/SKILL.md"
         ],
         "music, streaming, spotify": [
           "concepts/music, streaming, spotify.md",
@@ -6488,10 +6544,6 @@
           "concepts/amazonwebservices.md",
           "concepts/amazon-web-services.md"
         ],
-        "entity extraction": [
-          "concepts/entity-extraction.md",
-          "projects/hermes-dojo/skills/lifecycle/entity-extraction/SKILL.md"
-        ],
         "[prioritization, product management, strategy": [
           "concepts/[prioritization, product-management, strategy.md",
           "concepts/[prioritization,-product-management,-strategy.md",
@@ -6520,10 +6572,6 @@
           "concepts/Software Development.md",
           "concepts/software-development.md",
           "concepts/softwaredevelopment.md"
-        ],
-        "research command": [
-          "concepts/research-command.md",
-          "projects/hermes-dojo/skills/process/research-command/SKILL.md"
         ],
         "skype, communication, voip": [
           "concepts/skype, communication, voip.md",
@@ -6904,10 +6952,6 @@
           "concepts/Column-Oriented Database.md",
           "concepts/column-oriented-database.md"
         ],
-        "contradiction resolution": [
-          "concepts/contradiction-resolution.md",
-          "projects/hermes-dojo/skills/quality/contradiction-resolution/SKILL.md"
-        ],
         "conflict, resolution, git": [
           "concepts/conflict,resolution,git.md",
           "concepts/conflict, resolution, git.md",
@@ -6986,10 +7030,6 @@
           "concepts/Frontend Sandbox.md",
           "concepts/frontendsandbox.md"
         ],
-        "wiki quality score": [
-          "concepts/wiki-quality-score.md",
-          "projects/hermes-dojo/skills/quality/wiki-quality-score/SKILL.md"
-        ],
         "federated identity": [
           "concepts/federatedidentity.md",
           "concepts/Federated Identity.md",
@@ -7054,14 +7094,6 @@
           "concepts/discriminatory-ai.md",
           "concepts/discriminatoryai.md"
         ],
-        "implement command": [
-          "concepts/implement-command.md",
-          "projects/hermes-dojo/skills/process/implement-command/SKILL.md"
-        ],
-        "graph query": [
-          "concepts/graph-query.md",
-          "projects/hermes-dojo/skills/lifecycle/graph-query/SKILL.md"
-        ],
         "dalvik vm": [
           "concepts/dalvik-vm.md",
           "concepts/Dalvik VM.md",
@@ -7080,10 +7112,6 @@
         "multi head attention": [
           "concepts/multi-headattention.md",
           "concepts/Multi-head attention.md"
-        ],
-        "skill from experience": [
-          "concepts/skill-from-experience.md",
-          "projects/hermes-dojo/skills/lifecycle/skill-from-experience/SKILL.md"
         ],
         "tree of thoughts": [
           "concepts/Tree of Thoughts.md",
@@ -7108,42 +7136,14 @@
           "concepts/API Security.md",
           "concepts/api-security.md"
         ],
-        "pattern discovery": [
-          "concepts/pattern-discovery.md",
-          "projects/hermes-dojo/skills/proactive/pattern-discovery/SKILL.md"
-        ],
         "css custom properties": [
           "concepts/csscustomproperties.md",
           "concepts/css-custom-properties.md",
           "concepts/CSS Custom Properties.md"
         ],
-        "crystallization": [
-          "concepts/crystallization.md",
-          "projects/hermes-dojo/skills/lifecycle/crystallization/SKILL.md"
-        ],
-        "update project state": [
-          "concepts/update-project-state.md",
-          "projects/hermes-dojo/skills/memory/update-project-state/SKILL.md"
-        ],
         "vercel ai sdk": [
           "concepts/vercel-ai-sdk.md",
           "entities/vercel-ai.md"
-        ],
-        "my wiki redesign plan": [
-          "concepts/projects/my-wiki-redesign/plan.md",
-          "projects/my-wiki-redesign/plan.md"
-        ],
-        "nexus — obsidian competitor": [
-          "projects/nexus/index.md",
-          "projects/nexus/hub.md"
-        ],
-        "phân tích: kem body chống nắng mizumi — trinh meow": [
-          "learning/tiktok-viral-script/analysis/2026-04-20/trinhmeow/7628586917017324820-analysis.md",
-          "learning/tiktok-viral-script/analysis/2026-04-17/trinhmeow/7628586917017324820-analysis.md"
-        ],
-        "phân tích: top sản phẩm xứng đáng viral — trinh meow": [
-          "learning/tiktok-viral-script/analysis/2026-04-18/trinhmeow/7624764613246160149-analysis.md",
-          "learning/tiktok-viral-script/analysis/2026-04-16/trinhmeow/7624764613246160149-analysis.md"
         ]
       },
       "count": 1436

@@ -5,6 +5,10 @@
       1778471609740603768,
       8963
     ],
+    "api-and-interface-design/SKILL.md": [
+      1779165382069163730,
+      10307
+    ],
     "apple/apple-notes/SKILL.md": [
       1778215664634606703,
       2169
@@ -42,8 +46,8 @@
       42855
     ],
     "autonomous-ai-agents/openclaw-deep-research/SKILL.md": [
-      1779119964736096021,
-      13820
+      1779164968060825958,
+      15219
     ],
     "autonomous-ai-agents/opencode/SKILL.md": [
       1778471610455093284,
@@ -57,9 +61,33 @@
       1778616037100455916,
       9401
     ],
+    "browser-testing-with-devtools/SKILL.md": [
+      1779165382096573701,
+      12559
+    ],
     "business/business-opportunity-research/SKILL.md": [
       1778903962841886751,
       6484
+    ],
+    "caveman/SKILL.md": [
+      1779165369799195356,
+      1916
+    ],
+    "ci-cd-and-automation/SKILL.md": [
+      1779165382120462836,
+      11332
+    ],
+    "code-review-and-quality/SKILL.md": [
+      1779165382145032563,
+      14285
+    ],
+    "code-simplification/SKILL.md": [
+      1779165382171013391,
+      13545
+    ],
+    "context-engineering/SKILL.md": [
+      1779165382194747274,
+      11070
     ],
     "creative/architecture-diagram/SKILL.md": [
       1778471610455197201,
@@ -149,6 +177,14 @@
       1778471610457100332,
       5285
     ],
+    "debugging-and-error-recovery/SKILL.md": [
+      1779165382218107403,
+      10604
+    ],
+    "deprecation-and-migration/SKILL.md": [
+      1779165382242163248,
+      9000
+    ],
     "devops/github-large-folder-backup/SKILL.md": [
       1778471609742247232,
       3006
@@ -165,9 +201,21 @@
       1778471610457372667,
       6836
     ],
+    "diagnose/SKILL.md": [
+      1779165369462003890,
+      7163
+    ],
+    "documentation-and-adrs/SKILL.md": [
+      1779165382265088913,
+      8734
+    ],
     "dogfood/SKILL.md": [
       1778471610457469542,
       7237
+    ],
+    "doubt-driven-development/SKILL.md": [
+      1779165382291742583,
+      16487
     ],
     "email/himalaya/SKILL.md": [
       1778471610457565584,
@@ -209,6 +257,10 @@
       1778471609745623869,
       430
     ],
+    "frontend-ui-engineering/SKILL.md": [
+      1779165382314609246,
+      10639
+    ],
     "gaming/minecraft-modpack-server/SKILL.md": [
       1778471610457662459,
       6559
@@ -220,6 +272,10 @@
     "gateway-manager/SKILL.md": [
       1778471609745879828,
       1995
+    ],
+    "git-workflow-and-versioning/SKILL.md": [
+      1779165382339080680,
+      10530
     ],
     "github-nested-repo-backup/SKILL.md": [
       1778471609745942286,
@@ -252,6 +308,14 @@
     "github/github-repo-management/SKILL.md": [
       1778471610458298170,
       13683
+    ],
+    "grill-me/SKILL.md": [
+      1779165369822474400,
+      635
+    ],
+    "grill-with-docs/SKILL.md": [
+      1779165369501799434,
+      3639
     ],
     "gsd/gsd-add-tests/SKILL.md": [
       1779119315349109790,
@@ -521,6 +585,10 @@
       1779119315355174388,
       2218
     ],
+    "handoff/SKILL.md": [
+      1779165369844746848,
+      719
+    ],
     "hermes-autoresearch/SKILL.md": [
       1779131169736297736,
       55208
@@ -528,6 +596,22 @@
     "hermes-github-backup/SKILL.md": [
       1779074829200621506,
       12559
+    ],
+    "idea-refine/SKILL.md": [
+      1779165382384685715,
+      8121
+    ],
+    "improve-codebase-architecture/SKILL.md": [
+      1779165369547435844,
+      5140
+    ],
+    "incremental-implementation/SKILL.md": [
+      1779165382408840478,
+      8993
+    ],
+    "interview-me/SKILL.md": [
+      1779165382431194802,
+      13658
     ],
     "knowledge-management/gbrain-lmstudio-embedding/SKILL.md": [
       1778471609748359794,
@@ -689,6 +773,14 @@
       1778471610459908342,
       2919
     ],
+    "performance-optimization/SKILL.md": [
+      1779165382455029020,
+      11593
+    ],
+    "planning-and-task-breakdown/SKILL.md": [
+      1779165382477118215,
+      7011
+    ],
     "playwright-automation/SKILL.md": [
       1779038788938232942,
       2292
@@ -741,6 +833,10 @@
       1778403333698556527,
       6867
     ],
+    "prototype/SKILL.md": [
+      1779165369584332976,
+      3251
+    ],
     "red-teaming/godmode/SKILL.md": [
       1778471610460938012,
       20059
@@ -764,6 +860,18 @@
     "research/research-paper-writing/SKILL.md": [
       1778215664644123238,
       103375
+    ],
+    "security-and-hardening/SKILL.md": [
+      1779165382500942225,
+      11301
+    ],
+    "setup-matt-pocock-skills/SKILL.md": [
+      1779165369630731354,
+      6861
+    ],
+    "shipping-and-launch/SKILL.md": [
+      1779165382524285811,
+      9912
     ],
     "smart-home/openhue/SKILL.md": [
       1778471610461414139,
@@ -829,17 +937,57 @@
       1778471610462510851,
       7229
     ],
+    "source-driven-development/SKILL.md": [
+      1779165382547863942,
+      8204
+    ],
+    "spec-driven-development/SKILL.md": [
+      1779165382570006763,
+      7784
+    ],
+    "tdd/SKILL.md": [
+      1779165369676966063,
+      4395
+    ],
     "terminal/chrome-tabs-applescript/SKILL.md": [
       1778744560179441542,
       3484
+    ],
+    "test-driven-development/SKILL.md": [
+      1779165382595303583,
+      14976
+    ],
+    "to-issues/SKILL.md": [
+      1779165369701307078,
+      3576
+    ],
+    "to-prd/SKILL.md": [
+      1779165369723576318,
+      3113
     ],
     "transcript-cleanup/SKILL.md": [
       1778471609758272162,
       2261
     ],
+    "triage/SKILL.md": [
+      1779165369753538488,
+      4883
+    ],
+    "using-agent-skills/SKILL.md": [
+      1779165382617759075,
+      9124
+    ],
+    "write-a-skill/SKILL.md": [
+      1779165369867898266,
+      3056
+    ],
     "yuanbao/SKILL.md": [
       1778471610462588476,
       3795
+    ],
+    "zoom-out/SKILL.md": [
+      1779165369776974242,
+      430
     ],
     "apple/DESCRIPTION.md": [
       1778471610454565282,
@@ -964,6 +1112,19 @@
       "category": "ai-agent",
       "frontmatter_name": "ai-agent-business",
       "description": "Build autonomous AI agent businesses using the Felix Mode...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "api-and-interface-design",
+      "category": "api-and-interface-design",
+      "frontmatter_name": "api-and-interface-design",
+      "description": "Guides stable API and interface design. Use when designin...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1164,10 +1325,88 @@
       }
     },
     {
+      "skill_name": "browser-testing-with-devtools",
+      "category": "browser-testing-with-devtools",
+      "frontmatter_name": "browser-testing-with-devtools",
+      "description": "Tests in real browsers via Chrome DevTools MCP. Use when ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "business-opportunity-research",
       "category": "business",
       "frontmatter_name": "business-opportunity-research",
       "description": "Discover, validate, and evaluate new income stream opport...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "caveman",
+      "category": "caveman",
+      "frontmatter_name": "caveman",
+      "description": "Ultra-compressed communication mode. Cuts token usage ~75...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "ci-cd-and-automation",
+      "category": "ci-cd-and-automation",
+      "frontmatter_name": "ci-cd-and-automation",
+      "description": "Automates CI/CD pipeline setup. Use when setting up or mo...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "code-review-and-quality",
+      "category": "code-review-and-quality",
+      "frontmatter_name": "code-review-and-quality",
+      "description": "Conducts multi-axis code review. Use before merging any c...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "code-simplification",
+      "category": "code-simplification",
+      "frontmatter_name": "code-simplification",
+      "description": "Simplifies code for clarity. Use when refactoring code fo...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "context-engineering",
+      "category": "context-engineering",
+      "frontmatter_name": "context-engineering",
+      "description": "Optimizes agent context setup. Use when starting a new se...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1543,6 +1782,32 @@
       }
     },
     {
+      "skill_name": "debugging-and-error-recovery",
+      "category": "debugging-and-error-recovery",
+      "frontmatter_name": "debugging-and-error-recovery",
+      "description": "Guides systematic root-cause debugging. Use when tests fa...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "deprecation-and-migration",
+      "category": "deprecation-and-migration",
+      "frontmatter_name": "deprecation-and-migration",
+      "description": "Manages deprecation and migration. Use when removing old ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "github-large-folder-backup",
       "category": "devops",
       "frontmatter_name": "github-large-folder-backup",
@@ -1603,10 +1868,49 @@
       }
     },
     {
+      "skill_name": "diagnose",
+      "category": "diagnose",
+      "frontmatter_name": "diagnose",
+      "description": "Disciplined diagnosis loop for hard bugs and performance ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "documentation-and-adrs",
+      "category": "documentation-and-adrs",
+      "frontmatter_name": "documentation-and-adrs",
+      "description": "Records decisions and documentation. Use when making arch...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "dogfood",
       "category": "dogfood",
       "frontmatter_name": "dogfood",
       "description": "Exploratory QA of web apps: find bugs, evidence, reports.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "doubt-driven-development",
+      "category": "doubt-driven-development",
+      "frontmatter_name": "doubt-driven-development",
+      "description": "Subjects every non-trivial decision to a fresh-context ad...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1750,6 +2054,19 @@
       }
     },
     {
+      "skill_name": "frontend-ui-engineering",
+      "category": "frontend-ui-engineering",
+      "frontmatter_name": "frontend-ui-engineering",
+      "description": "Builds production-quality UIs. Use when building or modif...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "minecraft-modpack-server",
       "category": "gaming",
       "frontmatter_name": "minecraft-modpack-server",
@@ -1787,6 +2104,19 @@
       "category": "gateway-manager",
       "frontmatter_name": "gateway-manager",
       "description": "Manage Hermes Gateway lifecycle - restart, check status, ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "git-workflow-and-versioning",
+      "category": "git-workflow-and-versioning",
+      "frontmatter_name": "git-workflow-and-versioning",
+      "description": "Structures git workflow practices. Use when making any co...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1916,6 +2246,32 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "grill-me",
+      "category": "grill-me",
+      "frontmatter_name": "grill-me",
+      "description": "Interview the user relentlessly about a plan or design un...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "grill-with-docs",
+      "category": "grill-with-docs",
+      "frontmatter_name": "grill-with-docs",
+      "description": "Grilling session that challenges your plan against the ex...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -2795,6 +3151,19 @@
       }
     },
     {
+      "skill_name": "handoff",
+      "category": "handoff",
+      "frontmatter_name": "handoff",
+      "description": "Compact the current conversation into a handoff document ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "hermes-autoresearch",
       "category": "hermes-autoresearch",
       "frontmatter_name": "hermes-autoresearch",
@@ -2812,6 +3181,58 @@
       "category": "hermes-github-backup",
       "frontmatter_name": "hermes-github-backup",
       "description": "Setup GitHub backup cho Hermes Agent data lên GitHub repo...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "idea-refine",
+      "category": "idea-refine",
+      "frontmatter_name": "idea-refine",
+      "description": "Refines raw ideas into sharp, actionable concepts through...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "improve-codebase-architecture",
+      "category": "improve-codebase-architecture",
+      "frontmatter_name": "improve-codebase-architecture",
+      "description": "Find deepening opportunities in a codebase, informed by t...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "incremental-implementation",
+      "category": "incremental-implementation",
+      "frontmatter_name": "incremental-implementation",
+      "description": "Delivers changes incrementally. Use when implementing any...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "interview-me",
+      "category": "interview-me",
+      "frontmatter_name": "interview-me",
+      "description": "Extracts what the user actually wants instead of what the...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -3401,6 +3822,32 @@
       }
     },
     {
+      "skill_name": "performance-optimization",
+      "category": "performance-optimization",
+      "frontmatter_name": "performance-optimization",
+      "description": "Optimizes application performance. Use when performance r...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "planning-and-task-breakdown",
+      "category": "planning-and-task-breakdown",
+      "frontmatter_name": "planning-and-task-breakdown",
+      "description": "Breaks work into ordered tasks. Use when you have a spec ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "playwright-automation",
       "category": "playwright-automation",
       "frontmatter_name": "playwright-automation",
@@ -3604,6 +4051,19 @@
       }
     },
     {
+      "skill_name": "prototype",
+      "category": "prototype",
+      "frontmatter_name": "prototype",
+      "description": "Build a throwaway prototype to flesh out a design before ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "godmode",
       "category": "red-teaming",
       "frontmatter_name": "godmode",
@@ -3703,6 +4163,45 @@
           "terminal",
           "files"
         ],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "security-and-hardening",
+      "category": "security-and-hardening",
+      "frontmatter_name": "security-and-hardening",
+      "description": "Hardens code against vulnerabilities. Use when handling u...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "setup-matt-pocock-skills",
+      "category": "setup-matt-pocock-skills",
+      "frontmatter_name": "setup-matt-pocock-skills",
+      "description": "Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "shipping-and-launch",
+      "category": "shipping-and-launch",
+      "frontmatter_name": "shipping-and-launch",
+      "description": "Prepares production launches. Use when preparing to deplo...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
         "fallback_for_tools": [],
         "requires_tools": []
       }
@@ -3970,10 +4469,88 @@
       }
     },
     {
+      "skill_name": "source-driven-development",
+      "category": "source-driven-development",
+      "frontmatter_name": "source-driven-development",
+      "description": "Grounds every implementation decision in official documen...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "spec-driven-development",
+      "category": "spec-driven-development",
+      "frontmatter_name": "spec-driven-development",
+      "description": "Creates specs before coding. Use when starting a new proj...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "tdd",
+      "category": "tdd",
+      "frontmatter_name": "tdd",
+      "description": "Test-driven development with red-green-refactor loop. Use...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "chrome-tabs-applescript",
       "category": "terminal",
       "frontmatter_name": "chrome-tabs-applescript",
       "description": "Get Chrome window and tab info on macOS using osascript —...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "test-driven-development",
+      "category": "test-driven-development",
+      "frontmatter_name": "test-driven-development",
+      "description": "Drives development with tests. Use when implementing any ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "to-issues",
+      "category": "to-issues",
+      "frontmatter_name": "to-issues",
+      "description": "Break a plan, spec, or PRD into independently-grabbable i...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "to-prd",
+      "category": "to-prd",
+      "frontmatter_name": "to-prd",
+      "description": "Turn the current conversation context into a PRD and publ...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -3996,6 +4573,45 @@
       }
     },
     {
+      "skill_name": "triage",
+      "category": "triage",
+      "frontmatter_name": "triage",
+      "description": "Triage issues through a state machine driven by triage ro...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "using-agent-skills",
+      "category": "using-agent-skills",
+      "frontmatter_name": "using-agent-skills",
+      "description": "Discovers and invokes agent skills. Use when starting a s...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "write-a-skill",
+      "category": "write-a-skill",
+      "frontmatter_name": "write-a-skill",
+      "description": "Create new agent skills with proper structure, progressiv...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "yuanbao",
       "category": "yuanbao",
       "frontmatter_name": "yuanbao",
@@ -4005,6 +4621,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "zoom-out",
+      "category": "zoom-out",
+      "frontmatter_name": "zoom-out",
+      "description": "Tell the agent to zoom out and give broader context or a ...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

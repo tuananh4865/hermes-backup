@@ -470,3 +470,87 @@ result = subprocess.run(
 
 ### Git Commit
 - Status: CLEAN (wiki clean, skills healthy, no blocking issues)
+
+---
+
+## Tonight's Findings (2026-05-20)
+
+### System Status (02:00)
+- Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
+- Skills: 142 skills healthy, SHS = 0
+- Workers: ⚠️ STALE 6+ days — Content Creator (May 14), Research Agent (May 12)
+- Gen Z slang: Workers dead → used web search fallback
+
+### Gen Z Slang Status (Workers Dead — Web Search Fallback)
+- Workers stale since May 12-14
+- slangloom.com (May 11): Xịn sò, Kèo, Quẩy, Tạch, Tấu hài, Hết nước chấm — already in wiki
+- trykaiwa.com (Jan 2026): 20 phrases — already in wiki  
+- tcc-agency.com "lọ" (May 5): already tracked
+- No NEW slang found from web search
+- Wiki Gen Z section (updated May 18) is current
+
+### AI Agent Research — Experiential Learning + Self-Referential Agents (May 20, 2026)
+
+**5 NEW techniques documented:**
+
+1. **ERL (Experiential Reflective Learning — arXiv:2603.24639)**
+   - Reflects on task trajectories → generates transferable heuristics
+   - +7.8% on Gaia2 benchmark over ReAct baseline
+   - Key: selective retrieval essential, heuristics > few-shot prompting
+
+2. **SICA (Self-Improving Coding Agent — arXiv:2504.15228)**
+   - Agent edits its own scaffolding code for self-improvement
+   - 17% → 53% on SWE-Bench Verified
+   - Non-gradient-based, data-efficient
+
+3. **DGM-Hyperagents (arXiv:2603.19461)**
+   - Self-referential: task agent + meta agent in one editable program
+   - Meta-level modification procedure itself editable
+   - Cross-domain transfer of "how to self-improve" demonstrated
+
+4. **RetroAgent (arXiv:2603.08561v1)**
+   - Hindsight self-reflection → dual intrinsic feedback (numerical + language)
+   - SimUtil-UCB retrieval balances relevance, utility, exploration
+   - +18.3% ALFWorld, +27.1% Sokoban
+
+5. **GVU Self-Play (arXiv:2512.02731)**
+   - Unifies STaR, SPIN, Reflexion, GANs, AlphaZero as GVU operator
+   - Variance Inequality: sufficient condition for stable self-improvement
+   - Noise management in generation + verification = critical
+
+**Paradigm shift confirmed (May 20):**
+- Single-task learning → transferable heuristics
+- Gradient-based → non-gradient (code self-modification)
+- Fixed improvement mechanism → meta-level modifiable
+- External feedback → intrinsic dual feedback (numerical + language)
+
+**Reference updated:** `references/self-improving-agents-may-2026.md` — now 17 total techniques
+
+### Gen Z Slang Rules — Updated Understanding
+- Workers last fired May 14 (Content Creator), May 12 (Research Agent)
+- slangloom.com most reliable source (updated May 11, 2026)
+- Gen Z slang evolves slower in May 20 week vs May 13-18
+- No new slang from web search — wiki Gen Z section (May 18) is current
+
+### Workers Status — DEATH CONFIRMED
+- Content Creator: last output May 14 10:02 (7009 bytes morning-content)
+- Research Agent: last output May 12 14:08 (10753 bytes evening-brief)
+- 6+ days since last worker fired
+- Workers need restart but cron restart is manual task for Anh
+
+### Hermes Agentic Capability Worked On
+**Learning from Failures** + **Self-Correction** — High impact, foundational
+- ERL pattern: heuristic memory layer for session continuity
+- SICA pattern: self-patching gateway hooks
+- RetroAgent pattern: dual feedback instead of simple retry
+- DGM-H pattern: meta-level self-improvement procedure
+
+### Recommendations
+1. **Workers need restart** — 6+ days stale, cron may need manual re-enabling
+2. **Implement ERL heuristic memory** — would solve session continuity gap
+3. **ByteRover evaluation** — qwen3.5-4b-awq-instruct was ~44s (fastest) before disappearing from LM Studio server
+4. **Consider SICA pattern for gateway hooks** — self-patching when failure pattern detected
+
+### Git Commit
+- Status: CLEAN (wiki clean, skills healthy, no blocking issues)
+- Reference doc updated with 5 new techniques

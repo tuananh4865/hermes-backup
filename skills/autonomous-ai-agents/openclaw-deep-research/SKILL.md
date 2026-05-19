@@ -214,6 +214,35 @@ npx openclaw config set agent.defaultModel "openai/gpt-5.5"
 openclaw gateway restart
 ```
 
+### Bot Token Revoked → 401 Crash Loop
+**Symptom**: JSON log (`/tmp/openclaw/openclaw-YYYY-MM-DD.log`) floods with:
+```
+telegram deleteWebhook failed: Call to 'deleteWebhook' failed! (404: Not Found)
+telegram deleteMyCommands failed: Call to 'setMyCommands' failed! (404: Not Found)
+[default] channel exited: Call to 'deleteWebhook' failed! (404: Not Found)
+[default] auto-restart attempt N/10 in Xs
+```
+Health check still returns `{"ok":true,"status":"live"}` — gateway appears fine.
+`curl -s https://api.telegram.org/bot<TOKEN>/getMe` returns `{"ok":false,"error_code":401,"description":"Unauthorized"}`.
+Restart counter in log reaches 440+ restart attempts in hours.
+**Root cause**: Bot token has been revoked or is empty. Telegram API returns 401 for all operations.
+**Diagnosis**:
+```bash
+# Extract token from config
+python3 -c "import json; d=json.load(open('/Users/tuananh4865/.openclaw/openclaw.json')); print(d['channels']['telegram']['botToken'])"
+
+# Test token
+curl -s https://api.telegram.org/bot<TOKEN>/getMe
+# {"ok":false,"error_code":401,"description":"Unauthorized"} = revoked
+# {"ok":true,"username":"BotName"} = valid
+```
+**Fix**: Get new token from @BotFather:
+1. Open Telegram → search **@BotFather**
+2. Send `/newbot`
+3. Follow prompts, copy token
+4. Update `~/.openclaw/openclaw.json` → `channels.telegram.botToken`
+5. `cd ~/.openclaw && npx openclaw gateway restart`
+
 ### Gateway crashes immediately
 **Cause**: Invalid config (missing `gateway.mode` field)
 **Fix**: Add `"gateway.mode": "local"` to openclaw.json
