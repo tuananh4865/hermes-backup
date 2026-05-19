@@ -1,7 +1,3 @@
-Task 'Review the conversation above and update two things:  **Memory**: who the user is. Did the user reveal persona, desires, preferences, personal details' — session 20260518, 1 turns
-§
-Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260518, 1 turns
-§
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260518, 1 turns
 §
 Modified files: SKILL.md
@@ -35,5 +31,9 @@ Task 'Review the conversation above and update the skill library. Be ACTIVE — 
 Modified files: SKILL.md, openclaw.json
 §
 Task '[Tuấn Anh] Em có skill automation chrome không?' — 1 turns
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260520, 1 turns
+§
+Task 'zsh: permission denined claude là sao em' — session 20260518, 3 turns
 §
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260520, 1 turns
