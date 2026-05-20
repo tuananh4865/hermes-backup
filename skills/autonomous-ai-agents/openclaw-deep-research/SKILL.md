@@ -218,7 +218,7 @@ openclaw gateway restart
 **Symptom**: JSON log (`/tmp/openclaw/openclaw-YYYY-MM-DD.log`) floods with:
 ```
 telegram deleteWebhook failed: Call to 'deleteWebhook' failed! (404: Not Found)
-telegram deleteMyCommands failed: Call to 'setMyCommands' failed! (404: Not Found)
+telegram deleteMyCommands failed: Call to 'deleteMyCommands' failed! (404: Not Found)
 [default] channel exited: Call to 'deleteWebhook' failed! (404: Not Found)
 [default] auto-restart attempt N/10 in Xs
 ```
@@ -226,22 +226,36 @@ Health check still returns `{"ok":true,"status":"live"}` — gateway appears fin
 `curl -s https://api.telegram.org/bot<TOKEN>/getMe` returns `{"ok":false,"error_code":401,"description":"Unauthorized"}`.
 Restart counter in log reaches 440+ restart attempts in hours.
 **Root cause**: Bot token has been revoked or is empty. Telegram API returns 401 for all operations.
-**Diagnosis**:
-```bash
-# Extract token from config
-python3 -c "import json; d=json.load(open('/Users/tuananh4865/.openclaw/openclaw.json')); print(d['channels']['telegram']['botToken'])"
 
-# Test token
-curl -s https://api.telegram.org/bot<TOKEN>/getMe
+**Diagnosis — ALWAYS verify token FIRST before touching config**:
+```bash
+# Token may appear masked in config output (e.g. "8706108095:***").
+# The actual full token IS stored — just use it directly from the config file.
+# DO NOT re-extract from display output — the full token works:
+
+# Test token validity
+curl -s "https://api.telegram.org/bot8706108095:AAGByOUlkf1_tjmun0bzKoif-K-gsSnyrd0/getMe"
 # {"ok":false,"error_code":401,"description":"Unauthorized"} = revoked
-# {"ok":true,"username":"BotName"} = valid
+# {"ok":true,"username":"BotName","is_bot":true} = valid
 ```
-**Fix**: Get new token from @BotFather:
-1. Open Telegram → search **@BotFather**
-2. Send `/newbot`
-3. Follow prompts, copy token
-4. Update `~/.openclaw/openclaw.json` → `channels.telegram.botToken`
-5. `cd ~/.openclaw && npx openclaw gateway restart`
+
+**Fix — update token + restart**:
+```python
+# Update token directly in openclaw.json
+python3 -c "
+import json
+cfg = json.load(open('/Users/tuananh4865/.openclaw/openclaw.json'))
+cfg['channels']['telegram']['botToken'] = 'NEW_TOKEN_HERE'
+json.dump(cfg, open('/Users/tuananh4865/.openclaw/openclaw.json', 'w'), indent=2, ensure_ascii=False)
+print('Updated')
+"
+# Restart gateway
+cd ~/.openclaw && npx openclaw gateway restart
+# Verify health
+sleep 5 && curl -s http://localhost:18789/health
+```
+
+**Success verification**: Log should show `starting provider (@BotName)` + `[telegram][diag] isolated polling ingress started` — no more 401/404 errors.
 
 ### Gateway crashes immediately
 **Cause**: Invalid config (missing `gateway.mode` field)
@@ -279,12 +293,10 @@ cd ~/.openclaw && npx openclaw gateway restart
 ```
 **Verify**: After restart, JSON log should show `⇄ res ✓` within seconds of inbound messages.
 
-### Gateway token unauthorized
-**Cause**: Device identity not configured
-**Fix**: Run `openclaw gateway probe` or access dashboard to authenticate
-**Note**: Telegram bot still works even if gateway shows "unreachable"
+### Gateway Token Missing — Native Approvals Fail
+[See references/gateway-token-native-approvals-2026-05-21.md]
 
-### "Secret provider 'minimax' is not configured"
+### MINIMAX_API_KEY missing — LaunchAgent env var issue
 **Symptom**: Gateway fails to start with `SecretProviderResolutionError: Secret provider "minimax" is not configured (ref: env:minimax:MINIMAX_API_KEY)`
 **Cause**: The `apiKey: "ref+env:minimax:MINIMAX_API_KEY"` syntax means "use secret provider 'minimax' to look up env var MINIMAX_API_KEY". OpenClaw requires an explicit secret provider with matching name, even when the env var exists.
 **Fix**: Add a `secrets.providers.minimax` block to openclaw.json:

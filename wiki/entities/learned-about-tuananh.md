@@ -21,6 +21,7 @@
 - Uses Chrome with multiple tabs (logged into X, TikTok Shop Seller Center, Google Drive)
 - Wants computer_use enabled for desktop control
 - Tolerated testing of macos-computer-use feature
+- **Browser-harness workflow**: Confirmed using browser-harness + Playwright cookie export for X/Twitter repost — exports cookies from Chrome (logged in) → Playwright session (repost) — no need to re-login
 
 ## Gen Z Slang (Updated May 14)
 - **lọ** = HOT (đỉnh, trending)

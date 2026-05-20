@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #000;
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* Phase 1: Dark Sphere */
+      #phase1-bg {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        background: #000;
+        z-index: 10;
+      }
+
+      #main-orb {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 40% 35%,
+          #ffffff 0%, #a3c9ff 15%, #4a90e2 40%, #1a5cb8 70%, #0a2a5e 100%);
+        box-shadow:
+          0 0 80px rgba(74,144,226,0.7),
+          0 0 200px rgba(74,144,226,0.4),
+          0 0 400px rgba(74,144,226,0.2),
+          inset 0 0 100px rgba(255,255,255,0.1);
+        left: 660px;
+        top: 240px;
+      }
+
+      #horizon-beam {
+        position: absolute;
+        width: 1200px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.8) 50%, transparent 100%);
+        left: 360px;
+        top: 540px;
+        box-shadow: 0 0 30px rgba(255,255,255,0.5);
+      }
+
+      #io-title {
+        position: absolute;
+        font-size: 100px;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        color: #fff;
+        text-shadow: 0 0 80px rgba(74,144,226,0.9);
+        left: 50%;
+        top: 45%;
+        transform: translateX(-50%);
+        opacity: 0;
+        white-space: nowrap;
+      }
+
+      #io-year {
+        position: absolute;
+        font-size: 60px;
+        font-weight: 300;
+        letter-spacing: 0.4em;
+        color: rgba(255,255,255,0.6);
+        left: 50%;
+        top: calc(45% + 90px);
+        transform: translateX(-50%);
+        opacity: 0;
+        white-space: nowrap;
+      }
+
+      /* Bokeh orbs - scoped to phase1 */
+      #phase1-bg .bokeh-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0;
+      }
+
+      /* Phase 2: Glassmorphism Announcements */
+      #phase2-bg {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 100%);
+        z-index: 20;
+        opacity: 0;
+      }
+
+      /* Phase 3: Product Grid */
+      #phase3-bg {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        background: linear-gradient(180deg, #0a0a1a 0%, #0f0f2a 50%, #1a1a3a 100%);
+        z-index: 30;
+        opacity: 0;
+      }
+
+      /* Phase 4: Outro */
+      #phase4-bg {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        background: #000;
+        z-index: 40;
+        opacity: 0;
+      }
+
+      /* Scoped card styles */
+      #phase2-bg .glass-card {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(40px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 24px;
+        padding: 40px;
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      #phase2-bg .card-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 16px;
+        letter-spacing: 0.05em;
+      }
+
+      #phase2-bg .card-desc {
+        font-size: 22px;
+        font-weight: 300;
+        color: rgba(255,255,255,0.7);
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+      }
+
+      #phase2-bg .accent-circle {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #FF9A62, #FF6B6B);
+        opacity: 0.8;
+      }
+
+      /* Scoped product styles */
+      #phase3-bg .product-item {
+        position: absolute;
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      #phase3-bg .product-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #4A90E2, #67B8FF);
+        border-radius: 16px;
+        margin-bottom: 16px;
+      }
+
+      #phase3-bg .product-name {
+        font-size: 32px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 8px;
+      }
+
+      #phase3-bg .product-tagline {
+        font-size: 18px;
+        font-weight: 300;
+        color: rgba(255,255,255,0.6);
+      }
+
+      /* Scoped outro styles */
+      #phase4-bg .outro-ring {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid rgba(74,144,226,0.5);
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      #outro-logo {
+        position: absolute;
+        font-size: 80px;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        color: #fff;
+        text-shadow: 0 0 60px rgba(74,144,226,0.8);
+        left: 50%;
+        top: 50%;
+        opacity: 0;
+      }
+
+      #outro-tagline {
+        position: absolute;
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: 0.3em;
+        color: rgba(255,255,255,0.5);
+        left: 50%;
+        top: calc(50% + 80px);
+        transform: translateX(-50%);
+        opacity: 0;
+      }
+
+      /* Scoped particles */
+      #phase1-bg .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        border-radius: 50%;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <!-- ============ PHASE 1: DARK SPHERE INTRO ============ -->
+      <div id="phase1-bg">
+        <div id="main-orb"></div>
+        <div id="horizon-beam"></div>
+
+        <div class="bokeh-orb" style="width:400px;height:400px;background:radial-gradient(circle,rgba(99,102,241,0.5)0%,transparent 70%);left:-100px;top:200px;"></div>
+        <div class="bokeh-orb" style="width:300px;height:300px;background:radial-gradient(circle,rgba(74,144,226,0.4)0%,transparent 70%);right:-50px;top:600px;"></div>
+        <div class="bokeh-orb" style="width:200px;height:200px;background:radial-gradient(circle,rgba(255,154,98,0.4)0%,transparent 70%);left:200px;bottom:100px;"></div>
+
+        <div id="io-title">GOOGLE I/O</div>
+        <div id="io-year">2026</div>
+
+        <!-- Particles -->
+        <div class="particle" style="left:300px;top:200px;"></div>
+        <div class="particle" style="left:600px;top:150px;"></div>
+        <div class="particle" style="left:1000px;top:250px;"></div>
+        <div class="particle" style="left:1400px;top:180px;"></div>
+        <div class="particle" style="left:1600px;top:350px;"></div>
+        <div class="particle" style="left:200px;top:700px;"></div>
+        <div class="particle" style="left:1700px;top:750px;"></div>
+      </div>
+
+      <!-- ============ PHASE 2: KEY ANNOUNCEMENTS ============ -->
+      <div id="phase2-bg">
+        <div id="card-gemini-flash" class="glass-card" style="left:80px;top:80px;width:540px;">
+          <div class="accent-circle" style="top:-20px;right:40px;"></div>
+          <div class="card-title">Gemini 3.5 Flash</div>
+          <div class="card-desc">4x faster than any frontier model. Now the default across Gemini app and Search AI Mode.</div>
+        </div>
+
+        <div id="card-omni" class="glass-card" style="left:700px;top:80px;width:540px;">
+          <div class="accent-circle" style="top:-20px;right:40px;background:linear-gradient(135deg,#67B8FF,#4A90E2);"></div>
+          <div class="card-title">Gemini Omni</div>
+          <div class="card-desc">Create video from text, images, audio, or video. The first multimodal model that truly understands the world.</div>
+        </div>
+
+        <div id="card-spark" class="glass-card" style="left:1320px;top:80px;width:520px;">
+          <div class="accent-circle" style="top:-20px;right:40px;background:linear-gradient(135deg,#FFD700,#FF9A62);"></div>
+          <div class="card-title">Gemini Spark</div>
+          <div class="card-desc">Your 24/7 AI agent. Works even when your laptop is closed. Connects to Gmail, Docs, Calendar.</div>
+        </div>
+
+        <div id="card-search" class="glass-card" style="left:80px;top:520px;width:800px;">
+          <div class="accent-circle" style="bottom:-20px;left:40px;width:60px;height:60px;"></div>
+          <div class="card-title">Intelligent Search Box</div>
+          <div class="card-desc">Biggest upgrade to Search in 25 years. Accepts text, images, files, videos. Context stays as you explore.</div>
+        </div>
+
+        <div id="card-cart" class="glass-card" style="left:960px;top:520px;width:880px;">
+          <div class="accent-circle" style="bottom:-20px;left:40px;width:60px;height:60px;background:linear-gradient(135deg,#00B5AD,#67FFB8);"></div>
+          <div class="card-title">Universal Cart</div>
+          <div class="card-desc">AI shopping cart that works across Search, YouTube, Gmail, and Gemini. Adds products anywhere, checks out together.</div>
+        </div>
+      </div>
+
+      <!-- ============ PHASE 3: PRODUCTS ============ -->
+      <div id="phase3-bg">
+        <div id="prod-1" class="product-item" style="left:100px;top:150px;">
+          <div class="product-icon" style="background:linear-gradient(135deg,#4A90E2,#67B8FF);"></div>
+          <div class="product-name">Smart Glasses</div>
+          <div class="product-tagline">Samsung · Warby Parker · Gentle Monster — Fall 2026</div>
+        </div>
+
+        <div id="prod-2" class="product-item" style="left:600px;top:150px;">
+          <div class="product-icon" style="background:linear-gradient(135deg,#FF9A62,#FF6B6B);"></div>
+          <div class="product-name">Antigravity 2.0</div>
+          <div class="product-tagline">Agent-first development platform — Build agents with natural language</div>
+        </div>
+
+        <div id="prod-3" class="product-item" style="left:1100px;top:150px;">
+          <div class="product-icon" style="background:linear-gradient(135deg,#67B8FF,#00B5AD);"></div>
+          <div class="product-name">Google Pics</div>
+          <div class="product-tagline">AI image creation & editing in Workspace</div>
+        </div>
+
+        <div id="prod-4" class="product-item" style="left:100px;top:450px;">
+          <div class="product-icon" style="background:linear-gradient(135deg,#C09470,#FFD700);"></div>
+          <div class="product-name">Gemini for Science</div>
+          <div class="product-tagline">30+ life science databases integrated</div>
+        </div>
+
+        <div id="prod-5" class="product-item" style="left:600px;top:450px;">
+          <div class="product-icon" style="background:linear-gradient(135deg,#FF6B6B,#FF9A62);"></div>
+          <div class="product-name">AI Ultra $100/mo</div>
+          <div class="product-tagline">New developer tier — 20x usage limits in Gemini app</div>
+        </div>
+
+        <div id="prod-6" class="product-item" style="left:1100px;top:450px;">
+          <div class="product-icon" style="background:linear-gradient(135deg,#67FFB8,#00B5AD);"></div>
+          <div class="product-name">Daily Brief</div>
+          <div class="product-tagline">Your AI morning digest — rolling out now for Pro & Ultra</div>
+        </div>
+      </div>
+
+      <!-- ============ PHASE 4: OUTRO ============ -->
+      <div id="phase4-bg">
+        <div id="ring-1" class="outro-ring" style="width:400px;height:400px;left:760px;top:340px;"></div>
+        <div id="ring-2" class="outro-ring" style="width:600px;height:600px;left:660px;top:240px;border-color:rgba(74,144,226,0.3);"></div>
+        <div id="ring-3" class="outro-ring" style="width:800px;height:800px;left:560px;top:140px;border-color:rgba(74,144,226,0.15);"></div>
+        <div id="outro-logo">GOOGLE I/O 2026</div>
+        <div id="outro-tagline">THE ERA OF AGENTIC AI</div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const ctx = '[data-composition-id="main"] ';
+
+      // ============ PHASE 1: ORB REVEAL (0-8s) ============
+      tl.fromTo("#main-orb",
+        { scale: 0, xPercent: -50, yPercent: -50, opacity: 0 },
+        { scale: 1, xPercent: -50, yPercent: -50, opacity: 1, duration: 2.5, ease: "back.out(1.2)" }, 0.5);
+
+      tl.fromTo("#horizon-beam",
+        { scaleX: 0, opacity: 0 },
+        { scaleX: 1, opacity: 1, duration: 1.5, ease: "power2.out" }, 2);
+
+      // Particles float up
+      tl.to(ctx + ".particle", {
+        opacity: 0.7,
+        y: "random(-50, -150)",
+        duration: 3,
+        stagger: { each: 0.15, from: "random" },
+        ease: "sine.out"
+      }, 1.5);
+
+      // Bokeh orbs fade in
+      tl.to(ctx + ".bokeh-orb", {
+        opacity: 1,
+        duration: 2,
+        stagger: 0.3
+      }, 2);
+
+      // Title reveal
+      tl.to("#io-title", {
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.out"
+      }, 4);
+
+      tl.to("#io-year", {
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.out"
+      }, 5);
+
+      // Orb pulse
+      tl.to("#main-orb", {
+        boxShadow: "0 0 120px rgba(74,144,226,0.9),0 0 280px rgba(74,144,226,0.5),0 0 450px rgba(74,144,226,0.3)",
+        duration: 2,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: 1
+      }, 5.5);
+
+      // Fade out Phase 1
+      tl.to("#phase1-bg", { opacity: 0, duration: 1.5, ease: "power2.inOut" }, 7.5);
+
+      // ============ PHASE 2: ANNOUNCEMENTS (8-18s) ============
+      tl.to("#phase2-bg", { opacity: 1, duration: 0.01 }, 8);
+
+      // Cards stagger in
+      tl.to(ctx + ".glass-card", {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        stagger: { each: 0.25, from: "start" },
+        ease: "back.out(1.2)"
+      }, 9);
+
+      // Hold Phase 2
+      tl.to("#phase2-bg", { opacity: 0, duration: 1.5, ease: "power2.inOut" }, 16.5);
+
+      // ============ PHASE 3: PRODUCTS (18-26s) ============
+      tl.to("#phase3-bg", { opacity: 1, duration: 0.01 }, 17.5);
+
+      // Products stagger in
+      tl.to(ctx + ".product-item", {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: { each: 0.2, from: "start" },
+        ease: "back.out(1.5)"
+      }, 18.5);
+
+      // Fade out Phase 3
+      tl.to("#phase3-bg", { opacity: 0, duration: 1.5, ease: "power2.inOut" }, 24.5);
+
+      // ============ PHASE 4: OUTRO (25-30s) ============
+      tl.to("#phase4-bg", { opacity: 1, duration: 0.01 }, 25.5);
+
+      // Rings expand with spring
+      tl.to(ctx + ".outro-ring", {
+        opacity: 1,
+        scale: 1,
+        duration: 1.2,
+        stagger: { each: 0.2, from: "edges" },
+        ease: "back.out(1.5)"
+      }, 26);
+
+      // Logo fade in
+      tl.fromTo("#outro-logo",
+        { xPercent: -50, yPercent: -50, scale: 0.8, opacity: 0 },
+        { xPercent: -50, yPercent: -50, scale: 1, opacity: 1, duration: 1.5, ease: "power2.out" }, 27);
+
+      tl.to("#outro-tagline", {
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.out"
+      }, 27.8);
+
+      // Final glow pulse on logo
+      tl.to("#outro-logo", {
+        textShadow: "0 0 100px rgba(74,144,226,1), 0 0 200px rgba(74,144,226,0.6)",
+        duration: 1.5,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: 1
+      }, 28.5);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

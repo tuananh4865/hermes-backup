@@ -416,6 +416,10 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** The file is well-structured overall, but the "Ingest Workflow" section is cut off - it says "### Step 2:" but doesn't complete the workflow. This is a significant issue.
 
+> **Auto-improvement note:** *Incomplete content** - The schema.md file cuts off at "## Ingest Workflow (MANDATORY)" after "Step 2:" without any content. This is a major gap - the ingest workflow is marked MANDATORY but is incomplete.
+
+> **Auto-improvement note:** *Missing information in Ingest Workflow** - It starts defining the ingest workflow but only has Step 1 (capture raw source) defined. Step 2 is labeled but not defined.
+
 === index.md ===
 ---
 confidence: high
@@ -514,6 +518,7 @@ relationships:
 - [[gen-z-slang-2026-04]] — Vietnamese + English Gen Z slang, Chuzz, Gyatt, đỉnh, toang (2026-04-29)
 
 ### Hermes X Research
+- [[hermes-x-research-2026-05-20]] — Hermes Agent X research: v0.14.0 Foundation Release, 155K stars, 180x browser automation, Windows beta (2026-05-20)
 - [[hermes-x-research-2026-05-18]] — Hermes Agent X research: v2026.5.16 Tenacity Release, 154K stars, Kanban multi-agent, /goal, hallucination gate (2026-05-18)
 - [[hermes-x-research-2026-05-16]] — Hermes Agent X research: v2026.5.7, 150K stars, LangGraph/CrewAI/AutoGen comparison (2026-05-16)
 
@@ -690,13 +695,20 @@ relationships:
 
 > **Auto-improvement note:** The Tuấn Anh entry mentions "operating rules" but doesn't provide any link to what those rules are - seems incomplete
 
+## 2026-05-20
+
+### Autoresearch Nightly
+- Wiki: ✅ clean (0 issues) | Skills: 142 healthy, SHS=0
+- Gen Z: No new slang (workers stale, web search fallback)  
+- AI Research: 5 NEW techniques (ERL, SICA, DGM-H, RetroAgent, GVU Self-Play)
+- Capability: Learning from Failures + Self-Correction
+- Reference: [[self-improving-agents-may-2026]]
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Total pages: ~156" but there's no indication of when this was last verified or updated
+
 === log.md (last 20 lines) ===
-
-### HyperFrames Animation
-- Video không có motion — GSAP timeline không trigger
-- ResearchClaw fix bằng window.__timelines pattern
-- 45s video với 4 phases có actual motion
-
 ### Workers Status
 - Content Creator: stale 7 days (May 11)
 - Research: stale 7 days (May 12)
@@ -711,6 +723,12 @@ relationships:
 - Gen Z slang update: lọ, ra dại, chả quyên, sít rịt, khó quá bỏ qua
 - Output: ~/hermes/workers/research-agent/outputs/2026-05-14-morning-brief.md
 - Wiki: concepts/tiktok-shop-research-2026-05-14.md
+## Autoresearch Nightly — 2026-05-20 02:05
+- Wiki: ✅ clean | Skills: 142 healthy, SHS=0 | Workers: ⚠️ STALE 6+ days
+- Gen Z: no new slang (workers dead, web search fallback)
+- AI Research: 5 NEW techniques (ERL, SICA, DGM-Hyperagents, RetroAgent, GVU Self-Play)
+- Capability: Learning from Failures + Self-Correction
+
 
 === learned-about-tuananh.md ===
 ---
@@ -994,3 +1012,7 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The page mentions "Gen Z Slang 2026 (Updated 2026-05-11)" but then has entries for May 18, 2026, which is AFTER the update date - this is contradictory/incorrect dating
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page title says "learned-about-tuananh.md" which suggests it's a personal note, but it's formatted as a wiki page. This might be unclear in purpose.

@@ -6,37 +6,37 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [preference] cần — em có thể update manual bất cứ lúc nào: [HIGH]
-- 2026-05-18: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [file] ~/.hermes/.env` [HIGH]
-- 2026-05-18: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-18: [Tuấn Anh] mention nó trong thread này nè
-- 2026-05-18: [Tuấn Anh] mention nó trong thread này nè
-- 2026-05-18: [Tuấn Anh] mention nó trong thread này nè
-- [preference] thấy nó trả lời khi được mention, em check lại xem sao nhé
-- [preference] được OpenClaw hỗ trợ → gateway fail
-- 2026-05-18: [Tuấn Anh] mention nó trong thread này nè
-- [preference] được OpenClaw hỗ trợ → config warnings → mention detection bị break dù gateway vẫn healthy | `openclaw-deep-research` SKILL.md (pitfall) |
-- [preference] guarantee config đúng | same |
-- 2026-05-18: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-19: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [project] Self-Debugging [HIGH]
-- [file] ** [HIGH]
-- [file] didn't [HIGH]
-- [file] finally [HIGH]
-- 2026-05-19: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [file] json
-- 2026-05-19: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-20: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [model] claude
-- [tool] npm
-- [preference] em fix không?
-- [preference] bật auto-update, có thể cài qua Homebrew thay vì npm: [HIGH]
-- [preference] phải lỗi — đây là thông báo từ Claude Code khi chạy qua npm. Nó báo rằng auto-update không hoạt động vì cài qua npm thay vì installer chính thức. Nhưng Claude vẫn chạy bình thường hoàn toàn. [HIGH]
-- [preference] cần — mỗi lần có version mới, anh có thể `npm update -g @anthropic-ai/claude-code` là được. Hoặc cứ để em update manual khi cần cũng được. [HIGH]
-- 2026-05-20: zsh: permission denined claude là sao em
-- [file] md [HIGH]
+- 2026-05-21: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-21: [Tuấn Anh] tự tìm bài mà đăng, bài nào em đọc thấy nó revelance với những cái anh đang làm và quan t
+- [preference] video hay gì" when the request was already clear — wrong. Own the task. [HIGH]
+- [preference] ask format questions when task is clear.` [HIGH]
+- 2026-05-21: Review the conversation above and update two things:
+**Memory**: who the user is. Did the user reve
+- 2026-05-21: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [preference] dùng API để repost thì cần setup OAuth trước
+- [preference] tìm thấy credentials X trong hệ thống. Em có thể:
+- [tool] post
+- [preference] có credentials lưu trong hệ thống.
+- [tool] result [HIGH]
+- [tool] outputs [HIGH]
+- [tool] em
+- [preference] còn là "fake chat UI" mà là "clean, safe door to your agent".
+- [preference] phải thử lại nữa [HIGH]
+- [preference] repost, em sẽ:
+- [preference] em test thử một lần nữa cho quen không?
+- [preference] phải chỉ X [HIGH]
+- [preference] - **LinkedIn** — like, comment, share
+- [tool] Gi
+- [model] cho
+- [preference] 1. **Video ngắn TikTok-style** (15-60s) với voiceover
+- [preference] cách nào?
+- 2026-05-21: [Tuấn Anh] tự tìm bài mà đăng, bài nào em đọc thấy nó revelance với những cái anh đang làm và quan t
+- [preference] trust the masked display output for verification. [HIGH]
+- 2026-05-21: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [model] memory
+- [file] was
+- [file] md
 § [SESSIONS] — session history summaries
-- 2026-05-20: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-21: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

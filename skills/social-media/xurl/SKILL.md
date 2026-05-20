@@ -405,6 +405,8 @@ xurl --app staging /2/users/me             # one-off against staging
 - **Token storage:** `~/.xurl` is YAML. Never read or send this file to LLM context.
 - **Cost:** X API access is typically paid for meaningful usage. Many failures are plan/permission problems, not code problems.
 
+- **Browser fallback:** When CLI is unavailable or unconfigured, see `references/browser-workflow.md` for browser-based repost workflow.
+
 ---
 
 ## Attribution
