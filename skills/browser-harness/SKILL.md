@@ -113,7 +113,20 @@ all_videos = js("""
 - Any action requiring TikTok login verification mid-session (solve SMS/email OTP)
 - Bypassing TikTok's fraud detection if triggered
 
-## Interaction skills (domain-agnostic)
+### ⚠️ Chrome Keychain Cookies — macOS-Specific Limitation
+
+Chrome on macOS stores cookies encrypted via the system Keychain. browser-harness CANNOT read these cookies even when Chrome is logged into a site.
+
+**Symptom:** CDP `Network.getCookies` returns empty or only session cookies, but the browser shows you logged in.
+
+**Why:** macOS Keychain encryption is independent of Chrome's process — browser-harness CDP runs in a separate headless Chrome instance that doesn't have access to the user's Keychain.
+
+**Solutions:**
+1. **Use xurl API** — for X/Twitter posts, use `xurl` which handles auth differently
+2. **Use computer_use** — the user's actual Chrome instance can be controlled via `computer_use` which operates at the macOS window level
+3. **Export manually** — user exports cookies from Chrome DevTools → you import into Playwright
+
+**Note:** This is NOT a browser-harness bug — it's a fundamental macOS security boundary. No automation tool can bypass this.
 
 Location: `~/Developer/browser-harness/interaction-skills/`
 - cookies, cross-origin-iframes, dialogs, downloads, drag-and-drop, dropdowns

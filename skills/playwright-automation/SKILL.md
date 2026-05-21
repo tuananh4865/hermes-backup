@@ -17,9 +17,9 @@ relationships: [browser-harness]
 
 **SAU KHI HOÀN THÀNH TASK AUTOMATION, KHÔNG ĐÓNG BROWSER!**
 
----
+## 🖼️ Screenshot-First Verification (MANDATORY)AU KHI HOÀN THÀNH TASK AUTOMATION, KHÔNG ĐÓNG BROWSER!**
 
-## 🎯 Core Workflow: browser-harness → Playwright
+## 🖼️ Screenshot-First Verification (MANDATORY)
 
 ### Step 1: Export Cookies
 
@@ -129,7 +129,7 @@ for item in page.locator('[role="menuitem"]').all():
 
 ---
 
-## ⚠️ Pitfalls (learned 2026-05-21)
+## Pitfalls (updated 2026-05-21)
 
 | Problem | Fix |
 |---------|-----|
@@ -137,6 +137,8 @@ for item in page.locator('[role="menuitem"]').all():
 | No articles found on profile | Go to `/home` first, scroll, THEN find articles |
 | `auth_token` httpOnly | browser-harness CDP reads it fine; playwright can't |
 | Confirm button not `[data-testid="retweetConfirm"]` | It's a `[role="menuitem"]` with text matching |
+| `page_info()` shows URL but browser shows logged-out page | CDP snapshot returns different DOM than visual render — use screenshot to verify actual auth state |
+| User asks for screenshot to verify state | Always screenshot-first, send via MEDIA:, then short text description — never long technical paragraphs |
 
 ---
 
@@ -162,11 +164,96 @@ for item in page.locator('[role="menuitem"]').all():
 
 ## 📁 Related Files
 
-- `pre-automation-checklist.md` - checklist to follow
-- `x-com-automation-lessons.md` - lessons learned
 - `scripts/export_x_cookies.py` - cookie export via browser-harness (run inside `browser-harness <<'PY'` heredoc)
 - `scripts/repost.py` - simple repost script (run standalone after cookies exported)
+- `references/playwright_auto.py` - working Playwright reference with cookie injection
+- `references/video_posting_workflow.md` - video posting specific workflow and selectors
 
-## ⚠️ Pitfalls
+## ⚠️ Video Posting — CRITICAL: Playwright BLOCKED by X.com Bot Detection
 
-Last updated: 2026-05-17
+**For video posts, use xurl API directly. Playwright will NOT work.**
+
+X.com detects Playwright browser automation and sets `aria-disabled="true"` on the Post button — even when:
+- Upload is 100% complete
+- Caption is typed correctly
+- Button VISUALLY appears enabled (visual inspection shows enabled)
+- Proper `wait_for_function` checks pass
+
+The `aria-disabled` attribute is set at a level that bypasses all JavaScript workarounds.
+
+**Working path for video posts:**
+```bash
+# Setup OAuth once (see xurl skill)
+xurl auth oauth2 --app my-app
+
+# Post video
+xurl media upload /tmp/video.mp4
+# → returns MEDIA_ID
+xurl post "Your caption" --media-id MEDIA_ID
+```
+
+**Selectors for video posts:** (for photo posts only — video posts don't work with Playwright)
+
+```python
+# 1. Click media button FIRST
+page.locator('[data-testid="addPhoto"]').click()
+page.wait_for_timeout(1000)
+
+# 2. Set file input (hidden), dispatch change event
+page.evaluate("""
+fileInput = document.querySelectorAll('input[type="file"]')[0];
+dataTransfer = new DataTransfer();
+dataTransfer.items.add(fileObject);
+fileInput.files = dataTransfer.files;
+fileInput.dispatchEvent(new Event('change', {bubbles: true}));
+""", fileObject=file_object)
+
+# 3. WAIT for upload to complete (blue progress circle disappears)
+page.wait_for_function("""
+() => {
+  const spinner = document.querySelector('[data-testid="videoPlayer"]');
+  const uploading = document.querySelector('[aria-label*="Uploading"]');
+  return !spinner && !uploading;
+}
+""", timeout=30000)
+
+# 4. THEN type caption
+page.locator('[data-testid="tweetTextarea_0"]').fill(caption)
+
+# 5. WAIT for Post button to become enabled (may take 5-15s after typing)
+page.wait_for_function("""
+() => {
+  const btn = document.querySelector('[data-testid="tweetButtonInline"]');
+  return btn && btn.getAttribute('aria-disabled') === 'false';
+}
+""", timeout=20000)
+
+# 6. Click Post
+page.locator('[data-testid="tweetButtonInline"]').click()
+```
+
+**Why buttons get stuck disabled:**
+- If you click Post before upload fully completes → stuck disabled forever
+- If you type before upload finishes → text gets corrupted
+- `aria-disabled="true"` is NOT visual — button LOOKS enabled but DOM says disabled
+- This is X.com bot detection activating on Playwright browser
+
+**Selectors for video posts:**
+- Media button: `[data-testid="addPhoto"]` or `[aria-label*="Add photos or video"]`
+- Video player (appears after upload): `[data-testid="videoPlayer"]`
+- Post button: `[data-testid="tweetButtonInline"]`
+- Caption textarea: `[data-testid="tweetTextarea_0"]`
+
+**Pitfalls (updated 2026-05-21)**
+
+| Problem | Fix |
+|---------|-----|
+| Cookie JSON parse errors | Strip to only `name,value,domain,path,expires,httpOnly,secure,session,sameSite` |
+| No articles found on profile | Go to `/home` first, scroll, THEN find articles |
+| `auth_token` httpOnly | browser-harness CDP reads it fine; playwright can't |
+| Confirm button not `[data-testid="retweetConfirm"]` | It's a `[role="menuitem"]` with text matching |
+| `page_info()` shows URL but browser shows logged-out page | CDP snapshot returns different DOM than visual render — use screenshot to verify actual auth state |
+| User asks for screenshot to verify state | Always screenshot-first, send via MEDIA:, then short text description — never long technical paragraphs |
+| Post button `aria-disabled="true"` after upload | WAIT for upload complete before typing, then WAIT for button enable before clicking |
+| Button looks enabled but `aria-disabled="true"` | Don't trust visual — always check DOM attribute via `page.evaluate()` |
+| X.com bot detection on Playwright | For video posts, try xurl API instead (see xurl skill) |

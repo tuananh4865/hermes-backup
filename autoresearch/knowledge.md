@@ -473,10 +473,60 @@ result = subprocess.run(
 
 ---
 
-## Tonight's Findings (2026-05-20)
+## Tonight's Findings (2026-05-22)
 
 ### System Status (02:00)
-- Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
+- Wiki: ✅ clean (1824 files, 0 issues — wiki_lint --fast PASSED)
+- Skills: 96 skill directories, SHS = 0 (verified clean)
+- Workers: ⚠️ STALE — content-creator/outputs/ and research-agent/outputs/ are EMPTY (no outputs in days)
+- Session logs: ~/Library/Application Support/hermes-agent/sessions/ — empty (0 bytes)
+- Gen Z slang: Workers dead since May 11+, web search fallback used — no new terms found
+
+### AI Agent Research — Self-Improving + Goal Decomposition (May 22, 2026)
+
+**NEW TECHNIQUE: Darwin Gödel Machine (DGM)**
+- arXiv:2505.22954 (Jan 2026, OpenReview) — Sakana.ai
+- World's first self-improving coding agent that iteratively modifies its own code
+- Combines Darwinian evolution (stepping stones) + Gödel machine (self-referential improvement)
+- Key insight: FROZEN pretrained FMs can self-improve by modifying code/workflows without retraining
+- Open-ended exploration finds novel improvement paths humans would miss
+
+**Goal Decomposition — TDP (Task-Decoupled Planning)**
+- arXiv:2601.07577 — "Task-Decoupled Planning for Long-Horizon Agents"
+- 60% context reduction via DAG sub-goals
+- HIGH applicability for Hermes multi-agent orchestration
+- Separates planning from execution — planner creates DAG, executor runs nodes
+
+**Other Goal Decomposition Techniques Found:**
+- DELTA (delta-llm.github.io) — autoregressive robot tasks, MEDIUM
+- Flare (arXiv:2601.22311) — consistent improvement, MEDIUM
+- PIVOT (arXiv:2605.11225) — 120 tasks each domain, MEDIUM
+- Policy Decompositions (arXiv:2605.06957) — LLM agent applicable, HIGH
+- Plan-to-Action (arXiv:2604.12147) — 16,991 trajectories, ~70% plan adherence, HIGH
+
+**Total: 6+ new techniques documented**
+
+### Gen Z Slang Status
+- Workers dead since May 11+ — no new outputs to sync
+- Web search found no NEW Vietnamese slang (existing terms already in wiki)
+- Wiki Gen Z section (updated 2026-05-21) is current — no sync needed
+
+### Capability Focus Tonight: Goal Decomposition
+- Selected: Planning → Goal Decomposition
+- Why: TDP (60% context reduction via DAG sub-goals) directly applicable to Hermes multi-agent orchestration
+- DGM provides new paradigm for self-improvement without retraining
+
+### Recommendations
+1. Workers need restart — 10+ days stale, cron jobs may be paused
+2. Consider implementing TDP DAG planning for multi-agent orchestrator
+3. DGM pattern (self-modifying code) could inspire Hermes self-improvement hooks
+
+---
+
+## Previous Night (2026-05-17)
+
+### System Status (02:00)
+- Wiki: ⚠️ 1 issue — missing frontmatter on hermes-x-research-2026-05-16.md (FIXED)
 - Skills: 142 skills healthy, SHS = 0
 - Workers: ⚠️ STALE 6+ days — Content Creator (May 14), Research Agent (May 12)
 - Gen Z slang: Workers dead → used web search fallback

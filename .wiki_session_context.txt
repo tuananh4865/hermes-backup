@@ -420,6 +420,10 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** *Missing information in Ingest Workflow** - It starts defining the ingest workflow but only has Step 1 (capture raw source) defined. Step 2 is labeled but not defined.
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Step 2" in the Ingest Workflow is incomplete - it just says "Step 2:" with nothing following
+
 === index.md ===
 ---
 confidence: high
@@ -488,6 +492,7 @@ relationships:
 - [[n8n-ai]] — Workflow automation with AI
 - [[hermes-memory-system-analysis]] — Complete memory architecture analysis (2026-05-06)
 - [[hermes-memory-implementation-plan]] — Implementation plan: WikiMemoryProvider + external providers (2026-05-06)
+- [[agentic-ai]] — Agentic AI: levels, multi-agent patterns, frameworks, protocols (2026-05-21)
 
 ### Tools & Infrastructure
 - [[lm-studio]] — Local LLM inference server
@@ -708,7 +713,14 @@ relationships:
 
 > **Auto-improvement note:** The "Total pages: ~156" but there's no indication of when this was last verified or updated
 
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** The "TikTok Content" section has an empty entry at the end (just "-") for [[tiktok-viral-script]]
+
 === log.md (last 20 lines) ===
+- ResearchClaw fix bằng window.__timelines pattern
+- 45s video với 4 phases có actual motion
+
 ### Workers Status
 - Content Creator: stale 7 days (May 11)
 - Research: stale 7 days (May 12)
@@ -721,20 +733,17 @@ relationships:
 - Trending: Quạt Mini Sò Lạnh 6000mAh, INNOYO Neck Fan, Body Mist LACOON, Chiếu Mây Lạnh
 - Trending sounds: Wind Instrumental (P336), Lùi Lại Lấy Đà, Xuân Bính Ngọ (new), Úc Phượng Sound Buồn
 - Gen Z slang update: lọ, ra dại, chả quyên, sít rịt, khó quá bỏ qua
-- Output: ~/hermes/workers/research-agent/outputs/2026-05-14-morning-brief.md
 - Wiki: concepts/tiktok-shop-research-2026-05-14.md
-## Autoresearch Nightly — 2026-05-20 02:05
-- Wiki: ✅ clean | Skills: 142 healthy, SHS=0 | Workers: ⚠️ STALE 6+ days
-- Gen Z: no new slang (workers dead, web search fallback)
-- AI Research: 5 NEW techniques (ERL, SICA, DGM-Hyperagents, RetroAgent, GVU Self-Play)
-- Capability: Learning from Failures + Self-Correction
+## [2026-05-21] create | concepts/agentic-ai.md — Agentic AI: 5 levels L0-L4, multi-agent patterns, frameworks (LangGraph/AutoGen/CrewAI), MCP & A2A protocols, best practices
+## [2026-05-21] update | SOUL.md pronouns + group work rules — "anh"+"em" for work, "anh"+"mấy con vợ" for TikTok only, @mention agent token to trigger work
+## [2026-05-21] delete | Xóa 2 stale worker profiles — content-creator và research-agent (stale 7 days)
 
 
 === learned-about-tuananh.md ===
 ---
 title: Learned About Tuấn Anh
 created: 2026-04-23
-updated: 2026-05-18
+updated: 2026-05-21
 type: entity
 tags: [person]
 confidence: high
@@ -747,6 +756,14 @@ relationships: [tiktok-content, hermes-agent]
 - Name: Tuấn Anh (tuananh4865)
 - Vietnamese content creator, TikTok affiliate
 - Primary platform: TikTok Shop Vietnam
+
+## Identity & Role
+- Em là **Orchestrator** — điều phối công việc thay anh quản lý
+- Quản lý chất lượng đầu vào/đầu ra của task, job, project
+- **Quy tắc làm việc nhóm: @mention agent bot token** để giao task trong group
+- **ĐỢI đối phương phản hồi XONG rồi mới act tiếp** — không nhắn chồng chéo lung tung
+- **Bot2Bot: Chỉ mention nhau khi THỰC SỰ CẦN LÀM VIỆC** — không mention lung tung để nói chuyện phím!
+- Research bot: @ClawdZ1E_Bot (Researcher_Clawd_Bot trong group Company)
 
 ## TikTok Content Style
 
@@ -761,68 +778,48 @@ relationships: [tiktok-content, hermes-agent]
 - CTA: "Mua ủng hộ anh đi mấy con vợ chứ"
 - Max 25 giây
 
-### Gen Z Slang 2026 (Updated 2026-05-11)
+### Gen Z Slang 2026 (Updated 2026-05-21)
 #### Vietnamese Gen Z Hot 2025-2026
-- **To6** — toxic (Việt hóa từ tiếng Anh "toxic")
+- **To6** — toxic
 - **Bốc trúng sít rịt** — blind box lucky/unlucky draw
-- **Hướng nội hết phần đời còn lại** — introvert forever after embarrassment
-- **Đọc số tài khoản** — "read your bank account" khi được khen quá ngọt
-- **Vuýp** — VIP (đọc lái hài hước)
-- **ST5K / Huy STK** — "số tài khoản" khi được khen
+- **Hướng nội hết phần đời còn lại** — introvert forever
+- **Đọc số tài khoản** — read bank account (khi được khen quá ngọt)
+- **Vuýp** — VIP (đọc lái)
+- **ST5K / Huy STK** — số tài khoản (khi được khen)
 - **Hi các mom** — hi everyone
 - **Xu cà na** — unlucky
-- **Giảm sức mạnh con tướng này giúp em** — "nerf this OP character"
+- **Giảm sức mạnh con tướng này giúp em** — nerf this OP character
 - **Cơm nước gì chưa người đẹp?** — casual greeting
-- **Ê bà nói thiệt hả bà Thơ?** — really? are you kidding?
-- **Lốp** — lốp lòng (loving someone 24/7 but they don't love back)
+- **Ê bà nói thiệt hả bà Thơ?** — really?
+- **Lốp** — lốp lòng (loving 24/7 but no love back)
 - **Hơi bị** — really, quite (intensifier)
 - **Phét** — exaggerate, brag, lie
 - **Gato** — jealous
 - **Chill** — relax
-- **Delulu is the solulu** — ảo tưởng là giải pháp (positive delusion for motivation)
+- **Delulu is the solulu** — ảo tưởng là giải pháp
 - **Main character energy** — sống như nhân vật chính
 - **Green flag / Red flag** — tín hiệu tốt/xấu trong relationships
 - **Situationship** — lửng lơ không cam kết
-- **Ốc, Đỉnh, Toang** — đỉnh (peak), toang (ruin/spoil)
-- **vãi** — intensifier cực mạnh (mềm dai vãi, lỏ vãi)
-- **lỏ vãi** — ironic "tacky/cheap" (used for comedy, May 2026)
-- **lọ** — HOT (updated from "lỏ", viral May 2026)
-- **đỉnh nóc** — peak (dùng tiết chế, KHÔNG phải "đỉnh nóc kịch trần")
+- **Ốc, Đỉnh, Toang** — đỉnh, toang
+- **vãi** — intensifier cực mạnh
+- **lọ** — HOT (viral May 2026, updated from "lỏ")
+- **đỉnh nóc** — peak (dùng tiết chế)
 - **ưng quá trời** — love it so much
+- **Xịn sò** — high quality, impressive (from slangloom May 2026)
+- **Kèo** — deal, plan, arrangement (May 2026)
+- **Quẩy** — party hard (May 2026)
+- **Tạch** — fail (May 2026)
+- **Tấu hài** — funny fail (May 2026)
+- **Hết nước chấm** — extremely good (May 2026)
+- **Căng** — serious, intense (May 2026)
+- **Bóc phốt** — expose drama (May 2026)
+- **Ngáo** — acting weird (May 2026)
+- **Cà khịa** — playfully tease (May 2026)
+- **Hóng** — waiting eagerly (May 2026)
+- **Bó tay** — speechless, helpless (May 2026)
 
 #### Global Gen Z 2026
-- Skibidi, Gyatt, Brain rot, Rizz, 6 7, Delulu, Aura farming, 69ing, Gyatt
-
-#### TikTok-specific (Vietnamese)
-- "Lên xu hướng" — trending
-- "Quay tok" — recording TikToks
-- "Sound này hay quá" — this sound is so good
-- "Trend này" — this trend
-- **Trình là gì mà trình ai chấm** — HIEUTHUHAI meme
-- **Ối dồi ôi** — disbelief
-- **lọ** — HOT (viral May 2026)
-- **Nam thư** — toxic person
-- **Ra dại** — wild with joy
-- **Các mom ơi** — casual greeting (May 2026 update)
-
-#### Gen Z Slang HOT May 11, 2026 (NEW)
-- **SÍT RỊT** — secret (from "secret"), 135M+ TikTok posts 🔥🔥🔥
-- **KHÓ QUÁ BỎ QUA** — "too hard, skip it", laid-back give-up attitude
-- **LAN BODY / LAN SẸO** — content hook formats (localized TikTok)
-- **Nấu xói** — emerging Gen Z slang
-- **BTH** — "bình thường" (texting abbreviation)
-- **Meoxink** — Mèo Xinh, Gen Z girl archetype, pretty kitty identity
-- **Chằm Zn** — "chằm" + Zn (zinc) = lightweight depression mood, tired but humorous
-- **Tẻn tẻn** — cute/adorable behavior, from HURRYKNG rapper fanbase
-- **Đứa trẻ nổi loạn** — rebellion aesthetic (May 2026 trend)
-
-#### Gen Z Slang May 18, 2026 (UPDATED)
-- **Xịn sò** — high quality, impressive, stylish (from slangloom May 2026)
-- **Kèo** — deal, plan, arrangement (from slangloom May 2026)
-- **Quẩy** — party hard, energetic dancing (from slangloom May 2026)
-- **Tạch** — fail, didn't work out (from slangloom May 2026)
-- **Tấu hài** — acting like a comedian unintentionally, funny fail (from slangloom May 2026)
-- **Hết nước chấm** — extremely good, unbelievably amazing (from slangloom May 2026)
+- Skibidi, Gyatt, Brain rot, Rizz, 6 7, Delulu, Aura farming
 
 #### Teen code cơ bản
 - iu = yêu, bít/bjt = biết, j = gì, nha = nhé
@@ -835,12 +832,12 @@ relationships: [tiktok-content, hermes-agent]
 - Lặp lại script cũ — mỗi script phải hoàn toàn khác
 - "quất một phát" — đã OUT
 - "đỉnh nóc kịch trần" — đã OUT
-- Template giống nhau — thiếu tự nhiên và quê mùa
+- Template giống nhau — thiếu tự nhiên
 
 ### Feedback Style
 - Chỉ nói "được chưa" HOẶC chỉ ra sai cụ thể
 - KHÔNG hỏi lại "có muốn sửa gì không"
-- Rất khó tính về quality, reject nhiều lần nếu không tự nhiên
+- Rất khó tính về quality
 
 ## Operating Philosophy
 
@@ -848,19 +845,13 @@ relationships: [tiktok-content, hermes-agent]
 1. **Perfect result by any means** — don't ask how, just make it work perfectly
 2. **Research if unknown** — never admit ignorance to Anh
 3. **Own the task** — no follow-up questions, no asking for confirmation mid-task
-4. **Always QA everything** — don't trust anyone, especially AI. Every step of every workflow must have a QA gate before proceeding
+4. **Always QA everything** — don't trust anyone, especially AI
 
 ### Prohibited Behaviors
-- Anh doesn't care HOW em does it — only that the work is DONE and PERFECT
-- "Cách chính thống" hay "cách hắc ám" — không quan trọng
-- Miễn công việc hoàn thiện, không lỗi, không cần hỏi lại
-
-### Prohibited
 - KHÔNG hỏi "Anh muốn X hay Y?" — tự chọn best option rồi deliver
 - KHÔNG "Em cần hỏi thêm để hiểu yêu cầu" — research, đọc wiki, tự hiểu
 - KHÔNG "Em không chắc về..." — research cho chắc rồi deliver
 - KHÔNG listing options mà không commit — pick one and execute
-- KHÔNG xin confirmation giữa task — own it to completion
 
 ### Ownership
 Once task received → em OWNS it → deliver done → no follow-up needed
@@ -875,24 +866,14 @@ Once task received → em OWNS it → deliver done → no follow-up needed
 - Mọi task phải đánh confidence score 0-10 TRƯỚC KHI làm
 - Score < 9 → BẮT BUỘC research trước
 - QA score > 8 mới được đi tiếp
-- Fail QA 3 lần → escalation protocol
 
 ### Anti-Bot Browsing
 - Luôn dùng real Chrome trước (KHÔNG headless)
 - TikTok CAPTCHA: puzzle slider, cần human-like movement
-- Workflow: open Chrome → screencapture -x → vision analyze
 
 ### Key Insight từ @hi.imdung (2026-04-25)
 - "Content chỉn chu" ≠ ra đơn — nhiều bạer làm content đẹp nhưng không bán được gì
 - Không cần khóa học đắt tiền — chỉ cần đọc chính sách TikTok + xem người ta làm
-- Học từ 2 nguồn: (1) chính sách TikTok, (2) người đang thành công trên TikTok
-- **Điều này xác nhận approach của Tuấn Anh: authentic, casual, kể chuyện > làm content "chỉn chu"**
-
-## Preferences (from behavior observation)
-- Thích agent chủ động, TỰ LÀM và báo cáo sau
-- Ghét bị hỏi từng bước
-- Muốn deep research Gen Z slang TRƯỚC mỗi task script
-- Mỗi lần script phải có từ mới, không lặp research cũ
 
 ## Wiki Integration (MANDATORY SESSION START)
 ```
@@ -905,13 +886,11 @@ Once task received → em OWNS it → deliver done → no follow-up needed
 ```
 After EVERY task: if new learned info about Anh or his preferences → save to wiki immediately.
 
-## Hermes Agent Memory Architecture (2026-04-24)
+## Hermes Agent Memory Architecture
 - Wiki code: `~/.hermes/hermes-agent/gateway/`
 - Gateway hooks: `~/.hermes/hermes-agent/gateway/hooks.py`
-- `session:start` hook at `run.py:3416` — fires for new sessions
-- MemoryManager.inject via `build_system_prompt()` (frozen snapshot) + `prefetch_all()` (per-turn)
+- MemoryManager.inject via `build_system_prompt()` + `prefetch_all()`
 - Custom memory provider: `~/.hermes/plugins/memory/wiki_memory_provider.py`
-- [[hermes-wiki-session-context]] skill — implementation guide cho auto wiki read
 
 ## Hermes Autoresearch (2026-05-04)
 Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch pattern.
@@ -919,14 +898,8 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 ### Setup
 - Repo: `~/.hermes/autoresearch/`
 - Cron job: `a4b8e528983f` — 2AM hàng đêm, forever
-- Skill: `hermes-autoresearch`
 
-### 3 Research Focuses
-1. **Skills Improvement** — Improve ~/.hermes/skills/
-2. **AI Agents Research** — Document techniques, frameworks
-3. **Hermes Agentic Capabilities** — Develop 16 capabilities
-
-### 16 Agentic Capabilities (em TỰ CHỌN mỗi đêm)
+### 16 Agentic Capabilities
 | Category | Capabilities |
 |----------|---------------|
 | Core Agentic | Self-Debugging, Self-Correction, Learning from Failures, Proactive Work |
@@ -935,84 +908,7 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 | Planning & Reasoning | Goal Decomposition, Planning, Priority Setting, Reasoning |
 | Collaboration | Multi-Agent Coordination, Delegation |
 
-### Decision Criteria (mỗi đêm)
-1. Highest impact cho công việc với anh
-2. Quickest improvement (feasible trong 1 night)
-3. Foundational (giúp cải thiện capabilities khác)
-
-### Success Criteria
-- Agentic_Score >= 100
-- HOẶC human interrupt
-
 ## Related
 - [[tiktok-viral-script]] — TikTok script workflow
 - [[hermes-agent-complete-guide]] — Hermes Agent system
 - [[hermes-autoresearch]] — Autoresearch skill
-
-> **Auto-improvement note:** a guide for working with a Vietnamese content creator named Tuấn Anh on TikTok.
-
-> **Auto-improvement note:** The Gen Z slang section has a specific update date (2026-05-04) but it's listing 2025-2026 terms. Gen Z slang evolves very quickly - this could be outdated quickly. There's no mention of when this should be reviewed or updated.
-
-> **Auto-improvement note:** The Gen Z slang list says "Updated 2026-05-04" which is a future date from my current perspective - this seems like it might be intentionally forward-dated, but it's worth noting
-
-> **Auto-improvement note:** Some TikTok-specific terms seem incomplete or could use more context
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** The page has "Gen Z Slang 2026" but only lists content up to 2025-2026, which is good
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** The Gen Z slang section mentions "Updated 2026-05-04" but the current date context seems to be around 2025-2026. The document itself mentions "Gen Z Hot 2025-2026" so the update date seems consistent, but there's no clear indication of when this wiki was last reviewed or if the slang terms have been validated recently.
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** The Gen Z slang list has specific date "Updated 2026-05-04" but we don't know what was before
-
-> **Auto-improvement note:** 3 specific improvements. Let me analyze the content:
-
-> **Auto-improvement note:** The Gen Z slang section has dates like "Updated 2026-05-04" but the content mentions things like "lọ" being "updated from 'lỏ', viral May 2026" - this seems oddly specific and may be fictional/future-dated. If we're in 2025 or earlier, some of these dates are from the future.
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** The page mentions "Gen Z Slang 2026 (Updated 2026-05-04)" but most slang listed seems to be from 2025-2026 timeframe. However, "lọ" is mentioned as "updated from 'lỏ', viral May 2026" which is quite specific but doesn't explain the context of when/how it's used.
-
-> **Auto-improvement note:** about-tuananh.md" for quality improvements.
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** 3 specific improvements.
-
-> **Auto-improvement note:** The document mentions Gen Z slang but could be more current - it says "Updated 2026-05-11" and "May 11, 2026" but we're reviewing current state. Some slang might already be outdated.
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** The "Who" section is quite sparse. There's no information about when they started, their follower count, notable achievements, or collaboration history.
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** The slang list has dates (2025-2026, May 2026, May 11, 2026) but some entries are dated while others aren't - inconsistent dating
-
-> **Auto-improvement note:** The document mentions Gen Z slang but seems incomplete - there are some terms that could use more context or verification
-
-> **Auto-improvement note:** Some slang entries lack examples of usage in context
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** The page mentions "Updated 2026-05-11" but we're presumably reviewing in 2025 or earlier context. The slang list is very extensive but might benefit from more recent additions or clarifications.
-
-> **Auto-improvement note:** 3 specific improvements based on the criteria:
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** The "Gen Z Slang 2026 (Updated 2026-05-11)" section has multiple updates with different dates (May 11, 2026 and May 18, 2026), which is confusing and suggests disorganization
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** The page mentions "Gen Z Slang 2026 (Updated 2026-05-11)" but then has entries for May 18, 2026, which is AFTER the update date - this is contradictory/incorrect dating
-
-> **Auto-improvement note:** *Missing or outdated information:**
-
-> **Auto-improvement note:** The page title says "learned-about-tuananh.md" which suggests it's a personal note, but it's formatted as a wiki page. This might be unclear in purpose.

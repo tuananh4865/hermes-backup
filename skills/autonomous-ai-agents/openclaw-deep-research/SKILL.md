@@ -261,6 +261,17 @@ sleep 5 && curl -s http://localhost:18789/health
 **Cause**: Invalid config (missing `gateway.mode` field)
 **Fix**: Add `"gateway.mode": "local"` to openclaw.json
 
+### Telegram Bot-to-Bot @mention Blocked — Platform Limitation
+**Symptom**: Bot A @mentions Bot B in a Telegram group, but Bot B never receives the message.
+**Root cause**: Telegram platform policy silently blocks messages sent from one bot to another bot via @mention in groups. This is NOT an OpenClaw config issue — it is a Telegram restriction that neither OpenClaw nor any bot can bypass.
+**Implication for ownerAllowFrom**: Adding a bot's Telegram ID to `ownerAllowFrom` does NOT enable bot-to-bot communication. The `ownerAllowFrom` field controls owner-only commands (`/diagnostics`, `/config`) and tools (`cron`, `gateway`, `whatsapp_login`) for the bot's OWNERS, not cross-bot messaging.
+**Current architecture issue**: Research bot (`@ClawdZ1E_Bot`) and Hermes are in the same Telegram group. When Research @mentions Hermes, Telegram blocks it. When Hermes @mentions Research, Telegram blocks it.
+**Workarounds**:
+1. **DM instead of @mention in group**: Bots can send DMs to each other directly. Research bot sends results via DM to Hermes instead of @mentioning in the group.
+2. **Human relay**: Human user forwards or copies messages between bots.
+3. **Alternative channel**: Use a different communication channel (e.g., HTTP webhook, file-based queue) that doesn't rely on Telegram bot-to-bot messaging.
+**Verify**: Send a message from Research bot to Hermes via @mention in group → Hermes never receives it. Send DM directly → Hermes receives it.
+
 ### Config warnings cause gateway degradation
 **Symptom**: Gateway starts and responds to health checks (`{"ok":true,"status":"live"}`) but Telegram bot silently fails to reply to @mentions. JSON logs show `"reason":"no-mention"` even when the bot was correctly @mentioned. Config validation shows warnings like `Key 'mcpServers' was ignored — not recognized`.
 **Root cause**: `openclaw.json` contains a `mcpServers` section (copy-pasted from template or previous config). OpenClaw does NOT support `mcpServers` as a top-level config key — unrecognized keys produce warnings and cause the config to be partially invalid, which breaks mention detection in Telegram groups.

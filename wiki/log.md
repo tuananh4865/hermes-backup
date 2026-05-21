@@ -33,6 +33,27 @@
 
 ---
 
+## 2026-05-21
+
+### Memory Health Check
+- Wiki: 1,768 files, ~2,785 broken wikilinks, ~192 orphan pages
+- Builtin memory: state.db (456 sessions, 20,026 messages)
+- Bug: WikiMemoryProvider rapid writes (5 writes in 8ms) corrupting USER.md
+- Decision: Keep wiki as primary memory — Mem0 NOT needed
+- Action: Cleaned USER.md + MEMORY.md (reset garbage)
+
+### X/Twitter Automation — FAILED
+- Playwright: Upload OK, Post button disabled by X anti-automation
+- browser-harness: Can't read encrypted Chrome cookies
+- Root cause: X detects automation → aria-disabled="true"
+- **Solution: Setup xurl with X API credentials**
+
+### Google I/O 2026 Content
+- 30s video: Dark sphere → Glass cards → 3 products
+- Gemini 3.5 Flash, Omni, Spark, Intelligent Search, Universal Cart, Smart Glasses, Antigravity
+
+---
+
 ## 2026-05-13
 
 [Previous entries would be here]

@@ -371,12 +371,17 @@ xurl --app staging /2/users/me             # one-off against staging
 ## Agent Workflow
 
 1. Verify prerequisites: `xurl --help` and `xurl auth status`.
+   - Note: `xurl` installs to `~/.local/bin/` — ensure this is in PATH: `export PATH="$HOME/.local/bin:$PATH"`
 2. **Check default app has credentials.** Parse the `auth status` output. The default app is marked with `▸`. If the default app shows `oauth2: (none)` but another app has a valid oauth2 user, tell the user to run `xurl auth default <that-app>` to fix it. This is the most common setup mistake — the user added an app with a custom name but never set it as default, so xurl keeps trying the empty `default` profile.
-3. If auth is missing entirely, stop and direct the user to the "One-Time User Setup" section — do NOT attempt to register apps or pass secrets yourself.
-4. Start with a cheap read (`xurl whoami`, `xurl user @handle`, `xurl search ... -n 3`) to confirm reachability.
-5. Confirm the target post/user and the user's intent before any write action (post, reply, like, repost, DM, follow, block, delete).
-6. Use JSON output directly — every response is already structured.
-7. Never paste `~/.xurl` contents back into the conversation.
+3. If auth is missing entirely AND the user said "post/repost it" or gave a clear go-ahead → **go straight to browser fallback** (see `references/browser-workflow.md`). Do NOT stop to ask the user which approach they want. Own the task by using the browser method automatically.
+4. If auth is missing and no clear go-ahead was given → stop and direct the user to the "One-Time User Setup" section.
+5. Start with a cheap read (`xurl whoami`, `xurl user @handle`, `xurl search ... -n 3`) to confirm reachability.
+6. Confirm the target post/user and the user's intent before any write action (post, reply, like, repost, DM, follow, block, delete).
+7. Use JSON output directly — every response is already structured.
+8. Never paste `~/.xurl` contents back into the conversation.
+
+### Video file discovery
+When looking for recently-generated video files (e.g., Remotion renders), check `/tmp/` first — Remotion and similar tools write output there by default. Look for `*.mp4` files with recent modification timestamps.
 
 ---
 
@@ -393,7 +398,15 @@ xurl --app staging /2/users/me             # one-off against staging
 | `media processing failed` on image upload | Default category is `amplify_video` | Add `--category tweet_image --media-type image/png` |
 | Two "Client Secret" values in X dashboard | UI bug — first is actually Client ID | Confirm on the "Keys and tokens" page; ID ends in `MTpjaQ` |
 
----
+| `media processing failed` on image upload | Default category is `amplify_video` | Add `--category tweet_image --media-type image/png` |
+
+## Browser Fallback Pitfalls (2026-05-21)
+
+| Symptom | Cause | Fix |
+|---------|-------|-----|
+| `xurl auth status` shows credentials but post fails | Credentials may be expired or misconfigured | Use `browser-harness` to visually verify session state — screenshot first |
+| Cookie auth works in browser-harness but fails in Playwright | Separate browser instances have separate sessions | Use browser-harness's own automation helpers instead of separate Playwright |
+| User asks "chụp hình xem" (take screenshot) | Wants visual confirmation, not text explanation | Screenshot → send via `MEDIA:/path.png` → short text summary. Never long paragraphs. |
 
 ## Notes
 
@@ -405,6 +418,8 @@ xurl --app staging /2/users/me             # one-off against staging
 - **Token storage:** `~/.xurl` is YAML. Never read or send this file to LLM context.
 - **Cost:** X API access is typically paid for meaningful usage. Many failures are plan/permission problems, not code problems.
 
+- **Video post workflow:** See `references/video-post-quick.md` — step-by-step video upload + post with caption
+- **Video file location:** `/tmp/` for Remotion outputs, `~/Downloads/` for user downloads
 - **Browser fallback:** When CLI is unavailable or unconfigured, see `references/browser-workflow.md` for browser-based repost workflow.
 
 ---

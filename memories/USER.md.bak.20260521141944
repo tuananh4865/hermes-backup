@@ -1,0 +1,42 @@
+§ [PREFERENCES] — explicit preferences discovered over sessions
+- communication: Vietnamese casual
+- response_style: concise, no fluff
+- tiktok_script_style: "anh" + "mấy con vợ"
+§ [PROJECTS] — ongoing work
+- tiktok-content: active
+- hermes-agent: memory-optimizing
+§ [FACTS] — durable facts about user, environment, tools
+- 2026-05-21: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [tool] the [HIGH]
+- [preference] you to operate? [HIGH]
+- [model] compatibility [HIGH]
+- 2026-05-21: Review the conversation above and consider saving to memory if appropriate.
+Focus on:
+1. Has the us
+- [tool] osascript [HIGH]
+- [tool] restriction [HIGH]
+- [model] can [HIGH]
+- [file] reference:** [HIGH]
+- 2026-05-21: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [model] nh
+- [file] ~/.hermes/plugins/memory/wiki/embeddings.py`
+- [file] py
+- [preference] viable | Latency unacceptable | [HIGH]
+- [preference] phải on-the-fly. [HIGH]
+- [file] immediately [HIGH]
+- [file] ~/.hermes/memories/MEMORY.md` [HIGH]
+- [file] ~/.hermes/state.db` [HIGH]
+- [preference] update system prompt (preserves prefix cache) [HIGH]
+- [preference] cần server
+- [model] llm
+- [model] Local
+- [preference] với Mem0
+- 2026-05-21: [Tuấn Anh] Lên plan chi tiết cho option A đi
+- [model] llama [HIGH]
+- [file] ** [HIGH]
+- [file] md [HIGH]
+- [preference] assume plugin support local Ollama [HIGH]
+§ [SESSIONS] — session history summaries
+- 2026-05-21: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+§ [ENTITY_INDEX] — cross-session entity tracking
+§ [GROWTH_LOG] — how user/agent improved

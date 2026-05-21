@@ -648,6 +648,78 @@ Speed depends on the vision-capable model used. For fast vision, use a vision-ca
 2. `hermes skills config` — check platform enablement
 3. Load explicitly: `/skill name` or `hermes -s name`
 
+### Wiki Self-Maintenance (HERMES AGENT SESSION)
+
+### Session Summary — 2026-05-21
+**Task:** Check memory health + wiki maintenance
+
+**Findings:**
+- Wiki: 1,478 real pages, 2,615 broken wikilinks, 202 orphan pages
+- Memory: All checkpoint files present (MEMORY.md, USER.md, TASK_STATE.md, DECISION_LOG.md)
+- Checkpoints: Normal (last run recently)
+
+**Actions Taken:**
+1. Created 3 real content pages for most-linked missing concepts:
+   - `concepts/tiktok-viral-script.md` — links to formula + describes hook types
+   - `concepts/tiktok-captcha-solver.md` — links to toolkit folder
+   - `queries/hermes-x-research-2026-05-20.md` — research summary page
+2. Identified critical pattern: `wiki_self_heal.py` creates empty stubs on large wikis
+3. Left 2,615 broken links as-is — they are old Telegram transcript references, not actionable
+
+**Decisions:**
+- Do NOT auto-fill broken links — they mostly reference old Telegram/Abandoned content
+- Only create content pages when real content is discovered in learning/, references/, or raw/
+- Wiki health summary reported to user with recommendation to leave as-is
+
+**Skills updated:** hermes-agent (wiki_self_heal NOT safe for large wikis)
+
+## Wiki Maintenance — Self-Heal Is NOT Safe for Large Wikis
+
+**Problem:** `wiki_self_heal.py` auto-fills broken wikilinks with **empty stub files** (only frontmatter). On a wiki with 2,600+ broken links, running it once created **2,225 new stubs**. This compounds — you clean stubs, run self-heal, get stubs back.
+
+**Root cause:** `wiki_self_heal.py` uses `stub_content` as fallback when no content can be found anywhere in the wiki. It does NOT check if content actually exists in other directories before creating stubs.
+
+**Correct workflow — manual-first approach:**
+```
+1. Run: python3 scripts/wiki_semantic_health.py
+   → Find broken wikilinks + orphan pages counts
+
+2. For each broken link, SEARCH FIRST before creating any page:
+   - Search wiki for actual content (learning/, references/, concepts/, etc.)
+   - Search project directories for related files
+   - Look in raw/ sources
+
+3. Only create a page when REAL content is found:
+   - Copy content from discovered location
+   - Add wikilinks to other existing pages
+   - Write frontmatter properly
+
+4. Use wiki_self_heal.py ONLY as last resort for isolated stubs:
+   - Small number of true orphans (not linked from anywhere)
+   - After confirming no content exists anywhere in wiki
+
+5. NEVER run wiki_self_heal.py without checking what it will create first
+```
+
+**Discovery pattern from session:** Real content was found in unexpected places:
+- `learning/tiktok-viral-script/formula/current.md` — tiktok viral formula
+- `concepts/tiktok-captcha-solver/` (10 Python files) — captcha toolkit
+- `references/x-research-hermes-2026-05-20.md` — Hermes research
+
+**Pattern:** Before creating stubs, search `learning/`, `references/`, project subdirectories, and raw/ sources. Content is often there, just in a different folder structure.
+
+**Verification after cleanup:**
+```bash
+# Count real content pages (exclude stubs <200 bytes)
+find wiki/concepts wiki/entities wiki/comparisons -name "*.md" -size +200c | wc -l
+
+# Count stubs (frontmatter only, no body)
+find wiki/concepts wiki/entities wiki/comparisons -name "*.md" -size -200c | wc -l
+
+# Run semantic health check
+python3 scripts/wiki_semantic_health.py
+```
+
 ### Cron Subprocess Fails (python3.14 not found)
 **Symptom:** `FileNotFoundError: [Errno 2] No such file or directory: 'python3.14'` in cron logs.
 
@@ -731,6 +803,38 @@ hermes config set auxiliary.vision.model <model_name>
 
 ### Tuấn Anh's Vision Setup
 **Updated 2026-05-10:** gemma-4-e2b IS vision-capable (verified). `.env` file overrides config.yaml — all three locations must agree. See `references/tuananh-vision-config.md` for working configs and triple-location env var fix.
+
+## Memory Cleanup Session (2026-05-21)
+
+**What happened:** User asked "Kiểm tra sức khoẻ bộ nhớ của em xem nào" → discovered USER.md was corrupted with LLM output artifacts:
+- Lines like `[tool] the [HIGH]`, `[file] py`, `[preference] cần server`
+- These are raw LLM scratchpad outputs that got written to USER.md instead of processed facts
+
+**Root cause:** Session review tasks (`Review the conversation above...`) in past cron jobs were writing their OWN output text to USER.md instead of properly parsing and extracting clean facts.
+
+**What was cleaned:**
+1. `USER.md` — reset from 42 corrupted lines to 562 bytes clean state
+   - Backup: `USER.md.bak.20260521141944`
+   - Kept only: PREFERENCES, PROJECTS, FACTS (clean versions)
+2. `MEMORY.md` — reset from 39 noisy task entries to 506 bytes
+   - Kept: environment notes + decision context
+3. `entities/learned-about-tuananh.md` — removed 71 lines of auto-improvement note pollution
+   - Kept: actual content (preferences, Gen Z slang, operating rules)
+   - Removed: `> **Auto-improvement note:**...` artifacts from bottom of file
+
+**Pattern for future cleanup:**
+```bash
+# Check USER.md corruption
+cat ~/.hermes/memories/USER.md | grep -E "^\[|^\- \[tool\]|^\- \[file\]|^\- \[model\]|^\- \[preference\]"
+
+# Backup before any cleanup
+cp ~/.hermes/memories/USER.md ~/.hermes/memories/USER.md.bak.$(date +%Y%m%d%H%M%S)
+
+# Pattern: USER.md corruption = session review task wrote raw LLM output
+# Fix: Reset to clean structure, rebuild from wiki source
+```
+
+**Prevention:** Session review tasks that call `memory tool` should parse and format their output, not dump raw LLM text. The `memory` tool writes structured entries — if the task passes unprocessed LLM output, it corrupts the file.
 
 ### LM Studio Vision Crash Debugging
 **Critical (2026-05-10):** Many LM Studio models are text-only and crash on image input with `OSError: broken data stream when reading image file`.
@@ -824,13 +928,17 @@ print(f"Vision provider: {provider}, model: {model}, client: {client}")
 
 See `references/multi-agent-setup.md` for detailed guide on creating agentic company with Telegram bots.
 
-**⚠️ COMMON ISSUE:** Bots respond to ALL messages instead of just @mentions — see "CRITICAL: Telegram Privacy Mode" section in that reference.
+**⚠️ Telegram Group Bot "no-mention" Skip Pattern:** When a bot in a Telegram group receives messages but logs show `{"reason":"no-mention"}` repeatedly, the `telegram-auto-reply` module is ignoring them. The bot IS receiving messages — it's intentionally skipping based on `requireMention` config. Fix: ensure users @mention the bot, or adjust the bot's `requireMention` setting in OpenClaw config. See `references/telegram-group-no-mention.md`.
 
-## Memory Architecture Reference
+## Related
 
-See `references/memory-architecture.md` for full 6-layer memory stack breakdown.
-
+- `references/memory-architecture.md` — full memory stack breakdown
+- `references/memory-provider-architecture-gaps.md` — 3 critical gaps in memory system
+- `references/memory-cleanup-session-2026-05-21.md` — USER.md corruption pattern and cleanup (May 2026)
+- `references/memory-health-check.md` — health check commands, metrics, cleanup procedure
 **⚠️ CRITICAL WikiMemoryProvider bug (2026-05-06)**: `_auto_extract_to_memory()` used `from tools.memory_tool import` which FAILs from plugin context. Fix documented in `references/wikimemoryprovider-bugfix-2026-05-06.md`. Also: `on_pre_compress()` only wrote checkpoint files — didn't extract to MEMORY.md. Both fixed with direct file I/O.
+
+**⚠️ CRITICAL WikiMemoryProvider USER.md corruption (2026-05-21)**: ENTITY_PATTERNS match tool/model/preference fragments in conversation buffer → extract garbage facts → write to USER.md. 5 rapid writes in 8ms during context compression. Root cause and fix documented in `references/wikimemoryprovider-user-corruption-2026-05-21.md`.
 
 **⚠️ CRITICAL dual-location bug (2026-05-08)**: WikiMemoryProvider has TWO source locations — `~/.hermes/plugins/wiki/` (stub, 136 lines) and `~/.hermes/plugins/memory/wiki/` (full, 1458 lines). The stub was being loaded instead of the full implementation. Fix: copy full → stub, then restart gateway. See `references/wikimemoryprovider-dual-location-bug-2026-05-08.md`.
 

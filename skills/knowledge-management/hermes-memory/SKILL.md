@@ -237,10 +237,166 @@ Never trust only one tool's count.
 1. Phase 1: `wiki_semantic_health.py` → health score + JSON report
 2. Phase 2: `wiki_self_heal.py --fix --links` → auto-fix broken wikilinks + log stubs count
 
+### Wiki Self-Heal — Auto-Stub Creation Bug (FIXED 2026-05-21)
+
+**Symptom:** Running `wiki_self_heal.py --fix --links` created 2,000+ empty stub files in `concepts/`. Wiki became bloated with "placeholder stub" content pages that were auto-generated for every broken wikilink detected.
+
+**Root cause:** `fix_broken_links()` in `wiki_self_heal.py` had logic that **automatically created stub pages** for every missing wikilink target, regardless of whether real content existed or was feasible to create. This was the default behavior when `--fix` flag was passed.
+
+**Fix applied (2026-05-21):**
+Disabled auto-stub-creation in `fix_broken_links()`. Now the function only **reports** broken links — it does NOT create any files. The docstring was updated to explain why:
+
+```python
+# Before: created stub pages for every broken link
+# After: only reports broken links, 0 stubs created
+```
+
+**Result:** Script now reports 2,615 broken links but creates 0 stub files.
+
+**⚠️ PITFALL: Stubs are seductive but pollute the wiki**
+- Auto-created stubs have "placeholder stub" content — useless for retrieval
+- Each stub creates new broken wikilinks pointing to OTHER stubs → cascading bloat
+- A wiki full of stubs produces false positives in health checks
+- **Rule:** NEVER auto-create stubs. Fix broken links by creating REAL content from existing source data, or leave them reported but unfixed.
+
+**Correct approach for broken links:**
+1. Look for source data (existing files, transcripts, research outputs)
+2. Create real content page with actual information
+3. Only create pages that have something meaningful to say
+4. Skip links where no source data exists — they stay "broken" but harmless
+
 ### Related Files
-- `/Volumes/Storage-1/Hermes/wiki/scripts/wiki_self_heal.py` — auto-fix broken links
+- `/Volumes/Storage-1/Hermes/wiki/scripts/wiki_self_heal.py` — stub creation DISABLED
 - `/Volumes/Storage-1/Hermes/wiki/scripts/wiki_semantic_health.py` — health scoring + edge case audit
 - `~/.hermes/scripts/wiki_health.sh` — cron script (48 lines, patched 2026-05-18)
+- `references/mem0-oss-ollama-setup.md` — Mem0 OSS + Ollama fully local setup guide (tested 2026-05-21)
+
+### Hermes Native Memory — Default Tools First (2026-05-21)
+
+**Lesson learned this session:** Custom WikiMemoryProvider was over-engineered. Hermes already provides self-learning tools natively. Always evaluate built-in options before building custom.
+
+### Hermes Built-in Memory Tools
+
+| Tool | Storage | Purpose |
+|------|---------|---------|
+| `memory` | `~/.hermes/memories/MEMORY.md` + `USER.md` | Bounded, file-backed persistent facts |
+| `session_search` | `~/.hermes/state.db` (SQLite FTS5) | Search past sessions, summarize with LLM |
+
+### Hermes MemoryProvider Plugins (choose ONE)
+
+| Plugin | Pros | Cons |
+|--------|------|-------|
+| `honcho` | No API key, semantic search, peer cards, dialectic Q&A | Local only |
+| `mem0` | LLM fact extraction, ADD-only, reranking | Requires MEM0_API_KEY |
+| `byterover` | ByteRover CLI, hierarchical context tree | Has errors in current setup |
+| `wiki` (custom) | Full wiki access, wiki-native | Over-engineered, complex |
+
+### Decision Framework
+
+```
+Before building custom memory → Check Hermes built-in options first
+Built-in tools sufficient? → Use them
+Need more capability? → Add ONE plugin (honcho or mem0)
+WikiMemoryProvider was a mistake → Consider disabling custom wiki plugin
+```
+
+### ⚠️ PITFALL: WikiMemoryProvider Over-Engineering
+
+The WikiMemoryProvider is ~1700 lines with 5 phases of custom implementation:
+- BM25 hybrid retrieval, entity extraction, importance scoring, session-start topic parsing, consolidation
+
+**Problem:** Complex to maintain, overlaps with built-in tools, hard to benchmark against alternatives.
+
+**Better approach:** Use Hermes built-in memory + ONE plugin (honcho for local, mem0 for cloud). Wiki remains as knowledge base, NOT as memory provider.
+
+### Current Status (2026-05-21)
+- WikiMemoryProvider: installed at `~/.hermes/plugins/memory/wiki/`
+- Config: `memory.provider: wiki` in config.yaml
+- ByteRover: has errors, needs investigation
+- **Decision pending:** Reset to Hermes defaults (honcho or mem0) or keep wiki
+
+---
+
+## ⚠️ CRITICAL: Mem0 OSS vs Mem0 Plugin (Cloud) — TWO DIFFERENT PRODUCTS
+
+This session discovered a critical distinction that saved significant implementation effort:
+
+| Product | Integration | API Key | Use Case |
+|---------|-------------|---------|----------|
+| **Mem0 Plugin** (`plugins/memory/mem0/`) | Hermes MemoryProvider plugin | ✅ MEM0_API_KEY required | Cloud API — fact extraction as a service |
+| **Mem0 OSS** (`mem0ai` pip package) | Python library used directly in code | ❌ No API key needed | Local inference with Ollama — fully offline |
+
+**The bundled Mem0 plugin uses `MemoryClient` (cloud API):**
+```python
+from mem0 import MemoryClient
+self._client = MemoryClient(api_key=self._api_key)  # ❌ Requires MEM0_API_KEY
+```
+
+**Mem0 OSS uses `Memory` class (local library):**
+```python
+from mem0 import Memory
+memory = Memory(config)  # ✅ No API key — runs with Ollama locally
+```
+
+**⚠️ PITFALL: Never try to configure the Mem0 plugin for local Ollama** — the plugin architecture only supports the cloud API client. To use Mem0 OSS locally, you must use it as a standalone Python library or write a custom integration — NOT through the Hermes memory plugin system.
+
+### Mem0 OSS + Ollama Fully Local Config (TESTED 2026-05-21)
+
+```python
+from mem0 import Memory
+from mem0.configs.base import MemoryConfig
+
+config = MemoryConfig(
+    llm={
+        "provider": "ollama",
+        "config": {
+            "model": "llama3.1:8b",
+            "temperature": 0,
+            "max_tokens": 2000,
+            "ollama_base_url": "http://localhost:11434"
+        }
+    },
+    embedder={
+        "provider": "ollama",
+        "config": {
+            "model": "nomic-embed-text:latest",
+            "ollama_base_url": "http://localhost:11434"
+        }
+    },
+    vector_store={
+        "provider": "chroma",
+        "config": {
+            "collection_name": "memories",
+            "path": "~/.hermes/mem0/chroma_db",
+            "embedding_model_dims": 768  # CRITICAL: nomic-embed-text = 768 dims
+        }
+    }
+)
+memory = Memory(config)
+```
+
+**Required Ollama models:**
+- LLM: `llama3.1:8b` (or `llama3.2:3b` for lighter load)
+- Embedder: `nomic-embed-text` (⚠️ produces 768-dim vectors — must match `embedding_model_dims: 768`)
+
+**⚠️ CRITICAL: Embedding dimension mismatch** — `nomic-embed-text` produces 768-dimensional vectors. If using Chroma with Mem0 OSS, you MUST set `embedding_model_dims: 768` in the config, or every insert will fail with a dimension error.
+
+### Decision Framework for Memory Setup
+
+```
+Step 1: Check Hermes built-in tools (memory tool + session_search)
+        ↓ Sufficient?
+Step 2: If need more → Check existing plugins (honcho, mem0 cloud, wiki)
+        ↓ Appropriate?
+Step 3: If need local Ollama → Mem0 OSS as standalone Python library
+        ↓ Integration needed?
+Step 4: If integrating with Hermes agent loop → Write custom provider
+        OR use Mem0 OSS directly in cron/job scripts (no agent integration)
+```
+
+**Rule:** Never assume a plugin supports local Ollama just because the product name appears in the plugin directory. Verify the actual code (`MemoryClient` vs `Memory` class).
+
+## Related
 
 ### Path Separator Bug in `wiki_semantic_health.py` (RESOLVED 2026-05-18)
 

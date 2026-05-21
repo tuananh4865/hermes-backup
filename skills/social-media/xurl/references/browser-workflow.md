@@ -68,7 +68,11 @@ with sync_playwright() as p:
 **Finding relevant posts**: For Tuấn Anh's interests (TikTok Shop, AI agents, content creation):
 - Search: `https://x.com/search` for relevant hashtags/topics
 - Timeline: `https://x.com/home` for following feed
-- No credentials needed for reading (except for repost action)
+**Quick diagnostic**: If post/repost/quote button is always disabled in Playwright but works in the real Chrome tab → this is the fingerprinting detection issue described above.
+
+### browser-harness navigation timeouts on x.com
+
+On macOS with browser-harness, `goto_url()` and `wait_for_load()` often timeout when navigating to `x.com` (the connection hangs). However, the Chrome tab is ALREADY open and logged in. The workaround: navigate manually in the Chrome tab, then use CDP commands (`fill_input`, `type_text`, `click_at_xy`) on the existing tab rather than attempting URL navigation through browser-harness.
 
 ## Key refs (dynamic)
 Browser snapshot refs change on every page load — always call `browser_snapshot` after `browser_navigate` before clicking.

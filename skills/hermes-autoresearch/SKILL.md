@@ -2,7 +2,7 @@
 title: Hermes Autoresearch — Agentic Research Loop
 name: hermes-autoresearch
 created: 2026-04-27
-updated: 2026-05-20
+updated: 2026-05-21
 type: skill
 tags: [autoresearch, self-improvement, karpathy-pattern, agentic]
 description: Karpathy-style autonomous research loop — Skills Improvement + AI Agents + Hermes Agentic (16 capabilities, em TỰ CHỌN mỗi đêm), infinite repeat, NEVER STOP
@@ -41,9 +41,74 @@ Improve skills in `~/.hermes/skills/`
 
 Metrics:
 ```
-SHS = stale_skills × 10 + missing_examples × 5 + broken_links × 3 + low_confidence × 2
+SHS = stale_skills × 10 + missing_examples × 5 + broken_links × 3 + low_confidence × 2 + duplicate_titles × 1
 Target: SHS = 0
 ```
+
+**⚠️ CRITICAL: Stub Files là vấn đề thật, không phải Duplicate Titles (2026-05-21)**
+Wiki health check báo "1,436 duplicate titles" — đây là SYMPTOM, không phải ROOT CAUSE.
+
+**Root cause thật sự:** `wiki_self_heal.py` tạo hàng ngàn placeholder stub files trong `concepts/` chứa:
+- `auto-created by` marker
+- `placeholder stub` marker
+→ Chiếm 71% folder nhưng là content rỗng
+
+**Detection:**
+```bash
+cd /Volumes/Storage-1/Hermes/wiki
+find concepts/ -name "*.md" | xargs grep -l "placeholder stub\|auto-created by" | wc -l
+# Before fix: 5,318 stubs
+# After fix: 0 ✅
+```
+
+**Fix — XÓA TẤT CẢ stub files:**
+```python
+from pathlib import Path
+stubs = [f for f in Path('concepts').glob('*.md')
+         if 'placeholder stub' in f.read_text() or 'auto-created by' in f.read_text()]
+for f in stubs: f.unlink()
+print(f"Deleted {len(stubs)} stubs")
+```
+
+**⚠️ DON'T trust the "duplicate titles" count at face value.**
+1,436 "duplicate titles" = phần lớn là false positive (profile pages trong `learn/`, phase-specific `status.md` trong project folders, các page cùng title nhưng khác nội dung hoàn toàn).
+
+**Khi nào DUPLICATE là vấn đề thật:**
+- cùng title AND <90% nội dung giống nhau → merge
+- cùng title AND >90% giống nhau → merge, keep newest
+
+**Verification:**
+```bash
+# Stubs gone?
+find concepts/ -name "*.md" | xargs grep -l "placeholder stub" 2>/dev/null | wc -l
+# Expected: 0
+
+# Real pages remain?
+find concepts/ -name "*.md" | wc -l
+# Expected: ~1,400-1,500 (trước: 7,039)
+```
+
+**⚠️ CRITICAL: Duplicate Titles (2026-05-21)**
+Wiki health check tìm thấy **1,436 duplicate titles** — issue lớn nhất hiện tại. Ví dụ:
+- `hermes dojo` có 4 bản (README.md, hub.md, concepts/hermesdojo.md, Hermes-Dojo.md)
+- `nexus` có 2 bản (projects/nexus/index.md + hub.md)
+- `wiki quality campaign` có 4 bản
+- `tiktok content strategy` có 2 bản
+
+**Duplicate consolidation priority:**
+1. **Category folders over individual files** — `concepts/` vs `projects/` consolidation để đầu
+2. **SAME content (file content nearly identical)** → merge, keep newest updated
+3. **DIFFERENT content (same title, different scope)** → rename one, add note in frontmatter
+
+**Detection command:**
+```bash
+cd /Volumes/Storage-1/Hermes/wiki
+python3 scripts/duplicate_detector.py 2>/dev/null | grep "appears in:" | head -20
+```
+
+**Consolidation rule:** Duplicates với <10% nội dung khác biệt → merge. Duplicates với 50%+ nội dung khác → rename và link.
+
+**After any consolidation:** `git add -A && git commit -m "dedup: consolidated N duplicate titles"`
 
 What to improve:
 - Add missing examples to skills
@@ -203,7 +268,17 @@ Focus areas:
 - **RetroAgent**: Dual intrinsic feedback (numerical + language) instead of external oracle
 - **GVU Self-Play**: Unifies STaR, SPIN, Reflexion, AlphaZero as single operator
 
-See `references/self-improving-agents-may-2026.md` for full 17-technique list with arXiv sources.
+**6 NEW Goal Decomposition Techniques (May 21, 2026):**
+| Technique | arXiv | Key Metric | Hermes Applicability |
+|-----------|-------|------------|---------------------|
+| TDP (Task-Decoupled Planning) | 2601.07577 | 60% context reduction via DAG sub-goals | **HIGH** — multi-agent orchestration |
+| DELTA | delta-llm.github.io | Autoregressive robot tasks | MEDIUM — task sequencing |
+| Flare | 2601.22311 | Consistent improvement | MEDIUM |
+| PIVOT | 2605.11225 | 120 tasks each domain | MEDIUM |
+| Policy Decompositions | 2605.06957 | LLM agent applicable | **HIGH** — agent planning |
+| Plan-to-Action | 2604.12147 | 16,991 trajectories, ~70% plan adherence | **HIGH** — goal execution |
+
+**TDP pattern recommended for Hermes:** 60% context reduction via DAG sub-goals directly applicable to multi-agent orchestration.
 
 Metrics:
 ```
@@ -510,7 +585,19 @@ grep -rn "write_text.*mode=" /Volumes/Storage-1/Hermes/wiki/scripts/
 
 ### Worker Cron Jobs — STATUS (2026-05-07 CONFIRMED ✅)
 
-**✅ VERIFIED WORKING (2026-05-07):** Content Creator Morning cron (ce3701b4dcdd) ran at 8AM and produced output.
+**⚠️ WORKER CRONS PAUSED (2026-05-21):** 8/14 cron jobs are PAUSED since May 14. Affected:
+- Content Creator Morning + Evening (8AM, 6PM)
+- Research Analyst Morning + Evening (8:30AM, 6:30PM)
+- Orchestrator Morning + Nightly + Monitor (9AM, 9PM, 2h)
+
+**Only 5 active:** Autoresearch (2AM), Hermes X Research (7AM), Daily Backup (3AM), Wiki Health (4AM), Daily Session Review (0AM).
+
+**Resume pattern:**
+```bash
+cronjob resume {job_id}   # For each paused job
+```
+
+**⚠️ PRIORITY:** Workers (Content Creator, Research Agent) are MORE important than Orchestrator cron jobs. Resume workers FIRST.
 
 **Evidence:**
 ```bash
@@ -1071,7 +1158,9 @@ cronjob create --name "Job Name" --prompt "..." --schedule "..." --skills [...] 
 - `references/felix-model-setup-checklist.md` — Verification steps cho Felix/agentic company setup
 - `references/session-continuity-gap.md` — **Session continuity gap** (2026-05-06): TASK_STATE.md never written, no pre-compact checkpoint, context compression loses work-in-progress. See this BEFORE working on memory/session features.
 - `references/worker-cron-misconfiguration.md` — **Worker cron jobs misconfigured** (2026-05-06): All 7 worker/orchestrator crons ran `hermes-autoresearch` instead of worker-specific prompts. Diagnosis + fix.
-- `references/worker-cron-verification.md` — **3-step verification pattern** (2026-05-06): Check output content + cron Skills column + worker output directories. MUST run ALL three. "Workers configured" ≠ "Workers running".
+| references/worker-cron-verification.md | **3-step verification pattern** (2026-05-06): Check output content + cron Skills column + worker output directories. MUST run ALL three. "Workers configured" ≠ "Workers running". |
+| references/wiki-health-check-2026-05-21.md | **Wiki health findings** (2026-05-21): 1,436 duplicate titles (CRITICAL), 202 orphan pages, 12 broken wikilinks. Duplicate consolidation priority guide. |
+| references/x-research-hermes-2026-05-18.md | **Hermes X research** (May 18): 154,687 stars (↑4,397 in 3 days), v2026.5.16, Ralph Loop + Hallucination Gate, Hermex Chrome extension, enterprise memory differentiation |
 - `references/worker-output-path-gap.md` — **CRITICAL (2026-05-08)**: Workers fire + cron output exists BUT don't write to shared `outputs/` dirs. Both cron output AND shared output needed for pipeline. Fix: worker SOUL.md must explicitly write to shared outputs/.
 - `references/daily-session-review.md` — **Daily session review methodology** (0AM cron, session extraction framework, wiki update targets)
 - `references/self-improving-agents-2026.md` — **AI agent self-improvement techniques** (older, Jan-Apr 2026): Multi-Agent Reflexion, HyperAgents, A2A/MCP/ACP protocols, Trace Learning, Self-Debugging, SWE-RL, Fallback Chain.

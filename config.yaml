@@ -11,7 +11,7 @@ credential_pool_strategies: {}
 toolsets:
 - hermes-cli
 agent:
-  max_turns: 90
+  max_turns: 300
   gateway_timeout: 1800
   restart_drain_timeout: 60
   api_max_retries: 3
@@ -52,6 +52,7 @@ web:
   backend: exa
   search_backend: ''
   extract_backend: ''
+  use_gateway: false
 browser:
   inactivity_timeout: 120
   command_timeout: 30
@@ -68,6 +69,7 @@ browser:
     session_key: ''
     adopt_existing_tab: false
   cloud_provider: local
+  use_gateway: false
 checkpoints:
   enabled: true
   max_snapshots: 50
@@ -95,7 +97,7 @@ tool_loop_guardrails:
     idempotent_no_progress: 5
 compression:
   enabled: true
-  threshold: 0.5
+  threshold: 0.7
   target_ratio: 0.2
   protect_last_n: 20
   hygiene_hard_message_limit: 400
@@ -262,6 +264,7 @@ tts:
     device: cpu
   piper:
     voice: en_US-lessac-medium
+  use_gateway: false
 stt:
   enabled: true
   provider: local
@@ -350,7 +353,7 @@ telegram:
   reactions: false
   channel_prompts: {}
   allowed_chats: ''
-  require_mention: false
+  require_mention: true
   allowed_users: '*'
 mattermost:
   require_mention: true
@@ -502,12 +505,15 @@ platform_toolsets:
   - terminal
   - todo
   - tts
+  - video
+  - video_gen
   - vision
   - web
   telegram:
   - browser
   - clarify
   - code_execution
+  - computer_use
   - cronjob
   - delegation
   - file
@@ -519,8 +525,11 @@ platform_toolsets:
   - terminal
   - todo
   - tts
+  - video
+  - video_gen
   - vision
   - web
+  - x_search
 custom_providers:
 - name: LM Studio
   base_url: http://localhost:1234/v1
@@ -535,6 +544,16 @@ plugins:
 known_plugin_toolsets:
   cli:
   - spotify
+  telegram:
+  - spotify
+image_gen:
+  provider: fal
+  use_gateway: false
+  model: fal-ai/flux-2-pro
+video_gen:
+  provider: fal
+  use_gateway: false
+  model: veo3.1
 
 # ── Fallback Model ────────────────────────────────────────────────────
 # Automatic provider failover when primary is unavailable.
