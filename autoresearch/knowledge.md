@@ -554,3 +554,69 @@ result = subprocess.run(
 ### Git Commit
 - Status: CLEAN (wiki clean, skills healthy, no blocking issues)
 - Reference doc updated with 5 new techniques
+
+---
+
+## Autoresearch 2026-05-21
+
+### System Status (02:00)
+- Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
+- Skills: 236 skills healthy, SHS = 0
+- Workers: ⚠️ DEAD — content-creator/outputs/ empty since May 14+ (10+ days stale)
+- Gen Z slang: Workers dead → web search fallback. No new slang found (slang evolving slowly this week)
+
+### Gen Z Slang Status (Workers Dead — Web Search Fallback)
+- Workers last fired May 14 (Content Creator), May 12 (Research Agent) — 7+ days stale
+- slangloom.com (May 11): Xịn sò, Kèo, Quẩy, Tạch, Tấu hài, Hết nước chấm — already in wiki
+- No NEW slang from web search (May 21 search shows same terms from Mar-Jun 2026)
+- Wiki Gen Z section (updated May 18) is current
+
+### AI Agent Research — Goal Decomposition + Planning (May 21, 2026)
+
+**Focus tonight:** Goal Decomposition (#11) + Planning (#12) — foundational for multi-agent orchestration
+
+**NEW techniques found:**
+
+1. **TDP — Task-Decoupled Planning (arXiv:2601.07577)** 
+   - Decouples tasks into DAG of sub-goals via Supervisor
+   - Planner + Executor with scoped contexts
+   - Reduces context overhead by 60% on long-horizon tasks
+
+2. **DELTA — Decomposed Efficient Long-Term Robot Task Planning**
+   - Decomposes long-term goals into autoregressive sub-goals
+   - Enables automated task planners to solve complex household/robot tasks
+
+3. **Flare — Planning-Centric Analysis (arXiv:2601.22311)**
+   - Planning-level behavior improvement across benchmarks
+   - Consistent task performance improvement across agent frameworks
+
+4. **PIVOT — Bridging Planning and Execution (arXiv:2605.11225)**
+   - Long-horizon planning benchmark (Travel + Shopping Planning, 120 tasks each)
+   - Plan adherence measurement for programming agents
+
+5. **Learning and Reusing Policy Decompositions (arXiv:2605.06957)**
+   - Dynamic policy-learning combining generalized planning + hierarchical task decomposition
+   - For LLM-based agents — directly applicable to Hermes multi-agent orchestration
+
+6. **From Plan to Action (arXiv:2604.12147)**
+   - First extensive analysis of plan compliance in programming agents
+   - 16,991 trajectories analyzed
+   - Key finding: agents follow plans ~70% of time, fail on ambiguous subgoals
+
+**Hermes-specific insight:** Hermes v0.14 "Foundation Release" released May 2026 with:
+- 180x faster browser automation (CDP-based)
+- Live session handoffs (/handoff command)
+- Multi-agent coordination improvements
+- Community request: swarm agents tutorials, kanban, conductor
+
+**Reference updated:** `references/self-improving-agents-may-2026.md` with planning/goal-decomposition section
+
+### Priority Recommendations
+1. **Workers need restart** — 7+ days dead, cron may need manual re-enabling by Anh
+2. **Implement TDP pattern** — would improve multi-agent task decomposition
+3. **PIVOT benchmark** — could be used to measure orchestrator plan adherence
+4. **Gen Z slang current** — no sync needed tonight
+
+### Git Commit
+- Status: CLEAN (wiki clean, SHS=0, no blocking issues)
+- New techniques documented
