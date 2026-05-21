@@ -6,7 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [preference] có quyền.
 - [preference] xử lý kiểu nào? Hoặc anh biết cách nào khác để 2 bot chat với nhau trong Telegram? [HIGH]
 - [preference] phải config issue. [HIGH]
 - [preference] forward** message đó đến Hermes vì cả 2 đều là bot. [HIGH]
@@ -35,6 +34,7 @@ Focus on:
 - 2026-05-21: Review the conversation above and update two things:
 **Memory**: who the user is. Did the user reve
 - [file] (which [HIGH]
+- 2026-05-22: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [file] md [HIGH]
 § [SESSIONS] — session history summaries
 - 2026-05-22: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea

@@ -1,7 +1,3 @@
-Task '[Replying to: "✅ Bộ nhớ mặc định CÓ hoạt động  Nhưng có VẤN ĐỀ nghiêm trọng:  Builtin memory đang hoạt động: - ✅ memory_' — 1 turns
-§
-2026-05-21: Telegram bot-to-bot @mention WORKS in group Company (-5195161709). NOT blocked by Telegram platform. Issue was: wrong group ID format (-1005195161709 vs correct -5195161709). Hermes successfully @mention @ClawdZ1E_Bot in group and message delivered with mention entity confirmed.
-§
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260521, 1 turns
 §
 Modified files: USER.md
@@ -37,3 +33,7 @@ Modified files: references/openclaw-config-notes.md
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260522, 1 turns
 §
 Modified files: wiki/log.md
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260522, 1 turns
+§
+Modified files: hermes-autoresearch
