@@ -670,3 +670,42 @@ result = subprocess.run(
 ### Git Commit
 - Status: CLEAN (wiki clean, SHS=0, no blocking issues)
 - New techniques documented
+
+---
+
+## Tonight's Findings (2026-05-22)
+
+### System Status (02:00)
+- Wiki: ✅ clean (1824 files, 0 issues — wiki_lint --fast PASSED)
+- Skills: 65 skills with SKILL.md, SHS = 0 (verified clean)
+- Workers: ⚠️ DEAD — content-creator/outputs/ and research-agent/outputs/ are EMPTY (no outputs in days)
+- Session logs: ~/Library/Application Support/hermes-agent/sessions/ — empty (0 bytes)
+- Gen Z slang: Workers dead since May 11+, web search fallback used
+
+### Gen Z Slang Update (May 22)
+**NEW TERM found from web search:**
+- **"Cổ điển, tôn trọng"** — "classic, respect" — used to compliment things that are "old but still done properly"
+- Source: Vietnamese Gen Z slang from Threads/TikTok (May 8, 2026 via vtimes.com.au)
+- Origin: From streamer Killerqueen (Lê Lưu Bách Đạt), spread across social media
+- Synced to entities/learned-about-tuananh.md ✅
+
+### Hermes Agent v0.14.0 "Foundation Release" (May 16, 2026)
+- **157.2K+ stars** (global rank #46) — up from ~155K on May 20
+- 808 commits since v0.13.0, 633 merged PRs, 165K lines changed
+- Key features: xAI Grok OAuth, OpenAI-compatible local proxy, x_search native tool, 180x faster CDP browser, 9 new skills, LINE + SimpleX Chat, native Windows beta, /handoff live session transfer
+- 12 P0 + 50 P1 issues closed
+- Hermes Atlas — new resource noted by Teknium (founder)
+
+### Capability Focus: Planning + Goal Decomposition
+- TDP (Task-Decoupled Planning): 60% context reduction via DAG sub-goals
+- DGM (Darwin Gödel Machine): self-modifying code without retraining
+- 6 new goal decomposition techniques documented in previous sessions
+
+### Recommendations
+1. Workers need restart — 10+ days dead, cron may need manual re-enabling
+2. Gen Z slang synced ✅ — wiki entity updated with new term
+3. Consider TDP pattern for multi-agent orchestrator
+
+### Git Commit
+- Status: CLEAN (wiki clean, skills healthy, slang synced)
+- Reference doc updated
