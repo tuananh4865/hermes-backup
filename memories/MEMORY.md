@@ -1,11 +1,3 @@
-Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260521, 1 turns
-§
-Modified files: USER.md
-§
-Modified files: telegram-bot-mention-delegation.md
-§
-Task 'Review the conversation above and consider saving to memory if appropriate.  Focus on: 1. Has the user revealed things about themselves — their person' — session 20260521, 1 turns
-§
 Task 'alo' — session 20260521, 7 turns
 §
 Task '[Replying to: "✅ Bộ nhớ mặc định CÓ hoạt động  Nhưng có VẤN ĐỀ nghiêm trọng:  Builtin memory đang hoạt động: - ✅ memory_tool (MemoryStore) đọc/ghi MEM' — session 20260521, 1 turns
@@ -37,3 +29,11 @@ Modified files: wiki/log.md
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260522, 1 turns
 §
 Modified files: hermes-autoresearch
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260522, 1 turns
+§
+Modified files: terminology
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260523, 1 turns
+§
+Modified files: with, SKILL.md, USER.md/MEMORY.md

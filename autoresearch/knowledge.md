@@ -1,17 +1,18 @@
 # Hermes Autoresearch Knowledge
 
-## Current Focus (2026-05-05)
-Tonight's focus: **Skill Creation #8** — improving existing skills
-- Added pitfalls sections to 4 skills
-- Adding examples to engineering-diagnose
+## Current Focus (2026-05-23)
+Tonight's focus: **Goal Decomposition #11 + Self-Evolution patterns**
+- Researching 9 new self-improving agent techniques from May 2026 arXiv papers
+- Gen Z slang update: "kịt kin", "trình là gì", "hài hước tưởng mình vô duyên"
+- Wiki clean (1824 files), SHS = 0, Workers still DEAD
 
 ## Skills Improved Tonight
-| Skill | Improvements |
+|| Skill | Improvements |
 |-------|-------------|
-| hermes-autoresearch | Added 10-item pitfalls section |
-| engineering-diagnose | Added 2 examples + 5 common pitfalls |
-| dogfood | Added 10-item pitfalls section |
-| engineering-tdd | Added 10-item pitfalls section |
+|| hermes-autoresearch | Added 10-item pitfalls section |
+|| engineering-diagnose | Added 2 examples + 5 common pitfalls |
+|| dogfood | Added 10-item pitfalls section |
+|| engineering-tdd | Added 10-item pitfalls section |
 
 ## Research Baselines
 | Area | Baseline | Target |
@@ -702,10 +703,68 @@ result = subprocess.run(
 - 6 new goal decomposition techniques documented in previous sessions
 
 ### Recommendations
-1. Workers need restart — 10+ days dead, cron may need manual re-enabling
-2. Gen Z slang synced ✅ — wiki entity updated with new term
+1. Workers need restart — 12+ days dead, cron may need manual re-enabling
+2. Gen Z slang synced ✅ — "kịt kin", "trình là gì", "hài hước tưởng mình vô duyên"
 3. Consider TDP pattern for multi-agent orchestrator
+4. 9 new self-improvement techniques from May 2026 papers
 
 ### Git Commit
 - Status: CLEAN (wiki clean, skills healthy, slang synced)
 - Reference doc updated
+
+---
+
+## Tonight's Findings (2026-05-23)
+
+### System Status (02:00)
+- Wiki: ✅ clean (1824 files, 0 issues — wiki_lint --fast PASSED)
+- Skills: 237 skills healthy, SHS = 0
+- Workers: ⚠️ DEAD — content-creator/outputs/ and research-agent/outputs/ are EMPTY (12+ days)
+- Session logs: ~/Library/Application Support/hermes-agent/sessions/ — empty (0 bytes)
+- Gen Z slang: Workers dead since May 11+, web search fallback used
+
+### Gen Z Slang Update (May 23)
+**NEW TERMS found from web search:**
+1. **"kịt kin"** — viral TikTok trend (May 5, 2026) — mimicks a polite sneeze "hắt xì nhẹ" with cute expression
+2. **"trình là gì mà trình ai chấm"** — "what's your level to judge others?" — viral from HIEUTHUHAI song "Trình"
+3. **"ối dồi ôi"** — expression of disbelief, like "oh my god!" — part of trình trend
+4. **"hài hước tưởng mình vô duyên"** — "funny thinking I'm being rude" — ironic way to compliment
+5. **"nếu anh có yêu nói đi ngại gì"** — dance challenge trend (May 12, 2026)
+6. **"anh đâu cần phải xin lời em, mình đâu là gì của nhau đâu"** — viral sound trend (May 7, 2026)
+
+### 9 NEW Self-Improving Agent Techniques (May 2026)
+
+1. **LSE (Learning to Self-Evolve)** — arXiv:2603.18620 — trains LLMs to improve their own contexts at test-time via single-step RL. A 4B model outperforms GPT-5 and Claude Sonnet 4.5 on Text-to-SQL.
+
+2. **Test-time Recursive Thinking (TRT)** — arXiv:2602.03094 — open-source models reach 100% on AIME-25/24. Uses accumulated knowledge + self-generated verification across iterations.
+
+3. **Native Evolution** — arXiv:2604.18131 — trains agents to explore/summarize WITHOUT external rewards at inference. Qwen3-30B +20% on WebVoyager, 14B outperforms Gemini-2.5-Flash.
+
+4. **Polaris** — arXiv:2603.23129 — Gödel agent for SMALL models (7B). Policy repair via experience abstraction. Failures → compact reusable strategies → code patches.
+
+5. **SOLAR** — arXiv:2605.20189 — Self-Optimizing Lifelong Autonomous Reasoner. Meta-learning on weights as environment. Episodic memory buffer for plasticity/stability balance.
+
+6. **GenericAgent** — arXiv:2604.17091 — context information density maximization. 4 mechanisms: minimal tools, hierarchical memory, self-evolution SOPs, context truncation.
+
+7. **ME-ICPO** — arXiv:2603.01335 — Minimum-Entropy In-Context Policy Optimization. Self-reflection as in-context policy optimization with entropy-regularized response selection.
+
+8. **DGM-Hyperagents** — arXiv:2603.19461 — extends DGM with metacognitive self-modification. Meta agent modifies itself AND the task agent. Self-improving self-improvement.
+
+9. **LLM Agent Optimization Survey** — arXiv:2503.12434 — comprehensive survey: parameter-driven (SFT, RL, hybrid) + parameter-free (prompt, RAG, tool, multi-agent).
+
+### Hermes v0.14.0 "Foundation Release" (May 16, 2026) — Updated
+- **157.2K+ stars** (global rank #46)
+- 808 commits, 633 merged PRs, 545 issues closed (12 P0, 50 P1)
+- 215 community contributors
+- Key: 180x faster CDP browser, native Windows beta, x_search native, OpenAI proxy for OAuth, /handoff live transfer, 9 new skills (Hyperliquid, Yahoo Finance, api-testing, EVM multi-chain, darwinian-evolver, osint-investigation, pinggy-tunnel, watchers, Notion overhaul)
+- PyPI install: `pip install hermes-agent` works
+- Community: 7,309 members in Hermes Agent X
+
+### Gen Z Slang Entities Update Needed
+**File:** `/Volumes/Storage-1/Hermes/wiki/entities/learned-about-tuananh.md`
+**Section:** Vietnamese Gen Z Hot 2025-2026
+**New terms to add:**
+- **kịt kin** — viral May 2026, polite sneeze meme with cute expression
+- **trình là gì mà trình ai chấm** — viral from HIEUTHUHAI song, ironic judgment comeback
+- **hài hước tưởng mình vô duyên** — "funny thinking I'm being rude", ironic compliment style
+- **ối dồi ôi** — "oh my god!" expression, part of trình trend

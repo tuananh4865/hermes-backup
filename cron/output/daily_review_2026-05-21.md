@@ -1,64 +1,41 @@
-# Daily Review — 2026-05-21
+## 🌙 Daily Review — 2026-05-21
 
-## Session Summary
-- **Total sessions**: 7
-- **Most active**: O-Lab group (241 messages), Memory health check (186 messages)
-- **Platform**: Telegram (DM + groups)
+### ✅ Hoàn thành
 
----
+- **OpenClaw Multi-Agent Setup** — Tạo `techlead` agent mới, thêm @TechLead_ClawBot token
+- **Memory Health Check** — Phát hiện WikiMemoryProvider gây corruption USER.md, đã clean
+- **Wiki Maintenance** — Tạo 3 wiki pages mới, fix broken links
+- **Google I/O 2026 Video** — Draft video đã tạo (30s: Gemini 3.5 Flash, Omni, Spark, etc.)
 
-## ✅ Hoàn thành
+### 🧠 Learnings
 
-### 1. Memory Health Check — Full Diagnostic
-- **Wiki health**: 1,768 files, ~2,785 broken wikilinks, ~192 orphan pages
-- **Builtin memory**: Working (state.db: 456 sessions, 20,026 messages)
-- **Bug found**: WikiMemoryProvider rapid writes (5 writes in 8ms) causing garbage in USER.md
-- **Action taken**: Cleaned USER.md (562 bytes) and MEMORY.md (506 bytes), reset corrupted content
-- **Decision**: Keep wiki as primary memory — Mem0 NOT needed
+1. **Keep wiki as primary memory** — Mem0 không cần thiết (cloud-only, không có Hermes integration)
+2. **Telegram group ID format đúng**: `-5195161709` (không phải `-1005195161709`)
+3. **Bot @mention giữa các bot HOẠT ĐỘNG** trong Telegram groups
+4. **Cookie export từ Chrome không giữ X login state** — không thể dùng Playwright cookie injection
+5. **X anti-bot detection** marks Post button as aria-disabled="true" dù screenshot show nó enabled
+6. **xurl đã install nhưng chưa auth** — cần X Developer OAuth credentials
 
-### 2. X/Twitter Automation — FAILED (Key Blocker)
-- **Attempted**: Post Google I/O 2026 video via browser automation
-- **Methods tried**:
-  - Playwright + cookies: Upload OK, caption OK, but Post button disabled by X anti-automation
-  - browser-harness Chrome: Can't read encrypted cookies from anh's Chrome
-  - osascript: JavaScript execution errors
-- **Root cause**: X detects browser automation → sets `aria-disabled="true"` on Post button
-- **Solution needed**: Setup xurl with X API credentials (OAuth on developer.x.com)
+### ⚠️ Cần xử lý
 
-### 3. O-Lab Group — Google I/O 2026 Content
-- Created 30-second video summary with phases: Dark sphere → Glass cards → 3 products
-- Content pillars: Gemini 3.5 Flash, Omni, Spark, Intelligent Search, Universal Cart, Smart Glasses, Antigravity
+| Priority | Item | Status |
+|----------|------|--------|
+| 🔴 HIGH | X Developer account + xurl authentication | BLOCKER |
+| 🟡 MED | OpenClaw gateway restart sau config changes | PENDING |
+| 🟡 MED | Ollama chưa install (Mem0 local setup nếu cần) | PENDING |
 
----
+### 📊 Technical Summary
 
-## 🧠 Learnings
+- **Sessions analyzed**: 13 files
+- **Wiki state**: 1,768 files, ~2,615 broken wikilinks (not critical)
+- **Active bots**: ResearcherClaw + TechLeadClaw (2 OpenClaw agents)
+- **X.com automation**: PERSISTENT BLOCKER — anti-bot detection hoạt động ở React app layer
 
-### Technical
-1. **X.com anti-automation bypass impossible** — Browser automation WILL be detected, button stays disabled even when vision shows enabled
-2. **Chrome cookies encrypted by macOS Keychain** — Can't read via browser-harness, need debug port or manual export
-3. **WikiMemoryProvider bug** — `_write_structured_user_profile()` regex extracts garbage from compressed context, causes rapid writes
-4. **Mem0 cloud-only** — Plugin uses `MemoryClient` which requires API key, doesn't support Ollama local
+### 🎯 Revenue/TikTok Shop
 
-### Content Strategy
-- Google I/O 2026 video content in production (30s summary format)
-- "Dark sphere + Glass cards" visual style for tech content
+- **Không có session nào về TikTok Shop operations** trong ngày hôm qua
+- Các session tập trung vào: OpenClaw setup, X automation debugging, memory architecture
 
 ---
 
-## ⚠️ Cần xử lý
-
-1. **Setup xurl (X API credentials)** — Required to post to X reliably. Need anh to setup OAuth on developer.x.com
-2. **Fix broken wikilinks** — 2,785+ broken links in wiki (can batch fix)
-3. **Fix orphan pages** — 192+ orphan pages need linking
-4. **Monitor USER.md corruption** — WikiMemoryProvider rapid-write bug still present in code
-
----
-
-## 🗂️ Wiki Updates
-- `wiki/log.md` — Appended this summary
-- `entities/learned-about-tuananh.md` — No new preferences observed
-- No new pages created
-
----
-
-*Report generated: 2026-05-22 00:00*
+*Report generated: 2026-05-22 00:00 AM*

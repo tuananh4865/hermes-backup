@@ -6,13 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [preference] xử lý kiểu nào? Hoặc anh biết cách nào khác để 2 bot chat với nhau trong Telegram? [HIGH]
-- [preference] phải config issue. [HIGH]
-- [preference] forward** message đó đến Hermes vì cả 2 đều là bot. [HIGH]
-- [preference] forward message đó đến Hermes vì cả 2 đều là bot. [HIGH]
-- [file] ~/.hermes/.env`
-- 2026-05-21: alo
-- [tool] the [HIGH]
 - [preference] you to operate? [HIGH]
 - 2026-05-21: Review the conversation above and consider saving to memory if appropriate.
 Focus on:
@@ -35,8 +28,15 @@ Focus on:
 **Memory**: who the user is. Did the user reve
 - [file] (which [HIGH]
 - 2026-05-22: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-22: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [tool] skill [HIGH]
+- [tool] constraints [HIGH]
+- [file] remains [HIGH]
+- [preference] just note "stale" — they know to flag restart need to Anh AND use web search fallback. [HIGH]
+- 2026-05-22: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [project] at [HIGH]
 - [file] md [HIGH]
 § [SESSIONS] — session history summaries
-- 2026-05-22: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-23: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

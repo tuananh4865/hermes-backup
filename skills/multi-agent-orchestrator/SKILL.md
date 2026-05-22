@@ -1351,12 +1351,13 @@ curl -s "https://api.telegram.org/bot<TOKEN>/getMe"
 - **Mention (@SaturdayClawdBot) trong group → Bot nhận được notification + respond** ✅
 - Hermes gửi message mention bằng `send_message` target=`telegram:-1003764041476:603` → Bot nhận ✅
 
-### Bot Profiles Setup (2026-05-04)
+### Bot Profiles Setup (2026-05-04 + May 21 Update)
 | Profile | Bot Username | Bot Token | Status |
 |---------|--------------|-----------|--------|
 | default | @TyayUno | (main) | Primary |
 | content-director | @SaturdayClawdBot | 8594106827:... | ✅ Running |
 | research-lead | @Researcher_Clawd_Bot | 8706108095:... | ✅ Running |
+| techlead | @TechLead_ClawBot | (new — May 21) | ✅ Active |
 
 ### Start Gateway for Profile
 ```bash

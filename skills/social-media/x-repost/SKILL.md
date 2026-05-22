@@ -225,6 +225,27 @@ Workaround: Use osascript only for:
 
 For JS execution in Chrome, use `computer_use` with cua-driver daemon.
 
+### X Anti-Bot Detection at React App Layer (2026-05-21)
+**X.com's React app marks the Post button as `aria-disabled="true"` even when it visually appears enabled.** The button can LOOK enabled in screenshots but the DOM state blocks clicking. This is bot detection at the application layer, not user-agent based.
+
+**Implication:** Screenshot verification alone is insufficient — you must also verify the DOM attribute `aria-disabled` is NOT "true", or attempt the click and handle the failure.
+
+**Session May 21 (184313):** Video uploaded, text typed, button visually showed enabled. Agent took screenshot confirming visual state. But Post FAILED because `aria-disabled="true"` on the actual button element.
+
+**Rule:** When button looks enabled, also check `browser_console(expression="document.querySelector('[data-testid=\"tweetButtonInline\"]')?.getAttribute('aria-disabled')")` before clicking. If it returns `"true"`, browser-based posting is blocked.
+
+### Cookie Export Chrome → Playwright Does NOT Maintain X Login (2026-05-21)
+**Discovery:** Exporting cookies from Chrome via CDP and importing into Playwright does NOT restore X login state. X stores session tokens in EncryptedValue (macOS Keychain-protected), not plain cookies.
+
+**Symptom:** `xurl auth status` shows valid credentials, but browser-harness/Playwright shows "Join today" page.
+
+**Root cause:** X's session tokens are encrypted at rest using macOS Keychain. Plain cookie export only gets the cookie container, not the decryption key.
+
+**Solutions (in priority order):**
+1. **Best:** Use `computer_use` to control user's real Chrome directly (AppleScript-free, no session migration needed)
+2. **Alt:** User quits Chrome → restart with `--remote-debugging-port=9222` → browser-harness attaches to user's real profile
+3. **Reliable fallback:** xurl with OAuth (requires X Developer account setup)
+
 ### cua-driver Daemon Must Be Running for computer_use
 `computer_use` requires the CuaDriver daemon running. If you get:
 `cuadaemon not reachable on /Users/.../cua-driver.sock`

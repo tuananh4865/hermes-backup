@@ -48,6 +48,42 @@
 - Root cause: X detects automation → aria-disabled="true"
 - **Solution: Setup xurl with X API credentials**
 
+---
+
+## 2026-05-22
+
+### OpenClaw Multi-Agent Setup
+- Created `techlead` agent in OpenClaw
+- Added @TechLead_ClawBot token to config (NEW bot, separate from @ClawdZ1E_Bot)
+- Two agents now active: ResearcherClaw + TechLeadClaw
+- Correct Telegram group ID format: `-5195161709` (not `-1005195161709`)
+
+### Memory Architecture
+- Decision: Keep wiki as primary memory — Mem0 NOT needed (cloud-only, no Hermes integration)
+- Bug: WikiMemoryProvider rapid writes corrupting USER.md
+- Action: Cleaned USER.md + MEMORY.md (reset garbage)
+- Mem0 OSS requires direct Python library usage, not a plugin
+
+### X Automation Blockers (PERSISTENT)
+- X.com anti-bot detection blocks Playwright automation
+- xurl installed but NOT authenticated — needs X Developer OAuth credentials
+- Cookie export from Chrome doesn't maintain X login state
+- **Action needed**: X Developer account + xurl setup
+
+### Wiki Maintenance
+- Created 3 wiki content pages to fix broken links
+- ~2,615 broken wikilinks remain (old Telegram dumps) — not critical
+- tiktok-viral-script content lives in `learning/` directory, not `.md` stubs
+
+### Bot2Bot Collaboration
+- OpenClaw `ownerAllowFrom` format: `telegram:123456789`
+- Telegram bot @mention WORKS between bots in groups
+
+### Cần xử lý
+- [BLOCKER] X Developer account + xurl authentication
+- [PENDING] OpenClaw gateway restart after config changes
+- [PENDING] Ollama not installed (for potential Mem0 local setup)
+
 ### Google I/O 2026 Content
 - 30s video: Dark sphere → Glass cards → 3 products
 - Gemini 3.5 Flash, Omni, Spark, Intelligent Search, Universal Cart, Smart Glasses, Antigravity
