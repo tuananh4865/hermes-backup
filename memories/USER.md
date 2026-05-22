@@ -6,8 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [preference] you to operate? [HIGH]
-- 2026-05-21: Review the conversation above and consider saving to memory if appropriate.
 Focus on:
 1. Has the us
 - 2026-05-21: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
@@ -35,6 +33,8 @@ Focus on:
 - [preference] just note "stale" — they know to flag restart need to Anh AND use web search fallback. [HIGH]
 - 2026-05-22: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [project] at [HIGH]
+- 2026-05-23: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [model] Agent [HIGH]
 - [file] md [HIGH]
 § [SESSIONS] — session history summaries
 - 2026-05-23: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea

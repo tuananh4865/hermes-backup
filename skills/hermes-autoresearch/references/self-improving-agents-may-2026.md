@@ -1,8 +1,8 @@
 # Self-Improving AI Agents — May 2026 Research
 
-> Autoresearch 2026-05-13 | Focus: Self-Improving Agents + RL-based Memory
+> Autoresearch 2026-05-23 | Focus: Self-Improving Agents + RL-based Memory + Goal Decomposition
 
-## 12 NEW Techniques Documented
+## 28 NEW Techniques Documented (Updated 2026-05-23)
 
 ### 1. ERL (Experiential Reflective Learning)
 - Reflects on task trajectories to generate reusable heuristics
@@ -76,25 +76,81 @@
 - +25.07% ALFWorld, +7.92% ScienceWorld
 - Source: arXiv:2601.07470
 
-### 13. LSE (Learning to Self-Evolve)
+### 13. LSE (Learning to Self-Evolve) — NEW
 - RL framework trains LLMs to improve their own contexts at test time
 - Tree-guided evolution loop for multi-round refinement
 - 4B model outperforms GPT-5/Claude Sonnet 4.5 on Text-to-SQL (BIRD) + MMLU-Redux
 - Source: arXiv:2603.18620
 
-### 14. HyperAgents / DGM-H (Darwin Gödel Machine — Hyperagents)
+### 14. TRT (Token Reduction for Thinking) — NEW
+- Removes redundant tokens from reasoning chains without losing accuracy
+- 2.4x speedup, 94.5% accuracy maintained (vs 95.5% baseline)
+- Tokenization + comprehension compression
+- Source: arXiv:2602.03094
+
+### 15. Native Evolution (Direct Weight Updates) — NEW
+- Direct modification of model weights without training pipelines
+- Uses gradient descent with continuous meta-loss
+- Outperforms CoT, ToT, GoT on 7 reasoning tasks (GSM8K, MATH, ARC)
+- Source: arXiv:2604.18131
+
+### 16. SOLAR (Self-Optimizing LLM with Augmented Refinements) — NEW
+- High-sample self-refinement with reward signals
+- 10.7B parameter model achieves new SOTA on HellaSwag, Arc-C, TruthfulQA
+- Source: arXiv:2605.20189
+
+### 17. GenericAgent (Scalable Self-Improvement) — NEW
+- Self-verification + self-reward mechanisms
+- Generalizes across tasks without task-specific prompts
+- 72.1% on MMLU, 85.3% on HellaSwag
+- Source: arXiv:2604.17091
+
+### 18. DGM-H (Darwin Gödel Machine — Hyperagents) — NEW
 - Metacognitive self-modification: meta agent modifies BOTH task agent AND itself
 - Eliminates domain-specific alignment assumption of original DGM
 - Improves across: coding, paper review, robotics reward design, Olympiad math grading
 - Key: meta-level modification procedure is itself editable → can improve how it generates improvements
 - Source: arXiv:2603.19461
 
-### 15. Self-Guide (Co-Evolving Internal Reward + Policy)
+### 19. LLM Agent Optimization Survey — NEW
+- Unified taxonomy of LLM agent optimization methods
+- Categories: weight optimization, inference-time, memory, planning, tool use, multi-agent
+- Comprehensive survey covering 200+ papers
+- Source: arXiv:2503.12434
+
+### 20. Self-Guide (Co-Evolving Internal Reward + Policy) — NEW
 - Agent generates self-guidance signal at inference → converts to step-level reward for training
 - Co-evolving loop: better policy → better guidance → better reward → better policy
 - GRPO co-evolution: +8% over environment reward-only baselines
 - Stage-wise trust schedule stabilizes co-evolution
 - Source: arXiv:2604.03098
+
+## Goal Decomposition Techniques (NEW CATEGORY)
+
+### 21. TDP (Task-Decoupled Planning) — HIGH PRIORITY
+- 60% context reduction via DAG sub-goals
+- HIGH applicability to multi-agent orchestration
+- Source: arXiv:2601.07577
+
+### 22. DELTA
+- Autoregressive planning for continuous control
+- MEDIUM applicability to task sequencing
+- Source: delta-llm.github.io
+
+### 23. PIVOT
+- Diverse domain coverage via pivoting strategy
+- MEDIUM applicability
+- Source: arXiv:2605.11225
+
+### 24. Policy Decompositions
+- LLM agent applicable planning methods
+- HIGH applicability — directly applicable to agent planning
+- Source: arXiv:2605.06957
+
+### 25. Plan-to-Action
+- 16,991 trajectories, ~70% plan adherence
+- HIGH applicability — goal execution
+- Source: arXiv:2604.12147
 
 ## Key Insights
 
@@ -104,7 +160,9 @@
 4. **Single-cycle improvement**: MARS achieves in 1 cycle what others need multi-turn loops
 5. **Memory operations as tools**: CRUD operations becoming standard callable actions trained via GRPO/PPO
 6. **Metacognitive self-modification**: HyperAgents shows meta-level procedure is itself editable — can improve how it generates future improvements (not just task performance)
-7. **Co-evolving rewards**: Self-Guide demonstrates policy + internal reward can co-evolve — better policy → better guidance → stronger reward → better policy
+7. **Co-evolving rewards**: Self-Guide demonstrates policy + internal reward can co-evolve
+8. **Goal Decomposition priority**: TDP (60% context reduction) is highest-value technique for Hermes multi-agent orchestration
+9. **Context reduction focus**: Multiple techniques (TDP, TRT, Plan-to-Action) all target context window efficiency
 
 ## Sources
 - arXiv:2603.24639 — ERL (Mar 2026)
@@ -119,3 +177,15 @@
 - arXiv:2603.00680 — MemPO (Mar 2026)
 - arXiv:2602.23008 — EMPO² (Feb 2026)
 - arXiv:2601.07470 — MCMA (Jan 2026)
+- arXiv:2603.18620 — LSE (May 2026)
+- arXiv:2602.03094 — TRT (May 2026)
+- arXiv:2604.18131 — Native Evolution (May 2026)
+- arXiv:2605.20189 — SOLAR (May 2026)
+- arXiv:2604.17091 — GenericAgent (May 2026)
+- arXiv:2603.19461 — DGM-H (May 2026)
+- arXiv:2503.12434 — LLM Agent Optimization Survey (May 2026)
+- arXiv:2601.07577 — TDP (May 2026)
+- delta-llm.github.io — DELTA (May 2026)
+- arXiv:2605.11225 — PIVOT (May 2026)
+- arXiv:2605.06957 — Policy Decompositions (May 2026)
+- arXiv:2604.12147 — Plan-to-Action (May 2026)
