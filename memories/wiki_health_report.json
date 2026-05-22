@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-05-21T14:10:49.415031",
-  "total_files": 1768,
-  "total_issues": 3055,
+  "timestamp": "2026-05-22T04:00:34.023244",
+  "total_files": 1824,
+  "total_issues": 3392,
   "results": {
     "missing_frontmatter": {
       "missing": null,
@@ -25,7 +25,7 @@
     },
     "broken_links": {
       "broken": null,
-      "count": 2795,
+      "count": 3132,
       "stale": null,
       "orphans": null,
       "self_refs": null,
