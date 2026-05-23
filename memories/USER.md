@@ -6,11 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [preference] liên quan đến bot-to-bot messaging — nó chỉ kiểm soát owner-only commands và tools CHO bot đó, không phải cách bot giao tiếp với nhau. [HIGH]
-- 2026-05-21: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [file] setup [HIGH]
-- 2026-05-21: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-21: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - 2026-05-21: Review the conversation above and update two things:
 **Memory**: who the user is. Did the user reve
 - [file] (which [HIGH]
@@ -35,7 +30,12 @@
 - 2026-05-23: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [preference] retry exa). This is now baked into the skill's pitfalls section so future sessions won't loop on exa failures. [HIGH]
 - 2026-05-23: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [file] md [HIGH]
+- 2026-05-24: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [file] confirmed
+- [file] architecture.
+- [file] (Pitfall
+- [file] resolution
+- [file] md
 § [SESSIONS] — session history summaries
 - 2026-05-24: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking

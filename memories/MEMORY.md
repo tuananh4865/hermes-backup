@@ -1,7 +1,3 @@
-Modified files: wiki/log.md
-§
-Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260522, 1 turns
-§
 Modified files: hermes-autoresearch
 §
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260522, 1 turns
@@ -37,3 +33,7 @@ Task 'Review the conversation above and update the skill library. Be ACTIVE — 
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260524, 1 turns
 §
 Modified files: during
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260524, 1 turns
+§
+Modified files: worker, SKILL.md

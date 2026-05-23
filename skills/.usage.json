@@ -164,14 +164,14 @@
   "hermes-autoresearch": {
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
-    "last_patched_at": "2026-05-23T00:06:49.764370+00:00",
-    "last_used_at": "2026-05-23T19:00:12.240382+00:00",
-    "last_viewed_at": "2026-05-23T17:07:59.040054+00:00",
-    "patch_count": 208,
+    "last_patched_at": "2026-05-23T19:03:42.454026+00:00",
+    "last_used_at": "2026-05-23T19:03:06.770858+00:00",
+    "last_viewed_at": "2026-05-23T19:03:06.769271+00:00",
+    "patch_count": 210,
     "pinned": false,
     "state": "active",
-    "use_count": 206,
-    "view_count": 174
+    "use_count": 207,
+    "view_count": 175
   },
   "hermes-external-skills-setup": {
     "archived_at": null,
@@ -255,13 +255,13 @@
     "archived_at": null,
     "created_at": "2026-05-04T07:13:54.434376+00:00",
     "last_patched_at": "2026-05-22T17:08:00.876329+00:00",
-    "last_used_at": "2026-05-23T17:08:26.837721+00:00",
-    "last_viewed_at": "2026-05-23T17:08:26.836576+00:00",
+    "last_used_at": "2026-05-23T19:03:53.508201+00:00",
+    "last_viewed_at": "2026-05-23T19:03:53.506721+00:00",
     "patch_count": 87,
     "pinned": false,
     "state": "active",
-    "use_count": 144,
-    "view_count": 139
+    "use_count": 145,
+    "view_count": 140
   },
   "openclaw-agent-profiles": {
     "archived_at": null,
@@ -332,13 +332,13 @@
     "created_at": "2026-05-08T01:06:44.513231+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-05-17T02:36:06.353979+00:00",
-    "last_used_at": "2026-05-20T17:16:00.266782+00:00",
-    "last_viewed_at": "2026-05-20T17:16:00.265691+00:00",
+    "last_used_at": "2026-05-23T19:03:45.321047+00:00",
+    "last_viewed_at": "2026-05-23T19:03:45.319513+00:00",
     "patch_count": 72,
     "pinned": false,
     "state": "active",
-    "use_count": 97,
-    "view_count": 96
+    "use_count": 98,
+    "view_count": 97
   },
   "x-repost": {
     "archived_at": null,
