@@ -424,6 +424,14 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** The "Step 2" in the Ingest Workflow is incomplete - it just says "Step 2:" with nothing following
 
+> **Auto-improvement note:** 3 specific improvements. Let me analyze the content:
+
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** 3 specific improvements based on the criteria:
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
 === index.md ===
 ---
 confidence: high
@@ -717,6 +725,14 @@ relationships:
 
 > **Auto-improvement note:** The "TikTok Content" section has an empty entry at the end (just "-") for [[tiktok-viral-script]]
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The TikTok entry at the bottom appears incomplete - it ends with "(2026-04-25" without closing the parentheses. This seems like a truncated entry.
+
+> **Auto-improvement note:** The page mentions "Last updated: 2026-05-07" but we're likely in a later date (the context mentions various items from April-May 2026, with some from May 21). Some entries have dates, some don't.
+
+> **Auto-improvement note:** There's an entry for [[agentic-ai]] with date (2026-05-21) which seems to be from the future relative to the last updated date. This suggests information might be missing or inconsistent.
+
 === log.md (last 20 lines) ===
 - ResearchClaw fix bằng window.__timelines pattern
 - 45s video với 4 phases có actual motion
@@ -743,7 +759,7 @@ relationships:
 ---
 title: Learned About Tuấn Anh
 created: 2026-04-23
-updated: 2026-05-21
+updated: 2026-05-23
 type: entity
 tags: [person]
 confidence: high
@@ -809,6 +825,7 @@ relationships: [tiktok-content, hermes-agent]
 - **Kèo** — deal, plan, arrangement (May 2026)
 - **Quẩy** — party hard (May 2026)
 - **Tạch** — fail (May 2026)
+- **Cổ điển, tôn trọng** — classic, respect (from Killerqueen streamer, viral May 2026)
 - **Tấu hài** — funny fail (May 2026)
 - **Hết nước chấm** — extremely good (May 2026)
 - **Căng** — serious, intense (May 2026)
@@ -817,6 +834,12 @@ relationships: [tiktok-content, hermes-agent]
 - **Cà khịa** — playfully tease (May 2026)
 - **Hóng** — waiting eagerly (May 2026)
 - **Bó tay** — speechless, helpless (May 2026)
+- **kịt kin** — viral May 2026, polite sneeze meme with cute expression
+- **trình là gì mà trình ai chấm** — "what's your level to judge others?" (HIEUTHUHAI, viral)
+- **ối dồi ôi** — "oh my god!" expression, part of trình trend
+- **hài hước tưởng mình vô duyên** — "funny thinking I'm being rude", ironic compliment
+- **nếu anh có yêu nói đi ngại gì** — dance challenge trend (May 12, 2026)
+- **anh đâu cần phải xin lời em, mình đâu là gì của nhau đâu** — viral sound (May 7, 2026)
 
 #### Global Gen Z 2026
 - Skibidi, Gyatt, Brain rot, Rizz, 6 7, Delulu, Aura farming
@@ -912,3 +935,11 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 - [[tiktok-viral-script]] — TikTok script workflow
 - [[hermes-agent-complete-guide]] — Hermes Agent system
 - [[hermes-autoresearch]] — Autoresearch skill
+
+> **Auto-improvement note:** The Gen Z slang list is marked as "Updated 2026-05-21" which is future-dated from my knowledge cutoff. This could be outdated or needs verification.
+
+> **Auto-improvement note:** "lọ" is marked as "(viral May 2026, updated from 'lỏ')" - this seems very specific and recent but dated in the future.
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Operating Philosophy" section is incomplete - it only has "Core Rules" but Rule 1 is cut off: "Perfect result by any means — don't ask how, just make it w" (appears truncated)

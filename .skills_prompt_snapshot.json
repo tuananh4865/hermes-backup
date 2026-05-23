@@ -42,8 +42,8 @@
       4557
     ],
     "autonomous-ai-agents/hermes-agent/SKILL.md": [
-      1779361978564281883,
-      48903
+      1779547845011749446,
+      50830
     ],
     "autonomous-ai-agents/openclaw-deep-research/SKILL.md": [
       1779363777944811451,
@@ -590,8 +590,8 @@
       719
     ],
     "hermes-autoresearch/SKILL.md": [
-      1779476885507904102,
-      63289
+      1779494809762218700,
+      63681
     ],
     "hermes-github-backup/SKILL.md": [
       1779074829200621506,
@@ -852,6 +852,10 @@
     "research/blogwatcher/SKILL.md": [
       1778471610461142388,
       5111
+    ],
+    "research/deep-research-wiki/SKILL.md": [
+      1779548099129846875,
+      4159
     ],
     "research/llm-wiki/SKILL.md": [
       1778471610461247180,
@@ -4132,6 +4136,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "deep-research-wiki",
+      "category": "research",
+      "frontmatter_name": "deep-research-wiki",
+      "description": "Comprehensive research on a topic using web search, synth...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

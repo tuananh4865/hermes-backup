@@ -722,8 +722,42 @@ python3 scripts/wiki_semantic_health.py
 
 ### Cron Subprocess Fails (python3.14 not found)
 **Symptom:** `FileNotFoundError: [Errno 2] No such file or directory: 'python3.14'` in cron logs.
-
 **Root cause:** Crontab has minimal PATH (`/usr/bin:/bin`), different from interactive shell.
+**Fix:** Use absolute path in subprocess calls. See `references/cron-subprocess-path-issue.md` for full details.
+
+### Wiki Self-Heal CRITICAL: Stub Creation DISABLED (2026-05-23)
+**Root cause (NEW — 2026-05-23):** `wiki_self_heal.py` line 272 hardcodes stub creation as disabled:
+```python
+"stubs_created": [],  # Always empty — stubs disabled
+```
+The `--fix --links` flag runs but creates ZERO stubs. The 4AM cron reports 5,075 broken links but fixes nothing.
+
+**Symptom:** Cron output shows `5075 broken, 0 stubs created (disabled), 0 skipped`.
+
+**Real fixes available:**
+1. **Enable stub creation** in `wiki_self_heal.py` — change `DISABLED` to `ENABLED` and flip the condition at line 272
+2. **Or: Manual cleanup workflow** — safer for a wiki with 1,824 files:
+   ```bash
+   # Step 1: Find REAL broken links only (exclude path-separator links like [[../]])
+   python3 scripts/wiki_semantic_health.py 2>/dev/null | grep "→" | head -20
+   
+   # Step 2: For orphans + duplicates, run targeted cleanup:
+   python3 scripts/duplicate_detector.py   # lists duplicate titles
+   python3 scripts/wiki_lint.py --orphans  # lists orphan pages
+   
+   # Step 3: Enable stub creation ONLY for isolated true orphans:
+   # Edit wiki_self_heal.py line 272: set DISABLED = False
+   # Then run ONLY on confirmed orphaned concepts, not on whole wiki
+   ```
+
+**Why disabled:** Prevented wiki bloat when it was first implemented. At 1,824 files, enabling it risks creating hundreds of stub files from old Telegram transcript references.
+
+**Related discoveries (2026-05-23):**
+- `wiki_health.sh` cron script at 4AM only SCANS + REPORTS — does NOT auto-fix
+- 3,132 real broken links (not just path-separator false positives)
+- 202 orphan pages, 40 duplicate titles, 18 self-references
+- EPISODES.md last updated 2026-05-06 — cross-session summary is STALE
+- ByteRover jobs (ffda9e65a08b, ba3953434244) are ERROR/PAUSED since May 17-18
 
 **Fix:** Use absolute path in subprocess calls:
 ```python

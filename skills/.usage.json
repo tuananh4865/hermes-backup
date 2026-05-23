@@ -87,6 +87,19 @@
     "use_count": 4,
     "view_count": 3
   },
+  "deep-research-wiki": {
+    "archived_at": null,
+    "created_at": "2026-05-23T14:54:59.132576+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
   "diagnose": {
     "archived_at": null,
     "created_at": "2026-05-04T19:03:19.836668+00:00",
@@ -151,14 +164,14 @@
   "hermes-autoresearch": {
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
-    "last_patched_at": "2026-05-22T19:08:05.510995+00:00",
-    "last_used_at": "2026-05-23T00:00:37.237011+00:00",
-    "last_viewed_at": "2026-05-22T19:05:27.130494+00:00",
-    "patch_count": 205,
+    "last_patched_at": "2026-05-23T00:06:49.764370+00:00",
+    "last_used_at": "2026-05-23T19:00:12.240382+00:00",
+    "last_viewed_at": "2026-05-23T17:07:59.040054+00:00",
+    "patch_count": 208,
     "pinned": false,
     "state": "active",
-    "use_count": 203,
-    "view_count": 172
+    "use_count": 206,
+    "view_count": 174
   },
   "hermes-external-skills-setup": {
     "archived_at": null,
@@ -242,13 +255,13 @@
     "archived_at": null,
     "created_at": "2026-05-04T07:13:54.434376+00:00",
     "last_patched_at": "2026-05-22T17:08:00.876329+00:00",
-    "last_used_at": "2026-05-22T17:07:25.018856+00:00",
-    "last_viewed_at": "2026-05-22T17:07:25.017575+00:00",
+    "last_used_at": "2026-05-23T17:08:26.837721+00:00",
+    "last_viewed_at": "2026-05-23T17:08:26.836576+00:00",
     "patch_count": 87,
     "pinned": false,
     "state": "active",
-    "use_count": 143,
-    "view_count": 138
+    "use_count": 144,
+    "view_count": 139
   },
   "openclaw-agent-profiles": {
     "archived_at": null,

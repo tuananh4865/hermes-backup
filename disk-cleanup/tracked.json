@@ -58,5 +58,17 @@
     "timestamp": "2026-05-22T17:04:36.715186+00:00",
     "category": "cron-output",
     "size": 1859
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-23.md",
+    "timestamp": "2026-05-23T17:05:42.111253+00:00",
+    "category": "cron-output",
+    "size": 2319
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-24.md",
+    "timestamp": "2026-05-23T17:06:16.594380+00:00",
+    "category": "cron-output",
+    "size": 2370
   }
 ]
