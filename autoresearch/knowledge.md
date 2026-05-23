@@ -1,10 +1,12 @@
 # Hermes Autoresearch Knowledge
 
 ## Current Focus (2026-05-23)
-Tonight's focus: **Goal Decomposition #11 + Self-Evolution patterns**
-- Researching 9 new self-improving agent techniques from May 2026 arXiv papers
-- Gen Z slang update: "kịt kin", "trình là gì", "hài hước tưởng mình vô duyên"
+Tonight's focus: **Self-Debugging #1 + AI Agent Research**
+- Researched self-improving agent techniques (SICA 17→53%, ERL +7.8%, DGM-Hyperagents)
+- Gen Z slang synced: "kịt kin", "trình là gì", "ối dồi ôi", "hài hước tưởng mình vô duyên"
 - Wiki clean (1824 files), SHS = 0, Workers still DEAD
+- Hermes v0.14.0 still latest (157.2K stars), no v0.15 yet
+- CVE-2026-7396: vulnerability in hermes-agent v0.8.0 (file gateway) — patch if using v0.8
 
 ## Skills Improved Tonight
 || Skill | Improvements |
