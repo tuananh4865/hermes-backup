@@ -424,6 +424,89 @@ When looking for recently-generated video files (e.g., Remotion renders), check 
 
 ---
 
+## X.com Browser Automation Fallback (from playwright-automation + x-repost)
+
+**⚠️ RESPONSE STYLE — VIETNAMESE CÁCH KHÁC (from x-repost)**
+When posting/reposting to X, Anh prefers:
+- Max 2-3 sentences for normal messages
+- NO: "vấn đề là...", "giải pháp là...", "tóm lại..."
+- Direct → go straight to action
+- When Anh says "rút ngắn" → cut immediately, no explanation
+- Vietnamese casual tone: "anh" + "mấy con vợ"
+
+When `xurl` API is unavailable or unconfigured, use browser-based automation.
+
+### Cookie Export (required first step)
+```bash
+cd ~
+browser-harness <<'PY'
+import json
+result = cdp("Network.getCookies", urls=["https://x.com", "https://www.x.com"])
+cookies = result.get("cookies", [])
+clean = [{k:v for k,v in c.items() if k in ("name","value","domain","path","expires","httpOnly","secure","session","sameSite")} for c in cookies]
+print(json.dumps(clean))
+PY
+```
+Save to `/tmp/x_cookies.json`.
+
+### Simple Repost (via Playwright)
+```python
+import json
+from playwright.sync_api import sync_playwright
+
+with open("/tmp/x_cookies.json") as f:
+    cookies = json.load(f)
+
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=False)
+    ctx = browser.new_context()
+    ctx.add_cookies(cookies)
+    page = ctx.new_page()
+    page.goto(url, wait_until="domcontentloaded")
+    page.wait_for_timeout(3000)
+    article = page.locator("article").first
+    article.locator('[data-testid="retweet"]').first.click()
+    page.wait_for_timeout(1500)
+    for item in page.locator('[role="menuitem"]').all():
+        try:
+            txt = item.inner_text().lower()
+            if "repost" in txt and "quote" not in txt:
+                item.click()
+                page.wait_for_timeout(2000)
+                break
+        except: pass
+```
+
+### Key X.com Selectors
+| Element | Selector |
+|---------|----------|
+| Repost button | `[data-testid="retweet"]` |
+| Confirm repost | menu item text matching "repost" |
+| Quote textarea | `[data-testid="tweetTextarea_0"]` |
+| Post button | `[data-testid="tweetButton"]` / `[data-testid="tweetButtonInline"]` |
+
+### ⚠️ CRITICAL: aria-disabled Check Before Clicking Post
+X.com sets `aria-disabled="true"` on Post button even when it visually appears enabled. **Always check DOM before clicking:**
+```python
+page.wait_for_function("""
+() => {
+  const btn = document.querySelector('[data-testid="tweetButtonInline"]');
+  return btn && btn.getAttribute('aria-disabled') === 'false';
+}
+""", timeout=20000)
+```
+
+### Video Upload via Playwright (⚠️ blocked for video — use xurl instead)
+X.com bot detection sets `aria-disabled="true"` on Playwright for video posts. For video, use `xurl media upload` + `xurl post --media-id`.
+
+### X Credentials
+- Account: @TyayUno (Anh Trinh's X account)
+- Cookies: `/tmp/x_cookies.json` (export via browser-harness CDP)
+
+## Related
+- [[tiktok-viral-script]] — TikTok content creation
+- [[browser-harness]] — cookie export via CDP
+
 ## Attribution
 
 - Upstream CLI: https://github.com/xdevplatform/xurl (X developer platform team, Chris Park et al.)

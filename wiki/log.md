@@ -79,10 +79,37 @@
 - OpenClaw `ownerAllowFrom` format: `telegram:123456789`
 - Telegram bot @mention WORKS between bots in groups
 
-### Cần xử lý
-- [BLOCKER] X Developer account + xurl authentication
-- [PENDING] OpenClaw gateway restart after config changes
-- [PENDING] Ollama not installed (for potential Mem0 local setup)
+---
+
+## 2026-05-24
+
+### Skills Umbrella-Building Consolidation
+- Merged 5 narrow skills into class-level umbrellas:
+  - `hyperframes` + `motion-graphic-video` → merged (TikTok motion graphics)
+  - `xurl` + `x-repost` + `playwright-automation` + `x-repost-workflow` → `xurl` umbrella (X.com automation)
+  - `deep-research-wiki` → merged into `hermes-autoresearch` (deep research methodology)
+- Archived 5 skill directories to `.archive/`
+- X credentials: `@TyayUno` (Anh Trinh's X account), cookies at `/tmp/x_cookies.json`
+
+### Hermes Autoresearch — Complete Failure
+- Web search completely down all night (both `web_search` HTTP 400 + `mcp_exa` unreachable)
+- Workers completely dead — output directories empty (no files at all)
+- Git commit `988c9b5be`: "autoresearch 2026-05-24: Wiki clean (1829 files, 0 issues), 238 skills healthy, Workers DEAD, web search down"
+- Reference doc: `references/autoresearch-2026-05-24-complete-failure.md`
+
+### Hermes Daily Backup — Success
+- Files changed: 12, Insertions: +1581, Deletions: -38
+- Git push: `60c57630d → f0aabeef0` ✅
+
+### Wiki Status
+- 1829 files, 0 issues — clean wiki health
+- 238 skills healthy — SHS = 0 (perfect)
+
+### Cần xử lý (2026-05-24)
+- [BLOCKER] Workers dead — Content Creator + Research Agent cần manual restart
+- [BLOCKER] Web search down — API keys/config cần check
+- [PENDING] X Developer account + xurl OAuth setup
+- [BLOCKED] Gen Z slang sync — workers dead + web search down
 
 ### Google I/O 2026 Content
 - 30s video: Dark sphere → Glass cards → 3 products

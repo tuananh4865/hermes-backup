@@ -206,6 +206,35 @@ tl.to("#phase2-bg", { opacity: 1, duration: 1.5, ease: "power2.out" }, 10);
 - **File size**: ~4-8MB for 30s draft, ~20-50MB for high quality
 - **Tool versions verified**: Node v25.9.0+, npm 11.12.1+, ffmpeg 8.1+
 
+## Additional Lint Warnings (from motion-graphic-video)
+
+These additional warnings are caught by the HyperFrames linter:
+| Warning | Fix |
+|---------|-----|
+| `gsap_css_transform_conflict` | Use `yPercent` instead of `transform: translateY()` in GSAP tweens |
+| `overlapping_gsap_tweens` | Add `overwrite:"auto"` to GSAP tween config |
+| `motion_path_missing_anchor` | Ensure each animated element has a clear anchor point |
+
+## Composition with Sequence Attributes (motion-graphic-video pattern)
+
+This pattern from `motion-graphic-video` uses `data-enter`/`data-exit` attributes for timing:
+
+```html
+<div class="sequence" data-enter="500" data-exit="2500">
+  <!-- Content enters at 500ms, exits at 2500ms -->
+</div>
+```
+
+Use GSAP for animation within the timeline:
+```javascript
+gsap.from('.element', {
+  opacity: 0,
+  y: 50,
+  duration: 0.5,
+  ease: 'power2.out'
+});
+```
+
 ## Pitfalls
 
 - **Missing root attributes**: Linter will catch `root_missing_composition_id` and `root_missing_dimensions`
@@ -280,5 +309,38 @@ If you see the warning, the timeline may still work (GSAP falls back to linear),
 
 - `references/ethereal-style-composition.html` — Working 30s composition with 4 phases matching Tuấn Anh's style reference
 
+## TikTok Content Context (from motion-graphic-video)
+
+Tuấn Anh's preferences when producing TikTok motion graphics:
+- **Hands-on testing**: wants to see results first, then discuss
+- **Style**: prefers ethereal/minimal over aggressive motion
+- **Voice**: Vietnamese casual — "anh" + "mấy con vợ"
+- **Script**: see [[tiktok-viral-script]] for TikTok script approach
+
+### Motion Graphic Video Production Context (from motion-graphic-video)
+
+When using HyperFrames to produce TikTok content, Tuấn Anh's preferences:
+- **Hands-on testing**: wants to see results first, then discuss
+- **Style**: prefers ethereal/minimal over aggressive motion
+- **Voice**: Vietnamese casual — "anh" + "mấy con vợ"
+- **Script**: see [[tiktok-viral-script]] for TikTok script approach
+
+**Style profiles for TikTok:**
+| Profile | Mood | Colors | Effects | Motion |
+|---------|------|--------|---------|--------|
+| Ethereal Minimal | calm, mysterious, Tech-Zen | dark bg, electric blue/purple gradients, coral/orange accents | glassmorphism, volumetric light, floating particles, bloom | ease-in-out, floating, weightless |
+| Dark Tech Minimal | modern, clean, high-tech | near-black bg (#0a0a0f), electric blue (#00d4ff), white | subtle glow, gradient text, clean borders | moderate slide-ins, fade transitions |
+| Glassmorphism Aesthetic | — | dark + subtle gradient | `backdrop-filter: blur(20px)`, semi-transparent fill, subtle border | — |
+
+**Common lint warnings:**
+| Warning | Fix |
+|---------|-----|
+| `gsap_css_transform_conflict` | Use `yPercent` instead of `transform: translateY()` in GSAP tweens |
+| `overlapping_gsap_tweens` | Add `overwrite:"auto"` to GSAP tween config |
+| `motion_path_missing_anchor` | Ensure each animated element has a clear anchor point |
+
+**Dimensions:** 9:16 portrait (1080×1920) for TikTok. Keep under 30s.
+
 ## Related
 - [[remotion]] — React-based video generation (alternative)
+- [[tiktok-viral-script]] — TikTok script writing

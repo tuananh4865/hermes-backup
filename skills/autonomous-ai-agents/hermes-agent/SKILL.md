@@ -730,6 +730,7 @@ python3 scripts/wiki_semantic_health.py
 ```python
 "stubs_created": [],  # Always empty — stubs disabled
 ```
+→ **Session file discovery:** see `references/session-discovery.md`
 The `--fix --links` flag runs but creates ZERO stubs. The 4AM cron reports 5,075 broken links but fixes nothing.
 
 **Symptom:** Cron output shows `5075 broken, 0 stubs created (disabled), 0 skipped`.

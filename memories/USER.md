@@ -6,13 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- 2026-05-21: Review the conversation above and update two things:
-**Memory**: who the user is. Did the user reve
-- [file] (which [HIGH]
-- 2026-05-22: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-22: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [tool] skill [HIGH]
-- [tool] constraints [HIGH]
 - [file] remains [HIGH]
 - [preference] just note "stale" — they know to flag restart need to Anh AND use web search fallback. [HIGH]
 - 2026-05-22: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
@@ -35,8 +28,15 @@
 - [file] architecture.
 - [file] (Pitfall
 - [file] resolution
+- 2026-05-24: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [file] discovery [HIGH]
+- 2026-05-25: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-25: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-25: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-25: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [file] documenting
 - [file] md
 § [SESSIONS] — session history summaries
-- 2026-05-24: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-25: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

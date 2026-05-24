@@ -1,0 +1,257 @@
+{
+  "started_at": "2026-05-24T03:05:25.691393+00:00",
+  "duration_seconds": 255.09,
+  "model": "MiniMax-M2.7",
+  "provider": "minimax",
+  "auto_transitions": {
+    "marked_stale": 0,
+    "archived": 0,
+    "reactivated": 0,
+    "checked": 9
+  },
+  "counts": {
+    "before": 9,
+    "after": 6,
+    "delta": -3,
+    "archived_this_run": 3,
+    "added_this_run": 0,
+    "consolidated_this_run": 1,
+    "pruned_this_run": 2,
+    "state_transitions": 0,
+    "cron_jobs_rewritten": 0,
+    "tool_calls_total": 46
+  },
+  "tool_call_counts": {
+    "skills_list": 1,
+    "skill_view": 15,
+    "patch": 8,
+    "search_files": 4,
+    "read_file": 9,
+    "terminal": 9
+  },
+  "archived": [
+    "deep-research-wiki",
+    "motion-graphic-video",
+    "x-repost"
+  ],
+  "consolidated": [
+    {
+      "name": "motion-graphic-video",
+      "into": "hyperframes",
+      "source": "model",
+      "reason": "hyperframes is the comprehensive technical reference; motion-graphic-video was a narrower TikTok overlay that duplicated its setup/composition sections and added only style-profile tables that fit cleanly as a labeled subsection"
+    }
+  ],
+  "pruned": [
+    {
+      "name": "deep-research-wiki",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    },
+    {
+      "name": "x-repost",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    }
+  ],
+  "pruned_names": [
+    "deep-research-wiki",
+    "x-repost"
+  ],
+  "added": [],
+  "state_transitions": [],
+  "cron_rewrites": {
+    "rewrites": [],
+    "jobs_updated": 0,
+    "jobs_scanned": 7
+  },
+  "llm_final": "## Consolidation Pass — Human Summary\n\n### Clusters Processed\n\n**Cluster 1: HyperFrames + Motion Graphic Video**\n- `hyperframes` (active) is the umbrella — comprehensive technical reference covering the entire HyperFrames workflow\n- `motion-graphic-video` (archived) was a narrower TikTok-specific overlay with duplicated content\n- **Action:** Patched `hyperframes` to absorb: TikTok style profiles (ethereal minimal, dark tech, glassmorphism), common lint warnings, 9:16 TikTok dimensions, and Tuấn Anh's preferences. Moved `references/style-guide.md` → `hyperframes/references/ethereal-style-guide.md`. Archived `motion-graphic-video`.\n\n**Cluster 2: X/Twitter Automation (x-repost + playwright-automation + x-repost-workflow → xurl)**\n- `xurl` (active) is the authoritative umbrella for X/Twitter operations — official CLI with full API coverage\n- `x-repost` (archived): narrow repost-only wrapper around playwright\n- `playwright-automation` (archived): X.com-specific playwright automation overlapping with x-repost and xurl's browser fallback\n- `x-repost-workflow` (archived): duplicate universal workflow document\n- **Action:** Patched `xurl` to absorb: cookie export workflow, simple repost via Playwright, key X.com selectors, aria-disabled check pattern, video upload warning (use xurl instead), X credentials. Archived all 3 narrow siblings.\n\n**Cluster 3: Hermes Autoresearch + Deep Research Wiki**\n- `hermes-autoresearch` (active) is the primary autonomous research loop — already covers skills improvement, AI agent research, and Hermes Agentic features\n- `deep-research-wiki` (archived): duplicate wiki-research methodology that was absorbed as a labeled subsection\n- **Action:** Patched `hermes-autoresearch` to add the \"Deep Research Wiki Method\" section covering the 4-phase research pattern, frontmatter structure, quality gates, and exa fallback. Archived `deep-research-wiki`.\n\n### Decisions Left Alone\n\n- **`hermes-memory`**: Already a class-level umbrella for ByteRover-powered agent memory. Rich body with labeled subsections, 9 reference files. No proposed merge improves discoverability.\n- **`tiktok-viral-script`**: Already a comprehensive class-level skill for TikTok Shop content creation. 72 patches, 11 reference files. `x-repost` mentions it in related skills but is not an overlap — different platform.\n- **`business-opportunity-research`**: Class-level skill for income stream discovery. References are absorbed from narrower research files. Distinct from `tiktok-viral-script` (different workflow).\n- **`openclaw-deep-research`**: Setup guide for a specific framework (OpenClaw as Telegram bot). No sibling overlap found.\n- **`hermes-maintenance`**: Already narrow, maintenance-specific. No sibling cluster found.\n- **`xurl`**: Kept as-is after absorbing browser-automation siblings — it's the authoritative X API skill.\n\n---\n\n## Structured summary (required)\n```yaml\nconsolidations:\n  - from: motion-graphic-video\n    into: hyperframes\n    reason: hyperframes is the comprehensive technical reference; motion-graphic-video was a narrower TikTok overlay that duplicated its setup/composition sections and added only style-profile tables that fit cleanly as a labeled subsection\n  - from: x-repost\n    into: xurl\n    reason: xurl is the authoritative X API umbrella; x-repost was a narrow repost-only wrapper whose playwright repost pattern, cookie export workflow, and X credential storage are better documented as xurl's browser fallback section\n  - from: playwright-automation\n    into: xurl\n    reason: playwright-automation was X.com-specific playwright automation whose selector patterns, aria-disabled check, and video-post blocked warning duplicate content now consolidated into xurl's browser automation fallback section\n  - from: x-repost-workflow\n    into: xurl\n    reason: universal social media cookie+playwright workflow was a duplicate of content already covered in xurl's browser fallback with X-specific selectors; platform-specific docs absorbed into X umbrella\n  - from: deep-research-wiki\n    into: hermes-autoresearch\n    reason: deep-research-wiki was a narrow wiki-writing methodology duplicate of content already present in hermes-autoresearch's research patterns; its 4-phase research structure absorbed as labeled \"Deep Research Wiki Method\" subsection\nprunings: []\n```",
+  "llm_summary": "## Consolidation Pass — Human Summary\n\n### Clusters Processed\n\n**Cluster 1: HyperFrames + Motion Graphic Video**\n- `hyperframes` (active) is the umbrella — comprehensive technical reference covering the entire HyperFrames workflow\n- `motion…",
+  "llm_error": null,
+  "tool_calls": [
+    {
+      "name": "skills_list",
+      "arguments": "{}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hyperframes\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"motion-graphic-video\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"tiktok-viral-script\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"x-repost\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"openclaw-deep-research\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hermes-memory\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"business-opportunity-research\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hermes-maintenance\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"deep-research-wiki\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hyperframes\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"## TikTok Content Context (from motion-graphic-video)\\n\\nTu\\u1ea5n Anh's preferences when producing TikTok motion graphics:\\n- **Hands-on testing**: wants to see results first, then discuss\\n- **Style**: prefers ethereal/minimal over aggressive motion\\n- **Voice**: Vietnamese casual \\u2014 \\\"anh\\\" + \\\"m\\u1ea5y con v\\u1ee3\\\"\\n- **Script**: see [[tiktok-viral-scrip…"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"social-media-automation\"}"
+    },
+    {
+      "name": "search_files",
+      "arguments": "{\"output_mode\": \"files_only\", \"path\": \"/Users/tuananh4865/.hermes/skills\", \"pattern\": \"social-media\"}"
+    },
+    {
+      "name": "search_files",
+      "arguments": "{\"output_mode\": \"files_only\", \"path\": \"/Users/tuananh4865/.hermes/skills\", \"pattern\": \"playwright\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"/Users/tuananh4865/.hermes/skills/social-media/DESCRIPTION.md\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"x-repost-workflow\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"playwright-automation\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"xurl\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"### Color Palette\", \"old_string\": \"### Color Palette\", \"path\": \"/Users/tuananh4865/.hermes/skills/creative/hyperframes/SKILL.md\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"### Motion Graphic Video Production Context (from motion-graphic-video)\\n\\nWhen using HyperFrames to produce TikTok content, Tu\\u1ea5n Anh's preferences:\\n- **Hands-on testing**: wants to see results first, then discuss\\n- **Style**: prefers ethereal/minimal over aggressive motion\\n- **Voice**: Vietnamese casual \\u2014 \\\"anh\\\" + \\\"m\\u1ea5y con v\\u1ee3\\\"\\n- **Scri…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls -la /Users/tuananh4865/.hermes/skills/creative/motion-graphic-video/\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls -la /Users/tuananh4865/.hermes/skills/creative/motion-graphic-video/references/\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"/Users/tuananh4865/.hermes/skills/creative/motion-graphic-video/references/style-guide.md\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p /Users/tuananh4865/.hermes/skills/creative/hyperframes/references && mv /Users/tuananh4865/.hermes/skills/creative/motion-graphic-video/references/style-guide.md /Users/tuananh4865/.hermes/skills/creative/hyperframes/references/ethereal-style-guide.md\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"/Users/tuananh4865/.hermes/skills/creative/motion-graphic-video/SKILL.md\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"## Additional Lint Warnings (from motion-graphic-video)\\n\\nThese additional warnings are caught by the HyperFrames linter:\\n| Warning | Fix |\\n|---------|-----|\\n| `gsap_css_transform_conflict` | Use `yPercent` instead of `transform: translateY()` in GSAP tweens |\\n| `overlapping_gsap_tweens` | Add `overwrite:\\\"auto\\\"` to GSAP tween config |\\n| `motion_path_missi…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p /Users/tuananh4865/.hermes/skills/.archive && mv /Users/tuananh4865/.hermes/skills/creative/motion-graphic-video /Users/tuananh4865/.hermes/skills/.archive/\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hermes-autoresearch\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"limit\": 50, \"offset\": 1, \"path\": \"/Users/tuananh4865/.hermes/skills/playwright-automation/SKILL.md\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"limit\": 50, \"offset\": 1, \"path\": \"/Users/tuananh4865/.hermes/skills/social-media/x-repost/SKILL.md\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"limit\": 100, \"offset\": 51, \"path\": \"/Users/tuananh4865/.hermes/skills/social-media/x-repost/SKILL.md\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"limit\": 50, \"offset\": 200, \"path\": \"/Users/tuananh4865/.hermes/skills/playwright-automation/SKILL.md\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"## X.com Browser Automation Fallback (from playwright-automation + x-repost)\\n\\nWhen `xurl` API is unavailable or unconfigured, use browser-based automation.\\n\\n### Cookie Export (required first step)\\n```bash\\ncd ~\\nbrowser-harness <<'PY'\\nimport json\\nresult = cdp(\\\"Network.getCookies\\\", urls=[\\\"https://x.com\\\", \\\"https://www.x.com\\\"])\\ncookies = result.get(\\\"c…"
+    },
+    {
+      "name": "search_files",
+      "arguments": "{\"context\": 3, \"output_mode\": \"content\", \"path\": \"/Users/tuananh4865/.hermes/skills/social-media/xurl/SKILL.md\", \"pattern\": \"## Related\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"limit\": 50, \"offset\": 425, \"path\": \"/Users/tuananh4865/.hermes/skills/social-media/xurl/SKILL.md\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"---\\n\\n## X.com Browser Automation Fallback (from playwright-automation + x-repost)\\n\\nWhen `xurl` API is unavailable or unconfigured, use browser-based automation.\\n\\n### Cookie Export (required first step)\\n```bash\\ncd ~\\nbrowser-harness <<'PY'\\nimport json\\nresult = cdp(\\\"Network.getCookies\\\", urls=[\\\"https://x.com\\\", \\\"https://www.x.com\\\"])\\ncookies = result.…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mv /Users/tuananh4865/.hermes/skills/social-media/x-repost /Users/tuananh4865/.hermes/skills/.archive/ && mv /Users/tuananh4865/.hermes/skills/social-media/x-repost-workflow /Users/tuananh4865/.hermes/skills/.archive/ && mv /Users/tuananh4865/.hermes/skills/playwright-automation /Users/tuananh4865/.hermes/skills/.archive/\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls -la /Users/tuananh4865/.hermes/skills/.archive/\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"## Deep Research Wiki Method (from deep-research-wiki)\\n\\nFor comprehensive wiki research on a topic, this pattern from `deep-research-wiki` works alongside the nightly autoresearch loop:\\n\\n### Phase 1: Parallel Research\\nRun 3-5 web searches in parallel covering different angles:\\n```\\n- Main concept search\\n- Framework/tool-specific search  \\n- Comparison sear…"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"limit\": 10, \"offset\": 37, \"path\": \"/Users/tuananh4865/.hermes/skills/hermes-autoresearch/SKILL.md\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"## Deep Research Wiki Method (from deep-research-wiki)\\n\\nFor comprehensive wiki research on a topic, this pattern from `deep-research-wiki` works alongside the nightly autoresearch loop:\\n\\n### Phase 1: Parallel Research\\nRun 3-5 web searches in parallel covering different angles:\\n```\\n- Main concept search\\n- Framework/tool-specific search  \\n- Comparison sear…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mv /Users/tuananh4865/.hermes/skills/research/deep-research-wiki /Users/tuananh4865/.hermes/skills/.archive/\"}"
+    },
+    {
+      "name": "search_files",
+      "arguments": "{\"output_mode\": \"files_only\", \"path\": \"/Users/tuananh4865/.hermes/skills\", \"pattern\": \"research-analyst\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls -la /Users/tuananh4865/.hermes/skills/.archive/research-analyst/ 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls /Users/tuananh4865/.hermes/skills/.archive/ | grep -E \\\"motion-graphic-video|playwright-automation|x-repost|x-repost-workflow|deep-research-wiki\\\"\"}"
+    }
+  ]
+}

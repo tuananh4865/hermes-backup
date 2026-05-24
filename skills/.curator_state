@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/Users/tuananh4865/.hermes/logs/curator/20260517-023053",
-  "last_run_at": "2026-05-17T02:30:53.759794+00:00",
-  "last_run_duration_seconds": 472.453029,
-  "last_run_summary": "auto: no changes; llm: ## Consolidation Summary\n\n**Clusters processed:**\n\n1. **hermes-maintenance** — Already a well-formed class-level umbrella (disk space audit, safe deletion patterns, session cleanup). Kept as-is.\n\n2. **hermes-memory** — Already a well-formed…\narchived 1 skill(s):\n  • research-analyst → tiktok-viral-script\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin tiktok-viral-script",
+  "last_report_path": "/Users/tuananh4865/.hermes/logs/curator/20260524-030525",
+  "last_run_at": "2026-05-24T03:05:25.691393+00:00",
+  "last_run_duration_seconds": 255.09314,
+  "last_run_summary": "auto: no changes; llm: ## Consolidation Pass — Human Summary\n\n### Clusters Processed\n\n**Cluster 1: HyperFrames + Motion Graphic Video**\n- `hyperframes` (active) is the umbrella — comprehensive technical reference covering the entire HyperFrames workflow\n- `motion…\narchived 3 skill(s):\n  • motion-graphic-video → hyperframes\n  • deep-research-wiki — pruned (stale)\n  • x-repost — pruned (stale)\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hyperframes",
   "last_run_summary_shown_at": "2026-05-10T02:07:37.640328+00:00",
   "paused": false,
-  "run_count": 2
+  "run_count": 3
 }

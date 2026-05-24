@@ -42,8 +42,8 @@
       4557
     ],
     "autonomous-ai-agents/hermes-agent/SKILL.md": [
-      1779547845011749446,
-      50830
+      1779642289310151649,
+      50900
     ],
     "autonomous-ai-agents/openclaw-deep-research/SKILL.md": [
       1779363777944811451,
@@ -134,16 +134,12 @@
       30025
     ],
     "creative/hyperframes/SKILL.md": [
-      1779076509721856305,
-      11082
+      1779592082074931426,
+      13853
     ],
     "creative/manim-video/SKILL.md": [
       1779040542690136230,
       22655
-    ],
-    "creative/motion-graphic-video/SKILL.md": [
-      1779074342902110955,
-      3786
     ],
     "creative/p5js/SKILL.md": [
       1778471610456388997,
@@ -590,8 +586,8 @@
       719
     ],
     "hermes-autoresearch/SKILL.md": [
-      1779563022451311709,
-      64133
+      1779649446531535758,
+      66260
     ],
     "hermes-github-backup/SKILL.md": [
       1779074829200621506,
@@ -785,10 +781,6 @@
       1779165382477118215,
       7011
     ],
-    "playwright-automation/SKILL.md": [
-      1779383067317080435,
-      8857
-    ],
     "productivity-caveman/SKILL.md": [
       1778471609757247116,
       1916
@@ -853,10 +845,6 @@
       1778471610461142388,
       5111
     ],
-    "research/deep-research-wiki/SKILL.md": [
-      1779548099129846875,
-      4159
-    ],
     "research/llm-wiki/SKILL.md": [
       1778471610461247180,
       20113
@@ -889,17 +877,9 @@
       1778985366350754190,
       27998
     ],
-    "social-media/x-repost-workflow/SKILL.md": [
-      1779296813502059007,
-      9584
-    ],
-    "social-media/x-repost/SKILL.md": [
-      1779469594021752414,
-      11267
-    ],
     "social-media/xurl/SKILL.md": [
-      1779343757724603959,
-      15734
+      1779642421606319105,
+      18696
     ],
     "software-development/debugging-hermes-tui-commands/SKILL.md": [
       1778471610461529722,
@@ -1641,19 +1621,6 @@
         "macos",
         "windows"
       ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "motion-graphic-video",
-      "category": "creative",
-      "frontmatter_name": "motion-graphic-video",
-      "description": "Create motion graphic videos for TikTok/content using Hyp...",
-      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -3877,19 +3844,6 @@
       }
     },
     {
-      "skill_name": "playwright-automation",
-      "category": "playwright-automation",
-      "frontmatter_name": "playwright-automation",
-      "description": "X.com repost/like/quote via Playwright using cookies from...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
       "skill_name": "productivity-caveman",
       "category": "productivity-caveman",
       "frontmatter_name": "caveman",
@@ -4144,19 +4098,6 @@
       }
     },
     {
-      "skill_name": "deep-research-wiki",
-      "category": "research",
-      "frontmatter_name": "deep-research-wiki",
-      "description": "Comprehensive research on a topic using web search, synth...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
       "skill_name": "llm-wiki",
       "category": "research",
       "frontmatter_name": "llm-wiki",
@@ -4270,32 +4211,6 @@
       "category": "social-media",
       "frontmatter_name": "tiktok-viral-script",
       "description": "Research trending TikTok content and write viral scripts ...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "x-repost-workflow",
-      "category": "social-media",
-      "frontmatter_name": "social-media-automation",
-      "description": "Quy trình automation social media (X, TikTok, Facebook, I...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "x-repost",
-      "category": "social-media",
-      "frontmatter_name": "x-repost",
-      "description": "Post new content or find and repost existing X posts",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
