@@ -27,15 +27,27 @@ launchd (plist) → run_hermes_gateway.sh (while-true loop) → hermes gateway
 
 ### Check Gateway Status
 ```bash
-# Tất cả gateway processes
+# Tất cả gateway processes (nhiều PID = bình thường nếu nhiều profile)
 ps aux | grep -E "hermes.*gateway|gateway.*run" | grep -v grep
 
-# Kiểm tra process hierarchy (PPID=1 = launchd managed)
+# Check launchd quản lý (PID 790 = content-director, PID 64965 = default — cả 2 PPID=1 = launchd managed)
+launchctl list | grep hermes
+
+# Kiểm tra process hierarchy (PPID=1 = launchd managed, OK)
 ps -p <PID> -o pid,ppid,start,command
 
-# Xem logs
+# Xem logs ( Telegram reconnect attempts auto-recover )
 tail -20 ~/.hermes/logs/gateway.log
 ```
+
+### Multiple Profiles = Multiple PIDs (BÌNH THƯỜNG)
+Mỗi `--profile` chạy một process riêng:
+| PID | Profile | Managed by |
+|-----|---------|------------|
+| 790 | content-director | launchd (PPID=1) |
+| 64965 | default | launchd (PPID=1) |
+
+→ Không phải conflict, không cần kill. Muốn kill profile cụ thể → `launchctl unload` plist tương ứng.
 
 ### Restart Gateway
 ```bash
@@ -78,3 +90,6 @@ launchctl list | grep hermes
 - Config: `approvals.mode: off` trong config.yaml
 - Env: `HERMES_YOLO_MODE=true` trong .env
 - Toggle: `/yolo` trong chat
+
+## Reference
+- `references/gateway-cron-health-check.md` — Full health check template, red flags, cron state machine

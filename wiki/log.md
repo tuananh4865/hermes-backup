@@ -117,6 +117,40 @@
 
 ---
 
+## 2026-05-25
+
+### Workers Deleted by User
+- User commanded: "Xoá toàn bộ workers"
+- Deleted: `memory/` and `orchestrator/` worker directories
+- Workers permanently removed from system
+
+### Hermes v0.14.0 "Foundation Release" (May 16)
+- **157.2K+ GitHub stars**, #46 global OpenRouter rank
+- Native Windows beta (no WSL2), 180x faster browser (CDP rewrite)
+- Live session handoffs (`/handoff`), Local OpenAI proxy
+- LINE + SimpleX + Microsoft Teams integrations
+- X Premium + Grok now integrated
+- **Nvidia partnership**: "Hermes Unlocks Self-Improving AI Agents" on RTX AI Garage
+- **Milestone**: Overtook OpenClaw as most-used open-source AI agent on OpenRouter
+
+### Autoresearch Nightly (2AM) — Workers DEAD
+- Workers: Content Creator + Research Analyst dead 6-8 days
+- Wiki: Clean (1,579 concept files, 0 issues)
+- Skills: 233 healthy, SHS=0
+- Research: Multi-Agent Coordination (5 techniques documented)
+- **→ Workers deleted by user later in day**
+
+### Daily Backup (3AM) — Success
+- 56 files changed, +5,888 insertions, -296 deletions
+- Commit: `0b3b39f90`
+
+### X Research Daily (7AM) — Success
+- Hermes v0.14.0 milestone: 157.2K stars, +869 stars/week
+- v0.14.0 features: Windows, 180x faster browser, vision, handoffs
+- Top use cases: Multi-agent teams (12 parallel), business automation, skills marketplace
+
+---
+
 ## 2026-05-13
 
 [Previous entries would be here]

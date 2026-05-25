@@ -353,7 +353,7 @@ telegram:
   reactions: false
   channel_prompts: {}
   allowed_chats: ''
-  require_mention: true
+  require_mention: false
   allowed_users: '*'
 mattermost:
   require_mention: true

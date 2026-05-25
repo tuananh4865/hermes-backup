@@ -432,6 +432,14 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** *Missing or outdated information:**
 
+> **Auto-improvement note:** *Missing or outdated information**: The document mentions "Anh" specifically (in the Ingest Workflow section), which seems overly personal/specific for a schema document. The workflow section appears incomplete - it says "### Step 2" but doesn't provide what Step 2 is. The frontmatter template uses `YYYY-MM-DD` but doesn't specify timezone considerations.
+
+> **Auto-improvement note:** *Unclear explanations or poor structure**: The Ingest Workflow section is incomplete (ends at Step 2 with no content). The "Page Thresholds" section could use more detail on what constitutes "central to one source" vs passing mentions. The tag taxonomy mentions "transcript" as only for transcripts, but the raw folder has a `transcripts/` directory which creates some confusion.
+
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** The frontmatter template includes fields like `confidence` and `relationships` but there's no explanation of what these fields mean or when to use them
+
 === index.md ===
 ---
 confidence: high
@@ -501,6 +509,7 @@ relationships:
 - [[hermes-memory-system-analysis]] — Complete memory architecture analysis (2026-05-06)
 - [[hermes-memory-implementation-plan]] — Implementation plan: WikiMemoryProvider + external providers (2026-05-06)
 - [[agentic-ai]] — Agentic AI: levels, multi-agent patterns, frameworks, protocols (2026-05-21)
+- [[multi-agent-orchestrator-patterns-deep-research]] — Deep research: 7 orchestration patterns, LangGraph/CrewAI/AutoGen/Swarm comparison, Hermes profiles & Kanban (2026-05-23)
 
 ### Tools & Infrastructure
 - [[lm-studio]] — Local LLM inference server
@@ -531,6 +540,7 @@ relationships:
 - [[gen-z-slang-2026-04]] — Vietnamese + English Gen Z slang, Chuzz, Gyatt, đỉnh, toang (2026-04-29)
 
 ### Hermes X Research
+- [[hermes-x-research-2026-05-25]] — Hermes X research: 157.2K stars, v0.14.0 Foundation, overtook OpenClaw, Windows beta, X Premium integration (2026-05-25)
 - [[hermes-x-research-2026-05-20]] — Hermes Agent X research: v0.14.0 Foundation Release, 155K stars, 180x browser automation, Windows beta (2026-05-20)
 - [[hermes-x-research-2026-05-18]] — Hermes Agent X research: v2026.5.16 Tenacity Release, 154K stars, Kanban multi-agent, /goal, hallucination gate (2026-05-18)
 - [[hermes-x-research-2026-05-16]] — Hermes Agent X research: v2026.5.7, 150K stars, LangGraph/CrewAI/AutoGen comparison (2026-05-16)
@@ -733,26 +743,34 @@ relationships:
 
 > **Auto-improvement note:** There's an entry for [[agentic-ai]] with date (2026-05-21) which seems to be from the future relative to the last updated date. This suggests information might be missing or inconsistent.
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page shows "Total pages: ~156" but doesn't reflect a clear structure for that volume. The index seems to have many entries but could be better organized.
+
+> **Auto-improvement note:** The "Last updated" date is 2026-05-07, which is in the future from my knowledge cutoff, but I should note this seems intentionally future-dated
+
+> **Auto-improvement note:** Some entries have dates (like 2026-04-13, 2026-04-30), while others don't - inconsistency in dating
+
 === log.md (last 20 lines) ===
-- ResearchClaw fix bằng window.__timelines pattern
-- 45s video với 4 phases có actual motion
+**3. Hermes v0.13 Tenacity Release**
+- Workers remain DEAD since May 11+ (12+ days stale)
+- Content Creator: last active May 11
+- Research Agent: last active May 12
 
-### Workers Status
-- Content Creator: stale 7 days (May 11)
-- Research: stale 7 days (May 12)
-- Cần restart hoặc pause
+**4. May 21 Session Extracts**
+- OpenClaw Telegram bot: Token revoked → re-obtained → gateway restart fixed
+- X video post workflow approved
+- Memory health check, Mem0 research, USER.md cleanup
+- ByteRover memory setup complete
+- HyperFrames animation fix (GSAP timeline pattern)
 
-- Report: ~/.hermes/cron/output/daily_review_2026-05-18.md
+### Skills Updated
+- `hermes-agent` — added Wiki Self-Heal CRITICAL note
+- `hermes-autoresearch` — 9 new self-improving agent techniques
+- New skill: `research/deep-research-wiki` (deep research → wiki page workflow)
 
-## [2026-05-14] research | TikTok Shop Research May 14 Morning Brief
-- Summer Cooling NOW window confirmed (37-40°C Vietnam)
-- Trending: Quạt Mini Sò Lạnh 6000mAh, INNOYO Neck Fan, Body Mist LACOON, Chiếu Mây Lạnh
-- Trending sounds: Wind Instrumental (P336), Lùi Lại Lấy Đà, Xuân Bính Ngọ (new), Úc Phượng Sound Buồn
-- Gen Z slang update: lọ, ra dại, chả quyên, sít rịt, khó quá bỏ qua
-- Wiki: concepts/tiktok-shop-research-2026-05-14.md
-## [2026-05-21] create | concepts/agentic-ai.md — Agentic AI: 5 levels L0-L4, multi-agent patterns, frameworks (LangGraph/AutoGen/CrewAI), MCP & A2A protocols, best practices
-## [2026-05-21] update | SOUL.md pronouns + group work rules — "anh"+"em" for work, "anh"+"mấy con vợ" for TikTok only, @mention agent token to trigger work
-## [2026-05-21] delete | Xóa 2 stale worker profiles — content-creator và research-agent (stale 7 days)
+### Report
+- Full report: `~/.hermes/cron/output/daily_review_2026-05-23.md`
 
 
 === learned-about-tuananh.md ===
@@ -943,3 +961,11 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The "Operating Philosophy" section is incomplete - it only has "Core Rules" but Rule 1 is cut off: "Perfect result by any means — don't ask how, just make it w" (appears truncated)
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page mentions "Gen Z Slang 2026 (Updated 2026-05-21)" but has some entries that seem to be from different time periods. Some are dated May 2026, some don't have dates. This inconsistency makes it unclear what is current.
+
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** The document mentions "Updated 2026-05-21" which appears to be a future date (current date is 2025-09-26), making this suspicious/possibly outdated or fake
