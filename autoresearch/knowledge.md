@@ -1,6 +1,32 @@
 # Hermes Autoresearch Knowledge
 
-## Current Focus (2026-05-23)
+## Current Focus (2026-05-26)
+Tonight's focus: **Tool Creation + Gen Z Slang Sync**
+
+### System Status (02:00)
+- Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
+- Skills: 233 skills healthy, SHS = 0
+- Workers: ⚠️ PERMANENTLY DELETED May 25 — workers pipeline GONE
+- Gen Z slang: wiki entity updated May 21, "Ối dồi ôi" still hot (May 11-12), "nếu anh có yêu nói đi ngại gì" trend (May 12)
+
+### Tonight's Research
+**Tool Creation focus: Memento-Skills (arXiv:2603.18743)**
+- Frozen LLM + editable skill library → 80% task success (+78% vs baseline)
+- Key: agents write executable skills → verify → refine → add to library
+- Reference doc: `references/memento-skills-may-2026.md`
+
+### Gen Z Slang Findings
+- "Ối dồi ôi" — still hot May 11-12 (Instagram + TikTok)
+- "nếu anh có yêu nói đi ngại gì" — dance challenge trend (May 12, 2026)
+- "anh đâu cần phải xin lời em, mình đâu là gì của nhau đâu" — viral sound (May 7, 2026)
+- Wiki entity (updated May 21) already has these — NO UPDATE NEEDED
+
+### Skills Improved Tonight
+- New reference: `references/memento-skills-may-2026.md` — Tool Creation technique for Hermes
+
+---
+
+## Previous Focus (2026-05-23)
 Tonight's focus: **Self-Debugging #1 + AI Agent Research**
 - Researched self-improving agent techniques (SICA 17→53%, ERL +7.8%, DGM-Hyperagents)
 - Gen Z slang synced: "kịt kin", "trình là gì", "ối dồi ôi", "hài hước tưởng mình vô duyên"

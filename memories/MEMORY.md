@@ -2,10 +2,6 @@ Modified files: SKILL.md
 §
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260525, 1 turns
 §
-Modified files: SKILL.md
-§
-Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260525, 1 turns
-§
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260525, 1 turns
 §
 Modified files: skill
@@ -37,3 +33,7 @@ Modified files: permanently
 Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260526, 1 turns
 §
 Modified files: technique, 2026-05-23
+§
+Task 'https://github.com/perplexityai/bumblebee  Tool này để làm gì đây?' — 1 turns
+§
+Task 'Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at least one skill update, even if small. A pass that do' — session 20260526, 1 turns

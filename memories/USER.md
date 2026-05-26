@@ -6,7 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [preference] gọi auto-fix | Tích hợp `wiki_self_heal --fix` | [HIGH]
 - [preference] tạo stubs được | Manual fix hoặc enable stub creation | [HIGH]
 - [preference] liên kết + trùng t [HIGH]
 - 2026-05-23: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
@@ -36,6 +35,7 @@
 - 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [file] `references/moss-self-evolution-2026.md`
 - [file] md
+- 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [SESSIONS] — session history summaries
 - 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking

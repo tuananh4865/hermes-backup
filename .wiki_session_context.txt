@@ -440,6 +440,10 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** The frontmatter template includes fields like `confidence` and `relationships` but there's no explanation of what these fields mean or when to use them
 
+> **Auto-improvement note:** 3 specific improvements. Let me analyze the content:
+
+> **Auto-improvement note:** *Missing or outdated information**:
+
 === index.md ===
 ---
 confidence: high
@@ -510,6 +514,7 @@ relationships:
 - [[hermes-memory-implementation-plan]] — Implementation plan: WikiMemoryProvider + external providers (2026-05-06)
 - [[agentic-ai]] — Agentic AI: levels, multi-agent patterns, frameworks, protocols (2026-05-21)
 - [[multi-agent-orchestrator-patterns-deep-research]] — Deep research: 7 orchestration patterns, LangGraph/CrewAI/AutoGen/Swarm comparison, Hermes profiles & Kanban (2026-05-23)
+- [[moss-self-evolution-2026]] — MOSS: Source-Level Self-Rewriting — self-evolve through rewriting own source code (2026-05-26)
 
 ### Tools & Infrastructure
 - [[lm-studio]] — Local LLM inference server
@@ -751,6 +756,10 @@ relationships:
 
 > **Auto-improvement note:** Some entries have dates (like 2026-04-13, 2026-04-30), while others don't - inconsistency in dating
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page references "karpathy-llm-wiki" but in the People section, there's only a simple entry for Karpathy. The concept reference seems to be about a pattern (Karpathy's wiki-as-LLM-memory), not the person entry itself - this is fine but could be clearer.
+
 === log.md (last 20 lines) ===
 **3. Hermes v0.13 Tenacity Release**
 - Workers remain DEAD since May 11+ (12+ days stale)
@@ -969,3 +978,7 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information**:
 
 > **Auto-improvement note:** The document mentions "Updated 2026-05-21" which appears to be a future date (current date is 2025-09-26), making this suspicious/possibly outdated or fake
+
+> **Auto-improvement note:** The page mentions "Gen Z Slang 2026 (Updated 2026-05-21)" but some entries are marked "May 2026" without specific dates - inconsistency
+
+> **Auto-improvement note:** There's a mix of dates - some entries have specific dates like "May 12, 2026" while others just say "May 2026" or "viral May 2026"

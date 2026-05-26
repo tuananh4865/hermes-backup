@@ -178,12 +178,12 @@
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
     "last_patched_at": "2026-05-25T19:06:03.449315+00:00",
-    "last_used_at": "2026-05-25T19:04:47.513929+00:00",
+    "last_used_at": "2026-05-26T00:00:11.884253+00:00",
     "last_viewed_at": "2026-05-25T19:04:47.512833+00:00",
     "patch_count": 225,
     "pinned": false,
     "state": "active",
-    "use_count": 216,
+    "use_count": 217,
     "view_count": 180
   },
   "hermes-external-skills-setup": {
@@ -358,13 +358,13 @@
     "created_at": "2026-05-08T01:06:44.513231+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-05-17T02:36:06.353979+00:00",
-    "last_used_at": "2026-05-24T17:06:49.853156+00:00",
-    "last_viewed_at": "2026-05-24T17:06:49.851793+00:00",
+    "last_used_at": "2026-05-26T00:01:05.463693+00:00",
+    "last_viewed_at": "2026-05-26T00:01:05.462391+00:00",
     "patch_count": 72,
     "pinned": false,
     "state": "active",
-    "use_count": 100,
-    "view_count": 99
+    "use_count": 101,
+    "view_count": 100
   },
   "x-repost": {
     "archived_at": null,
