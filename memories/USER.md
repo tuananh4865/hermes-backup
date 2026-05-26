@@ -6,10 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [preference] tạo stubs được | Manual fix hoặc enable stub creation | [HIGH]
-- [preference] liên kết + trùng t [HIGH]
-- 2026-05-23: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [preference] retry exa). This is now baked into the skill's pitfalls section so future sessions won't loop on exa failures. [HIGH]
 - 2026-05-23: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - 2026-05-24: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [file] confirmed
@@ -34,9 +30,13 @@
 - [file] extended
 - 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [file] `references/moss-self-evolution-2026.md`
-- [file] md
 - 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [file] added [HIGH]
+- [file] md [HIGH]
+- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [SESSIONS] — session history summaries
-- 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

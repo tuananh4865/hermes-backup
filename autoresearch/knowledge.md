@@ -1,28 +1,30 @@
 # Hermes Autoresearch Knowledge
 
-## Current Focus (2026-05-26)
-Tonight's focus: **Tool Creation + Gen Z Slang Sync**
+## Current Focus (2026-05-27)
+Tonight's focus: **Gen Z Slang Sync + AI Agent Research**
 
 ### System Status (02:00)
 - Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
-- Skills: 233 skills healthy, SHS = 0
-- Workers: ⚠️ PERMANENTLY DELETED May 25 — workers pipeline GONE
-- Gen Z slang: wiki entity updated May 21, "Ối dồi ôi" still hot (May 11-12), "nếu anh có yêu nói đi ngại gì" trend (May 12)
+- Skills: 251 skills healthy, SHS = 0
+- Workers: ⚠️ PERMANENTLY DELETED May 25 — workers pipeline GONE, web search fallback used
+- Gen Z slang: Updated 10 new terms (Sít Rịt, Đỉnh, Toang, Xõa, Cày, Cổ tươi, Bánh bèo, Kiwi Kiwi, Dizz, Tái châu) from web search
 
 ### Tonight's Research
-**Tool Creation focus: Memento-Skills (arXiv:2603.18743)**
-- Frozen LLM + editable skill library → 80% task success (+78% vs baseline)
-- Key: agents write executable skills → verify → refine → add to library
-- Reference doc: `references/memento-skills-may-2026.md`
+**AI Agent self-improvement techniques found:**
+1. **ERL** (arXiv:2603.24639) — Experiential Reflective Learning, +7.8% Gaia2
+2. **DebugRepair** (arXiv:2604.19305) — Self-directed debugging with runtime evidence
+3. **ELITE** (arXiv:2603.24018) — Experiential learning + intent-aware transfer
+4. **InspectCoder** (arXiv:2510.18327) — Interactive debugger control + breakpoint inspection
+5. **ACE** (arXiv:2510.04618) — Agentic Context Engineering, +10.6% AppWorld
 
 ### Gen Z Slang Findings
-- "Ối dồi ôi" — still hot May 11-12 (Instagram + TikTok)
-- "nếu anh có yêu nói đi ngại gì" — dance challenge trend (May 12, 2026)
-- "anh đâu cần phải xin lời em, mình đâu là gì của nhau đâu" — viral sound (May 7, 2026)
-- Wiki entity (updated May 21) already has these — NO UPDATE NEEDED
+- 10 new Vietnamese Gen Z terms from web search (not workers — workers deleted)
+- All added to entities/learned-about-tuananh.md with updated date 2026-05-27
+- Workers permanently deleted May 25 — web search is now ONLY slang source
 
 ### Skills Improved Tonight
-- New reference: `references/memento-skills-may-2026.md` — Tool Creation technique for Hermes
+- Gen Z slang synced: 10 new terms added to wiki entity
+- AI Agent techniques: 5 new documented
 
 ---
 
