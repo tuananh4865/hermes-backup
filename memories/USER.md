@@ -6,13 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- 2026-05-23: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-24: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [file] confirmed
-- [file] architecture.
-- [file] (Pitfall
-- [file] resolution
-- 2026-05-24: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [file] discovery [HIGH]
 - 2026-05-25: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - 2026-05-25: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
@@ -34,9 +27,16 @@
 - 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 - [file] added [HIGH]
+- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [preference] "Nam thư" that workers produced. Sets correct expectations for future sessions. [HIGH]
+- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-28: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [tool] is [HIGH]
+- [tool] verified [HIGH]
+- [tool] enabled [HIGH]
 - [file] md [HIGH]
-- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [SESSIONS] — session history summaries
-- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-28: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

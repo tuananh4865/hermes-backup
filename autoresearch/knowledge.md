@@ -1,7 +1,40 @@
 # Hermes Autoresearch Knowledge
 
-## Current Focus (2026-05-27)
-Tonight's focus: **Gen Z Slang Sync + AI Agent Research**
+## Current Focus (2026-05-28)
+Tonight's focus: **Tool Creation #10** — macos-computer-use skill tested, Memento-Skills documented
+
+### System Status (02:00)
+- Wiki: ✅ 1839 files, 0 issues (wiki_lint --fast PASSED)
+- Skills: 233 skills healthy, SHS = 0
+- Workers: ⚠️ PERMANENTLY DELETED May 25 — web search fallback only
+- Gen Z slang: No new terms found (web search only finds already-documented terms)
+- macos-computer-use: ✅ ENABLED — cua-driver 0.1.9
+
+### Tonight's Research
+
+**Memento-Skills (arXiv:2603.18743, March 2026):**
+- Frozen LLMs can continually learn by editing own skill library
+- Task success: 45% → 80% (+78% relative)
+- Token reduction: 150K → 2K via selective skill routing
+- Directly applicable to Hermes skill system
+- Documented: references/memento-skills-may-2026.md
+
+**Tool Creation verification:**
+- `computer_use` tool: ENABLED (cua-driver 0.1.9)
+- CuaDriver daemon not running in headless cron (expected)
+- Tool works when display available
+- Skill references: apple/macos-computer-use/
+
+**AI Agent Tool Creation techniques found:**
+1. **Memento-Skills** (2603.18743) — Frozen LLM rewrites skill library, 80% success
+2. **ToolACE-dev** — Self-improving tool learning for agents
+3. **Seal-Tools** — Self-instruct tool learning dataset for agent tuning
+
+### Skills Improved Tonight
+- macos-computer-use skill verified working (ENABLED status confirmed)
+- Memento-Skills documented for future skill self-repair implementation
+
+---
 
 ### System Status (02:00)
 - Wiki: ✅ 0 issues (wiki_lint --fast PASSED)

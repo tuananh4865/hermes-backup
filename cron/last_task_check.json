@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-27T02:00:14.609248",
+  "timestamp": "2026-05-28T02:00:13.309817",
   "wiki_tasks": {
     "project_tasks": [
       {
@@ -150,13 +150,13 @@
   ],
   "autonomous_tasks": [
     {
-      "text": "Refresh priority gaps analysis (stale 8 days)",
+      "text": "Refresh priority gaps analysis (stale 9 days)",
       "source": "autonomous",
       "priority": 60,
       "type": "autonomous"
     },
     {
-      "text": "Run self-evolution analysis (stale 8 days)",
+      "text": "Run self-evolution analysis (stale 9 days)",
       "source": "autonomous",
       "priority": 55,
       "type": "autonomous"
@@ -272,13 +272,13 @@
       "type": "project"
     },
     {
-      "text": "Refresh priority gaps analysis (stale 8 days)",
+      "text": "Refresh priority gaps analysis (stale 9 days)",
       "source": "autonomous",
       "priority": 60,
       "type": "autonomous"
     },
     {
-      "text": "Run self-evolution analysis (stale 8 days)",
+      "text": "Run self-evolution analysis (stale 9 days)",
       "source": "autonomous",
       "priority": 55,
       "type": "autonomous"

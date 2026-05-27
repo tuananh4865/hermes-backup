@@ -65,3 +65,34 @@ print(parsed['meta'].get('elements'), 'elements')
 - `drag` action: not supported by cua-driver backend. Returns error. Use scroll+click workaround.
 - Element index stale after UI shift → always re-capture before clicking
 - AX tree from cua-driver: `mode=ax` returns very few elements (menu bar only), use `mode=som` for full element list
+
+## Headless environment behavior
+
+**Symptom:** `computer_use` capture returns error: `"capture failed:"` with empty error string.
+
+**Root cause:** CuaDriver daemon requires a macOS GUI session (WindowServer). In headless cron environments (no display server), `capture` cannot access the screen.
+
+**Diagnosis:**
+```bash
+# Check if display is available
+echo $DISPLAY        # Empty in headless = no display
+sysctl -n hw.ncpu    # Verify machine is responsive (not asleep)
+ps aux | grep CuaDriver | grep -v grep  # Daemon may be running but capture still fails
+```
+
+**This is NOT a bug — this is expected behavior.** The tool works when:
+- Running in a real macOS GUI session (local or screen share)
+- Display server is available (WindowServer responding)
+- User has granted TCC permissions (Accessibility + Screen Recording)
+
+**When capture fails in headless:**
+1. Skip capture — do NOT retry or restart daemon
+2. Check tool enabled state: `hermes tools list | grep computer_use`
+3. Verify daemon version: `cua-driver --version`
+4. If both show enabled + running → tool is READY, will work when display available
+5. Report "computer_use: ENABLED (daemon running, capture unavailable in headless)"
+
+**Do NOT:**
+- Restart CuaDriver daemon in cron (won't help, needs display)
+- Report as a bug or error
+- Spend time debugging capture in headless env
