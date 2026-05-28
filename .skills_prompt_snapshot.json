@@ -45,6 +45,10 @@
       1779642289310151649,
       50900
     ],
+    "autonomous-ai-agents/kanban-codex-lane/SKILL.md": [
+      1779937796536629095,
+      12774
+    ],
     "autonomous-ai-agents/openclaw-deep-research/SKILL.md": [
       1779363777944811451,
       17163
@@ -100,6 +104,10 @@
     "creative/ascii-video/SKILL.md": [
       1778471610455415327,
       14864
+    ],
+    "creative/baoyu-article-illustrator/SKILL.md": [
+      1779937796536880971,
+      10131
     ],
     "creative/baoyu-comic/SKILL.md": [
       1778471610455536285,
@@ -186,12 +194,12 @@
       3006
     ],
     "devops/kanban-orchestrator/SKILL.md": [
-      1778471610457193749,
-      9180
+      1779942642842791161,
+      9284
     ],
     "devops/kanban-worker/SKILL.md": [
-      1778741294344985311,
-      10030
+      1779942634443368625,
+      16851
     ],
     "devops/webhook-subscriptions/SKILL.md": [
       1778471610457372667,
@@ -266,8 +274,8 @@
       8709
     ],
     "gateway-manager/SKILL.md": [
-      1779693927376064716,
-      2735
+      1779942654103170149,
+      5372
     ],
     "git-workflow-and-versioning/SKILL.md": [
       1779165382339080680,
@@ -586,8 +594,8 @@
       719
     ],
     "hermes-autoresearch/SKILL.md": [
-      1779908912529272384,
-      68813
+      1779942227311059309,
+      70939
     ],
     "hermes-github-backup/SKILL.md": [
       1779074829200621506,
@@ -654,8 +662,8 @@
       1658
     ],
     "memory/byterover-agentic-memory/SKILL.md": [
-      1778951164459982016,
-      5890
+      1779971285818934891,
+      6312
     ],
     "misc-git-guardrails-claude-code/SKILL.md": [
       1778471609748875505,
@@ -798,7 +806,7 @@
       11302
     ],
     "productivity/google-workspace/SKILL.md": [
-      1778471610460103384,
+      1778471609350554440,
       13411
     ],
     "productivity/linear/SKILL.md": [
@@ -806,7 +814,7 @@
       14782
     ],
     "productivity/maps/SKILL.md": [
-      1778471610460494469,
+      1778471609351348776,
       6726
     ],
     "productivity/nano-pdf/SKILL.md": [
@@ -818,7 +826,7 @@
       14597
     ],
     "productivity/ocr-and-documents/SKILL.md": [
-      1778471610460756178,
+      1778471609351965028,
       5280
     ],
     "productivity/powerpoint/SKILL.md": [
@@ -838,7 +846,7 @@
       20059
     ],
     "research/arxiv/SKILL.md": [
-      1778471610461036679,
+      1778471609359951764,
       10085
     ],
     "research/blogwatcher/SKILL.md": [
@@ -850,7 +858,7 @@
       20113
     ],
     "research/polymarket/SKILL.md": [
-      1778471610461331597,
+      1778471609360544266,
       2985
     ],
     "research/research-paper-writing/SKILL.md": [
@@ -896,6 +904,10 @@
     "software-development/hermes-maintenance/SKILL.md": [
       1778951050268485967,
       5946
+    ],
+    "software-development/hermes-s6-container-supervision/SKILL.md": [
+      1779937796542491077,
+      11474
     ],
     "software-development/node-inspect-debugger/SKILL.md": [
       1778471610461733432,
@@ -972,6 +984,10 @@
     "using-agent-skills/SKILL.md": [
       1779165382617759075,
       9124
+    ],
+    "wiki/wiki-maintenance/SKILL.md": [
+      1779971270880571585,
+      6004
     ],
     "write-a-skill/SKILL.md": [
       1779165369867898266,
@@ -1086,7 +1102,7 @@
       114
     ],
     "productivity/ocr-and-documents/DESCRIPTION.md": [
-      1778403333694677249,
+      1778471609351875320,
       147
     ],
     "research/DESCRIPTION.md": [
@@ -1256,6 +1272,19 @@
       "category": "autonomous-ai-agents",
       "frontmatter_name": "hermes-agent",
       "description": "Configure, extend, or contribute to Hermes Agent.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "kanban-codex-lane",
+      "category": "autonomous-ai-agents",
+      "frontmatter_name": "kanban-codex-lane",
+      "description": "Use when a Hermes Kanban worker wants to run Codex CLI as...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1450,6 +1479,23 @@
       "category": "creative",
       "frontmatter_name": "ascii-video",
       "description": "ASCII video: convert video/audio to colored ASCII MP4/GIF.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "baoyu-article-illustrator",
+      "category": "creative",
+      "frontmatter_name": "baoyu-article-illustrator",
+      "description": "Article illustrations: type × style × palette consistency.",
       "platforms": [
         "linux",
         "macos",
@@ -4300,6 +4346,19 @@
       }
     },
     {
+      "skill_name": "hermes-s6-container-supervision",
+      "category": "software-development",
+      "frontmatter_name": "hermes-s6-container-supervision",
+      "description": "Modify, debug, or extend the s6-overlay supervision tree ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "node-inspect-debugger",
       "category": "software-development",
       "frontmatter_name": "node-inspect-debugger",
@@ -4573,6 +4632,19 @@
       "category": "using-agent-skills",
       "frontmatter_name": "using-agent-skills",
       "description": "Discovers and invokes agent skills. Use when starting a s...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "wiki-maintenance",
+      "category": "wiki",
+      "frontmatter_name": "wiki-maintenance",
+      "description": "Wiki cleanup, rebuild, and maintenance workflows — remove...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

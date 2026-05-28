@@ -82,5 +82,17 @@
     "timestamp": "2026-05-26T17:07:52.842570+00:00",
     "category": "cron-output",
     "size": 3529
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/wiki_forget_2026-05-28.md",
+    "timestamp": "2026-05-28T04:22:33.728121+00:00",
+    "category": "cron-output",
+    "size": 94246
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-28.md",
+    "timestamp": "2026-05-28T17:02:51.548768+00:00",
+    "category": "cron-output",
+    "size": 3480
   }
 ]

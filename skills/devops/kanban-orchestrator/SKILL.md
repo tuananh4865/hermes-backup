@@ -137,6 +137,7 @@ Tell them what you created in plain prose:
 # Init + dashboard
 hermes kanban init               # auto-inits on first kanban <anything>
 hermes dashboard                 # opens http://127.0.0.1:9119 in browser
+                                 # Expose to network via Tailscale: see `references/tailscale-serve.md`
 
 # Create with full options
 hermes kanban create "title" \

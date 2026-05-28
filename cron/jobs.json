@@ -18,15 +18,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 29
+        "completed": 30
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-27T21:38:04.126445+07:00",
-      "next_run_at": "2026-05-29T03:00:00+07:00",
-      "last_run_at": "2026-05-27T03:00:38.537921+07:00",
+      "next_run_at": "2026-05-30T03:00:00+07:00",
+      "last_run_at": "2026-05-28T03:00:22.534663+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -54,15 +54,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 22
+        "completed": 23
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T10:33:31.370315+07:00",
-      "next_run_at": "2026-05-29T02:00:00+07:00",
-      "last_run_at": "2026-05-28T02:05:53.662198+07:00",
+      "next_run_at": "2026-05-30T02:00:00+07:00",
+      "last_run_at": "2026-05-29T02:03:11.242091+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -97,15 +97,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 21
+        "completed": 22
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T13:51:06.979177+07:00",
-      "next_run_at": "2026-05-28T07:00:00+07:00",
-      "last_run_at": "2026-05-27T07:02:23.958949+07:00",
+      "next_run_at": "2026-05-29T07:00:00+07:00",
+      "last_run_at": "2026-05-28T07:01:57.741083+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -139,15 +139,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": 999,
-        "completed": 21
+        "completed": 22
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-08T08:42:19.421587+07:00",
-      "next_run_at": "2026-05-29T00:00:00+07:00",
-      "last_run_at": "2026-05-28T00:06:29.517125+07:00",
+      "next_run_at": "2026-05-30T00:00:00+07:00",
+      "last_run_at": "2026-05-29T00:03:26.607702+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -255,15 +255,15 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-18T01:09:51.272803+07:00",
-      "next_run_at": "2026-05-28T04:00:00+07:00",
-      "last_run_at": "2026-05-27T04:00:47.669749+07:00",
+      "next_run_at": "2026-05-29T04:00:00+07:00",
+      "last_run_at": "2026-05-28T04:00:31.364257+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -276,7 +276,50 @@
       },
       "enabled_toolsets": null,
       "workdir": null
+    },
+    {
+      "id": "e92dd2490973",
+      "name": "Wiki Memory Forget Daily",
+      "prompt": "/Users/tuananh4865/.hermes/scripts/wiki_forget_14days.py",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "wiki_forget_14days.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "0 3 * * *"
+      },
+      "schedule_display": "0 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-28T11:21:27.451539+07:00",
+      "next_run_at": "2026-05-30T03:00:00+07:00",
+      "last_run_at": "2026-05-29T03:00:20.131292+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "1"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
     }
   ],
-  "updated_at": "2026-05-28T03:00:01.367644+07:00"
+  "updated_at": "2026-05-29T03:00:20.131503+07:00"
 }

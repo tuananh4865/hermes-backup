@@ -444,6 +444,14 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** *Missing or outdated information**:
 
+> **Auto-improvement note:** 3 specific improvements. Let me review the content:
+
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** 3 specific improvements based on the criteria given.
+
+> **Auto-improvement note:** *Missing or outdated information**: 
+
 === index.md ===
 ---
 confidence: high
@@ -515,6 +523,7 @@ relationships:
 - [[agentic-ai]] — Agentic AI: levels, multi-agent patterns, frameworks, protocols (2026-05-21)
 - [[multi-agent-orchestrator-patterns-deep-research]] — Deep research: 7 orchestration patterns, LangGraph/CrewAI/AutoGen/Swarm comparison, Hermes profiles & Kanban (2026-05-23)
 - [[moss-self-evolution-2026]] — MOSS: Source-Level Self-Rewriting — self-evolve through rewriting own source code (2026-05-26)
+- [[memento-skills-may-2026]] — Memento-Skills: Frozen LLM rewrites own skill library — 80% task success (+78%), arXiv:2603.18743 (2026-05-28)
 
 ### Tools & Infrastructure
 - [[lm-studio]] — Local LLM inference server
@@ -545,6 +554,7 @@ relationships:
 - [[gen-z-slang-2026-04]] — Vietnamese + English Gen Z slang, Chuzz, Gyatt, đỉnh, toang (2026-04-29)
 
 ### Hermes X Research
+- [[hermes-x-research-2026-05-27]] — Hermes X research May 27: Hermes Desktop, Browserbase integration, Bitwarden support, funding update (2026-05-27)
 - [[hermes-x-research-2026-05-25]] — Hermes X research: 157.2K stars, v0.14.0 Foundation, overtook OpenClaw, Windows beta, X Premium integration (2026-05-25)
 - [[hermes-x-research-2026-05-20]] — Hermes Agent X research: v0.14.0 Foundation Release, 155K stars, 180x browser automation, Windows beta (2026-05-20)
 - [[hermes-x-research-2026-05-18]] — Hermes Agent X research: v2026.5.16 Tenacity Release, 154K stars, Kanban multi-agent, /goal, hallucination gate (2026-05-18)
@@ -760,10 +770,15 @@ relationships:
 
 > **Auto-improvement note:** The page references "karpathy-llm-wiki" but in the People section, there's only a simple entry for Karpathy. The concept reference seems to be about a pattern (Karpathy's wiki-as-LLM-memory), not the person entry itself - this is fine but could be clearer.
 
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** The page is titled "Wiki Index" but references a "learned-about-tuananh" link which seems unusual for an index page
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page mentions "Total pages: ~156" but doesn't provide a way to verify or update this count
+
 === log.md (last 20 lines) ===
-**3. Hermes v0.13 Tenacity Release**
-- Workers remain DEAD since May 11+ (12+ days stale)
-- Content Creator: last active May 11
 - Research Agent: last active May 12
 
 **4. May 21 Session Extracts**
@@ -782,11 +797,14 @@ relationships:
 - Full report: `~/.hermes/cron/output/daily_review_2026-05-23.md`
 
 
+## 2026-05-27 research | Hermes X research May 27: Hermes Desktop, Browserbase integration, Bitwarden, funding update ($65-70M raised), Gen Z slang web fallback
+## 2026-05-28 daily-review | Daily review compiled — 15 sessions (4 cron, 11 internal), wiki clean (0 issues), 10 Gen Z terms synced, 5 AI agent techniques, Hermes Desktop, Nous $1B valuation, workers offline since May 25
+
 === learned-about-tuananh.md ===
 ---
 title: Learned About Tuấn Anh
 created: 2026-04-23
-updated: 2026-05-23
+- updated: 2026-05-27
 type: entity
 tags: [person]
 confidence: high
@@ -867,6 +885,18 @@ relationships: [tiktok-content, hermes-agent]
 - **hài hước tưởng mình vô duyên** — "funny thinking I'm being rude", ironic compliment
 - **nếu anh có yêu nói đi ngại gì** — dance challenge trend (May 12, 2026)
 - **anh đâu cần phải xin lời em, mình đâu là gì của nhau đâu** — viral sound (May 7, 2026)
+
+#### NEW May 2026
+- **Sít Rịt** — extremely rare, hitting the jackpot (from English "secret", viral 2025-2026)
+- **Đỉnh** — peak, amazing, awesome
+- **Toang** — screwed, something went wrong
+- **Xõa** — let loose, relax, unwind
+- **Cày** — grinding, intense studying or working
+- **Cổ tươi** — attractive young man
+- **Bánh bèo** — clingy, needs attention
+- **Kiwi Kiwi** — delicious (food/drink praise)
+- **Dizz** — confusion, disorientation
+- **Tái châu** — naive (from "tái chanh")
 
 #### Global Gen Z 2026
 - Skibidi, Gyatt, Brain rot, Rizz, 6 7, Delulu, Aura farming
@@ -982,3 +1012,11 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** The page mentions "Gen Z Slang 2026 (Updated 2026-05-21)" but some entries are marked "May 2026" without specific dates - inconsistency
 
 > **Auto-improvement note:** There's a mix of dates - some entries have specific dates like "May 12, 2026" while others just say "May 2026" or "viral May 2026"
+
+> **Auto-improvement note:** 3 specific improvements. Let me analyze the content:
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The Gen Z slang section has dates (2025-2026, May 2026) but it's unclear if this is properly maintained

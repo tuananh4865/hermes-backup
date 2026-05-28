@@ -134,6 +134,14 @@ brv curate "session_insight: [extracted from reading old sessions]" --detach
 
 **The rule is NOT optional. Deleting before reading = Level 1 violation.**
 
+### ByteRover Knowledge Sync Daily (PAUSED as of 2026-05-18)
+
+Status: **PAUSED** — two ByteRover cron jobs are currently disabled:
+- `ByteRover Knowledge Sync Daily` — last error, paused May 18
+- `ByteRover Health Check Daily` — last error, paused May 18
+
+**Alternative:** `wiki_forget_14days.py` cron (3AM daily) now handles auto-cleanup of stale wiki content by checking session DB. See `wiki-maintenance` skill.
+
 ### Pre-Compactions Checkpoint Script
 
 Khi iteration > 50 hoặc thấy dấu hiệu sắp compact, chạy script này để save state:

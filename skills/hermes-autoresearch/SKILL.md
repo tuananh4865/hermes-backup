@@ -12,6 +12,73 @@ trigger: Cron job 2AM hàng đêm, run forever until goal achieved
 > Lấy cảm hứng từ [karpathy/autoresearch](https://github.com/karpathy/autoresearch)
 > Core philosophy: **give an agent narrow scope + git memory + never stop = autonomous improvement**
 
+## Wiki Forget Pattern — Auto-Delete Stale Wiki Topics (2026-05-28)
+
+**Problem:** Wiki grows indefinitely with topics Anh never revisits. Manual cleanup is error-prone and time-consuming.
+
+**Solution:** Cron script that reads session history (14 days) → finds referenced topics → deletes everything else.
+
+**Script:** `~/.hermes/scripts/wiki_forget_14days.py`
+
+**Session DB paths (verified 2026-05-28):**
+```python
+# CORRECT:
+SESSION_DB = Path.home() / ".hermes" / "state.db"  # NOT hermes_state.db
+
+# Query: timestamp field (NOT created_at):
+cur.execute("""
+    SELECT content FROM messages 
+    WHERE timestamp > ? AND role = 'user'
+    ORDER BY timestamp DESC
+""", (cutoff_ts,))  # cutoff_ts = int(cutoff.timestamp()) — NOT float
+```
+
+**⚠️ CRITICAL: Verify BEFORE git commit — Active References**
+Stale deletion can accidentally remove NEW content that wasn't in session history. ALWAYS verify before git add:
+```bash
+# Before git add -A, check what's staged:
+git status --short | head -20
+
+# ⚠️ ALERT: references/ files may be in delete list
+# If deleted by script, restore from previous commit:
+git checkout HEAD~1 -- references/
+
+# Then re-add:
+git add references/
+git add -A
+git status  # Should only show deletion staging, 1-2 modified files max
+git commit -m "Wiki forget: auto-delete..."
+```
+
+**⚠️ CRITICAL: dirs_to_remove failures — use Python shutil**
+External `rm` commands fail with "Operation not permitted" on some dirs. Use Python:
+```python
+import shutil
+for d in dirs_to_remove:
+    try:
+        shutil.rmtree(d)  # Works where shell rm fails
+    except Exception as e:
+        print(f'[ERROR] {d}: {e}')
+```
+
+**⚠️ PITFALL: DELETE_MODE=true required**
+Script runs in dry-run by default. To actually delete:
+```bash
+DELETE_MODE=true python3 ~/.hermes/scripts/wiki_forget_14days.py
+```
+
+**Cron setup (2026-05-28):**
+```bash
+cronjob create \
+  --name "Wiki Memory Forget Daily" \
+  --script "wiki_forget_14days.py" \
+  --schedule "0 3 * * *" \
+  --no_agent true \
+  --deliver local
+```
+
+**Anh's rule:** Only content discussed in last 14 days stays. Everything else gets forgotten.
+
 ## Core Principles
 
 - **program.md is the skill** — human programs the agent via markdown

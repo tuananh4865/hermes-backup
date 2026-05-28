@@ -3,7 +3,7 @@
   "last_run_at": "2026-05-24T03:05:25.691393+00:00",
   "last_run_duration_seconds": 255.09314,
   "last_run_summary": "auto: no changes; llm: ## Consolidation Pass — Human Summary\n\n### Clusters Processed\n\n**Cluster 1: HyperFrames + Motion Graphic Video**\n- `hyperframes` (active) is the umbrella — comprehensive technical reference covering the entire HyperFrames workflow\n- `motion…\narchived 3 skill(s):\n  • motion-graphic-video → hyperframes\n  • deep-research-wiki — pruned (stale)\n  • x-repost — pruned (stale)\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hyperframes",
-  "last_run_summary_shown_at": "2026-05-10T02:07:37.640328+00:00",
+  "last_run_summary_shown_at": "2026-05-24T03:05:25.691393+00:00",
   "paused": false,
   "run_count": 3
 }

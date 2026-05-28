@@ -6,7 +6,7 @@ platforms: [linux, macos, windows]
 metadata:
   hermes:
     tags: [kanban, multi-agent, collaboration, workflow, pitfalls]
-    related_skills: [kanban-orchestrator]
+    related_skills: [kanban-orchestrator, kanban-codex-lane]
 ---
 
 # Kanban Worker — Pitfalls and Examples
@@ -21,7 +21,7 @@ Your workspace kind determines how you should behave inside `$HERMES_KANBAN_WORK
 |---|---|---|
 | `scratch` | Fresh tmp dir, yours alone | Read/write freely; it gets GC'd when the task is archived. |
 | `dir:<path>` | Shared persistent directory | Other runs will read what you write. Treat it like long-lived state. Path is guaranteed absolute (the kernel rejects relative paths). |
-| `worktree` | Git worktree at the resolved path | If `.git` doesn't exist, run `git worktree add <path> <branch>` from the main repo first, then cd and work normally. Commit work here. |
+| `worktree` | Git worktree at the resolved path | If `.git` doesn't exist, run `git worktree add <path> ${HERMES_KANBAN_BRANCH:-wt/$HERMES_KANBAN_TASK}` from the main repo first, then cd and work normally. Commit work here. |
 
 ## Tenant isolation
 
@@ -156,6 +156,143 @@ If you open the task and `kanban_show` returns `runs: [...]` with one or more cl
 - `outcome: "spawn_failed"` + `error: "..."` — usually a profile config issue (missing credential, bad PATH). Ask the human via `kanban_block` instead of retrying blindly.
 - `outcome: "reclaimed"` + `summary: "task archived..."` — operator archived the task out from under the previous run; you probably shouldn't be running at all, check status carefully.
 - `outcome: "blocked"` — a previous attempt blocked; the unblock comment should be in the thread by now.
+
+## Notification routing
+
+You can configure the gateway to receive cross-profile Kanban task notifications by adding `notification_sources` to `~/.hermes/config.yaml`.
+- `notification_sources: ['*']` accepts subscriptions from all profiles.
+- `notification_sources: ['default', 'zilor-ppt']` or `"default,zilor-ppt"` restricts subscriptions to specified profiles.
+- Omitting the key keeps the default behavior (profile isolation).
+
+## Kanban Dispatcher — Diagnosing Spawn Failures
+
+When the dispatcher reports `crashed=1` repeatedly and the worker log shows `Unknown skill(s): kanban-worker`, or workers exit immediately with `401` auth failures, two root causes are most common:
+
+### Root Cause A: `kanban.db` index corruption → `disk I/O error`
+
+The SQLite DB's `kanban_notify_subs` index can become corrupt (manifests as `disk I/O error` in `release_stale_claims`). Fix:
+
+```python
+# Check corruption
+import sqlite3
+conn = sqlite3.connect("/path/to/kanban.db")
+result = conn.execute("PRAGMA integrity_check;").fetchone()
+# Expected: ('ok',) — anything else means corruption
+
+# Fix: REINDEX + WAL checkpoint (run on the DB before it causes cascading failures)
+conn.execute("REINDEX;")
+conn.execute("PRAGMA wal_checkpoint(TRUNCATE);")
+print(conn.execute("PRAGMA integrity_check;").fetchone())
+conn.close()
+```
+
+**Discovery path:** Gateway error log shows `kanban_notifier tick failed: disk I/O error` every ~5 seconds, followed by `kanban dispatcher: tick failed on board default` at `release_stale_claims`. Run `PRAGMA integrity_check` on `~/.hermes/kanban.db`.
+
+### Root Cause B: Profile missing `.env` → worker 401 authentication
+
+When a worker spawns under a named profile (e.g. `research-lead`), it reads that profile's own `.env`, NOT the root `~/.hermes/.env`. If the profile lacks API keys, the worker hits 401 immediately and exits.
+
+**Symptoms:** Worker log shows `Unknown skill(s): kanban-worker` → then `AuthenticationError [HTTP 401]`. The `kanban-worker` skill is installed (at `skills/devops/kanban-worker/SKILL.md`), but the worker crashed before it could load anything — the error appears first.
+
+**Fix:** Copy the root `.env` to all active profile directories:
+```bash
+cp ~/.hermes/.env ~/.hermes/profiles/<profile-name>/.env
+```
+
+**Verification:** Run a test spawn manually:
+```bash
+hermes -p <profile-name> chat -q "echo test"
+# Must succeed before the dispatcher can spawn workers for that profile
+```
+
+Common profile names on this system: `research-lead`, `content-director`.
+
+### Quick diagnostic checklist
+```
+1. tail -100 ~/.hermes/logs/gateway.log | grep -E "kanban|worker|spawn|skill"
+2. cat ~/.hermes/kanban/logs/<task-id>.log
+3. sqlite3 ~/.hermes/kanban.db "PRAGMA integrity_check;"
+4. ps aux | grep kanban | grep -v grep    # dispatcher alive?
+5. ls ~/.hermes/profiles/<profile>/.env    # profile has credentials?
+```
+
+### Worker `Unknown skill(s): kanban-worker` After Code Patch
+
+**Scenario:** You patched `kanban_db.py` (e.g. `_kanban_worker_skill_available`) and workers still fail even after gateway restart.
+
+**Root cause:** Gateway graceful restart (`hermes gateway restart` via request protocol) does NOT reload Python modules from disk. Pycache and memory-mapped module state persist.
+
+**Diagnosis steps:**
+```bash
+# 1. Check if patch is actually in the file
+grep -n "_kanban_worker_skill_available" ~/.hermes/hermes-agent/hermes_cli/kanban_db.py
+
+# 2. Direct test of the patched function in venv Python
+cd ~/.hermes/hermes-agent && venv/bin/python -c "
+import sys; sys.path.insert(0, '.')
+from hermes_cli.kanban_db import _kanban_worker_skill_available
+from hermes_cli.profiles import resolve_profile_env
+path = resolve_profile_env('research-lead')
+print('Skill available:', _kanban_worker_skill_available(path))
+"
+
+# 3. Check worker log for the actual error
+tail -5 ~/.hermes/kanban/logs/<task-id>.log
+```
+
+**Fix:** Hard kill the gateway, then restart:
+```bash
+ps aux | grep "hermes_cli.main gateway" | grep -v grep
+kill -9 <pid>
+sleep 2
+cd ~/.hermes && ./run_hermes_gateway.sh
+```
+
+**The `_kanban_worker_skill_available` patch:** The dispatcher checks skills by resolving `HERMES_HOME` from the profile env. When workers spawn under a named profile (e.g. `research-lead`), the check must resolve to the profile's skills dir (`~/.hermes/profiles/<profile>/skills/`), not the default `~/.hermes/skills/`. The patch adds `resolve_profile_env(profile_arg)` as a fallback before calling the skill check function.
+
+## Result visibility — writing to accessible locations
+
+Research tasks often store results only in `task_runs.summary` (DB) and log files. Users cannot see DB contents directly. **Always write the actual result artifact to a visible, persistent location:**
+
+- **Log file:** Prepend the full result to the task log at `~/.hermes/kanban/logs/<task_id>.log` so humans can `tail` it.
+- **Workspace:** If using `scratch` or `dir:` workspace, write a `result.md` or `output.json` inside it.
+- **Comments:** Use `kanban_comment` to post a readable excerpt to the task thread — this is visible in the dashboard.
+
+**Why this matters:** A task can be `done` in the DB while the user says "I don't see the worker output." The result must live where the human can find it — not only in structured DB fields.
+
+**Minimum pattern for research tasks:**
+```python
+# Write visible artifact first
+result_md = f"# Research: {title}\n\n{findings}\n"
+log_path = f"/Users/tuananh4865/.hermes/kanban/logs/{os.environ['HERMES_KANBAN_TASK']}.log"
+with open(log_path, "w") as f:
+    f.write(result_md)
+
+# Then complete with structured metadata
+kanban_complete(
+    summary=f"{topic}: {recommendation}. Full report at $HERMES_KANBAN_WORKSPACE/result.md",
+    metadata={"recommendation": recommendation, "sources_read": n, "artifacts": ["result.md"]},
+)
+```
+
+**Bad pattern (output trapped in DB):**
+```python
+# Completes but result is invisible to human
+kanban_complete(summary="AI Services Agency — $1M ARR path, 70-80% margins")
+# Log file has only the lifecycle noise, not the actual research
+```
+
+### Pitfall: Task shows "done" but user can't see output
+
+If the task completes with `status=done` and `consecutive_failures=0` but the user says "I don't see the worker response," the result is probably trapped in `task_runs.summary` (DB only). 
+
+**Check:** `sqlite3 ~/.hermes/kanban.db "SELECT summary FROM task_runs WHERE task_id='<id>' ORDER BY started_at DESC LIMIT 1;"`
+
+**Fix:** Ensure your final worker action writes the result to `~/.hermes/kanban/logs/<task_id>.log` — this is what users check with `tail`. The DB field is for downstream agents, not for humans.
+
+## Support Files
+
+- `references/tailscale-serve.md` — Tailscale serve / funnel diagnostics for exposing local services to tailnet or internet
 
 ## Do NOT
 

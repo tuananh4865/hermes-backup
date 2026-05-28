@@ -78,14 +78,14 @@
     "archived_at": null,
     "created_at": "2026-05-15T23:25:42.875183+00:00",
     "created_by": null,
-    "last_patched_at": "2026-05-16T17:06:29.086943+00:00",
-    "last_used_at": "2026-05-21T06:07:29.678718+00:00",
-    "last_viewed_at": "2026-05-21T06:07:29.677991+00:00",
-    "patch_count": 10,
+    "last_patched_at": "2026-05-28T12:28:05.822058+00:00",
+    "last_used_at": "2026-05-28T12:28:01.355945+00:00",
+    "last_viewed_at": "2026-05-28T12:28:01.354862+00:00",
+    "patch_count": 11,
     "pinned": false,
     "state": "active",
-    "use_count": 10,
-    "view_count": 10
+    "use_count": 11,
+    "view_count": 11
   },
   "chrome-tabs-applescript": {
     "archived_at": null,
@@ -128,14 +128,14 @@
   "gateway-manager": {
     "archived_at": null,
     "created_at": "2026-05-04T08:11:46.248124+00:00",
-    "last_patched_at": "2026-05-25T07:25:27.380872+00:00",
-    "last_used_at": "2026-05-25T07:24:48.090947+00:00",
-    "last_viewed_at": "2026-05-25T07:24:48.089536+00:00",
-    "patch_count": 3,
+    "last_patched_at": "2026-05-28T04:30:54.106288+00:00",
+    "last_used_at": "2026-05-28T04:30:46.371965+00:00",
+    "last_viewed_at": "2026-05-28T04:30:46.370717+00:00",
+    "patch_count": 6,
     "pinned": false,
     "state": "active",
-    "use_count": 4,
-    "view_count": 4
+    "use_count": 8,
+    "view_count": 8
   },
   "gbrain-lmstudio-embedding": {
     "archived_at": null,
@@ -149,6 +149,19 @@
     "state": "active",
     "use_count": 2,
     "view_count": 2
+  },
+  "git-workflow-and-versioning": {
+    "archived_at": null,
+    "created_at": "2026-05-28T04:18:09.886754+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-05-28T04:18:09.887651+00:00",
+    "last_viewed_at": "2026-05-28T04:18:09.886765+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
   },
   "github-large-folder-backup": {
     "archived_at": null,
@@ -177,14 +190,14 @@
   "hermes-autoresearch": {
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
-    "last_patched_at": "2026-05-27T19:08:32.531025+00:00",
-    "last_used_at": "2026-05-27T19:07:07.116884+00:00",
-    "last_viewed_at": "2026-05-27T19:07:07.116038+00:00",
-    "patch_count": 232,
+    "last_patched_at": "2026-05-28T04:23:47.313956+00:00",
+    "last_used_at": "2026-05-28T19:00:37.278364+00:00",
+    "last_viewed_at": "2026-05-28T04:23:25.947525+00:00",
+    "patch_count": 233,
     "pinned": false,
     "state": "active",
-    "use_count": 230,
-    "view_count": 190
+    "use_count": 233,
+    "view_count": 191
   },
   "hermes-external-skills-setup": {
     "archived_at": null,
@@ -365,6 +378,19 @@
     "state": "active",
     "use_count": 101,
     "view_count": 100
+  },
+  "wiki-maintenance": {
+    "archived_at": null,
+    "created_at": "2026-05-28T04:18:35.918937+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-05-28T12:27:59.792265+00:00",
+    "last_used_at": "2026-05-28T12:27:38.102601+00:00",
+    "last_viewed_at": "2026-05-28T12:27:38.101522+00:00",
+    "patch_count": 2,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
   },
   "x-repost": {
     "archived_at": null,
