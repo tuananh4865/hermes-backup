@@ -1,11 +1,11 @@
 [
   {
-    "session_id": "proc_2a440afe30e1",
-    "command": "hermes dashboard --host 0.0.0.0 --port 9119 --insecure --no-open",
-    "pid": 57194,
+    "session_id": "proc_20a1f74494a8",
+    "command": "cd ~/.hermes/hermes-agent && ~/.hermes/hermes-agent/.venv/bin/python -c \"\nimport sys\nsys.argv = ['h', 'dashboard', '--skip-build', '--port', '9119', '--host', '100.117.102.115', '--insecure', '--no-open']\nfrom hermes_cli.main import main\nmain()\n\"",
+    "pid": 78628,
     "pid_scope": "host",
     "cwd": "/Users/tuananh4865",
-    "started_at": 1779942582.395324,
+    "started_at": 1780049521.017966,
     "task_id": "default",
     "session_key": "agent:main:telegram:dm:1132914873",
     "watcher_platform": "",

@@ -9,7 +9,7 @@ providers:
 fallback_providers: []
 credential_pool_strategies: {}
 toolsets:
-  - hermes-cli
+- hermes-cli
 agent:
   max_turns: 300
   gateway_timeout: 1800
@@ -22,27 +22,27 @@ agent:
 self_learning:
   complexity_weights:
     high:
-      - tiktok-viral-script
-      - wiki-system
-      - hermes-agent-architecture
-      - self-improving
-      - self-evolving
-      - system-design
+    - tiktok-viral-script
+    - wiki-system
+    - hermes-agent-architecture
+    - self-improving
+    - self-evolving
+    - system-design
     medium:
-      - tiktok-script
-      - affiliate
-      - skill-creation
-      - memory-layer
-      - complexity-analyzer
-      - trajectory
-      - subagent
-      - multi-agent
-      - cron-job
-      - wiki-page
-      - self-learning
+    - tiktok-script
+    - affiliate
+    - skill-creation
+    - memory-layer
+    - complexity-analyzer
+    - trajectory
+    - subagent
+    - multi-agent
+    - cron-job
+    - wiki-page
+    - self-learning
     low:
-      - quick-fix
-      - simple-task
+    - quick-fix
+    - simple-task
   task_type_weight_threshold: 0.4
 terminal:
   backend: local
@@ -223,7 +223,7 @@ delegation:
 prefill_messages_file: ''
 skills:
   external_dirs:
-    - /Volumes/Storage-1/Hermes/skills
+  - /Volumes/Storage-1/Hermes/skills
   creation_nudge_interval: 5
 honcho: {}
 timezone: ''
@@ -247,17 +247,16 @@ approvals:
   timeout: 60
   destructive_slash_confirm: false
 command_allowlist:
-  - kill hermes/gateway process (self-termination)
-  - script execution via -e/-c flag
-  - start gateway outside systemd (use 'systemctl --user restart 
-    hermes-gateway')
-  - overwrite system file via redirection
-  - recursive delete
-  - find -delete
-  - script execution via heredoc
-  - pipe remote content to shell
-  - stop/restart hermes gateway (kills running agents)
-  - delete in root path
+- kill hermes/gateway process (self-termination)
+- script execution via -e/-c flag
+- start gateway outside systemd (use 'systemctl --user restart hermes-gateway')
+- overwrite system file via redirection
+- recursive delete
+- find -delete
+- script execution via heredoc
+- pipe remote content to shell
+- stop/restart hermes gateway (kills running agents)
+- delete in root path
 quick_commands: {}
 personalities: {}
 security:
@@ -285,11 +284,10 @@ mcp_servers:
   MiniMax:
     command: uvx
     args:
-      - minimax-coding-plan-mcp
-      - -y
+    - minimax-coding-plan-mcp
+    - -y
     env:
-      MINIMAX_API_KEY: 
-        sk-cp-D-svOMfjSv0NAvAsW5sNQq6w9hLciRoHDlJqhSZyMFc69wj-g3sOHVPcDC4w14g-EiQBSSVRSsKAOqUXgezoY2Su73r_7VhieCsmhqqzhSwV1UPM-GwhU9A
+      MINIMAX_API_KEY: sk-cp-D-svOMfjSv0NAvAsW5sNQq6w9hLciRoHDlJqhSZyMFc69wj-g3sOHVPcDC4w14g-EiQBSSVRSsKAOqUXgezoY2Su73r_7VhieCsmhqqzhSwV1UPM-GwhU9A
       MINIMAX_API_HOST: https://api.minimax.io
 web:
   backend: exa
@@ -299,46 +297,47 @@ session_reset:
   at_hour: 4
 platform_toolsets:
   cli:
-    - browser
-    - clarify
-    - code_execution
-    - cronjob
-    - delegation
-    - file
-    - image_gen
-    - memory
-    - messaging
-    - session_search
-    - skills
-    - terminal
-    - todo
-    - tts
-    - vision
-    - web
+  - browser
+  - clarify
+  - code_execution
+  - cronjob
+  - delegation
+  - file
+  - image_gen
+  - memory
+  - messaging
+  - session_search
+  - skills
+  - terminal
+  - todo
+  - tts
+  - vision
+  - web
   telegram:
-    - browser
-    - clarify
-    - code_execution
-    - cronjob
-    - delegation
-    - file
-    - image_gen
-    - memory
-    - messaging
-    - session_search
-    - skills
-    - terminal
-    - todo
-    - tts
-    - vision
-    - web
+  - browser
+  - clarify
+  - code_execution
+  - cronjob
+  - delegation
+  - file
+  - image_gen
+  - memory
+  - messaging
+  - session_search
+  - skills
+  - terminal
+  - todo
+  - tts
+  - vision
+  - web
 custom_providers:
-  - name: LM Studio
-    base_url: http://localhost:1234/v1
-    model: qwen3.6-35b-a3b
-    models:
-      qwen3.6-35b-a3b:
-        context_length: 64000
+- name: LM Studio
+  base_url: http://localhost:1234/v1
+  model: qwen3.6-35b-a3b
+  models:
+    qwen3.6-35b-a3b:
+      context_length: 64000
 onboarding:
   seen:
     busy_input_prompt: true
+    tool_progress_prompt: true

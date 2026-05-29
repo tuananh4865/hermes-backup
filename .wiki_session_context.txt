@@ -450,7 +450,11 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** 3 specific improvements based on the criteria given.
 
-> **Auto-improvement note:** *Missing or outdated information**: 
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** 3 specific improvements. Let me review the current content:
+
+> **Auto-improvement note:** *Missing or outdated information**: The schema mentions "Anh" in the ingest workflow ("When Anh provides a URL..."), which seems like a person's name that may be specific to one user's setup and shouldn't be in a general schema document. Also, some sections feel incomplete - like Step 2 in the Ingest Workflow is mentioned but not shown.
 
 === index.md ===
 ---
@@ -524,6 +528,7 @@ relationships:
 - [[multi-agent-orchestrator-patterns-deep-research]] — Deep research: 7 orchestration patterns, LangGraph/CrewAI/AutoGen/Swarm comparison, Hermes profiles & Kanban (2026-05-23)
 - [[moss-self-evolution-2026]] — MOSS: Source-Level Self-Rewriting — self-evolve through rewriting own source code (2026-05-26)
 - [[memento-skills-may-2026]] — Memento-Skills: Frozen LLM rewrites own skill library — 80% task success (+78%), arXiv:2603.18743 (2026-05-28)
+- [[gea-group-evolving-agents]] — Group-Evolving Agents: 71.0% on coding benchmarks, treats groups as evolutionary unit (2026-05-29)
 
 ### Tools & Infrastructure
 - [[lm-studio]] — Local LLM inference server
@@ -778,17 +783,11 @@ relationships:
 
 > **Auto-improvement note:** The page mentions "Total pages: ~156" but doesn't provide a way to verify or update this count
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Your Harness Your Memory" entry references Harrison Chase but doesn't include a date like other entries
+
 === log.md (last 20 lines) ===
-- Research Agent: last active May 12
-
-**4. May 21 Session Extracts**
-- OpenClaw Telegram bot: Token revoked → re-obtained → gateway restart fixed
-- X video post workflow approved
-- Memory health check, Mem0 research, USER.md cleanup
-- ByteRover memory setup complete
-- HyperFrames animation fix (GSAP timeline pattern)
-
-### Skills Updated
 - `hermes-agent` — added Wiki Self-Heal CRITICAL note
 - `hermes-autoresearch` — 9 new self-improving agent techniques
 - New skill: `research/deep-research-wiki` (deep research → wiki page workflow)
@@ -799,6 +798,16 @@ relationships:
 
 ## 2026-05-27 research | Hermes X research May 27: Hermes Desktop, Browserbase integration, Bitwarden, funding update ($65-70M raised), Gen Z slang web fallback
 ## 2026-05-28 daily-review | Daily review compiled — 15 sessions (4 cron, 11 internal), wiki clean (0 issues), 10 Gen Z terms synced, 5 AI agent techniques, Hermes Desktop, Nous $1B valuation, workers offline since May 25
+## [2026-05-28] wiki-rework | Wiki cleaned — removed stale content, kept 14-day active items
+- Raw transcripts: kept May 14-28 only (14 days)
+- Telegram scrapes: removed old timestamp files (10-17 series)  
+- Stale dirs: fine-tuned-wiki, .processed, .pytest_cache, etc.
+- Apple/Google/LM docs: removed (not asked about in 14 days)
+- References: restored active research docs (autoresearch, Hermes X research)
+- Concepts: 1483, Entities: 21, References: 7 restored
+
+## [2026-05-28] daily-review | Daily review compiled — 6 sessions (4 cron, 2 system), Hermes v0.14.0 upgrade, macos-computer-use skill enabled, Memento-Skills (Tool Creation), 0 new Gen Z terms, workers offline since May 25
+## [2026-05-28] upgrade | Hermes upgraded to v0.14.0 — pydantic 2.12.5→2.13.4, cua-driver 0.1.9→0.2.0, +3 new skills, conflicts resolved
 
 === learned-about-tuananh.md ===
 ---
@@ -1020,3 +1029,7 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The Gen Z slang section has dates (2025-2026, May 2026) but it's unclear if this is properly maintained
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Who" section is very basic. There's no information about when this person was born, their location, follower counts, or other basic biographical details.

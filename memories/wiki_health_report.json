@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-05-28T04:00:31.233579",
-  "total_files": 1840,
-  "total_issues": 3464,
+  "timestamp": "2026-05-29T04:00:01.827343",
+  "total_files": 64,
+  "total_issues": 243,
   "results": {
     "missing_frontmatter": {
       "missing": null,
@@ -25,7 +25,7 @@
     },
     "broken_links": {
       "broken": null,
-      "count": 3200,
+      "count": 218,
       "stale": null,
       "orphans": null,
       "self_refs": null,
@@ -35,7 +35,7 @@
     },
     "orphan_pages": {
       "orphans": null,
-      "count": 206,
+      "count": 23,
       "broken": null,
       "stale": null,
       "self_refs": null,
@@ -44,176 +44,12 @@
       "missing": null
     },
     "duplicate_titles": {
-      "duplicates": {
-        "script viral — combo 200 cái khẩu trang 5d thịnh phát": [
-          "learning/san-pham-khau-trang-5d-thinh-phat-HOOK6-9.md",
-          "learning/san-pham-khau-trang-5d-thinh-phat-200-cai-GENZ.md"
-        ],
-        "phân tích: kem body chống nắng mizumi — trinh meow": [
-          "learning/tiktok-viral-script/analysis/2026-04-17/trinhmeow/7628586917017324820-analysis.md",
-          "learning/tiktok-viral-script/analysis/2026-04-20/trinhmeow/7628586917017324820-analysis.md"
-        ],
-        "phân tích: top sản phẩm xứng đáng viral — trinh meow": [
-          "learning/tiktok-viral-script/analysis/2026-04-16/trinhmeow/7624764613246160149-analysis.md",
-          "learning/tiktok-viral-script/analysis/2026-04-18/trinhmeow/7624764613246160149-analysis.md"
-        ],
-        "wiki quality campaign": [
-          "projects/wiki-quality-campaign/hub.md",
-          "concepts/wiki-quality-campaign.md"
-        ],
-        "nexus — obsidian competitor": [
-          "projects/nexus/index.md",
-          "projects/nexus/hub.md"
-        ],
-        "my wiki redesign plan": [
-          "projects/my-wiki-redesign/plan.md",
-          "concepts/projects/my-wiki-redesign/plan.md"
-        ],
-        "hermes dojo": [
-          "projects/hermes-dojo/README.md",
-          "projects/hermes-dojo/hub.md"
-        ],
-        "wiki quality improvement": [
-          "projects/wiki-quality-improvement/hub.md",
-          "concepts/wiki-quality-improvement.md"
-        ],
-        "wiki self-maintaining system": [
-          "projects/wiki-self-maintaining/hub.md",
-          "concepts/Wiki Self-Maintaining System.md"
-        ],
-        "llm agents": [
-          "concepts/llm-agents.md",
-          "concepts/llm-agents,-agents,-llm.md"
-        ],
-        "ai agent trends — 2026-04-15": [
-          "concepts/ai-agent-trends-2026-04-15.md",
-          "concepts/ai-agent-trends-2026-april-15.md"
-        ],
-        "transformer architecture": [
-          "concepts/transformer.md",
-          "concepts/transformer-architecture.md"
-        ],
-        "async i/o": [
-          "concepts/async-io.md",
-          "concepts/async-i-o.md"
-        ],
-        "ai agent trends — april 2026": [
-          "concepts/ai-agent-trends-2026-april-17-v2.md",
-          "concepts/ai-agent-trends-april-2026.md",
-          "concepts/ai-agent-trends-2026-april-21.md",
-          "concepts/ai-agent-trends-2026-april-16.md",
-          "concepts/ai-agent-trends-2026-april-17.md"
-        ],
-        "ai agent trends 2026-04-20": [
-          "concepts/ai-agent-trends-2026-april-20.md",
-          "concepts/ai-agent-trends-2026-04-20.md"
-        ],
-        "openapi specification": [
-          "concepts/openapi-specification.md",
-          "concepts/openapi.md"
-        ],
-        "hermes dojo agentic system": [
-          "concepts/Hermes Dojo Agentic System.md",
-          "concepts/Hermes Dojo Agentic System_1.md"
-        ],
-        "tailwind css": [
-          "concepts/tailwindcss.md",
-          "concepts/tailwind-css.md"
-        ],
-        "hermes agent self-evolution": [
-          "concepts/hermes-agent-self-evolution.md",
-          "entities/hermes-agent-self-evolution.md"
-        ],
-        "llama.cpp": [
-          "concepts/llama.cpp.md",
-          "concepts/llama-cpp.md"
-        ],
-        "agentic ai agent — báo cáo nghiên cứu 2025-2026": [
-          "concepts/agentic-ai-agent-2026.md",
-          "concepts/agentic-ai-2025-2026.md"
-        ],
-        "rubber duck debugging": [
-          "concepts/rubber-duck-debugging,-debugging,-problem-solving.md",
-          "concepts/rubber-duck-debugging.md"
-        ],
-        "next.js": [
-          "concepts/next.js.md",
-          "concepts/nextjs.md"
-        ],
-        "oauth 2.0": [
-          "concepts/OAuth-2.0.md",
-          "concepts/oauth.md"
-        ],
-        "worker_threads": [
-          "concepts/worker-threads.md",
-          "concepts/worker_threads.md"
-        ],
-        "rowboat": [
-          "concepts/rowboat.md",
-          "concepts/_drafts/rowboat.md"
-        ],
-        "ai safety": [
-          "concepts/safety.md",
-          "concepts/ai-safety.md"
-        ],
-        "ai agent trends — spring 2026": [
-          "concepts/ai-agent-trends-spring-2026.md",
-          "concepts/ai-agent-trends-2026-spring.md"
-        ],
-        "mcp — model context protocol": [
-          "concepts/mcp-model-context-protocol.md",
-          "concepts/mcp-(model-context-protocol).md"
-        ],
-        "self-improving ai agents": [
-          "concepts/self-improving-ai-agents.md",
-          "concepts/self-improving-agents.md"
-        ],
-        "reinforcement learning from human feedback": [
-          "concepts/Reinforcement-Learning-from-Human-Feedback.md",
-          "concepts/rlhf.md"
-        ],
-        "constitutional ai": [
-          "concepts/Constitutional-AI.md",
-          "concepts/constitutional-ai,-ai-safety,-alignment.md"
-        ],
-        "a/b testing": [
-          "concepts/a-b-testing.md",
-          "concepts/ab-testing.md"
-        ],
-        "tree of thoughts (tot)": [
-          "concepts/Tree-of-Thoughts.md",
-          "concepts/tree-of-thoughts,-reasoning,-prompting.md"
-        ],
-        "hermes agent self-evolution integration and dojo system": [
-          "concepts/Hermes Agent Self-Evolution and Dojo System.md",
-          "concepts/Hermes Agent Self-Evolution Integration and Dojo System.md"
-        ],
-        "new relic": [
-          "concepts/new-relic.md",
-          "concepts/newrelic.md"
-        ],
-        "model context protocol (mcp)": [
-          "concepts/model-context-protocol-mcp.md",
-          "concepts/model-context-protocol.md"
-        ],
-        "large language model": [
-          "concepts/llm.md",
-          "concepts/Large-Language-Model.md"
-        ],
-        "vercel ai sdk": [
-          "concepts/vercel-ai-sdk.md",
-          "entities/vercel-ai.md"
-        ],
-        "rest api": [
-          "concepts/REST-API.md",
-          "concepts/rest.md"
-        ]
-      },
-      "count": 40
+      "duplicates": {},
+      "count": 0
     },
     "self_refs": {
       "self_refs": null,
-      "count": 18,
+      "count": 2,
       "broken": null,
       "stale": null,
       "orphans": null,

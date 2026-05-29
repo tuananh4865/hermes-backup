@@ -1,0 +1,42 @@
+§ [PREFERENCES] — explicit preferences discovered over sessions
+- communication: Vietnamese casual
+- response_style: concise, no fluff
+- tiktok_script_style: "anh" + "mấy con vợ"
+§ [PROJECTS] — ongoing work
+- tiktok-content: active
+- hermes-agent: memory-optimizing
+§ [FACTS] — durable facts about user, environment, tools
+- 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [file] added [HIGH]
+- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [preference] "Nam thư" that workers produced. Sets correct expectations for future sessions. [HIGH]
+- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-28: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- [tool] is [HIGH]
+- [tool] verified [HIGH]
+- [tool] enabled [HIGH]
+- [file] md [HIGH]
+- 2026-05-28: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
+- 2026-05-28: Update hermes
+- [preference] còn conflict markers. [HIGH]
+- 2026-05-28: Update hermes
+- 2026-05-28: [System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversa
+- [tool] result [HIGH]
+- [preference] em check chi tiết Kanban worker không, hay cứ để yên?
+- [preference] liên quan đến Hermes update vừa xong.
+- [preference] alive.
+- [file] thiếu [HIGH]
+- [preference] em restart kanban dispatcher để test lại worker không? [HIGH]
+- [preference] có `MINIMAX_API_KEY` → worker spawn fail ngay với 401 [HIGH]
+- 2026-05-28: [System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversa
+- 2026-05-28:
+- 2026-05-28:
+- 2026-05-28:
+- 2026-05-28:
+- 2026-05-28:
+- 2026-05-28:
+§ [SESSIONS] — session history summaries
+- 2026-05-29: work kanban task t_3a73b0af
+§ [ENTITY_INDEX] — cross-session entity tracking
+§ [GROWTH_LOG] — how user/agent improved

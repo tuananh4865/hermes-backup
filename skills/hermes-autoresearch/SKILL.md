@@ -392,15 +392,14 @@ Focus areas:
 | Planning | Goal Decomposition, Planning, Priority Setting, Reasoning |
 | Collaboration | Multi-Agent Coordination, Delegation |
 
-**Latest Release (2026-05-16): v0.14.0 "Foundation Release"**
-- **180x faster browser automation** — CDP-based rewrite
-- **Native Windows beta** — no more WSL2 required
-- **Vision integrations** — image understanding built in
+**Latest Release: v0.15 "Velocity Release" (May 28, 2026)**
+- **v0.15.2** (May 29, 2026) — packaging fix for plugin.yaml manifests
+- **v0.15.0 "Velocity Release"** — dramatically faster startup + execution
+- **v0.14.0 "Foundation Release"** (May 16) — 180x faster browser automation, native Windows beta, vision integrations
 - **Live session handoffs** — `/handoff` command for mid-conversation context transfer
-- **OpenAI-compatible local endpoints** — easier LM Studio / ollama integration
 - **LINE + SimpleX Chat** — two new messaging platforms
 - **Microsoft Teams pipeline + webhook adapter** — enterprise messaging
-- **Community reaction**: "Hermes V0.14 is INSANE!" — top requests: swarm agents tutorials, kanban, conductor, workspace UI documentation
+- **Community**: "Hermes V0.14 is INSANE!" → "V0.15 is FAST!" — top requests: swarm tutorials, kanban docs
 
 **computer_use tool verified ENABLED (2026-05-28):** `cua-driver` v0.1.9 confirmed via `hermes tools list`. Capture fails in headless cron (no display server) — expected behavior, NOT a bug. Tool is READY and will work in real GUI sessions. See `macos-computer-use` skill → `references/verification.md` for headless behavior details.
 
@@ -410,7 +409,17 @@ Focus areas:
 Vulnerability identified in hermes-agent v0.8.0 — affects file gateway component.
 **If using v0.8.x → UPDATE IMMEDIATELY.** v0.14.0 and later are patched.
 
-**GitHub: 157.2K+ stars** (global rank #46, up ~2K from May 20)
+**GitHub: 158K+ stars** (May 30, 2026)
+
+**Hermes Auto-Upgrade Pattern (2026-05-30):**
+The installed hermes-agent package can be upgraded automatically via pip:
+```bash
+pip3 install 'hermes-agent>=0.15' -q  # upgrades to latest
+pip3 show hermes-agent | grep Version  # verify
+```
+Current versions available: v0.15.2 (v2026.5.29.2) as of May 30, 2026.
+After ANY upgrade → run `hermes-upgrade-verify` skill to check new features.
+New upgrade reference: `references/hermes-upgrade-v0.15-may-2026.md`
 
 **Major milestone (May 10, 2026):** Hermes Agent **overtook OpenClaw** as the most-used open-source AI agent on OpenRouter's global daily inference rankings.
 
@@ -435,7 +444,13 @@ Vulnerability identified in hermes-agent v0.8.0 — affects file gateway compone
 
 **TDP pattern recommended for Hermes:** 60% context reduction via DAG sub-goals directly applicable to multi-agent orchestration.
 
-**Total self-improvement techniques documented: 24** (May 26, 2026 — added MOSS)
+**Total self-improvement techniques documented: 25** (May 30, 2026 — added ACE)
+
+**5 NEW Techniques (May 30, 2026):**
+| Technique | arXiv | Key Metric | Hermes Applicability |
+|-----------|-------|------------|---------------------|
+| ACE (Agentic Context Engineering) | 2510.04618 | Contexts as evolving playbooks | **HIGH** — context management |
+| TDP (Task-Decoupled Planning) | 2601.07577 | 60% context reduction via DAG sub-goals | **HIGH** — multi-agent orchestration |
 
 Metrics:
 ```
@@ -575,7 +590,9 @@ cronjob create --skills [] --prompt "MY CUSTOM PROMPT"
 ```bash
 cronjob list | grep {job_id}  # Check Skills: should be [] for custom prompts
 - `references/hermes-agent-memory-research-may-2026.md` — **Hermes v0.14 memory research** (May 21): Issue #22357 FIXED, Issue #25833 OPEN, Trajectory Memory
+- `references/hermes-upgrade-v0.15-may-2026.md` — **Hermes v0.15.2 Velocity Release upgrade** (May 30): upgrade from v0.14.0, dramatically faster, CVE patched
 - `references/multi-agent-coordination-may-2026.md` — **Multi-Agent Coordination patterns** (May 25): Team of Rivals, Hyperagents, Hermes subagent delegation, production lessons (80.9% gains)
+- `references/x-research-hermes-2026-05-29.md` — **Hermes X research** (May 29): 157.2K stars, CEO pattern (Hermes + OpenClaw orchestration), real cron setups, v0.14 features, container workaround
 
 ## Cron Jobs
 

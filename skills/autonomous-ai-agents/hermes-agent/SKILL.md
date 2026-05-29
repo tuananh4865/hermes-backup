@@ -708,6 +708,24 @@ Speed depends on the vision-capable model used. For fast vision, use a vision-ca
 
 **Pattern:** Before creating stubs, search `learning/`, `references/`, project subdirectories, and raw/ sources. Content is often there, just in a different folder structure.
 
+### Droid + MiniMax Verified Config
+**Reference:** `references/minimax-droid-config.md`
+
+Anthropic-compatible path (recommended for M2.7):
+```json
+{
+  "custom_models": [{
+    "model_display_name": "MiniMax-M2.7",
+    "model": "MiniMax-M2.7",
+    "base_url": "https://api.minimax.io/anthropic",
+    "api_key": "<MINIMAX_API_KEY>",
+    "provider": "anthropic",
+    "max_tokens": 64000
+  }]
+}
+```
+**Key:** M2.7 DOES support Anthropic-compatible endpoint — this was verified 2026-05-29. Always web-search API compatibility before stating what a model supports.
+
 **Verification after cleanup:**
 ```bash
 # Count real content pages (exclude stubs <200 bytes)
@@ -799,6 +817,76 @@ See `references/python314-path-api.md` for full details.
 **Signal:** User complained "judge model sao lại không dùng của minimax luôn mà lại dùng model khác vậy" — ALL models including judge/auxiliary must use minimax.
 
 **Requirement:** When configuring any model (judge, auxiliary, vision, etc.), always use MiniMax provider unless user explicitly specifies otherwise. MiniMax-M2.7 is the default and only acceptable model for user-facing work.
+
+### QA Gate Protocol — Every Step Must Verify (CRITICAL — 2026-05-29)
+
+**Signal:** User was frustrated that I delivered unverified API information with false confidence. Said "làm việc không chủ động tìm kiếm gì hết", "em bị tự tin thái quá", "điều này khiến em trở thành một agent hoạt động không hiệu qua".
+
+**Rule:** Confidence score < 9 → BẮT BUỘC research trước khi deliver.
+
+**Skill reference:** See `qa-gate` skill for full protocol. Umbrella skill references it for QA methodology.
+
+### Memory Tool Char Limits (2026-05-29)
+
+Memory has TWO limits (not configurable via CLI — hardcoded in source):
+
+| Store | Default | File | Location |
+|-------|---------|------|----------|
+| MEMORY.md | 2,200 chars | `memories/MEMORY.md` | `tools/memory_tool.py:125` |
+| USER.md | 1,375 chars | `memories/USER.md` | `tools/memory_tool.py:125` |
+
+```python
+# memory_tool.py line 125
+def __init__(self, memory_char_limit: int = 2200, user_char_limit: int = 1375):
+```
+
+**Design philosophy:** Small limits are INTENTIONAL — keeps memory curated, prevents system prompt bloat. When full: remove stale entries, don't increase limits.
+
+**When memory is full:**
+1. Remove stale task entries (format: `Task '...' — N turns`)
+2. Keep only high-value facts, preferences, lessons
+3. The limit is a FEATURE, not a bug
+
+| Scenario | Action |
+|----------|--------|
+| Em muốn deliver ngay | ❌ Stop → Verify trước |
+| Không chắc về fact | → Research, don't guess |
+| API specs, endpoints, base URLs | → ALWAYS web-search first |
+| Model compatibility | → ALWAYS web-search first |
+| Anh hỏi "có support X không" | → Research → Yes/No + proof |
+| Đã deliver xong thấy uncertain | → Correct ngay, don't wait |
+
+**3 QA Gates:**
+1. **Pre-Execution**: Confidence check — < 9 → research bắt buộc
+2. **Mid-Execution**: Verify output mỗi milestone
+3. **Post-Execution**: Checklist trước deliver — output đúng? facts verified? source referenced?
+
+**Also applies to:** Technical specs, model features, pricing, tool compatibility, configuration values. These all change constantly — never rely on memorized knowledge.
+
+### API/Model Compatibility Research — ALWAYS Web-Verify First (CRITICAL)
+**Signal (2026-05-29):** User asked if MiniMax-M2.7 supports Anthropic-compatible endpoint. I incorrectly said "No — only M2.1 supports it." This was 100% wrong. M2.7 fully supports `https://api.minimax.io/anthropic` with full thinking blocks, prompt caching, and interleaved thinking. I relied on stale knowledge instead of researching.
+
+**Lesson:** API specs, endpoint support, model compatibility matrices, and provider feature support CHANGE constantly. Never answer questions about:
+- Which models support which API endpoints (Anthropic-compatible vs OpenAI-compatible)
+- Base URL formats for any provider
+- Model feature support (vision, streaming, caching, etc.)
+- Provider compatibility with tools (Droid, Claude Code, Cursor, etc.)
+
+...without doing a web search first. Your knowledge cutoff is not current. The MiniMax docs themselves show M2.7 has always supported the Anthropic endpoint.
+
+**Rule:** If the question involves an API endpoint, base URL, model feature matrix, or tool compatibility — research it. Always. Even if you think you know.
+
+**Correct workflow for this class of question:**
+1. Web search the current provider docs
+2. Extract the specific endpoint/base URL/model ID
+3. Verify with the official documentation
+4. Then answer
+
+**MiniMax verified facts (2026-05-29):**
+- Anthropic-compatible: `https://api.minimax.io/anthropic` — supports M2.7, M2.7-highspeed, M2.5, M2.5-highspeed, M2.1, M2.1-highspeed, M2
+- OpenAI-compatible: `https://api.minimax.io/v1` — supports M2.7, M2.7-highspeed
+- Droid config: `"provider": "anthropic"` + `"base_url": "https://api.minimax.io/anthropic"` for Anthropic-compatible path
+- Full Droid config examples: see `references/minimax-droid-config.md`
 
 ### Solution First, Explanation Never (Unless Asked)
 **Signal:** User says "Tại sao không phải là gateway?", "Sao lại là launch agent?" — expressing frustration at technical layer explanations.

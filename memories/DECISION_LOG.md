@@ -21,3 +21,4 @@
 
 ---
 *Last updated: never*
+[2026-05-29] QA lesson: tự tin thái quá về MiniMax API. Created qa-gate skill. Rule: ALWAYS web-search for API specs. Confidence < 9 = research bắt buộc.

@@ -455,6 +455,7 @@ model_catalog:
 network:
   force_ipv4: false
 gateway:
+  strict: false
   media_delivery_allow_dirs: []
   trust_recent_files: true
   trust_recent_files_seconds: 600
@@ -494,7 +495,7 @@ secrets:
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 5
 paste_collapse_char_threshold: 2000
-_config_version: 23
+_config_version: 24
 self_learning:
   complexity_weights:
     high:

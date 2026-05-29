@@ -6,24 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-26: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [file] added [HIGH]
-- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [preference] "Nam thư" that workers produced. Sets correct expectations for future sessions. [HIGH]
-- 2026-05-27: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-28: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- [tool] is [HIGH]
-- [tool] verified [HIGH]
-- [tool] enabled [HIGH]
-- [file] md [HIGH]
-- 2026-05-28: Review the conversation above and update the skill library. Be ACTIVE — most sessions produce at lea
-- 2026-05-28: Update hermes
-- [preference] còn conflict markers. [HIGH]
-- 2026-05-28: Update hermes
-- 2026-05-28: [System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversa
-- [tool] result [HIGH]
 - [preference] em check chi tiết Kanban worker không, hay cứ để yên?
 - [preference] liên quan đến Hermes update vừa xong.
 - [preference] alive.
@@ -36,7 +18,25 @@
 - 2026-05-28:
 - 2026-05-28:
 - 2026-05-28:
+- 2026-05-28:
+- 2026-05-29: work kanban task t_3a73b0af
+- [file] py
+- [preference] tương tác
+- [model] claude
+- [model] Opus
+- [model] theo
+- [file] json
+- [preference] dùng M2.7 phải
+- [preference] hỗ trợ Anthropic-compatible endpoint** — chỉ có M2.1, M2.1-lightning, M2 mới dùng được endpoint đó.
+- 2026-05-29: tìm hiểu cho anh droid cli
+- [file] `top-youtube-channels-final-synthesis.md`
+- 2026-05-29: work kanban task t_0f7cfa72
+- [file] không
+- [file] md
+- [preference] em xử lý thế nào?
+- [preference] save.
+- [preference] tồn tại
 § [SESSIONS] — session history summaries
-- 2026-05-28: 
+- 2026-05-29: work kanban task t_3a73b0af
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

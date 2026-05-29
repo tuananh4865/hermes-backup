@@ -32,3 +32,8 @@
 
 ---
 *Last updated: never*
+
+## [2026-05-29] QA Gate Setup Complete
+- Tạo skill: qa-gate (3 QA gates: pre, mid, post execution)
+- Update memory với lesson learned
+- Anh accept QA protocol mới
