@@ -1,38 +1,62 @@
 # Hermes Autoresearch Knowledge
 
-## Current Focus (2026-05-28)
-Tonight's focus: **Tool Creation #10** — macos-computer-use skill tested, Memento-Skills documented
+## Current Focus (2026-05-30)
+Tonight's focus: **Hermes X Research** — v0.15.2 Velocity Release, community use cases survey, Gen Z slang sync
 
 ### System Status (02:00)
-- Wiki: ✅ 1839 files, 0 issues (wiki_lint --fast PASSED)
-- Skills: 233 skills healthy, SHS = 0
+- Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
+- Skills: 239 skills healthy, SHS = 0
 - Workers: ⚠️ PERMANENTLY DELETED May 25 — web search fallback only
-- Gen Z slang: No new terms found (web search only finds already-documented terms)
-- macos-computer-use: ✅ ENABLED — cua-driver 0.1.9
+- Gen Z slang: No new terms from web search (finds only already-documented terms)
 
-### Tonight's Research
+### Hermes X Research (May 30, 2026)
 
-**Memento-Skills (arXiv:2603.18743, March 2026):**
-- Frozen LLMs can continually learn by editing own skill library
-- Task success: 45% → 80% (+78% relative)
-- Token reduction: 150K → 2K via selective skill routing
-- Directly applicable to Hermes skill system
-- Documented: references/memento-skills-may-2026.md
+**Version + Stars:**
+- Hermes Agent: **158K+ GitHub stars** (May 30, 2026) — up from 157.2K on May 29
+- v0.15.2 hotfix (v2026.5.29.2) — packaging fix for plugin.yaml manifests
+- v0.15.0 "Velocity Release" (May 28) — dramatically faster startup + execution
+- v0.14.0 "Foundation Release" (May 16) — 180x faster browser automation, native Windows beta
 
-**Tool Creation verification:**
-- `computer_use` tool: ENABLED (cua-driver 0.1.9)
-- CuaDriver daemon not running in headless cron (expected)
-- Tool works when display available
-- Skill references: apple/macos-computer-use/
+**Community Use Cases Found (50+ real-world examples):**
 
-**AI Agent Tool Creation techniques found:**
-1. **Memento-Skills** (2603.18743) — Frozen LLM rewrites skill library, 80% success
-2. **ToolACE-dev** — Self-improving tool learning for agents
-3. **Seal-Tools** — Self-instruct tool learning dataset for agent tuning
+1. **Personal Assistant** — "Claude for chat, Hermes 24/7 on mini PC for real-world stuff: email, web browsing, form filling, calendar updates" (@monty_13277)
 
-### Skills Improved Tonight
-- macos-computer-use skill verified working (ENABLED status confirmed)
-- Memento-Skills documented for future skill self-repair implementation
+2. **Trading & Markets** — Self-learning weather trading bot. "$100 → $216 in less than 48 hours" — Hermes scans weather markets every 60 mins, compares 3 forecast sources, buys undervalued temperature buckets. (@DeRonin_, Apr 2026)
+
+3. **Research Agent** — "Daily research brief across Discord, Slack, Notion & Obsidian." One Hermes instance watches AI/agent space, picks signals, writes briefs, suggests content angles, tracks what owner ignores, keeps improving workflow. (@gkisokay, May 2026)
+
+4. **Marketing / UGC Ad Studio** — "Paste product URL → Hermes scrapes landing page, pulls winning ad hooks from Meta Ads Library + TikTok Creative Center, writes brief itself. Total time: ~4 minutes." (@codewithimanshu, Apr 2026)
+
+5. **Multi-Agent Dev Workflow** — "12 Hermes instances every day in parallel to build Hermes Agent. Backend team monitors stack issues. Post-training team creates RL environments. Dataset investigation." @Teknium runs the production pattern at Hermes itself.
+
+6. **Production Solar Sales Ops** — "Bilbo Baggins" agent manages 8-rep door-to-door solar sales team via iMessage. Tracks daily board, runs cron for morning/evening reporting, maintains 26-page LLM Wiki of solar market intel. Live since Apr 2026.
+
+7. **Autonomous Novel Production** — "Autonovel — House of Bells": End-to-end autonomous novel, art, audiobook production. 19 chapters, 79,456 words with audiobook + website. Nous Research's own pipeline.
+
+8. **Polymarket Trading** — 4-layer parallel monitoring: order book, on-chain addresses, news-price lag, position changes. Hermes monitors all 4 via Polymarket module + News Skill. (@adiix_official)
+
+9. **Second Brain / Memory** — Obsidian as long-term memory for Hermes. 794+ upvotes on the integration pattern. "Hermes reads HackerNews and emails me a daily summary."
+
+10. **Home Lab + Server Monitoring** — "Hermes watches my homelab validators and pings Telegram." VPS server management on cheap hardware.
+
+**Key Insight from @Teknium:** "I literally run 12 Hermes agent instances every day in parallel to build Hermes Agent — now a top 100 GitHub repository. Backend team monitors stack issues. Post-training team creates RL environments. Dataset team investigates and sometimes directly manipulates datasets."
+
+**Hermes vs Alternatives:**
+- vs LangChain: Hermes compounds (skills improve), LangChain stays flat
+- vs OpenClaw: "Claude = CEO, OpenClaw = Senior Engineer, Hermes = worker 24/7 on a mini PC"
+- vs Consumer agents: Hermes is self-hosted, self-improving, infrastructure-level
+
+**v0.15 "Velocity Release" Key Changes:**
+- 16,083-line PR merged (largest ever)
+- Kanban multi-agent: real production workflow tool
+- dramatically faster — startup, execution, shipping work
+- 28 commits, 21 merged PRs since v0.15.0
+
+### Gen Z Slang Status
+- Web search finds only already-documented terms (Đỉnh, Toang, Gato, lọ, etc.)
+- Workers deleted May 25 — no fresh worker output to sync
+- wiki entity Gen Z section (updated May 27) is current
+- **No new slang to sync tonight**
 
 ---
 

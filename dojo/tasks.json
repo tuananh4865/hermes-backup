@@ -1,6 +1,31 @@
 {
   "tasks": [
     {
+      "id": "daily-ingest-20260530",
+      "type": "daily-ingest",
+      "status": "completed",
+      "timestamp": "2026-05-30T06:00:01.120997",
+      "summary": {
+        "drops": [],
+        "watched": [
+          "  Would check: https://arxiv.org/list/cs.AI/recent",
+          "  Would check: https://arxiv.org/list/cs.LG/recent"
+        ],
+        "heal": "============================================================\n============================================================\nFound 303 broken links:\n============================================================\n============================================================\n============================================================\n============================================================\n============================================================\n============================================================\nFound 39 orphan pages (no inbound links):",
+        "stale": [
+          "  Stale (2026-04-11): email",
+          "  Stale (2026-04-12): self-healing-wiki",
+          "  Stale (2026-04-16): ai-agent-frameworks-2026",
+          "  Stale (2026-05-21): tiktok-captcha-solver",
+          "  Stale (2026-04-13): verification",
+          "  Stale (2026-04-11): rss",
+          "  Stale (2026-05-21): agentic-ai",
+          "  Stale (2026-04-25): tiktok-algorithm-2026",
+          "  Stale (2026-05-21): tiktok-viral-script"
+        ]
+      }
+    },
+    {
       "id": "daily-ingest-20260529",
       "type": "daily-ingest",
       "status": "completed",
