@@ -658,8 +658,8 @@
       6319
     ],
     "media/youtube-content/SKILL.md": [
-      1778471610458868130,
-      3218
+      1780154598610979783,
+      6440
     ],
     "media/youtube-transcript-extractor/SKILL.md": [
       1778616037100935748,
@@ -840,6 +840,10 @@
     "productivity/teams-meeting-pipeline/SKILL.md": [
       1778403333698556527,
       6867
+    ],
+    "productivity/voice-setup/SKILL.md": [
+      1780151804767822519,
+      6085
     ],
     "prototype/SKILL.md": [
       1779165369584332976,
@@ -4093,6 +4097,22 @@
       "frontmatter_name": "teams-meeting-pipeline",
       "description": "Operate the Teams meeting summary pipeline via Hermes CLI...",
       "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "voice-setup",
+      "category": "productivity",
+      "frontmatter_name": "voice-setup",
+      "description": "Configure voice STT/TTS for Hermes Agent — Telegram voice...",
+      "platforms": [
+        "macos",
+        "hermes"
+      ],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

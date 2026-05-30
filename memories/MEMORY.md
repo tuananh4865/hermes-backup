@@ -1,17 +1,3 @@
-Anh chủ động kiểm tra Kanban worker khi thấy lỗi — muốn biết root cause và fix ngay. Không thích "cứ để yên" khi có vấn đề. Khi investigation reveals 2 root causes (db corruption + missing env), fix cả 2.
-§
-Task '[Tuấn Anh] Anh muốn em thực hiện rework lại wiki! Xoá bỏ những gì trong 14 ngày qua anh không hỏi tới, chỉ giữ lại thông' — 1 turns
-§
-Task '[Tuấn Anh] Các raw transcript trong 14 ngày gần nhất thì phải giữ lại chỉ xoá những gì trong 14 ngày gần đây không quan' — 1 turns
-§
-Task '[Tuấn Anh] Ok' — 1 turns
-§
-Anh prefer PERIODIC WIKI CLEANUP based on recency — "wiki forget" pattern: only keep content discussed in last 14 days, delete everything else. Cron runs daily at 3AM auto-forget.
-§
-Task '[Tuấn Anh] Check memory của byterover' — 1 turns
-§
-Task 'cho anh biết có gì ở phiên bản mới cập nhật hôm nay của hermes?' — 1 turns
-§
 Task 'Update rồi mà, em check xem. Xong rồi thì check toàn bộ các tính năng nổi bật mà em vừa list ra xem có cái nào chưa hoạt' — 1 turns
 §
 Task 'tìm hiểu cho anh droid cli' — 1 turns
@@ -39,3 +25,21 @@ Task 'work kanban task t_0f7cfa72' — session 20260529, 1 turns
 [2026-05-29] QA failure: tự tin thái quá, nói M2.7 không support Anthropic-compatible endpoint. Sai hoàn toàn. Đã tạo qa-gate skill. Rule: ALWAYS web-search cho API specs. Confidence < 9 = research bắt buộc.
 §
 [2026-05-29] QA failure lesson: ALWAYS web-search API specs. Created qa-gate skill. Memory limit 2200 chars in memory_tool.py line 125 - design đúng của Hermes, không phải bug.
+§
+Task '[Tuấn Anh] https://youtu.be/X2huNCHDwMQ?si=PjUKh4bUvebSNurC' — 1 turns
+§
+Task 'Có cách nào để anh trò chuyện bằng âm thanh với em liên tục được không nhỉ?' — 1 turns
+§
+Task 'Có cách nào để anh trò chuyện bằng âm thanh với em liên tục được không nhỉ?' — session 20260529, 1 turns
+§
+Task 'Có cách nào để anh trò chuyện bằng âm thanh với em liên tục được không nhỉ?' — session 20260529, 1 turns
+§
+Task '[System note: Your previous turn in this session was interrupted by a gateway restart. The conversation history below is' — 1 turns
+§
+Task '[System note: Your previous turn in this session was interrupted by a gateway restart. The conversation history below is intact. If it contains unfini' — session 20260529, 1 turns
+§
+Task '[System note: Your previous turn in this session was interrupted by a gateway restart. The conversation history below is intact. If it contains unfini' — session 20260529, 1 turns
+§
+Task 'Nghe được rồi nhưng có vẻ nó đang nói tiếng Anh' — 1 turns
+§
+Task '[Tuấn Anh] Tiếp theo đến phần kịch bản thu hút, làm sao để có một kịch bản thu hút?' — 1 turns

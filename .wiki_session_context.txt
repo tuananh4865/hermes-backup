@@ -456,6 +456,8 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** *Missing or outdated information**: The schema mentions "Anh" in the ingest workflow ("When Anh provides a URL..."), which seems like a person's name that may be specific to one user's setup and shouldn't be in a general schema document. Also, some sections feel incomplete - like Step 2 in the Ingest Workflow is mentioned but not shown.
 
+> **Auto-improvement note:** 3 specific improvements. Let me review the current content:
+
 === index.md ===
 ---
 confidence: high
@@ -617,6 +619,9 @@ relationships:
 - [[hermes-agent-capabilities]] — System capabilities
 - [[hermes-self-improvement-activation]] — Self-improvement features
 - [[hermes-x-research-2026-05-16]] — X mentions May 2-16: 150K stars, v0.13 Tenacity, critical bugs (2026-05-16)
+| [[niche-bending-strategy]] | Tim Danilov: Niche = Format + Market, bend viral format to new markets, empty squares = blue ocean (2026-05-30) |
+| [[mrbeast-youtube-advice-2026]] | MrBeast: videos suck normal, quality > quantity, first 5 seconds critical, thumbnail = curiosity, algorithm = audience (2026-05-30) |
+| [[genius-youtube-advice-15-minutes]] | Think Media: 100 videos rule, niche emergence, CTA best practice, curiosity titles, trend surfing, patience (2026-05-30) |
 
 ## Meta
 - [[SCHEMA]] — Schema and conventions
@@ -787,9 +792,11 @@ relationships:
 
 > **Auto-improvement note:** The "Your Harness Your Memory" entry references Harrison Chase but doesn't include a date like other entries
 
+> **Auto-improvement note:** The page mentions "Last updated: 2026-05-07" but it's now past that date based on the content (there are entries from 2026-05-21, 2026-05-23, 2026-05-26, 2026-05-28, 2026-05-29). The last update date should be updated.
+
+> **Auto-improvement note:** The "AI Agents" section has entries up to 2026-05-29, but the last updated date is 2026-05-07, which is inconsistent.
+
 === log.md (last 20 lines) ===
-- `hermes-agent` — added Wiki Self-Heal CRITICAL note
-- `hermes-autoresearch` — 9 new self-improving agent techniques
 - New skill: `research/deep-research-wiki` (deep research → wiki page workflow)
 
 ### Report
@@ -809,11 +816,13 @@ relationships:
 ## [2026-05-28] daily-review | Daily review compiled — 6 sessions (4 cron, 2 system), Hermes v0.14.0 upgrade, macos-computer-use skill enabled, Memento-Skills (Tool Creation), 0 new Gen Z terms, workers offline since May 25
 ## [2026-05-28] upgrade | Hermes upgraded to v0.14.0 — pydantic 2.12.5→2.13.4, cua-driver 0.1.9→0.2.0, +3 new skills, conflicts resolved
 
+## [2026-05-30] ingest | Niche Bending (fLDrB_wmbNE) + MrBeast (9DBJXRy5dvk) + Think Media (X2huNCHDwMQ) — all saved to wiki
+
 === learned-about-tuananh.md ===
 ---
 title: Learned About Tuấn Anh
 created: 2026-04-23
-- updated: 2026-05-27
+- updated: 2026-05-30
 type: entity
 tags: [person]
 confidence: high
@@ -1033,3 +1042,7 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The "Who" section is very basic. There's no information about when this person was born, their location, follower counts, or other basic biographical details.
+
+> **Auto-improvement note:** *1. Missing or outdated information:**
+
+> **Auto-improvement note:** The document mentions "Gen Z Slang 2026 (Updated 2025-05-21)" - the date format is inconsistent (shows 2025 but mentions 2026 content)
