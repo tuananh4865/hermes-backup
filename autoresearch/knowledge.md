@@ -1,13 +1,36 @@
 # Hermes Autoresearch Knowledge
 
-## Current Focus (2026-05-30)
-Tonight's focus: **Hermes X Research** — v0.15.2 Velocity Release, community use cases survey, Gen Z slang sync
+## Current Focus (2026-05-31)
+Tonight's focus: **Hermes v0.15.2 Velocity Release research + Brainworm security + Gen Z slang sync**
 
 ### System Status (02:00)
 - Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
 - Skills: 239 skills healthy, SHS = 0
 - Workers: ⚠️ PERMANENTLY DELETED May 25 — web search fallback only
-- Gen Z slang: No new terms from web search (finds only already-documented terms)
+- Gen Z slang: Web search finds May 2026 terms (from TikTok vn_xanh, Nabu Education) — NO genuinely new slang beyond what's already documented
+
+### Hermes v0.15.2 / v0.15.0 "Velocity Release" (May 28-29, 2026)
+
+**Version + Stars:**
+- Hermes Agent: **158K+ GitHub stars** (May 30, 2026)
+- v0.15.2 hotfix (v2026.5.29.2) — packaging fix for plugin.yaml manifests
+- v0.15.0 "Velocity Release" (May 28) — 16,083-line PR (largest ever), 747 PRs by 321 contributors
+- Sessions now 4,500x faster (Reddit)
+
+**NEW in v0.15.0 (Velocity Release):**
+1. **Promptware Defense (Brainworm)** — Blocks prompt-injection attacks at 3 chokepoints, defends context window
+2. **Bitwarden Secrets Manager** — One bootstrap token replaces N per-provider API keys
+3. **Skill Bundles** — Package related skills together
+4. **TUI Session Orchestrator** — Terminal UI for managing sessions
+5. **Auto Supply-Chain Defense** — Automatic security patching
+6. **NFTY Platform** — Multi-agent coordination platform
+7. **Kanban Multi-Agent v2** — Real production workflow tool
+
+**arXiv self-improvement paper found:**
+- SIA (arXiv:2605.27276) — Feedback-Agent updates BOTH harness AND weights. Beats Claude Code TerminalBench. Dual-mode self-improvement (harness tuning + weight updates). Already documented in May 31 run.
+
+**Prompt injection defense (arXiv:2605.17634, May 17, 2026):**
+- "AI Agents May Always Fall for Prompt Injections" — shows prevailing defenses still fail. Hermes v0.15's Brainworm defense is response to this research.
 
 ### Hermes X Research (May 30, 2026)
 
