@@ -1,13 +1,14 @@
 # Hermes Autoresearch Knowledge
 
-## Current Focus (2026-05-31)
-Tonight's focus: **Hermes v0.15.2 Velocity Release research + Brainworm security + Gen Z slang sync**
+## Current Focus (2026-06-01)
+Tonight's focus: **Skill Creation + Self-Improvement research — SkillsInjector + GRASP (May 29 fresh)**
 
 ### System Status (02:00)
-- Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
-- Skills: 239 skills healthy, SHS = 0
+- Wiki: ✅ 0 issues (105 files checked)
+- Skills: 238 skills healthy, SHS = 0
 - Workers: ⚠️ PERMANENTLY DELETED May 25 — web search fallback only
-- Gen Z slang: Web search finds May 2026 terms (from TikTok vn_xanh, Nabu Education) — NO genuinely new slang beyond what's already documented
+- Gen Z slang: No new terms found (web search confirms May 2026 terms still active)
+- **⚠️ CRITICAL:** Session recording broken since May 28 — no user sessions logged for 4 days
 
 ### Hermes v0.15.2 / v0.15.0 "Velocity Release" (May 28-29, 2026)
 

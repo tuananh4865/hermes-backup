@@ -210,6 +210,10 @@ When a site hides its download URL behind redirects or button clicks (e.g. FileH
 
 **Example from this session**: FileHorse's "Start Download" button didn't trigger a download, but `browser_console` revealed the direct URL: `https://edgedl.me.gvt1.com/edgedl/release2/.../Antigravity.dmg`
 
+## X/Twitter Video Viewing
+
+**Videos on X/Twitter are viewable via browser even through auth walls.** See `references/x-twitter-video.md` for the full workflow.
+
 ## Design constraints
 
 - Coordinate clicks default — `Input.dispatchMouseEvent` passes through iframes/shadow/cross-origin

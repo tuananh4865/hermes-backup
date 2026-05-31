@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/Users/tuananh4865/.hermes/logs/curator/20260524-030525",
-  "last_run_at": "2026-05-24T03:05:25.691393+00:00",
-  "last_run_duration_seconds": 255.09314,
-  "last_run_summary": "auto: no changes; llm: ## Consolidation Pass — Human Summary\n\n### Clusters Processed\n\n**Cluster 1: HyperFrames + Motion Graphic Video**\n- `hyperframes` (active) is the umbrella — comprehensive technical reference covering the entire HyperFrames workflow\n- `motion…\narchived 3 skill(s):\n  • motion-graphic-video → hyperframes\n  • deep-research-wiki — pruned (stale)\n  • x-repost — pruned (stale)\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hyperframes",
-  "last_run_summary_shown_at": "2026-05-24T03:05:25.691393+00:00",
+  "last_report_path": "/Users/tuananh4865/.hermes/logs/curator/20260531-034119",
+  "last_run_at": "2026-05-31T03:41:19.310235+00:00",
+  "last_run_duration_seconds": 186.005238,
+  "last_run_summary": "auto: no changes; llm: ## Curator Pass Summary — 2026-05-31\n\n### Clusters Processed\n\n**HERMES cluster (hermes-maintenance + hermes-upgrade-verify) → absorbed into `hermes-memory`**\n\nThese two narrow skills were full-session artifacts with specific bug fixes and n…\narchived 2 skill(s):\n  • hermes-maintenance → hermes-memory\n  • hermes-upgrade-verify → hermes-memory\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-memory",
+  "last_run_summary_shown_at": "2026-05-31T03:41:19.310235+00:00",
   "paused": false,
-  "run_count": 3
+  "run_count": 4
 }

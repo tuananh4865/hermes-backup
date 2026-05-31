@@ -458,6 +458,10 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** 3 specific improvements. Let me review the current content:
 
+> **Auto-improvement note:** 3 specific improvements across these categories:
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
 === index.md ===
 ---
 confidence: high
@@ -622,6 +626,11 @@ relationships:
 | [[niche-bending-strategy]] | Tim Danilov: Niche = Format + Market, bend viral format to new markets, empty squares = blue ocean (2026-05-30) |
 | [[mrbeast-youtube-advice-2026]] | MrBeast: videos suck normal, quality > quantity, first 5 seconds critical, thumbnail = curiosity, algorithm = audience (2026-05-30) |
 | [[genius-youtube-advice-15-minutes]] | Think Media: 100 videos rule, niche emergence, CTA best practice, curiosity titles, trend surfing, patience (2026-05-30) |
+| [[youtube-hook-formula]] | First 5 seconds formula: 6 hook types (shock, question, stakes, visual, bold, proof), 5-second structure, mistakes to avoid (2026-05-30) |
+| [[youtube-script-structure]] | 4-part script framework: Hook (0-30s) → Context → Payload → Payoff+CTA, micro-hooks every 30s, retention optimization (2026-05-30) |
+| [[youtube-title-writing]] | 25 title formulas 2026: curiosity gap, transformation, numbers, loops, provocation, questions, A/B testing, keep under 50 chars (2026-05-30) |
+| [[youtube-editing-basics]] | Video editing: pacing control (3 levels), cut timing (every 3s), B-roll placement, audio mixing, tension building, retention optimization (2026-05-30) |
+| [[youtube-thumbnail-design]] | Thumbnail science: face expression +20-30% CTR, 15 formulas, color psychology, 3-layer composition, A/B testing, tools (2026-05-30) |
 
 ## Meta
 - [[SCHEMA]] — Schema and conventions
@@ -796,9 +805,11 @@ relationships:
 
 > **Auto-improvement note:** The "AI Agents" section has entries up to 2026-05-29, but the last updated date is 2026-05-07, which is inconsistent.
 
-=== log.md (last 20 lines) ===
-- New skill: `research/deep-research-wiki` (deep research → wiki page workflow)
+> **Auto-improvement note:** *Missing or outdated information:**
 
+> **Auto-improvement note:** The "Technical Concepts" section appears to be cut off at "[[ai-engineeri" - incomplete entry
+
+=== log.md (last 20 lines) ===
 ### Report
 - Full report: `~/.hermes/cron/output/daily_review_2026-05-23.md`
 
@@ -816,7 +827,9 @@ relationships:
 ## [2026-05-28] daily-review | Daily review compiled — 6 sessions (4 cron, 2 system), Hermes v0.14.0 upgrade, macos-computer-use skill enabled, Memento-Skills (Tool Creation), 0 new Gen Z terms, workers offline since May 25
 ## [2026-05-28] upgrade | Hermes upgraded to v0.14.0 — pydantic 2.12.5→2.13.4, cua-driver 0.1.9→0.2.0, +3 new skills, conflicts resolved
 
-## [2026-05-30] ingest | Niche Bending (fLDrB_wmbNE) + MrBeast (9DBJXRy5dvk) + Think Media (X2huNCHDwMQ) — all saved to wiki
+## [2026-05-30] youtube-deep-research | Deep researched 5 YouTube skill pages: hook formula (18KB), script structure (27KB), title writing (16KB), thumbnail design (23KB), editing basics (26KB) — complete YouTube success formulas for Tuấn Anh
+
+## [2026-05-31] autoresearch-nightly | SIA self-improving agent (arXiv:2605.27276) documented — Stanford dual-mode: harness + weight updates, beats Claude Code on TerminalBench. Total self-improvement techniques: 18. Wiki clean (0 issues).
 
 === learned-about-tuananh.md ===
 ---
@@ -1046,3 +1059,7 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *1. Missing or outdated information:**
 
 > **Auto-improvement note:** The document mentions "Gen Z Slang 2026 (Updated 2025-05-21)" - the date format is inconsistent (shows 2025 but mentions 2026 content)
+
+> **Auto-improvement note:** The page mentions "Research bot: @ClawdZ1E_Bot (Researcher_Clawd_Bot trong group Company)" but this seems incomplete. It doesn't specify what this bot does or how it relates to the workflow.
+
+> **Auto-improvement note:** The TikTok content style section mentions "Max 25 giây" but doesn't explain the rationale or context for this constraint.

@@ -211,4 +211,24 @@
 
 ---
 
+## 2026-05-31
+
+### ⚠️ CRITICAL: Session Recording Broken
+- **Last session logged:** May 28, 2026 — No sessions found for May 29, 30, 31
+- **sessions.db:** 0 bytes (empty/corrupted)
+- **Root cause:** Unknown — Could be disk space, permission, or Hermes service issue
+- **Cron jobs still running** — evidenced by output files up to May 31 07:03
+
+### No User Activity
+- Workers offline since May 25 (deleted by user)
+- Content pipeline dead
+- TikTok Shop: No revenue activity
+- YouTube: Research phase only (no filming sessions)
+
+### Cron Jobs Status
+- Daily Review, Autoresearch, Backup — all still running
+- Session recording to `sessions/` directory broken
+
+---
+
 ## 2026-05-13

@@ -1,0 +1,193 @@
+{
+  "started_at": "2026-05-31T03:41:19.310235+00:00",
+  "duration_seconds": 186.01,
+  "model": "MiniMax-M2.7",
+  "provider": "minimax",
+  "auto_transitions": {
+    "marked_stale": 0,
+    "archived": 0,
+    "reactivated": 0,
+    "checked": 10
+  },
+  "counts": {
+    "before": 10,
+    "after": 8,
+    "delta": -2,
+    "archived_this_run": 2,
+    "added_this_run": 0,
+    "consolidated_this_run": 2,
+    "pruned_this_run": 0,
+    "state_transitions": 0,
+    "cron_jobs_rewritten": 0,
+    "tool_calls_total": 32
+  },
+  "tool_call_counts": {
+    "skill_view": 12,
+    "terminal": 11,
+    "read_file": 1,
+    "patch": 3,
+    "skill_manage": 2,
+    "write_file": 2,
+    "skills_list": 1
+  },
+  "archived": [
+    "hermes-maintenance",
+    "hermes-upgrade-verify"
+  ],
+  "consolidated": [
+    {
+      "name": "hermes-maintenance",
+      "into": "hermes-memory",
+      "source": "absorbed_into (model-declared at delete)",
+      "reason": "Narrow single-session artifact (disk cleanup workflow) — absorbed as `references/hermes-cluster/hermes-maintenance.md` under existing Hermes infra umbrella. SKILL.md deleted, content preserved in umbrella."
+    },
+    {
+      "name": "hermes-upgrade-verify",
+      "into": "hermes-memory",
+      "source": "absorbed_into (model-declared at delete)",
+      "reason": "Narrow single-session artifact (post-upgrade QA checklist) — absorbed as `references/hermes-cluster/hermes-upgrade-verify.md` under existing Hermes infra umbrella. SKILL.md deleted, content preserved in umbrella."
+    }
+  ],
+  "pruned": [],
+  "pruned_names": [],
+  "added": [],
+  "state_transitions": [],
+  "cron_rewrites": {
+    "rewrites": [],
+    "jobs_updated": 0,
+    "jobs_scanned": 6
+  },
+  "llm_final": "## Curator Pass Summary — 2026-05-31\n\n### Clusters Processed\n\n**HERMES cluster (hermes-maintenance + hermes-upgrade-verify) → absorbed into `hermes-memory`**\n\nThese two narrow skills were full-session artifacts with specific bug fixes and no subdirectories:\n- `hermes-maintenance` — disk cleanup workflow, discovered and fixed during a single maintenance session\n- `hermes-upgrade-verify` — post-upgrade QA checklist, discovered during a single upgrade verification session\n\nBoth are narrow class-of-one skills that a maintainer would consolidate under an umbrella. `hermes-memory` was the natural host — it already covers Hermes infra operation (gateway, upgrades, maintenance, ByteRover, wiki). Absorbed as `references/hermes-cluster/hermes-maintenance.md` and `references/hermes-cluster/hermes-upgrade-verify.md`; `hermes-memory` SKILL.md patched to reference them.\n\n### Other Skills Reviewed — No Action Needed\n\nThe remaining 8 skills are class-level umbrellas or properly narrow with no sibling overlap:\n\n| Skill | Status | Reason |\n|-------|--------|--------|\n| `business-opportunity-research` | Keep | Already a broad class-level skill — income stream research framework |\n| `hermes-memory` | Keep (expanded) | Class-level umbrella for Hermes knowledge/persistence |\n| `hyperframes` | Keep | Class-level — motion graphics creation, well-scoped |\n| `openclaw-deep-research` | Keep | Class-level — OpenClaw Telegram bot setup |\n| `qa-gate` | Keep | Class-level — QA gate protocol, already consolidated |\n| `tiktok-viral-script` | Keep | Class-level — TikTok content creation framework, already massive |\n| `voice-setup` | Keep | Class-level — voice STT/TTS configuration |\n| `wiki-maintenance` | Keep | Class-level — wiki maintenance workflows |\n\n### Decisions Made\n\n- **Consolidated** `hermes-maintenance` → `hermes-memory` (absorbed as `references/hermes-cluster/hermes-maintenance.md`)\n- **Consolidated** `hermes-upgrade-verify` → `hermes-memory` (absorbed as `references/hermes-cluster/hermes-upgrade-verify.md`)\n- **No pruning** — no truly stale skills found among the 10 candidates\n\n### Archive State\n`~/.hermes/skills/.archive/` holds 42 previously archived skills (pre-existing, not from this pass). The 2 consolidated skills were absorbed directly without going through `.archive/`.\n\n---\n\n## Structured summary (required)\n\n```yaml\nconsolidations:\n  - from: hermes-maintenance\n    into: hermes-memory\n    reason: Narrow single-session artifact (disk cleanup workflow) — absorbed as `references/hermes-cluster/hermes-maintenance.md` under existing Hermes infra umbrella. SKILL.md deleted, content preserved in umbrella.\n  - from: hermes-upgrade-verify\n    into: hermes-memory\n    reason: Narrow single-session artifact (post-upgrade QA checklist) — absorbed as `references/hermes-cluster/hermes-upgrade-verify.md` under existing Hermes infra umbrella. SKILL.md deleted, content preserved in umbrella.\nprunings: []\n```",
+  "llm_summary": "## Curator Pass Summary — 2026-05-31\n\n### Clusters Processed\n\n**HERMES cluster (hermes-maintenance + hermes-upgrade-verify) → absorbed into `hermes-memory`**\n\nThese two narrow skills were full-session artifacts with specific bug fixes and n…",
+  "llm_error": null,
+  "tool_calls": [
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hermes-maintenance\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hermes-memory\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hermes-upgrade-verify\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"business-opportunity-research\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"openclaw-deep-research\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hyperframes\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"voice-setup\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"wiki-maintenance\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"qa-gate\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"tiktok-viral-script\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls -la ~/.hermes/skills/ && echo \\\"---\\\" && ls -la ~/.hermes/skills/hermes-maintenance/ && echo \\\"---\\\" && ls -la ~/.hermes/skills/hermes-memory/ && echo \\\"---\\\" && ls -la ~/.hermes/skills/hermes-upgrade-verify/\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls -la /Users/tuananh4865/.hermes/skills/software-development/hermes-maintenance/ && echo \\\"---\\\" && ls -la /Users/tuananh4865/.hermes/skills/knowledge-management/hermes-memory/ && echo \\\"---\\\" && ls -la /Users/tuananh4865/.hermes/skills/autonomous-ai-agents/hermes-upgrade-verify/\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p ~/.hermes/skills/knowledge-management/hermes-memory/references/hermes-cluster && ls ~/.hermes/skills/knowledge-management/hermes-memory/references/\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mv /Users/tuananh4865/.hermes/skills/software-development/hermes-maintenance/ ~/.hermes/skills/knowledge-management/hermes-memory/references/hermes-cluster/ && mv /Users/tuananh4865/.hermes/skills/autonomous-ai-agents/hermes-upgrade-verify/ ~/.hermes/skills/knowledge-management/hermes-memory/references/hermes-cluster/ && ls ~/.hermes/skills/knowledge-management/hermes-memory/reference…"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"offset\": 270, \"path\": \"/Users/tuananh4865/.hermes/skills/knowledge-management/hermes-memory/SKILL.md\"}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"new_string\": \"## Absorbed Hermes Core Skills (2026-05-31 Consolidation)\\n\\nThe following narrow skills were absorbed into `hermes-memory` as labeled subsections under `references/hermes-cluster/`:\\n\\n### hermes-maintenance\\n**Full content:** `references/hermes-cluster/hermes-maintenance/SKILL.md`\\n\\nMaintenance workflow for Hermes working directory \\u2014 disk space audit, safe deletion patterns…"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"delete\", \"absorbed_into\": \"hermes-memory\", \"name\": \"hermes-maintenance\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"delete\", \"absorbed_into\": \"hermes-memory\", \"name\": \"hermes-upgrade-verify\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/skills/.archive/ && echo \\\"---\\\" && ls ~/.hermes/skills/knowledge-management/hermes-memory/references/hermes-cluster/\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/skills/.archive/hermes-maintenance/ 2>/dev/null && echo \\\"---\\\" && ls ~/.hermes/skills/.archive/hermes-upgrade-verify/ 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find ~/.hermes/skills -name \\\"hermes-maintenance\\\" -o -name \\\"hermes-upgrade-verify\\\" 2>/dev/null\"}"
+    },
+    {
+      "name": "write_file",
+      "arguments": "{\"content\": \"---\\nname: hermes-maintenance\\ndescription: \\\"Use when Anh asks to clean up temp files, free disk space, maintain Hermes directory, or remove old checkpoints/sessions/backups. Covers disk space audit, safe deletion, and identifying what can be cleaned.\\\"\\nversion: 1.0.0\\nauthor: Hermes Agent\\nlicense: MIT\\nplatforms: [linux, macos, windows]\\nmetadata:\\n  hermes:\\n    tags: [maintenanc…"
+    },
+    {
+      "name": "write_file",
+      "arguments": "{\"content\": \"---\\nname: hermes-upgrade-verify\\ntitle: Hermes v0.15+ Upgrade Verification\\ndescription: Verify Hermes Agent upgrades and check v0.15+ features after each update. Use when Anh asks \\\"c\\u00f3 g\\u00ec m\\u1edbi\\\", \\\"check update\\\", \\\"\\u0111\\u00e3 update ch\\u01b0a\\\", or when doing post-upgrade QA.\\ncreated: 2026-05-29\\nupdated: 2026-05-29\\ntype: skill\\ntags: [hermes-agent, upgrade, verif…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/skills/knowledge-management/hermes-memory/references/hermes-cluster/\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"gateway-manager\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hermes-autoresearch\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/skills/.archive/ | wc -l && echo \\\"---\\\" && cat ~/.hermes/skills/.usage.json | python3 -c \\\"import json,sys; d=json.load(sys.stdin); print(len([k for k in d.get('skills',{}).keys() if not k.startswith('.')]))\\\"\"}"
+    },
+    {
+      "name": "skills_list",
+      "arguments": "{}"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"new_string\": \"- `hermes-agent` \\u2014 for gateway and agent configuration\\n- `memory` tool \\u2014 for in-session memory management\\n\\n---\\n\\n*Curator pass 2026-05-31: hermes-maintenance + hermes-upgrade-verify absorbed into this skill as `references/hermes-cluster/` subfiles.*\", \"old_string\": \"- `hermes-agent` \\u2014 for gateway and agent configuration\\n- `memory` tool \\u2014 for in-session memo…"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"new_string\": \"- `memory` tool \\u2014 for in-session memory management\", \"old_string\": \"- `memory` tool \\u2014 for in-session memory management+\\n+\\n---+\\n+\\n+*Curator pass 2026-05-31: hermes-maintenance + hermes-upgrade-verify absorbed into this skill as `references/hermes-cluster/` subfiles.*\", \"path\": \"/Users/tuananh4865/.hermes/skills/knowledge-management/hermes-memory/SKILL.md\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/skills/knowledge-management/hermes-memory/references/hermes-cluster/\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"echo \\\"=== Skills remaining ===\\\" && ls ~/.hermes/skills/knowledge-management/hermes-memory/references/hermes-cluster/ && echo \\\"\\\" && echo \\\"=== Archive contents ===\\\" && ls ~/.hermes/skills/.archive/ | grep -E \\\"hermes-\\\" && echo \\\"\\\" && echo \\\"=== hermes-memory references ===\\\" && ls ~/.hermes/skills/knowledge-management/hermes-memory/references/ | grep -v hermes-cluster\"}"
+    }
+  ]
+}

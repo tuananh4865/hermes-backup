@@ -431,6 +431,46 @@ Sau khi fix path separator, `wiki_semantic_health.py` vẫn báo ~743 broken lin
 
 **⚠️ Action item:** 389 bad stubs cần được xóa khỏi `concepts/` — đây là artifacts từ lúc path separator bug chưa fix, tạo stubs với tên sai.
 
+## Absorbed Hermes Core Skills (2026-05-31 Consolidation)
+
+The following narrow skills were absorbed into `hermes-memory` as labeled subsections under `references/hermes-cluster/`:
+
+### hermes-maintenance
+**Full content:** `references/hermes-cluster/hermes-maintenance/SKILL.md`
+
+Maintenance workflow for Hermes working directory — disk space audit, safe deletion patterns, temp file cleanup, session file management. Trigger: "dọn dẹp", "clean up", "free disk space", "xóa file rác".
+
+Key patterns:
+- Audit before delete: `du -sh ~/.hermes/` → identify biggest dirs
+- Safe to delete: `config.yaml.bak.*`, `checkpoints/legacy-*`, `disk-cleanup/*.log`
+- NEVER delete: `state.db`, `memory_store.db`, `.hermes_history`, recent `.json` sessions
+- `find -newer` on macOS requires a timestamp file, not a date string
+
+### hermes-upgrade-verify
+**Full content:** `references/hermes-cluster/hermes-upgrade-verify/SKILL.md`
+
+Post-upgrade verification for Hermes v0.15+. Run inside `.venv` (Python 3.10+ required). Trigger: "có gì mới", "check update", "đã update chưa", post-upgrade QA.
+
+Feature check list (12 items):
+1. Python version 3.10+
+2. `run_agent.py` refactor (< 5000 lines, ~65 agent/ subdirs)
+3. Transport layer imports (Anthropic, Bedrock, ChatCompletions, Codex)
+4. `session_search` returns JSON string (NOT dict — must `json.loads()`)
+5. Kanban boards + swarm command
+6. MCP catalog (Linear, n8n, MiniMax, Exa)
+7. Promptware defense (`scan_for_threats`)
+8. Bitwarden secrets manager
+9. ntfy platform (23rd messaging platform)
+10. Skill bundles (`hermes bundles list`)
+11. Kanban swarm graph
+12. Image gen providers (fal/, krea/)
+
+Known issues: websockets module missing (browser dialog only), run_agent.py not yet at 76% reduction target.
+
+**Critical fix:** pip install for Hermes venv → use `uv pip install --python ~/.hermes/hermes-agent/.venv/bin/python <package>`
+
+**Dashboard on Tailscale:** `hermes dashboard --skip-build --host <tailscale-ip> --port 9119 --insecure --no-open`
+
 ## Related
 
 - `hermes-agent` — for gateway and agent configuration

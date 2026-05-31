@@ -590,7 +590,8 @@ cronjob create --skills [] --prompt "MY CUSTOM PROMPT"
 ```bash
 cronjob list | grep {job_id}  # Check Skills: should be [] for custom prompts
 - `references/hermes-agent-memory-research-may-2026.md` — **Hermes v0.14 memory research** (May 21): Issue #22357 FIXED, Issue #25833 OPEN, Trajectory Memory
-- `references/hermes-upgrade-v0.15-may-2026.md` — **Hermes v0.15.2 Velocity Release upgrade** (May 30): upgrade from v0.14.0, dramatically faster, CVE patched
+- `references/hermes-v0.15-velocity-may-2026.md` — **Hermes v0.15.0/v0.15.2 Velocity Release** (May 31): 158K stars, Brainworm prompt-injection defense, Bitwarden secrets, Skill Bundles, TUI Session Orchestrator, 4,500x faster sessions, 747 PRs
+- `references/hermes-upgrade-v0.15-may-2026.md` — Hermes v0.15.2 upgrade reference (older, superseded by above)
 - `references/multi-agent-coordination-may-2026.md` — **Multi-Agent Coordination patterns** (May 25): Team of Rivals, Hyperagents, Hermes subagent delegation, production lessons (80.9% gains)
 - `references/x-research-hermes-2026-05-29.md` — **Hermes X research** (May 29): 157.2K stars, CEO pattern (Hermes + OpenClaw orchestration), real cron setups, v0.14 features, container workaround
 

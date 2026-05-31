@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-31T06:00:01.166151",
+  "timestamp": "2026-06-01T02:00:01.426096",
   "wiki_tasks": {
     "project_tasks": [],
     "wiki_improvements": [],
@@ -16,13 +16,13 @@
   ],
   "autonomous_tasks": [
     {
-      "text": "Refresh priority gaps analysis (stale 12 days)",
+      "text": "Refresh priority gaps analysis (stale 13 days)",
       "source": "autonomous",
       "priority": 60,
       "type": "autonomous"
     },
     {
-      "text": "Run self-evolution analysis (stale 12 days)",
+      "text": "Run self-evolution analysis (stale 13 days)",
       "source": "autonomous",
       "priority": 55,
       "type": "autonomous"
@@ -36,13 +36,13 @@
       "type": "system"
     },
     {
-      "text": "Refresh priority gaps analysis (stale 12 days)",
+      "text": "Refresh priority gaps analysis (stale 13 days)",
       "source": "autonomous",
       "priority": 60,
       "type": "autonomous"
     },
     {
-      "text": "Run self-evolution analysis (stale 12 days)",
+      "text": "Run self-evolution analysis (stale 13 days)",
       "source": "autonomous",
       "priority": 55,
       "type": "autonomous"
@@ -56,13 +56,13 @@
       "type": "system"
     },
     {
-      "text": "Refresh priority gaps analysis (stale 12 days)",
+      "text": "Refresh priority gaps analysis (stale 13 days)",
       "source": "autonomous",
       "priority": 60,
       "type": "autonomous"
     },
     {
-      "text": "Run self-evolution analysis (stale 12 days)",
+      "text": "Run self-evolution analysis (stale 13 days)",
       "source": "autonomous",
       "priority": 55,
       "type": "autonomous"
