@@ -1,7 +1,28 @@
 # Hermes Autoresearch Knowledge
 
 ## Current Focus (2026-06-01)
-Tonight's focus: **Skill Creation + Self-Improvement research — SkillsInjector + GRASP (May 29 fresh)**
+Tonight's focus: **Self-Debugging — session recording false alarm, found 3 new arXiv papers**
+
+### System Status (02:00)
+- Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
+- Skills: 238 skills healthy, SHS = 0
+- Workers: ⚠️ PERMANENTLY DELETED May 25 — web search fallback only
+- Gen Z slang: No new terms found (web search confirms May 2026 terms still active)
+- **⚠️ FALSE ALARM:** Session recording is WORKING — 545 sessions in state.db, cron jobs running correctly. knowledge.md had stale information about broken session recording.
+
+### Tonight's Research: Self-Debugging (June 1, 2026)
+
+**3 new arXiv papers found:**
+
+1. **SelfHeal** (arXiv:2604.17699) — Dual-agent system: Fix Agent + Critic Agent with Gemini 3 Pro. First empirical study on bug fix patterns in LLM agents. AgentDefect benchmark (37 buggy instances).
+
+2. **ErrorProbe** (arXiv:2604.17658) — 3-stage pipeline: MAS Failure Taxonomy → Backward Tracing → Multi-Agent Team (Strategist/Investigator/Arbiter). Verified episodic memory prevents error pattern corruption.
+
+3. **AutoResearchClaw** (arXiv:2605.20025) — 5-mechanism framework: Multi-agent debate, Self-healing executor (Pivot/Refine), Verifiable reporting, HITL, Cross-run evolution. +54.7% vs AI Scientist v2.
+
+**Key insight:** Self-debugging paradigm shifted — from external oracle to internal multi-agent debate, failure as information source, verified memory for cross-run learning.
+
+Total self-improvement techniques documented: **28** (was 25)
 
 ### System Status (02:00)
 - Wiki: ✅ 0 issues (105 files checked)
