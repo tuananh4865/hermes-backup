@@ -230,12 +230,12 @@
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
     "last_patched_at": "2026-05-31T19:06:49.144026+00:00",
-    "last_used_at": "2026-05-31T19:05:36.182923+00:00",
+    "last_used_at": "2026-06-01T00:00:56.168604+00:00",
     "last_viewed_at": "2026-05-31T19:05:36.181492+00:00",
     "patch_count": 247,
     "pinned": false,
     "state": "active",
-    "use_count": 246,
+    "use_count": 247,
     "view_count": 198
   },
   "hermes-external-skills-setup": {
