@@ -434,7 +434,31 @@ When posting/reposting to X, Anh prefers:
 - When Anh says "rút ngắn" → cut immediately, no explanation
 - Vietnamese casual tone: "anh" + "mấy con vợ"
 
-When `xurl` API is unavailable or unconfigured, use browser-based automation.
+### ⚠️ Browser Fallback — macOS Keychain Blocks Cookie Extraction
+
+When `xurl` API is unavailable, browser-based automation is possible but:
+
+1. **On macOS: cookie extraction is IMPOSSIBLE** — Chrome Keychain blocks all tools.
+   Even `browser-harness CDP`, `computer_use`, and Playwright return empty cookies.
+
+2. **The ONLY reliable macOS path is xurl OAuth** — see `references/browser-workflow.md`
+   Option A for setup instructions.
+
+3. **If xurl is not configured yet:**
+   - User must setup OAuth manually (see One-Time User Setup section above)
+   - OR use manual cookie export (tedious, session-based, expires)
+
+**Quick diagnostic:**
+```bash
+# Check if xurl is ready
+xurl auth status 2>&1
+
+# Check if Chrome is logged in (works)
+osascript -e 'tell application "Google Chrome" to get URL of active tab of front window' 2>/dev/null
+```
+
+**If xurl auth is missing AND user can't setup OAuth right now:**
+→ Ask if user wants to proceed with manual cookie export OR wait for xurl setup.
 
 ### Cookie Export (required first step)
 ```bash
@@ -499,9 +523,23 @@ page.wait_for_function("""
 ### Video Upload via Playwright (⚠️ blocked for video — use xurl instead)
 X.com bot detection sets `aria-disabled="true"` on Playwright for video posts. For video, use `xurl media upload` + `xurl post --media-id`.
 
-### X Credentials
+### Chrome Cookie Extraction on macOS — CRITICAL LIMITATION
+
+**On macOS, Chrome's auth cookies (including X auth_token) are encrypted via the macOS Keychain.**
+Remote debugging (CDP) cannot access Keychain-encrypted cookies — even when Chrome is launched with the same user profile and `--remote-debugging-port`.
+
+**What this means:**
+- `Network.getCookies` / `Network.getAllCookies` via CDP → returns GUEST cookies only (no auth_token)
+- `browser-harness` → same limitation on macOS
+- `computer_use` → controls macOS UI only, cannot read Chrome Keychain
+- Manual cookie export from DevTools → the ONLY manual workaround
+
+**If you need X authentication for automation, use xurl OAuth (see below).**
+
+## X Credentials — macOS Keychain Limitation
 - Account: @TyayUno (Anh Trinh's X account)
-- Cookies: `/tmp/x_cookies.json` (export via browser-harness CDP)
+- ⚠️ Cookie file `/tmp/x_cookies.json` CANNOT be auto-generated on macOS — Chrome Keychain blocks all cookie extraction tools. Use **xurl OAuth** instead (see Option A in `references/browser-workflow.md`).
+- **For automation: setup xurl OAuth** — this is the only reliable path on macOS.
 
 ## Related
 - [[tiktok-viral-script]] — TikTok content creation

@@ -1,7 +1,41 @@
 # Hermes Autoresearch Knowledge
 
-## Current Focus (2026-06-01)
-Tonight's focus: **Self-Debugging — session recording false alarm, found 3 new arXiv papers**
+## Current Focus (2026-06-02)
+Tonight's focus: **Knowledge Acquisition — Gen Z slang + AI agent research**
+
+### System Status (02:00)
+- Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
+- Skills: 241 skills healthy, SHS = 0
+- Workers: ⚠️ PERMANENTLY DELETED May 25 — web search fallback only
+- Gen Z slang: No new terms found (web search finds only already-documented terms from May 2026)
+- Session recording: ✅ WORKING — 545 sessions in state.db (June 1 confirmed false alarm)
+
+### Tonight's Research: AI Agent Self-Improvement
+
+**No new Hermes release found** — v0.15.2 (May 29) is still latest. No v0.16 or v0.15.3 announced yet.
+
+**Gen Z Slang Findings:**
+- Web search finds only already-documented terms (Đỉnh, Toang, Gato, lọ, Xịn sò, Kèo, Quẩy, etc.)
+- No genuinely new viral terms from June 2026
+- Current slang list (updated May 27) remains accurate
+- Workers deleted May 25 — cannot get fresh worker output
+
+**arXiv Self-Improvement Papers Reviewed:**
+- SIA (arXiv:2605.27276) — Dual-mode (harness + weight updates) — already documented May 31
+- SelfHeal, ErrorProbe, AutoResearchClaw — documented June 1
+- SkillsInjector + GRASP — documented June 1
+- Self-Evolving Agents Survey (arXiv:2507.21046) — H. Gao, 32 citations, comprehensive taxonomy
+
+**Total self-improvement techniques documented: 28**
+
+## Previous Focus (2026-06-01)
+Tonight's focus was: **Self-Debugging — session recording false alarm, found 3 new arXiv papers**
+
+### Key Finding: Session Recording FALSE ALARM
+- June 1 claimed "session recording broken since May 28"
+- **ACTUALLY WORKING** — 545 sessions in state.db
+- Root cause: stale monitoring output, not actual data loss
+- Fixed knowledge.md with correct information
 
 ### System Status (02:00)
 - Wiki: ✅ 0 issues (wiki_lint --fast PASSED)

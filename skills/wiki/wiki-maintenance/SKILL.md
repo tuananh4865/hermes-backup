@@ -186,3 +186,33 @@ After cleanup:
 3. **Forgetting to update log.md:** Cleanup without logging is untrackable
 4. **Obsidian plugin still syncing during cleanup:** May create conflicting auto-commits
 5. **Wiki forget deletes directories with errors:** Use `shutil.rmtree()` via Python for directories that fail with `Operation not permitted`
+
+## Session Recording Health Check (Add to Maintenance Workflow)
+
+**⚠️ Pattern detected (May 28-31, 2026):** Cron jobs execute normally but session recording breaks — sessions.db becomes 0 bytes, no new session files created.
+
+**Symptoms:**
+- `~/.hermes/sessions/sessions.db` is 0 bytes or empty
+- `~/.hermes/sessions/session_*.json` files stop being created after a certain date
+- Cron output files still being produced (cron jobs are running)
+- User sessions not tracked in wiki log
+
+**Check command:**
+```bash
+# Session recording health check
+ls -la ~/.hermes/sessions/sessions.db
+ls -t ~/.hermes/sessions/session_*.json 2>/dev/null | head -5
+
+# If sessions.db is 0 bytes OR no session files from last 48h → recording broken
+```
+
+**If broken, document in daily review:**
+```
+### ⚠️ CRITICAL: Session Recording Broken
+- **Last session logged:** [date]
+- **Missing:** [missing dates]
+- **sessions.db:** [size]
+- **Root cause:** Unknown
+```
+
+**Note:** This is a Hermes Agent internal issue, not a wiki content issue. Document in daily review for user awareness. Resolution requires investigation of Hermes session service.

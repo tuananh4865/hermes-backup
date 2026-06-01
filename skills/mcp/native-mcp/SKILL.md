@@ -239,6 +239,29 @@ pip install --upgrade mcp
 - Look at Hermes Agent startup logs for connection messages
 - Tool names are prefixed with `mcp_{server}_{tool}` -- look for that pattern
 
+### KNOWN BUG (Hermes v0.15.x): HTTP Transport Test Passes But Tool Calls Fail
+
+**Symptom**: `hermes mcp test <server>` shows ✅ Connected and discovers tools, but actual tool calls fail with `"MCP server 'X' is not connected"`.
+
+**Affected**: HTTP/StreamableHTTP transport MCP servers (e.g., Exa at `https://mcp.exa.ai/mcp`)
+
+**Root Cause**: Hermes v0.15.x has a transport mismatch. The test command (`hermes mcp test`) uses HTTP GET to verify connectivity, but actual tool calls use JSON-RPC over HTTP POST. For HTTP-based servers like Exa, the test succeeds but tool calls fail because the JSON-RPC protocol isn't properly bridged.
+
+**Diagnosis Steps**:
+```bash
+# Test shows connected
+hermes mcp test exa
+# Output: ✓ Connected, ✓ Tools discovered: 3
+
+# But tool calls fail
+mcp_exa_web_search_exa(query="test")
+# Error: MCP server 'exa' is not connected
+```
+
+**Workaround**: Use stdio-based MCP servers when possible. For HTTP servers, no workaround is currently available for tool calls in Hermes v0.15.x.
+
+**Issue Tracking**: https://github.com/NousResearch/hermes-agent/issues/36264
+
 ### Connection keeps dropping
 
 The client retries up to 5 times with exponential backoff (1s, 2s, 4s, 8s, 16s, capped at 60s). If the server is fundamentally unreachable, it gives up after 5 attempts. Check the server process and network connectivity.

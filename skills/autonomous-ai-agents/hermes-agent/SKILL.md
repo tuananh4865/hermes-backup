@@ -1056,9 +1056,10 @@ See `references/multi-agent-setup.md` for detailed guide on creating agentic com
 ## Related
 
 - `references/memory-architecture.md` — full memory stack breakdown
-- `references/memory-provider-architecture-gaps.md` — 3 critical gaps in memory system
+| `references/mcp-exa-not-connected-fix.md` | MCP server "not connected" after config change — root cause + fix sequence |
 - `references/memory-cleanup-session-2026-05-21.md` — USER.md corruption pattern and cleanup (May 2026)
 - `references/memory-health-check.md` — health check commands, metrics, cleanup procedure
+- `references/harness-engineering-2026.md` — harness engineering concepts, 5 pillars, Hermes as a harness engine
 **⚠️ CRITICAL WikiMemoryProvider bug (2026-05-06)**: `_auto_extract_to_memory()` used `from tools.memory_tool import` which FAILs from plugin context. Fix documented in `references/wikimemoryprovider-bugfix-2026-05-06.md`. Also: `on_pre_compress()` only wrote checkpoint files — didn't extract to MEMORY.md. Both fixed with direct file I/O.
 
 **⚠️ CRITICAL WikiMemoryProvider USER.md corruption (2026-05-21)**: ENTITY_PATTERNS match tool/model/preference fragments in conversation buffer → extract garbage facts → write to USER.md. 5 rapid writes in 8ms during context compression. Root cause and fix documented in `references/wikimemoryprovider-user-corruption-2026-05-21.md`.

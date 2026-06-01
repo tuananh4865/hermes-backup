@@ -1,0 +1,42 @@
+§ [PREFERENCES] — explicit preferences discovered over sessions
+- communication: Vietnamese casual
+- response_style: concise, no fluff
+- tiktok_script_style: "anh" + "mấy con vợ"
+§ [PROJECTS] — ongoing work
+- tiktok-content: active
+- hermes-agent: memory-optimizing
+§ [FACTS] — durable facts about user, environment, tools
+- [preference] dùng M2.7 phải
+- [preference] hỗ trợ Anthropic-compatible endpoint** — chỉ có M2.1, M2.1-lightning, M2 mới dùng được endpoint đó.
+- 2026-05-29: tìm hiểu cho anh droid cli
+- [file] `top-youtube-channels-final-synthesis.md`
+- 2026-05-29: work kanban task t_0f7cfa72
+- [file] không
+- [file] md
+- [preference] em xử lý thế nào?
+- [preference] save.
+- [preference] tồn tại
+- 2026-05-29: work kanban task t_3a73b0af
+- 2026-05-30: Có cách nào để anh trò chuyện bằng âm thanh với em liên tục được không nhỉ?
+- [preference] nhỉ?
+- [preference] em test thử voice mode trên Telegram xem sao không? [HIGH]
+- [preference] phải real-time continuous. [HIGH]
+- [preference] phải continuous conversation. [HIGH]
+- [preference] có WebRTC hoặc real-time streaming audio integration [HIGH]
+- [preference] debug được tốt như text. [HIGH]
+- 2026-05-30: Có cách nào để anh trò chuyện bằng âm thanh với em liên tục được không nhỉ?
+- 2026-05-30:
+- 2026-05-30:
+- 2026-05-30:
+- 2026-05-30:
+- 2026-05-30: [System note: Your previous turn in this session was interrupted by a gateway restart. The conversat
+- [tool] result [HIGH]
+- [preference] test thử không? [HIGH]
+- [preference] nhé! [HIGH]
+- [preference] phải continuous. Anh muốn test thử không? [HIGH]
+- 2026-05-30: [System note: Your previous turn in this session was interrupted by a gateway restart. The conversat
+- 2026-06-01:
+§ [SESSIONS] — session history summaries
+- 2026-06-01: 
+§ [ENTITY_INDEX] — cross-session entity tracking
+§ [GROWTH_LOG] — how user/agent improved

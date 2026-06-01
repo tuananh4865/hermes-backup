@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01T06:58:55.889563",
+  "updated_at": "2026-06-02T01:55:20.566313",
   "platforms": {
     "telegram": [
       {
@@ -67,6 +67,12 @@
         "name": "Tuấn Anh / topic 118389",
         "type": "dm",
         "thread_id": "118389"
+      },
+      {
+        "id": "-1003764041476:1324",
+        "name": "O-Lab / topic 1324",
+        "type": "group",
+        "thread_id": "1324"
       }
     ],
     "discord": [],

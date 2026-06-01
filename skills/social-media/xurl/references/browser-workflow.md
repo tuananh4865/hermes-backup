@@ -1,84 +1,162 @@
-# X Browser Workflow (when xurl CLI unavailable)
+# Browser Workflow — X.com Automation on macOS
 
-Use browser when:
-- `xurl` not installed, OR
-- No credentials in `~/.xurl`, OR
-- User wants visual confirmation before posting
+> **⚠️ CRITICAL (2026-06-01): macOS Keychain blocks ALL cookie extraction.**
+> Do NOT attempt cookie-based approaches on macOS. Read this entire file before
+> deciding on an approach.
 
-## Workflow
+## The macOS Keychain Problem
 
-### 1. Check prerequisites first
+Chrome on macOS stores cookies encrypted in the macOS Keychain. No automation
+tool can extract them — not browser-harness, computer_use, Playwright, CDP,
+osascript, or anything else. The Keychain is a system security boundary.
+
+**Diagnosis:**
 ```bash
-# Check if xurl CLI exists
-xurl --help 2>&1 | head -3
+# This works → Chrome is logged in
+osascript -e 'tell application "Google Chrome" to get URL of active tab of front window'
+# → https://x.com/home ✅
 
-# Check auth status
-xurl auth status 2>&1
-
-# Check for X credentials in .env
-grep -i "X_|TWITTER_|SOCIAL_" ~/.hermes/.env
+# But this returns empty → Keychain blocks cookie access
+browser-harness -c 'cdp("Network.getCookies", urls=["https://x.com"])'
+# → []  ❌
 ```
 
-### 2. If CLI unavailable → use computer_use (BEST)
+When step 1 = logged in but step 2 = empty → **Keychain problem, not login state.**
+Switch immediately to xurl OAuth. Do not waste time trying other cookie methods.
 
-**Use `computer_use` to control user's real Chrome directly.** This is the preferred method because:
-- User's Chrome is already logged into X
-- No cookie export needed
-- No session migration needed
-- Works with macOS Keychain-protected sessions
+## Decision Tree
+
+```
+Task: Automate X posting
+│
+├─ xurl CLI OAuth setup available?
+│   → YES: Use xurl (Option A below) — RECOMMENDED
+│
+├─ Can use computer_use to drive Chrome UI?
+│   → YES for clicks/types, NO for auth (no cookies)
+│   → Only useful if user is ALREADY logged in AND has session
+│
+└─ Neither available?
+    → Manual cookie export (Option B) — tedious, session-based
+    → Or wait for xurl OAuth setup
+```
+
+## Option A: xurl OAuth (RECOMMENDED)
+
+This is the ONLY reliable method on macOS. It uses X's official API via OAuth 2.0
+PKCE — no cookies needed.
+
+### One-time setup (user does outside agent):
+
+1. Go to https://developer.x.com/en/portal/dashboard
+2. Create app, get Client ID + Client Secret
+3. Run in terminal:
+   ```bash
+   xurl auth apps add my-app --client-id YOUR_ID --client-secret YOUR_SECRET
+   xurl auth oauth2 --app my-app YOUR_USERNAME
+   xurl auth default my-app
+   xurl whoami
+   ```
+
+### Agent verification:
+```bash
+xurl auth status
+xurl whoami
+```
+
+### Post a tweet:
+```bash
+xurl post "Nội dung bài đăng"
+```
+
+## Option B: Manual Cookie Export (NOT RECOMMENDED — session-based)
+
+Only use this if xurl OAuth is not available and the user needs immediate access.
+
+### Step 1: User exports cookies from Chrome
+1. Open x.com in Chrome (logged in)
+2. DevTools (F12) → Application → Cookies → x.com
+3. Copy all cookie name/value pairs
+
+### Step 2: User gives cookies to agent
+User pastes cookie data in chat.
+
+### Step 3: Agent uses Playwright with manual cookies
+```python
+from playwright.sync_api import sync_playwright
+import json
+
+# User-provided cookies (must be in playwright format)
+cookies = [
+    {"name": "auth_token", "value": "xxx", "domain": ".x.com", "path": "/"},
+    # ... more cookies from manual export
+]
+
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=False)
+    ctx = browser.new_context()
+    ctx.add_cookies(cookies)
+    page = ctx.new_page()
+    page.goto("https://x.com")
+    # Now can post/repost/etc.
+```
+
+**Problem:** Cookies expire. User must re-export periodically. xurl OAuth is permanent.
+
+## Option C: computer_use UI Interaction (NOT for auth)
+
+Use `computer_use + osascript` to drive Chrome's rendered UI. This WORKS for:
+- Clicking elements
+- Typing text
+- Scrolling
+- Taking screenshots
+
+This does NOT work for:
+- Reading Keychain-protected cookies
+- Authenticating as the user
+- Any action requiring the user's auth token
 
 ```bash
-# Capture current Chrome state
-computer_use(action="capture", app="Google Chrome")
+# Verify Chrome session state
+osascript -e 'tell application "Google Chrome" to get URL of active tab of front window'
 
-# Navigate to X compose
-computer_use(action="type", text="Your post text here")
-# Use element index clicking for Post button
+# Navigate Chrome to a URL
+osascript -e 'tell application "Google Chrome" to set URL of active tab of front window to "https://x.com"'
+
+# Capture Chrome window
+computer_use(action="capture", app="Google Chrome", mode="som")
 ```
 
-### 3. Alt: browser-harness with remote-debugging Chrome
+## Quick Test — Always Run This First
 
-If `computer_use` is unavailable:
+Before attempting any cookie-based approach on macOS, always verify:
 
-1. User quits their Chrome
-2. User opens Chrome with: `open -a "Google Chrome" --args --remote-debugging-port=9222`
-3. browser-harness can now attach to user's profile (now at localhost:9222)
-4. browser-harness will have access to the logged-in session
+```bash
+# Confirm Chrome is logged in
+CHROME_URL=$(osascript -e 'tell application "Google Chrome" to get URL of active tab of front window' 2>/dev/null)
+echo "Chrome URL: $CHROME_URL"
 
-### 4. xurl OAuth (MOST RELIABLE when configured)
-
-**xurl with OAuth is the most reliable long-term solution** but requires:
-1. X Developer account
-2. App registration at https://developer.x.com
-3. User completes OAuth flow once manually
-
-See xurl skill setup instructions.
-
----
-
-## ⚠️ Cookie Export + Playwright — DO NOT USE (2026-05-21)
-
-Chrome's X session tokens are stored in EncryptedValue (macOS Keychain-protected), not plain cookies. Exporting cookies via CDP or browser-harness only gets the cookie container, NOT the decryption key needed to restore the session.
-
-**Symptom:** Cookies export successfully, Playwright imports them, but X still shows "Join today" (not logged in).
-
-**This is why browser-harness automation fails for X even when Chrome is logged in.**
-
----
-
-## X Anti-Bot Detection (2026-05-21)
-
-X.com's React app marks action buttons (Post, Repost, Like) as `aria-disabled="true"` at the DOM layer, even when they appear visually enabled. Screenshot verification is insufficient.
-
-**Check before clicking:**
-```javascript
-document.querySelector('[data-testid="tweetButtonInline"]')?.getAttribute('aria-disabled')
-// Returns "true" = blocked by anti-bot
-// Returns null = button is functional
+if [[ "$CHROME_URL" == *"x.com"* ]] || [[ "$CHROME_URL" == *"twitter.com"* ]]; then
+    echo "✅ Chrome is logged into X"
+    echo "❌ But cookie extraction is blocked by macOS Keychain"
+    echo "→ Use xurl OAuth instead"
+else
+    echo "⚠️ Chrome is not logged into X"
+fi
 ```
 
-## Sign of missing setup
-If browser shows "Join today" landing page → not logged in → need credentials or OAuth setup.
+## Historical Test Results (2026-06-01)
 
-## Key refs (dynamic)
-Browser snapshot refs change on every page load — always call `browser_snapshot` after `browser_navigate` before clicking.
+| Tool | Chrome Session | Cookie Access | X Auth |
+|------|---------------|---------------|--------|
+| osascript | ✅ Logged in | ❌ Blocked by Keychain | ❌ (read-only) |
+| browser-harness CDP | ✅ Logged in | ❌ Empty (Keychain) | ❌ |
+| computer_use | ✅ Logged in | ❌ UI only | ❌ (no auth) |
+| xurl OAuth | N/A | N/A | ✅ (if setup) |
+| Manual cookie export | N/A | ✅ (if user provides) | ⚠️ (session-based) |
+
+## Key Takeaway
+
+**On macOS: xurl OAuth is the ONLY reliable automation path.**
+All cookie-extraction tools are blocked by Keychain. Don't try browser-harness
+CDP, Playwright, or any other cookie method on macOS — go straight to xurl.

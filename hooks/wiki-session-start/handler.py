@@ -56,6 +56,34 @@ def _read_wiki_files() -> str:
     return "\n\n".join(parts)
 
 
+def _read_recent_session_context() -> str:
+    """Read the recent session context file (created by session-resume-injector hook).
+    
+    This file contains:
+    - Recent session summary
+    - Last 5 messages from previous session
+    - Task state from memories/
+    - Recent decisions from memories/
+    """
+    # Check multiple possible locations for the recent session context
+    possible_paths = [
+        Path.home() / ".hermes" / ".recent_session_context.txt",
+        Path.home() / ".hermes" / ".wiki_session_context.txt",
+    ]
+    
+    for context_file in possible_paths:
+        if context_file.exists():
+            try:
+                content = context_file.read_text(encoding="utf-8").strip()
+                if content:
+                    logger.info(f"[wiki-session-start] Loaded recent session context from {context_file.name} ({len(content)} chars)")
+                    return content
+            except Exception as e:
+                logger.warning(f"[wiki-session-start] Failed to read {context_file}: {e}")
+    
+    return ""
+
+
 def _read_memory_files() -> str:
     """Read TASK_STATE.md and DECISION_LOG.md from memories/ directory."""
     parts = []
@@ -108,16 +136,20 @@ def handle(event_type: str, context: dict) -> None:
         # Append memory files (task state, decision log)
         memory_content = _read_memory_files()
         
-        # Combine
-        if wiki_content and memory_content:
-            combined_content = wiki_content + "\n\n" + memory_content
-        elif wiki_content:
-            combined_content = wiki_content
-        elif memory_content:
-            combined_content = memory_content
-        else:
-            combined_content = ""
-            
+        # Append recent session context (from session-resume-injector hook)
+        recent_context = _read_recent_session_context()
+        
+        # Combine all parts
+        parts_to_combine = []
+        if wiki_content:
+            parts_to_combine.append(wiki_content)
+        if memory_content:
+            parts_to_combine.append(memory_content)
+        if recent_context:
+            parts_to_combine.append(recent_context)
+        
+        combined_content = "\n\n".join(parts_to_combine) if parts_to_combine else ""
+        
         if combined_content:
             CONTEXT_FILE.parent.mkdir(parents=True, exist_ok=True)
             CONTEXT_FILE.write_text(combined_content, encoding="utf-8")

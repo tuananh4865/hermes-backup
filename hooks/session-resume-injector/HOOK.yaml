@@ -1,0 +1,6 @@
+name: session-resume-injector
+description: On context overflow/reset, inject recent session summary and last 5 messages into system prompt
+events:
+  - session:start
+  - session:reset
+version: "1.0"

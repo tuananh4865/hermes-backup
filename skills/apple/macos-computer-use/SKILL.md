@@ -330,3 +330,8 @@ it sends the key to the frontmost Chrome window directly.
 not real pixel positions. The SOM screenshot overlay provides the actual
 click targets. For X, use the screenshot to find the post, then click by
 coordinate or by navigating to the visible element.
+
+**⚠️ Keychain cookies — cookie extraction is impossible on macOS.**
+See `references/debug-computer-use-x.md` for the full diagnosis and
+decision tree: Chrome Keychain → xurl OAuth is the only viable path for
+X/Twitter automation on macOS.

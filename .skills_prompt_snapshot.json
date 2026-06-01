@@ -1,6 +1,10 @@
 {
   "version": 1,
   "manifest": {
+    "agent-reach/agent_reach/skill/SKILL.md": [
+      1780285467753214129,
+      3486
+    ],
     "ai-agent/ai-agent-business/SKILL.md": [
       1778471609740603768,
       8963
@@ -26,8 +30,8 @@
       2442
     ],
     "apple/macos-computer-use/SKILL.md": [
-      1778746627612069286,
-      12783
+      1780285587800066041,
+      13031
     ],
     "autonomous-ai-agents/agentic-company-setup/SKILL.md": [
       1778471609741039186,
@@ -42,8 +46,8 @@
       4557
     ],
     "autonomous-ai-agents/hermes-agent/SKILL.md": [
-      1780069985979409634,
-      55455
+      1780273721215666707,
+      55606
     ],
     "autonomous-ai-agents/kanban-codex-lane/SKILL.md": [
       1779937796536629095,
@@ -302,8 +306,8 @@
       13565
     ],
     "github/github-issues/SKILL.md": [
-      1778471610458115169,
-      9265
+      1780291800817605457,
+      10230
     ],
     "github/github-pr-workflow/SKILL.md": [
       1778471610458193503,
@@ -594,8 +598,8 @@
       719
     ],
     "hermes-autoresearch/SKILL.md": [
-      1780254409141730520,
-      72551
+      1780285340990814753,
+      73939
     ],
     "hermes-github-backup/SKILL.md": [
       1779074829200621506,
@@ -625,6 +629,10 @@
       1780199032120239013,
       22178
     ],
+    "last30days/skills/last30days/SKILL.md": [
+      1780285465085427260,
+      130813
+    ],
     "leisure/find-nearby/SKILL.md": [
       1778471609748467128,
       3088
@@ -634,8 +642,8 @@
       3312
     ],
     "mcp/native-mcp/SKILL.md": [
-      1778471610458473920,
-      12365
+      1780291822563501211,
+      13459
     ],
     "media/gif-search/SKILL.md": [
       1778471610458547129,
@@ -853,6 +861,10 @@
       1778471610460938012,
       20059
     ],
+    "research/agent-reach/SKILL.md": [
+      1780285318225150624,
+      3810
+    ],
     "research/arxiv/SKILL.md": [
       1778471609359951764,
       10085
@@ -860,6 +872,10 @@
     "research/blogwatcher/SKILL.md": [
       1778471610461142388,
       5111
+    ],
+    "research/last30days/SKILL.md": [
+      1780285335848002999,
+      3703
     ],
     "research/llm-wiki/SKILL.md": [
       1778471610461247180,
@@ -872,6 +888,10 @@
     "research/research-paper-writing/SKILL.md": [
       1778471609360905642,
       103375
+    ],
+    "research/social-media-research/SKILL.md": [
+      1780285788700238977,
+      4403
     ],
     "security-and-hardening/SKILL.md": [
       1779165382500942225,
@@ -894,8 +914,8 @@
       27998
     ],
     "social-media/xurl/SKILL.md": [
-      1779642421606319105,
-      18696
+      1780286195960559658,
+      20591
     ],
     "software-development/debugging-hermes-tui-commands/SKILL.md": [
       1778471610461529722,
@@ -990,8 +1010,8 @@
       9124
     ],
     "wiki/wiki-maintenance/SKILL.md": [
-      1779971270880571585,
-      6004
+      1780333428303965470,
+      7139
     ],
     "write-a-skill/SKILL.md": [
       1779165369867898266,
@@ -1123,6 +1143,19 @@
     ]
   },
   "skills": [
+    {
+      "skill_name": "skill",
+      "category": "agent-reach/agent_reach",
+      "frontmatter_name": "agent-reach",
+      "description": "Give your AI agent eyes to see the entire internet. 17 pl...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
     {
       "skill_name": "ai-agent-business",
       "category": "ai-agent",
@@ -3301,6 +3334,19 @@
       }
     },
     {
+      "skill_name": "last30days",
+      "category": "last30days/skills",
+      "frontmatter_name": "last30days",
+      "description": "Research what people actually say about any topic in the ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "find-nearby",
       "category": "leisure",
       "frontmatter_name": "find-nearby",
@@ -4143,6 +4189,19 @@
       }
     },
     {
+      "skill_name": "agent-reach",
+      "category": "research",
+      "frontmatter_name": "agent-reach",
+      "description": "Analyze engagement, reach, and performance metrics on soc...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "arxiv",
       "category": "research",
       "frontmatter_name": "arxiv",
@@ -4169,6 +4228,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "last30days",
+      "category": "research",
+      "frontmatter_name": "last30days",
+      "description": "Research trending topics, viral content, and emerging pat...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -4225,6 +4297,19 @@
           "terminal",
           "files"
         ],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "social-media-research",
+      "category": "research",
+      "frontmatter_name": "social-media-research",
+      "description": "Research topics across YouTube, X/Twitter, Reddit, TikTok...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
         "fallback_for_tools": [],
         "requires_tools": []
       }
