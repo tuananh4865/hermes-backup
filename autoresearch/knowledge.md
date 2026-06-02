@@ -1,32 +1,53 @@
 # Hermes Autoresearch Knowledge
 
-## Current Focus (2026-06-02)
-Tonight's focus: **Knowledge Acquisition — Gen Z slang + AI agent research**
+## Current Focus (2026-06-03)
+Tonight's focus: **Knowledge Acquisition — 3 new arXiv techniques + Hermes research**
 
 ### System Status (02:00)
-- Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
+- Wiki: ✅ 0 issues (241 files checked, wiki_lint --fast PASSED)
 - Skills: 241 skills healthy, SHS = 0
 - Workers: ⚠️ PERMANENTLY DELETED May 25 — web search fallback only
-- Gen Z slang: No new terms found (web search finds only already-documented terms from May 2026)
-- Session recording: ✅ WORKING — 545 sessions in state.db (June 1 confirmed false alarm)
+- Gen Z slang: No new terms found (web search finds only already-documented terms)
+- Session recording: ✅ WORKING — state.db operational
 
-### Tonight's Research: AI Agent Self-Improvement
+### Tonight's Research: AI Agent Self-Improvement (June 3, 2026)
 
-**No new Hermes release found** — v0.15.2 (May 29) is still latest. No v0.16 or v0.15.3 announced yet.
+**3 NEW arXiv techniques found (not previously documented):**
 
-**Gen Z Slang Findings:**
-- Web search finds only already-documented terms (Đỉnh, Toang, Gato, lọ, Xịn sò, Kèo, Quẩy, etc.)
-- No genuinely new viral terms from June 2026
-- Current slang list (updated May 27) remains accurate
-- Workers deleted May 25 — cannot get fresh worker output
+1. **STV — Self-Trained Verification** (arXiv:2605.30290)
+   - Trains verifier to catch self-generated errors using reference solution
+   - At test-time: substantially improves V-R loops, 14× on hard math
+   - At training-time: ViL (verifier-in-loop training) breaks RLVR plateau
+   - Key insight: verification is the bottleneck for self-improvement
 
-**arXiv Self-Improvement Papers Reviewed:**
-- SIA (arXiv:2605.27276) — Dual-mode (harness + weight updates) — already documented May 31
-- SelfHeal, ErrorProbe, AutoResearchClaw — documented June 1
-- SkillsInjector + GRASP — documented June 1
-- Self-Evolving Agents Survey (arXiv:2507.21046) — H. Gao, 32 citations, comprehensive taxonomy
+2. **AgentFactory** (arXiv:2603.18000)
+   - Self-evolving framework via executable subagent accumulation and reuse
+   - 3-phase lifecycle: Install → Self-Evolve → Deploy
+   - Subagents saved as pure Python code (portable across systems)
+   - Key: executable code > textual experience for reliable task re-execution
 
-**Total self-improvement techniques documented: 28**
+3. **Native Evolution / Reward-Free Self-Evolution** (arXiv:2604.18131)
+   - Trains agents to explore + distill structured "World Knowledge" without rewards
+   - Outcome-based reward used ONLY at training time; inference is reward-free
+   - Qwen3-30B + Seed-OSS-36B: +20% on WebVoyager/WebWalker
+   - Qwen3-14B with world knowledge outperforms unassisted Gemini-2.5-Flash
+
+**Total self-improvement techniques documented: 31** (was 28, added STV, AgentFactory, Native Evolution)
+
+### Hermes Research
+- **GitHub stars: 176K** (June 1, 2026) — up from 175K on May 29
+- **Latest release: v0.15.2** (May 29) — still no v0.16 or v0.15.3
+- **v0.15.1 hotfix**: Dashboard 401 reload loop, Docker --insecure opt-in, MCP bare command resolution, skills catalog 858→19,932 entries
+- **v0.15.0 Velocity Release**: 1,302 commits, 747 PRs, Kanban multi-agent platform, 4,500× faster session_search
+- Key features: Skill bundles, Promptware defense (Brainworm), Bitwarden Secrets Manager, ntfy (23rd platform), OpenHands orchestration
+
+### Gen Z Slang Status
+- No new terms found via web search
+- Web search finds only already-documented terms (Đỉnh, Toang, Gato, lọ, etc.)
+- Workers deleted May 25 — cannot sync fresh worker output
+- Current wiki entity slang section (updated May 27) remains accurate
+
+## Previous Focus (2026-06-02)
 
 ## Previous Focus (2026-06-01)
 Tonight's focus was: **Self-Debugging — session recording false alarm, found 3 new arXiv papers**
