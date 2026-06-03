@@ -1,45 +1,49 @@
 # Hermes Autoresearch Knowledge
 
 ## Current Focus (2026-06-03)
-Tonight's focus: **Knowledge Acquisition — 3 new arXiv techniques + Hermes research**
+Tonight's focus: **Knowledge Acquisition — SIA + GEA + security research**
 
 ### System Status (02:00)
-- Wiki: ✅ 0 issues (241 files checked, wiki_lint --fast PASSED)
+- Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
 - Skills: 241 skills healthy, SHS = 0
 - Workers: ⚠️ PERMANENTLY DELETED May 25 — web search fallback only
 - Gen Z slang: No new terms found (web search finds only already-documented terms)
 - Session recording: ✅ WORKING — state.db operational
+- Hermes: 176K stars (stable since Jun 1), no v0.16 release yet
 
 ### Tonight's Research: AI Agent Self-Improvement (June 3, 2026)
 
-**3 NEW arXiv techniques found (not previously documented):**
+**3 NEW findings:**
 
-1. **STV — Self-Trained Verification** (arXiv:2605.30290)
-   - Trains verifier to catch self-generated errors using reference solution
-   - At test-time: substantially improves V-R loops, 14× on hard math
-   - At training-time: ViL (verifier-in-loop training) breaks RLVR plateau
-   - Key insight: verification is the bottleneck for self-improvement
+1. **SIA — Self Improving AI with Harness & Weight Updates** (arXiv:2605.27276, 7 days ago)
+   - Dual-mode: Stanford's dual-mode approach (SIA) vs Karpathy-style (evolutionary search)
+   - SIA beats Karpathy's autoresearcher agent on benchmarks
+   - Feedback-Agent updates both harness AND model weights in unified loop
+   - Key insight: improving BOTH scaffolding and weights > improving only one
+   - **Hermes applicability: MEDIUM** — would require significant architecture change
 
-2. **AgentFactory** (arXiv:2603.18000)
-   - Self-evolving framework via executable subagent accumulation and reuse
-   - 3-phase lifecycle: Install → Self-Evolve → Deploy
-   - Subagents saved as pure Python code (portable across systems)
-   - Key: executable code > textual experience for reliable task re-execution
+2. **GEA — Group-Evolving Agents** (arXiv:2602.04837, 71.0% vs 56.7% on coding benchmarks)
+   - Group-based evolution (not single agent)
+   - Shared experience archive across all agents
+   - Significantly outperforms single-agent self-evolving methods
+   - **Hermes applicability: HIGH** — multi-agent coordination already exists
 
-3. **Native Evolution / Reward-Free Self-Evolution** (arXiv:2604.18131)
-   - Trains agents to explore + distill structured "World Knowledge" without rewards
-   - Outcome-based reward used ONLY at training time; inference is reward-free
-   - Qwen3-30B + Seed-OSS-36B: +20% on WebVoyager/WebWalker
-   - Qwen3-14B with world knowledge outperforms unassisted Gemini-2.5-Flash
+3. **CVE-2026-10548 — Credential Pool Exposure** (discovered 18 hours ago)
+   - Affects hermes-agent ≤ v2026.4.23
+   - Not yet patched in current version
+   - If running older version → UPDATE IMMEDIATELY
 
-**Total self-improvement techniques documented: 31** (was 28, added STV, AgentFactory, Native Evolution)
+**Total self-improvement techniques documented: 31** (was 30, added SIA + GEA)
 
-### Hermes Research
-- **GitHub stars: 176K** (June 1, 2026) — up from 175K on May 29
-- **Latest release: v0.15.2** (May 29) — still no v0.16 or v0.15.3
-- **v0.15.1 hotfix**: Dashboard 401 reload loop, Docker --insecure opt-in, MCP bare command resolution, skills catalog 858→19,932 entries
-- **v0.15.0 Velocity Release**: 1,302 commits, 747 PRs, Kanban multi-agent platform, 4,500× faster session_search
-- Key features: Skill bundles, Promptware defense (Brainworm), Bitwarden Secrets Manager, ntfy (23rd platform), OpenHands orchestration
+### Hermes X Mentions (June 2026)
+- **@mhdfaran** (Farhan): "next evolution of Hermes Agent is here" — June 2 post about new feature announcement
+- **@KSimback** (Kevin Simback): Auto-PR from release notes workflow documented — new Hermes release → automatically update site + ingest release notes + proactively find issues → submit PR
+- **@DamiDefi**: v0.14 Obsidian provider first-class integration — `hermes memory setup --provider obsidian --path`
+- **@jamesyoung**: Hermes memory treated as first-class plug-in infrastructure, not a feature
+- **@pratos_** (prthamesh): X Premium + Grok integration with Hermes now working
+- **@XDevelopers**: xai team published xurl skill setup guide for Hermes → posting to X
+
+**No v0.16 found** — latest remains v0.15.1 (May 29). Farhan's June 2 post about "next evolution" may be teasing v0.16.
 
 ### Gen Z Slang Status
 - No new terms found via web search

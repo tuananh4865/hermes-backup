@@ -4,72 +4,65 @@ SESSION RESUME CONTEXT (Auto-injected after context overflow)
 
 ## RECENT SESSIONS:
 
-### [1] 2026-06-01/10-20-10_telegram_Tuấn-Anh-Vừa-fixx-vừa-resear.md
+### [1] 2026-06-01/10-55-48_telegram_Tuấn-Anh-Anh-nghĩ-là-em-sẽ-t.md
 Topic: Previous session: 
-[Tuấn Anh] Vừa fixx vừa research cho anh đủ 100 round đi
+[Tuấn Anh] Anh nghĩ là em sẽ tự tìm cách được! Em có thể tự thoát chrome và chạ...
+
+Last messages:
+  👤 User: 
+[Tuấn Anh] Anh nghĩ là em sẽ tự tìm cách được! Em có thể tự thoát chrome và chạy lệnh sau đó mở chrome lại và vào X để extract cookie! Chỉ cần là chrome thật thì em có thể extract cookie dược!
+
+
+  🤖 Assistant: 
+Anh ơi, có vấn đề lớn:
+
+**Chrome đang chạy với remote debugging KHÔNG phải là Chrome đang login của anh** — nó là một instance riêng.
+
+Lý do: macOS Keychain mã hóa cookies authentication của X bằng Chrome's Keychain, và chỉ process Chrome gốc mới đọc được. Process Chrome mới (dù cùng profile) không...
+
+### [2] 2026-06-01/10-49-00_telegram_Tuấn-Anh-httpsgithubcom.md
+Topic: Previous session: 
+[Tuấn Anh] https://github.com/mvanhorn/last30days-skill
+
+https://github.com/Pan...
+
+Last messages:
+  👤 User: 
+[Tuấn Anh] https://github.com/mvanhorn/last30days-skill
+
+https://github.com/Panniantong/Agent-Reach
+
+Cài và setup đi
+
+
+  🤖 Assistant: 
+Xong anh!
+
+## Đã cài
+
+### last30days (mvanhorn/last30days-skill)
+- **17+ nền tảng**: Reddit, X, YouTube, TikTok, HN, Polymarket, GitHub, Instagram, Bluesky...
+- **Cách dùng**: `/opt/homebrew/bin/python3.13 ~/.hermes/skills/last30days/skills/last30days/scripts/last30days.py "topic" --emit=compact --...
+
+### [3] 2026-06-01/10-43-55_telegram_Tuấn-Anh-Mac-của-anh-không-l.md
+Topic: Previous session: 
+[Tuấn Anh] Mac của anh không lockscreen
 
 ...
 
 Last messages:
   👤 User: 
-[Tuấn Anh] Vừa fixx vừa research cho anh đủ 100 round đi
+[Tuấn Anh] Mac của anh không lockscreen
 
 
   🤖 Assistant: 
-Anh ơi, em đã hoàn thành **100-round YouTube deep research** rồi! 🔥
-
-## ✅ Tổng hợp Research
-
-### 📊 Key Findings
-
-**Algorithm 2026:**
-- **CTR + AVD = winning formula** (50%+ retention → suggested feeds)
-- Shorts + Long-form = SEPARATE algorithms (không ảnh hưởng nhau)
-- 2026: Satisfaction-weighted d...
-
-### [2] 2026-06-01/10-12-01_telegram_Tuấn-Anh-Có-chứ.md
-Topic: Previous session: 
-[Tuấn Anh] Có chứ
-
-...
-
-Last messages:
-  👤 User: 
-[Tuấn Anh] Có chứ
+Tình hình:
+- ✅ Chrome đang mở với 12 tabs, có x.com đang login
+- ❌ Chrome không có debug port → browser-harness không hoạt động
+- ❌ computer_use chỉ điều khiển macOS UI, không extract được Chrome cookies (cookies bị mã hóa bởi macOS Keychain)
 
 
-  🤖 Assistant: 
-Anh à, em đã check toàn bộ hệ thống rồi. Đây là tình trạng:
-
-## Tìm thấy vấn đề:
-
-**1. Hook `session-resume-injector` ĐANG CÓ ✅**
-- File: `~/.hermes/hooks/session-resume-injector/`
-- Mục đích: Lưu session context sau `session:reset` để session mới có thể resume
-- Events: `session:start`, `session:r...
-
-### [3] 2026-06-01/10-06-54_telegram_Tuấn-Anh-.md
-Topic: Previous session: 
-[Tuấn Anh] 
-
-...
-
-Last messages:
-  👤 User: 
-[Tuấn Anh] 
-
-
-  🤖 Assistant: 
-Anh à, em hiểu vấn đề rồi!
-
-## Hiện tại có gì:
-
-**Hook đang chạy:**
-- `transcript-saver` → lưu transcript sau mỗi `agent:end` ✅
-- `wiki-session-start` → chạy wiki session start mỗi session mới ✅
-
-**Nhưng thiếu:**
-- **Session state** — khi context overflow reset, agent mất hết working state (task đa...
+**Kết luận:** Không có cách nào extract Chrome cookies...
 
 ## CURRENT TASK STATE:
 # Task State — Current Session Progress

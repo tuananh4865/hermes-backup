@@ -466,6 +466,14 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** *Missing or outdated information:**
 
+> **Auto-improvement note:** 3 specific improvements. Let me analyze the content:
+
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** The "Ingest Workflow" section is incomplete - Step 2 is mentioned but not executed. This is a significant gap.
+
 === index.md ===
 ---
 confidence: high
@@ -628,6 +636,7 @@ relationships:
 - [[hermes-agent-capabilities]] — System capabilities
 - [[hermes-self-improvement-activation]] — Self-improvement features
 - [[hermes-x-research-2026-05-16]] — X mentions May 2-16: 150K stars, v0.13 Tenacity, critical bugs (2026-05-16)
+| [[youtube-deep-dive-2026]] | Shorts vs long-form, thumbnail science, AI workflow, competitor analysis, mid-roll optimization, content calendar, branding (2026-06-01) |
 | [[niche-bending-strategy]] | Tim Danilov: Niche = Format + Market, bend viral format to new markets, empty squares = blue ocean (2026-05-30) |
 | [[mrbeast-youtube-advice-2026]] | MrBeast: videos suck normal, quality > quantity, first 5 seconds critical, thumbnail = curiosity, algorithm = audience (2026-05-30) |
 | [[genius-youtube-advice-15-minutes]] | Think Media: 100 videos rule, niche emergence, CTA best practice, curiosity titles, trend surfing, patience (2026-05-30) |
@@ -644,7 +653,7 @@ relationships:
 - [[log]] — Activity log
 - [[start-here]] — Startup instructions for AI agent sessions
 
-|| [[tiktok-shop-research-2026-05-14]] | Summer Cooling NOW window, Neck Fan 64% margin, Gen Z slang update (lọ, ra dại, chả quyên), Coolmate 1,370 KOC model, LIVE 3× conversion (2026-05-14) |
+|| [[last30days-agent-reach-setup]] | last30days + Agent-Reach setup, python3.13 requirement, YouTube/Reddit integration (2026-06-01) |
 || [[tiktok-shop-research-2026-05-13]] | Post-Mother's Day pivot, Nơ Bong Bóng ₫3.38B GMV, Home Supplies breakout, Summer Cooling acceleration, Beauty deep dive, lọ = HOT (2026-05-13) |
 || [[tiktok-shop-research-2026-05-12]] | Commerce-first algorithm, Search dominance 48-65%, Home Supplies breakout, Summer cooling 2-5× conversion, Gen Z slang, LIVE commerce 3× (2026-05-12)
 | [[tiktok-shop-research-2026-05-11]] | Jelly Skin breakout, expertise > looks, algorithm confirmed, 70%+ completion bar (2026-05-10) |
@@ -762,11 +771,11 @@ relationships:
 ## 2026-05-20
 
 ### Autoresearch Nightly
-- Wiki: ✅ clean (0 issues) | Skills: 142 healthy, SHS=0
-- Gen Z: No new slang (workers stale, web search fallback)  
-- AI Research: 5 NEW techniques (ERL, SICA, DGM-H, RetroAgent, GVU Self-Play)
-- Capability: Learning from Failures + Self-Correction
-- Reference: [[self-improving-agents-may-2026]]
+- Wiki: ✅ clean (0 issues) | Skills: 241 healthy, SHS=0
+- Gen Z: No new slang (web search fallback)
+- AI Research: 6 NEW techniques (SE-Agent, Focus, Memory Survey, ETO, Multi-Agent Evolve, Context Curation RL) — 30 total
+- Capability: Memory Optimization + Trajectory Learning
+- Reference: [[self-improving-agents-june-2026]]
 
 > **Auto-improvement note:** *Missing or outdated information:**
 
@@ -820,11 +829,15 @@ relationships:
 
 > **Auto-improvement note:** The content shows dates ranging from 2026-04-13 to 2026-05-29, but the "Last updated" date says 2026-05-07, which appears outdated given the content includes entries from May 28-29, 2026
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page ends abruptly with `[[vibe-coding]] — AI-firs` - this entry is clearly truncated and incomplete
+
+> **Auto-improvement note:** The "Technical Concepts" section is cut off mid-sentence: "vibe-coding — AI-firs" - this appears to be incomplete/truncated
+
+> **Auto-improvement note:** No date or version info for many entries - it's hard to tell if content is current
+
 === log.md (last 20 lines) ===
-
-
-## 2026-05-27 research | Hermes X research May 27: Hermes Desktop, Browserbase integration, Bitwarden, funding update ($65-70M raised), Gen Z slang web fallback
-## 2026-05-28 daily-review | Daily review compiled — 15 sessions (4 cron, 11 internal), wiki clean (0 issues), 10 Gen Z terms synced, 5 AI agent techniques, Hermes Desktop, Nous $1B valuation, workers offline since May 25
 ## [2026-05-28] wiki-rework | Wiki cleaned — removed stale content, kept 14-day active items
 - Raw transcripts: kept May 14-28 only (14 days)
 - Telegram scrapes: removed old timestamp files (10-17 series)  
@@ -836,11 +849,15 @@ relationships:
 ## [2026-05-28] daily-review | Daily review compiled — 6 sessions (4 cron, 2 system), Hermes v0.14.0 upgrade, macos-computer-use skill enabled, Memento-Skills (Tool Creation), 0 new Gen Z terms, workers offline since May 25
 ## [2026-05-28] upgrade | Hermes upgraded to v0.14.0 — pydantic 2.12.5→2.13.4, cua-driver 0.1.9→0.2.0, +3 new skills, conflicts resolved
 
-## [2026-05-30] youtube-deep-research | Deep researched 5 YouTube skill pages: hook formula (18KB), script structure (27KB), title writing (16KB), thumbnail design (23KB), editing basics (26KB) — complete YouTube success formulas for Tuấn Anh
+## [2026-06-01] youtube-deep-dive | Deep YouTube Round 2: Shorts algorithm (5.91% engagement), thumbnail science (face +20-30% CTR), AI workflow ($30-80/mo stack), competitor analysis 8-dimension framework, mid-roll optimization (hybrid = +5% revenue), batch production, channel branding, session time optimization
+
+## [2026-06-01] last30days-agent-reach-install | Installed last30days (mvanhorn/last30days-skill) + Agent-Reach (Panniantong/Agent-Reach) from GitHub. last30days requires python3.13+ (not 3.11). Agent-Reach: 6/16 channels working (GitHub, YouTube, Reddit via rdt-cli, V2EX, Web). YouTube transcripts: 5/6 success rate. Wiki: [[last30days-agent-reach-setup]]
 
 ## [2026-05-31] autoresearch-nightly | SIA self-improving agent (arXiv:2605.27276) documented — Stanford dual-mode: harness + weight updates, beats Claude Code on TerminalBench. Total self-improvement techniques: 18. Wiki clean (0 issues).
 
 ## [2026-06-01] youtube-research | 100-round YouTube deep research hoàn thành — Algorithm, Content Strategy, SEO, Growth, Monetization, Vietnam Market, Upload Timing, Engagement, Scaling (2026-06-01)
+
+## [2026-06-02] daily-review | Daily review compiled — Session recording broken since May 28 (sessions.db empty), only Hermes upgrade session on May 28 recorded, cron jobs running normally May 29-31, CVE-2026-9368 discovered (execute_code), Gen Z slang stale (web fallback only)
 
 === learned-about-tuananh.md ===
 ---
@@ -1079,6 +1096,14 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 
 > **Auto-improvement note:** The page mentions "Updated 2026-05-21" for Gen Z slang, but it's currently 2025-12. This is a future date which is odd.
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Who" section is very basic - missing details about when this person became a TikTok creator, their follower count, or notable achievements
+
+> **Auto-improvement note:** 3 specific improvements across three categories:
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
 === TASK_STATE.md (from memories/) ===
 # Task State — Current Session Progress
 
@@ -1130,72 +1155,65 @@ SESSION RESUME CONTEXT (Auto-injected after context overflow)
 
 ## RECENT SESSIONS:
 
-### [1] 2026-06-01/10-20-10_telegram_Tuấn-Anh-Vừa-fixx-vừa-resear.md
+### [1] 2026-06-01/10-55-48_telegram_Tuấn-Anh-Anh-nghĩ-là-em-sẽ-t.md
 Topic: Previous session: 
-[Tuấn Anh] Vừa fixx vừa research cho anh đủ 100 round đi
+[Tuấn Anh] Anh nghĩ là em sẽ tự tìm cách được! Em có thể tự thoát chrome và chạ...
+
+Last messages:
+  👤 User: 
+[Tuấn Anh] Anh nghĩ là em sẽ tự tìm cách được! Em có thể tự thoát chrome và chạy lệnh sau đó mở chrome lại và vào X để extract cookie! Chỉ cần là chrome thật thì em có thể extract cookie dược!
+
+
+  🤖 Assistant: 
+Anh ơi, có vấn đề lớn:
+
+**Chrome đang chạy với remote debugging KHÔNG phải là Chrome đang login của anh** — nó là một instance riêng.
+
+Lý do: macOS Keychain mã hóa cookies authentication của X bằng Chrome's Keychain, và chỉ process Chrome gốc mới đọc được. Process Chrome mới (dù cùng profile) không...
+
+### [2] 2026-06-01/10-49-00_telegram_Tuấn-Anh-httpsgithubcom.md
+Topic: Previous session: 
+[Tuấn Anh] https://github.com/mvanhorn/last30days-skill
+
+https://github.com/Pan...
+
+Last messages:
+  👤 User: 
+[Tuấn Anh] https://github.com/mvanhorn/last30days-skill
+
+https://github.com/Panniantong/Agent-Reach
+
+Cài và setup đi
+
+
+  🤖 Assistant: 
+Xong anh!
+
+## Đã cài
+
+### last30days (mvanhorn/last30days-skill)
+- **17+ nền tảng**: Reddit, X, YouTube, TikTok, HN, Polymarket, GitHub, Instagram, Bluesky...
+- **Cách dùng**: `/opt/homebrew/bin/python3.13 ~/.hermes/skills/last30days/skills/last30days/scripts/last30days.py "topic" --emit=compact --...
+
+### [3] 2026-06-01/10-43-55_telegram_Tuấn-Anh-Mac-của-anh-không-l.md
+Topic: Previous session: 
+[Tuấn Anh] Mac của anh không lockscreen
 
 ...
 
 Last messages:
   👤 User: 
-[Tuấn Anh] Vừa fixx vừa research cho anh đủ 100 round đi
+[Tuấn Anh] Mac của anh không lockscreen
 
 
   🤖 Assistant: 
-Anh ơi, em đã hoàn thành **100-round YouTube deep research** rồi! 🔥
-
-## ✅ Tổng hợp Research
-
-### 📊 Key Findings
-
-**Algorithm 2026:**
-- **CTR + AVD = winning formula** (50%+ retention → suggested feeds)
-- Shorts + Long-form = SEPARATE algorithms (không ảnh hưởng nhau)
-- 2026: Satisfaction-weighted d...
-
-### [2] 2026-06-01/10-12-01_telegram_Tuấn-Anh-Có-chứ.md
-Topic: Previous session: 
-[Tuấn Anh] Có chứ
-
-...
-
-Last messages:
-  👤 User: 
-[Tuấn Anh] Có chứ
+Tình hình:
+- ✅ Chrome đang mở với 12 tabs, có x.com đang login
+- ❌ Chrome không có debug port → browser-harness không hoạt động
+- ❌ computer_use chỉ điều khiển macOS UI, không extract được Chrome cookies (cookies bị mã hóa bởi macOS Keychain)
 
 
-  🤖 Assistant: 
-Anh à, em đã check toàn bộ hệ thống rồi. Đây là tình trạng:
-
-## Tìm thấy vấn đề:
-
-**1. Hook `session-resume-injector` ĐANG CÓ ✅**
-- File: `~/.hermes/hooks/session-resume-injector/`
-- Mục đích: Lưu session context sau `session:reset` để session mới có thể resume
-- Events: `session:start`, `session:r...
-
-### [3] 2026-06-01/10-06-54_telegram_Tuấn-Anh-.md
-Topic: Previous session: 
-[Tuấn Anh] 
-
-...
-
-Last messages:
-  👤 User: 
-[Tuấn Anh] 
-
-
-  🤖 Assistant: 
-Anh à, em hiểu vấn đề rồi!
-
-## Hiện tại có gì:
-
-**Hook đang chạy:**
-- `transcript-saver` → lưu transcript sau mỗi `agent:end` ✅
-- `wiki-session-start` → chạy wiki session start mỗi session mới ✅
-
-**Nhưng thiếu:**
-- **Session state** — khi context overflow reset, agent mất hết working state (task đa...
+**Kết luận:** Không có cách nào extract Chrome cookies...
 
 ## CURRENT TASK STATE:
 # Task State — Current Session Progress

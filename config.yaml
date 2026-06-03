@@ -347,7 +347,7 @@ memory:
   user_profile_enabled: true
 model:
   base_url: https://api.minimax.io/anthropic
-  default: MiniMax-M2.7
+  default: MiniMax-M3
   provider: minimax
 model_catalog:
   enabled: true

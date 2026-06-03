@@ -1,5 +1,3 @@
-Task '[System note: Your previous turn in this session was interrupted by a gateway restart. The conversation history below is intact. If it contains unfini' — session 20260529, 1 turns
-§
 Task 'Nghe được rồi nhưng có vẻ nó đang nói tiếng Anh' — 1 turns
 §
 Task '[Tuấn Anh] Tiếp theo đến phần kịch bản thu hút, làm sao để có một kịch bản thu hút?' — 1 turns
@@ -37,3 +35,5 @@ Modified files: handler.py
 Task '[System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversation history below is intact. If it contains unfin' — session 20260601, 5 turns
 §
 Modified files: handler.py
+§
+Task '[Tuấn Anh] Minimax mới ra mắt model mới, check trang chủ và tìm cách add model đó vào danh sách model cho anh!' — 1 turns
