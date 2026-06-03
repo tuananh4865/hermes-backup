@@ -1010,3 +1010,34 @@ Research focus tonight: **Multi-Agent Coordination** — production patterns + d
 1. **Workers need restart** — Content Creator + Research Agent both dead 6+ days
 2. **Multi-agent orchestration** — Hermes Issue #344 tracking evolution toward true multi-agent
 3. **Next focus** — Self-Correction capability (high impact, foundation for others)
+
+## Tonight's Findings (2026-06-04)
+
+### System Status (02:00)
+- Wiki: ✅ CLEAN — 0 issues (129 files scanned)
+- Skills: ✅ 233 skills healthy, SHS = 0
+- Workers: ⚠️ Workers permanently deleted May 25 — no worker pipeline
+- Session logs: 329 messages from 5 sessions yesterday (Jun 3)
+
+### MiniMax M3 — New Model (June 1, 2026)
+- **SWE-Bench Pro**: 59.0% (outperforms Gemini 3.1 Pro)
+- **Context**: 1M tokens
+- **Cost**: $0.30/M input, $1.20/M output
+- **Architecture**: MiniMax Sparse Attention (MSA)
+- **Already in config**: `default: MiniMax-M3` (confirmed working)
+- Tuấn Anh asked to check — model already configured
+
+### AI Agent Memory Research — 3 New Techniques
+1. **AgeMem (arXiv:2601.01885)** — Unified LTM+STM management in agent policy
+2. **Focus (arXiv:2601.07190)** — Active context compression via slime mold exploration
+3. **MemRL (arXiv:2603.07670v1)** — Self-evolving agents via RL on episodic memory
+
+### Session Log Analysis (June 3)
+- Tuấn Anh asked: "Minimax mới ra mắt model mới, check trang chủ và tìm cách add model đó vào danh sách model cho anh!"
+- MiniMax M3 was already configured as default in Hermes config
+- No blockers or failures
+
+### Recommendations
+1. **MiniMax M3 already configured** — no action needed for model add
+2. **Focus on Self-Debugging** for next autoresearch session (high impact capability)
+3. **Workers remain deleted** — no revival unless Anh requests
