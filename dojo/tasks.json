@@ -1,6 +1,43 @@
 {
   "tasks": [
     {
+      "id": "daily-ingest-20260604",
+      "type": "daily-ingest",
+      "status": "completed",
+      "timestamp": "2026-06-04T06:00:00.973968",
+      "summary": {
+        "drops": [],
+        "watched": [
+          "  Would check: https://arxiv.org/list/cs.AI/recent",
+          "  Would check: https://arxiv.org/list/cs.LG/recent"
+        ],
+        "heal": "============================================================\n============================================================\nFound 562 broken links:\n============================================================\n============================================================\n============================================================\n============================================================\n============================================================\n============================================================\nFound 78 orphan pages (no inbound links):",
+        "stale": [
+          "  Stale (2026-04-11): email",
+          "  Stale (2026-04-12): self-healing-wiki",
+          "  Stale (2026-05-28): 11-22-40_telegram_Anh-mu\u1ed1n-xem-kaban-\u1edf-b\u1ea5t-c\u1ee9-th",
+          "  Stale (2026-05-28): 11-23-08_telegram_Tu\u1ea5n-Anh-C\u00e0i-\u0111\u1eb7t-cron-gi\u00fap-f",
+          "  Stale (2026-04-16): ai-agent-frameworks-2026",
+          "  Stale (2026-05-28): 11-30-08_telegram_Link-blank",
+          "  Stale (2026-05-21): tiktok-captcha-solver",
+          "  Stale (2026-05-28): 19-29-11_telegram_Tu\u1ea5n-Anh-Kh\u00f4ng-ph\u1ea3i-anh-mu\u1ed1n",
+          "  Stale (2026-05-28): 11-16-59_telegram_Anh-kh\u00f4ng-th\u1ea5y-worker-tr\u1ea3-l\u1eddi",
+          "  Stale (2026-05-28): 11-27-07_telegram_Anh-th\u1ea5y-c\u00f3-th\u1ec3-xem-hermes-Das",
+          "  Stale (2026-04-13): verification",
+          "  Stale (2026-05-28): 11-24-41_telegram_Tu\u1ea5n-Anh--Self-improvement-",
+          "  Stale (2026-04-11): rss",
+          "  Stale (2026-05-28): 19-33-29_telegram_Tu\u1ea5n-Anh-Anh-kh\u00f4ng-tin-nh\u1eadn-",
+          "  Stale (2026-05-28): 11-15-27_telegram_no-message",
+          "  Stale (2026-05-21): agentic-ai",
+          "  Stale (2026-05-28): 19-22-41_telegram_Tu\u1ea5n-Anh-Check-memory-c\u1ee7a-by",
+          "  Stale (2026-04-25): tiktok-algorithm-2026",
+          "  Stale (2026-05-28): 11-17-56_telegram_Tu\u1ea5n-Anh-Ok",
+          "  Stale (2026-05-21): tiktok-viral-script",
+          "  Stale (2026-05-28): 19-27-07_telegram_Tu\u1ea5n-Anh-Th\u00f4ng-b\u00e1o-\u0111\u00f3-\u0111\u1ebfn-t\u1eeb"
+        ]
+      }
+    },
+    {
       "id": "daily-ingest-20260603",
       "type": "daily-ingest",
       "status": "completed",
