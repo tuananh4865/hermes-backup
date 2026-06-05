@@ -1,5 +1,29 @@
 # Wiki Log
 
+## 2026-06-05
+
+### Daily Activity
+- **MiniMax-M3** running with 1M context, 59% SWE-Bench (config verified)
+- **API issue**: 1004 error on model list endpoint — model works, list broken
+- **Storytelling lesson**: Hermes taught Anh viral content via storytelling
+- **Wiki Memory Forget**: 83 stale topics identified (dry-run)
+
+### Cron Jobs (All ✅)
+| Job | Time | Status |
+|-----|------|--------|
+| Daily Session Review | 00:03 | ✅ |
+| Autoresearch Nightly | 02:05 | ✅ (66 messages) |
+| Wiki Memory Forget | 03:00 | ✅ dry-run |
+| Daily Backup | 03:01 | ✅ +3,881/-110 |
+| Wiki Health | 04:00 | ✅ SILENT |
+| X Research | 07:02 | ✅ (35 messages) |
+
+### Sessions
+- **DM 20:46**: Model question → MiniMax-M3 confirmed, config explained
+- **Group 21:08**: Storytelling viral content lesson
+
+---
+
 ## 2026-05-14
 
 ### Ngày nghỉ ngơi — Cron jobs đã tắt

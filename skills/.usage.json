@@ -281,14 +281,14 @@
   "hermes-autoresearch": {
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
-    "last_patched_at": "2026-06-03T00:03:42.923017+00:00",
-    "last_used_at": "2026-06-05T00:00:43.284052+00:00",
-    "last_viewed_at": "2026-06-03T19:05:38.389170+00:00",
-    "patch_count": 259,
+    "last_patched_at": "2026-06-05T19:05:43.596517+00:00",
+    "last_used_at": "2026-06-05T19:05:32.771787+00:00",
+    "last_viewed_at": "2026-06-05T19:05:32.770853+00:00",
+    "patch_count": 263,
     "pinned": false,
     "state": "active",
-    "use_count": 263,
-    "view_count": 206
+    "use_count": 268,
+    "view_count": 210
   },
   "hermes-external-skills-setup": {
     "archived_at": null,

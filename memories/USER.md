@@ -6,15 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- 2026-06-01: [System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversa
-- 2026-06-01: [System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversa
-- 2026-06-01: [System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversa
-- 2026-06-01: [System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversa
-- [tool] result [HIGH]
-- [project] YouTube
-- [file] 2.
-- [preference] em setup thêm **session-state hook** để:
-- [preference] lưu "em đang làm gì, đang ở bước nào"
 - [preference] biết mình đang làm YouTube research ở round mấy
 - [preference] nhớ đã search những gì
 - [preference] nhớ kế hoạch 100-round
@@ -36,7 +27,16 @@
 - [file] ~/.hermes/skills/`:
 - [preference] thấy 2 skill `last30days` và `agent-reach` ở đâu cả:
 - [preference] có
-§ [SESSIONS] — session history summaries
 - 2026-06-01: [System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversa
+- [preference] cần làm gì thêm nữa anh!
+- [tool] Orchestration
+- [preference] có harness** = agent chỉ là demo, hoạt động tốt trong lab nhưng fail trong production.
+- [tool] th [HIGH]
+- [tool] calls [HIGH]
+- [preference] em dùng approach nào để research tiếp, hay cứ report đây là bug với Hermes team? [HIGH]
+- [preference] tự tạo issue? [HIGH]
+- [preference] Exa, the test succeeds but subsequent tool calls fail because the underlying transport layer doesn't properly bridge to the JSON-RPC protocol. [HIGH]
+§ [SESSIONS] — session history summaries
+- 2026-06-05: test lại xem
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

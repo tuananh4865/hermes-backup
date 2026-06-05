@@ -2,7 +2,7 @@
 title: Hermes Autoresearch — Agentic Research Loop
 name: hermes-autoresearch
 created: 2026-04-27
-updated: 2026-06-02
+updated: 2026-06-06
 type: skill
 tags: [autoresearch, self-improvement, karpathy-pattern, agentic]
 description: Karpathy-style autonomous research loop — Skills Improvement + AI Agents + Hermes Agentic (16 capabilities, em TỰ CHỌN mỗi đêm), infinite repeat, NEVER STOP
@@ -993,9 +993,11 @@ When any monitoring output suggests a system is broken, ALWAYS verify against th
 # Example: Session recording "broken"
 # WRONG: Trust monitoring output and claim failure
 # CORRECT: Check actual database
-ls -la ~/Library/Application\ Support/hermes-agent/state.db
+Read: ~/.hermes/state.db  # SQLite session DB — NOT ~/Library/Application Support/hermes-agent/sessions/
 # Verify sessions count: python3 -c "import sqlite3; c=sqlite3.connect(...); print(c.execute('SELECT COUNT(*)').fetchone())"
 ```
+
+**⚠️ CRITICAL (2026-06-06):** The path `~/Library/Application Support/hermes-agent/sessions/` DOES NOT EXIST on this system. Session DB is `~/.hermes/state.db`. Always verify session path before querying.
 
 **Pattern for all health checks:**
 1. Monitoring says "X is broken" → Don't report broken yet

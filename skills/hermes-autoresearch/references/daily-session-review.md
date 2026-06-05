@@ -5,9 +5,32 @@ Every night at 0AM, read all session logs from the day, extract structured knowl
 
 ## Session Log Locations
 ```
-~/.hermes/hermes-agent/sessions/
+~/.hermes/hermes-agent/sessions/        # sessions.json = POINTER/index (NOT content)
+~/.hermes/hermes-agent/gateway/sessions/ # session_YYYYMMDD_HHMMSS_*.json = actual content
 ~/Library/Application Support/hermes-agent/sessions/
-~/.hermes/hermes-agent/gateway/sessions/
+~/.hermes/state.db                      # SQLite — actual message content (primary source)
+```
+
+**⚠️ sessions.json is a POINTER, not content:**
+- `sessions.json` maps channel keys → session IDs (e.g., `agent:main:telegram:dm:1132914873: 20260605_204615_66faf874`)
+- Actual messages are in `state.db` with schema: `messages(timestamp, session_id, role, content)`
+- Timestamp is Unix epoch float (e.g., `1780668655.9761` = `2026-06-05 21:10:55`)
+- Cron output files at `~/.hermes/cron/output/{job_id}/` are RELIABLE indicators of what ran
+
+**Query pattern for session content:**
+```sql
+-- Find sessions from a date range (June 5 = 1780592400 to 1780678800)
+SELECT session_id, COUNT(*) as msg_count
+FROM messages
+WHERE timestamp >= 1780592400 AND timestamp < 1780678800
+GROUP BY session_id
+ORDER BY msg_count DESC;
+
+-- Get messages from a specific session
+SELECT substr(timestamp,1,19) as ts, role, substr(content,1,200)
+FROM messages
+WHERE session_id = '20260605_204615_66faf874'
+ORDER BY timestamp;
 ```
 
 ## Extraction Framework

@@ -598,8 +598,8 @@
       719
     ],
     "hermes-autoresearch/SKILL.md": [
-      1780445022920927401,
-      77623
+      1780686343594572009,
+      77880
     ],
     "hermes-github-backup/SKILL.md": [
       1779074829200621506,
@@ -858,8 +858,8 @@
       2160
     ],
     "red-teaming/godmode/SKILL.md": [
-      1778471610460938012,
-      20059
+      1780667046914480617,
+      20044
     ],
     "research/agent-reach/SKILL.md": [
       1780285318225150624,
@@ -926,8 +926,8 @@
       1866
     ],
     "software-development/hermes-agent-skill-authoring/SKILL.md": [
-      1778471610461638556,
-      7618
+      1780667046914918910,
+      7609
     ],
     "software-development/hermes-s6-container-supervision/SKILL.md": [
       1779937796542491077,
@@ -938,32 +938,32 @@
       10929
     ],
     "software-development/plan/SKILL.md": [
-      1778471610461812432,
-      2016
+      1780667046915209452,
+      8974
     ],
     "software-development/python-debugpy/SKILL.md": [
       1778471610461931224,
       13172
     ],
     "software-development/requesting-code-review/SKILL.md": [
-      1778471610462025724,
-      8483
+      1780667046915314828,
+      8465
     ],
     "software-development/spike/SKILL.md": [
-      1778471610462118516,
-      8753
+      1780667046915433703,
+      8730
     ],
     "software-development/subagent-driven-development/SKILL.md": [
       1778471610462208766,
       10742
     ],
     "software-development/systematic-debugging/SKILL.md": [
-      1778471610462303100,
-      10480
+      1780667046915543203,
+      10471
     ],
     "software-development/test-driven-development/SKILL.md": [
-      1778471610462403434,
-      9573
+      1780667046915711204,
+      9564
     ],
     "software-development/writing-plans/SKILL.md": [
       1778471610462510851,
@@ -4480,7 +4480,7 @@
       "skill_name": "plan",
       "category": "software-development",
       "frontmatter_name": "plan",
-      "description": "Plan mode: write markdown plan to .hermes/plans/, no exec.",
+      "description": "Plan mode: write an actionable markdown plan to .hermes/p...",
       "platforms": [
         "linux",
         "macos",

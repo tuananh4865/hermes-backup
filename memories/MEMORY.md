@@ -1,11 +1,3 @@
-Task 'Nghe được rồi nhưng có vẻ nó đang nói tiếng Anh' — 1 turns
-§
-Task '[Tuấn Anh] Tiếp theo đến phần kịch bản thu hút, làm sao để có một kịch bản thu hút?' — 1 turns
-§
-Task '[Tuấn Anh] https://x.com/zodchiii/status/2060728613872234644/video/1?s=46 Xem được video trong tweet này không?' — 1 turns
-§
-Task '[Tuấn Anh] Dùng browser_harness đi' — 1 turns
-§
 Task 'check mcp của exa' — 1 turns
 §
 Task 'test lại xem' — 1 turns
@@ -37,3 +29,11 @@ Task '[System note: Your previous turn in this session was interrupted by a gate
 Modified files: handler.py
 §
 Task '[Tuấn Anh] Minimax mới ra mắt model mới, check trang chủ và tìm cách add model đó vào danh sách model cho anh!' — 1 turns
+§
+Task 'test lại xem' — session 20260531, 7 turns
+§
+Task 'đang xài model nào vậy?' — 1 turns
+§
+Task 'sao anh không thấy model minimax m3 trong danh sách model của em?' — 1 turns
+§
+Task '[Tuấn Anh] làm sao để tập storytelling? hãy đóng vai là một người thầy dậy cho anh cách làm nội dung viral bằng cách sto' — 1 turns

@@ -160,5 +160,23 @@
     "timestamp": "2026-06-04T17:03:21.601714+00:00",
     "category": "cron-output",
     "size": 3956
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/5aea298eb0a8/2026-06-05_00-03-53.md",
+    "timestamp": "2026-06-05T17:04:53.072810+00:00",
+    "category": "cron-output",
+    "size": 3374
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-05",
+    "timestamp": "2026-06-05T17:05:30.053002+00:00",
+    "category": "cron-output",
+    "size": 0
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-05.md",
+    "timestamp": "2026-06-05T17:06:52.032916+00:00",
+    "category": "cron-output",
+    "size": 1995
   }
 ]

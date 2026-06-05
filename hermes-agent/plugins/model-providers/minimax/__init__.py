@@ -37,7 +37,7 @@ minimax_oauth = ProviderProfile(
     env_vars=(),  # OAuth — tokens in auth.json, not env
     base_url="https://api.minimax.io/anthropic",
     auth_type="oauth_external",
-    default_aux_model="MiniMax-M3-highspeed",
+    default_aux_model="MiniMax-M2.7",
 )
 
 register_provider(minimax)

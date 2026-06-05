@@ -4,65 +4,72 @@ SESSION RESUME CONTEXT (Auto-injected after context overflow)
 
 ## RECENT SESSIONS:
 
-### [1] 2026-06-01/10-55-48_telegram_Tuấn-Anh-Anh-nghĩ-là-em-sẽ-t.md
+### [1] 2026-06-05/20-48-45_telegram_sao-anh-không-thấy-model-minim.md
 Topic: Previous session: 
-[Tuấn Anh] Anh nghĩ là em sẽ tự tìm cách được! Em có thể tự thoát chrome và chạ...
-
-Last messages:
-  👤 User: 
-[Tuấn Anh] Anh nghĩ là em sẽ tự tìm cách được! Em có thể tự thoát chrome và chạy lệnh sau đó mở chrome lại và vào X để extract cookie! Chỉ cần là chrome thật thì em có thể extract cookie dược!
-
-
-  🤖 Assistant: 
-Anh ơi, có vấn đề lớn:
-
-**Chrome đang chạy với remote debugging KHÔNG phải là Chrome đang login của anh** — nó là một instance riêng.
-
-Lý do: macOS Keychain mã hóa cookies authentication của X bằng Chrome's Keychain, và chỉ process Chrome gốc mới đọc được. Process Chrome mới (dù cùng profile) không...
-
-### [2] 2026-06-01/10-49-00_telegram_Tuấn-Anh-httpsgithubcom.md
-Topic: Previous session: 
-[Tuấn Anh] https://github.com/mvanhorn/last30days-skill
-
-https://github.com/Pan...
-
-Last messages:
-  👤 User: 
-[Tuấn Anh] https://github.com/mvanhorn/last30days-skill
-
-https://github.com/Panniantong/Agent-Reach
-
-Cài và setup đi
-
-
-  🤖 Assistant: 
-Xong anh!
-
-## Đã cài
-
-### last30days (mvanhorn/last30days-skill)
-- **17+ nền tảng**: Reddit, X, YouTube, TikTok, HN, Polymarket, GitHub, Instagram, Bluesky...
-- **Cách dùng**: `/opt/homebrew/bin/python3.13 ~/.hermes/skills/last30days/skills/last30days/scripts/last30days.py "topic" --emit=compact --...
-
-### [3] 2026-06-01/10-43-55_telegram_Tuấn-Anh-Mac-của-anh-không-l.md
-Topic: Previous session: 
-[Tuấn Anh] Mac của anh không lockscreen
+sao anh không thấy model minimax m3 trong danh sách model của em?
 
 ...
 
 Last messages:
   👤 User: 
-[Tuấn Anh] Mac của anh không lockscreen
+sao anh không thấy model minimax m3 trong danh sách model của em?
 
 
   🤖 Assistant: 
-Tình hình:
-- ✅ Chrome đang mở với 12 tabs, có x.com đang login
-- ❌ Chrome không có debug port → browser-harness không hoạt động
-- ❌ computer_use chỉ điều khiển macOS UI, không extract được Chrome cookies (cookies bị mã hóa bởi macOS Keychain)
+API respond rồi — `1004: Please carry the API secret key` = endpoint tồn tại nhưng env var không expand đúng. Em không thấy được list. Nhưng quan trọng là:
+
+## 📋 TÓM LẠI
+
+| Chỗ | `MiniMax-M3` có không? |
+|-----|----------------------|
+| `~/.hermes/config.yaml` → `model.default` | ✅ CÓ |
+| Provider ...
+
+### [2] 2026-06-05/20-46-45_telegram_đang-xài-model-nào-vậy.md
+Topic: Previous session: 
+đang xài model nào vậy?
+
+...
+
+Last messages:
+  👤 User: 
+đang xài model nào vậy?
 
 
-**Kết luận:** Không có cách nào extract Chrome cookies...
+  🤖 Assistant: 
+Dạ anh, em đang chạy **MiniMax M3** — model mới nhất của MiniMax, ra mắt tháng 6 này. Đặc điểm chính:
+
+- 🌐 **1M context** (1 triệu tokens)
+- 💪 **59% SWE-Bench** (top coding)
+- 💰 **$0.30/M input tokens** (rẻ hơn Claude/GPT nhiều)
+- 🏢 Provider: `minimax` (đã add vào config từ trước)
+- 📅 Knowledge cut...
+
+### [3] 2026-06-03/06-10-13_telegram_Tuấn-Anh-Minimax-mới-ra-mắt-.md
+Topic: Previous session: 
+[Tuấn Anh] Minimax mới ra mắt model mới, check trang chủ và tìm cách add model ...
+
+Last messages:
+  👤 User: 
+[Tuấn Anh] Minimax mới ra mắt model mới, check trang chủ và tìm cách add model đó vào danh sách model cho anh!
+
+
+  🤖 Assistant: 
+Xong anh! ✅
+
+## MiniMax-M3 đã được thêm vào
+
+**Model mới: MiniMax-M3** — ra mắt **1/6/2026**
+
+### Thông số chính:
+- **1M token context** (1 triệu token!)
+- Native multimodality (text, image, video input)
+- Coding & Agent frontier model
+- Pricing: ~$0.70/1M input tokens
+
+### Đã update 3 chỗ:
+
+| File...
 
 ## CURRENT TASK STATE:
 # Task State — Current Session Progress
