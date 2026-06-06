@@ -82,6 +82,14 @@ git commit -m "Backup hermes full: $(date +%Y-%m-%d)"
 git push origin main
 ```
 
+**Cron context — inline git identity (2026-06-06):**
+In cron contexts (no interactive shell, no global `user.name`/`user.email` set), `git commit` may fail with `Author identity unknown`. Pass identity inline so the backup never blocks on missing config:
+```bash
+git -c user.name="Hermes Backup" -c user.email="backup@hermes.local" \
+  commit -m "Backup hermes full: $(date +%Y-%m-%d)"
+```
+Use the inline flag form (not `git config` writes) so the repo's existing config is untouched.
+
 **Why the rebase check matters:**
 - If a previous session was mid-rebase when interrupted, `git add .` stages those partial rebase files
 - `git commit` then wraps rebasing state into a commit — corrupting history
@@ -449,6 +457,7 @@ curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" 
 ## Related
 
 - `references/secret-scanning-fix-2026-05-09.md` — Resolution for GitHub Secret Scanning block on first push
+- `references/daily-backup-report-format.md` — Standard report format + inline git identity + snapshot-rotation observations from 2026-06-06 baseline
 
 ## Notes
 

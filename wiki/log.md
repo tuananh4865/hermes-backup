@@ -1,5 +1,28 @@
 # Wiki Log
 
+## 2026-06-06
+
+### Daily Activity
+- **TikTok content research request** — Failed at 23:53 (non_retryable_client_error)
+  - User asked: "Nghiên cứu cho anh các cách viết nội dung thu hút trên nền tảng tiktok"
+  - Session: 20260606_142557_c7a13bb5
+- **O-Lab group session** — Thread 4081, 16:07-16:22
+
+### Sessions
+| Time | Platform | Thread | Topic | Status |
+|------|----------|--------|-------|--------|
+| 14:25 | DM | — | TikTok content writing research | ❌ Failed |
+| 16:07 | O-Lab | 4081 | Group session | ✅ |
+
+### Cron Jobs
+| Job | Time | Status | Notes |
+|-----|------|--------|-------|
+| Daily Session Review | 00:07 | ✅ | For 2026-06-05 data |
+| Autoresearch Nightly | 02:03 | ✅ | 83KB output |
+| X Research Daily | 07:02 | ✅ | 87KB output |
+
+---
+
 ## 2026-06-05
 
 ### Daily Activity

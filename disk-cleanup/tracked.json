@@ -178,5 +178,35 @@
     "timestamp": "2026-06-05T17:06:52.032916+00:00",
     "category": "cron-output",
     "size": 1995
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/7cba6ba5f52a/2026-06-06_03-01-26.md",
+    "timestamp": "2026-06-06T17:06:03.990341+00:00",
+    "category": "cron-output",
+    "size": 1865
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/a5c02f2f0d87/2026-06-06_07-02-01.md",
+    "timestamp": "2026-06-06T17:06:05.207429+00:00",
+    "category": "cron-output",
+    "size": 87280
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/a4b8e528983f/2026-06-06_02-03-49.md",
+    "timestamp": "2026-06-06T17:08:56.654458+00:00",
+    "category": "cron-output",
+    "size": 83779
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-06.md",
+    "timestamp": "2026-06-06T17:09:20.592479+00:00",
+    "category": "cron-output",
+    "size": 1992
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-07.md",
+    "timestamp": "2026-06-06T17:10:11.988643+00:00",
+    "category": "cron-output",
+    "size": 1739
   }
 ]

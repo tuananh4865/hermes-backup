@@ -257,13 +257,13 @@
     "created_at": "2026-05-29T17:06:18.537505+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-05-29T17:06:18.538634+00:00",
-    "last_viewed_at": "2026-05-29T17:06:18.537525+00:00",
+    "last_used_at": "2026-06-06T17:11:08.493173+00:00",
+    "last_viewed_at": "2026-06-06T17:11:08.491640+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "gsd-extract-learnings": {
     "archived_at": null,
@@ -281,14 +281,14 @@
   "hermes-autoresearch": {
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
-    "last_patched_at": "2026-06-05T19:05:43.596517+00:00",
-    "last_used_at": "2026-06-05T19:05:32.771787+00:00",
-    "last_viewed_at": "2026-06-05T19:05:32.770853+00:00",
-    "patch_count": 263,
+    "last_patched_at": "2026-06-06T17:11:38.303587+00:00",
+    "last_used_at": "2026-06-06T19:00:08.794688+00:00",
+    "last_viewed_at": "2026-06-06T17:11:14.047346+00:00",
+    "patch_count": 264,
     "pinned": false,
     "state": "active",
-    "use_count": 268,
-    "view_count": 210
+    "use_count": 271,
+    "view_count": 211
   },
   "hermes-external-skills-setup": {
     "archived_at": null,
@@ -307,14 +307,14 @@
     "archived_at": null,
     "created_at": "2026-05-08T04:49:57.511598+00:00",
     "created_by": null,
-    "last_patched_at": "2026-05-18T03:27:27.798810+00:00",
-    "last_used_at": "2026-06-04T20:01:33.662201+00:00",
-    "last_viewed_at": "2026-06-04T20:01:33.660971+00:00",
-    "patch_count": 21,
+    "last_patched_at": "2026-06-05T20:02:31.601391+00:00",
+    "last_used_at": "2026-06-05T20:01:53.661690+00:00",
+    "last_viewed_at": "2026-06-05T20:01:53.660777+00:00",
+    "patch_count": 24,
     "pinned": false,
     "state": "active",
-    "use_count": 16,
-    "view_count": 16
+    "use_count": 18,
+    "view_count": 18
   },
   "hermes-memory": {
     "archived_at": null,
@@ -484,6 +484,19 @@
     "use_count": 0,
     "view_count": 0
   },
+  "social-media/tiktok-shop-product-research": {
+    "archived_at": null,
+    "created_at": "2026-06-06T09:23:24.552298+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-06T09:23:24.553519+00:00",
+    "last_viewed_at": "2026-06-06T09:23:24.552318+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "tdd": {
     "archived_at": null,
     "created_at": "2026-05-04T19:03:31.446781+00:00",
@@ -496,18 +509,31 @@
     "use_count": 1,
     "view_count": 1
   },
+  "tiktok-shop-product-research": {
+    "archived_at": null,
+    "created_at": "2026-06-06T09:15:45.495591+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-06-06T09:28:51.479357+00:00",
+    "last_used_at": "2026-06-06T09:23:17.290139+00:00",
+    "last_viewed_at": "2026-06-06T09:23:17.288832+00:00",
+    "patch_count": 4,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "tiktok-viral-script": {
     "archived_at": null,
     "created_at": "2026-05-08T01:06:44.513231+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-05-17T02:36:06.353979+00:00",
-    "last_used_at": "2026-06-01T03:21:16.826735+00:00",
-    "last_viewed_at": "2026-06-01T03:21:16.825504+00:00",
-    "patch_count": 72,
+    "last_patched_at": "2026-06-06T09:13:22.103064+00:00",
+    "last_used_at": "2026-06-06T17:11:42.160554+00:00",
+    "last_viewed_at": "2026-06-06T17:11:42.159470+00:00",
+    "patch_count": 73,
     "pinned": false,
     "state": "active",
-    "use_count": 105,
-    "view_count": 104
+    "use_count": 107,
+    "view_count": 106
   },
   "voice-setup": {
     "archived_at": null,

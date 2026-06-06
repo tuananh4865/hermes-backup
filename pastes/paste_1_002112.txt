@@ -1,0 +1,28 @@
+🔐 Anthropic 401 — authentication failed.
+   Auth method: x-api-key (API key)
+   Token prefix: env:MINIMAX_...
+   Troubleshooting:
+🧾 Request debug dump written to: /Users/tuananh4865/.hermes/sessions/request_dump_20260607_001949_bfbfbc_20260607_002037_194357.json
+⚠️  API call failed (attempt 1/3): AuthenticationError [HTTP 401]
+   🔌 Provider: minimax  Model: MiniMax-M2.7
+   🌐 Endpoint: https://api.minimax.io/anthropic
+   📝 Error: HTTP 401: login fail: Please carry the API secret key in the 'X-Api-Key' field of the request header
+   📋 Details: {'type': 'error', 'error': {'type': 'authentication_error', 'message': "login fail: Please carry the API secret key in the 'X-Api-Key' field of the request header"}, 'request_id': '067389e5602b1c24fadc850c35f5a82f'}
+   ⏱️  Elapsed: 2.16s  Context: 4 msgs, ~35,694 tokens
+❌ Non-retryable error (HTTP 401): HTTP 401: login fail: Please carry the API secret key in the 'X-Api-Key' field of the request header
+❌ Non-retryable client error (HTTP 401). Aborting.
+   🔌 Provider: minimax  Model: MiniMax-M2.7
+   🌐 Endpoint: https://api.minimax.io/anthropic
+   💡 Your API key was rejected by the provider. Check:
+      • Is the key valid? Run: hermes setup
+      • Does your account have access to MiniMax-M2.7?
+     • Check ANTHROPIC_TOKEN in ~/.hermes/.env for Hermes-managed OAuth/setup tokens
+     • Check ANTHROPIC_API_KEY in ~/.hermes/.env for API keys or legacy token values
+     • For API keys: verify at https://platform.claude.com/settings/keys
+     • For Claude Code: run 'claude /login' to refresh, then retry
+     • Legacy cleanup: hermes config set ANTHROPIC_TOKEN ""
+     • Clear stale keys: hermes config set ANTHROPIC_API_KEY ""
+ ─  ⚕ Hermes  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+                                                                                                                                                                                                                                    
+     Error: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': "login fail: Please carry the API secret key in the 'X-Api-Key' field of the request header"}, 'request_id':                   
+     '067389e5602b1c24fadc850c35f5a82f'}   

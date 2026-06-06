@@ -408,6 +408,49 @@ ls -lt /Users/tuananh4865/.hermes/cron/output/*/2026-$(date +%Y-%m-%d)*.md 2>/de
 - ❌ **Ignoring CHR** — partnering with red-CHR creators = affiliate content dies in algorithmic dead zone
 - ❌ **Assuming URL content** — seeing a URL and assuming what it says without reading it first. The user is sharing content for a REASON — read it and confirm your understanding before acting. In 2026-05-13, agent assumed @ecom_linus tweet was about TikTok algorithm when it was actually about AI UGC affiliate marketing. This caused wasted research effort and user had to correct twice.
 - ❌ **Single-path worker check** — checking only one path variant when workers can write to two different paths. Always check BOTH `/Users/tuananh4865/hermes/workers/*/outputs/` AND `/Users/tuananh4865/.hermes/workers/*/outputs/`. Workers may have fired (cron output exists) but written to a different path than expected.
+- ❌ **Single-tool URL access** — when Shopee/TikTok Shop blocks one access method, do not retry that same method 3x. Chain fallbacks: `web_extract` → `browser_navigate` → `mcp_*_understand_image` → URL title decode. If all fail, deliver best-effort analysis with explicit "live data chưa verify được" caveat (see URL-First Protocol below).
+
+## URL-First Protocol When Anh Shares Product Link (2026-06-06)
+
+When Anh drops a product URL (Shopee, TikTok Shop, Lazada, etc.) with no context, do NOT ask "anh muốn gì?". Run this protocol:
+
+### Step 1: Try scraping in this exact order (3 attempts max total, then fall back)
+1. `web_extract` → if 200, parse content; if 400/403/timeout → step 2
+2. `browser_navigate` → if real product page renders, parse; if `verify/traffic/error` or CAPTCHA page → step 3
+3. `mcp_MiniMax_understand_image(image_source=<url>, prompt="read this product page")` → if returns data, use; if server unreachable → step 4
+4. **Decode from URL title** + apply product domain knowledge
+
+### Step 2: Decode Shopee URL title (Vietnam format)
+Shopee VN URL title is the URL-encoded slug before `-i.<shopid>.<itemid>`. Format:
+```
+[Brand] + [Product type] + [Key specs] + [Compat target] + [Feature adjectives]
+```
+Example: `K-F-Concept-3-Bộ-lọc-từ-tính-CPL-Black-Mist-1-4-ND2-ND32-(1-đến-5-điểm-dừng)-cho-DJI-Osmo-Pocket-3-4-Kính-quang-học-nhiều-lớp-HD-Tương-thích-Gimbal`
+→ Brand: K&F Concept | Type: 3 filter magnetic set | Specs: CPL + Black Mist 1/4 + ND2-ND32 (1-5 stops) | Compat: DJI Osmo Pocket 3/4 | Features: multi-coated HD optical glass, gimbal compatible
+
+### Step 3: Deliver 4-section analysis (in Vietnamese, casual)
+1. **Snapshot table** — brand, type, key specs, compat (from title decode)
+2. **Strengths** — USP, audience fit, market gap (from domain knowledge)
+3. **Weaknesses** — competition, price barrier, education curve
+4. **Content angles** — 3-4 hook options in "anh + mấy con vợ" voice (max 25s each)
+
+### Step 4: End with A/B/C/D next-step options
+NEVER ask "anh muốn làm gì?". Always provide concrete options:
+- A) Viết script TikTok viral ngay
+- B) Research đối thủ + KOL
+- C) Check giá các shop
+- D) Full combo (all of the above)
+
+Mark Em's recommendation: "Em recommend [letter] trước vì [reason]."
+
+### Step 5: Caveat honesty
+Always state: "Live data chưa verify được — phân tích dựa trên URL title + product knowledge. Confirm giá/availability bằng browser thật trước khi commit."
+
+### Known failure chains (May–June 2026 sessions)
+- **Shopee VN** — `web_extract` → 400; `browser_navigate` → `verify/traffic/error` page (bot detection); `mcp_MiniMax_understand_image` → may be unreachable. URL title decode is the only reliable path.
+- **TikTok Shop** — same bot detection as Shopee; video pages hit harder than product pages.
+- **MCP server 'exa'** — frequently disconnected from this profile; do not retry, switch to `mcp_MiniMax_*` tools.
+- **MCP server 'MiniMax' web_search** — TLS CA bundle path mismatch (`/Users/tuananh4865/.cache/uv/archive-v0/HLuixdJbXsPzfoYA6tO1k/lib/python3.12/site-packages/certifi/ccacert.pem` missing). Fix per `gateway-manager` skill or use `execute_code` with `requests` and explicit `verify=/Users/tuananh4865/.hermes/hermes-agent/venv/lib/python3.11/site-packages/certifi/cacert.pem`.
 
 ### Algorithm Mistakes
 - ❌ **Entertainment-focused scripts** — "entertainment value" has ZERO statistical impact on purchases (beta=0.014, p=0.790). Views ≠ revenue. Stop chasing funny viral.

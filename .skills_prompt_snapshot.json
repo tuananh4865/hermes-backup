@@ -602,8 +602,8 @@
       77880
     ],
     "hermes-github-backup/SKILL.md": [
-      1779074829200621506,
-      12559
+      1780689751599215086,
+      13199
     ],
     "idea-refine/SKILL.md": [
       1779165382384685715,
@@ -909,9 +909,13 @@
       1778471610461414139,
       2713
     ],
+    "social-media/tiktok-shop-product-research/SKILL.md": [
+      1780738131477660823,
+      8095
+    ],
     "social-media/tiktok-viral-script/SKILL.md": [
-      1778985366350754190,
-      27998
+      1780737202099756330,
+      31390
     ],
     "social-media/xurl/SKILL.md": [
       1780286195960559658,
@@ -4363,6 +4367,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "tiktok-shop-product-research",
+      "category": "social-media",
+      "frontmatter_name": "tiktok-shop-product-research",
+      "description": "Validate a product (Shopee link, TikTok Shop, or product ...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

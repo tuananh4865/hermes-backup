@@ -1,11 +1,3 @@
-Task 'check mcp của exa' — 1 turns
-§
-Task 'test lại xem' — 1 turns
-§
-Task '[Replying to: "Anh ơi, em đã thử nhiều cách nhưng không xem được video vì:  Vấn đề: - Video nằm trong tweet của @zodchii' — 1 turns
-§
-Task '[Tuấn Anh] ⚠️ Context length exceeded (122,468 tokens). Cannot compress further.  🔄 Session auto-reset — the conversatio' — 1 turns
-§
 Task '[System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversation history below is intact. If it contains unfin' — session 20260601, 2 turns
 §
 Modified files: handler.py
@@ -37,3 +29,11 @@ Task 'đang xài model nào vậy?' — 1 turns
 Task 'sao anh không thấy model minimax m3 trong danh sách model của em?' — 1 turns
 §
 Task '[Tuấn Anh] làm sao để tập storytelling? hãy đóng vai là một người thầy dậy cho anh cách làm nội dung viral bằng cách sto' — 1 turns
+§
+Task 'https://github.com/yt-dlp/yt-dlp em có cái này chưa?' — 1 turns
+§
+Task '[Tuấn Anh] https://shopee.vn/K-F-Concept-3-Bộ-l%E1%BB%8Dc-từ-tính-CPL-Black-Mist-1-4-ND2-ND32-(1-đến-5-điểm-dừng)-cho-DJ' — 1 turns
+§
+Task '[Tuấn Anh] Check top những video review sản phẩm này được nhiều view nhất!' — 1 turns
+§
+Task 'hi' — 1 turns

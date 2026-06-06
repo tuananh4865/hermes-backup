@@ -6,7 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [preference] biết mình đang làm YouTube research ở round mấy
 - [preference] nhớ đã search những gì
 - [preference] nhớ kế hoạch 100-round
 - [file] không
@@ -36,7 +35,8 @@
 - [preference] em dùng approach nào để research tiếp, hay cứ report đây là bug với Hermes team? [HIGH]
 - [preference] tự tạo issue? [HIGH]
 - [preference] Exa, the test succeeds but subsequent tool calls fail because the underlying transport layer doesn't properly bridge to the JSON-RPC protocol. [HIGH]
-§ [SESSIONS] — session history summaries
 - 2026-06-05: test lại xem
+§ [SESSIONS] — session history summaries
+- 2026-06-07: 
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

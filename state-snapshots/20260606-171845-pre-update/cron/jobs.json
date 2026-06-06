@@ -1,0 +1,251 @@
+{
+  "jobs": [
+    {
+      "id": "7cba6ba5f52a",
+      "name": "Hermes Daily Backup",
+      "prompt": "# Hermes Daily Backup\n\n## Mission\nBackup to\u00e0n b\u1ed9 ~/.hermes l\u00ean GitHub m\u1ed7i ng\u00e0y. Backup full hermes folder.\n\n## Backup Scope (full ~/.hermes)\n\n```bash\ncd ~/.hermes\ngit add .\ngit commit -m \"Backup hermes full: $(date +%Y-%m-%d)\"\ngit push origin main\n```\n\n## Report\nB\u00e1o c\u00e1o:\n- Files changed\n- Insertions/deletions\n- Any errors\n\n## Deliver to Telegram thread: telegram:1132914873:3764041476",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "0 3 * * *"
+      },
+      "schedule_display": "0 3 * * *",
+      "repeat": {
+        "times": 365,
+        "completed": 39
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-27T21:38:04.126445+07:00",
+      "next_run_at": "2026-06-07T03:00:00+07:00",
+      "last_run_at": "2026-06-06T03:01:26.867860+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:1132914873:3764041476",
+      "origin": null
+    },
+    {
+      "id": "a4b8e528983f",
+      "name": "Hermes Autoresearch Nightly",
+      "prompt": "# Hermes Autoresearch \u2014 Nightly Run\n\n## Mission\nT\u1ef1 \u0111\u1ed9ng ch\u1ea1y AutoResearch loop \u0111\u1ec3 c\u1ea3i thi\u1ec7n Hermes m\u1ed7i \u0111\u00eam.\n\n## Timing\n- Ch\u1ea1y: 2AM h\u00e0ng \u0111\u00eam\n- Report: Every 30 min \u0111\u1ebfn Telegram\n\n---\n\n## PH\u1ea6N 1: SESSION LOG ANALYSIS (\u0110\u1eccC TR\u01af\u1edaC)\n\n### 1.1 Read Today's Session Logs\n```\nRead: ~/Library/Application Support/hermes-agent/sessions/\n```\nExtract t\u1eeb session h\u00f4m nay:\n- Key decisions made v\u1edbi Anh\n- Revenue outcomes mentioned\n- Learnings t\u1eeb failures/successes\n- New opportunities discussed\n- Blockers encountered\n- Scripts written ho\u1eb7c approved\n\n### 1.2 Update Knowledge Graph\n```\nUpdate: ~/hermes/workers/memory/MEMORY.md\n- Decisions made h\u00f4m nay\n- Revenue metrics\n- Learnings extracted\n- Product opportunities identified\n- PARA structure updates\n\nUpdate: ~/hermes/workers/memory/daily/[YYYY-MM-DD].md\n```\n\n### 1.3 Index for Fast Retrieval\n```\nTag all extracted info by type (product, content, technical, strategy)\nEnsure searchable format\nAdd to relevant wiki pages if appropriate\n```\n\n---\n\n## PH\u1ea6N 2: SKILLS IMPROVEMENT (PRIMARY)\n\n### 2.1 Wiki Health Check\n```\n# Quick health check (2 min)\npython3 scripts/wiki_lint.py --fast\n\n# If issues found \u2192 self-heal\npython3 scripts/wiki_self_heal.py --fix --all\n\n# Full lint only for detailed report\npython3 scripts/wiki_lint.py\n```\n\n### 2.2 Skills Review\n```\nScan: ~/.hermes/skills/\nImprove:\n- Add missing examples\n- Fix broken [[wikilinks]]\n- Add pitfalls section\n- Verify commands still work\n- Raise confidence scores\n```\n\nMetrics: `SHS = stale \u00d7 10 + missing \u00d7 5 + broken \u00d7 3 + low_conf \u00d7 2`\nTarget: SHS = 0\n\n---\n\n## PH\u1ea6N 3: AI AGENTS RESEARCH\n\nResearch new techniques v\u00e0 frameworks.\n\nTarget: Document 5+ techniques\n\nFocus areas:\n- Self-debugging patterns\n- Agent skill creation\n- Memory optimization\n- Multi-agent coordination\n- Self-improvement loops\n- MCP, A2A protocols\n- Felix Model / Agent monetization\n\n---\n\n## PH\u1ea6N 4: HERMES AGENTIC (em T\u1ef0 CH\u1eccN)\n\n**Em T\u1ef0 QUY\u1ebeT \u0110\u1ecaNH** 1 capability \u0111\u1ec3 improve:\n\n| Category | Capability |\n|----------|------------|\n| Core | Self-Debugging, Self-Correction, Learning from Failures, Proactive Work |\n| Knowledge | Memory Optimization, Knowledge Acquisition, Context Management |\n| Skill/Tool | Skill Creation, Tool Use, Tool Creation |\n| Planning | Goal Decomposition, Planning, Priority Setting, Reasoning |\n| Collaboration | Multi-Agent Coordination, Delegation |\n\nChoice criteria:\n1. Highest impact cho c\u00f4ng vi\u1ec7c v\u1edbi Anh\n2. Quickest improvement (feasible trong 1 night)\n3. Foundational (gi\u00fap c\u1ea3i thi\u1ec7n capabilities kh\u00e1c)\n\n---\n\n## PH\u1ea6N 5: REPORT\n\n### Progress Report (Every 30 min)\n```\n## Autoresearch Progress \u2014 HH:MM\n\nTonight's focus: [Capability em ch\u1ecdn]\nWhy chosen: [Reason]\n\n## Session Log Analysis\n- Decisions extracted: N\n- Revenue mentioned: N\n- Learnings documented: N\n\n## Skills Improvement\n- Skills improved: N\n- SHS score: X\n\n## AI Agents Research\n- Techniques documented: N\n\n## Hermes Agentic\n- Capability worked on: N\n- Score: X\n\n## Next action\n[What I'm doing next]\n```\n\n### Final Report\n```\n## \u0110\u00eam nay [DATE] \u2014 Autoresearch Report\n\n### Session Log Insights\n- Decisions: [X] extracted\n- Revenue: [X] mentioned\n- Learnings: [X] documented\n\n### Wiki Health\n- Links: [OK/Issues]\n- Pages: [X] reviewed\n\n### Skills\n- Reviewed: [X]\n- Updated: [X]\n\n### Research\n- AI Agent techniques: [X] found\n\n### Knowledge Graph\n- Updated: [X] entries\n- Indexed: [X] items\n\n### Recommendation\n- [Next action for Anh]\n```\n\n---\n\n## Success Criteria (STOP when ANY met)\n- SHS = 0\n- Hermes_Score >= 50\n- Documented 5+ new AI agent techniques\n- Session log analysis complete\n\n## DELIVERY\nReport final result to: telegram:1132914873:3764041476\nProgress to: telegram:1132914873:3764041476 (every 30 min)",
+      "skills": [
+        "hermes-autoresearch"
+      ],
+      "skill": "hermes-autoresearch",
+      "model": "MiniMax-M2.7",
+      "provider": "minimax",
+      "base_url": null,
+      "script": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 2 * * *",
+        "display": "0 2 * * *"
+      },
+      "schedule_display": "0 2 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 31
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-04T10:33:31.370315+07:00",
+      "next_run_at": "2026-06-07T02:00:00+07:00",
+      "last_run_at": "2026-06-06T02:03:51.896438+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:1132914873:3764041476",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "603"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "a5c02f2f0d87",
+      "name": "Hermes Agent X Research Daily",
+      "prompt": "# Hermes Agent Deep Research on X (Twitter)\n\n## Mission\nResearch mentions of \"Hermes Agent\" on X/Twitter every morning.\nMinimum 50 results. Synthesize into actionable insights.\n\n## Research Steps\n\n### Step 1: Search X for Hermes Agent mentions\nUse multiple search queries to get comprehensive results:\n```\nQuery 1: \"Hermes Agent\" site:x.com OR site:twitter.com\nQuery 2: \"HermesAgent\" \nQuery 3: \"hermes-agent\" \"AI agent\"\nQuery 4: \"Hermes Agent\" NousResearch\nQuery 5: \"tuananh4865\" OR \"TyayUno\" Hermes\n```\n\nUse web search with `site:x.com` filter and general search.\n\n### Step 2: Collect data\nFor each result, collect:\n- Author\n- Date\n- Content snippet\n- Engagement (likes, retweets, replies)\n- Key themes/patterns\n\n### Step 3: Organize findings\nGroup by:\n- Use cases people mention\n- Problems people solve with Hermes\n- New features/updates discussed\n- Complaints/frustrations\n- Comparison with other agents\n- Integrations mentioned\n- Creative use cases\n\n### Step 4: Score and prioritize\n- High value: Agent tips, new techniques, workflow patterns\n- Medium: General discussion, questions\n- Low: Spam, off-topic\n\n### Step 5: Create synthesis report\n\nFormat:\n```\n# Hermes Agent X Research \u2014 YYYY-MM-DD\n\n## Overview\n- Total mentions found: N\n- Date range: last 7 days\n- Sentiment: positive/neutral/negative\n\n## Top Use Cases (by frequency)\n1. [Use case] \u2014 N mentions\n2. [Use case] \u2014 N mentions\n...\n\n## New Techniques/Tips Found\n1. [Technique] \u2014 [brief description]\n2. [Technique] \u2014 [brief description]\n...\n\n## Problems Solved\n- [Problem] \u2192 [Solution mentioned]\n\n## Frustrations/Issues Reported\n- [Issue 1]\n- [Issue 2]\n\n## Competitor Comparisons\n- [vs Tool X] \u2014 what people say\n\n## Action Items for Hermes\n- [What to investigate/apply]\n- [What to fix based on complaints]\n- [New features to consider]\n\n## Notable People/Accounts to Follow\n- [@username] \u2014 [why relevant]\n\n## Raw Data (top 50)\n[List with links]\n```\n\n## Constraints\n- Minimum 50 results\n- Focus on last 7 days\n- Prioritize substantive posts (not spam)\n- Include both positive and negative feedback\n- Look for real-world applications\n\n## Deliver\nSend complete report to telegram.\nInclude: overview, key findings, action items, raw data.\n",
+      "skills": [
+        "hermes-autoresearch"
+      ],
+      "skill": "hermes-autoresearch",
+      "model": "MiniMax-M2.7",
+      "provider": "minimax",
+      "base_url": null,
+      "script": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "display": "0 7 * * *"
+      },
+      "schedule_display": "0 7 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 31
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-04T13:51:06.979177+07:00",
+      "next_run_at": "2026-06-07T07:00:00+07:00",
+      "last_run_at": "2026-06-06T07:02:03.402913+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:1132914873:3764041476",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "603"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "5aea298eb0a8",
+      "name": "Hermes Daily Session Review",
+      "prompt": "# Hermes Daily Session Review \u2014 0AM\n\n## Mission\nM\u1ed7i s\u00e1ng (0h), \u0111\u1ecdc t\u1ea5t c\u1ea3 session logs t\u1eeb h\u00f4m qua, extract key info, update wiki + knowledge graph, index for retrieval.\n\n## Steps\n\n### 1. Read Session Logs (Yesterday)\nT\u00ecm t\u1ea5t c\u1ea3 sessions t\u1eeb h\u00f4m tr\u01b0\u1edbc trong:\n```\n~/.hermes/sessions/\n```\nFilter sessions t\u1eeb ng\u00e0y h\u00f4m qua (2026-05-07).\n\n### 2. Extract Key Information\nV\u1edbi m\u1ed7i session, extract:\n- **Decisions**: Technical choices, what worked, what failed\n- **Revenue**: TikTok Shop insights, fees, commissions, product discoveries\n- **Learnings**: New patterns, Gen Z slang updates, content strategies\n- **Blockers**: What didn't work, errors encountered\n\n### 3. Update Wiki\n- `wiki/log.md` \u2014 append daily summary\n- `wiki/entities/learned-about-tuananh.md` \u2014 update n\u1ebfu c\u00f3 preference m\u1edbi\n- `wiki/queries/` \u2014 save research findings\n- `wiki/index.md` \u2014 update n\u1ebfu c\u00f3 page m\u1edbi\n\n### 4. Index for Retrieval\n- Update knowledge graph n\u1ebfu c\u1ea7n\n\n### 5. Report to Human\nG\u1eedi Telegram brief t\u1edbi `telegram:1132914873`:\n```\n## \ud83c\udf19 Daily Review \u2014 YYYY-MM-DD\n\n### \u2705 Ho\u00e0n th\u00e0nh\n- [Item] \u2014 k\u1ebft qu\u1ea3\n\n### \ud83e\udde0 Learnings\n- [Key decision/insight]\n\n### \u26a0\ufe0f C\u1ea7n x\u1eed l\u00fd\n- [Blocker ho\u1eb7c pending item]\n```\n\n## Output\nSave full report to `~/.hermes/cron/output/daily_review_YYYY-MM-DD.md`\n\n## Model\nMiniMax-M2.7\n\n## Provider\nminimax",
+      "skills": [],
+      "skill": null,
+      "model": "MiniMax-M2.7",
+      "provider": "minimax",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 * * *",
+        "display": "0 0 * * *"
+      },
+      "schedule_display": "0 0 * * *",
+      "repeat": {
+        "times": 999,
+        "completed": 31
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-08T08:42:19.421587+07:00",
+      "next_run_at": "2026-06-08T00:00:00+07:00",
+      "last_run_at": "2026-06-07T00:10:24.763713+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "603"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "a2786fb20bac",
+      "name": "Wiki Health Daily",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "wiki_health.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
+      },
+      "schedule_display": "0 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 20
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-18T01:09:51.272803+07:00",
+      "next_run_at": "2026-06-07T04:00:00+07:00",
+      "last_run_at": "2026-06-06T04:00:36.503020+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:1132914873",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "603"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "e92dd2490973",
+      "name": "Wiki Memory Forget Daily",
+      "prompt": "/Users/tuananh4865/.hermes/scripts/wiki_forget_14days.py",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "wiki_forget_14days.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "0 3 * * *"
+      },
+      "schedule_display": "0 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 9
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-28T11:21:27.451539+07:00",
+      "next_run_at": "2026-06-07T03:00:00+07:00",
+      "last_run_at": "2026-06-06T03:00:31.021907+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "1"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-06-07T00:10:24.764625+07:00"
+}
