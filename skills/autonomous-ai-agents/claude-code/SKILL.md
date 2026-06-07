@@ -1,6 +1,7 @@
 ---
 name: claude-code
-description: "Delegate coding to Claude Code CLI (features, PRs)."
+description: "Delegate coding to Claude Code CLI (features, PRs). This umbrella skill absorbs Codex CLI and OpenCode CLI as references. For code review delegation, see requesting-code-review and code-review-and-quality."
+---
 version: 2.2.0
 author: Hermes Agent + Teknium
 license: MIT

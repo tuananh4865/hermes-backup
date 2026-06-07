@@ -18,15 +18,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 39
+        "completed": 40
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-04-27T21:38:04.126445+07:00",
-      "next_run_at": "2026-06-08T03:00:00+07:00",
-      "last_run_at": "2026-06-06T03:01:26.867860+07:00",
+      "next_run_at": "2026-06-09T03:00:00+07:00",
+      "last_run_at": "2026-06-07T03:00:51.103917+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -54,15 +54,15 @@
       "schedule_display": "0 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 32
+        "completed": 33
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T10:33:31.370315+07:00",
-      "next_run_at": "2026-06-08T02:00:00+07:00",
-      "last_run_at": "2026-06-07T02:02:03.218315+07:00",
+      "next_run_at": "2026-06-09T02:00:00+07:00",
+      "last_run_at": "2026-06-08T02:06:09.700583+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -97,15 +97,15 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 31
+        "completed": 32
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T13:51:06.979177+07:00",
-      "next_run_at": "2026-06-07T07:00:00+07:00",
-      "last_run_at": "2026-06-06T07:02:03.402913+07:00",
+      "next_run_at": "2026-06-08T07:00:00+07:00",
+      "last_run_at": "2026-06-07T07:04:02.257536+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -139,15 +139,15 @@
       "schedule_display": "0 0 * * *",
       "repeat": {
         "times": 999,
-        "completed": 31
+        "completed": 32
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-08T08:42:19.421587+07:00",
-      "next_run_at": "2026-06-08T00:00:00+07:00",
-      "last_run_at": "2026-06-07T00:10:24.763713+07:00",
+      "next_run_at": "2026-06-09T00:00:00+07:00",
+      "last_run_at": "2026-06-08T00:04:23.057939+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -181,15 +181,15 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 20
+        "completed": 21
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-18T01:09:51.272803+07:00",
-      "next_run_at": "2026-06-07T04:00:00+07:00",
-      "last_run_at": "2026-06-06T04:00:36.503020+07:00",
+      "next_run_at": "2026-06-08T04:00:00+07:00",
+      "last_run_at": "2026-06-07T04:00:25.559423+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -223,15 +223,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-28T11:21:27.451539+07:00",
-      "next_run_at": "2026-06-08T03:00:00+07:00",
-      "last_run_at": "2026-06-07T03:00:17.208701+07:00",
+      "next_run_at": "2026-06-09T03:00:00+07:00",
+      "last_run_at": "2026-06-08T03:00:21.226781+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -245,7 +245,50 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": null
+    },
+    {
+      "id": "546c141c8fb9",
+      "name": "TikTok 5-Channel Nightly Monitor",
+      "prompt": "## NHI\u1ec6M V\u1ee4: TikTok 5-Channel Nightly Monitor\n\nM\u1ed7i \u0111\u00eam, th\u1ef1c hi\u1ec7n \u0111\u1ea7y \u0111\u1ee7 3 phases:\n\n---\n\n### PHASE 1: THU TH\u1eacP VIDEO (yt-dlp)\n\n**5 K\u00eanh c\u1ea7n monitor:**\n- @duymuoi\n- @anhsacanh.vn\n- @nguyenducduong9699\n- @tam_thefox\n- @goccontent\n\n**M\u1ed7i k\u00eanh:** L\u1ea5y 2 video m\u1edbi nh\u1ea5t (kh\u00f4ng tr\u00f9ng l\u1eb7p)\n\n**Deduplication:**\n- \u0110\u1ecdc `~/.hermes/cron/tiktok-monitor/seen-videos.json`\n- Ch\u1ec9 download video m\u1edbi (kh\u00f4ng c\u00f3 trong seen-videos)\n- Sau khi download xong \u2192 c\u1eadp nh\u1eadt seen-videos.json\n\n**Download command:**\n```bash\ncd ~/.hermes/cron/tiktok-monitor/[YYYY-MM-DD]/videos\nyt-dlp -o \"[channel]_[n].mp4\" \"[video_url]\"\n```\n\n**Extract frames:** `ffmpeg -i video.mp4 -vf fps=1 -frames:v 20 frame_%03d.jpg`\n\n---\n\n### PHASE 2: ANALYZE + UPDATE LESSON-LEARNS\n\n**Analyze m\u1ed7i video (qua frame \u0111\u1ea7u ti\u00ean + context):**\n1. Hook type (shock/question/stakes/visual/bold/proof)\n2. Caption/text overlay\n3. Storytelling structure\n4. Gen Z slang used\n5. CTA type\n6. Why it might be viral\n\n**Update lesson files** (append findings m\u1edbi):\n- `~/.hermes/cron/tiktok-monitor/lessons/hooks.md`\n- `~/.hermes/cron/tiktok-monitor/lessons/cta.md`\n- `~/.hermes/cron/tiktok-monitor/lessons/storytelling.md`\n- `~/.hermes/cron/tiktok-monitor/lessons/tiktok-shop.md`\n\n**Format update:**\n```markdown\n## [YYYY-MM-DD] Updates\n\n### New patterns found:\n- [m\u00f4 t\u1ea3 pattern m\u1edbi]\n- [v\u00ed d\u1ee5 c\u1ee5 th\u1ec3 t\u1eeb video]\n```\n\n---\n\n### PHASE 3: B\u00c1O C\u00c1O + G\u1eecI TELEGRAM\n\n**T\u1ea1o report t\u1ea1i:** `~/.hermes/cron/tiktok-monitor/[YYYY-MM-DD]/report.md`\n\n**G\u1eedi Telegram summary** (format, <500 words):\n\n```\n\u2705 **TikTok Monitor \u2014 [Ng\u00e0y]**\n\n**Videos analyzed:** X/10\n\n**\ud83d\udd25 Top 3 Trends h\u00f4m nay**\n1. [trend 1]\n2. [trend 2]\n3. [trend 3]\n\n**\ud83d\udca1 Top 3 Lessons**\n1. [lesson 1]\n2. [lesson 2]\n3. [lesson 3]\n\n**\ud83c\udfaf Recommendations cho TikTok Shop**\n- [recommendation 1]\n- [recommendation 2]\n\nFull report: ~/.hermes/cron/tiktok-monitor/[YYYY-MM-DD]/report.md\nLessons: ~/.hermes/cron/tiktok-monitor/lessons/\n```\n\n**Delivery:** `telegram:1132914873`\n\n---\n\n### DELIVERY\n- Report: `origin` (auto-deliver v\u1ec1 chat)\n- Lessons: t\u1ef1 \u0111\u1ed9ng update file",
+      "skills": [],
+      "skill": null,
+      "model": "MiniMax-M2.7",
+      "provider": "minimax",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * *",
+        "display": "0 23 * * *"
+      },
+      "schedule_display": "0 23 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-07T10:17:54.908279+07:00",
+      "next_run_at": "2026-06-08T23:00:00+07:00",
+      "last_run_at": "2026-06-07T23:01:38.171723+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1132914873",
+        "chat_name": "Tu\u1ea5n Anh",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
     }
   ],
-  "updated_at": "2026-06-07T03:00:17.208911+07:00"
+  "updated_at": "2026-06-08T03:00:21.227745+07:00"
 }

@@ -863,6 +863,22 @@ def __init__(self, memory_char_limit: int = 2200, user_char_limit: int = 1375):
 
 **Also applies to:** Technical specs, model features, pricing, tool compatibility, configuration values. These all change constantly — never rely on memorized knowledge.
 
+### MiniMax 401 Auth Failure Pattern (CRITICAL — 2026-06-07)
+**Symptom:** Every session fails with `non_retryable_client_error` and `HTTP 401: login fail: Please carry the API secret key in the 'X-Api-Key' field`. Request dumps show `Authorization: Bearer None`.
+
+**Root cause:** MiniMax API requires key in `X-Api-Key` header, not `Authorization: Bearer`. When key is missing/empty, all 9+ sessions in a day fail identically.
+
+**Detection:**
+```bash
+# Check for 401 auth failures in session logs
+grep -l "non_retryable_client_error.*401" ~/.hermes/sessions/request_dump_*.json | wc -l
+# > 0 means MiniMax auth is broken
+```
+
+**Fix:** See `references/minimax-401-auth-failure-2026-06-07.md` for diagnostic steps and fix patterns.
+
+---
+
 ### API/Model Compatibility Research — ALWAYS Web-Verify First (CRITICAL)
 **Signal (2026-05-29):** User asked if MiniMax-M2.7 supports Anthropic-compatible endpoint. I incorrectly said "No — only M2.1 supports it." This was 100% wrong. M2.7 fully supports `https://api.minimax.io/anthropic` with full thinking blocks, prompt caching, and interleaved thinking. I relied on stale knowledge instead of researching.
 

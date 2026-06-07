@@ -13,21 +13,9 @@
       1779165382069163730,
       10307
     ],
-    "apple/apple-notes/SKILL.md": [
-      1778215664634606703,
-      2169
-    ],
-    "apple/apple-reminders/SKILL.md": [
-      1780227773050851947,
-      3606
-    ],
-    "apple/findmy/SKILL.md": [
-      1778215664634201577,
-      3709
-    ],
-    "apple/imessage/SKILL.md": [
-      1778215664633797784,
-      2442
+    "apple/apple-platform/SKILL.md": [
+      1780807568508914801,
+      2741
     ],
     "apple/macos-computer-use/SKILL.md": [
       1780285587800066041,
@@ -38,16 +26,12 @@
       5083
     ],
     "autonomous-ai-agents/claude-code/SKILL.md": [
-      1779119050399699405,
-      35476
-    ],
-    "autonomous-ai-agents/codex/SKILL.md": [
-      1778471610454829450,
-      4557
+      1780808005598718961,
+      35634
     ],
     "autonomous-ai-agents/hermes-agent/SKILL.md": [
-      1780273721215666707,
-      55606
+      1780851983568686003,
+      56344
     ],
     "autonomous-ai-agents/kanban-codex-lane/SKILL.md": [
       1779937796536629095,
@@ -57,17 +41,13 @@
       1779363777944811451,
       17163
     ],
-    "autonomous-ai-agents/opencode/SKILL.md": [
-      1778471610455093284,
-      7259
-    ],
     "browser-harness-install/SKILL.md": [
       1778471609741831564,
       3347
     ],
     "browser-harness/SKILL.md": [
-      1780244604146803764,
-      10512
+      1780802950518471809,
+      10853
     ],
     "browser-testing-with-devtools/SKILL.md": [
       1779165382096573701,
@@ -104,10 +84,6 @@
     "creative/ascii-art/SKILL.md": [
       1778471610455294326,
       10556
-    ],
-    "creative/ascii-video/SKILL.md": [
-      1778471610455415327,
-      14864
     ],
     "creative/baoyu-article-illustrator/SKILL.md": [
       1779937796536880971,
@@ -285,37 +261,17 @@
       1779165382339080680,
       10530
     ],
-    "github-nested-repo-backup/SKILL.md": [
-      1778471609745942286,
-      2552
-    ],
-    "github-wiki-backup/SKILL.md": [
-      1779075208994288767,
-      12477
-    ],
     "github/codebase-inspection/SKILL.md": [
       1778471610457824252,
       3628
-    ],
-    "github/github-auth/SKILL.md": [
-      1778471610457923169,
-      7546
-    ],
-    "github/github-code-review/SKILL.md": [
-      1778471610458036627,
-      13565
     ],
     "github/github-issues/SKILL.md": [
       1780291800817605457,
       10230
     ],
-    "github/github-pr-workflow/SKILL.md": [
-      1778471610458193503,
-      9985
-    ],
-    "github/github-repo-management/SKILL.md": [
-      1778471610458298170,
-      13683
+    "github/github-operations/SKILL.md": [
+      1780807485357489967,
+      4499
     ],
     "grill-me/SKILL.md": [
       1779165369822474400,
@@ -598,8 +554,8 @@
       719
     ],
     "hermes-autoresearch/SKILL.md": [
-      1780686343594572009,
-      77880
+      1780859282117819593,
+      78421
     ],
     "hermes-github-backup/SKILL.md": [
       1780689751599215086,
@@ -785,10 +741,6 @@
       1778471610459908342,
       2919
     ],
-    "openclaw/openclaw-agent-profiles/SKILL.md": [
-      1779367673303953886,
-      8226
-    ],
     "performance-optimization/SKILL.md": [
       1779165382455029020,
       11593
@@ -873,10 +825,6 @@
       1778471610461142388,
       5111
     ],
-    "research/last30days/SKILL.md": [
-      1780285335848002999,
-      3703
-    ],
     "research/llm-wiki/SKILL.md": [
       1778471610461247180,
       20113
@@ -885,13 +833,13 @@
       1778471609360544266,
       2985
     ],
-    "research/research-paper-writing/SKILL.md": [
-      1778471609360905642,
-      103375
-    ],
     "research/social-media-research/SKILL.md": [
       1780285788700238977,
       4403
+    ],
+    "research/social-media-trends/SKILL.md": [
+      1780808171229942242,
+      3712
     ],
     "security-and-hardening/SKILL.md": [
       1779165382500942225,
@@ -909,13 +857,9 @@
       1778471610461414139,
       2713
     ],
-    "social-media/tiktok-shop-product-research/SKILL.md": [
-      1780738131477660823,
-      8095
-    ],
     "social-media/tiktok-viral-script/SKILL.md": [
-      1780737202099756330,
-      31390
+      1780814486630678701,
+      35808
     ],
     "social-media/xurl/SKILL.md": [
       1780286195960559658,
@@ -937,17 +881,9 @@
       1779937796542491077,
       11474
     ],
-    "software-development/node-inspect-debugger/SKILL.md": [
-      1778471610461733432,
-      10929
-    ],
     "software-development/plan/SKILL.md": [
       1780667046915209452,
       8974
-    ],
-    "software-development/python-debugpy/SKILL.md": [
-      1778471610461931224,
-      13172
     ],
     "software-development/requesting-code-review/SKILL.md": [
       1780667046915314828,
@@ -962,12 +898,8 @@
       10742
     ],
     "software-development/systematic-debugging/SKILL.md": [
-      1780667046915543203,
-      10471
-    ],
-    "software-development/test-driven-development/SKILL.md": [
-      1780667046915711204,
-      9564
+      1780807752948148704,
+      10892
     ],
     "software-development/writing-plans/SKILL.md": [
       1778471610462510851,
@@ -1187,55 +1119,10 @@
       }
     },
     {
-      "skill_name": "apple-notes",
+      "skill_name": "apple-platform",
       "category": "apple",
-      "frontmatter_name": "apple-notes",
-      "description": "Manage Apple Notes via memo CLI: create, search, edit.",
-      "platforms": [
-        "macos"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "apple-reminders",
-      "category": "apple",
-      "frontmatter_name": "apple-reminders",
-      "description": "Apple Reminders via remindctl: add, list, complete.",
-      "platforms": [
-        "macos"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "findmy",
-      "category": "apple",
-      "frontmatter_name": "findmy",
-      "description": "Track Apple devices/AirTags via FindMy.app on macOS.",
-      "platforms": [
-        "macos"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "imessage",
-      "category": "apple",
-      "frontmatter_name": "imessage",
-      "description": "Send and receive iMessages/SMS via the imsg CLI on macOS.",
+      "frontmatter_name": "apple-platform",
+      "description": "Apple platform automation — Notes, Reminders, iMessage, a...",
       "platforms": [
         "macos"
       ],
@@ -1278,29 +1165,8 @@
       "skill_name": "claude-code",
       "category": "autonomous-ai-agents",
       "frontmatter_name": "claude-code",
-      "description": "Delegate coding to Claude Code CLI (features, PRs).",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "codex",
-      "category": "autonomous-ai-agents",
-      "frontmatter_name": "codex",
-      "description": "Delegate coding to OpenAI Codex CLI (features, PRs).",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
+      "description": "Delegate coding to Claude Code CLI (features, PRs). This ...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -1340,23 +1206,6 @@
       "frontmatter_name": "openclaw-deep-research",
       "description": "Setup OpenClaw as a deep researcher Telegram bot with per...",
       "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "opencode",
-      "category": "autonomous-ai-agents",
-      "frontmatter_name": "opencode",
-      "description": "Delegate coding to OpenCode CLI (features, PR review).",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -1503,23 +1352,6 @@
       "category": "creative",
       "frontmatter_name": "ascii-art",
       "description": "ASCII art: pyfiglet, cowsay, boxes, image-to-ascii.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "ascii-video",
-      "category": "creative",
-      "frontmatter_name": "ascii-video",
-      "description": "ASCII video: convert video/audio to colored ASCII MP4/GIF.",
       "platforms": [
         "linux",
         "macos",
@@ -2196,70 +2028,10 @@
       }
     },
     {
-      "skill_name": "github-nested-repo-backup",
-      "category": "github-nested-repo-backup",
-      "frontmatter_name": "github-nested-repo-backup",
-      "description": "Backup large directory (like wiki) lên GitHub khi có nest...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "github-wiki-backup",
-      "category": "github-wiki-backup",
-      "frontmatter_name": "github-wiki-backup",
-      "description": "Backup large wiki/knowledge base lên GitHub với proper .g...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
       "skill_name": "codebase-inspection",
       "category": "github",
       "frontmatter_name": "codebase-inspection",
       "description": "Inspect codebases w/ pygount: LOC, languages, ratios.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "github-auth",
-      "category": "github",
-      "frontmatter_name": "github-auth",
-      "description": "GitHub auth setup: HTTPS tokens, SSH keys, gh CLI login.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "github-code-review",
-      "category": "github",
-      "frontmatter_name": "github-code-review",
-      "description": "Review PRs: diffs, inline comments via gh or REST.",
       "platforms": [
         "linux",
         "macos",
@@ -2290,27 +2062,10 @@
       }
     },
     {
-      "skill_name": "github-pr-workflow",
+      "skill_name": "github-operations",
       "category": "github",
-      "frontmatter_name": "github-pr-workflow",
-      "description": "GitHub PR lifecycle: branch, commit, open, CI, merge.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "github-repo-management",
-      "category": "github",
-      "frontmatter_name": "github-repo-management",
-      "description": "Clone/create/fork repos; manage remotes, releases.",
+      "frontmatter_name": "github-operations",
+      "description": "Complete GitHub workflow — auth, repo management, PR work...",
       "platforms": [
         "linux",
         "macos",
@@ -3905,19 +3660,6 @@
       }
     },
     {
-      "skill_name": "openclaw-agent-profiles",
-      "category": "openclaw",
-      "frontmatter_name": "openclaw-agent-profiles",
-      "description": "Hướng dẫn Researcher bot cách tự setup thêm agent profile...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
       "skill_name": "performance-optimization",
       "category": "performance-optimization",
       "frontmatter_name": "performance-optimization",
@@ -4240,19 +3982,6 @@
       }
     },
     {
-      "skill_name": "last30days",
-      "category": "research",
-      "frontmatter_name": "last30days",
-      "description": "Research trending topics, viral content, and emerging pat...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
       "skill_name": "llm-wiki",
       "category": "research",
       "frontmatter_name": "llm-wiki",
@@ -4287,29 +4016,23 @@
       }
     },
     {
-      "skill_name": "research-paper-writing",
+      "skill_name": "social-media-research",
       "category": "research",
-      "frontmatter_name": "research-paper-writing",
-      "description": "Write ML papers for NeurIPS/ICML/ICLR: design→submit.",
-      "platforms": [
-        "linux",
-        "macos"
-      ],
+      "frontmatter_name": "social-media-research",
+      "description": "Research topics across YouTube, X/Twitter, Reddit, TikTok...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
-        "requires_toolsets": [
-          "terminal",
-          "files"
-        ],
+        "requires_toolsets": [],
         "fallback_for_tools": [],
         "requires_tools": []
       }
     },
     {
-      "skill_name": "social-media-research",
+      "skill_name": "social-media-trends",
       "category": "research",
-      "frontmatter_name": "social-media-research",
-      "description": "Research topics across YouTube, X/Twitter, Reddit, TikTok...",
+      "frontmatter_name": "social-media-trends",
+      "description": "Research trending topics, viral content, and emerging pat...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -4367,19 +4090,6 @@
         "macos",
         "windows"
       ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "tiktok-shop-product-research",
-      "category": "social-media",
-      "frontmatter_name": "tiktok-shop-product-research",
-      "description": "Validate a product (Shopee link, TikTok Shop, or product ...",
-      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -4477,23 +4187,6 @@
       }
     },
     {
-      "skill_name": "node-inspect-debugger",
-      "category": "software-development",
-      "frontmatter_name": "node-inspect-debugger",
-      "description": "Debug Node.js via --inspect + Chrome DevTools Protocol CLI.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
       "skill_name": "plan",
       "category": "software-development",
       "frontmatter_name": "plan",
@@ -4502,22 +4195,6 @@
         "linux",
         "macos",
         "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "python-debugpy",
-      "category": "software-development",
-      "frontmatter_name": "python-debugpy",
-      "description": "Debug Python: pdb REPL + debugpy remote (DAP).",
-      "platforms": [
-        "linux",
-        "macos"
       ],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -4582,23 +4259,6 @@
       "category": "software-development",
       "frontmatter_name": "systematic-debugging",
       "description": "4-phase root cause debugging: understand bugs before fixing.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "test-driven-development",
-      "category": "software-development",
-      "frontmatter_name": "test-driven-development",
-      "description": "TDD: enforce RED-GREEN-REFACTOR, tests before code.",
       "platforms": [
         "linux",
         "macos",

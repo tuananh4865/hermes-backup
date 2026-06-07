@@ -1,6 +1,6 @@
 model:
   base_url: https://api.minimax.io/anthropic
-  default: MiniMax-M3
+  default: MiniMax-M2.7
   provider: minimax
 providers:
   minimax:
@@ -11,7 +11,7 @@ credential_pool_strategies: {}
 toolsets:
 - hermes-cli
 agent:
-  max_turns: 300
+  max_turns: 150
   gateway_timeout: 1800
   restart_drain_timeout: 60
   api_max_retries: 3
@@ -52,7 +52,7 @@ terminal:
   persistent_shell: true
   vercel_runtime: node24
 web:
-  backend: exa
+  backend: searxng
   search_backend: ''
   extract_backend: ''
   use_gateway: false
@@ -102,7 +102,7 @@ tool_loop_guardrails:
     idempotent_no_progress: 5
 compression:
   enabled: true
-  threshold: 0.7
+  threshold: 0.5
   target_ratio: 0.2
   protect_last_n: 20
   hygiene_hard_message_limit: 400
@@ -561,8 +561,8 @@ custom_providers:
       context_length: 64000
   name: LM Studio
 image_gen:
-  model: fal-ai/flux-2-pro
-  provider: fal
+  model: gpt-image-2-medium
+  provider: openai-codex
   use_gateway: false
 known_plugin_toolsets:
   cli:
@@ -586,6 +586,7 @@ platform_toolsets:
   - clarify
   - code_execution
   - computer_use
+  - context_engine
   - cronjob
   - delegation
   - file
@@ -599,7 +600,6 @@ platform_toolsets:
   - todo
   - tts
   - video
-  - video_gen
   - vision
   - web
   telegram:
@@ -607,6 +607,7 @@ platform_toolsets:
   - clarify
   - code_execution
   - computer_use
+  - context_engine
   - cronjob
   - delegation
   - file
@@ -619,10 +620,8 @@ platform_toolsets:
   - todo
   - tts
   - video
-  - video_gen
   - vision
   - web
-  - x_search
 plugins:
   disabled: []
   enabled:
@@ -655,7 +654,7 @@ self_learning:
 session_reset:
   at_hour: 4
   idle_minutes: 1440
-  mode: both
+  mode: none
 smart_model_routing:
   cheap_model: {}
   enabled: false

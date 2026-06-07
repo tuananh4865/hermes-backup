@@ -11,7 +11,17 @@ metadata:
     related_skills: [test-driven-development, plan, subagent-driven-development]
 ---
 
-# Systematic Debugging
+# Systematic Debugging and Testing
+
+## Umbrella Note
+
+This skill absorbs four formerly separate skills:
+- `python-debugpy` — Python remote debugging via debugpy
+- `node-inspect-debugger` — Node.js debugging via --inspect + Chrome DevTools Protocol
+- `test-driven-development` — TDD red-green-refactor workflow
+- `systematic-debugging` (core) — general systematic diagnosis methodology
+
+Full absorbed content in `references/` directory.
 
 ## Overview
 

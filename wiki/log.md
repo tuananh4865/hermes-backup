@@ -1,5 +1,38 @@
 # Wiki Log
 
+## 2026-06-07
+
+### Daily Activity
+- **MiniMax API authentication broken all day** — 9 sessions failed with 401 error
+- **Root cause**: API key not being sent in `X-Api-Key` header (Bearer None instead)
+- **TikTok content research task FAILED** — User's request from 23:53 on 06/06 never completed
+- **Sessions**: All failed with auth error throughout the day
+
+### Sessions
+| Time | Platform | Topic | Status |
+|------|----------|-------|--------|
+| 23:53 (06/06) | DM | TikTok content writing research | ❌ Failed (401) |
+| 00:20 | DM | "hi" greeting | ❌ Failed (401) |
+| 07:36 | DM | "hi" greeting | ❌ Failed (401) |
+| 08:40 | DM | "hi" greeting | ❌ Failed (401) |
+
+### Errors
+```
+HTTP 401: login fail: Please carry the API secret key in the 'X-Api-Key' field of the request header
+Authorization: Bearer None ← API key missing
+```
+
+### Cron Jobs Status
+- 00:00 Daily Session Review — ❌ Failed (auth error)
+- 02:00 Autoresearch Nightly — Unknown (likely failed)
+- 07:00 X Research — Unknown (likely failed)
+
+### ⚠️ Needs Fix
+- **MiniMax API key configuration** — must fix X-Api-Key header
+- **Re-run TikTok content research** — user's original task from last night
+
+---
+
 ## 2026-06-06
 
 ### Daily Activity

@@ -1,24 +1,10 @@
-Task '[System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversation history below is intact. If it contains unfin' — session 20260601, 2 turns
-§
-Modified files: handler.py
-§
 Task '[Tuấn Anh] Anh muốn em thực hiện automation research và lấy thông tin để đăng bài trên tài khoản X cho anh' — 1 turns
 §
 Task '[System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversation history below is intact. If it contains unfin' — session 20260601, 3 turns
 §
-Modified files: handler.py
-§
-Task '[System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversation history below is intact. If it contains unfin' — session 20260601, 3 turns
-§
-Modified files: handler.py
-§
 Task '[System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversation history below is intact. If it contains unfin' — session 20260601, 4 turns
 §
-Modified files: handler.py
-§
 Task '[System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversation history below is intact. If it contains unfin' — session 20260601, 5 turns
-§
-Modified files: handler.py
 §
 Task '[Tuấn Anh] Minimax mới ra mắt model mới, check trang chủ và tìm cách add model đó vào danh sách model cho anh!' — 1 turns
 §
@@ -37,3 +23,17 @@ Task '[Tuấn Anh] https://shopee.vn/K-F-Concept-3-Bộ-l%E1%BB%8Dc-từ-tính-C
 Task '[Tuấn Anh] Check top những video review sản phẩm này được nhiều view nhất!' — 1 turns
 §
 Task 'hi' — 1 turns
+§
+Task 'ping' — 1 turns
+§
+TikTok content improvement primary goal — actionable insights, systematic tracking, Vietnamese casual style. Cron automations: autoresearch nightly (2AM), TikTok 5-channel monitor (11PM), Hermes backup (3AM), wiki health (4AM), session review (0AM). yt-dlp for TikTok downloads (browser-harness unreliable).
+§
+Task 'hi' — session 20260606, 9 turns
+§
+Task 'hi' — session 20260606, 10 turns
+§
+Task 'hi' — session 20260606, 11 turns
+§
+Task 'https://youtu.be/pmqTgyPZdto?si=2cJTlXwTFFHHgIjE phân tích' — 1 turns
+§
+Task '[Tuấn Anh] https://vt.tiktok.com/ZSQj5rPg6/' — 1 turns

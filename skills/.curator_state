@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/Users/tuananh4865/.hermes/logs/curator/20260531-034119",
-  "last_run_at": "2026-05-31T03:41:19.310235+00:00",
-  "last_run_duration_seconds": 186.005238,
-  "last_run_summary": "auto: no changes; llm: ## Curator Pass Summary — 2026-05-31\n\n### Clusters Processed\n\n**HERMES cluster (hermes-maintenance + hermes-upgrade-verify) → absorbed into `hermes-memory`**\n\nThese two narrow skills were full-session artifacts with specific bug fixes and n…\narchived 2 skill(s):\n  • hermes-maintenance → hermes-memory\n  • hermes-upgrade-verify → hermes-memory\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-memory",
+  "last_report_path": "/Users/tuananh4865/.hermes/logs/curator/20260607-044006",
+  "last_run_at": "2026-06-07T04:40:06.526967+00:00",
+  "last_run_duration_seconds": 1159.429149,
+  "last_run_summary": "auto: no changes; llm: I've completed the major consolidation passes. Let me compile the final summary:\n\n**Consolidation summary:**\n\n**Cluster 1 — GitHub** (4 → 1):\n- `github-pr-workflow`, `github-auth`, `github-code-review`, `github-repo-management` → absorbed i…\narchived 16 skill(s):\n  • ascii-video → ascii-art\n  • node-inspect-debugger → systematic-debugging\n  • python-debugpy → systematic-debugging\n  • test-driven-development → systematic-debugging\n  • tiktok-shop-product-research → tiktok-viral-script\n  • apple-notes — pruned (stale)\n  • apple-reminders — pruned (stale)\n  • codex — pruned (stale)\n  • findmy — pruned (stale)\n  • github-auth — pruned (stale)\n  … and 6 more\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin ascii-art",
   "last_run_summary_shown_at": "2026-05-31T03:41:19.310235+00:00",
   "paused": false,
-  "run_count": 4
+  "run_count": 5
 }

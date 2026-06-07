@@ -4,7 +4,7 @@ title: TikTok Viral Script
 description: Research trending TikTok content and write viral scripts in Tuấn Anh's voice — hook, body, CTA structure for TikTok Shop Vietnam affiliate content.
 trigger: When Anh asks to write a TikTok script, research trending products/sounds, or create content calendar.
 created: 2026-05-08
-updated: 2026-05-15
+updated: 2026-06-07
 type: skill
 tags: [tiktok, content, vietnam, social-media]
 confidence: high
@@ -20,6 +20,13 @@ Write viral TikTok Shop scripts in Tuấn Anh's authentic Vietnamese voice.
 - Anh asks to research trending products/sounds on TikTok Vietnam
 - Anh asks for a content calendar or content plan
 - Any request involving TikTok Shop affiliate content
+- **Anh shares a TikTok URL + "phân tích" / "tải và phân tích" / "review video"** → Run `references/tiktok-video-analysis-workflow.md` pipeline
+
+**⚠️ Distinguish between two request types:**
+| Request | Action |
+|---------|--------|
+| "phân tích video này" + URL | yt-dlp → ffmpeg → vision analyze → synthesis report |
+| "viết script cho video này" + URL | Read content first, then write script in Anh's voice |
 
 ## Workflow
 
@@ -27,6 +34,19 @@ Write viral TikTok Shop scripts in Tuấn Anh's authentic Vietnamese voice.
 
 **⚠️ CRITICAL (2026-05-13): When Anh shares a URL first — READ IT BEFORE researching.**
 User's workflow: URL shared → Extract/read content → Confirm understanding → Then research if asked.
+
+**⚠️ YouTube Video Analysis (2026-06-07):**
+When Anh shares a YouTube URL + "phân tích":
+1. `yt-dlp --write-auto-sub --sub-lang en --skip-download` to extract captions
+2. Clean with `sed 's/<[^>]*>//g' | grep -v '^$'`
+3. If Vietnamese subs needed but unavailable (HTTP 429), fall back to English subs
+4. Parse into key sections → synthesis report with TikTok-relevant lessons
+
+**YouTube → TikTok adaptation lessons to extract:**
+- Hook patterns (pattern disrupt, bold statements, etc.)
+- Storytelling structures (personal vulnerability, rags-to-riches, etc.)
+- CTA types (signature word, question CTAs, community CTAs)
+- "Why it works" + "TikTok adaptation" for each pattern found
 
 **Why this matters:** In 2026-05-13 session, agent assumed @ecom_linus tweet was about "TikTok algorithm" without reading it. The tweet was actually about AI UGC + affiliate marketing. User had to correct twice.
 
@@ -357,9 +377,55 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - `references/tiktok-trending-products-may-13-2026.md` — Body Mist LACOON, Cooling Neck Ring, Mini Cooler 2nd push, #StandBanhMi, "thơm vãi" sensory intensifier (May 13 session findings)
 - `references/may-14-2026-findings.md` — LỌ vs LỎ critical distinction, Summer Cooling margins, FindNiche top products, Gen Z slang update (May 14 orchestrator session)
 - `references/may-15-2026-findings.md` — Sunscreen ASUNMEE SPF50+ push, Summer peak data (+21% GMV), Top products chart, weekend calendar (May 15 session)
+- `references/tiktok-content-writing-2026.md` — Hooks (5 types), Script Structure (5 parts), 17 Viral Formulas, Psychology behind hooks, TikTok Shop tips (2026-06-06) ✅ NEW
+- `references/tiktok-video-analysis-workflow.md` — Pipeline: yt-dlp → ffmpeg → MiniMax vision → synthesis report. Frame sampling, scoring rubric, content style classification (2026-06-06) ✅ NEW
+- `references/gen-z-slang-june-2026.md` — 4 new hook formats discovered: "quát 1 câu", Gamification quest, POV Twist, Meta-humor. June 2026 nightly monitor findings ✅ NEW
+- `references/tiktok-monitor-10channel-june-2026.md` — Full 10-video analysis from 5 channels, deduplication tracker, "1 Mẹo" format discovery, CTA patterns, URL discovery workflow (2026-06-07) ✅ NEW
+- `references/youtube-tiktok-adaptation.md` — YouTube → TikTok adaptation lessons from Evan Carmichael's "YouTube Is Not Too Crowded" (2026-06-07) ✅ NEW
+- `references/tiktok-lesson-learn-system.md` — Lesson-learn accumulation system: 4 topic files (hooks, cta, storytelling, tiktok-shop), append-only update protocol, source channels, how-to-use guide (2026-06-07) ✅ NEW
 - **Ecom_Linus AI UGC Model:** See `references/ecom-linus-affiliate-model.md` — Glitchy setup, Vietnam affiliate networks, AI tools stack, angle research methodology
 - Gen Z Research: Tra Vinh University Journal of Science — "Factors Affecting Gen Z Online Purchase Intention on TikTok Shop"
 - Product research: https://findniche.com/tiktok/trending-products-vn
+
+## 🚨 MANDATORY: Proactive Wiki Saving (2026-06-06)
+
+**Rule:** After EVERY research task, save findings to wiki WITHOUT asking Anh.
+
+### What to save (always):
+1. **New findings** → create/update `concepts/` or `entities/` page
+2. **Index update** → add new page to `wiki/index.md` under correct section
+3. **Log entry** → append `## [YYYY-MM-DD] action | summary` to `wiki/log.md`
+
+### Save sequence (no asking needed):
+```
+1. Research complete → findings fresh in context
+2. write_file to wiki/concepts/[topic].md (create if new)
+3. patch index.md (add entry)
+4. patch log.md (append entry)
+5. Report to Anh — DONE
+```
+
+### When saving applies:
+- ✅ New research findings (hooks, trends, slang, scripts)
+- ✅ New product/product category insights
+- ✅ New Gen Z slang discovered
+- ✅ New platform/algorithm findings
+- ✅ Corrections to previous understanding
+- ✅ New script formulas or frameworks
+- ❌ NOT: trivial questions with no new learning
+- ❌ NOT: one-off product URL analysis (wiki already has URL-first protocol)
+
+### Wiki path conventions:
+- Wiki: `/Volumes/Storage-1/Hermes/wiki/`
+- Concept pages: `wiki/concepts/[descriptive-name].md`
+- Entity pages: `wiki/entities/[name].md`
+- Always use absolute paths
+
+### Quality bar for wiki pages:
+- Minimum 2 wikilinks to other wiki pages
+- YAML frontmatter: title, created, updated, type, tags, confidence, relationships
+- Vietnamese content (for Vietnam-focused topics)
+- Source attribution at bottom
 
 ## Output Paths
 
@@ -389,6 +455,10 @@ ls -lt /Users/tuananh4865/.hermes/cron/output/*/2026-$(date +%Y-%m-%d)*.md 2>/de
 ```
 
 ## Pitfalls (AVOID THESE)
+
+### Pipeline Mistakes
+- ❌ **yt-dlp URL without quoting** — parentheses in TikTok short URLs (`vt.tiktok.com/ZSQYqMofg/`) cause bash syntax error "unexpected token '('". ALWAYS wrap URL in double quotes: `yt-dlp -o "file.mp4" "https://..."`
+- ❌ **video_analyze as first approach** — requires LMS model loaded, often fails with "No models loaded". Use ffmpeg frame extraction + MiniMax vision instead as reliable fallback
 
 ### Script Structure Mistakes
 - ❌ **Listing specs instead of telling story** — "product has 200ml, made of bamboo, organic" = boring. Instead: "anh dùng 2 tuần rồi, da em nó mềm lắm luôn"
@@ -537,6 +607,11 @@ Key references absorbed from `research-analyst`:
 - Platform fee trajectory (2024: 2-3% → 2027E: 15-17%)
 
 See: `references/commission-reference.md` (absorbed from research-analyst)
+
+### Note on wiki writes:
+- Background review blocks `write_file` to wiki
+- Save wiki path to remember: `/Volumes/Storage-1/Hermes/wiki/queries/youtube-tiktok-adaptation-evan-carmichael.md`
+- Run wiki write in next foreground session
 
 ## Related
 - [[hermes-autoresearch]] — Autoresearch loop for nightly research runs

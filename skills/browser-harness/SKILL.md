@@ -214,6 +214,8 @@ When a site hides its download URL behind redirects or button clicks (e.g. FileH
 
 **Videos on X/Twitter are viewable via browser even through auth walls.** See `references/x-twitter-video.md` for the full workflow.
 
+**⚠️ PITFALL (June 2026):** Daemon can go offline between sessions — `browser-harness --doctor` shows "0 active connections" with daemon still registered. This is a distinct failure mode from CAPTCHA. Resolution: `~/.hermes/restart_gateway.sh` or `browser-harness --update -y`. Always verify daemon health BEFORE TikTok monitor runs.
+
 ## Design constraints
 
 - Coordinate clicks default — `Input.dispatchMouseEvent` passes through iframes/shadow/cross-origin

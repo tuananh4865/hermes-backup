@@ -485,6 +485,10 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** The document mentions "When Anh provides a URL or content to ingest" - this appears to be a specific reference to a person named "Anh" which seems out of place in a general schema document
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The document references "Anh" in the Ingest Workflow section ("When Anh provides a URL...") but doesn't explain who Anh is. This seems like a placeholder or incomplete reference.
+
 === index.md ===
 ---
 confidence: high
@@ -590,6 +594,7 @@ relationships:
 - [[gen-z-slang-2026-04]] — Vietnamese + English Gen Z slang, Chuzz, Gyatt, đỉnh, toang (2026-04-29)
 
 ### Hermes X Research
+- [[x-research-hermes-2026-06-07]] — Hermes X research June 7: v0.16 Surface Release, 176K stars, Native Desktop App, NVIDIA partnership (2026-06-07)
 - [[hermes-x-research-2026-05-27]] — Hermes X research May 27: Hermes Desktop, Browserbase integration, Bitwarden support, funding update (2026-05-27)
 - [[hermes-x-research-2026-05-25]] — Hermes X research: 157.2K stars, v0.14.0 Foundation, overtook OpenClaw, Windows beta, X Premium integration (2026-05-25)
 - [[hermes-x-research-2026-05-20]] — Hermes Agent X research: v0.14.0 Foundation Release, 155K stars, 180x browser automation, Windows beta (2026-05-20)
@@ -860,6 +865,10 @@ relationships:
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The page mentions "Total pages: ~156" but given the extensive list of entries, this might need verification
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page says "Total pages: ~156" but I see many entries. Hard to verify but the count could be inaccurate
 
 === log.md (last 20 lines) ===
 - Telegram scrapes: removed old timestamp files (10-17 series)  
@@ -1135,6 +1144,10 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The page mentions TikTok Shop Vietnam but doesn't include any actual TikTok handle, follower count, or content examples
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page has "Updated 2026-05-21" but we don't know the current date context
 
 > **Auto-improvement note:** *Missing or outdated information:**
 

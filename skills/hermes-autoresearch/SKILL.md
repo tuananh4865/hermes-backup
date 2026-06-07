@@ -390,7 +390,7 @@ patch /Volumes/Storage-1/Hermes/wiki/index.md \
 - **@pratos_** (prthamesh): X Premium + Grok integration with Hermes now working
 - **@XDevelopers**: xai team published xurl skill setup guide for Hermes → posting to X
 
-**No v0.16 found** — latest remains v0.15.1 (May 29). Farhan's June 2 post about "next evolution" may be teasing v0.16.
+**v0.16 "Surface Release" CONFIRMED (June 2, 2026)** — Native desktop app across 100 PRs + 159 contributors. 176K+ GitHub stars. NVIDIA RTX AI Garage partnership. Desktop app bundles ALL features (memory, skills, scheduling, browser automation) as public preview. Farhan's June 2 "next evolution" post = v0.16 shipping same day.
 
 Target: Document 5+ new techniques
 
@@ -1431,6 +1431,7 @@ cronjob create --name "Job Name" --prompt "..." --schedule "..." --skills [...] 
 - `references/self-improving-agents-may-2026-session.md` — **3 key techniques** (May 23): SICA (17→53% SWE-Bench), ERL (+7.8% Gaia2), DGM-Hyperagents. CVE-2026-7396 security note.
 - `references/self-debugging-techniques-may-2026.md` — **7 self-debugging techniques** (May 17): ReflexiCoder, Polaris, DebugRepair, SelfHeal, ErrorProbe, DeepVerifier, ERL. Paradigm shift: external feedback → self-generated verification, response-level → policy-level changes, single → multi-agent diagnosis teams.
 - `references/self-improving-agents-june-2026.md` — **6 NEW techniques (June 3)**: SE-Agent (2508.02085), Focus/Active Context (2601.07190), Memory Survey (2603.07670v1), ETO (GitHub), Multi-Agent Evolve, Context Curation RL (2604.11462v1). 30 total techniques documented.
+- `references/self-debugging-techniques-june-2026.md` — **3 NEW self-debugging techniques (June 8)**: Debug2Fix (2602.18571, PDB/JDB debugger integration, HIGH applicability), PyCapsule (2502.02928v2, dual-agent runtime tracing), Self-Improving Coding Agent (2504.15228, autonomous code editing). Total 33+ techniques documented.
 - `references/memory-optimization-agents-may-2026.md` — 8 NEW arXiv memory techniques (May 10)
 - `references/memento-skills-may-2026.md` — **Tool Creation: Memento-Skills** (May 26): frozen LLM + editable skill library, 80% task success (+78%), arXiv:2603.18743
 - `references/hermes-v0.13-tenacity-release.md` — v0.13.0 major release (May 9)

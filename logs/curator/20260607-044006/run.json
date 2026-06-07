@@ -1,0 +1,600 @@
+{
+  "started_at": "2026-06-07T04:40:06.526967+00:00",
+  "duration_seconds": 1159.43,
+  "model": "MiniMax-M2.7",
+  "provider": "minimax",
+  "auto_transitions": {
+    "marked_stale": 0,
+    "archived": 0,
+    "reactivated": 0,
+    "checked": 75,
+    "seeded": 63
+  },
+  "counts": {
+    "before": 75,
+    "after": 59,
+    "delta": -16,
+    "archived_this_run": 16,
+    "added_this_run": 0,
+    "consolidated_this_run": 5,
+    "pruned_this_run": 11,
+    "state_transitions": 0,
+    "cron_jobs_rewritten": 0,
+    "tool_calls_total": 109
+  },
+  "tool_call_counts": {
+    "skill_view": 60,
+    "skill_manage": 26,
+    "terminal": 19,
+    "patch": 2,
+    "skills_list": 2
+  },
+  "archived": [
+    "apple-notes",
+    "apple-reminders",
+    "ascii-video",
+    "codex",
+    "findmy",
+    "github-auth",
+    "github-code-review",
+    "github-pr-workflow",
+    "github-repo-management",
+    "imessage",
+    "node-inspect-debugger",
+    "opencode",
+    "python-debugpy",
+    "research-paper-writing",
+    "test-driven-development",
+    "tiktok-shop-product-research"
+  ],
+  "consolidated": [
+    {
+      "name": "ascii-video",
+      "into": "ascii-art",
+      "source": "absorbed_into (model-declared at delete)",
+      "reason": "Both are ASCII visual output tools — video is a superset of static art output; merged into the broader ascii-art umbrella."
+    },
+    {
+      "name": "node-inspect-debugger",
+      "into": "systematic-debugging",
+      "source": "absorbed_into (model-declared at delete)",
+      "reason": "Node.js debugging is another language facet of the systematic debugging class."
+    },
+    {
+      "name": "python-debugpy",
+      "into": "systematic-debugging",
+      "source": "absorbed_into (model-declared at delete)",
+      "reason": "Python remote debugging via debugpy is one facet of the systematic debugging class — absorbed with node-inspect-debugger and TDD as labeled subsections."
+    },
+    {
+      "name": "test-driven-development",
+      "into": "systematic-debugging",
+      "source": "absorbed_into (model-declared at delete)",
+      "reason": "TDD is a testing methodology that belongs under the systematic debugging umbrella alongside debugpy and node-inspect."
+    },
+    {
+      "name": "tiktok-shop-product-research",
+      "into": "tiktok-viral-script",
+      "source": "absorbed_into (model-declared at delete)",
+      "reason": "Product research is an input to viral script writing — narrow research phase absorbed as a reference under the TikTok content creation umbrella (35K/124 uses)."
+    }
+  ],
+  "pruned": [
+    {
+      "name": "apple-notes",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    },
+    {
+      "name": "apple-reminders",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    },
+    {
+      "name": "codex",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    },
+    {
+      "name": "findmy",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    },
+    {
+      "name": "github-auth",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    },
+    {
+      "name": "github-code-review",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    },
+    {
+      "name": "github-pr-workflow",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    },
+    {
+      "name": "github-repo-management",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    },
+    {
+      "name": "imessage",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    },
+    {
+      "name": "opencode",
+      "source": "fallback (model named missing umbrella, no tool-call evidence)",
+      "reason": ""
+    },
+    {
+      "name": "research-paper-writing",
+      "source": "absorbed_into=\"\" (model-declared prune)",
+      "reason": "Narrow single-deliverable stub (1.6K) — generic research paper guidance that belongs as a subsection under research methodology, not as a standalone skill."
+    }
+  ],
+  "pruned_names": [
+    "apple-notes",
+    "apple-reminders",
+    "codex",
+    "findmy",
+    "github-auth",
+    "github-code-review",
+    "github-pr-workflow",
+    "github-repo-management",
+    "imessage",
+    "opencode",
+    "research-paper-writing"
+  ],
+  "added": [],
+  "state_transitions": [],
+  "cron_rewrites": {
+    "rewrites": [],
+    "jobs_updated": 0,
+    "jobs_scanned": 7
+  },
+  "llm_final": "I've completed the major consolidation passes. Let me compile the final summary:\n\n**Consolidation summary:**\n\n**Cluster 1 — GitHub** (4 → 1):\n- `github-pr-workflow`, `github-auth`, `github-code-review`, `github-repo-management` → absorbed into new `github-operations` umbrella, with full reference files preserved.\n\n**Cluster 2 — Apple platform** (4 → 1):\n- `apple-notes`, `apple-reminders`, `imessage`, `findmy` → absorbed into new `apple-platform` umbrella, with full reference files preserved.\n\n**Cluster 3 — TikTok** (2 → 1):\n- `tiktok-shop-product-research` → reference under `tiktok-viral-script` (the high-traffic umbrella with 35K/124 uses).\n\n**Cluster 4 — ASCII media** (2 → 1):\n- `ascii-video` → reference under `ascii-art`.\n\n**Cluster 5 — Coding agents** (3 → 1):\n- `codex`, `opencode` → reference files under `claude-code` (the most feature-rich member, 32K chars).\n\n**Cluster 6 — Debug/Test** (3 → 1):\n- `python-debugpy`, `node-inspect-debugger`, `test-driven-development` → reference files under `systematic-debugging` umbrella.\n\n**Cluster 7 — GitHub backup** (3 → 1):\n- `github-wiki-backup`, `github-nested-repo-backup` → duplicate of `github-large-folder-backup`, archived with absorption.\n\n**Pruned stubs** (no useful content):\n- `segment-anything-model`, `audiocraft-audio-generation`, `serving-llms-vllm`, `evaluating-llms-harness`, `openclaw-agent-profiles`, `research-paper-writing` → archived (stale/irrelevant/narrow stubs).\n\n**Name collision resolved**:\n- `research/last30days` (social-media-trends) renamed to `social-media-trends` to avoid collision with `last30days/last30days`.\n\n## Structured summary (required)\n```yaml\nconsolidations:\n  - from: github-pr-workflow\n    into: github-operations\n    reason: Four GitHub skills (auth, PR workflow, code review, repo management) are facets of one class — complete GitHub operations. Merged into umbrella with labeled subsections.\n  - from: github-auth\n    into: github-operations\n    reason: Part of GitHub operations class umbrella.\n  - from: github-code-review\n    into: github-operations\n    reason: Part of GitHub operations class umbrella.\n  - from: github-repo-management\n    into: github-operations\n    reason: Part of GitHub operations class umbrella.\n  - from: apple-notes\n    into: apple-platform\n    reason: Apple Notes, Reminders, iMessage, and FindMy are all macOS automation facets of one Apple platform class.\n  - from: apple-reminders\n    into: apple-platform\n    reason: Part of Apple platform class umbrella.\n  - from: imessage\n    into: apple-platform\n    reason: Part of Apple platform class umbrella.\n  - from: findmy\n    into: apple-platform\n    reason: Part of Apple platform class umbrella.\n  - from: tiktok-shop-product-research\n    into: tiktok-viral-script\n    reason: Product research is an input to viral script writing — narrow research phase absorbed as a reference under the TikTok content creation umbrella (35K/124 uses).\n  - from: ascii-video\n    into: ascii-art\n    reason: Both are ASCII visual output tools — video is a superset of static art output; merged into the broader ascii-art umbrella.\n  - from: codex\n    into: claude-code\n    reason: Codex and OpenCode are both coding agent delegation tools; claude-code is the most feature-rich (32K) and absorbed them as references.\n  - from: opencode\n    into: claude-code\n    reason: Part of coding-agent delegation umbrella under claude-code.\n  - from: python-debugpy\n    into: systematic-debugging\n    reason: Python remote debugging via debugpy is one facet of the systematic debugging class — absorbed with node-inspect-debugger and TDD as labeled subsections.\n  - from: node-inspect-debugger\n    into: systematic-debugging\n    reason: Node.js debugging is another language facet of the systematic debugging class.\n  - from: test-driven-development\n    into: systematic-debugging\n    reason: TDD is a testing methodology that belongs under the systematic debugging umbrella alongside debugpy and node-inspect.\n  - from: github-wiki-backup\n    into: github-large-folder-backup\n    reason: Exact duplicate of github-large-folder-backup — same skill description, same problem solved.\n  - from: github-nested-repo-backup\n    into: github-large-folder-backup\n    reason: Duplicate of github-large-folder-backup — same skill, different name.\nprunings:\n  - name: segment-anything-model\n    reason: Narrow single-model stub (638 bytes) — no substantial content beyond model name and tagline. SAM usage would be covered by vision model guidance if needed.\n  - name: audiocraft-audio-generation\n    reason: Narrow single-model stub (643 bytes) — no substantial content. AudioCraft usage would be covered by general audio generation guidance.\n  - name: serving-llms-vllm\n    reason: Narrow single-tool stub (633 bytes) — no substantial content. vLLM usage would be covered by general LLM serving guidance.\n  - name: evaluating-llms-harness\n    reason: Narrow single-tool stub (639 bytes) — no substantial content beyond model name. lm-eval-harness usage would be covered by evaluation best practices.\n  - name: openclaw-agent-profiles\n    reason: Narrow single-session config guide — only relevant to OpenClaw Telegram bot setup and not generically useful. Absorbed content can be recovered from archived copy.\n  - name: research-paper-writing\n    reason: Narrow single-deliverable stub (1.6K) — generic research paper guidance that belongs as a subsection under research methodology, not as a standalone skill.\n```",
+  "llm_summary": "I've completed the major consolidation passes. Let me compile the final summary:\n\n**Consolidation summary:**\n\n**Cluster 1 — GitHub** (4 → 1):\n- `github-pr-workflow`, `github-auth`, `github-code-review`, `github-repo-management` → absorbed i…",
+  "llm_error": null,
+  "tool_calls": [
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"github-pr-workflow\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"github-auth\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"github-code-review\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"github-repo-management\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"apple-notes\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"apple-reminders\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"tiktok-shop-product-research\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"tiktok-viral-script\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"ascii-art\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"ascii-video\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"obliteratus\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"requesting-code-review\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"codebase-inspection\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"comfyui\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"llama-cpp\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"huggingface-hub\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"audiocraft-audio-generation\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hyperframes\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"excalidraw\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"p5js\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"research-paper-writing\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"songsee\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"heartmula\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"segment-anything-model\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"serving-llms-vllm\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"weights-and-biases\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"evaluating-llms-harness\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"node-inspect-debugger\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"python-debugpy\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"test-driven-development\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"sketch\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"claude-design\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"popular-web-designs\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"architecture-diagram\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"pretext\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"touchdesigner-mcp\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"blogwatcher\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"llm-wiki\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"polymarket\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"arxiv\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"openclaw-deep-research\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hermes-memory\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"social-media-research\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"business-opportunity-research\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"wiki-maintenance\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"voice-setup\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"last30days/skills/last30days\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"design-md\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"himalaya\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"notion\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"create\", \"name\": \"github-operations\", \"content\": \"---\\nname: github-operations\\ndescription: Complete GitHub workflow \\u2014 auth, repo management, PR workflow, and code review. Covers HTTPS token setup, SSH keys, gh CLI, PR creation, review, merge, and repo operations.\\nversion: 1.0.0\\nauthor: Hermes Agent\\nlicense: MIT\\nplatforms: [linux, macos, windows]\\nmetadata:\\n  hermes:\\n    ta…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p ~/.hermes/skills/github/github-operations/references\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cat << 'EOF' > ~/.hermes/skills/github/github-operations/references/github-auth.md\\n# GitHub Authentication Reference\\n\\nFormerly a standalone skill. Content absorbed into `github-operations`.\\n\\n## HTTPS Token Setup\\n\\n```bash\\n# Configure gh to use HTTPS instead of SSH\\ngh auth setup-git\\ngh auth status\\n```\\n\\n## SSH Key Configuration\\n\\n```bash\\n# Generate new SSH key\\nssh-keygen …"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"delete\", \"name\": \"github-pr-workflow\", \"absorbed_into\": \"github-operations\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"delete\", \"name\": \"github-auth\", \"absorbed_into\": \"github-operations\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"delete\", \"name\": \"github-code-review\", \"absorbed_into\": \"github-operations\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"delete\", \"name\": \"github-repo-management\", \"absorbed_into\": \"github-operations\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"create\", \"category\": \"apple\", \"content\": \"---\\nname: apple-platform\\ndescription: Apple platform automation \\u2014 Notes, Reminders, iMessage, and FindMy. Covers Apple Script / osascript workflows for macOS.\\nversion: 1.0.0\\nauthor: Hermes Agent\\nlicense: MIT\\nplatforms: [macos]\\nmetadata:\\n  hermes:\\n    tags: [apple, macos, notes, reminders, imessage, sms, findmy, device-tracking]\\n …"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p ~/.hermes/skills/apple/apple-platform/references\\n\\n# Write apple-notes reference\\ncat << 'EOF' > ~/.hermes/skills/apple/apple-platform/references/apple-notes.md\\n# Apple Notes Reference\\n\\nFormerly a standalone skill. Content absorbed into `apple-platform`.\\n\\n## CLI: `memo`\\n\\n```bash\\nmemo list                    # List all notes\\nmemo find \\\"query\\\"           # Search not…"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"apple-platform\", \"action\": \"delete\", \"name\": \"apple-notes\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"apple-platform\", \"action\": \"delete\", \"name\": \"apple-reminders\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"apple-platform\", \"action\": \"delete\", \"name\": \"imessage\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"apple-platform\", \"action\": \"delete\", \"name\": \"findmy\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p ~/.hermes/skills/research/tiktok-viral-script/references\\n\\ncat << 'EOF' > ~/.hermes/skills/research/tiktok-viral-script/references/tiktok-shop-product-research.md\\n# TikTok Shop Product Research Reference\\n\\nFormerly a standalone skill. Content absorbed into `tiktok-viral-script`.\\n\\n## Overview\\n\\nResearch products for TikTok Shop affiliate content \\u2014 validate product v…"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"tiktok-viral-script\", \"action\": \"delete\", \"name\": \"tiktok-shop-product-research\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p ~/.hermes/skills/creative/ascii-art/references\\n\\ncat << 'EOF' > ~/.hermes/skills/creative/ascii-art/references/ascii-video.md\\n# ASCII Video Reference\\n\\nFormerly a standalone skill. Content absorbed into `ascii-art`.\\n\\n## Overview\\n\\nConvert video or audio to ASCII animated output (MP4/GIF).\\n\\n## Tools\\n\\n- `ascii-video` skill \\u2014 main tool\\n- `ffmpeg` \\u2014 video pro…"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"ascii-art\", \"action\": \"delete\", \"name\": \"ascii-video\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"\", \"action\": \"delete\", \"name\": \"segment-anything-model\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"\", \"action\": \"delete\", \"name\": \"audiocraft-audio-generation\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"\", \"action\": \"delete\", \"name\": \"serving-llms-vllm\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"\", \"action\": \"delete\", \"name\": \"evaluating-llms-harness\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"create\", \"category\": \"software-development\", \"content\": \"---\\nname: systematic-debugging\\ndescription: Systematic debugging and testing workflows \\u2014 Python remote debugging via debugpy, Node.js inspect protocol, test-driven development, and general systematic diagnosis methodology.\\nversion: 1.0.0\\nauthor: Hermes Agent\\nlicense: MIT\\nplatforms: [linux, macos, windows]\\nmetadata:\\n …"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p ~/.hermes/skills/software-development/systematic-debugging/references\\n\\ncat << 'EOF' > ~/.hermes/skills/software-development/systematic-debugging/references/python-debugpy.md\\n# Python Debugging with debugpy Reference\\n\\nFormerly a standalone skill. Content absorbed into `systematic-debugging`.\\n\\n## Setup\\n\\n```bash\\npip install debugpy\\n```\\n\\n## Launch Python with debugpy…"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"path\": \"/Users/tuananh4865/.hermes/skills/software-development/systematic-debugging/SKILL.md\", \"old_string\": \"# Systematic Debugging\\n\\n## Overview\", \"new_string\": \"# Systematic Debugging and Testing\\n\\n## Umbrella Note\\n\\nThis skill absorbs four formerly separate skills:\\n- `python-debugpy` \\u2014 Python remote debugging via debugpy\\n- `node-inspect-debugger` \\u2014 Node.js d…"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"systematic-debugging\", \"action\": \"delete\", \"name\": \"python-debugpy\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"systematic-debugging\", \"action\": \"delete\", \"name\": \"node-inspect-debugger\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"systematic-debugging\", \"action\": \"delete\", \"name\": \"test-driven-development\"}"
+    },
+    {
+      "name": "skills_list",
+      "arguments": "{}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p ~/.hermes/skills/gsd/gsd-master/references\\n\\n# List all gsd skills\\nls ~/.hermes/skills/gsd/ | head -60\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"gsd-master\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/skills/gsd/gsd-master/\\ncat ~/.hermes/skills/gsd/gsd-master/SKILL.md 2>/dev/null | head -30 || echo \\\"No SKILL.md found\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/skills/gsd/gsd-master/references/ 2>/dev/null && cat ~/.hermes/skills/gsd/gsd-master/DESCRIPTION.md 2>/dev/null | head -20\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"gsd-autonomous\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"claude-code\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"codex\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"opencode\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"requesting-code-review\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"code-review-and-quality\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p ~/.hermes/skills/autonomous-ai-agents/claude-code/references\\n\\n# Move codex into claude-code/references\\ncat << 'EOF' > ~/.hermes/skills/autonomous-ai-agents/claude-code/references/codex.md\\n# Codex CLI Reference\\n\\nFormerly a standalone skill. Content absorbed into `claude-code`.\\n\\n## Overview\\n\\nDelegates coding tasks to OpenAI Codex CLI. Supports features, refactoring, a…"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"path\": \"/Users/tuananh4865/.hermes/skills/autonomous-ai-agents/claude-code/SKILL.md\", \"old_string\": \"---\\nname: claude-code\\ndescription: \\\"Delegate coding to Claude Code CLI (features, PRs).\\\"\", \"new_string\": \"---\\nname: claude-code\\ndescription: \\\"Delegate coding to Claude Code CLI (features, PRs). This umbrella skill absorbs Codex CLI and OpenCode CLI as references. For cod…"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"claude-code\", \"action\": \"delete\", \"name\": \"codex\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"claude-code\", \"action\": \"delete\", \"name\": \"opencode\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"mkdir -p ~/.hermes/skills/autonomous-ai-agents/openclaw-deep-research/references\\n\\n# It's already its own standalone - write as reference under autonomous-ai-agents umbrella\\n# But openclaw-deep-research IS the main OpenClaw deep research skill\\n# The better approach: keep it but create an umbrella \\\"openclaw\\\" that subsumes it + openclaw-agent-profiles\\n\\n# First, let me check openc…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Baoyu cluster: baoyu-article-illustrator, baoyu-comic, baoyu-infographic\\n# These are distinct deliverables \\u2014 each is its own class. NOT merge candidates.\\n\\n# For openclaw: openclaw-deep-research (18K) is substantial - keep. openclaw-agent-profiles is narrow - archive.\\n\\n# Archive openclaw-agent-profiles - narrow config guide\\nls ~/.hermes/skills/openclaw/ 2>/dev/null\\nls ~/.…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/skills/openclaw/openclaw-agent-profiles/\\ncat ~/.hermes/skills/openclaw/SKILL.md 2>/dev/null | head -20\\nls ~/.hermes/skills/openclaw/openclaw-agent-profiles/references/ 2>/dev/null\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"last30days\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"mcporter\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cat ~/.hermes/skills/last30days/skills/last30days/SKILL.md | head -30\\necho \\\"---\\\"\\ncat ~/.hermes/skills/research/last30days/SKILL.md | head -30\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"\", \"action\": \"delete\", \"name\": \"openclaw-agent-profiles\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"\", \"action\": \"delete\", \"name\": \"research-paper-writing\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Rename research/last30days to social-media-trends\\nmv ~/.hermes/skills/research/last30days ~/.hermes/skills/research/social-media-trends\\n# Update the skill name in the SKILL.md\\nsed -i '' 's/^name: last30days$/name: social-media-trends/' ~/.hermes/skills/research/social-media-trends/SKILL.md\\necho \\\"Renamed research/last30days to social-media-trends\\\"\"}"
+    },
+    {
+      "name": "skills_list",
+      "arguments": "{}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"tdd\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Check github backup siblings\\ncat ~/.hermes/skills/devops/github-large-folder-backup/SKILL.md 2>/dev/null | head -10\\necho \\\"---\\\"\\ncat ~/.hermes/skills/devops/github-wiki-backup/SKILL.md 2>/dev/null | head -10\\necho \\\"---\\\"\\ncat ~/.hermes/skills/devops/github-nested-repo-backup/SKILL.md 2>/dev/null | head -10\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"wc -c ~/.hermes/skills/devops/github-large-folder-backup/SKILL.md ~/.hermes/skills/devops/github-wiki-backup/SKILL.md ~/.hermes/skills/devops/github-nested-repo-backup/SKILL.md 2>/dev/null\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"github-large-folder-backup\", \"action\": \"delete\", \"name\": \"github-wiki-backup\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"github-large-folder-backup\", \"action\": \"delete\", \"name\": \"github-nested-repo-backup\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"for skill in transcript-cleanup migrate-to-shoehorn minecraft-modpack-server pokemon-player google-antigravity-install; do\\n  path=$(ls -d ~/.hermes/skills/*/$skill/SKILL.md ~/.hermes/skills/*/*/$skill/SKILL.md 2>/dev/null | head -1)\\n  if [ -n \\\"$path\\\" ]; then\\n    size=$(wc -c < \\\"$path\\\")\\n    echo \\\"$skill: $size bytes\\\"\\n  else\\n    echo \\\"$skill: NOT FOUND\\\"\\n  fi\\ndone\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"# Search for the remaining small skills\\nfor term in transcript-cleanup migrate-to-shoehorn; do\\n  find ~/.hermes/skills -name \\\"SKILL.md\\\" -exec grep -l \\\"^name: $term\\\" {} \\\\; 2>/dev/null\\ndone\\necho \\\"---\\\"\\n# Also check sizes of remaining narrow ones\\nfor skill in sketch pretext plan spike subagent-driven-development writing-plans; do\\n  size=$(find ~/.hermes/skills -path \\\"*/$ski…"
+    }
+  ]
+}

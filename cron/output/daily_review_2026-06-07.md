@@ -1,64 +1,49 @@
 # Daily Review — 2026-06-07
 
-## Session Summary
+## 🌙 Daily Review — 2026-06-07
 
-**Date covered:** 2026-06-06
-**Review generated:** 2026-06-07 00:02 UTC+7
+### ✅ Hoàn thành
+- **Gateway**: Restarted and stable (but API auth broken all day)
 
----
+### 🧠 Learnings
+- **MiniMax API auth broken**: All 9 session attempts failed with `401 authentication_error` — API key not sent correctly (`Bearer None` instead of valid key)
+- **User's task from 23:53 on 06/06 was NEVER completed**: "Nghiên cứu các cách viết nội dung thu hút trên TikTok" — failed repeatedly due to auth error
 
-## ✅ Hoàn thành
-
-### Cron Jobs (2026-06-06)
-| Job | Time | Status | Size |
-|-----|------|--------|------|
-| Daily Session Review (5aea298eb0a8) | 00:07 | ✅ | 2.8KB |
-| Autoresearch Nightly (a4b8e528983f) | 02:03 | ✅ | 83.8KB |
-| X Research Daily (a5c02f2f0d87) | 07:02 | ✅ | 87.3KB |
-
-### Sessions (2026-06-06)
-- **O-Lab Group Thread 4081** — 16:07-16:22 ✅
+### ⚠️ Cần xử lý
+- **Fix MiniMax API authentication** — key not being passed in `X-Api-Key` header
+- **Re-run TikTok content research task** — user's original request from last night was never fulfilled
 
 ---
 
-## 🧠 Learnings
+## Session Details
 
-1. **TikTok content research failed** — non_retryable_client_error at 23:53
-   - User request: "Nghiên cứu cho anh các cách viết nội dung thu hút trên nền tảng tiktok"
-   - Session 20260606_142557_c7a13bb5
+### Failed Sessions (All 401 Auth Error)
 
-2. **Cron job structure confirmed** — Daily review runs for PREVIOUS day data at 00:07
-   - 2026-06-06 00:07 = review of 2026-06-05 data
+| Time | Session | Task | Status |
+|------|---------|------|--------|
+| 06/06 23:53 | 20260606_142557_c7a13bb5 | TikTok content writing research | ❌ Failed |
+| 06/06 23:55 | 20260606_142557_c7a13bb5 | (retry) | ❌ Failed |
+| 06/07 00:17 | 20260606_142557_c7a13bb5 | (retry) | ❌ Failed |
+| 06/07 00:20 | 20260607_001949_bfbfbc | "hi" | ❌ Failed |
+| 06/07 00:21 | 20260607_001949_bfbfbc | (retry) | ❌ Failed |
+| 06/07 07:23 | 20260607_001949_bfbfbc | (retry) | ❌ Failed |
+| 06/07 07:36 | 20260607_073641_742c12 | "hi" | ❌ Failed |
+| 06/07 08:40 | 20260607_073641_742c12 | (retry) | ❌ Failed |
 
-3. **Model switching observed** — MiniMax-M3 ↔ MiniMax-M2.7 switches during session
+### Error Pattern
+```
+HTTP 401: login fail: Please carry the API secret key in the 'X-Api-Key' field of the request header
+Authorization: Bearer None  ← API key missing
+```
 
----
-
-## ⚠️ Cần xử lý
-
-1. **TikTok content research** — Request failed, needs re-run
-2. **Wiki Memory Forget** — 83 stale topics pending deletion (DELETE_MODE=true not yet run)
-
----
-
-## Session Detail
-
-| Time (UTC+7) | Platform | Thread | Topic | Result |
-|--------------|----------|--------|-------|--------|
-| 14:25 | DM | — | TikTok content writing research | ❌ Failed |
-| 16:07 | O-Lab | 4081 | Group session | ✅ |
-
----
-
-## Gen Z Slang (Current)
-
-- "lọ" = HOT (viral May 2026)
-- "Xịn sò", "Kèo", "Quẩy", "Tạch", "Tấu hài"
-- "Cổ điển, tôn trọng" = classic, respect
-- "Hết nước chấm" = extremely good
+### Cron Jobs Status
+- 00:00 Daily Session Review — Failed (API auth issue)
+- 02:00 Autoresearch Nightly — Unknown (likely failed same way)
+- 07:00 X Research — Unknown (likely failed same way)
 
 ---
 
-**Report generated:** 2026-06-07 00:02 UTC+7
-**Wiki log:** Updated ✅
-**Next review:** 2026-06-08 00:00
+## Action Items
+1. **Fix MiniMax API key configuration** in Hermes config
+2. **Re-run the TikTok content research** that failed last night
+3. **Check if cron jobs ran** — may need to re-run manually
