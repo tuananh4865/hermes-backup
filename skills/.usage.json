@@ -530,12 +530,12 @@
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
     "last_patched_at": "2026-06-07T19:08:58.280574+00:00",
-    "last_used_at": "2026-06-07T19:07:37.535062+00:00",
+    "last_used_at": "2026-06-08T19:00:36.903733+00:00",
     "last_viewed_at": "2026-06-07T19:07:37.533810+00:00",
     "patch_count": 267,
     "pinned": false,
     "state": "active",
-    "use_count": 274,
+    "use_count": 276,
     "view_count": 212
   },
   "hermes-external-skills-setup": {
@@ -1125,14 +1125,14 @@
     "archived_at": null,
     "created_at": "2026-05-08T01:06:44.513231+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-06-07T06:41:26.633970+00:00",
-    "last_used_at": "2026-06-07T16:13:15.254541+00:00",
-    "last_viewed_at": "2026-06-07T16:13:15.252409+00:00",
-    "patch_count": 94,
+    "last_patched_at": "2026-06-08T16:16:29.947826+00:00",
+    "last_used_at": "2026-06-08T19:05:02.025910+00:00",
+    "last_viewed_at": "2026-06-08T19:05:02.024343+00:00",
+    "patch_count": 95,
     "pinned": false,
     "state": "active",
-    "use_count": 129,
-    "view_count": 128
+    "use_count": 133,
+    "view_count": 132
   },
   "touchdesigner-mcp": {
     "archived_at": null,

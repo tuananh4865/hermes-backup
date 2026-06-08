@@ -100,6 +100,47 @@
 
 ---
 
+## 2026-06-08 Updates
+
+### New patterns found:
+
+#### Countdown-Based CTA
+- **Pattern:** "CHỈ CÒN KHOẢNG 7 NGÀY NỮA" → urgency CTA
+- **Style:** Countdown tạo FOMO → action ngay
+- **Why works:** Số ngày cụ thể khiến viewer cảm thấy phải hành động ngay
+
+#### Scenario Hook CTA
+- **Pattern:** "NẾU NHƯ BÂY GIỜ NHÁ" → hypothetical → CTA
+- **Style:** Ask viewer to imagine scenario rồi action
+- **Why works:** Tạo personal connection với content
+
+#### Soft Subtitle CTA
+- **Pattern:** "[nếu bạn muốn]" → lowercase, gentle
+- **Style:** Cozy aesthetic, intimate tone
+- **Why works:** Không ép buộc, viewer feel được tôn trọng
+
+#### Problem-Identification CTA
+- **Pattern:** "hầu hết mọi người" → ask viewer identify themselves
+- **Style:** Challenge viewer tự nhận ra vấn đề
+- **Why works:** Self-reflection = higher engagement
+
+#### Expert Authority CTA
+- **Pattern:** "HIỆN TẠI MÌNH" → personal current state sharing
+- **Style:** Professional setup, gaming headset, cream sweatshirt
+- **Why works:** Personal connection + authority
+
+#### Pain Point Urgency CTA
+- **Pattern:** "CẦN SỬA NGAY" → immediate action required
+- **Style:** Multi-box text, yellow + red high contrast
+- **Why works:** Strong urgency = immediate action
+
+#### Anti-Mistake CTA
+- **Pattern:** "ĐỪNG LÀM BOT TIKTOK BỊ 'LÚ'" → warning style
+- **Style:** Fear of mistake → prevention CTA
+- **Why works:** Fear-based → viewers want to avoid the mistake
+
+---
+
 ## Related
 - [[hooks-lessons]] — Hook patterns
 - [[storytelling-lessons]] — Storytelling structures

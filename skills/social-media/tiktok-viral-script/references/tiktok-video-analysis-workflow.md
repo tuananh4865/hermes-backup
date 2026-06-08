@@ -155,6 +155,18 @@ Compile findings into structured report. See template below.
 - **Do NOT try browser-based TikTok access** — it will fail
 - Use yt-dlp with web-search-discovered URLs instead
 
+### MCP vision requires ABSOLUTE paths (June 8, 2026 — discovered)
+- `mcp_MiniMax_understand_image` does NOT expand `~` in file paths
+- ❌ FAILS: `~/.hermes/cron/tiktok-monitor/2026-06-08/videos/frame_001.jpg`
+- ✅ WORKS: `/Users/tuananh4865/.hermes/cron/tiktok-monitor/2026-06-08/videos/frame_001.jpg`
+- **Always use full absolute paths** when calling image understanding tools
+
+### Audio-only download detection (June 8, 2026 — discovered)
+- yt-dlp sometimes downloads as audio only when video is deleted/privated/restricted
+- If download shows `bytevc1_1080p` → video ✅
+- If download shows `audio` → video was audio-only (likely deleted/restricted content)
+- **Action**: If audio-only, skip that video and note it in report. Do NOT attempt frame extraction on audio files.
+
 ### MCP vision timeout
 - `mcp_MiniMax_understand_image` may timeout on first attempt (120s limit)
 - If timeout: try one frame at a time, or skip to next step with partial data

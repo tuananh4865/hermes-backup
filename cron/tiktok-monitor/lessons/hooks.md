@@ -95,6 +95,47 @@
 
 ---
 
+## 2026-06-08 Updates
+
+### New patterns found:
+
+#### Countdown/Stakes Hook
+- **Pattern:** Số ngày cụ thể tạo urgency → "CHỈ CÒN KHOẢNG 7 NGÀY NỮA" (@duymuoi)
+- **Style:** Outdoor casual, bokeh background, host mặc áo thể thao sleeveless olive
+- **Why viral:** FOMO cực mạnh với countdown
+
+#### Conditional/Scenario Hook
+- **Pattern:** "NẾU NHƯ BÂY GIỜ NHÁ" — hypothetical scenario setup
+- **Style:** Casual bia hơi, light t-shirt, Vietnamese everyday setting
+- **Why viral:** Tạo curiosity gap, viewer muốn biết điều gì xảy ra tiếp
+
+#### "If You Want" Soft Hook
+- **Pattern:** "[nếu bạn muốn]" — lowercase, subtitle-style caption
+- **Style:** Cozy night aesthetic, Shure microphone với bunny charm, dark background city bokeh
+- **Why viral:** Intimate, soft sell — không ép buộc
+
+#### "Most People" Contrarian Hook
+- **Pattern:** "hầu hết mọi người" — generalization để challenge
+- **Style:** Professional night setup, Shure MV7+, polo shirt, dark blue, warm desk lamp
+- **Why viral:** Người xem muốn biết mình có đang làm sai không
+
+#### Bold Yellow Text Hook
+- **Pattern:** Text vàng đậm nổi bật trên nền tối
+- **Style:** Expert authority, gaming headset + lavalier mic, "MORNING COFFEE" text on clothing
+- **Why viral:** High contrast = scroll stopper
+
+#### Multi-Box Urgency Hook
+- **Pattern:** Nhiều text box chồng lên nhau (yellow + red)
+- **Style:** Home studio, wooden shelves, hanging plants, white polo với striped pattern
+- **Why viral:** "Need to fix immediately" = high urgency signal
+
+#### Anti-Pattern Hook
+- **Pattern:** "ĐỪNG LÀM BOT TIKTOK BỊ 'LÚ'" — warning về sai lầm
+- **Style:** Home office, yellow curtains, laptop với TikTok logo, salt-and-pepper beard
+- **Why viral:** Fear-based + curiosity về "bot confused"
+
+---
+
 ## Related
 - [[cta-lessons]] — CTA patterns
 - [[storytelling-lessons]] — Storytelling structures

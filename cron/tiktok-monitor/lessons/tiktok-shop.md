@@ -131,6 +131,36 @@
 
 ---
 
+## 2026-06-08 Updates
+
+### New patterns found:
+
+#### Hashtag-Specific Educational
+- **Pattern:** "BẠN TỰ BÓP VIEW VIDEO KHI GẮN SAI HASHTAG" 
+- **Style:** Multi-box (yellow + red), home studio với plants
+- **TikTok Shop angle:** Sai hashtag = bot confused = không push video = không bán được
+- **Why viral:** Creator economy insight, ai cũng muốn biết cách tránh "bóp view"
+
+#### Bot Behavior Education
+- **Pattern:** "ĐỪNG LÀM BOT TIKTOK BỊ 'LÚ'" — Bot literacy content
+- **Style:** Laptop display, TikTok logo visible, home office
+- **TikTok Shop angle:** Hiểu cách bot work = better algorithm = more sales
+- **Why viral:** Insider knowledge = perceived value
+
+#### Professional Setup → Trust → Sales
+- **Pattern:** Expert authority (kính, mic, warm lighting) → trust → soft CTA
+- **Style:** Shure MV7+, night aesthetic, cozy studio
+- **TikTok Shop angle:** Khách hàng tin tưởng → mua sản phẩm được recommend
+- **Why viral:** High production = perceived value của product
+
+#### Pain Point + Urgency + Solution
+- **Pattern:** "CẦN SỬA NGAY" → multi-box urgency → solution preview
+- **Style:** High contrast text boxes, wooden shelves background
+- **TikTok Shop angle:** Fix common mistakes = better selling performance
+- **Why viral:** Immediate actionable value
+
+---
+
 ## Related
 - [[hooks-lessons]] — Hook patterns
 - [[cta-lessons]] — CTA patterns

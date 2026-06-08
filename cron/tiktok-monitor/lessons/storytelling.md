@@ -120,6 +120,42 @@
 
 ---
 
+## 2026-06-08 Updates
+
+### New patterns found:
+
+#### Expert Authority + Tech Setup
+- **Pattern:** Host đeo kính, professional mic (Shure MV7+), warm desk lamp lighting
+- **Style:** Night aesthetic, city bokeh background, dark wood desk
+- **Structure:** Direct-to-camera expert advice, intimate/cozy mood
+- **Why viral:** Trust + relatability + professional feel
+
+#### Home Studio with Personal Touch
+- **Pattern:** Wooden shelves + hanging plants + personal items (bunny mic charm)
+- **Style:** Lived-in professional space, not sterile
+- **Structure:** Authentic expert, không over-produced
+- **Why viral:** Viewers connect với real person, not corporate
+
+#### Gaming/Streamer Aesthetic
+- **Pattern:** Gaming headset + boom mic + casual sweatshirt ("MORNING COFFEE")
+- **Style:** Expert nhưng approachable, "người bạn" vibe
+- **Structure:** Personal sharing → value delivery → soft CTA
+- **Why viral:** Không intimidation, ai cũng feel được
+
+#### Multi-Text Box Educational
+- **Pattern:** Yellow + red text boxes chồng lên nhau
+- **Style:** High contrast, scroll-stopping visuals
+- **Structure:** Pain point → urgency → solution preview
+- **Why viral:** Instant value proposition, người xem biết ngay sẽ được gì
+
+#### Warning/Anti-Mistake Format
+- **Pattern:** "ĐỪNG LÀM..." → giải thích sai lầm → đúng cách
+- **Style:** Home office, laptop display, yellow curtains
+- **Structure:** Anti-pattern → explanation → correction
+- **Why viral:** Fear of missing out / fear of doing wrong
+
+---
+
 ## Related
 - [[hooks-lessons]] — Hook patterns
 - [[cta-lessons]] — CTA patterns
