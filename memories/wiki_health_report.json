@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-06-08T04:00:20.746016",
+  "timestamp": "2026-06-09T04:00:38.785220",
   "total_files": 159,
-  "total_issues": 765,
+  "total_issues": 766,
   "results": {
     "missing_frontmatter": {
       "missing": null,
-      "count": 0,
+      "count": 1,
       "broken": null,
       "stale": null,
       "orphans": null,

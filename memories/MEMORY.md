@@ -1,9 +1,3 @@
-Task '[Tuấn Anh] Anh muốn em thực hiện automation research và lấy thông tin để đăng bài trên tài khoản X cho anh' — 1 turns
-§
-Task '[System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversation history below is intact. If it contains unfin' — session 20260601, 3 turns
-§
-Task '[System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversation history below is intact. If it contains unfin' — session 20260601, 4 turns
-§
 Task '[System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversation history below is intact. If it contains unfin' — session 20260601, 5 turns
 §
 Task '[Tuấn Anh] Minimax mới ra mắt model mới, check trang chủ và tìm cách add model đó vào danh sách model cho anh!' — 1 turns
@@ -26,7 +20,7 @@ Task 'hi' — 1 turns
 §
 Task 'ping' — 1 turns
 §
-TikTok content improvement primary goal — actionable insights, systematic tracking, Vietnamese casual style. Cron automations: autoresearch nightly (2AM), TikTok 5-channel monitor (11PM), Hermes backup (3AM), wiki health (4AM), session review (0AM). yt-dlp for TikTok downloads (browser-harness unreliable).
+TikTok Monitor: lesson files at ~/.hermes/cron/tiktok-monitor/lessons/ (hooks.md, cta.md, storytelling.md, tiktok-shop.md). Cron 546c141c8fb9 runs 11PM, 3-phase: download→analyze→report. yt-dlp for TikTok downloads (browser-harness unreliable). 5 channels: @duymuoi, @anhsacanh.vn, @nguyenducduong9699, @tam_thefox, @goccontent
 §
 Task 'hi' — session 20260606, 9 turns
 §
@@ -37,3 +31,11 @@ Task 'hi' — session 20260606, 11 turns
 Task 'https://youtu.be/pmqTgyPZdto?si=2cJTlXwTFFHHgIjE phân tích' — 1 turns
 §
 Task '[Tuấn Anh] https://vt.tiktok.com/ZSQj5rPg6/' — 1 turns
+§
+Task 'Phân tích 3 video anh gửi' — 1 turns
+§
+Task 'Tìm cách đi sao lại không được chán vậy?' — 1 turns
+§
+Task 'https://vt.tiktok.com/ZSQBX2mTj/  Tải video này về và gửi qua đây cho anh!' — 1 turns
+§
+Tuấn Anh prefers sending videos as Telegram attachments and wants me to download + resend them back via Telegram (not just analyze). He got frustrated when I said I couldn't "see" Telegram-attached videos. Key workflow: when he sends a TikTok/YouTube link → download with yt-dlp → send back via MEDIA:/path in send_message. This pattern works 100%.

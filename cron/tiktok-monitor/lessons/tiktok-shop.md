@@ -161,6 +161,62 @@
 
 ---
 
+## 2026-06-09 Updates
+
+### New patterns found:
+
+#### Conversion-Focused Content
+- **Pattern:** "LÀM NHƯ THẾ NÀO ĐỂ KÊNH BÁN ĐƯỢC NHIỀU HÀNG RA ĐƯỢC CHUYỂN ĐỔI"
+- **TikTok Shop angle:** Direct e-commerce education → sell creator courses/services
+- **Why viral:** Solves real pain point for sellers, not just viewers
+
+#### 101 Ideas Format → Product Bundles
+- **Pattern:** "101 Ý TƯỞNG KIẾM TIỀN TỪ VIDEO NGẮN TỪ MỘT QUÁN CÀ PHÊ"
+- **TikTok Shop angle:** "Coffee shop" = product anchor point for physical products
+- **Why viral:** Specific context makes massive number feel achievable
+
+#### Expert Mic Setup → Trust → Product Rec
+- **Pattern:** Shure MV7+ / SM7B + warm lamp + professional = trust → soft CTA
+- **TikTok Shop angle:** High production value = premium product perception
+- **Why viral:** Perceived value of content = perceived value of product
+
+#### Do/Don't → Product Comparison Content
+- **Pattern:** Green/red boxes → sequential reveal → product recommendation
+- **TikTok Shop angle:** Perfect for "what to buy vs what to skip" content
+- **Why viral:** Decision framework → saves + shares
+
+#### Raw POV → Authentic Product Testing
+- **Pattern:** POV helmet/sweat → no overlay → raw authenticity
+- **TikTok Shop angle:** "In real life" product testing = high trust
+- **Why viral:** Breaks over-produced aesthetic = perceived authenticity
+
+#### Pain Point Filter → Targeted Audience → Better Conversion
+- **Pattern:** "MỚI XÂY KÊNH NHƯNG CHƯA BIẾT BẮT ĐẦU TỪ ĐÂU"
+- **TikTok Shop angle:** New creators = new TikTok Shop sellers = high intent
+- **Why viral:** Filters exact buyer persona
+
+#### Low Views Quality > Wrong Views
+- **Pattern:** "LẸT ĐẺT VIEW MÀ ĐÚNG NGƯỜI VẪN HƠN TRIỆU VIEW MÀ SAI NGƯỜI"
+- **TikTok Shop angle:** Quality audience = higher TikTok Shop conversion rate
+- **Why viral:** Reframes success metric → emotional relief
+
+#### 3-Factor Listicle → Product Features
+- **Pattern:** "3 YẾU TỐ Giúp tăng lượt xem" → numbered feature breakdown
+- **TikTok Shop angle:** Perfect for product feature explainer series
+- **Why viral:** Numbered = easy to remember → share + save
+
+#### Comment-Reply → Q&A Product Format
+- **Pattern:** Real comment → creator answers → product recommendation
+- **TikTok Shop angle:** Answer common product questions publicly
+- **Why viral:** Community-driven = algorithm boost + social proof
+
+#### Solution Promise → Lead-Gen
+- **Pattern:** "CÓ CÁCH NÀY ĐỂ KÊNH BẠN PHÁT TRIỂN" → yellow box
+- **TikTok Shop angle:** Services/courses sales + TikTok Shop consulting
+- **Why viral:** Clear promise = high intent → click bio link
+
+---
+
 ## Related
 - [[hooks-lessons]] — Hook patterns
 - [[cta-lessons]] — CTA patterns

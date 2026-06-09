@@ -156,6 +156,78 @@
 
 ---
 
+## 2026-06-09 Updates
+
+### New patterns found:
+
+#### Expert Authority + Social Proof
+- **Pattern:** Direct-to-camera + TikTok award in background + yellow text overlay
+- **Style:** Home office, polar bear headset tee, Shure mic, blonde highlights
+- **Structure:** Pain point question → value promise → conversion hook
+- **Why viral:** Social proof (award) + relatable creator = trust + authority
+
+#### Number List + Specific Context
+- **Pattern:** "101 ideas from a coffee shop" — massive number + specific setting
+- **Style:** Teal box, black t-shirt with #dcr branding, warm accent lights
+- **Structure:** Big promise → specific grounding → expert delivery
+- **Why viral:** Comprehensive resource feel + relatable context
+
+#### Stakes/Curiosity Gap + Professional Setup
+- **Pattern:** "The Biggest Reason" — red text + information gap
+- **Style:** Shure MV7+, warm lamp, navy polo, glasses, moody dark background
+- **Structure:** Bold claim → curiosity gap → reveal
+- **Why viral:** Cognitive tension → must know
+
+#### Do/Don't Visual Contrast
+- **Pattern:** Green/red boxes side by side — universal color psychology
+- **Style:** Shure SM7B, orange accent light, warm dark studio
+- **Structure:** Setup contrast → reveal each point sequentially
+- **Why viral:** Self-assessment + sequential reveal = high retention
+
+#### Raw POV Documentary
+- **Pattern:** Extreme close-up, helmet, sweat, braces — no overlay text
+- **Style:** POV, bokeh outdoor, lo-fi authenticity
+- **Structure:** Pure visual storytelling, no caption needed
+- **Why viral:** Breaks perfection barrier, intimate "come along" feel
+
+#### Pain Point Filter + Expert Setup
+- **Pattern:** "New channel, don't know where to start" — yellow highlight on problem
+- **Style:** Headset + glasses, bright modern office, yellow highlight box
+- **Structure:** Identify exact audience → promise solution → deliver
+- **Why viral:** Filters right viewers + immediate value proposition
+
+#### Multi-Box Visual Hierarchy
+- **Pattern:** Problem box + question box + subtitle stacked vertically
+- **Style:** Car vlog, pink t-shirt, yellow subtitles, red/white boxes
+- **Structure:** Layered problem → question → context
+- **Why viral:** Eye travels through hierarchy → stays for full message
+
+#### Numbered List + Benefit
+- **Pattern:** "3 factors to increase views" — listicle format
+- **Style:** Red header box, yellow subtitle, car vlog, lapel mic
+- **Structure:** Number promise → sequential delivery → CTA
+- **Why viral:** Numbered = digestible + completion drive
+
+#### Comment-Reply Interactive Format
+- **Pattern:** Real comment screenshot → creator response → long-term trend question
+- **Style:** Outdoor apartment, warm lighting, lapel mic
+- **Structure:** Community question → expert answer → forward-looking hook
+- **Why viral:** Interactive = algorithm boost + community trust
+
+#### Contrarian Insight + Authenticity
+- **Pattern:** "Low views but right people > million views but wrong people"
+- **Style:** Low-angle, grey polo, goatee, minimal background
+- **Structure:** Bold contrarian claim → explanation → reframe
+- **Why viral:** Emotional relief + intellectual curiosity
+
+#### Solution Promise + Outdoor Expert
+- **Pattern:** "There's a way for your channel to grow" — yellow box + bold claim
+- **Style:** Outdoor apartment, trees background, middle-aged expert, lapel mic in hand
+- **Structure:** Promise → curiosity → solution delivery
+- **Why viral:** Yellow = scroll stopper + authority + direct promise
+
+---
+
 ## Related
 - [[hooks-lessons]] — Hook patterns
 - [[cta-lessons]] — CTA patterns

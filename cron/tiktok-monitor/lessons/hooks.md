@@ -136,6 +136,67 @@
 
 ---
 
+## 2026-06-09 Updates
+
+### New patterns found:
+
+#### Question + Value Promise Hook
+- **Pattern:** "LÀM NHƯ THẾ NÀO ĐỂ KÊNH BÁN ĐƯỢC NHIỀU HÀNG RA ĐƯỢC CHUYỂN ĐỔI" — question format + conversion promise
+- **Style:** Yellow text bold + black outline, direct-to-camera, TikTok award in background
+- **Why viral:** Solves real pain point (sales/conversions) + question creates open loop
+
+#### Massive Number List Hook
+- **Pattern:** "101 Ý TƯỞNG KIẾM TIỀN TỪ VIDEO NGẮN" — huge number creates authority
+- **Style:** Teal box, white text, secondary line "TỪ MỘT QUÁN CÀ PHÊ" for specificity
+- **Why viral:** "101" = comprehensive, implies no need to search elsewhere
+
+#### "Biggest Reason" Stakes Hook
+- **Pattern:** "LÝ DO LỚN NHẤT" — bold red text, curiosity gap
+- **Style:** Shure MV7+ mic, warm lamp lighting, navy polo, glasses
+- **Why viral:** Creates information gap → viewer must stay to find out
+
+#### Do/Don't Contrast Hook
+- **Pattern:** "HÃY NÓI / ĐỪNG NÓI" — green/red color-coded boxes
+- **Style:** Shure SM7B mic, orange accent light, dark moody background
+- **Why viral:** Universal color psychology (green=good/red=bad) stops scroll instantly
+
+#### Raw POV Visual Hook
+- **Pattern:** Extreme close-up wearing helmet, sweat, braces — no text
+- **Style:** POV format, bokeh outdoor background, lo-fi aesthetic
+- **Why viral:** Breaks social media perfection, creates intimacy
+
+#### Pain Point + Yellow Highlight Hook
+- **Pattern:** "MỚI XÂY KÊNH NHƯNG CHƯA BIẾT BẮT ĐẦU TỪ ĐÂU" — pain point highlighted in yellow
+- **Style:** Headset + glasses, bright modern office, yellow highlight on problem phrase
+- **Why viral:** Filters exact audience (new creators) + promises solution
+
+#### Problem → Question Hook
+- **Pattern:** "VIDEO ÍT LƯỢT XEM là do đâu?" — problem box + question box stacked
+- **Style:** Car vlog, pink t-shirt, yellow subtitle text, red/white text boxes
+- **Why viral:** Three-layer visual hierarchy hits instantly
+
+#### Listicle Bold Hook
+- **Pattern:** "3 YẾU TỐ Giúp tăng lượt xem" — number + benefit promise
+- **Style:** Red header box, yellow subtitle, car vlog, lapel mic visible
+- **Why viral:** Number = digestible, benefit = universal desire
+
+#### Comment-Reply Interactive Hook
+- **Pattern:** Real user comment at top → "MỘT XU HƯỚNG XÂY KÊNH LÂU DÀI?" — reply-to-comment format
+- **Style:** Lapel mic, outdoor apartment background, white text on dark
+- **Why viral:** Interactive format = community trust signal
+
+#### Contrarian Bold Hook
+- **Pattern:** "LẸT ĐẸT VIEW MÀ ĐÚNG NGƯỜI VẪN HƠN TRIỆU VIEW MÀ SAI NGƯỜI" — contradicts viral assumption
+- **Style:** Low-angle, grey polo, goatee, minimal background
+- **Why viral:** Cognitive dissonance → must hear reasoning
+
+#### Solution Promise Hook
+- **Pattern:** "CÓ CÁCH NÀY ĐỂ KÊNH BẠN PHÁT TRIỂN" — yellow box bold claim
+- **Style:** Outdoor apartment, middle-aged expert, lapel mic held in hand
+- **Why viral:** Yellow = scroll stopper, "this way" creates curiosity gap
+
+---
+
 ## Related
 - [[cta-lessons]] — CTA patterns
 - [[storytelling-lessons]] — Storytelling structures

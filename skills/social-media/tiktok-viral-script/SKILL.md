@@ -35,18 +35,44 @@ Write viral TikTok Shop scripts in Tuấn Anh's authentic Vietnamese voice.
 **⚠️ CRITICAL (2026-05-13): When Anh shares a URL first — READ IT BEFORE researching.**
 User's workflow: URL shared → Extract/read content → Confirm understanding → Then research if asked.
 
-**⚠️ YouTube Video Analysis (2026-06-07):**
-When Anh shares a YouTube URL + "phân tích":
-1. `yt-dlp --write-auto-sub --sub-lang en --skip-download` to extract captions
-2. Clean with `sed 's/<[^>]*>//g' | grep -v '^$'`
-3. If Vietnamese subs needed but unavailable (HTTP 429), fall back to English subs
+**YouTube Video Analysis (2026-06-07) — CONFIRMED WORKING WORKFLOW:**
+1. `yt-dlp --write-auto-sub --sub-lang en --skip-download -o "video.%(ext)s" "URL"` → extracts .vtt captions
+2. If Vietnamese subs requested but HTTP 429 on vi sub → fall back to `--sub-lang en` (always works)
+3. Clean: `cat file.vtt | sed 's/<[^>]*>//g' | grep -v '^$'`
 4. Parse into key sections → synthesis report with TikTok-relevant lessons
+5. Structure: Hook → Key Lessons → Structure Analysis → Action Items
 
 **YouTube → TikTok adaptation lessons to extract:**
-- Hook patterns (pattern disrupt, bold statements, etc.)
-- Storytelling structures (personal vulnerability, rags-to-riches, etc.)
+- Hook patterns (pattern disrupt, bold statements, open loop, etc.)
+- Storytelling structures (personal vulnerability, rags-to-riches, audience of one, etc.)
 - CTA types (signature word, question CTAs, community CTAs)
 - "Why it works" + "TikTok adaptation" for each pattern found
+
+**Evan Carmichael "YouTube Is Not Too Crowded" (2026-06-07) — Key Patterns Found:**
+| Pattern | Example | TikTok Adaptation |
+|---------|---------|-----------------|
+| Pattern Disrupt Hook | "If you think X — that's a LIE you're telling yourself" | "Nếu bạn nghĩ X — đó là LỜI NÓI DỐI" |
+| Audience of One | "Talk to version of you from 5-10 years ago" | Script cho past-self của viewer |
+| Vulnerability | "350 videos before I could watch myself back" | Normalize struggle, build trust |
+| Bold Numbers | "5% retention → 25-95% profit" | Stats as credibility hooks |
+| Belief Framework | Belief → Momentum → Action → Results | Thêm emotional layer vào scripts |
+| Signature CTA | "Believe" word + "#Believe" community | Tạo signature word cho brand |
+
+**TikTok Monitor Cron — 3-Phase System (2026-06-07):**
+| Phase | Nội dung |
+|-------|----------|
+| Phase 1 | Download videos (yt-dlp) + deduplication (seen-videos.json) |
+| Phase 2 | Analyze + append to lesson files (hooks.md, cta.md, storytelling.md, tiktok-shop.md) |
+| Phase 3 | Full report + Telegram summary (<500 words) |
+
+**Lesson Files Location:** `~/.hermes/cron/tiktok-monitor/lessons/`
+- `hooks.md` — Pattern disrupt, bold statement, open loop, numbers, quick wins
+- `cta.md` — Question > directive, comment/save/follow CTAs, series CTAs
+- `storytelling.md` — Problem→solution, rags-to-riches, POV, expert authority
+- `tiktok-shop.md` — "1 mẹo" format, expert positioning, soft CTA, comparison format
+- `README.md` — Index + how-to-use guide
+
+**Update Protocol:** Append new patterns with `[YYYY-MM-DD] Updates` header — never overwrite existing content.
 
 **Why this matters:** In 2026-05-13 session, agent assumed @ecom_linus tweet was about "TikTok algorithm" without reading it. The tweet was actually about AI UGC + affiliate marketing. User had to correct twice.
 
@@ -381,8 +407,10 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - `references/tiktok-video-analysis-workflow.md` — Pipeline: yt-dlp → ffmpeg → MiniMax vision → synthesis report. Frame sampling, scoring rubric, content style classification (2026-06-06) ✅ NEW
 - `references/gen-z-slang-june-2026.md` — 4 new hook formats discovered: "quát 1 câu", Gamification quest, POV Twist, Meta-humor. June 2026 nightly monitor findings ✅ NEW
 - `references/tiktok-monitor-10channel-june-2026.md` — Full 10-video analysis from 5 channels, deduplication tracker, "1 Mẹo" format discovery, CTA patterns, URL discovery workflow (2026-06-07) ✅ NEW
+- `references/tiktok-monitor-workflow-june-2026.md` — 5-channel nightly monitor workflow: ID-first → dedupe → download → frames → analyze → lessons → Telegram. Includes JS challenge failure workaround (2026-06-09) ✅ NEW
 - `references/youtube-tiktok-adaptation.md` — YouTube → TikTok adaptation lessons from Evan Carmichael's "YouTube Is Not Too Crowded" (2026-06-07) ✅ NEW
 - `references/tiktok-lesson-learn-system.md` — Lesson-learn accumulation system: 4 topic files (hooks, cta, storytelling, tiktok-shop), append-only update protocol, source channels, how-to-use guide (2026-06-07) ✅ NEW
+- `references/tiktok-to-telegram-delivery.md` — TikTok video → Telegram pipeline: probe streams, HEVC→H.264 conversion, 720p compress, silent video handling (2026-06-10) ✅ NEW
 - **Ecom_Linus AI UGC Model:** See `references/ecom-linus-affiliate-model.md` — Glitchy setup, Vietnam affiliate networks, AI tools stack, angle research methodology
 - Gen Z Research: Tra Vinh University Journal of Science — "Factors Affecting Gen Z Online Purchase Intention on TikTok Shop"
 - Product research: https://findniche.com/tiktok/trending-products-vn
@@ -454,10 +482,30 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 ls -lt /Users/tuananh4865/.hermes/cron/output/*/2026-$(date +%Y-%m-%d)*.md 2>/dev/null
 ```
 
+**⚠️ CRITICAL: Video Source Limitation (2026-06-09)**
+
+When Anh shares a video for analysis, DISTINGUISH between:
+| Source | Access Method |
+|--------|--------------|
+| YouTube URL | ✅ yt-dlp → .vtt transcript → analysis |
+| TikTok URL | ✅ yt-dlp → frames → vision analysis |
+| **Telegram file attachment** | ❌ Hermes CANNOT access — only text/links pass through gateway |
+
+**When user says "phân tích video" but sends attachment:** Politely explain em cannot access Telegram-attached files. Ask for YouTube/TikTok link instead, OR guide user to save file to `~/Downloads/` and tell em the filename.
+
+**Never promise video analysis when source is Telegram attachment.** Confirm access before confirming the task.
+
+---
+
 ## Pitfalls (AVOID THESE)
 
-### Pipeline Mistakes
-- ❌ **yt-dlp URL without quoting** — parentheses in TikTok short URLs (`vt.tiktok.com/ZSQYqMofg/`) cause bash syntax error "unexpected token '('". ALWAYS wrap URL in double quotes: `yt-dlp -o "file.mp4" "https://..."`
+### Video Pipeline Mistakes
+- ❌ **yt-dlp URL without quoting** — parentheses in TikTok short URLs (`vt.tiktok.com/ZSQYqMofg/`) cause bash syntax error "unexpected token '('. Always wrap URL in double quotes: `yt-dlp -o "file.mp4" "https://..."`
+- ❌ **Assuming silent video = download error** — Some TikTok content is intentionally silent (text overlay only, like @anhsacanh.vn). Probe streams first. If video-only HEVC with no audio track → silent is the content style, not an error. Do NOT re-download.
+- ❌ **Sending HEVC video directly to Telegram** — TikTok serves HEVC/H.265 which many Telegram clients can't play. Convert to H.264 + AAC audio first: `ffmpeg -i input.mp4 -c:v libx264 -preset fast -crf 26 -vf "scale=720:-2" -c:a aac -b:a 96k -movflags +faststart output_720p.mp4`
+- ❌ **Large file upload timeout** — Telegram times out at >50MB. Always compress to 720p before sending.
+- ❌ **Skipping stream probe before sending** — Always run `ffprobe -v quiet -print_format json -show_streams video.mp4 | jq '.streams[] | {codec_type, codec_name, duration}'` first to know what you're dealing with.
+- ❌ **video_analyze as first approach** — requires LMS model loaded, often fails with "No models loaded". Use ffmpeg frame extraction + MiniMax vision instead as reliable fallback
 - ❌ **video_analyze as first approach** — requires LMS model loaded, often fails with "No models loaded". Use ffmpeg frame extraction + MiniMax vision instead as reliable fallback
 
 ### Script Structure Mistakes

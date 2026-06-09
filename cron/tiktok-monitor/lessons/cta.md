@@ -141,6 +141,67 @@
 
 ---
 
+## 2026-06-09 Updates
+
+### New patterns found:
+
+#### Conversion-Focused CTA
+- **Pattern:** "LÀM NHƯ THẾ NÀO ĐỂ KÊNH BÁN ĐƯỢC NHIỀU HÀNG RA ĐƯỢC CHUYỂN ĐỔI" → ends with conversion promise
+- **Style:** Yellow text, TikTok award background, direct-to-camera
+- **Why works:** Direct link between content topic and business outcome
+
+#### Number Promise CTA
+- **Pattern:** "101 Ý TƯỞNG KIẾM TIỀN TỪ VIDEO NGẮN" → number list drives curiosity
+- **Style:** Teal box, "TỪ MỘT QUÁN CÀ PHÊ" adds specific context
+- **Why works:** Big number = comprehensive resource → saves video to reference later
+
+#### Curiosity Gap CTA
+- **Pattern:** "LÝ DO LỚN NHẤT" → stakes hook + curiosity gap drives watch-time
+- **Style:** Red text, Shure MV7+, warm lighting
+- **Why works:** Must stay to find out "the biggest reason"
+
+#### Do/Don't Interactive CTA
+- **Pattern:** "HÃY NÓI / ĐỪNG NÓI" → green/red boxes → viewer must stay for reveal
+- **Style:** Dark moody, orange accent light, professional mic
+- **Why works:** Self-assessment need → stay to confirm if on right/wrong side
+
+#### Raw Authenticity CTA
+- **Pattern:** POV helmet/sweat visual → no text overlay CTA
+- **Style:** Extreme close-up, lo-fi, outdoor bokeh
+- **Why works:** Intimacy → viewer feels like participant not audience
+
+#### Pain Point Filter CTA
+- **Pattern:** "MỚI XÂY KÊNH NHƯNG CHƯA BIẾT BẮT ĐẦU TỪ ĐÂU" → targets new creators only
+- **Style:** Yellow highlight on pain phrase, headset aesthetic
+- **Why works:** Filters right audience → higher quality engagement
+
+#### Problem-ID + Question CTA
+- **Pattern:** "VIDEO ÍT LƯỢT XEM là do đâu?" → problem + question
+- **Style:** Car vlog, red/white/green boxes, yellow subtitles
+- **Why works:** Viewers with low views self-identify → must watch for solution
+
+#### Listicle Click CTA
+- **Pattern:** "3 YẾU TỐ Giúp tăng lượt xem" → numbered list = must see all
+- **Style:** Red header, yellow subtitle, lapel mic visible
+- **Why works:** Numbered list creates "need to see all 3" completion drive
+
+#### Comment-Reply CTA
+- **Pattern:** Comment at top → creator responds → question at bottom
+- **Style:** Outdoor apartment, lapel mic, white text on dark
+- **Why works:** Interactive = algorithm boost + community trust
+
+#### Quality Over Quantity CTA
+- **Pattern:** "LẸT ĐẸT VIEW MÀ ĐÚNG NGƯỜI VẪN HƠN TRIỆU VIEW MÀ SAI NGƯỜI" → reframes low views
+- **Style:** Low-angle, grey polo, goatee
+- **Why works:** Emotional relief for struggling creators → loyalty + save
+
+#### Solution Promise CTA
+- **Pattern:** "CÓ CÁCH NÀY ĐỂ KÊNH BẠN PHÁT TRIỂN" → direct solution promise
+- **Style:** Yellow box, outdoor expert, lapel mic in hand
+- **Why works:** Clear promise → saves for later reference
+
+---
+
 ## Related
 - [[hooks-lessons]] — Hook patterns
 - [[storytelling-lessons]] — Storytelling structures
