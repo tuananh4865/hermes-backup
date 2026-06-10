@@ -1,7 +1,82 @@
 # Hermes Autoresearch Knowledge
 
-## Current Focus (2026-06-03)
-Tonight's focus: **Knowledge Acquisition — SIA + GEA + security research**
+## Current Focus (2026-06-10)
+Tonight's focus: **Knowledge Acquisition — v0.16 Surface Release + Gen Z slang update**
+
+### System Status (02:00)
+- Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
+- Skills: 227 skills healthy, SHS = 0
+- Workers: ⚠️ PERMANENTLY DELETED May 25 — web search fallback only
+- Session DB: Need to verify
+
+### MAJOR: Hermes v0.16.0 "The Surface Release" (June 5, 2026)
+
+**874 commits · 542 PRs · 170 contributors · 176K+ stars**
+
+**Headline: Hermes Desktop App — real native app, not terminal wrapper**
+- Built across 100 PRs + 159 commits in ONE WEEK
+- macOS/Linux/Windows: one-click install, in-app self-update
+- Features: drag-drop files, clipboard paste, Cmd+K palette, model picker in status bar
+- Connect to REMOTE Hermes gateway via OAuth or username/password
+- Concurrent multi-profile sessions, cross-profile @session links
+- Full Simplified Chinese (简体中文) translation
+
+**Web Dashboard = Full Admin Panel**
+- Channels config (Telegram, Discord, Slack, etc.)
+- MCP catalog with enable/disable
+- Credential management, webhooks, memory
+- System page with check-before-update + one-click Debug Share
+
+**Other key features:**
+- `/undo [N]` — take back last N turns (CLI, TUI, Telegram, Discord)
+- Fuzzy model picker everywhere (desktop, web, TUI, CLI)
+- NVIDIA/skills as trusted skills tap (CUDA-X, AIQ, cuOpt)
+- Quick Setup via Nous Portal — from install to first message in seconds
+- Leaner default skill set (pruned dead skills)
+- New models: deepseek-v4-flash, MiniMax-M3 (1M context), qwen3.7-plus
+
+**Security fixes:** CVE-2026-48710 Starlette pin, SSRF hardening, subprocess credential stripping
+
+### AI Agent Self-Improvement Research (June 10)
+
+**Yohei Nakajima's 6-mechanism framework for self-improving agents:**
+
+1. **Self-reflection + in-loop feedback** — Reflexion, Self-Refine
+   - Pros: Easy to add, big gains for little work
+   - Cons: Ephemeral, reflections can be wrong
+
+2. **Self-correction training** — RISE, STaR, SELF, STaSC
+   - Train on mistake-correction traces
+   - Cons: Needs curated traces, domain overfit risk
+
+3. **Self-generated curricula** — Self-Challenging Agents, Self-Generated Examples, SiriuS
+   - Agent creates own tasks/examples, 2x gains on tool use
+   - Cons: Quality control hard, compute-heavy
+
+4. **Self-adapting models** — SEAL (33.5%→47% on QA)
+   - Model generates self-edit instructions as training data
+   - Cons: Requires training pipeline, self-reinforcing bias risk
+
+5. **Self-improving code agents** — STO, SICA (17→53% on SWE-Bench)
+   - Agent edits own code/policies, persistent improvements
+   - Cons: Safety/overfitting risk, complex to verify
+
+6. **Embodied self-practice** — Voyager, EFMs
+   - Practice in environment with learned rewards
+   - Cons: Sim-to-real gap, training complexity
+
+**Key insight:** The bottleneck is increasingly feedback quality and control, not model size.
+
+### Gen Z Slang Update (June 10)
+
+**3 new terms from slangloom (May 11, 2026):**
+- **Thả thính** — lighthearted flirting, dropping romantic hints
+- **Lầy** — being humorously ridiculous, silly but funny
+- **Phê** — feeling thrilled, excited, feeling great
+
+All added to `entities/learned-about-tuananh.md`
+
+### Total self-improvement techniques: 33+
 
 ### System Status (02:00)
 - Wiki: ✅ 0 issues (wiki_lint --fast PASSED)
