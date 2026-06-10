@@ -10,7 +10,92 @@ relationships: [tiktok-viral-script, tiktok-algorithm-2026, gen-z-slang-2026-04]
 
 # TikTok Content Writing 2026
 
-## Hooks (Móc thu hút)
+> Updated: 2026-06-10 — Enhanced with affiliate-skills methodology (scout-first, 6 hook styles, precise timing)
+
+## ⚡️ SCOUT-FIRST WORKFLOW (MANDATORY)
+
+**CRITICAL:** Run research BEFORE writing any script. Data-driven script > intuition script.
+
+```
+1. Scout trending content (web search for winning formats/hooks)
+   → Find: winning formats, winning hooks, optimal duration, engagement benchmarks
+2. Analyze patterns
+   → Which hook style dominates in this niche?
+   → What duration range has highest engagement?
+   → What gaps exist (format, angle, platform)?
+3. Select hook style based on data
+   → Demo First if visual product (proven 2x engagement for AI/visual tools)
+   → Question if solving hard task
+   → Bold Claim if strong ROI proof
+4. Write script using selected hook
+5. Self-validate (7 checks)
+6. Deliver
+```
+
+**Why this matters:** Building on proven patterns 3x's script potential vs guessing.
+
+---
+
+## 6 HOOK STYLES (Enhanced from affiliate-skills)
+
+| Hook Style | Template | Best For | Engagement |
+|------------|----------|----------|------------|
+| **Question** | "What if bạn có thể [result] mà không cần [pain]?" | Products giải quyết task khó | Medium |
+| **Shock/Stat** | "Tôi thay thế [đắt tiền] bằng tool $[giá]/tháng" | Tiết kiệm chi phí | High |
+| **Relatable** | "[Tình huống frustrating]? Same. Rồi tôi tìm được cái này." | Niche audience pain | Medium-High |
+| **Bold Claim** | "Cái này là lý do tôi [kết quả ấn tượng]" | ROI proof mạnh | High |
+| **Demo First** ⭐ | [Mở bằng screen record feature cool nhất] | AI tools, visual products | **2x avg** |
+| **Story Opener** | "6 tháng trước tôi [before]. Giờ [after]. Đây là lý do." | Transformation | High |
+
+**Demo First = Default for product review TikToks** (proven 2x engagement for visual products)
+
+---
+
+## SCRIPT STRUCTURE (Precision Timing)
+
+### 45-second script:
+```
+0-3s:   HOOK (spoken + on-screen text)
+3-8s:   Setup pain hoặc relatable situation
+8-30s:  DEMO feature #1 (live demonstration)
+30-38s: Specific result + social proof
+38-44s: CTA (link in bio)
+44-45s: FTC disclosure (#ad overlay)
+```
+
+### 30-second script:
+```
+0-3s:   HOOK
+3-15s:  Demo #1 feature
+15-25s: Result + social proof
+25-30s: CTA + disclosure
+```
+
+### 60-second script:
+```
+0-3s:   HOOK
+3-10s:  Problem setup
+10-40s: Full demo (2-3 features)
+40-52s: Results + pricing mention (anchoring)
+52-58s: CTA
+58-60s: FTC disclosure
+```
+
+---
+
+## SELF-VALIDATION CHECKLIST (7 checks BEFORE delivery)
+
+- [ ] Spoken sentences under 10 words each
+- [ ] New visual cut or text overlay every 3-5 seconds
+- [ ] FTC "#ad" appears as text overlay, NOT buried in caption
+- [ ] Disclosure overlay visible for at least 3 seconds
+- [ ] Hook ends with setup, not just a question
+- [ ] Demo shows specific feature, not vague claims
+- [ ] Script is UNIQUE — no template repetition from previous scripts
+
+---
+
+## Hooks (Legacy — still valid)
 
 ### 1. Curiosity Gap
 Tạo khoảng trống thông tin → não buộc phải xem tiếp
@@ -35,20 +120,6 @@ Kích thích não muốn biết câu trả lời
 FOMO - sợ bỏ lỡ đám đông
 - "Video này đang viral vì..."
 - "100K người đã xem và hỏi anh..."
-
----
-
-## Script Structure (5 Phần)
-
-```
-1. HOOK (0-3s)     → Dừng scroll, gây tò mò
-2. CONTENT (3-15s) → Giải quyết hook, cho giá trị
-3. TENSION (15-40s) → Thêm drama, không để rời đi
-4. PIVOT (40-50s)  → Plot twist hoặc twist cảm xúc
-5. CTA (cuối)      → Kêu gọi hành động
-```
-
-**Công thức:** Hook → Context → Value → Proof → CTA
 
 ---
 

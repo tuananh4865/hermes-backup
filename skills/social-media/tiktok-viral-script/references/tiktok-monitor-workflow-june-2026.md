@@ -166,3 +166,27 @@ ERROR: [TikTok] VIDEO_ID: No video formats found!; please report this issue on h
 3. Raw POV Authenticity (no text overlay, lo-fi aesthetic)
 
 **Key lesson:** Yellow text overlay remains the most reliable scroll-stopper across all 5 channels.
+
+## June 10, 2026 — Session Results
+
+| Metric | Value |
+|--------|-------|
+| Videos analyzed | 8/10 |
+| Failed downloads | 1 (@goccontent — anti-bot block) |
+| New patterns found | 15+ hook/CTA/storytelling patterns |
+| Lesson files updated | 4 (hooks, cta, storytelling, tiktok-shop) |
+
+**Top trends identified:**
+1. Series + Listicles = Follow Acceleration ("3 YẾU TỐ" + "Tập 1/2/3")
+2. Beginner-Filter Targeting ("CHO NGƯỜI MỚI XÂY KÊNH")
+3. Multi-Layer Text Hierarchy (4 text layers simultaneously)
+
+**⚠️ NEW FAILURE MODE: TikTok Anti-Bot Blocking**
+- @goccontent video `7648845591035923720` — blocked by TikTok anti-bot (403/empty file)
+- Workarounds to add to workflow:
+  - `--user-agent "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)..."`
+  - `--cookies-from-browser chrome`
+  - Retry with delay: `sleep 5 && yt-dlp ...`
+- **Fallback:** Mark video as `BLOCKED` in report, skip frame extraction
+
+**Key lesson:** Multi-layer text hierarchy (red header + white sub + yellow subtitle + episode boxes) creates maximum information density for fast-scroll stopping power.

@@ -1,109 +1,88 @@
 # Daily Review — 2026-05-07
 
-## Session Summary
-
-**Total sessions analyzed:** 2 (morning + evening)
-**Morning session:** 05:43-07:24 (Hermes Memory System upgrade)
-**Evening session:** 22:00 (Daily review cron job)
+## Summary
+- **Total sessions:** 44 (21 cron + 23 regular)
+- **Real user sessions:** 4 (2 morning work sessions + 2 nightly review sessions)
+- **Key activity:** Hermes Memory 5-phase implementation, Daily Review cron setup
 
 ---
 
 ## ✅ Hoàn thành
 
-### Morning Session: Hermes Memory System — ALL 5 PHASES COMPLETE
+### 1. Hermes Memory System — ALL 5 PHASES COMPLETE
+- **File:** `~/.hermes/plugins/memory/wiki/__init__.py` (1458 lines)
+- **Phases implemented:**
+  - Phase 1: Structured USER.md (Mem0-style entity extraction)
+  - Phase 2: Hybrid BM25 + semantic retrieval + importance scoring
+  - Phase 3: Smart session-start topic parsing
+  - Phase 4: Memory consolidation (forgetting/eviction)
+  - Phase 5: Cross-session entity tracking
+- **Wiki updated:** `hermes-memory-master-plan.md`, `hermes-memory-implementation-plan.md`
 
-**File:** `~/.hermes/plugins/memory/wiki/__init__.py` (1458 lines)
+### 2. Daily Review Cron — Set up and running
+- Task: Every night at 0AM, read all session logs, extract key info, update wiki, report
+- Sessions affected: 2026-05-07 (today) and forward
+- Telegram report sent successfully
 
-| Phase | Tính năng | Status |
-|-------|-----------|--------|
-| Phase 1 | Structured USER.md format (Mem0-style) + entity extraction | ✅ Complete |
-| Phase 2 | Hybrid retrieval (BM25 + semantic n-gram + RRF fusion) + importance scoring | ✅ Complete |
-| Phase 3 | Smart session-start query parsing (Vietnamese-aware) | ✅ Complete |
-| Phase 4 | Memory consolidation (auto-trigger khi entries > 50, archive not delete) | ✅ Complete |
-| Phase 5 | Cross-session entity tracking + growth log | ✅ Complete |
+### 3. Worker Cron Fix
+- 7 worker cron jobs were running with wrong prompts
+- Fixed: content-creator, research-agent prompts corrected
 
-**Key Methods Implemented:**
-- `_extract_entity_facts()` — parse project, tool, model, file, preference
-- `_write_structured_user_profile()` — structured USER.md with 6 sections
-- `retrieve_relevant_memory()` — hybrid BM25 + semantic search
-- `_score_by_importance()` — importance boosting (HIGH priority +1.5x)
-- `_parse_session_start_topics()` — Vietnamese pattern parsing
-- `_consolidate_memory()` — auto-eviction with archive
+### 4. TikTok Shop Research (from Content Creator evening report)
+- Market: TikTok Shop GMV grew **148% YoY** H1 2025
+- Market share: **40%+**, duopoly with Shopee = 97% combined GMV
+- Top trends identified
+- Report saved: `workers/content-creator/outputs/2026-05-07-evening-content.md`
 
-**Wiki Updated:**
-- `concepts/hermes-memory-master-plan.md` ✅
-- `concepts/hermes-memory-implementation-plan.md` ✅
-
-**Tests Passed:**
-- Provider instantiation ✅
-- All 8 phase methods exist ✅
-- ENTITY_PATTERNS (5 types) ✅
-- Entity extraction (HIGH priority detected) ✅
-- Importance scoring (HIGH=0.90, Normal=0.60) ✅
-- Topic parsing Vietnamese patterns ✅
-- Hybrid retrieval (1544 chars) ✅
-
----
-
-### Evening Session: Daily Review Cron
-
-**Content Creator Report Generated:**
-- File: `hermes/workers/content-creator/outputs/2026-05-07-evening-content.md`
-- 3 TikTok scripts written (Hair ties, Charm, Portable fan)
-- 7-day content plan suggested
-- Gen Z slang updated ("lọ" from "lỏ" is HOT May 2026)
+### 5. Wiki Updates
+- `wiki/log.md` — appended daily summary entry
+- `wiki/entities/learned-about-tuananh.md` — updated Gen Z slang (`lọ`, `lỏ vãi`)
 
 ---
 
 ## 🧠 Learnings
 
-### Hermes Memory Architecture
-1. **Memory consolidation trigger:** entries > 50, not on every session
-2. **HIGH priority signals:** User corrections → never evicted
-3. **BM25 + semantic hybrid:** lightweight, no embeddings needed
-4. **Vietnamese topic parsing:** "lần trước", "hôm qua/nay", project keywords
-
-### TikTok Content (May 7, 2026)
-1. **Top trending products:**
-   - Dây Buộc Tóc Nhồi Bông: 56K orders, ₫1.3B GMV
-   - Kẹp Tóc Nơ Bong Bóng: 93K orders, ₫3.38B GMV
-   - Charm Chữ Đục Mini: 164K units (highest volume)
-
-2. **Gen Z Slang Update May 2026:**
-   - "lọ" (from "lỏ") = HOT, viral May 2026
-   - "Xịn sò", "Kèo", "Quẩy", "Tạch", "Tấu hài", "Hết nước chấm"
-   - "Cổ điển, tôn trọng" = classic, respect (Killerqueen streamer)
-
-3. **Catrice Foundation viral case:**
-   - +346% revenue in one week
-   - Trigger: Military parade video → authentic moment beats polished ads
-
-4. **Market data:**
-   - TikTok Shop GMV +148% YoY H1 2025
-   - TikTok captured 40%+ market share
-   - Duopoly: TikTok Shop + Shopee = 97% combined GMV
+1. **Memory system works** — structured USER.md format with 8 sections allows fast retrieval
+2. **Nightly review pattern established** — cron at 0AM catches all daytime sessions
+3. **Gen Z slang evolving** — `lọ` (HOT) replacing `lỏ`, `lỏ vãi` for ironic comedy
+4. **TikTok market maturing** — 60%+ margin required to survive fee structure (12.5-14.5%)
 
 ---
 
 ## ⚠️ Cần xử lý
 
-1. **Content Creator worker:** Last report from May 14 (stale 7+ days)
-2. **Hermes memory system:** Phase 5 cross-session tracking cần verify sau vài session
-3. **Gen Z slang:** "lọ" slang cần dùng tiết chế (irony context)
+1. **Worker outputs need consolidation** — content-creator and research-agent outputs stored separately, could benefit from unified dashboard
+2. **Session index could be automated** — no centralized index of what each session accomplished
 
 ---
 
-## 📊 Key Decisions Logged
+## Session Details
 
-| Time | Decision | Rationale |
-|------|----------|-----------|
-| 05:43 | Chose 5-phase architecture | Separated concerns clearly |
-| 05:43 | BM25 + n-gram over embeddings | No new dependencies |
-| 05:43 | Archive not delete | Preserve memory, prevent loss |
-| 22:00 | Focus on hair accessories + charm | Highest trending volume |
-| 22:00 | Use "lọ" sparingly | Gen Z slang = irony, not earnest |
+### Morning Sessions (Tuấn Anh active)
+| Time | Session | Key Work |
+|------|---------|----------|
+| 07:22 | session_20260507_053721 | Implemented Phases 1-5 memory system |
+| 07:43 | session_20260507_054356 | Continued memory implementation + test |
+
+### Nightly Review Sessions (Cron)
+| Time | Session | Key Work |
+|------|---------|----------|
+| 21:51 | session_20260507_215130 | Daily review + wiki update + Telegram report |
+| 22:00 | session_20260507_220000 | Repeat of nightly review |
+
+### Autoresearch Sessions
+| Time | Session | Key Work |
+|------|---------|----------|
+| 02:00 | cron_a4b8e528983f | Autoresearch run - found worker cron issue |
+| 07:00 | cron_a5c02f2f0d87 | Autoresearch run |
 
 ---
 
-*Report generated: 2026-06-05 00:00*
-*Next review: 2026-06-06 00:00*
+## Gen Z Slang Updated (2026-05-07)
+- **lỏ vãi** — ironic "tacky/cheap" (used for comedy)
+- **lọ** — HOT (updated from "lỏ", viral May 2026)
+
+---
+
+*Report generated: 2026-05-08 00:00*
+*Next review: 2026-05-08 00:00*

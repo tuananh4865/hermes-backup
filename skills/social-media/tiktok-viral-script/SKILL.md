@@ -404,11 +404,11 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - `references/may-14-2026-findings.md` — LỌ vs LỎ critical distinction, Summer Cooling margins, FindNiche top products, Gen Z slang update (May 14 orchestrator session)
 - `references/may-15-2026-findings.md` — Sunscreen ASUNMEE SPF50+ push, Summer peak data (+21% GMV), Top products chart, weekend calendar (May 15 session)
 - `references/tiktok-content-writing-2026.md` — Hooks (5 types), Script Structure (5 parts), 17 Viral Formulas, Psychology behind hooks, TikTok Shop tips (2026-06-06) ✅ NEW
-- `references/tiktok-video-analysis-workflow.md` — Pipeline: yt-dlp → ffmpeg → MiniMax vision → synthesis report. Frame sampling, scoring rubric, content style classification (2026-06-06) ✅ NEW
+- `references/tiktok-to-telegram-delivery.md` — TikTok video → Telegram pipeline: probe streams first (HEVC vs H.264 detection), silent video = content style not error, HEVC→H.264 conversion, 720p compression for <50MB Telegram limit, retry on timeout ✅ ENHANCED this session
 - `references/gen-z-slang-june-2026.md` — 4 new hook formats discovered: "quát 1 câu", Gamification quest, POV Twist, Meta-humor. June 2026 nightly monitor findings ✅ NEW
 - `references/tiktok-monitor-10channel-june-2026.md` — Full 10-video analysis from 5 channels, deduplication tracker, "1 Mẹo" format discovery, CTA patterns, URL discovery workflow (2026-06-07) ✅ NEW
 - `references/tiktok-monitor-workflow-june-2026.md` — 5-channel nightly monitor workflow: ID-first → dedupe → download → frames → analyze → lessons → Telegram. Includes JS challenge failure workaround (2026-06-09) ✅ NEW
-- `references/youtube-tiktok-adaptation.md` — YouTube → TikTok adaptation lessons from Evan Carmichael's "YouTube Is Not Too Crowded" (2026-06-07) ✅ NEW
+- `references/youtube-tiktok-adaptation.md` — YouTube → TikTok adaptation lessons from Evan Carmichael's "YouTube Is Not Too Crowded" (Pattern Disrupt Hook, Audience of One, 350 Videos Persistence, Belief Framework, Signature CTA) ✅ NEW this session
 - `references/tiktok-lesson-learn-system.md` — Lesson-learn accumulation system: 4 topic files (hooks, cta, storytelling, tiktok-shop), append-only update protocol, source channels, how-to-use guide (2026-06-07) ✅ NEW
 - `references/tiktok-to-telegram-delivery.md` — TikTok video → Telegram pipeline: probe streams, HEVC→H.264 conversion, 720p compress, silent video handling (2026-06-10) ✅ NEW
 - **Ecom_Linus AI UGC Model:** See `references/ecom-linus-affiliate-model.md` — Glitchy setup, Vietnam affiliate networks, AI tools stack, angle research methodology

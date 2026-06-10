@@ -202,6 +202,44 @@
 
 ---
 
+---
+
+## 2026-06-10 Updates
+
+### New patterns found:
+
+#### Series Retention CTA
+- **Pattern:** "Tập 1" + "Tập 2" + "Tập 3" visible — follow for next episode
+- **Style:** Red/white episode boxes, yellow subtitle continuation text
+- **Why works:** Multi-part content creates follow incentive naturally
+
+#### Beginner Filter CTA
+- **Pattern:** "CHO NGƯỜI MỚI XÂY KÊNH" — targets new creators
+- **Style:** Yellow text highlight on pain point phrase
+- **Why works:** Filters high-intent audience who will engage
+
+#### Curiosity Gap CTA
+- **Pattern:** Underscore at end "của_" — incomplete sentence
+- **Style:** Centered white text, professional studio setup
+- **Why works:** Must watch to resolve the gap
+
+#### Cultural Relatability CTA
+- **Pattern:** "TRƯỜNG NGƯỜI TA" — triggers school comparison comments
+- **Style:** Tight close-up, headset aesthetic, meme phrase
+- **Why works:** Vietnamese Gen Z culture-specific = high comment engagement
+
+#### Expert Trust CTA
+- **Pattern:** High production studio + professional mic + warm lighting
+- **Style:** Female creator, TikTok pillow prop, clean background
+- **Why works:** Production quality signals authority = product recommendation trust
+
+#### Trending Audio CTA
+- **Pattern:** "NHẠC HOT LÊN XU HƯỚNG" — algorithm-focused promise
+- **Style:** Bookshelf background, yellow bold text
+- **Why works:** Direct link to creator's #1 desire (algorithm success)
+
+---
+
 ## Related
 - [[hooks-lessons]] — Hook patterns
 - [[storytelling-lessons]] — Storytelling structures

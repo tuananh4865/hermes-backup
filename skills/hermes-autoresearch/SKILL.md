@@ -419,7 +419,15 @@ Focus areas:
 | Planning | Goal Decomposition, Planning, Priority Setting, Reasoning |
 | Collaboration | Multi-Agent Coordination, Delegation |
 
-**Latest Release: v0.15 "Velocity Release" (May 28, 2026)**
+**Latest Release: v0.16 "Surface Release" (June 2, 2026)**
+- Native desktop app across 100 PRs + 159 contributors
+- 176K+ GitHub stars
+- NVIDIA RTX AI Garage partnership
+- `/undo` command added
+- 294 commits past previous tag
+- Desktop app bundles ALL features (memory, skills, scheduling, browser automation) as public preview
+
+**Previous: v0.15 "Velocity Release" (May 28, 2026)**
 - **v0.15.2** (May 29, 2026) — packaging fix for plugin.yaml manifests
 - **v0.15.0 "Velocity Release"** — dramatically faster startup + execution
 - **v0.14.0 "Foundation Release"** (May 16) — 180x faster browser automation, native Windows beta, vision integrations
@@ -441,7 +449,7 @@ Credential Pool Exposure discovered June 2, 2026 — affects hermes-agent ≤ v2
 18 hours old at time of discovery. If running version ≤ v2026.4.23 → UPDATE IMMEDIATELY.
 Different from CVE-2026-7396 (file gateway) — this is a separate credential handling issue.
 
-**GitHub: 176K+ stars** (June 3, 2026)
+**GitHub: 176K+ stars** (June 11, 2026)
 
 **Hermes Auto-Upgrade Pattern (2026-05-30):**
 The installed hermes-agent package can be upgraded automatically via pip:
@@ -476,7 +484,13 @@ New upgrade reference: `references/hermes-upgrade-v0.15-may-2026.md`
 
 **TDP pattern recommended for Hermes:** 60% context reduction via DAG sub-goals directly applicable to multi-agent orchestration.
 
-**Total self-improvement techniques documented: 33** (June 3, 2026 — added SE-Agent, Focus/Active Context, Memory Survey, ETO, Multi-Agent Evolve, Context Curation RL, SIA, GEA)
+**Total self-improvement techniques documented: 35** (June 11, 2026 — added SR2AM, WebXSkill)
+
+**2 NEW Techniques (June 11, 2026):**
+| Technique | arXiv | Key Metric | Hermes Applicability |
+|-----------|-------|------------|---------------------|
+| SR2AM (Self-Regulated Simulative Reasoning) | 2605.22138 | 25-95% fewer tokens, competitive w/ 685B-1T models | **HIGH** — planning efficiency |
+| WebXSkill (Skill Learning for Web Agents) | 2604.13318 | 3-stage skill extraction + organization | **HIGH** — skill creation |
 
 **3 NEW Self-Debugging Papers (June 1, 2026):**
 | Technique | arXiv | Key Metric | Hermes Applicability |
@@ -1430,7 +1444,7 @@ cronjob create --name "Job Name" --prompt "..." --schedule "..." --skills [...] 
 - `references/self-improving-agents-may-2026.md` — **12 NEW arXiv techniques** (May 13): ERL, Polaris, Self-Consolidation, ReflexiCoder, RetroAgent, MARS, AEL, DeepVerifier, ICPO, MemPO, EMPO², MCMA. Self-improvement paradigm shift from heuristic → RL-trained policies.
 - `references/self-improving-agents-may-2026-session.md` — **3 key techniques** (May 23): SICA (17→53% SWE-Bench), ERL (+7.8% Gaia2), DGM-Hyperagents. CVE-2026-7396 security note.
 - `references/self-debugging-techniques-may-2026.md` — **7 self-debugging techniques** (May 17): ReflexiCoder, Polaris, DebugRepair, SelfHeal, ErrorProbe, DeepVerifier, ERL. Paradigm shift: external feedback → self-generated verification, response-level → policy-level changes, single → multi-agent diagnosis teams.
-- `references/self-improving-agents-june-2026.md` — **6 NEW techniques (June 3)**: SE-Agent (2508.02085), Focus/Active Context (2601.07190), Memory Survey (2603.07670v1), ETO (GitHub), Multi-Agent Evolve, Context Curation RL (2604.11462v1). 30 total techniques documented.
+- `references/self-improving-agents-june-2026.md` — **6 NEW techniques (June 3)**: SE-Agent, Focus/Active Context, Memory Survey, ETO, Multi-Agent Evolve, Context Curation RL. **2 MORE (June 11)**: SR2AM (2605.22138, 25-95% fewer tokens), WebXSkill (2604.13318, 3-stage skill extraction). 35 total techniques documented.
 - `references/self-debugging-techniques-june-2026.md` — **3 NEW self-debugging techniques (June 8)**: Debug2Fix (2602.18571, PDB/JDB debugger integration, HIGH applicability), PyCapsule (2502.02928v2, dual-agent runtime tracing), Self-Improving Coding Agent (2504.15228, autonomous code editing). Total 33+ techniques documented.
 - `references/memory-optimization-agents-may-2026.md` — 8 NEW arXiv memory techniques (May 10)
 - `references/memento-skills-may-2026.md` — **Tool Creation: Memento-Skills** (May 26): frozen LLM + editable skill library, 80% task success (+78%), arXiv:2603.18743

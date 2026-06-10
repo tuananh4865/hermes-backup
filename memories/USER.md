@@ -6,7 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- 2026-06-01: [System note: Your previous turn in this session was interrupted by a gateway shutdown. The conversa
 - [preference] cần làm gì thêm nữa anh!
 - [tool] Orchestration
 - [preference] có harness** = agent chỉ là demo, hoạt động tốt trong lab nhưng fail trong production.
@@ -36,7 +35,8 @@
 - [file] json
 - [preference] tải được video vì browser-harn
 - [preference] hoạt động với computer_use)
-§ [SESSIONS] — session history summaries
 - 2026-06-07: hi
+§ [SESSIONS] — session history summaries
+- 2026-06-10: 
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

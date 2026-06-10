@@ -197,6 +197,44 @@
 
 ---
 
+---
+
+## 2026-06-10 Updates
+
+### New patterns found:
+
+#### Series Listicle Hook
+- **Pattern:** "3 YẾU TỐ" + "Tập 1/2/3" — numbered list + episode format
+- **Style:** Car vlog, lapel mic, red/white header boxes, yellow subtitle text with black outline
+- **Why viral:** Number = digestible, series = follow incentive, beginner targeting filters audience
+
+#### Beginner-Targeted Value Hook
+- **Pattern:** "DỄ LÀM DỄ VIRAL CHO NGƯỜI MỚI XÂY KÊNH" — double "easy" + specific audience
+- **Style:** Expert with headset, clean office background, yellow text overlay
+- **Why viral:** Low barrier promise + filters exact struggling audience
+
+#### Trending Audio Hook
+- **Pattern:** "NHẠC HOT LÊN XU HƯỚNG" — trending music promise
+- **Style:** Bookshelf background, expert persona, bold yellow text
+- **Why viral:** Universal creator desire (trending) + music emoji reinforcement
+
+#### Female Expert Studio Hook
+- **Pattern:** "Người từng biến loạt album của_" — curiosity gap with underscore
+- **Style:** Professional studio, Shure MV7 mic, TikTok pillow prop, warm lighting
+- **Why viral:** Curiosity gap + professional setup = trust + high production value
+
+#### Gen Z School Meme Hook
+- **Pattern:** "TRƯỜNG NGƯỜI TA" — Vietnamese culture-specific meme phrase
+- **Style:** Gaming headset, boom mic, tight close-up, serious expression
+- **Why viral:** Highly relatable for Vietnamese students, comment bait format
+
+#### Multi-Layer Text Hierarchy Hook
+- **Pattern:** Red header + white sub-header + yellow subtitle — 3 text layers
+- **Style:** Car vlog, pink/mauve t-shirt, high contrast colors
+- **Why viral:** Instant scannability during fast scroll
+
+---
+
 ## Related
 - [[cta-lessons]] — CTA patterns
 - [[storytelling-lessons]] — Storytelling structures

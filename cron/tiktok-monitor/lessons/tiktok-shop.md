@@ -217,6 +217,39 @@
 
 ---
 
+---
+
+## 2026-06-10 Updates
+
+### New patterns found:
+
+#### Beginner Creator Education → Shop Growth
+- **Pattern:** "DỄ LÀM DỄ VIRAL CHO NGƯỜI MỚI XÂY KÊNH"
+- **TikTok Shop angle:** New creators = new sellers needing education
+- **Why viral:** Targets pain point of new TikTok Shop sellers
+
+#### Trending Audio → Product Discovery
+- **Pattern:** "NHẠC HOT LÊN XU HƯỚNG"
+- **TikTok Shop angle:** Trending audio = product discovery acceleration
+- **Why viral:** Algorithm success = sales potential
+
+#### Female Expert → Beauty/Lifestyle Shop
+- **Pattern:** Professional studio + TikTok pillow prop
+- **TikTok Shop angle:** Female creators in studio = beauty/lifestyle niche
+- **Why viral:** High production = premium product perception
+
+#### Series Format → Multi-Product Sales
+- **Pattern:** "3 YẾU TỐ" + Tập 1/2/3 series
+- **TikTok Shop angle:** Multiple videos = multiple product features/launches
+- **Why viral:** Follow incentive = repeat exposure to shop products
+
+#### Gen Z Cultural Content → Community Building
+- **Pattern:** "TRƯỜNG NGƯỜI TA" school meme
+- **TikTok Shop angle:** Community engagement → follower loyalty → shop trust
+- **Why viral:** Cultural relevance = comment/engagement boost
+
+---
+
 ## Related
 - [[hooks-lessons]] — Hook patterns
 - [[cta-lessons]] — CTA patterns

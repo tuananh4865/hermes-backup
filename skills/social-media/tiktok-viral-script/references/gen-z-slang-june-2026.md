@@ -60,3 +60,33 @@
 2. **"Nhiệm vụ hệ thống"** — Frame product test as quest/achievement
 3. **POV twist** — Dramatic start → funny reveal
 4. **Meta-humor** — Add 1 self-aware comment mid-video
+
+## June 10, 2026 — Additional Discoveries
+
+### New Hook Formats (June 10)
+| Hook | Pattern | Example |
+|------|---------|---------|
+| **Series Listicle** | "3 YẾU TỐ" + "Tập 1/2/3" | Numbered list + episodic format |
+| **Beginner-Targeted** | "DỄ LÀM DỄ VIRAL CHO NGƯỜI MỚI XÂY KÊNH" | Filters audience by intent |
+| **Gen Z School Meme** | "TRƯỜNG NGƯỜI TA" | Vietnamese school meme → comment bait |
+| **Multi-Layer Text** | Red header + white sub + yellow subtitle + episode boxes | 4 text layers simultaneously |
+
+### New CTA Patterns (June 10)
+| CTA | Pattern | Effect |
+|-----|---------|--------|
+| **Series Retention** | "Tập tiếp theo" + follow bait | Follow incentive |
+| **Curiosity Gap** | Underscore ending "của_" | Creates pause + anticipation |
+| **Expert Trust** | Glasses + car vlog | Authority signal |
+| **Trending Audio** | "NHẠC HOT LÊN XU HƯỚNG" | Ride trend wave |
+
+### Gen Z Cultural Insight (June 10)
+- **"TRƯỜNG NGƯỜI TA"** (Other People's School) meme drives massive comment engagement
+- Platform-specific cultural references create "in-group" feeling
+- Algorithm rewards high-comment content with more reach
+- **Script application:** Use relatable pain point framing → viewers comment to share experience
+
+### Production Quality = Product Value Signal (June 10)
+- Professional studio (Shure MV7 mic, warm lighting, TikTok props) → premium product perception
+- Clean backdrop + professional audio = trust → conversion pipeline
+- Even "casual" car vlogs use lapel mics to signal audio quality
+- **For TikTok Shop:** High production = higher perceived product value → better conversion

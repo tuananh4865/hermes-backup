@@ -529,14 +529,14 @@
   "hermes-autoresearch": {
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
-    "last_patched_at": "2026-06-07T19:08:58.280574+00:00",
-    "last_used_at": "2026-06-10T00:00:59.252621+00:00",
-    "last_viewed_at": "2026-06-07T19:07:37.533810+00:00",
-    "patch_count": 267,
+    "last_patched_at": "2026-06-10T19:07:32.312906+00:00",
+    "last_used_at": "2026-06-10T19:05:38.969838+00:00",
+    "last_viewed_at": "2026-06-10T19:05:38.968254+00:00",
+    "patch_count": 272,
     "pinned": false,
     "state": "active",
-    "use_count": 279,
-    "view_count": 212
+    "use_count": 281,
+    "view_count": 213
   },
   "hermes-external-skills-setup": {
     "archived_at": null,
@@ -1125,14 +1125,14 @@
     "archived_at": null,
     "created_at": "2026-05-08T01:06:44.513231+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-06-09T17:56:16.503375+00:00",
-    "last_used_at": "2026-06-09T19:03:02.866698+00:00",
-    "last_viewed_at": "2026-06-09T19:03:02.864881+00:00",
-    "patch_count": 103,
+    "last_patched_at": "2026-06-10T16:58:04.907200+00:00",
+    "last_used_at": "2026-06-10T16:56:49.921965+00:00",
+    "last_viewed_at": "2026-06-10T16:56:49.920623+00:00",
+    "patch_count": 108,
     "pinned": false,
     "state": "active",
-    "use_count": 139,
-    "view_count": 138
+    "use_count": 146,
+    "view_count": 145
   },
   "touchdesigner-mcp": {
     "archived_at": null,

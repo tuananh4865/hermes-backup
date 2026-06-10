@@ -228,6 +228,44 @@
 
 ---
 
+---
+
+## 2026-06-10 Updates
+
+### New patterns found:
+
+#### Series Educational Structure
+- **Pattern:** Tập 1/2/3 + numbered list — chapter-based learning
+- **Style:** Car vlog, lapel mic, red/white/blue episode boxes
+- **Structure:** Hook → Series intro → Sequential delivery → Follow for next
+- **Why viral:** Habit formation + authority building over multiple videos
+
+#### Expert Mentor Persona
+- **Pattern:** Headset + clean office + direct eye contact
+- **Style:** Gaming/streaming aesthetic, professional lighting
+- **Structure:** Expert positioning → pain point → solution → soft CTA
+- **Why viral:** Trust + relatability balance
+
+#### Female Creator Studio Format
+- **Pattern:** Professional studio + mic + TikTok merchandise prop
+- **Style:** Warm lighting, polo shirt, glasses, clean backdrop
+- **Structure:** Storytelling → industry insight → curiosity gap
+- **Why viral:** High production = perceived expertise
+
+#### Gen Z School Culture Story
+- **Pattern:** "Trường người ta" meme format
+- **Style:** Close-up headset, serious expression, minimal background
+- **Structure:** Relatable meme → comparison → community validation
+- **Why viral:** Vietnamese cultural specificity = comment driver
+
+#### Multi-Layer Text Storytelling
+- **Pattern:** Red header + white sub-header + yellow subtitle + episode boxes
+- **Style:** Car vlog, 4+ text layers at once
+- **Structure:** Parallel information delivery, eye travels hierarchy
+- **Why viral:** Fast-scrollable, high information density
+
+---
+
 ## Related
 - [[hooks-lessons]] — Hook patterns
 - [[cta-lessons]] — CTA patterns
