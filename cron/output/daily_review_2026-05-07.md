@@ -1,88 +1,68 @@
-# Daily Review — 2026-05-07
+# Hermes Daily Session Review — 2026-05-07
 
-## Summary
-- **Total sessions:** 44 (21 cron + 23 regular)
-- **Real user sessions:** 4 (2 morning work sessions + 2 nightly review sessions)
-- **Key activity:** Hermes Memory 5-phase implementation, Daily Review cron setup
+## 🌙 Daily Review — 2026-05-07
 
 ---
 
-## ✅ Hoàn thành
+### ✅ Hoàn thành
 
-### 1. Hermes Memory System — ALL 5 PHASES COMPLETE
-- **File:** `~/.hermes/plugins/memory/wiki/__init__.py` (1458 lines)
-- **Phases implemented:**
-  - Phase 1: Structured USER.md (Mem0-style entity extraction)
-  - Phase 2: Hybrid BM25 + semantic retrieval + importance scoring
-  - Phase 3: Smart session-start topic parsing
-  - Phase 4: Memory consolidation (forgetting/eviction)
-  - Phase 5: Cross-session entity tracking
-- **Wiki updated:** `hermes-memory-master-plan.md`, `hermes-memory-implementation-plan.md`
-
-### 2. Daily Review Cron — Set up and running
-- Task: Every night at 0AM, read all session logs, extract key info, update wiki, report
-- Sessions affected: 2026-05-07 (today) and forward
-- Telegram report sent successfully
-
-### 3. Worker Cron Fix
-- 7 worker cron jobs were running with wrong prompts
-- Fixed: content-creator, research-agent prompts corrected
-
-### 4. TikTok Shop Research (from Content Creator evening report)
-- Market: TikTok Shop GMV grew **148% YoY** H1 2025
-- Market share: **40%+**, duopoly with Shopee = 97% combined GMV
-- Top trends identified
-- Report saved: `workers/content-creator/outputs/2026-05-07-evening-content.md`
-
-### 5. Wiki Updates
-- `wiki/log.md` — appended daily summary entry
-- `wiki/entities/learned-about-tuananh.md` — updated Gen Z slang (`lọ`, `lỏ vãi`)
+- **Felix Workers Cron Fix** — 7 worker crons đang chạy sai prompt (hermes-autoresearch thay vì SOUL.md) → đã fix bằng Python subprocess với explicit --prompt string
+- **TikTok Shop Research** — Nghiên cứu market fees (12.5-14.5%), commission structures (10-25%), Gen Z behavior
+- **3 Content Scripts Generated** — Hair ties review, Charm mini review, Portable fan
+- **Wiki updated** — log.md + learned-about-tuananh.md với Gen Z slang mới
 
 ---
 
-## 🧠 Learnings
+### 🧠 Learnings
 
-1. **Memory system works** — structured USER.md format with 8 sections allows fast retrieval
-2. **Nightly review pattern established** — cron at 0AM catches all daytime sessions
-3. **Gen Z slang evolving** — `lọ` (HOT) replacing `lỏ`, `lỏ vãi` for ironic comedy
-4. **TikTok market maturing** — 60%+ margin required to survive fee structure (12.5-14.5%)
+**System:**
+- Shell expansion `$(cat SOUL.md)` không hoạt động trong cron context
+- Fix: Python subprocess với explicit --prompt string
+- Working cron IDs: ce3701b4dcdd, 50bc2c2dfbb3, e4fb0c36e9f7, 1c425ba42980, fc2191d508a3, 045a44210a59, f1584a9a1d86
 
----
+**TikTok Business:**
+- TikTok Shop: 40%+ market share, 148% YoY growth
+- Hot products: Hair ties (56K orders), Big ribbon clips (93K), Charm mini (164K units)
+- Catrice Foundation +346% in ONE WEEK — authentic moment > polished ads
+- Platform fees jumped March 2026: 2-3% → 12.5-14.5%
+- Price sweet spot: $15-30 (₫375K-750K)
 
-## ⚠️ Cần xử lý
+**Gen Z Slang (May 2026):**
+- `lọ` — HOT (viral update from `lỏ`)
+- `lỏ vãi` — ironic "tacky/cheap" (for comedy)
+- `vãi` — intensifier
+- `đỉnh nóc` — dùng ít thôi, KHÔNG overused
 
-1. **Worker outputs need consolidation** — content-creator and research-agent outputs stored separately, could benefit from unified dashboard
-2. **Session index could be automated** — no centralized index of what each session accomplished
-
----
-
-## Session Details
-
-### Morning Sessions (Tuấn Anh active)
-| Time | Session | Key Work |
-|------|---------|----------|
-| 07:22 | session_20260507_053721 | Implemented Phases 1-5 memory system |
-| 07:43 | session_20260507_054356 | Continued memory implementation + test |
-
-### Nightly Review Sessions (Cron)
-| Time | Session | Key Work |
-|------|---------|----------|
-| 21:51 | session_20260507_215130 | Daily review + wiki update + Telegram report |
-| 22:00 | session_20260507_220000 | Repeat of nightly review |
-
-### Autoresearch Sessions
-| Time | Session | Key Work |
-|------|---------|----------|
-| 02:00 | cron_a4b8e528983f | Autoresearch run - found worker cron issue |
-| 07:00 | cron_a5c02f2f0d87 | Autoresearch run |
+**Content Strategy:**
+- 7-day plan: Hair accessories → Charm → Beauty → Fashion → Home → Gadgets → Recap
+- Hook types: comedy timing, mystery/unboxing, authentic moment
+- Price point highlight: 1k5 = budget-friendly
 
 ---
 
-## Gen Z Slang Updated (2026-05-07)
-- **lỏ vãi** — ironic "tacky/cheap" (used for comedy)
-- **lọ** — HOT (updated from "lỏ", viral May 2026)
+### ⚠️ Cần xử lý
+
+- **Watchdog daemon** — needs restart (priority task [80])
+- **25 Nexus project tasks** — pending
 
 ---
 
-*Report generated: 2026-05-08 00:00*
-*Next review: 2026-05-08 00:00*
+## Sessions Analyzed
+
+| Session | Time | Key Topic |
+|---------|------|-----------|
+| 20260507_053721_1a650ffc | 05:37 | Hermes Memory System — 5 phases complete |
+| 20260507_215130_abe3f155 | 21:51 | Felix Workers + TikTok Content + Research |
+| 20260504_102705_226632b9 | ~May 7 | (older session, cross-reference) |
+
+---
+
+## Wiki Updates
+
+- `wiki/log.md` — appended daily summary (2026-05-08 cron entry)
+- `wiki/entities/learned-about-tuananh.md` — added `lọ`, `lỏ vãi` slang; updated date to 2026-05-08
+- `wiki/queries/tiktok-shop-monetization-research-2026-05.md` — saved research report
+
+---
+
+*Generated: 2026-05-08 00:00*

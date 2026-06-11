@@ -6,23 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [preference] cần làm gì thêm nữa anh!
-- [tool] Orchestration
-- [preference] có harness** = agent chỉ là demo, hoạt động tốt trong lab nhưng fail trong production.
-- [tool] th [HIGH]
-- [tool] calls [HIGH]
-- [preference] em dùng approach nào để research tiếp, hay cứ report đây là bug với Hermes team? [HIGH]
-- [preference] tự tạo issue? [HIGH]
-- [preference] Exa, the test succeeds but subsequent tool calls fail because the underlying transport layer doesn't properly bridge to the JSON-RPC protocol. [HIGH]
-- 2026-06-05: test lại xem
-- 2026-06-07:
-- 2026-06-07:
-- 2026-06-07:
-- 2026-06-07: hi
-- 2026-06-07: hi
-- [preference] não muốn biết câu trả lời [HIGH]
-- [preference] ai nói cho các mày biết..." [HIGH]
-- [file] wiki
 - [file] md
 - [preference] cần hỏi anh nữa. Có gì mới học được cũng sẽ cập nhật ngay. 📝
 - [file] người
@@ -36,7 +19,24 @@
 - [preference] tải được video vì browser-harn
 - [preference] hoạt động với computer_use)
 - 2026-06-07: hi
+- 2026-06-10:
+- 2026-06-11:
+- 2026-06-11: https://www.tiktok.com/@hi.imdung?_r=1&_t=ZS-976jixALr0S
+Vào khám phá kênh này, xem 50 video mới nh
+- 2026-06-11: https://www.tiktok.com/@hi.imdung?_r=1&_t=ZS-976jixALr0S
+Vào khám phá kênh này, xem 50 video mới nh
+- [preference] lan man — tập trung vào 2 trục:
+- [preference] chỉ review sản phẩm — kênh còn làm content dạng **"dạy cách làm"**:
+- [preference] bán cũng gần giống kênh này nhưng thay vì share cách làm tiktok hay affiliate thì share về cách setup cơ bản và cách edit cơ bản!
+- [preference] nâng cao chất lượng |
+- [preference] biết cách làm" | "Setup sao cho đẹp", "Edit sao cho chuyên nghiệp" |
+- [preference] cần mua" |
+- 2026-06-11: https://www.tiktok.com/@hi.imdung?_r=1&_t=ZS-976jixALr0S
+Vào khám phá kênh này, xem 50 video mới nh
+- [preference] làm giống vậy!
+- [preference] fake, tạo credibility
+- 2026-06-11: nghiên cứu sâu hơn về chiến thuật xây kênh của kênh này! vì đây là kiểu kênh mà anh muốn làm giống v
 § [SESSIONS] — session history summaries
-- 2026-06-10: 
+- 2026-06-11: 
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

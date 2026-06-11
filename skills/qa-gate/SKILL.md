@@ -56,5 +56,44 @@ Confidence Score Check:
 ## Case Study
 - `references/minimax-api-verification-2026-05-29.md` — WRONG answer delivered without research: said M2.7 doesn't support Anthropic-compatible endpoint. Reality: it does. QA gate would have caught this.
 
+## Examples
+
+### Example 1: Pre-Execution QA (Score ≥ 9 → Proceed)
+```
+Task: "Fix the login bug"
+Confidence assessment:
+- Domain knowledge: 3/3 (debugged auth before)
+- Past experience: 2/3 (similar bugs)
+- Tool availability: 1/1 (have logs, can reproduce)
+- Self-verifiable: 1/1 (can test fix)
+- Known patterns: 1/2 (auth flow patterns)
+Total: 8/10 → Proceed with quick verification (check git log + session DB)
+```
+
+### Example 2: Pre-Execution QA (Score < 9 → Research Required)
+```
+Task: "Connect to new AI provider X"
+Confidence assessment:
+- Domain knowledge: 1/3 (never used X)
+- Past experience: 0/3 (first time)
+- Tool availability: 1/1 (have curl)
+- Self-verifiable: 1/1 (can test connection)
+- Known patterns: 0/2 (no similar pattern)
+Total: 3/10 → Deep research BẮT BUỘC
+→ Web search: provider docs, API format, authentication
+→ Extract: endpoint URL, required headers, model IDs
+→ Verify with official docs before answering
+```
+
+### Example 3: Post-Execution QA (Deliver Checklist)
+```
+Before delivering result to Anh:
+□ Did I verify the main claim with at least 1 source?
+□ Is the API/model info from current documentation?
+□ Did I avoid "Em không chắc về..."?
+□ Is the deliverable complete or do I need to add context?
+□ If uncertain about something, did I correct it immediately?
+```
+
 ## Related
 - [[hermes-agent-self-evolution]]

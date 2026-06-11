@@ -22,6 +22,21 @@ Write viral TikTok Shop scripts in Tuấn Anh's authentic Vietnamese voice.
 - Any request involving TikTok Shop affiliate content
 - **Anh shares a TikTok URL + "phân tích" / "tải và phân tích" / "review video"** → Run `references/tiktok-video-analysis-workflow.md` pipeline
 
+### 🔄 Content Direction — Setup + Edit Cơ Bản (thay thế affiliate)
+
+**⚠️ CẬP NHẬT QUAN TRỌNG (2026-06-11):** Anh muốn CHUYỂN hướng từ TikTok Shop affiliate → **Setup cơ bản + Edit cơ bản** (dạy cách setup và edit, không bán sản phẩm affiliate).
+
+**Lý do:** Kênh @hi.imdung (Dũng RV) là model — dạy affiliate/setup content. Anh muốn làm kênh TƯƠNG TỰ nhưng về setup + edit thay vì affiliate marketing.
+
+**3 trụ nội dung mới:**
+| Trụ | Chủ đề | Ví dụ video |
+|-----|--------|-------------|
+| **Trụ 1** | SETUP CƠ BẢN | Ánh sáng, camera/mic, background, dàn setup |
+| **Trụ 2** | EDIT CƠ BẢN | CapCut, hiệu ứng, text/subtitle, transition |
+| **Trụ 3** | GEAR REVIEW | Đánh giá gear, so sánh, mua ở đâu |
+
+**Xem thêm:** `references/kênh-hi-imdung-guideline.md` — Phân tích chi tiết kênh @hi.imdung làm mẫu
+
 **⚠️ Distinguish between two request types:**
 | Request | Action |
 |---------|--------|
@@ -406,6 +421,9 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - `references/tiktok-content-writing-2026.md` — Hooks (5 types), Script Structure (5 parts), 17 Viral Formulas, Psychology behind hooks, TikTok Shop tips (2026-06-06) ✅ NEW
 - `references/tiktok-to-telegram-delivery.md` — TikTok video → Telegram pipeline: probe streams first (HEVC vs H.264 detection), silent video = content style not error, HEVC→H.264 conversion, 720p compression for <50MB Telegram limit, retry on timeout ✅ ENHANCED this session
 - `references/gen-z-slang-june-2026.md` — 4 new hook formats discovered: "quát 1 câu", Gamification quest, POV Twist, Meta-humor. June 2026 nightly monitor findings ✅ NEW
+- **NEW (2026-06-11):** `references/kênh-hi-imdung-guideline.md` — FULL kênh @hi.imdung guideline adapted for Setup + Edit content direction (thay thế affiliate). Bao gồm: 3 trụ nội dung, hook templates, script formulas, content calendar, checklist
+
+**Wiki resource (2026-06-11):** `wiki/concepts/tiktok-channel-building-strategy-hi-imdung-style.md` — Chiến thuật xây kênh toàn diện: 3 giai đoạn xây kênh, content pillar 80/20, hook framework 3 giây, SEO hashtag strategy, video length format, edutainment 2026, content funnel (TikTok → YouTube → Facebook Group/Zalo). Link từ index: [[tiktok-channel-building-strategy-hi-imdung-style]]
 - `references/tiktok-monitor-10channel-june-2026.md` — Full 10-video analysis from 5 channels, deduplication tracker, "1 Mẹo" format discovery, CTA patterns, URL discovery workflow (2026-06-07) ✅ NEW
 - `references/tiktok-monitor-workflow-june-2026.md` — 5-channel nightly monitor workflow: ID-first → dedupe → download → frames → analyze → lessons → Telegram. Includes JS challenge failure workaround (2026-06-09) ✅ NEW
 - `references/youtube-tiktok-adaptation.md` — YouTube → TikTok adaptation lessons from Evan Carmichael's "YouTube Is Not Too Crowded" (Pattern Disrupt Hook, Audience of One, 350 Videos Persistence, Belief Framework, Signature CTA) ✅ NEW this session
@@ -497,7 +515,21 @@ When Anh shares a video for analysis, DISTINGUISH between:
 
 ---
 
-## Pitfalls (AVOID THESE)
+### Pitfalls (AVOID THESE)
+
+### ⚠️ USER COMMUNICATION STYLE — RESPOND CONCISELY (2026-06-11)
+**Signal:** User asked "Nghiên cứu cho anh các cách viết nội dung thu hút trên nền tảng tiktok" TWICE and then "Alo Alo" — this indicates they wanted a **direct, quick answer**, NOT a massive research report.
+
+**Rule:** When user asks a direct question about techniques/methods, give the answer directly in the message. Only write to wiki files for DEEP research that produces new frameworks/lessons. For straightforward technique questions, respond inline.
+
+**When to write to wiki vs respond inline:**
+| Type | Action |
+|------|--------|
+| "Cách viết nội dung thu hút trên TikTok?" | ✅ Respond inline with techniques |
+| "Nghiên cứu sâu về X" | ✅ Write to wiki + respond with summary |
+| "Phân tích kênh Y" | ✅ Write to wiki + respond with summary |
+| "Viết script cho video này" | ✅ Respond inline with script |
+| Quick technique question | ✅ Respond inline, wiki only if new learning |
 
 ### Video Pipeline Mistakes
 - ❌ **yt-dlp URL without quoting** — parentheses in TikTok short URLs (`vt.tiktok.com/ZSQYqMofg/`) cause bash syntax error "unexpected token '('. Always wrap URL in double quotes: `yt-dlp -o "file.mp4" "https://..."`

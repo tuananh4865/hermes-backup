@@ -254,3 +254,55 @@
 - [[hooks-lessons]] — Hook patterns
 - [[cta-lessons]] — CTA patterns
 - [[storytelling-lessons]] — Storytelling structures
+
+---
+
+## 2026-06-11 Updates
+
+### New patterns found:
+
+#### 1. Authenticity Over Polish for TikTok Shop
+- **Pattern:** "Dark side of content creation" → trust building → product recommendation
+- **Example:** @duymuoi car vlog style — raw, unpolished, real
+- **Why it works for Shop:** Viewers trust creator honesty → more likely to buy recommended products
+- **Shop angle:** If selling course/product, authenticity = conversion
+
+#### 2. Beginner Audience = High-Intent Buyers
+- **Pattern:** "CHO NGƯỜI MỚI XÂY KÊNH" → filter for beginners
+- **Example:** @nguyenducduong9699 — content creation tips for new channels
+- **Why it works for Shop:** Beginners actively researching = ready to buy solutions
+- **Shop angle:** Tools, courses, presets for new creators
+
+#### 3. Fitness Debunk Content = High Engagement
+- **Pattern:** "Puzzle" structure — claim vs reality → education
+- **Example:** @anhsacanh.vn — 824 calo myth, 5-10kg/month claims
+- **Why it works for Shop:** High comments = algorithm boost = reach
+- **Shop angle:** Health products, supplements, fitness equipment
+- **Expert signal:** Shure MV7+ mic + professional setup = product credibility
+
+#### 4. Hashtag Education = Save-Worthy Content
+- **Pattern:** "Fatal hashtag mistake" → education → save CTA
+- **Example:** @goccontent — yellow background, friendly expert
+- **Why it works for Shop:** Saves = future reference = conversion opportunity
+- **Shop angle:** Social media tools, hashtag trackers, analytics tools
+- **Visual warmth:** Yellow + green = approachable expert, not salesy
+
+#### 5. "Trường Người Ta" Cultural CTA for Comments
+- **Pattern:** "I see X on TikTok" → "Comment your experience"
+- **Example:** @duymuoi — breastfeeding mothers observation
+- **Why it works:** Cultural specificity drives massive comments
+- **Shop angle:** Products for specific demographics (mom, dad, Gen Z)
+- **Comment CTA:** "Bạn cũng thấy như này không?" = engagement + product feedback
+
+#### 6. Open Loop Hook → Product Reveal Structure
+- **Pattern:** "You will never..." → reveal → product solution
+- **Example:** @tam_thefox — success/wealth content with open loop
+- **Why it works:** Curiosity gap → must follow to see solution
+- **Shop angle:** Courses, coaching, "secret" products
+- **Visual:** Pink/red accent on key word = urgency marker
+
+#### 7. Expert Setup = Product Trust
+- **Pattern:** Professional mic + glasses + clean background = expert credibility
+- **Examples:** @anhsacanh.vn (Shure MV7+, dark studio), @nguyenducduong9699 (headset, clean background)
+- **Why it works:** Production quality = perceived product value
+- **Shop angle:** Higher priced products need higher production trust signals

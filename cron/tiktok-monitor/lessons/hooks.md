@@ -239,3 +239,53 @@
 - [[cta-lessons]] — CTA patterns
 - [[storytelling-lessons]] — Storytelling structures
 - [[tiktok-shop-lessons]] — TikTok Shop specific
+
+---
+
+## 2026-06-11 Updates
+
+### New patterns found:
+
+#### 1. Confession/Vulnerability Hook (Emotional Authenticity)
+- **Pattern:** Creator admits weakness, fatigue, or "dark side" of their profession
+- **Example:** "Góc tối nghề làm nội dung" / "NÓI VỀ MẤY CÁI TÍCH CỰC MÃI RỒI" (@duymuoi)
+- **Why viral:** Authenticity = trust. Viewers feel "insider access" to real struggles
+- **Gen Z angle:** Trending "real talk" content — no filters, no highlight reels
+- **CTA type:** Emotional connection → follow for more authentic content
+
+#### 2. Incomplete Statement Hook (The "Never... Reason You Haven't" Pattern)
+- **Pattern:** "BẠN SẼ KHÔNG BAO GIỜ / Lý do bạn chưa..." — incomplete sentence creates tension
+- **Example:** @tam_thefox — "You will never... / The reason you haven't..."
+- **Why viral:** Open loop + curiosity gap + self-reflection trigger
+- **Slang used:** Bold typography with pink/red accent glow on key word
+- **Best for:** Success/content/wealth advice niches
+
+#### 3. Demographic-Specific Observation Hook ("I See X on TikTok")
+- **Pattern:** "MÌNH THẤY ĐA SỐ NHỮNG CHỊ EM BỈM SỮA LÊN TRÊN NÀY" — observation about specific group
+- **Example:** @duymuoi — observation about breastfeeding mothers on TikTok
+- **Why viral:** "Trường người ta" pattern — relatable for in-group, intriguing for out-group
+- **Best for:** Commentary/reaction content about social trends
+
+#### 4. Hashtag Mistake Hook (Specific Warning)
+- **Pattern:** "SAI LẦM RẤT TAI HẠI KHI ĐẶT HASHTAG" — specific mistake, high stakes
+- **Example:** @goccontent — yellow background + green plants + lapel mic = expert credibility
+- **Why viral:** Fear of failure + desire to avoid mistake = saves + shares
+- **Visual signature:** Warm colors (yellow bg, green plants) = friendly expert, not scary
+
+#### 5. Puzzle/Riddle Hook (Interactive Engagement)
+- **Pattern:** "mình chơi giải đố một chút đi" — ask audience to solve something
+- **Example:** @anhsacanh.vn — 30 ngày giảm 5kg / 824 Calo / 5-10kg/tháng ???
+- **Why viral:** Interactive = comment driver + thought leader positioning
+- **Best for:** Fitness/health content where "debunking" claims drives engagement
+
+#### 6. Beginner-Targeting Hook ("CHO NGƯỜI MỚI XÂY KÊNH")
+- **Pattern:** Explicitly targeting new creators to filter high-intent audience
+- **Example:** @nguyenducduong9699 — "PHƯƠNG PHÁP CHỐNG BÍ Ý TƯỞNG DÀNH CHO NGƯỜI MỚI XÂY KÊNH"
+- **Why viral:** Self-selection — only new creators click, reducing negative engagement
+- **Visual:** Headset + glasses + professional setup = "this person knows their stuff"
+
+#### 7. Multi-Element Text Overlay (4-Layer Hierarchy)
+- **Pattern:** Red header + white sub-header + yellow subtitle + episode boxes
+- **Why viral:** Maximum information density for fast-scroll environment
+- **Visual hierarchy:** Eye travels naturally through layers (header → sub → detail)
+- **Color theory:** Red/white/yellow against neutral background = high contrast pop

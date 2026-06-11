@@ -489,6 +489,22 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** The document references "Anh" in the Ingest Workflow section ("When Anh provides a URL...") but doesn't explain who Anh is. This seems like a placeholder or incomplete reference.
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** Step 5 in the "Ingest Workflow" section only shows "Step 5" but the workflow mentions "Step 1" then jumps to "Step 5" - this is clearly incomplete. Steps 2, 3, and 4 are missing entirely.
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The frontmatter template includes a `relationships` field, but the "Page Types" section and "Conventions" don't explain how relationships should be maintained
+
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** The "Ingest Workflow" section has Step 1 but jumps to Step 5, which suggests there's a missing Step 2, 3, 4 in between. This is a clear structural issue.
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The Ingest Workflow says "Step 1" then jumps to "Step 5" - there's no Step 2, 3, or 4 defined. This is a clear gap/inconsistency.
+
 === index.md ===
 ---
 confidence: high
@@ -563,6 +579,7 @@ relationships:
 - [[memento-skills-may-2026]] — Memento-Skills: Frozen LLM rewrites own skill library — 80% task success (+78%), arXiv:2603.18743 (2026-05-28)
 - [[gea-group-evolving-agents]] — Group-Evolving Agents: 71.0% on coding benchmarks, treats groups as evolutionary unit (2026-05-29)
 - [[skillsinjector-grasp-2026]] — SkillsInjector + GRASP: per-task skill context + regression-safe skill editing (May 29, 2026)
+- [[self-debugging-techniques-june-2026]] — Debug2Fix + PyCapsule + Self-Improving Coding Agent: debugger-integrated multi-agent self-debugging (2026-06-08)
 
 ### Tools & Infrastructure
 - [[lm-studio]] — Local LLM inference server
@@ -586,7 +603,8 @@ relationships:
 
 ### TikTok Content
 - [[tiktok-algorithm-2026]] — Giải mã thuật toán viral 2026: điểm, hook, kịch bản mẫu, SEO, Vietnam Reali-TEA (2026-04-25)
-- [[tiktok-viral-script]] — Pipeline thu thập transcript + nâng cấp công thức viral mỗi ngày
+| [[tiktok-viral-script]] | Pipeline thu thập transcript + nâng cấp công thức viral mỗi ngày |
+| [[tiktok-content-writing-2026]] | Hooks (5 types), Script Structure (5 parts), 17 Viral Formulas, Psychology, TikTok Shop tips (2026-06-06) |
 - [[epoxy-floor-prompt-template]] — Frame-to-video template cho TikTok transformation content (2026-04-19)
 - [[tiktok-captcha-solver]] — Toolkit miễn phí 100% bypass TikTok CAPTCHA: puzzle slider, rotate, 3D shapes (2026-04-24)
 - [[tiktok-trends-2026-04-29]] — Reali-Tea, TikTok as search engine, Gen Z content shifts (2026-04-29)
@@ -594,6 +612,7 @@ relationships:
 - [[gen-z-slang-2026-04]] — Vietnamese + English Gen Z slang, Chuzz, Gyatt, đỉnh, toang (2026-04-29)
 
 ### Hermes X Research
+- [[x-research-hermes-2026-06-11]] — Hermes X research June 11: ~188K stars, v0.16 Surface Release (100 PRs, 159 commits), Native Desktop App, /undo command, Nemotron 3 Ultra free (2026-06-11)
 - [[x-research-hermes-2026-06-07]] — Hermes X research June 7: v0.16 Surface Release, 176K stars, Native Desktop App, NVIDIA partnership (2026-06-07)
 - [[hermes-x-research-2026-05-27]] — Hermes X research May 27: Hermes Desktop, Browserbase integration, Bitwarden support, funding update (2026-05-27)
 - [[hermes-x-research-2026-05-25]] — Hermes X research: 157.2K stars, v0.14.0 Foundation, overtook OpenClaw, Windows beta, X Premium integration (2026-05-25)
@@ -604,6 +623,9 @@ relationships:
 ### Auto-Ingest
 - [[email]] — Email forwarding setup
 - [[rss]] — RSS feed monitoring
+
+| [[tiktok-content-guideline-hi-imdung-style]] | Guideline MỚI (2026-06-11): Setup + Edit cơ bản, 3 trụ nội dung, 5 hook templates, 3 script templates, content calendar, 30 ngày action plan |
+| [[tiktok-channel-building-strategy-hi-imdung-style]] | Chiến thuật xây kênh @hi.imdung: 3 giai đoạn, content pillar 80/20, hook framework, SEO hashtag, video length, edutainment, content funnel (2026-06-11) |
 
 ## Projects
 - [[project-management]] — Project management methodology
@@ -870,17 +892,23 @@ relationships:
 
 > **Auto-improvement note:** The page says "Total pages: ~156" but I see many entries. Hard to verify but the count could be inaccurate
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Tuấn Anh" section only has one entry with a date from 2026-04-23, but there are many more entries for other entities. This section seems incomplete.
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Last updated: 2026-05-07" is in the past (it's currently June 2026 based on some entries)
+
+> **Auto-improvement note:** *Missing or outdated information**: 
+
+> **Auto-improvement note:** The page mentions "Total pages: ~156" but this is a rough estimate (~) which suggests it's not regularly updated
+
+> **Auto-improvement note:** *Missing or outdated information**: 
+
+> **Auto-improvement note:** The page mentions "Total pages: ~156" but this is a rough estimate (~) which suggests it's not regularly updated
+
 === log.md (last 20 lines) ===
-- Telegram scrapes: removed old timestamp files (10-17 series)  
-- Stale dirs: fine-tuned-wiki, .processed, .pytest_cache, etc.
-- Apple/Google/LM docs: removed (not asked about in 14 days)
-- References: restored active research docs (autoresearch, Hermes X research)
-- Concepts: 1483, Entities: 21, References: 7 restored
-
-## [2026-05-28] daily-review | Daily review compiled — 6 sessions (4 cron, 2 system), Hermes v0.14.0 upgrade, macos-computer-use skill enabled, Memento-Skills (Tool Creation), 0 new Gen Z terms, workers offline since May 25
-## [2026-05-28] upgrade | Hermes upgraded to v0.14.0 — pydantic 2.12.5→2.13.4, cua-driver 0.1.9→0.2.0, +3 new skills, conflicts resolved
-
-## [2026-06-01] youtube-deep-dive | Deep YouTube Round 2: Shorts algorithm (5.91% engagement), thumbnail science (face +20-30% CTR), AI workflow ($30-80/mo stack), competitor analysis 8-dimension framework, mid-roll optimization (hybrid = +5% revenue), batch production, channel branding, session time optimization
 
 ## [2026-06-01] last30days-agent-reach-install | Installed last30days (mvanhorn/last30days-skill) + Agent-Reach (Panniantong/Agent-Reach) from GitHub. last30days requires python3.13+ (not 3.11). Agent-Reach: 6/16 channels working (GitHub, YouTube, Reddit via rdt-cli, V2EX, Web). YouTube transcripts: 5/6 success rate. Wiki: [[last30days-agent-reach-setup]]
 
@@ -892,11 +920,21 @@ relationships:
 
 ## [2026-05-07] daily-review | Daily review May 7 — Hermes Memory ALL 5 PHASES complete (1458 lines, syntax OK), 8 phase methods implemented, hybrid retrieval (BM25+semantic), Vietnamese topic parsing, importance scoring (HIGH=0.90), consolidation auto-trigger at 50 entries. Content Creator: 3 scripts (hair ties/charm/portable fan), "lọ" slang HOT May 2026, Catrice Foundation +346% viral case. Top products: Kẹp Tóc Nơ Bong Bóng ₫3.38B GMV, Charm 164K units. TikTok 40%+ market share, Shopee duopoly 97%.
 
+## [2026-06-06] create | TikTok Content Writing 2026 — Hooks (5 types), Script Structure (5 parts), 17 Viral Formulas, Psychology behind hooks, TikTok Shop tips. Source: ScriptStorm, HookMafia, HeyOrca, TikTok Business Blog
+
+## [2026-06-08] autoresearch | Autoresearch June 8 — Wiki clean (SHS=0), 3 NEW self-debugging techniques (Debug2Fix, PyCapsule, Self-Improving Coding Agent), v0.16 Surface Release (176K stars, Native Desktop App, NVIDIA partnership), Gen Z slang: Khum/J z tr/U là tr from slangloom May 2026, 91 sessions last 7 days
+
+## [2026-06-11] tiktok-guideline | Xóa guideline TikTok cũ, tạo guideline MỚI hoàn toàn — Setup cơ bản + Edit cơ bản (lấy cảm hứng @hi.imdung). 3 trụ: Setup, Edit, Gear Review. 5 hook templates, 3 script templates, content calendar, 30 ngày action plan. Lưu: wiki/concepts/tiktok-content-guideline-hi-imdung-style.md
+
+## [2026-06-11] tiktok-channel-research | Nghiên cứu chiến thuật xây kênh kiểu @hi.imdung: 3 giai đoạn xây kênh, content pillar 80/20, hook framework 3 giây, SEO hashtag strategy, video length format, edutainment 2026, content funnel. Lưu: wiki/concepts/tiktok-channel-building-strategy-hi-imdung-style.md
+
+## [2026-06-11] autoresearch | Self-improving agents June 11 update (SR2AM 2605.22138 + WebXSkill 2604.13318 — 2 new techniques), Hermes v0.16 Surface Release (native desktop app, /undo, 294 commits past tag), wiki clean (SHS=0), skills healthy
+
 === learned-about-tuananh.md ===
 ---
 title: Learned About Tuấn Anh
 created: 2026-04-23
-- updated: 2026-05-30
+- updated: 2026-06-09
 type: entity
 tags: [person]
 confidence: high
@@ -924,14 +962,28 @@ relationships: [tiktok-content, hermes-agent]
 - **Xưng hô: "anh" + "mấy con vợ"** — cố định, KHÔNG thay đổi
 - KHÔNG dùng: "mấy đứa", "mấy chị", "mấy má", "các bạn"
 
-### Script Structure
-- Hook: Cầu cứu hốt hoảng + tình huống cụ thể
-  - VD: "Mấy con vợ ơi cứu anh với!" + mô tả tình huống
-- Body: Trải nghiệm timeline — kể chuyện, KHÔNG liệt kê specs
-- CTA: "Mua ủng hộ anh đi mấy con vợ chứ"
-- Max 25 giây
+### Định Hướng Kênh MỚI (2026-06-11)
+**Thay thế hoàn toàn guideline cũ**
+- **Niche**: Setup cơ bản + Edit cơ bản
+- **3 Trụ nội dung**:
+  1. SETUP: Ánh sáng, Camera/Mic, Background, Dàn setup
+  2. EDIT: CapCut cơ bản, Hiệu ứng, Text/Subtitle, Transition
+  3. GEAR REVIEW: Đánh giá gear, So sánh, Mua ở đâu
+- **Lấy cảm hứng từ**: @hi.imdung (Dũng RV) — nhưng dạy setup/edit thay vì affiliate
 
-### Gen Z Slang 2026 (Updated 2026-05-21)
+### Hook Templates (2026)
+1. **"Cách làm X với Y tiền"** ⭐ — Specific + promise
+2. **"Sai lầm số 1 khi X"** 🔥 — Contrarian + curiosity
+3. **"Proof Drop"** — Show kết quả trước
+4. **"POV / Relatable"** — Audience nhận ra mình
+5. **"Confession / Thú nhận"** — Authenticity = trust
+
+### Script Templates
+- **Template A (Tutorial)**: Hook → Problem → Step-by-step demo → Result → CTA
+- **Template B (Review/Gear)**: Hook → Unboxing → Testing → Verdict → CTA
+- **Template C (Comparison)**: Hook → Side-by-side → Verdict → CTA
+
+### Gen Z Slang 2026 (Updated 2026-06-08)
 #### Vietnamese Gen Z Hot 2025-2026
 - **To6** — toxic
 - **Bốc trúng sít rịt** — blind box lucky/unlucky draw
@@ -977,6 +1029,15 @@ relationships: [tiktok-content, hermes-agent]
 - **hài hước tưởng mình vô duyên** — "funny thinking I'm being rude", ironic compliment
 - **nếu anh có yêu nói đi ngại gì** — dance challenge trend (May 12, 2026)
 - **anh đâu cần phải xin lời em, mình đâu là gì của nhau đâu** — viral sound (May 7, 2026)
+- **Cổ điển, tôn trọng** — classic, respect (from Killerqueen Liên Minh streamer, viral May-June 2026)
+- **nhiệm vụ hệ thống** — "system mission" from穿越时空 game genre trend, viral June 2026
+- **chị Phiến** — TikTok character central to "nhiệm vụ hệ thống" trend (June 2026)
+- **Nhắc nhẹ sắp 1/6 rồi đó nha** — Gen Z wanting to be treated like kids on Children's Day (June 2026)
+
+#### NEW June 2026 (from slangloom May 11)
+- **Thả thính** — lighthearted flirting, dropping romantic hints (May 2026)
+- **Lầy** — being humorously ridiculous, silly but funny (May 2026)
+- **Phê** — feeling thrilled, excited, feeling great (May 2026)
 
 #### NEW May 2026
 - **Sít Rịt** — extremely rare, hitting the jackpot (from English "secret", viral 2025-2026)
@@ -989,6 +1050,13 @@ relationships: [tiktok-content, hermes-agent]
 - **Kiwi Kiwi** — delicious (food/drink praise)
 - **Dizz** — confusion, disorientation
 - **Tái châu** — naive (from "tái chanh")
+- **Trẻ trâu** — immature kid, behaving annoyingly online (from slangloom June 2026)
+- **Lầy** — silly but funny, humorously ridiculous (from slangloom June 2026)
+- **Thả thính** — lighthearted flirting, dropping romantic hints (from slangloom June 2026)
+- **Phê** — feeling thrilled or excited (from slangloom June 2026)
+- **Khum** — Vietnamese Gen Z slang (meaning varies by region/context) (June 2026)
+- **J z tr** — teen code abbreviation (June 2026)
+- **U là tr** — Vietnamese Gen Z expression (June 2026)
 
 #### Global Gen Z 2026
 - Skibidi, Gyatt, Brain rot, Rizz, 6 7, Delulu, Aura farming
@@ -1152,6 +1220,22 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The page has "Updated 2026-05-21" but we don't know the current date context
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page mentions "Research bot: @ClawdZ1E_Bot (Researcher_Clawd_Bot trong group Company)" but this seems incomplete - what does this bot do?
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page doesn't include any contact information or social media links for Tuấn Anh
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page title is "learned-about-tuananh.md" but the content starts with "## Who" which is a header structure issue - it should have a level 1 header first
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page has "Sít Rịt" entry that appears to be cut off: "from English "secre" — this is incomplete
 
 === TASK_STATE.md (from memories/) ===
 # Task State — Current Session Progress

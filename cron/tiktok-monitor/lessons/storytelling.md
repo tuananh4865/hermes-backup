@@ -270,3 +270,56 @@
 - [[hooks-lessons]] — Hook patterns
 - [[cta-lessons]] — CTA patterns
 - [[tiktok-shop-lessons]] — TikTok Shop specific
+
+---
+
+## 2026-06-11 Updates
+
+### New patterns found:
+
+#### 1. Dark Side Confession Structure
+- **Pattern:** "I've talked about positive things enough — now the dark truth"
+- **Structure:** Hook (dark side claim) → Vulnerability (personal struggle) → Honest insight → No pushy CTA
+- **Example:** @duymuoi — "Góc tối nghề làm nội dung" car vlog format
+- **Why it works:** Authenticity > polish in 2026. Real struggles = relatable
+- **Production:** Car vlog = "on the go" authenticity. Dim lighting = raw mood
+- **Gen Z:** Trending "no cap" energy — saying real stuff
+
+#### 2. Demographic Observation Story ("I See X on TikTok")
+- **Pattern:** Observe specific group behavior → reaction/discussion
+- **Structure:** Hook (group observation) → React → Personal take → CTA (comment your experience)
+- **Example:** @duymuoi — "MÌNH THẤY ĐA SỐ NHỮNG CHỊ EM BỈM SỮA LÊN TRÊN NÀY"
+- **Why it works:** "Trường người ta" meme culture = massive comment engagement
+- **Best for:** Commentary about social trends, parenting, lifestyle changes
+
+#### 3. Puzzle/Debunk Story Structure
+- **Pattern:** Show claim → Ask audience to identify why it's wrong → Explain
+- **Structure:** Inset graphics (before/after, claims) → "Let's play a puzzle" → Debunk → Education
+- **Example:** @anhsacanh.vn — 30 ngày giảm 5kg / 824 calo / 5-10kg/month ???
+- **Why it works:** Interactive + thought leader + saves + shares
+- **Visual:** Split screen with inset boxes = professional debunk setup
+- **Expert signal:** Shure MV7+ mic + glasses + dark background = credibility
+
+#### 4. Beginner Education Story ("Methods for New Channels")
+- **Pattern:** Expert position → specific problem → solution → action step
+- **Structure:** Problem (creative block) → Methods (3-5 tips) → Action → CTA
+- **Example:** @nguyenducduong9699 — "PHƯƠNG PHÁP CHỐNG BÍ Ý TƯỞNG"
+- **Why it works:** Headset + glasses = professional authority
+- **Visual:** Clean background + ring light = "I know my stuff"
+- **Target:** New creators = high-intent, less critical audience
+
+#### 5. Mistake Warning Story ("Fatal Hashtag Mistake")
+- **Pattern:** Warning → specific mistake → correct method → save/share CTA
+- **Structure:** Hook (danger claim) → Mistake reveal → Solution → Education
+- **Example:** @goccontent — "SAI LẦM RẤT TAI HẠI KHI ĐẶT HASHTAG"
+- **Why it works:** Fear of error + easy solution = saves + shares
+- **Visual:** Yellow background + green plants + lapel mic = friendly expert (not scary)
+- **Production:** Home studio setup with bookshelf = personal + professional
+
+#### 6. "Never... Reason You Haven't" Story
+- **Pattern:** Incomplete provocation → reveal reason → solution
+- **Structure:** Hook (never statement) → Pause → Reason reveal → Solution → CTA
+- **Example:** @tam_thefox — "BẠN SẼ KHÔNG BAO GIỜ / Lý do bạn chưa"
+- **Why it works:** Self-reflection trigger + open loop + resolution satisfaction
+- **Visual:** Car vlog + animated expression + pink/red accent on key word
+- **Best for:** Success, wealth, habits, personal development niches

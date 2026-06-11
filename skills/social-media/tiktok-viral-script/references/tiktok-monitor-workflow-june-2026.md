@@ -68,13 +68,17 @@ For each video, call `mcp_MiniMax_understand_image` on the **first frame** with 
 ```
 Analyze this TikTok video frame. Describe:
 1) Visual content/what's shown
-2) Any text/captions visible
+2) Any text/captions visible (quote exact text if present)
 3) Hook type (shock/question/stakes/visual/bold/proof)
-4) Style/mood
-5) Gen Z elements visible
-
-Be specific about what makes this frame attention-grabbing.
+4) Storytelling structure visible
+5) Gen Z slang or elements
+6) CTA type if visible
+7) Why it might be viral — what's the scroll-stopper
 ```
+
+**⚠️ June 11, 2026 update:** `mcp_MiniMax_understand_image` on frames is the RELIABLE analysis path. `video_analyze` tool requires LMS model loaded and fails with "No models loaded". Always use frame extraction + MiniMax vision as primary approach.
+
+**⚠️ Variable video count is normal:** After dedup against `seen-videos.json`, expect 6/10 or 8/10 videos instead of 10/10. Report actual count (e.g., "6/10"), not expected count.
 
 ### Update lesson files
 

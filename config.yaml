@@ -1,6 +1,6 @@
 model:
   base_url: https://api.minimax.io/anthropic
-  default: MiniMax-M2.7
+  default: MiniMax-M3
   provider: minimax
 providers:
   minimax:
@@ -52,7 +52,7 @@ terminal:
   persistent_shell: true
   vercel_runtime: node24
 web:
-  backend: searxng
+  backend: ddgs
   search_backend: ''
   extract_backend: ''
   use_gateway: false
@@ -561,8 +561,8 @@ custom_providers:
       context_length: 64000
   name: LM Studio
 image_gen:
-  model: gpt-image-2-medium
-  provider: openai-codex
+  model: fal-ai/flux-2/klein/9b
+  provider: fal
   use_gateway: false
 known_plugin_toolsets:
   cli:
@@ -599,7 +599,6 @@ platform_toolsets:
   - terminal
   - todo
   - tts
-  - video
   - vision
   - web
   telegram:

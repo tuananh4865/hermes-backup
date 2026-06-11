@@ -244,3 +244,45 @@
 - [[hooks-lessons]] — Hook patterns
 - [[storytelling-lessons]] — Storytelling structures
 - [[tiktok-shop-lessons]] — TikTok Shop specific
+
+---
+
+## 2026-06-11 Updates
+
+### New patterns found:
+
+#### 1. Vulnerability-Follow CTA ("Follow for Real Talk")
+- **Pattern:** After sharing "dark side" confession → "Follow for more real content"
+- **Example:** @duymuoi — after "Góc tối nghề làm nội dung" → implicit follow CTA
+- **Why it works:** Authenticity creates parasocial bond → follow for more unfiltered content
+- **Gen Z angle:** Anti-hype, wants realness over polished content
+
+#### 2. Challenge CTA ("You Will Never... Until You Do X")
+- **Pattern:** Incomplete hook → challenge audience to prove wrong
+- **Example:** @tam_thefox — "BẠN SẼ KHÔNG BAO GIỜ... Lý do bạn chưa"
+- **Why it works:** Self-fulfilling prophecy trigger — viewer follows to prove they CAN
+- **Best for:** Motivational content, habit-building, wealth mindset
+
+#### 3. Comment Prediction CTA
+- **Pattern:** "Comment X nhé" — predict what viewer will comment
+- **Example:** @duymuoi — "MÌNH THẤY ĐA SỐ NHỮNG CHỊ EM BỈM SỮA..."
+- **Why it works:** Viewers comment to correct/add experience → double engagement
+- **Variants:** "Ai giống mình comment" / "Bạn cũng từng như này comment"
+
+#### 4. Puzzle/Solve CTA ("Giải đố nào")
+- **Pattern:** "mình chơi giải đố một chút đi" — ask audience to solve riddle
+- **Example:** @anhsacanh.vn — fitness myth-busting puzzle
+- **Why it works:** Interactive = comments = algorithm boost
+- **Best for:** Educational content where audience "figures out" the answer
+
+#### 5. Beginner Filter CTA ("CHO NGƯỜI MỚI")
+- **Pattern:** "Dành cho người mới bắt đầu" — explicit audience targeting
+- **Example:** @nguyenducduong9699 — "CHỐNG BÍ Ý TƯỞNG DÀNH CHO NGƯỜI MỚI XÂY KÊNH"
+- **Why it works:** Self-selection filters high-intent beginners
+- **Bonus:** Reduces negative engagement from wrong audience
+
+#### 6. Hashtag Education CTA
+- **Pattern:** "Save video này để tránh sai lầm hashtag"
+- **Example:** @goccontent — mistake-focused warning
+- **Why it works:** Saves = high-intent signal + future reference
+- **Visual:** Yellow background = "save-worthy" warm feeling
