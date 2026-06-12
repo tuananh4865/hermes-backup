@@ -74,8 +74,13 @@ send_message(
 ## Common Pitfalls
 
 ### 1. yt-dlp tải HLS fragments không đầy đủ
-Triệu chứng: file 100KB-200KB cho video dài 1+ phút.
+Triệu chứng: file 100KB-200KB cho video dài 1+ phút. yt-dlp log hiện ra `ETA Unknown` và fragments size lởm (`~1.00KiB`, `~3.00KiB`...) — **ĐỪNG PANIC**, đây chỉ là m3u8 HLS stream estimate, file output vẫn đúng.
 Fix: thêm `--hls-prefer-native` hoặc thử format khác (96 thay vì 95 cho Shorts).
+
+**Verify sau khi tải** bằng ffprobe:
+- `duration` phải khớp video gốc (không phải 0)
+- `size` > 1MB cho video > 30s
+- Codec h264 + aac (không phải video-only stream)
 
 ### 2. Short URL không resolve
 Triệu chứng: `youtube.com/shorts/ID?si=...` — query string `?si=` thỉnh thoảng làm yt-dlp confused.
@@ -91,6 +96,16 @@ Mặc định `yt-dlp` lưu vào cwd. **LUÔN `cd ~/Downloads` trước khi tả
 
 ### 5. Don't waste time analyzing
 Khi anh chỉ muốn file về → KHÔNG phân tích nội dung video, KHÔNG transcript, CHỈ tải + gửi. Nếu anh muốn phân tích thêm thì hỏi sau khi file đã gửi.
+
+### 6. "Tải về" + "Transcript" trong cùng request
+Khi anh gửi link + nói "transcript" / "phân tích" / "review" → đây là **compound request**:
+1. **First**: tải video về (workflow này) → gửi MEDIA:
+2. **Then**: trigger transcript extraction → gửi transcript qua Telegram text
+3. **Then**: nếu anh nói "phân tích" → thêm phần phân tích nội dung theo style kênh anh
+
+KHÔNG skip bước 1 (gửi file) kể cả khi anh chỉ focus vào transcript — anh expect file + text cùng lúc.
+
+Khi transcript needed → load skill `youtube-transcript-extractor` (đã có Vietnamese Subtitle Strategy + Local Whisper Fallback cho video không có sub).
 
 ## Sample End-to-End Command
 

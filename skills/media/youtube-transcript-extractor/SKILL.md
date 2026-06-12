@@ -13,6 +13,23 @@ confidence: high
 
 Extract full transcripts from YouTube videos for content creation/research.
 
+## Quick Decision Tree (đọc đầu tiên)
+
+```
+Anh gửi YouTube/Shorts link + muốn transcript
+    │
+    ├─ Cần tải video về? (anh hay nói "tải về" + "transcript" cùng lúc)
+    │   YES → skill: video-download-yt-dlp (tải + verify + gửi MEDIA:)
+    │
+    ├─ Video tiếng Việt? (90% trường hợp của anh)
+    │   YES → dùng yt-dlp --write-auto-sub --sub-lang vi-orig,vi (xem "Vietnamese Subtitle Strategy")
+    │          → SRT chất lượng cao, NHANH, không cần GPU
+    │
+    └─ Video tiếng Anh / không có sub?
+        → Local Whisper fallback (xem "Local Whisper Fallback")
+        → CHỉ dùng khi không còn cách nào khác
+```
+
 ## Tool: youtube-content skill
 
 ```bash
@@ -27,12 +44,82 @@ This skill handles fetching YouTube video transcripts.
 # Install if needed
 pip install yt-dlp
 
-# Get transcript
+# Get transcript (English)
 yt-dlp --write-auto-sub --sub-lang en --skip-download -o /tmp/video.%(ext)s https://youtu.be/VIDEO_ID
+
+# Get transcript (Vietnamese — anh's primary use case)
+yt-dlp --write-auto-sub --sub-lang vi-orig,vi --sub-format srt --skip-download \
+  -o "/tmp/VIDEO_ID-sub" https://youtube.com/shorts/VIDEO_ID
+# → Tạo file /tmp/VIDEO_ID-sub.vi-orig.srt (auto-generated Vietnamese)
+# → Fallback chain: vi-orig (original) → vi (translated)
 
 # Or get subtitles as transcript
 yt-dlp --convert-subs srt --skip-download -o /tmp/video.%(ext)s https://youtu.be/VIDEO_ID
 ```
+
+## Vietnamese Subtitle Strategy (Anh's primary use case)
+
+Most videos anh transcribes are Vietnamese content creators. YouTube auto-generates Vietnamese subs with high quality — use this BEFORE falling back to Whisper.
+
+**Step 1: Check if subs exist**
+```bash
+yt-dlp --list-subs "https://youtu.be/VIDEO_ID" 2>&1 | grep -E "vi-orig|^vi " | head -5
+```
+
+**Step 2: Pull vi-orig first (original audio language), then vi (translated)**
+- `vi-orig` = original Vietnamese audio (most accurate, no translation artifacts)
+- `vi` = translated from another language (use only if vi-orig missing)
+
+**Step 3: Parse SRT → clean text**
+```bash
+# Strip timestamps + line numbers, keep only text
+grep -v "^[0-9]*$" /tmp/VIDEO_ID-sub.vi-orig.srt | \
+  grep -vE "^[0-9]{2}:[0-9]{2}" | \
+  sed '/^$/d'
+```
+
+**Step 4: When no auto-subs (foreign language, no captions)**
+Fall back to local Whisper via `mlx_whisper` (Apple Silicon). See "Local Whisper Fallback" section below.
+
+## Local Whisper Fallback (no auto-subs available)
+
+Khi video KHÔNG có auto-sub (ví dụ: video ngắn 4s không có caption, video tiếng Anh không có sub, hoặc auto-sub bị tắt), dùng local Whisper:
+
+### Step 1: Extract audio as 16kHz mono WAV
+```bash
+ffmpeg -y -i /path/to/video.mp4 -ar 16000 -ac 1 -c:a pcm_s16le /tmp/video.wav
+```
+
+### Step 2: Pick model by what's CACHED locally
+```bash
+# Check cached models (CRITICAL — auth có thể fail với fresh download)
+ls ~/.cache/huggingface/hub/ | grep -i whisper
+```
+
+**Cách chọn model (quan trọng):**
+- **PREFER cached models first** — HF auth thường fail với fresh download (`mlx-community/whisper-small`, `whisper-base` thường 401)
+- **Known working cached model:** `mlx-community/whisper-large-v3-mlx` (large-v3 MLX port, ~3GB)
+- Nếu không có model nào cached, fail fast với message rõ ràng (đừng waste time retry)
+
+### Step 3: Run mlx_whisper
+```bash
+cd /tmp
+mlx_whisper --model mlx-community/whisper-large-v3-mlx \
+  --output-format txt \
+  --output-name video-transcript \
+  video.wav
+# → Output: /tmp/video-transcript.txt
+```
+
+### Whisper Pitfalls (từ session 2026-06-13)
+
+1. **HF auth 401 on fresh download** — `mlx-community/whisper-small` và `whisper-base` thường fail với `RepositoryNotFoundError: 401 Client Error`. LUÔN check `~/.cache/huggingface/hub/` trước.
+
+2. **Whisper auto-detects wrong language** — `--language` flag chưa được set → nó auto-detect từ 30s đầu. Với video ngắn (< 30s) có thể detect sai. Force language: `mlx_whisper --model ... --language vi ...`
+
+3. **Verbose output pollutes transcript** — Whisper in `[00:00.000 --> 00:02.000]` markers vào stderr. Chỉ `cat *.txt` để lấy clean text, ignore stderr.
+
+4. **Short videos (< 5s) thường ra kết quả rỗng hoặc sai** — Whisper cần ≥ 1s audio với content rõ. Nếu video < 5s và Whisper ra 1-2 từ vô nghĩa ("Thank you."), báo cho anh biết audio quality quá thấp.
 
 ## Output Format for Tuấn Anh
 
