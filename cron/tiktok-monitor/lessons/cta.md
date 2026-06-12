@@ -286,3 +286,39 @@
 - **Example:** @goccontent — mistake-focused warning
 - **Why it works:** Saves = high-intent signal + future reference
 - **Visual:** Yellow background = "save-worthy" warm feeling
+
+---
+
+## 2026-06-12 Updates
+
+### New patterns found:
+
+#### 1. Anti-Authority Question CTA ("Bosses say X, right?")
+- **Pattern:** "CÁC SẾP CỨ BẢO VIDEO NGẮN LÀ ẢO ĐÚNG KHÔNG?" — challenges viewer to agree/disagree
+- **Style:** Red glow background, animated delivery, anti-establishment tone
+- **Why it works:** Polarizing question = comments = algorithm boost
+- **Gen Z angle:** Questioning authority figures resonates deeply
+
+#### 2. No-CTA Pure Value Format
+- **Pattern:** Zero text overlay, zero verbal CTA — pure podcast-style content
+- **Style:** Professional SHURE mic, city bokeh, dark moody lighting
+- **Why it works:** No CTA sometimes = more authentic, less salesy feel
+- **Best for:** Building authority without appearing promotional
+
+#### 3. Comment-Reply Deep Dive CTA
+- **Pattern:** Comment box at top → responds to commenter → expands on topic
+- **Style:** Headset + glasses + green logo, real viewer question highlighted
+- **Why it works:** Interactive format = community trust + algorithm boost
+- **Variants:** "Trả lời bình luận của [name]" = personalized touch
+
+#### 4. Count/List Urgency CTA
+- **Pattern:** "CÒN KHOẢNG [số] NGÀY NỮA" — specific countdown urgency
+- **Example:** @duymuoi — countdown to something creates FOMO
+- **Why it works:** Specific number = psychological urgency trigger
+- **TikTok Shop angle:** Limited time offers, flash sales
+
+#### 5. Multi-Layer Save CTA
+- **Pattern:** Red header + white sub-box + yellow subtitle = 3 layers of save-worthy content
+- **Style:** Yellow/red/white stacked boxes, expert persona
+- **Why it works:** High information density = high save rate
+- **TikTok Shop angle:** Saves = future conversion opportunity

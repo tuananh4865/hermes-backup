@@ -306,3 +306,51 @@
 - **Examples:** @anhsacanh.vn (Shure MV7+, dark studio), @nguyenducduong9699 (headset, clean background)
 - **Why it works:** Production quality = perceived product value
 - **Shop angle:** Higher priced products need higher production trust signals
+
+---
+
+## 2026-06-12 Updates
+
+### New patterns found:
+
+#### 1. Anti-Establishment Authority for Creator Economy Products
+- **Pattern:** "Bosses say X" → creators know better → sell creator courses
+- **Example:** @duymuoi — challenges boss assumptions about short video
+- **Why it works for Shop:** Gen Z distrusts traditional authority = trusts peer creators
+- **Shop angle:** Creator courses, personal branding services, content tools
+
+#### 2. Teal Brand Color = Premium Positioning
+- **Pattern:** Consistent teal brand color = professional, youthful, premium
+- **Example:** @duymuoi — teal text boxes on black background
+- **Why it works for Shop:** Color consistency = brand recognition, premium feel
+- **Shop angle:** Apparel, digital products, personal brand tools
+
+#### 3. Pure Podcast Format = Thought Leader Authority
+- **Pattern:** Zero overlay, professional podcast setup = expert credibility
+- **Example:** @anhsacanh.vn — no text, just conversation
+- **Why it works for Shop:** High production + no hype = trust = conversion
+- **Shop angle:** Courses, coaching, consulting services, premium tools
+
+#### 4. Numbered List = Product Feature Breakdown
+- **Pattern:** "5 expert openers" = quick value delivery = saves
+- **Example:** @tam_thefox — numbered list with high energy
+- **Why it works for Shop:** Saves = future reference = conversion opportunity
+- **Shop angle:** 5-product bundles, feature comparisons, how-to-use guides
+
+#### 5. POV Raw Authenticity = Anti-Algorithm Fatigue
+- **Pattern:** Zero text, POV helmet cam = breaks over-produced aesthetic
+- **Example:** @nguyenducduong9699 — raw POV motorbike
+- **Why it works for Shop:** Authenticity = relatability = trust
+- **Shop angle:** Action cameras, helmets, outdoor gear, lifestyle products
+
+#### 6. Comment-Reply Community = Social Proof Factory
+- **Pattern:** Real viewer questions → public answers → community trust
+- **Example:** @nguyenducduong9699 — comment box at top of video
+- **Why it works for Shop:** Community = social proof = conversion
+- **Shop angle:** Q&A product format, customer testimonials, user-generated content
+
+#### 7. Multi-Text Urgency = Flash Sale Energy
+- **Pattern:** Yellow + red stacked boxes = urgency = action
+- **Example:** @goccontent — "CẦN SỬA NGAY" + mistake warning
+- **Why it works for Shop:** Urgency = impulse purchase trigger
+- **Shop angle:** Limited time offers, flash sales, countdown timers

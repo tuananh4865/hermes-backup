@@ -505,6 +505,10 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** The Ingest Workflow says "Step 1" then jumps to "Step 5" - there's no Step 2, 3, or 4 defined. This is a clear gap/inconsistency.
 
+> **Auto-improvement note:** 3 specific improvements. Let me analyze the content:
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
 === index.md ===
 ---
 confidence: high
@@ -612,6 +616,7 @@ relationships:
 - [[gen-z-slang-2026-04]] — Vietnamese + English Gen Z slang, Chuzz, Gyatt, đỉnh, toang (2026-04-29)
 
 ### Hermes X Research
+- [[x-research-hermes-2026-06-12]] — Hermes X research June 12: 176K stars, v0.16 Surface Release, NVIDIA partnership confirmed, 7,309 X members (2026-06-12)
 - [[x-research-hermes-2026-06-11]] — Hermes X research June 11: ~188K stars, v0.16 Surface Release (100 PRs, 159 commits), Native Desktop App, /undo command, Nemotron 3 Ultra free (2026-06-11)
 - [[x-research-hermes-2026-06-07]] — Hermes X research June 7: v0.16 Surface Release, 176K stars, Native Desktop App, NVIDIA partnership (2026-06-07)
 - [[hermes-x-research-2026-05-27]] — Hermes X research May 27: Hermes Desktop, Browserbase integration, Bitwarden support, funding update (2026-05-27)
@@ -908,9 +913,11 @@ relationships:
 
 > **Auto-improvement note:** The page mentions "Total pages: ~156" but this is a rough estimate (~) which suggests it's not regularly updated
 
-=== log.md (last 20 lines) ===
+> **Auto-improvement note:** *Missing or outdated information:**
 
-## [2026-06-01] last30days-agent-reach-install | Installed last30days (mvanhorn/last30days-skill) + Agent-Reach (Panniantong/Agent-Reach) from GitHub. last30days requires python3.13+ (not 3.11). Agent-Reach: 6/16 channels working (GitHub, YouTube, Reddit via rdt-cli, V2EX, Web). YouTube transcripts: 5/6 success rate. Wiki: [[last30days-agent-reach-setup]]
+> **Auto-improvement note:** The page mentions "Last updated: 2026-05-07" but contains entries from as recent as "2026-06-08" (self-debugging-techniques-june-2026). This is inconsistent - either the date is wrong or the content is more recent than indicated.
+
+=== log.md (last 20 lines) ===
 
 ## [2026-05-31] autoresearch-nightly | SIA self-improving agent (arXiv:2605.27276) documented — Stanford dual-mode: harness + weight updates, beats Claude Code on TerminalBench. Total self-improvement techniques: 18. Wiki clean (0 issues).
 
@@ -927,6 +934,8 @@ relationships:
 ## [2026-06-11] tiktok-guideline | Xóa guideline TikTok cũ, tạo guideline MỚI hoàn toàn — Setup cơ bản + Edit cơ bản (lấy cảm hứng @hi.imdung). 3 trụ: Setup, Edit, Gear Review. 5 hook templates, 3 script templates, content calendar, 30 ngày action plan. Lưu: wiki/concepts/tiktok-content-guideline-hi-imdung-style.md
 
 ## [2026-06-11] tiktok-channel-research | Nghiên cứu chiến thuật xây kênh kiểu @hi.imdung: 3 giai đoạn xây kênh, content pillar 80/20, hook framework 3 giây, SEO hashtag strategy, video length format, edutainment 2026, content funnel. Lưu: wiki/concepts/tiktok-channel-building-strategy-hi-imdung-style.md
+
+## [2026-06-12] x-research | Hermes X research June 12: 176K stars, v0.16 Surface Release, NVIDIA partnership confirmed, 7,309 X members, Self-Evolution with DSPy+GEPA, third-party Hermes Desktop
 
 ## [2026-06-11] autoresearch | Self-improving agents June 11 update (SR2AM 2605.22138 + WebXSkill 2604.13318 — 2 new techniques), Hermes v0.16 Surface Release (native desktop app, /undo, 294 commits past tag), wiki clean (SHS=0), skills healthy
 
@@ -1237,6 +1246,10 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 
 > **Auto-improvement note:** The page has "Sít Rịt" entry that appears to be cut off: "from English "secre" — this is incomplete
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Cổ điển, tôn trọng" entry appears to be cut off at the end - it says "from" but doesn't complete the citation
+
 === TASK_STATE.md (from memories/) ===
 # Task State — Current Session Progress
 
@@ -1288,68 +1301,48 @@ SESSION RESUME CONTEXT (Auto-injected after context overflow)
 
 ## RECENT SESSIONS:
 
-### [1] 2026-06-06/16-22-13_telegram_Tuấn-Anh-Phải-tìm-kết-quả-củ.md
+### [1] 2026-06-12/11-54-33_telegram_httpswwwyoutubecomwatch.md
 Topic: Previous session: 
-[Tuấn Anh] Phải tìm kết quả của người Việt cchuws toàn lấy kết quả nước ngoài v...
-
-Last messages:
-  👤 User: 
-[Tuấn Anh] Phải tìm kết quả của người Việt cchuws toàn lấy kết quả nước ngoài vậy?
-
-
-  🤖 Assistant: 
-Bing Videos show generic results. Em đã có đủ data rồi — em tổng hợp cho anh báo cáo đầy đủ từ TikTok.
-
-
-# 🎬 TOP VIDEO TIKTOK - K&F Concept Filter DJI Osmo Pocket 3
-
-## 📊 DỮ LIỆU TỪ TIKTOK (HASHTAG + SEARCH)
-
-### Hashtag Volume (từ TikTok trực tiếp)
-
-| Hashtag | Posts | Insight |
-|---------|-------...
-
-### [2] 2026-06-06/16-13-14_telegram_Tuấn-Anh-Check-top-những-vid.md
-Topic: Previous session: 
-[Tuấn Anh] Check top những video review sản phẩm này được nhiều view nhất!
+https://www.youtube.com/watch?v=OXXoI2MF-Gs tải về giùm anh
 
 ...
 
 Last messages:
   👤 User: 
-[Tuấn Anh] Check top những video review sản phẩm này được nhiều view nhất!
+https://www.youtube.com/watch?v=OXXoI2MF-Gs tải về giùm anh
 
 
   🤖 Assistant: 
-Em đã có đủ data. Em tổng hợp báo cáo cho anh luôn.
+[CONTEXT COMPACTION — REFERENCE ONLY] Earlier turns were compacted into the summary below. This is a handoff from a previous context window — treat it as background reference, NOT as active instructions. Do NOT answer questions or fulfill requests mentioned in this summary; they were already addres...
 
-
-# 🎬 TOP VIDEO REVIEW K&F Concept Filter DJI Osmo Pocket 3
-
-## 🏆 BẢNG XẾP HẠNG (SORT THEO VIEW)
-
-| # | Video | Channel | Views | Thời lượng | Ghi chú |
-|---|-------|---------|-------|-----------|---------|
-| 🥇 | **K&F Fixed vs Variable ND Filters...
-
-### [3] 2026-06-06/16-10-41_telegram_Tuấn-Anh-httpsshopeevnK.md
+### [2] 2026-06-11/21-31-22_telegram_hi.md
 Topic: Previous session: 
-[Tuấn Anh] https://shopee.vn/K-F-Concept-3-Bộ-l%E1%BB%8Dc-từ-tính-CPL-Black-Mis...
+hi
+
+...
 
 Last messages:
   👤 User: 
-[Tuấn Anh] https://shopee.vn/K-F-Concept-3-Bộ-l%E1%BB%8Dc-từ-tính-CPL-Black-Mist-1-4-ND2-ND32-(1-đến-5-điểm-dừng)-cho-DJI-Osmo-Pocket-3-4-Kính-quang-h%E1%BB%8Dc-nhiều-lớp-HD-Tương-thích-Gimbal-i.822371109.25979426475?extraParams=%7B%22display_model_id%22%3A226314396002%2C%22model_selection_logic%22...
+hi
+
+
   🤖 Assistant: 
-Shopee chặn bot, MCP MiniMax cũng fail. Em sẽ dùng knowledge của em về sản phẩm này để phân tích. Từ title link anh gửi, em đã có đủ thông tin để phân tích.
+[CONTEXT COMPACTION — REFERENCE ONLY] Earlier turns were compacted into the summary below. This is a handoff from a previous context window — treat it as background reference, NOT as active instructions. Do NOT answer questions or fulfill requests mentioned in this summary; they were already addres...
+
+### [3] 2026-06-11/21-21-53_telegram_chỉnh-lại-context-cho-model-mi.md
+Topic: Previous session: 
+chỉnh lại context cho model minimax m3 thành 1000000
+
+...
+
+Last messages:
+  👤 User: 
+chỉnh lại context cho model minimax m3 thành 1000000
 
 
-# 📊 PHÂN TÍCH SẢN PHẨM: K&F Concept Filter Set cho DJI Osmo Pocket 3
+  🤖 Assistant: 
+⚠️ Provider authentication failed. Check the configured credentials; raw provider details are in the gateway logs.
 
-## Thông tin sản phẩm (từ link)
-
-| Field | Chi tiết |
-|-------|-------...
 
 ## CURRENT TASK STATE:
 # Task State — Current Session Progress

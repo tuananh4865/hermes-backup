@@ -617,6 +617,10 @@
       1778471610458800255,
       6319
     ],
+    "media/video-download-yt-dlp/SKILL.md": [
+      1781289627030082622,
+      4778
+    ],
     "media/youtube-content/SKILL.md": [
       1780154598610979783,
       6440
@@ -858,8 +862,8 @@
       2713
     ],
     "social-media/tiktok-viral-script/SKILL.md": [
-      1781143657707159064,
-      42635
+      1781240343737060295,
+      43401
     ],
     "social-media/xurl/SKILL.md": [
       1780286195960559658,
@@ -3209,6 +3213,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "video-download-yt-dlp",
+      "category": "media",
+      "frontmatter_name": "video-download-yt-dlp",
+      "description": "Download videos from YouTube/YouTube Shorts/TikTok using ...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

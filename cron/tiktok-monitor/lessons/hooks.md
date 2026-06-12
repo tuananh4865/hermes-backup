@@ -289,3 +289,51 @@
 - **Why viral:** Maximum information density for fast-scroll environment
 - **Visual hierarchy:** Eye travels naturally through layers (header → sub → detail)
 - **Color theory:** Red/white/yellow against neutral background = high contrast pop
+
+---
+
+## 2026-06-12 Updates
+
+### New patterns found:
+
+#### 1. Question Challenge Hook ("Bosses keep saying...")
+- **Pattern:** "CÁC SẾP CỨ BẢO VIDEO NGẮN LÀ ẢO ĐÚNG KHÔNG?" — challenges authority assumption
+- **Style:** Red glow background, gaming setup, animated expression, tank top + smiley pin
+- **Why viral:** Defies conventional boss advice → viewers want to see creator's defense
+- **Gen Z angle:** Anti-establishment, questioning "traditional" wisdom
+
+#### 2. Teal Brand Color Hook
+- **Pattern:** "Ý TƯỞNG XÂY KÊNH CHO CÁC BẠN TRẺ" — teal colored text box
+- **Style:** Teal box + black t-shirt + casual indoor background
+- **Why viral:** Uncommon color = scroll stopper, youthful audience targeting
+- **Color theory:** Teal = modern, fresh, Gen Z appeal
+
+#### 3. Pure Podcast/No-Text Format
+- **Pattern:** Video with NO text overlay at all — pure conversation/interview
+- **Style:** Professional studio, SHURE mic, city bokeh, laptop visible
+- **Why viral:** Breaks pattern of text-heavy TikToks, feels like real podcast
+- **Best for:** Long-form educational, interview content, building authority
+
+#### 4. Stakes Hook with Numbered List ("5 Expert Openers")
+- **Pattern:** "5 câu mở đầu chuyên gia thường dùng" — specific number + expert claim
+- **Style:** Red header + white sub-box + yellow subtitle, hands gesture counting to 5
+- **Why viral:** Numbered list = completion drive + expert authority positioning
+- **Visual:** Finger counting gesture reinforces "5" message
+
+#### 5. Anti-Pattern + Urgency Stack Hook
+- **Pattern:** "BẠN TỰ BÓP VIEW VIDEO KHI LÀM SAI ĐIỀU NÀY" + "CẦN SỬA NGAY"
+- **Style:** Yellow header + red sub-header stacked, lapel mic, white polo with striped pattern
+- **Why viral:** Two-layer urgency (yellow/red) = instant scroll stop
+- **TikTok Shop angle:** Mistake content = saves for future reference
+
+#### 6. Provocative Contrarian Hook ("Not Successful But...")
+- **Pattern:** "CHƯA THÀNH CÔNG MÀ 'BÀY ĐẶT' XÂY KÊNH?" — provocative challenge
+- **Style:** Yellow bold text, blue textured polo, middle-aged expert, outdoor setting
+- **Why viral:** "Bày đặt" is Vietnamese slang that triggers emotional reaction
+- **Best for:** Content targeting "wannabe" creators who need reality check
+
+#### 7. POV Motorbike Helmet Raw Authenticity
+- **Pattern:** Extreme close-up POV with helmet, braces, sweat — ZERO text overlay
+- **Style:** Raw POV, outdoor bokeh, red helmet, cream hoodie
+- **Why viral:** Breaks all TikTok conventions — no text, no talking head
+- **Gen Z angle:** Ultra-authentic, anti-polish, lo-fi intimacy

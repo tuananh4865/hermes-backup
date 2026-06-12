@@ -419,7 +419,7 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - `references/may-14-2026-findings.md` — LỌ vs LỎ critical distinction, Summer Cooling margins, FindNiche top products, Gen Z slang update (May 14 orchestrator session)
 - `references/may-15-2026-findings.md` — Sunscreen ASUNMEE SPF50+ push, Summer peak data (+21% GMV), Top products chart, weekend calendar (May 15 session)
 - `references/tiktok-content-writing-2026.md` — Hooks (5 types), Script Structure (5 parts), 17 Viral Formulas, Psychology behind hooks, TikTok Shop tips (2026-06-06) ✅ NEW
-- `references/tiktok-to-telegram-delivery.md` — TikTok video → Telegram pipeline: probe streams first (HEVC vs H.264 detection), silent video = content style not error, HEVC→H.264 conversion, 720p compression for <50MB Telegram limit, retry on timeout ✅ ENHANCED this session
+- `references/video-to-telegram-delivery.md` — Universal video → Telegram pipeline (TikTok + YouTube + others): probe streams first (HEVC vs H.264 detection), silent video = content style not error, HEVC→H.264 conversion, 720p compression for <50MB Telegram limit, YouTube Shorts short-file-size pattern (no panic at <200KB), URL quoting rules ✅ EXTENDED this session (renamed from tiktok-to-telegram-delivery)
 - `references/gen-z-slang-june-2026.md` — 4 new hook formats discovered: "quát 1 câu", Gamification quest, POV Twist, Meta-humor. June 2026 nightly monitor findings ✅ NEW
 - **NEW (2026-06-11):** `references/kênh-hi-imdung-guideline.md` — FULL kênh @hi.imdung guideline adapted for Setup + Edit content direction (thay thế affiliate). Bao gồm: 3 trụ nội dung, hook templates, script formulas, content calendar, checklist
 
@@ -428,7 +428,7 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - `references/tiktok-monitor-workflow-june-2026.md` — 5-channel nightly monitor workflow: ID-first → dedupe → download → frames → analyze → lessons → Telegram. Includes JS challenge failure workaround (2026-06-09) ✅ NEW
 - `references/youtube-tiktok-adaptation.md` — YouTube → TikTok adaptation lessons from Evan Carmichael's "YouTube Is Not Too Crowded" (Pattern Disrupt Hook, Audience of One, 350 Videos Persistence, Belief Framework, Signature CTA) ✅ NEW this session
 - `references/tiktok-lesson-learn-system.md` — Lesson-learn accumulation system: 4 topic files (hooks, cta, storytelling, tiktok-shop), append-only update protocol, source channels, how-to-use guide (2026-06-07) ✅ NEW
-- `references/tiktok-to-telegram-delivery.md` — TikTok video → Telegram pipeline: probe streams, HEVC→H.264 conversion, 720p compress, silent video handling (2026-06-10) ✅ NEW
+- `references/video-to-telegram-delivery.md` — Universal video → Telegram pipeline (TikTok + YouTube + others): probe streams, HEVC→H.264 conversion, 720p compress, silent video handling, YouTube Shorts short-file pattern (2026-06-12, renamed+extended) ✅
 - **Ecom_Linus AI UGC Model:** See `references/ecom-linus-affiliate-model.md` — Glitchy setup, Vietnam affiliate networks, AI tools stack, angle research methodology
 - Gen Z Research: Tra Vinh University Journal of Science — "Factors Affecting Gen Z Online Purchase Intention on TikTok Shop"
 - Product research: https://findniche.com/tiktok/trending-products-vn
@@ -539,6 +539,8 @@ When Anh shares a video for analysis, DISTINGUISH between:
 - ❌ **Skipping stream probe before sending** — Always run `ffprobe -v quiet -print_format json -show_streams video.mp4 | jq '.streams[] | {codec_type, codec_name, duration}'` first to know what you're dealing with.
 - ❌ **video_analyze as first approach** — requires LMS model loaded, often fails with "No models loaded". Use ffmpeg frame extraction + MiniMax vision instead as reliable fallback
 - ❌ **video_analyze as first approach** — requires LMS model loaded, often fails with "No models loaded". Use ffmpeg frame extraction + MiniMax vision instead as reliable fallback
+- ❌ **Panic at small yt-dlp output file** — A 100-200KB MP4 from yt-dlp is NOT a failure. YouTube Shorts at 720p for <10s = ~100KB. Probe with ffprobe first — verify codec (H.264), resolution (1280x720), and duration before re-downloading. See `references/video-to-telegram-delivery.md` Session 2.
+- ❌ **Converting YouTube when not needed** — YouTube serves H.264 + AAC by default (unlike TikTok's HEVC). Skip the ffmpeg conversion step for YouTube files <50MB. Only convert when: codec is HEVC, file >50MB, or Telegram client fails to play.
 
 ### Script Structure Mistakes
 - ❌ **Listing specs instead of telling story** — "product has 200ml, made of bamboo, organic" = boring. Instead: "anh dùng 2 tuần rồi, da em nó mềm lắm luôn"

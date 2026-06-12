@@ -530,12 +530,12 @@
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
     "last_patched_at": "2026-06-10T19:07:32.312906+00:00",
-    "last_used_at": "2026-06-11T19:00:49.622291+00:00",
+    "last_used_at": "2026-06-12T19:00:01.275848+00:00",
     "last_viewed_at": "2026-06-10T19:05:38.968254+00:00",
     "patch_count": 272,
     "pinned": false,
     "state": "active",
-    "use_count": 283,
+    "use_count": 285,
     "view_count": 213
   },
   "hermes-external-skills-setup": {
@@ -556,13 +556,13 @@
     "created_at": "2026-05-08T04:49:57.511598+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-05T20:02:31.601391+00:00",
-    "last_used_at": "2026-06-05T20:01:53.661690+00:00",
-    "last_viewed_at": "2026-06-05T20:01:53.660777+00:00",
+    "last_used_at": "2026-06-11T20:02:08.531156+00:00",
+    "last_viewed_at": "2026-06-11T20:02:08.529656+00:00",
     "patch_count": 24,
     "pinned": false,
     "state": "active",
-    "use_count": 18,
-    "view_count": 18
+    "use_count": 20,
+    "view_count": 20
   },
   "hermes-memory": {
     "archived_at": null,
@@ -1125,14 +1125,14 @@
     "archived_at": null,
     "created_at": "2026-05-08T01:06:44.513231+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-06-11T16:16:46.725828+00:00",
-    "last_used_at": "2026-06-11T17:03:08.359849+00:00",
-    "last_viewed_at": "2026-06-11T17:03:08.356144+00:00",
-    "patch_count": 114,
+    "last_patched_at": "2026-06-12T04:59:03.739041+00:00",
+    "last_used_at": "2026-06-12T04:57:20.471717+00:00",
+    "last_viewed_at": "2026-06-12T04:57:20.469848+00:00",
+    "patch_count": 119,
     "pinned": false,
     "state": "active",
-    "use_count": 153,
-    "view_count": 152
+    "use_count": 155,
+    "view_count": 154
   },
   "touchdesigner-mcp": {
     "archived_at": null,
@@ -1152,8 +1152,21 @@
     "created_at": "2026-06-09T17:54:14.072078+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-09T17:54:14.074181+00:00",
-    "last_viewed_at": "2026-06-09T17:54:14.072082+00:00",
+    "last_used_at": "2026-06-12T18:39:44.327724+00:00",
+    "last_viewed_at": "2026-06-12T18:39:44.324836+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 3,
+    "view_count": 3
+  },
+  "video-download-yt-dlp": {
+    "archived_at": null,
+    "created_at": "2026-06-12T18:40:27.033871+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": "2026-06-12T19:05:20.589283+00:00",
+    "last_viewed_at": "2026-06-12T19:05:20.586836+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
@@ -1238,18 +1251,31 @@
     "use_count": 2,
     "view_count": 2
   },
+  "youtube-content": {
+    "archived_at": null,
+    "created_at": "2026-06-12T04:57:06.017821+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-12T04:57:06.020355+00:00",
+    "last_viewed_at": "2026-06-12T04:57:06.017827+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "youtube-transcript-extractor": {
     "archived_at": null,
     "created_at": "2026-06-07T06:38:17.896140+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-09T02:49:58.203050+00:00",
-    "last_used_at": "2026-06-09T17:54:14.073086+00:00",
-    "last_viewed_at": "2026-06-09T17:54:14.070622+00:00",
+    "last_used_at": "2026-06-12T19:05:20.588039+00:00",
+    "last_viewed_at": "2026-06-12T19:05:20.585505+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 3,
-    "view_count": 3
+    "use_count": 5,
+    "view_count": 5
   },
   "yuanbao": {
     "archived_at": null,

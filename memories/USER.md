@@ -6,8 +6,6 @@
 - tiktok-content: active
 - hermes-agent: memory-optimizing
 § [FACTS] — durable facts about user, environment, tools
-- [file] md
-- [preference] cần hỏi anh nữa. Có gì mới học được cũng sẽ cập nhật ngay. 📝
 - [file] người
 - [file] ảnh
 - [preference] tiết lộ tên cụ thể |
@@ -36,7 +34,9 @@ Vào khám phá kênh này, xem 50 video mới nh
 - [preference] làm giống vậy!
 - [preference] fake, tạo credibility
 - 2026-06-11: nghiên cứu sâu hơn về chiến thuật xây kênh của kênh này! vì đây là kiểu kênh mà anh muốn làm giống v
+- 2026-06-11:
+- [preference] do that anymore', 'never mind', a new topic) must immedia [HIGH]
 § [SESSIONS] — session history summaries
-- 2026-06-11: 
+- 2026-06-12: https://www.youtube.com/watch?v=OXXoI2MF-Gs tải về giùm anh
 § [ENTITY_INDEX] — cross-session entity tracking
 § [GROWTH_LOG] — how user/agent improved

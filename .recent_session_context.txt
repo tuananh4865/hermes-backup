@@ -4,68 +4,48 @@ SESSION RESUME CONTEXT (Auto-injected after context overflow)
 
 ## RECENT SESSIONS:
 
-### [1] 2026-06-06/16-22-13_telegram_Tuấn-Anh-Phải-tìm-kết-quả-củ.md
+### [1] 2026-06-12/11-54-33_telegram_httpswwwyoutubecomwatch.md
 Topic: Previous session: 
-[Tuấn Anh] Phải tìm kết quả của người Việt cchuws toàn lấy kết quả nước ngoài v...
-
-Last messages:
-  👤 User: 
-[Tuấn Anh] Phải tìm kết quả của người Việt cchuws toàn lấy kết quả nước ngoài vậy?
-
-
-  🤖 Assistant: 
-Bing Videos show generic results. Em đã có đủ data rồi — em tổng hợp cho anh báo cáo đầy đủ từ TikTok.
-
-
-# 🎬 TOP VIDEO TIKTOK - K&F Concept Filter DJI Osmo Pocket 3
-
-## 📊 DỮ LIỆU TỪ TIKTOK (HASHTAG + SEARCH)
-
-### Hashtag Volume (từ TikTok trực tiếp)
-
-| Hashtag | Posts | Insight |
-|---------|-------...
-
-### [2] 2026-06-06/16-13-14_telegram_Tuấn-Anh-Check-top-những-vid.md
-Topic: Previous session: 
-[Tuấn Anh] Check top những video review sản phẩm này được nhiều view nhất!
+https://www.youtube.com/watch?v=OXXoI2MF-Gs tải về giùm anh
 
 ...
 
 Last messages:
   👤 User: 
-[Tuấn Anh] Check top những video review sản phẩm này được nhiều view nhất!
+https://www.youtube.com/watch?v=OXXoI2MF-Gs tải về giùm anh
 
 
   🤖 Assistant: 
-Em đã có đủ data. Em tổng hợp báo cáo cho anh luôn.
+[CONTEXT COMPACTION — REFERENCE ONLY] Earlier turns were compacted into the summary below. This is a handoff from a previous context window — treat it as background reference, NOT as active instructions. Do NOT answer questions or fulfill requests mentioned in this summary; they were already addres...
 
-
-# 🎬 TOP VIDEO REVIEW K&F Concept Filter DJI Osmo Pocket 3
-
-## 🏆 BẢNG XẾP HẠNG (SORT THEO VIEW)
-
-| # | Video | Channel | Views | Thời lượng | Ghi chú |
-|---|-------|---------|-------|-----------|---------|
-| 🥇 | **K&F Fixed vs Variable ND Filters...
-
-### [3] 2026-06-06/16-10-41_telegram_Tuấn-Anh-httpsshopeevnK.md
+### [2] 2026-06-11/21-31-22_telegram_hi.md
 Topic: Previous session: 
-[Tuấn Anh] https://shopee.vn/K-F-Concept-3-Bộ-l%E1%BB%8Dc-từ-tính-CPL-Black-Mis...
+hi
+
+...
 
 Last messages:
   👤 User: 
-[Tuấn Anh] https://shopee.vn/K-F-Concept-3-Bộ-l%E1%BB%8Dc-từ-tính-CPL-Black-Mist-1-4-ND2-ND32-(1-đến-5-điểm-dừng)-cho-DJI-Osmo-Pocket-3-4-Kính-quang-h%E1%BB%8Dc-nhiều-lớp-HD-Tương-thích-Gimbal-i.822371109.25979426475?extraParams=%7B%22display_model_id%22%3A226314396002%2C%22model_selection_logic%22...
+hi
+
+
   🤖 Assistant: 
-Shopee chặn bot, MCP MiniMax cũng fail. Em sẽ dùng knowledge của em về sản phẩm này để phân tích. Từ title link anh gửi, em đã có đủ thông tin để phân tích.
+[CONTEXT COMPACTION — REFERENCE ONLY] Earlier turns were compacted into the summary below. This is a handoff from a previous context window — treat it as background reference, NOT as active instructions. Do NOT answer questions or fulfill requests mentioned in this summary; they were already addres...
+
+### [3] 2026-06-11/21-21-53_telegram_chỉnh-lại-context-cho-model-mi.md
+Topic: Previous session: 
+chỉnh lại context cho model minimax m3 thành 1000000
+
+...
+
+Last messages:
+  👤 User: 
+chỉnh lại context cho model minimax m3 thành 1000000
 
 
-# 📊 PHÂN TÍCH SẢN PHẨM: K&F Concept Filter Set cho DJI Osmo Pocket 3
+  🤖 Assistant: 
+⚠️ Provider authentication failed. Check the configured credentials; raw provider details are in the gateway logs.
 
-## Thông tin sản phẩm (từ link)
-
-| Field | Chi tiết |
-|-------|-------...
 
 ## CURRENT TASK STATE:
 # Task State — Current Session Progress

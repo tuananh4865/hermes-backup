@@ -323,3 +323,50 @@
 - **Why it works:** Self-reflection trigger + open loop + resolution satisfaction
 - **Visual:** Car vlog + animated expression + pink/red accent on key word
 - **Best for:** Success, wealth, habits, personal development niches
+
+---
+
+## 2026-06-12 Updates
+
+### New patterns found:
+
+#### 1. Contrarian Challenge Structure ("Bosses keep saying...")
+- **Pattern:** Challenge mainstream assumption → defend unconventional view → educate
+- **Structure:** Hook (provocative question) → Creator stance → Explanation → Value delivery
+- **Example:** @duymuoi — "CÁC SẾP CỨ BẢO VIDEO NGẮN LÀ ẢO ĐÚNG KHÔNG?"
+- **Why it works:** Anti-establishment angle resonates with Gen Z + creates debate in comments
+- **Visual:** Red glow backdrop = high energy, engaged delivery
+
+#### 2. Teal Brand Identity Storytelling
+- **Pattern:** Brand color (teal) as signature visual identity element
+- **Style:** Teal text boxes consistent across content = recognizable brand
+- **Why it works:** Brand color = instant recognition, professional positioning
+- **Best for:** Building consistent creator brand across videos
+
+#### 3. Pure Podcast Interview Structure
+- **Pattern:** No text overlay, pure conversation — feels like real podcast
+- **Structure:** Natural conversation flow, professional audio setup, no caption needed
+- **Style:** SHURE MV7+ mic, laptop in frame, city skyline bokeh
+- **Why it works:** Breaks away from text-heavy TikTok fatigue, premium feel
+- **Authority:** Real podcast setup = thought leader positioning
+
+#### 4. Numbered Expertise Delivery ("5 Expert Opening Lines")
+- **Pattern:** Number list + expert persona + sequential delivery
+- **Structure:** Promise (5 tips) → Delivery (each numbered) → CTA (save for later)
+- **Style:** Red/white/yellow stacked boxes, finger counting gesture
+- **Why it works:** Numbers = digestible, expertise = trust, sequential = retention
+- **Gen Z:** Quick hits of value with clear structure
+
+#### 5. POV Documentary Story
+- **Pattern:** First-person raw footage, zero overlay, pure visual narrative
+- **Structure:** POV helmet cam → raw emotion → no words needed
+- **Style:** Extreme close-up, red helmet, braces visible, outdoor bokeh
+- **Why it works:** Ultra-authentic breaks polish fatigue
+- **Gen Z:** Anti-curation, "real life" aesthetic
+
+#### 6. Comment-Response Deep Dive
+- **Pattern:** Comment at top → creator responds → expands → deeper value
+- **Structure:** Real question highlighted → personal answer → general insight → CTA
+- **Style:** Headset + glasses + green house logo, warm office lighting
+- **Why it works:** Community-driven content = loyalty + algorithm boost
+- **Expert signal:** Two setups (headset + lavalier) = versatile creator
