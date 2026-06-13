@@ -174,12 +174,27 @@ Trải nghiệm timeline — kể chuyện, KHÔNG liệt kê specs
 
 ## Tuấn Anh's Voice Rules
 
-### Pronouns (NEVER deviate)
-- Speaker: **"anh"**
-- Audience: **"mấy con vợ"**
-- ❌ NEVER: "mấy đứa", "mấy chị", "các bạn", "các bạn ơi"
+### ⚠️ CRITICAL UPDATE (2026-06-13) — VOICE CHANGED
 
-### Script Style
+**Anh đã yêu cầu LOẠI BỎ HOÀN TOÀN voice "anh" + "mấy con vợ"** khỏi tất cả output.
+
+**Giọng MỚI:**
+- **Trung tính, chuyên nghiệp** — KHÔNG dùng xưng hô thân mật
+- Dùng "mình" / "bạn" hoặc neutral voice
+- ❌ KHÔNG dùng: "anh" + "mấy con vợ", "anh" + "các bạn", "anh" + "mấy đứa"
+- ❌ KHÔNG tự xưng "em" gọi "anh" — đó là dạng thân mật bị loại bỏ
+
+**Files updated với voice mới:**
+- `wiki/entities/learned-about-tuananh.md` (Voice & Pronouns section)
+- `wiki/entities/content-creator-project.md` (Voice & Pronouns section)
+- Project hub.md (Content Creator)
+- Memory entries (replaced old voice entries)
+
+**Khi viết script mới:**
+- Nếu user explicitly request voice cũ cho content marketing riêng → dùng voice cũ cho script đó
+- Nếu không rõ → MẶC ĐỊNH voice trung tính, chuyên nghiệp
+
+### Script Style (vẫn giữ — KHÔNG liên quan voice)
 - Hook: Cầu cứu hốt hoảng + tình huống cụ thể HOẶC drama tension
 - Body: Kể chuyện, storytelling — KHÔNG liệt kê specs
 - CTA: Casual, thân mật
@@ -298,7 +313,7 @@ As of May 2026, TikTok's algorithm has shifted weighting from entertainment sign
 - [ ] CTA casual, not pushy
 - [ ] Gen Z slang appropriate and current
 - [ ] Dead phrases avoided
-- [ ] Pronouns correct (anh + mấy con vợ)
+- [ ] Pronouns correct (voice trung tính, chuyên nghiệp — KHÔNG dùng "anh" + "mấy con vợ" trừ khi user explicitly request)
 - [ ] Script is UNIQUE — no template repetition
 - [ ] **Has a "click moment" — viewer wants to see product price/detail**
 - [ ] **Completion rate optimized — every second earns the next**
@@ -549,10 +564,12 @@ When Anh shares a video for analysis, DISTINGUISH between:
 - ❌ **"Mua ngay!" CTA** — too pushy, triggers algorithm pressure detection, lower distribution
 - ❌ **Evening content without demo** — 6PM is prime filming time. Evening scripts should have physically demonstrable moments ("thử xem nào", "bật lên demo", "quay lại đây") rather than just description. Morning scripts can describe; evening scripts should SHOW.
 
-### Pronoun Mistakes (INSTANT REJECT)
-- ❌ "mấy đứa", "mấy chị", "các bạn", "các bạn ơi" — NEVER use these
-- ✅ ONLY "anh" + "mấy con vợ"
-- These are Tuấn Anh's signature pronouns — deviation breaks authenticity
+### Pronoun Mistakes (INSTANT REJECT — UPDATED 2026-06-13)
+- ❌ "anh" + "mấy con vợ" — đã bị user loại bỏ hoàn toàn từ 13/06/2026
+- ❌ "mấy đứa", "mấy chị", "các bạn", "các bạn ơi" — NEVER use these (cũng bị cấm)
+- ✅ Voice MỚI: Trung tính, chuyên nghiệp — dùng "mình"/"bạn" hoặc neutral
+- ⚠️ EXCEPTION: Nếu user explicitly request voice cũ cho content riêng → mới dùng
+- Default = voice trung tính, KHÔNG tự động dùng "anh" + "mấy con vợ"
 
 ### Research Mistakes
 - ❌ **Skipping research** — writing script without fresh Gen Z slang research = outdated voice
@@ -616,6 +633,8 @@ Always state: "Live data chưa verify được — phân tích dựa trên URL t
 - ❌ **Repetitive Gen Z terms** — same slang in every script = copy-paste feel
 
 ## Example Scripts
+
+> **⚠️ NOTE (2026-06-13):** Examples dưới đây dùng voice "anh" + "mấy con vợ" cũ. Anh đã LOẠI BỎ voice này từ 13/06/2026. Examples giữ lại làm tài liệu tham khảo LỊCH SỬ + cấu trúc script (hook → body → CTA, Gen Z slang, intensity). Khi viết script MỚI cho anh, dùng voice trung tính trừ khi user explicitly request voice cũ.
 
 ### Example 1: Product Discovery Hook (Kẹp Tóc Nơ Bong Bóng)
 ```

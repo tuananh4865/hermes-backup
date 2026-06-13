@@ -322,3 +322,60 @@
 - **Style:** Yellow/red/white stacked boxes, expert persona
 - **Why it works:** High information density = high save rate
 - **TikTok Shop angle:** Saves = future conversion opportunity
+
+---
+
+## 2026-06-13 Updates
+
+### New patterns found:
+
+#### 1. Specific Number + Promise CTA
+- **Pattern:** "3 bước kiếm tiền" → viewer must watch all to get complete steps
+- **Why it works:** Number creates completion drive, promise keeps watching
+- **TikTok Shop angle:** "3 steps" = can lead to product reveal at step 3
+
+#### 2. Exclamation + Question CTA
+- **Pattern:** "ÔI MỌI NGƯỜI ƠI" + implied question → high energy engagement
+- **Why it works:** Exclamation creates excitement, question invites comment
+- **TikTok Shop angle:** Tech/gadget reveals create natural product interest
+
+#### 3. Interactive Self-Assessment CTA
+- **Pattern:** "HÃY NÓI / ĐỪNG NÓI" → viewer assesses themselves throughout
+- **Why it works:** Self-assessment = mental engagement = higher retention
+- **TikTok Shop angle:** Perfect for "should you buy X or Y" content
+
+#### 4. Cozy Podcast Soft CTA
+- **Pattern:** "Có bao giờ các bạn..." → intimate question, soft sell
+- **Why it works:** Cozy aesthetic lowers defenses, soft questions feel personal
+- **TikTok Shop angle:** Products for lifestyle/wellness niches
+
+#### 5. Benefit Promise + Continuation CTA
+- **Pattern:** "để kiếm tiền từ..." → promise incomplete, must watch to finish
+- **Why it works:** Open loop + money promise = strong retention
+- **TikTok Shop angle:** Side hustle content naturally leads to product pitch
+
+#### 6. New Feature Discovery CTA
+- **Pattern:** "TÍNH NĂNG MỚI" → FOMO, creator tools angle
+- **Why it works:** New features = algorithm boost, creator efficiency
+- **TikTok Shop angle:** Tech tools, software, creator gear
+
+#### 7. Comment-Reply Community CTA
+- **Pattern:** Real viewer question at top → creator responds → ask follow-up
+- **Why it works:** Community validation = loyalty + algorithm boost
+- **TikTok Shop angle:** Q&A about products builds trust
+
+#### 8. Counter-Intuitive Warning CTA
+- **Pattern:** "CÀNG FLOP NẾU KHÔNG LÀM ĐIỀU NÀY" → fear of failure
+- **Why it works:** Paradox creates curiosity + fear of missing solution
+- **TikTok Shop angle:** Anti-mistake content = saves for future reference
+
+#### 9. Consistency Story CTA
+- **Pattern:** "CÂU CHUYỆN NHẤT QUÁN" → long-term commitment messaging
+- **Why it works:** Personal branding = trust = follow for more
+- **TikTok Shop angle:** Consistency builds audience = long-term conversion
+
+#### 10. Pain Point Question CTA
+- **Pattern:** "CÂU HỎI 'ÁM ẢNH'" → creator addresses specific fears
+- **Why it works:** Pain point acknowledgment = emotional connection
+- **TikTok Shop angle:** Products that solve creator "haunting questions"
+

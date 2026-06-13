@@ -354,3 +354,72 @@
 - **Example:** @goccontent — "CẦN SỬA NGAY" + mistake warning
 - **Why it works for Shop:** Urgency = impulse purchase trigger
 - **Shop angle:** Limited time offers, flash sales, countdown timers
+
+---
+
+## 2026-06-13 Updates
+
+### New patterns found:
+
+#### 1. Side Hustle / Self-Branding Content
+- **Pattern:** "3 bước kiếm tiền từ tự truyền thông" — personal branding as income source
+- **TikTok Shop angle:** Courses, personal branding tools, content creation tools
+- **Why viral:** Gen Z side hustle culture + monetization desire
+- **Format:** Numbered steps = easy to follow, easy to save
+
+#### 2. Tech Niche Product Reveals
+- **Pattern:** High-energy reaction → product reveal → explanation
+- **Example:** Mechanical keyboard switch reveal
+- **TikTok Shop angle:** Tech gadgets, peripherals, niche hobby products
+- **Why viral:** Niche community (mechanical keyboard) = high engagement within group
+- **Gen Z:** Streetwear + tech = strong purchasing signals
+
+#### 3. Podcast Aesthetic = Thought Leader Authority
+- **Pattern:** Professional setup → trust → product recommendation
+- **Example:** "Có bao giờ các bạn..." + cozy studio
+- **TikTok Shop angle:** Courses, coaching, premium services
+- **Why viral:** Professional aesthetic = premium perception
+- **Visual:** Shure mic, vinyl clock, moody lighting = premium lifestyle
+
+#### 4. Interactive Self-Assessment = Decision Helper Content
+- **Pattern:** "HÃY NÓI / ĐỪNG NÓI" → green/red → viewer decides
+- **TikTok Shop angle:** "Which product should I buy?" comparison content
+- **Why viral:** Self-assessment = mental engagement = saves for later
+- **Shop format:** Perfect for product comparison videos
+
+#### 5. Cozy Lifestyle = Wellness Products
+- **Pattern:** Cozy studio aesthetic + personal question
+- **TikTok Shop angle:** Lifestyle products, home items, wellness
+- **Why viral:** Cozy aesthetic = aspirational lifestyle
+- **Visual:** Dark moody, warm lights, vinyl records = premium feel
+
+#### 6. New Feature Discovery = Creator Tools
+- **Pattern:** "TÍNH NĂNG MỚI" → TikTok feature announcement
+- **TikTok Shop angle:** Creator tools, software, tech accessories
+- **Why viral:** FOMO for creators = engagement
+- **Products:** Ring lights, microphones, cameras, editing software
+
+#### 7. Community Q&A = Social Proof Factory
+- **Pattern:** Real viewer questions → public answers → product mentions
+- **TikTok Shop angle:** Product Q&A = natural product placement
+- **Why viral:** Community validation = trust
+- **Format:** Perfect for product FAQ content
+
+#### 8. Anti-Mistake Content = Saves for Reference
+- **Pattern:** "CÀNG FLOP NẾU KHÔNG LÀM ĐIỀU NÀY"
+- **TikTok Shop angle:** Prevention products, tools that help avoid mistakes
+- **Why viral:** Fear of error = high saves
+- **Shop format:** "This tool helps you avoid X mistake"
+
+#### 9. Consistency Branding = Long-Term Trust
+- **Pattern:** "CÂU CHUYỆN NHẤT QUÁN" → long-term personal branding
+- **TikTok Shop angle:** Products for long-term creators, courses, coaching
+- **Why viral:** Consistency = trust = conversion
+- **Shop format:** Subscription products, ongoing services
+
+#### 10. Pain Point Solutions = High-Intent Products
+- **Pattern:** "CÂU HỎI 'ÁM ẢNH'" → creator fears addressed
+- **TikTok Shop angle:** Products that solve specific creator problems
+- **Why viral:** Pain point acknowledgment = emotional connection
+- **Shop format:** "This solves exactly that problem"
+

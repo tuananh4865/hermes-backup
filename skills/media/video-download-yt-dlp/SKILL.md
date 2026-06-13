@@ -107,6 +107,23 @@ KHÔNG skip bước 1 (gửi file) kể cả khi anh chỉ focus vào transcript
 
 Khi transcript needed → load skill `youtube-transcript-extractor` (đã có Vietnamese Subtitle Strategy + Local Whisper Fallback cho video không có sub).
 
+### 7. TikTok chỉ trả về audio-only (2026-06-13)
+
+**Triệu chứng:** `yt-dlp -F "https://vt.tiktok.com/..."` chỉ hiện 1 row: `audio mp3 audio only | https | audio only mp3` — không có video format nào.
+
+**Ví dụ thật:** `vt.tiktok.com/ZSQm9pYrV/` (@tuan_anh.review video 7650439370519940370).
+
+**Nguyên nhân:** TikTok chặn video stream download từ phần lớn region/format (yt-dlp impersonation target missing).
+
+**Workaround vẫn gửi được gì đó cho anh:**
+- Dùng `yt-dlp -f best` (hoặc -f audio) để tải MP3 audio-only
+- File audio vẫn nghe được → vẫn gửi MEDIA:/path được (Telegram play được MP3 như voice bubble)
+- Nếu transcript cần → feed MP3 thẳng vào Whisper (skip ffmpeg WAV step)
+
+**KHÔNG retry** với format khác — TikTok chỉ cho 1 format duy nhất. Move on to audio workflow.
+
+**Nếu anh thực sự cần video TikTok** → dùng `browser-harness` mở Chrome, DevTools network tab để capture file. CHƯA có end-to-end automated pipeline.
+
 ## Sample End-to-End Command
 
 ```bash

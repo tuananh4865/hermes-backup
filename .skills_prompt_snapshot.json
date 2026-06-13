@@ -618,16 +618,16 @@
       6319
     ],
     "media/video-download-yt-dlp/SKILL.md": [
-      1781291185162949601,
-      5828
+      1781311014688012540,
+      6869
     ],
     "media/youtube-content/SKILL.md": [
       1780154598610979783,
       6440
     ],
     "media/youtube-transcript-extractor/SKILL.md": [
-      1781291162222123713,
-      6613
+      1781313154827906697,
+      10940
     ],
     "memory/byterover-agentic-memory/SKILL.md": [
       1779971285818934891,
@@ -738,8 +738,8 @@
       2272
     ],
     "multi-agent-orchestrator/SKILL.md": [
-      1779469680873402399,
-      50856
+      1781311038939804675,
+      51158
     ],
     "note-taking/obsidian/SKILL.md": [
       1778471610459908342,
@@ -768,6 +768,10 @@
     "productivity/airtable/SKILL.md": [
       1778471610459990676,
       11302
+    ],
+    "productivity/default-project-hub-pattern/SKILL.md": [
+      1781313139000695566,
+      12655
     ],
     "productivity/google-workspace/SKILL.md": [
       1778471609350554440,
@@ -862,8 +866,8 @@
       2713
     ],
     "social-media/tiktok-viral-script/SKILL.md": [
-      1781240343737060295,
-      43401
+      1781310939857995597,
+      45000
     ],
     "social-media/xurl/SKILL.md": [
       1780286195960559658,
@@ -950,8 +954,8 @@
       9124
     ],
     "wiki/wiki-maintenance/SKILL.md": [
-      1780333428303965470,
-      7139
+      1781370583335682322,
+      7909
     ],
     "write-a-skill/SKILL.md": [
       1779165369867898266,
@@ -3254,7 +3258,7 @@
       "skill_name": "youtube-transcript-extractor",
       "category": "media",
       "frontmatter_name": "youtube-transcript-extractor",
-      "description": "Extract full transcripts from YouTube videos for content ...",
+      "description": "Extract full transcripts from YouTube videos, YouTube Sho...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -3751,6 +3755,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "default-project-hub-pattern",
+      "category": "productivity",
+      "frontmatter_name": "default-project-hub-pattern",
+      "description": "Wire up a project as the agent's persistent default acros...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

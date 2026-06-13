@@ -337,3 +337,70 @@
 - **Style:** Raw POV, outdoor bokeh, red helmet, cream hoodie
 - **Why viral:** Breaks all TikTok conventions — no text, no talking head
 - **Gen Z angle:** Ultra-authentic, anti-polish, lo-fi intimacy
+
+---
+
+## 2026-06-13 Updates
+
+### New patterns found:
+
+#### 1. Numbers + Benefit Promise Hook
+- **Pattern:** "3 bước kiếm tiền từ việc tự truyền thông" — specific number + money promise
+- **Style:** Outdoor casual (park), medium close-up, pixel-art character bottom-left, yellow subtitle text
+- **Why viral:** Specific number + monetary benefit = powerful quick-win hook
+- **Visual:** Black rounded box for hook + yellow bottom text = layered text hierarchy
+- **Gen Z:** Side hustle / "tự truyền thông" = major trend
+
+#### 2. Exclamation Reaction Hook
+- **Pattern:** "ÔI MỌI NGƯỜI ƠI" — dramatic exclamation + product reveal
+- **Style:** Indoor modern, holding small object (keyboard switch), eyes closed mid-exclamation, NY Yankees tee
+- **Why viral:** High energy + curiosity gap (what is the object?)
+- **Gen Z:** Tech niche community (mechanical keyboard), streetwear aesthetic
+
+#### 3. Do/Don't Contrast Hook (Reinvented)
+- **Pattern:** "HÃY NÓI / ĐỪNG NÓI" — green/red columns with empty bars for filling
+- **Style:** Professional podcast setup, Shure mic, warm accent lighting, orange circular light
+- **Why viral:** Interactive self-assessment format, open loop (viewer stays to see fills)
+- **Gen Z:** Social skills / communication tips = extremely popular niche
+
+#### 4. Open Loop Question Hook
+- **Pattern:** "Có bao giờ các bạn..." — incomplete question + cozy podcast setup
+- **Style:** Cozy studio, vinyl record clock, Rolling Stones mug, dark moody lighting, white tee
+- **Why viral:** Classic open loop — viewer needs to know the rest
+- **Visual:** White text on screen + professional setup = premium podcast aesthetic
+
+#### 5. "Side Hustle" Benefit Hook
+- **Pattern:** "để kiếm tiền từ" — incomplete benefit statement
+- **Style:** Bookshelf background, pink/purple ambient light, black shirt, rectangular glasses
+- **Why viral:** "Earn money from X" = universal Gen Z desire
+- **Visual:** Yellow text on purple/blue gradient background = bold contrast
+
+#### 6. New Feature Announcement Hook
+- **Pattern:** "TÍNH NĂNG MỚI / Giúp bạn làm video dễ dàng hơn" — announcement + benefit
+- **Style:** Coral t-shirt, wooden bookshelf, Apple Watch, warm soft lighting
+- **Why viral:** Targets creator desire for efficiency + staying current
+- **Visual:** White/red/yellow 3-layer text hierarchy = high information density
+
+#### 7. Comment-Reply Curiosity Hook
+- **Pattern:** "NHỮNG KÊNH MÀ" — reply-to-comment format with real viewer question
+- **Style:** Gaming headset, black turtleneck, bright even lighting, green logo background
+- **Why viral:** Community interaction = trust signal + curiosity gap
+- **Visual:** Comment bubble top-left + bold caption bottom = interactive format
+
+#### 8. Counter-Intuitive Negative Outcome Hook
+- **Pattern:** "CÀNG HỌC XÂY KÊNH NHIỀU KÊNH CÀNG FLOP NẾU KHÔNG LÀM ĐIỀU NÀY"
+- **Style:** Outdoor/indoor, headset, braces visible, black textured jacket
+- **Why viral:** Paradox (more study = more flop) = strong curiosity + "FLOP" slang
+- **Gen Z:** Anti-advice, anti-establishment energy
+
+#### 9. Curiosity Juxtaposition Hook
+- **Pattern:** "CÁI QUẦN THỦNG LỎ & CÂU CHUYỆN NHẤT QUÁN" — odd detail + serious topic
+- **Style:** Light blue striped shirt, lapel mic, natural window light, outdoor background
+- **Why viral:** Specific odd detail (torn pants) + personal branding = curiosity gap
+- **Visual:** Text at TOP of frame (safe zone) = modern TikTok layout
+
+#### 10. Pain Point Obsessive Hook
+- **Pattern:** "MỘT CÂU HỎI 'ÁM ẢNH' NGƯỜI XÂY KÊNH" — pain point word highlighted
+- **Style:** Outdoor, middle-aged expert, goatee, pointing finger, modern building background
+- **Why viral:** "Ám ảnh" (haunting) targets specific creator fears + finger-point = direct address
+- **Visual:** "ÁM ẢNH" in bright yellow = pain point emphasis

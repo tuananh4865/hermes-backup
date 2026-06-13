@@ -370,3 +370,80 @@
 - **Style:** Headset + glasses + green house logo, warm office lighting
 - **Why it works:** Community-driven content = loyalty + algorithm boost
 - **Expert signal:** Two setups (headset + lavalier) = versatile creator
+
+---
+
+## 2026-06-13 Updates
+
+### New patterns found:
+
+#### 1. Numbers Promise Structure ("3 Bước Kiếm Tiền")
+- **Pattern:** Specific number + benefit + step-by-step delivery
+- **Structure:** Hook (3 steps promise) → Step 1 → Step 2 → Step 3 → CTA
+- **Style:** Outdoor casual, pixel-art character, yellow subtitle
+- **Why viral:** Number = digestible, benefit = universal desire
+- **Story arc:** Clear journey from unknown → knowledge
+
+#### 2. Reaction Reveal Structure
+- **Pattern:** Dramatic reaction → reveal → explanation
+- **Structure:** Exclamation hook → reveal object/topic → breakdown
+- **Style:** Indoor modern, holding small item, NY streetwear tee
+- **Why viral:** Curiosity gap + surprise element
+- **Story arc:** Mystery → reveal → education
+
+#### 3. Do/Don't Contrast Structure
+- **Pattern:** Two-column format → sequential reveal of good vs bad
+- **Structure:** Setup columns → reveal one by one → summary
+- **Style:** Professional podcast, warm accent lighting, dark moody
+- **Why viral:** Self-assessment drives completion
+- **Story arc:** Question → correct/incorrect → resolution
+
+#### 4. Question Loop Structure
+- **Pattern:** Incomplete question → answer → deeper question
+- **Structure:** Hook question → answer → follow-up question → CTA
+- **Style:** Cozy studio, vinyl clock, dark moody, white tee
+- **Why viral:** Open loop drives watch time
+- **Story arc:** Curiosity → satisfaction → more curiosity
+
+#### 5. Benefit Teaser Structure
+- **Pattern:** Incomplete benefit promise → must watch for full reveal
+- **Structure:** Partial promise → explanation → full promise → CTA
+- **Style:** Bookshelf, pink ambient light, professional expert
+- **Why viral:** Need for completion drives retention
+- **Story arc:** Setup → anticipation → payoff
+
+#### 6. New Feature Announcement Structure
+- **Pattern:** Announcement → demo → benefit explanation
+- **Structure:** Hook (new feature) → what it does → how it helps → CTA
+- **Style:** Coral shirt, Apple Watch, wooden shelves
+- **Why viral:** FOMO + efficiency desire
+- **Story arc:** New → valuable → accessible
+
+#### 7. Comment-Reply Interactive Structure
+- **Pattern:** Real question → personal response → broader lesson
+- **Structure:** Comment highlight → answer → expand → CTA
+- **Style:** Gaming headset, bright lighting, green logo background
+- **Why viral:** Community validation + personalized content
+- **Story arc:** Specific → general → actionable
+
+#### 8. Paradox Warning Structure
+- **Pattern:** Counter-intuitive claim → investigation → explanation
+- **Structure:** Bold claim (more study = more flop) → explain why → solution
+- **Style:** Headset, braces, black textured jacket
+- **Why viral:** Paradox = strong cognitive engagement
+- **Story arc:** Challenge → investigation → revelation
+
+#### 9. Consistency Story Structure
+- **Pattern:** Odd detail → consistency lesson → broader truth
+- **Structure:** Odd hook (torn pants) → story → consistency point → CTA
+- **Style:** Light blue striped shirt, lapel mic, outdoor
+- **Why viral:** Curiosity + relatable life lesson
+- **Story arc:** Intrigue → narrative → lesson
+
+#### 10. Pain Point Exploration Structure
+- **Pattern:** Address specific fear → validate → offer solution
+- **Structure:** Pain point question → acknowledge → explain → CTA
+- **Style:** Middle-aged expert, outdoor, pointing finger
+- **Why viral:** Emotional validation creates connection
+- **Story arc:** Empathy → understanding → resolution
+

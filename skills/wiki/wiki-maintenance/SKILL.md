@@ -187,32 +187,54 @@ After cleanup:
 4. **Obsidian plugin still syncing during cleanup:** May create conflicting auto-commits
 5. **Wiki forget deletes directories with errors:** Use `shutil.rmtree()` via Python for directories that fail with `Operation not permitted`
 
-## Session Recording Health Check (Add to Maintenance Workflow)
+## Session Recording Health Check
 
-**⚠️ Pattern detected (May 28-31, 2026):** Cron jobs execute normally but session recording breaks — sessions.db becomes 0 bytes, no new session files created.
+**⚠️ Pattern detected (May 28–June 14, 2026):** Two distinct failure modes exist.
 
+### Failure Mode A: sessions.db corruption
 **Symptoms:**
 - `~/.hermes/sessions/sessions.db` is 0 bytes or empty
-- `~/.hermes/sessions/session_*.json` files stop being created after a certain date
-- Cron output files still being produced (cron jobs are running)
-- User sessions not tracked in wiki log
+- No new `session_*.json` files created
+- Cron output still being produced
 
-**Check command:**
+**Check:**
 ```bash
-# Session recording health check
 ls -la ~/.hermes/sessions/sessions.db
 ls -t ~/.hermes/sessions/session_*.json 2>/dev/null | head -5
-
-# If sessions.db is 0 bytes OR no session files from last 48h → recording broken
 ```
 
-**If broken, document in daily review:**
-```
-### ⚠️ CRITICAL: Session Recording Broken
-- **Last session logged:** [date]
-- **Missing:** [missing dates]
-- **sessions.db:** [size]
-- **Root cause:** Unknown
+### Failure Mode B: sessions.json updated but session files missing
+**Symptoms:**
+- `sessions.json` metadata IS being updated (size > 0, updated_at recent)
+- `session_*.json` files stop being created
+- Gap between `sessions.json` updated_at and oldest session file on disk
+- Example: sessions.json shows activity through June 13, but newest session file is May 28 (16 day gap)
+
+**Check:**
+```bash
+# Compare sessions.json updated_at vs newest session file
+python3 -c "
+import json
+with open('/Users/tuananh4865/.hermes/sessions/sessions.json') as f:
+    data = json.load(f)
+for k, v in data.items():
+    if isinstance(v, dict) and v.get('updated_at','') > '2026-06-01':
+        print(f'{k[:50]}: {v.get(\"updated_at\",\"\")}')"
+
+# List newest session files
+ls -t ~/.hermes/sessions/session_*.json 2>/dev/null | head -3
 ```
 
-**Note:** This is a Hermes Agent internal issue, not a wiki content issue. Document in daily review for user awareness. Resolution requires investigation of Hermes session service.
+### If broken, document in daily review:
+```
+### ⚠️ CRITICAL: Session Recording Issue
+- **sessions.json updated through:** [date from sessions.json]
+- **Newest session file:** [date from ls -t]
+- **Gap:** [X] days
+- **Root cause:** Unknown — hermes-agent session service investigation needed
+```
+
+### Reference: sessions.json vs session_*.json
+- `sessions.json` — metadata index (conv_id, created_at, updated_at, token counts)
+- `session_*.json` — actual conversation transcript content
+- Both should be created/updated together. If sessions.json updates but session files don't, the content layer is broken even if metadata survives.

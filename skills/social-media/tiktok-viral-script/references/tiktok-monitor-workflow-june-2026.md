@@ -45,8 +45,14 @@ DATE_DIR=~/.hermes/cron/tiktok-monitor/$(date +%Y-%m-%d)/videos
 mkdir -p "$DATE_DIR"
 cd "$DATE_DIR"
 
-yt-dlp -o "CHANNEL_N_1.mp4" "https://www.tiktok.com/@CHANNEL/video/ID"
+# ⚠️ June 13, 2026 — TikTok SSL/timeout workaround:
+yt-dlp --no-check-certificates --socket-timeout 120 -o "CHANNEL_N_1.mp4" "https://www.tiktok.com/@CHANNEL/video/ID"
 ```
+
+**Key flags (June 13 discovery):**
+- `--no-check-certificates` — bypasses TikTok SSL verification
+- `--socket-timeout 120` — handles slow TikTok connections
+- All 10 videos downloaded successfully using these flags
 
 ### Step 4: Extract frames
 
@@ -155,37 +161,12 @@ ERROR: [TikTok] VIDEO_ID: No video formats found!; please report this issue on h
 **Problem:** `ffmpeg` can hang on corrupted/incomplete video files.
 **Solution:** Use `-y` (overwrite) and `2>/dev/null` to suppress errors. Check `ls frames/*.jpg | wc -l` after loop — expect 20 per video.
 
-## June 9, 2026 — Session Results
+### TikTok SSL/Timeout Issues (June 13, 2026)
+**Problem:** TikTok connections timeout or SSL errors during download.
+**Solution:** Use `--no-check-certificates --socket-timeout 120` flags.
+**Result:** All 10 videos downloaded successfully.
 
-| Metric | Value |
-|--------|-------|
-| Videos analyzed | 11/13 |
-| Failed downloads | 1 (goccontent_4 — JS challenge) |
-| New patterns found | 11 hook/CTA/storytelling patterns |
-| Lesson files updated | 4 (hooks, cta, storytelling, tiktok-shop) |
-
-**Top trends identified:**
-1. Expert Authority + Social Proof (TikTok award + Shure mic in background)
-2. Do/Don't Contrast Format (green/red boxes)
-3. Raw POV Authenticity (no text overlay, lo-fi aesthetic)
-
-**Key lesson:** Yellow text overlay remains the most reliable scroll-stopper across all 5 channels.
-
-## June 10, 2026 — Session Results
-
-| Metric | Value |
-|--------|-------|
-| Videos analyzed | 8/10 |
-| Failed downloads | 1 (@goccontent — anti-bot block) |
-| New patterns found | 15+ hook/CTA/storytelling patterns |
-| Lesson files updated | 4 (hooks, cta, storytelling, tiktok-shop) |
-
-**Top trends identified:**
-1. Series + Listicles = Follow Acceleration ("3 YẾU TỐ" + "Tập 1/2/3")
-2. Beginner-Filter Targeting ("CHO NGƯỜI MỚI XÂY KÊNH")
-3. Multi-Layer Text Hierarchy (4 text layers simultaneously)
-
-**⚠️ NEW FAILURE MODE: TikTok Anti-Bot Blocking**
+### TikTok Anti-Bot Blocking (June 10, 2026)
 - @goccontent video `7648845591035923720` — blocked by TikTok anti-bot (403/empty file)
 - Workarounds to add to workflow:
   - `--user-agent "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)..."`
@@ -193,4 +174,53 @@ ERROR: [TikTok] VIDEO_ID: No video formats found!; please report this issue on h
   - Retry with delay: `sleep 5 && yt-dlp ...`
 - **Fallback:** Mark video as `BLOCKED` in report, skip frame extraction
 
-**Key lesson:** Multi-layer text hierarchy (red header + white sub + yellow subtitle + episode boxes) creates maximum information density for fast-scroll stopping power.
+## Session Results
+
+### June 13, 2026 — Session Results
+
+| Metric | Value |
+|--------|-------|
+| Videos analyzed | 10/10 (all 10 downloaded successfully) |
+| Failed downloads | 0 |
+| New patterns found | 10 hook + 10 CTA + 10 storytelling + 10 TikTok Shop |
+| Lesson files updated | hooks.md, cta.md, storytelling.md, tiktok-shop.md |
+
+**Top trends identified:**
+1. Podcast Aesthetic EduTok — Shure mic + vinyl clock + dark moody lighting = premium authority
+2. Counter-Intuitive Hooks — "CÀNG HỌC XÂY KÊNH NHIỀU KÊNH CÀNG FLOP" = paradox = strong curiosity gap
+3. Interactive Self-Assessment — Green/red columns "HÃY NÓI / ĐỪNG NÓI" = mental engagement
+
+**Key lessons:**
+- Text at TOP of frame = modern safe zone, avoids TikTok UI overlap
+- "Side Hustle" + "Self-Branding" = "3 bước kiếm tiền từ tự truyền thông" = Gen Z desire
+- Odd detail + consistency story = humanizes expert + delivers value
+
+### June 10, 2026 — Session Results
+
+| Metric | Value |
+|--------|-------|
+| Videos analyzed | 8/10 |
+| Failed downloads | 1 (@goccontent — anti-bot block) |
+| New patterns found | 15+ hook/CTA/storytelling patterns |
+
+**Top trends identified:**
+1. Series + Listicles = Follow Acceleration ("3 YẾU TỐ" + "Tập 1/2/3")
+2. Beginner-Filter Targeting ("CHO NGƯỜI MỚI XÂY KÊNH")
+3. Multi-Layer Text Hierarchy (4 text layers simultaneously)
+
+**Key lesson:** Multi-layer text hierarchy (red header + white sub + yellow subtitle + episode boxes) creates maximum information density.
+
+### June 9, 2026 — Session Results
+
+| Metric | Value |
+|--------|-------|
+| Videos analyzed | 11/13 |
+| Failed downloads | 1 (goccontent_4 — JS challenge) |
+| New patterns found | 11 hook/CTA/storytelling patterns |
+
+**Top trends identified:**
+1. Expert Authority + Social Proof (TikTok award + Shure mic in background)
+2. Do/Don't Contrast Format (green/red boxes)
+3. Raw POV Authenticity (no text overlay, lo-fi aesthetic)
+
+**Key lesson:** Yellow text overlay remains the most reliable scroll-stopper across all 5 channels.
