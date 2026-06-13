@@ -100,8 +100,27 @@ git push origin main
 ## Related Skills
 - `github-wiki-backup` — Specialized version for Hermes wiki + skills + memories backup. Use this one for the daily cron job.
 
+## Support Files
+- `references/embedded-repo-fix.md` — Worked example: untracking an installed-skill subdir (`skills/agent-reach`) flagged as embedded git repo during `~/.hermes` daily backup, without breaking the skill install.
+
 ## Pitfalls
 1. **Quên xóa nested .git** → "adding embedded git repository" warning
 2. **Không dùng -f flag** → Files bị gitignore block hoàn toàn
 3. **Exclude quá rộng** → KHÔNG backup được content (chỉ backup .gitignore thôi)
 4. **Media files vẫn lớn** → Cần verify .gitignore patterns đúng
+5. **⚠️ Installed-skill subdirs (e.g. `~/.hermes/skills/<name>/`) are tracked as embedded git repos** but must NOT have their `.git` deleted — that would break the skill install. The skill bundle's history is part of the install. Correct fix when `git add .` warns about an embedded repo with no `.gitmodules` entry:
+   ```bash
+   git rm --cached -r path/to/skill-dir
+   # keep local working copy intact, just untrack from parent repo
+   git add .  # retry
+   ```
+   Only use `find ... -exec rm -rf .git` for TRULY disposable nested repos (throwaway clones, old wiki snapshots), never for anything under `skills/`, `plugins/`, or other install-managed directories.
+6. **Stale embedded-repo advisory spam** — after untracking, future `git add` on the same path keeps warning. Silence it permanently (scoped to the backup repo, not global):
+   ```bash
+   git config set advice.addEmbeddedRepo false
+   ```
+7. **Verify push landed** — `git push` exit-0 doesn't prove GitHub accepted it. Confirm with:
+   ```bash
+   git ls-remote origin main  # local HEAD SHA should match remote SHA
+   ```
+   Catches silent auth-fail or non-fast-forward that some git versions return success on.
