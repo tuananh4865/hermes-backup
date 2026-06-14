@@ -28,8 +28,8 @@ if command -v gh &>/dev/null && gh auth status &>/dev/null; then
 else
   AUTH="git"
   if [ -z "$GITHUB_TOKEN" ]; then
-    if [ -f ~/.hermes/.env ] && grep -q "^GITHUB_TOKEN=" ~/.hermes/.env; then
-      GITHUB_TOKEN=$(grep "^GITHUB_TOKEN=" ~/.hermes/.env | head -1 | cut -d= -f2 | tr -d '\n\r')
+    if _hermes_env="${HERMES_HOME:-$HOME/.hermes}/.env"; [ -f "$_hermes_env" ] && grep -q "^GITHUB_TOKEN=" "$_hermes_env"; then
+      GITHUB_TOKEN=$(grep "^GITHUB_TOKEN=" "$_hermes_env" | head -1 | cut -d= -f2 | tr -d '\n\r')
     elif grep -q "github.com" ~/.git-credentials 2>/dev/null; then
       GITHUB_TOKEN=$(grep "github.com" ~/.git-credentials 2>/dev/null | head -1 | sed 's|https://[^:]*:\([^@]*\)@.*|\1|')
     fi
@@ -176,36 +176,6 @@ curl -s -X POST \
 ## Alternatives Considered
 <Other approaches>
 ```
-
-### Creating Issues from External Repos
-
-For repos without a local git clone, use `--repo owner/repo`:
-
-```bash
-gh issue create --repo NousResearch/hermes-agent --title "Bug title" --body-file /tmp/body.md
-```
-
-**CRITICAL — body-file pitfall**: When issue body contains complex content (backticks, multi-line code, special chars), ALWAYS use `--body-file` with a pre-written file. Inlining with `--body` causes "unknown arguments" errors because shell quoting breaks on complex content.
-
-**Correct workflow**:
-```bash
-# 1. Write body to temp file
-cat > /tmp/issue_body.md << 'EOF'
-## Bug Description
-Content with backticks `code` and special chars works fine in file.
-EOF
-
-# 2. Create issue from file
-gh issue create --repo owner/repo --title "Title" --body-file /tmp/issue_body.md
-```
-
-**Wrong (will fail)**:
-```bash
-# This breaks on complex body content
-gh issue create --repo owner/repo --title "Title" --body "Line with `code` and special chars..."
-```
-
----
 
 ## 3. Managing Issues
 

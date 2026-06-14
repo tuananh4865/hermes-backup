@@ -509,6 +509,14 @@ When new information conflicts with existing content:
 
 > **Auto-improvement note:** *Missing or outdated information:**
 
+> **Auto-improvement note:** 3 specific improvements. Let me analyze the content:
+
+> **Auto-improvement note:** *Missing or outdated information**:
+
+> **Auto-improvement note:** 3 specific improvements across three categories:
+
+> **Auto-improvement note:** *Issues I can identify:**
+
 === index.md ===
 ---
 confidence: high
@@ -616,6 +624,7 @@ relationships:
 - [[gen-z-slang-2026-04]] — Vietnamese + English Gen Z slang, Chuzz, Gyatt, đỉnh, toang (2026-04-29)
 
 ### Hermes X Research
+- [[x-research-hermes-2026-06-14]] — Hermes X research June 14: ~189K stars, v0.16 Desktop App (macOS/Win/Linux), WhatsApp Business Cloud, X Premium+ integration, 7.7K X members (2026-06-14)
 - [[x-research-hermes-2026-06-12]] — Hermes X research June 12: 176K stars, v0.16 Surface Release, NVIDIA partnership confirmed, 7,309 X members (2026-06-12)
 - [[x-research-hermes-2026-06-11]] — Hermes X research June 11: ~188K stars, v0.16 Surface Release (100 PRs, 159 commits), Native Desktop App, /undo command, Nemotron 3 Ultra free (2026-06-11)
 - [[x-research-hermes-2026-06-07]] — Hermes X research June 7: v0.16 Surface Release, 176K stars, Native Desktop App, NVIDIA partnership (2026-06-07)
@@ -630,6 +639,7 @@ relationships:
 - [[rss]] — RSS feed monitoring
 
 | [[tiktok-content-guideline-hi-imdung-style]] | Guideline MỚI (2026-06-11): Setup + Edit cơ bản, 3 trụ nội dung, 5 hook templates, 3 script templates, content calendar, 30 ngày action plan |
+| [[content-creator-project]] | Project MẶC ĐỊNH của em — Content Creator tại /Volumes/Storage-1/Workspace/Claude/Projects/Content Creator/. Set 2026-06-13. Hub: hub.md, voice "anh + mấy con vợ" |
 | [[tiktok-channel-building-strategy-hi-imdung-style]] | Chiến thuật xây kênh @hi.imdung: 3 giai đoạn, content pillar 80/20, hook framework, SEO hashtag, video length, edutainment, content funnel (2026-06-11) |
 
 ## Projects
@@ -917,33 +927,37 @@ relationships:
 
 > **Auto-improvement note:** The page mentions "Last updated: 2026-05-07" but contains entries from as recent as "2026-06-08" (self-debugging-techniques-june-2026). This is inconsistent - either the date is wrong or the content is more recent than indicated.
 
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page mentions "Total pages: ~156" but there's no indication of how accurate this is or when it was last verified
+
 === log.md (last 20 lines) ===
+## [2026-06-11] tiktok-channel-research | Nghiên cứu chiến thuật xây kênh kiểu @hi.imdung: 3 giai đoạn xây kênh, content pillar 80/20, hook framework 3 giây, SEO hashtag strategy, video length format, edutainment 2026, content funnel. Lưu: wiki/concepts/tiktok-channel-building-strategy-hi-imdung-style.md
+
+## [2026-06-08] autoresearch | Autoresearch June 8 — Wiki clean (SHS=0), 3 NEW self-debugging techniques (Debug2Fix, PyCapsule, Self-Improving Coding Agent), v0.16 Surface Release (176K stars, Native Desktop App, NVIDIA partnership), Gen Z slang: Khum/J z tr/U là tr from slangloom May 2026, 91 sessions last 7 days
+
+## [2026-06-06] create | TikTok Content Writing 2026 — Hooks (5 types), Script Structure (5 parts), 17 Viral Formulas, Psychology behind hooks, TikTok Shop tips. Source: ScriptStorm, HookMafia, HeyOrca, TikTok Business Blog
+
+## [2026-06-04] autoresearch-nightly | MiniMax M3 researched (59% SWE-Bench, 1M context, $0.30/M input), AI agent memory techniques (AgeMem, Focus, MemRL), Hermes config confirmed default MiniMax-M3, wiki clean (0 issues), skills healthy (233), session log analysis done (329 messages from 5 sessions)
 
 ## [2026-05-31] autoresearch-nightly | SIA self-improving agent (arXiv:2605.27276) documented — Stanford dual-mode: harness + weight updates, beats Claude Code on TerminalBench. Total self-improvement techniques: 18. Wiki clean (0 issues).
 
 ## [2026-06-01] youtube-research | 100-round YouTube deep research hoàn thành — Algorithm, Content Strategy, SEO, Growth, Monetization, Vietnam Market, Upload Timing, Engagement, Scaling (2026-06-01)
 
-## [2026-06-04] autoresearch-nightly | MiniMax M3 researched (59% SWE-Bench, 1M context, $0.30/M input), AI agent memory techniques (AgeMem, Focus, MemRL), Hermes config confirmed default MiniMax-M3, wiki clean (0 issues), skills healthy (233), session log analysis done (329 messages from 5 sessions)
+## [2026-05-20] Autoresearch Nightly
+- Wiki: ✅ clean (0 issues) | Skills: 241 healthy, SHS=0
+- Gen Z: No new slang (web search fallback)
+- AI Research: 6 NEW techniques (SE-Agent, Focus, Memory Survey, ETO, Multi-Agent Evolve, Context Curation RL) — 30 total
+- Capability: Memory Optimization + Trajectory Learning
+- Reference: [[self-improving-agents-june-2026]]
 
 ## [2026-05-07] daily-review | Daily review May 7 — Hermes Memory ALL 5 PHASES complete (1458 lines, syntax OK), 8 phase methods implemented, hybrid retrieval (BM25+semantic), Vietnamese topic parsing, importance scoring (HIGH=0.90), consolidation auto-trigger at 50 entries. Content Creator: 3 scripts (hair ties/charm/portable fan), "lọ" slang HOT May 2026, Catrice Foundation +346% viral case. Top products: Kẹp Tóc Nơ Bong Bóng ₫3.38B GMV, Charm 164K units. TikTok 40%+ market share, Shopee duopoly 97%.
-
-## [2026-06-06] create | TikTok Content Writing 2026 — Hooks (5 types), Script Structure (5 parts), 17 Viral Formulas, Psychology behind hooks, TikTok Shop tips. Source: ScriptStorm, HookMafia, HeyOrca, TikTok Business Blog
-
-## [2026-06-08] autoresearch | Autoresearch June 8 — Wiki clean (SHS=0), 3 NEW self-debugging techniques (Debug2Fix, PyCapsule, Self-Improving Coding Agent), v0.16 Surface Release (176K stars, Native Desktop App, NVIDIA partnership), Gen Z slang: Khum/J z tr/U là tr from slangloom May 2026, 91 sessions last 7 days
-
-## [2026-06-11] tiktok-guideline | Xóa guideline TikTok cũ, tạo guideline MỚI hoàn toàn — Setup cơ bản + Edit cơ bản (lấy cảm hứng @hi.imdung). 3 trụ: Setup, Edit, Gear Review. 5 hook templates, 3 script templates, content calendar, 30 ngày action plan. Lưu: wiki/concepts/tiktok-content-guideline-hi-imdung-style.md
-
-## [2026-06-11] tiktok-channel-research | Nghiên cứu chiến thuật xây kênh kiểu @hi.imdung: 3 giai đoạn xây kênh, content pillar 80/20, hook framework 3 giây, SEO hashtag strategy, video length format, edutainment 2026, content funnel. Lưu: wiki/concepts/tiktok-channel-building-strategy-hi-imdung-style.md
-
-## [2026-06-12] x-research | Hermes X research June 12: 176K stars, v0.16 Surface Release, NVIDIA partnership confirmed, 7,309 X members, Self-Evolution with DSPy+GEPA, third-party Hermes Desktop
-
-## [2026-06-11] autoresearch | Self-improving agents June 11 update (SR2AM 2605.22138 + WebXSkill 2604.13318 — 2 new techniques), Hermes v0.16 Surface Release (native desktop app, /undo, 294 commits past tag), wiki clean (SHS=0), skills healthy
 
 === learned-about-tuananh.md ===
 ---
 title: Learned About Tuấn Anh
 created: 2026-04-23
-- updated: 2026-06-09
+- updated: 2026-06-12
 type: entity
 tags: [person]
 confidence: high
@@ -968,7 +982,7 @@ relationships: [tiktok-content, hermes-agent]
 ## TikTok Content Style
 
 ### Voice & Pronouns
-- **Xưng hô: "anh" + "mấy con vợ"** — cố định, KHÔNG thay đổi
+- **Xưng hô: Trung tính, chuyên nghiệp** — cập nhật 13/06/2026: LOẠI BỎ hoàn toàn "anh" + "mấy con vợ". Dùng giọng neutral hoặc "mình"/"bạn".
 - KHÔNG dùng: "mấy đứa", "mấy chị", "mấy má", "các bạn"
 
 ### Định Hướng Kênh MỚI (2026-06-11)
@@ -1047,6 +1061,12 @@ relationships: [tiktok-content, hermes-agent]
 - **Thả thính** — lighthearted flirting, dropping romantic hints (May 2026)
 - **Lầy** — being humorously ridiculous, silly but funny (May 2026)
 - **Phê** — feeling thrilled, excited, feeling great (May 2026)
+
+#### June 12 Updates
+- **Bày đặt** — provocative slang for acting beyond one's status
+- **Lẹt đẹt** — slow, mediocre state
+- **Bóp view** — strangling video views
+- **Trường người ta** — "other people's school/life" comparison meme
 
 #### NEW May 2026
 - **Sít Rịt** — extremely rare, hitting the jackpot (from English "secret", viral 2025-2026)
@@ -1249,6 +1269,14 @@ Anh muốn em tự cải thiện mỗi đêm bằng Karpathy AutoResearch patter
 > **Auto-improvement note:** *Missing or outdated information:**
 
 > **Auto-improvement note:** The "Cổ điển, tôn trọng" entry appears to be cut off at the end - it says "from" but doesn't complete the citation
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The "Cổ điển, tôn trọng" entry appears twice (once in the middle and seems to be cut off at the end)
+
+> **Auto-improvement note:** *Missing or outdated information:**
+
+> **Auto-improvement note:** The page mentions "Updated 13/06/2026" for voice/pronoun changes, but the current date context seems inconsistent (the slang list mentions May 2026 updates). This is confusing.
 
 === TASK_STATE.md (from memories/) ===
 # Task State — Current Session Progress

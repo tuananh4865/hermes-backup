@@ -243,19 +243,6 @@
     "use_count": 1,
     "view_count": 1
   },
-  "codebase-inspection": {
-    "archived_at": null,
-    "created_at": "2026-06-07T04:40:08.364465+00:00",
-    "created_by": null,
-    "last_patched_at": null,
-    "last_used_at": "2026-06-07T04:41:07.662377+00:00",
-    "last_viewed_at": "2026-06-07T04:41:07.658937+00:00",
-    "patch_count": 0,
-    "pinned": false,
-    "state": "active",
-    "use_count": 1,
-    "view_count": 1
-  },
   "comfyui": {
     "archived_at": null,
     "created_at": "2026-06-07T04:40:08.367334+00:00",
@@ -427,13 +414,13 @@
     "archived_at": null,
     "created_at": "2026-05-03T20:01:09.221397+00:00",
     "last_patched_at": "2026-06-12T20:02:26.040278+00:00",
-    "last_used_at": "2026-06-12T20:01:27.118584+00:00",
-    "last_viewed_at": "2026-06-12T20:01:27.116894+00:00",
+    "last_used_at": "2026-06-13T20:02:14.406775+00:00",
+    "last_viewed_at": "2026-06-13T20:02:14.404796+00:00",
     "patch_count": 4,
     "pinned": false,
     "state": "active",
-    "use_count": 3,
-    "view_count": 3
+    "use_count": 4,
+    "view_count": 4
   },
   "godmode": {
     "archived_at": null,
@@ -542,14 +529,27 @@
   "hermes-autoresearch": {
     "archived_at": null,
     "created_at": "2026-05-03T19:05:17.552916+00:00",
-    "last_patched_at": "2026-06-10T19:07:32.312906+00:00",
-    "last_used_at": "2026-06-13T19:00:44.384059+00:00",
-    "last_viewed_at": "2026-06-10T19:05:38.968254+00:00",
-    "patch_count": 272,
+    "last_patched_at": "2026-06-14T19:06:35.674219+00:00",
+    "last_used_at": "2026-06-14T19:06:07.269300+00:00",
+    "last_viewed_at": "2026-06-14T19:06:07.268149+00:00",
+    "patch_count": 276,
     "pinned": false,
     "state": "active",
-    "use_count": 287,
-    "view_count": 213
+    "use_count": 291,
+    "view_count": 215
+  },
+  "hermes-daily-backup": {
+    "archived_at": null,
+    "created_at": "2026-06-13T20:03:46.746449+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-06-13T20:04:08.923571+00:00",
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
   },
   "hermes-external-skills-setup": {
     "archived_at": null,

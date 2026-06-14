@@ -1,14 +1,14 @@
 ---
 name: ocr-and-documents
-description: "Extract text from PDFs/scans (pymupdf, marker-pdf)."
-version: 2.3.0
+description: PDF and document workflow — extract text from PDFs/scans (pymupdf, marker-pdf), edit PDFs with natural-language instructions (nano-pdf), split/merge/search, and produce clean markdown. Covers the full read-and-modify PDF lifecycle.
+version: 2.4.0
 author: Hermes Agent
 license: MIT
 platforms: [linux, macos, windows]
 metadata:
   hermes:
-    tags: [PDF, Documents, Research, Arxiv, Text-Extraction, OCR]
-    related_skills: [powerpoint]
+    tags: [PDF, Documents, Research, Arxiv, Text-Extraction, OCR, Editing, nano-pdf, pymupdf, marker, NL-edit]
+    related_skills: [powerpoint, nano-pdf]
 ---
 
 # PDF & Document Extraction
@@ -170,3 +170,63 @@ No extra dependencies needed — pymupdf covers split, merge, search, and text e
 - marker-pdf downloads ~2.5GB of models to `~/.cache/huggingface/` on first use
 - For Word docs: `pip install python-docx` (better than OCR — parses actual structure)
 - For PowerPoint: see the `powerpoint` skill (uses python-pptx)
+
+---
+
+## Section: PDF Editing via Natural Language (`nano-pdf`)
+
+The previous sections cover **reading** PDFs. This section covers **editing** them — fixing typos, swapping titles, updating dates, changing names — using natural-language instructions.
+
+### When to Use
+
+- "Fix the typo on page 3 of report.pdf"
+- "Change the title from X to Y"
+- "Update the date in the contract"
+- "Replace this name throughout the document"
+- Any small text edit that doesn't require rebuilding the PDF from source
+
+For **extraction** (reading content out of a PDF), use the pymupdf / marker-pdf sections above. For **rebuilding** a PDF from scratch (e.g. programmatically generating a deck), use a library like ReportLab or WeasyPrint instead.
+
+### Prerequisites
+
+```bash
+# Install with uv (recommended — already available in Hermes)
+uv pip install nano-pdf
+
+# Or with pip
+pip install nano-pdf
+```
+
+nano-pdf uses an LLM under the hood and requires an API key. Check `nano-pdf --help` for the env var name (typically the same one your other LLM tools use).
+
+### Usage
+
+```bash
+nano-pdf edit <file.pdf> <page_number> "<instruction>"
+```
+
+### Examples
+
+```bash
+# Change a title on page 1
+nano-pdf edit deck.pdf 1 "Change the title to 'Q3 Results' and fix the typo in the subtitle"
+
+# Update a date on a specific page
+nano-pdf edit report.pdf 3 "Update the date from January to February 2026"
+
+# Fix content
+nano-pdf edit contract.pdf 2 "Change the client name from 'Acme Corp' to 'Acme Industries'"
+```
+
+### Pitfalls
+
+- **Page numbers may be 0-based or 1-based depending on version** — if the edit hits the wrong page, retry with ±1.
+- **Always verify the output PDF after editing** (use `read_file` to check file size, or open it). nano-pdf uses an LLM, so edits are not deterministic — small wording changes are possible.
+- **Works well for text changes; complex layout modifications may need a different approach.** If the edit is large (paragraphs, tables, images), rebuild the PDF from source.
+- **Edits are in-place by default** — back up the original first if you want to compare.
+
+### Notes
+
+- nano-pdf complements pymupdf / marker-pdf (which read) by adding a write/edit capability to the same PDF workflow
+- For batch edits across many pages, run multiple `nano-pdf edit` calls rather than trying to do everything in one instruction
+- This skill section was formerly a standalone `nano-pdf` skill

@@ -173,6 +173,10 @@
       1781294523435844291,
       4425
     ],
+    "devops/hermes-daily-backup/SKILL.md": [
+      1781381026743198598,
+      6216
+    ],
     "devops/kanban-orchestrator/SKILL.md": [
       1779942642842791161,
       9284
@@ -261,17 +265,13 @@
       1779165382339080680,
       10530
     ],
-    "github/codebase-inspection/SKILL.md": [
-      1778471610457824252,
-      3628
-    ],
     "github/github-issues/SKILL.md": [
-      1780291800817605457,
-      10230
+      1781449895975204138,
+      9315
     ],
     "github/github-operations/SKILL.md": [
-      1780807485357489967,
-      4499
+      1781415228686874221,
+      12042
     ],
     "grill-me/SKILL.md": [
       1779165369822474400,
@@ -554,8 +554,8 @@
       719
     ],
     "hermes-autoresearch/SKILL.md": [
-      1781118431147324390,
-      79143
+      1781463995673488303,
+      81357
     ],
     "hermes-github-backup/SKILL.md": [
       1780689751599215086,
@@ -593,17 +593,13 @@
       1778471609748467128,
       3088
     ],
-    "mcp/mcporter/SKILL.md": [
-      1780228051965288768,
-      3312
-    ],
-    "mcp/native-mcp/SKILL.md": [
-      1780291822563501211,
-      13459
+    "mcp/mcp-integration/SKILL.md": [
+      1781415369349059753,
+      14383
     ],
     "media/gif-search/SKILL.md": [
-      1778471610458547129,
-      2704
+      1781449895975705809,
+      2720
     ],
     "media/heartmula/SKILL.md": [
       1778471610458644213,
@@ -742,8 +738,8 @@
       51158
     ],
     "note-taking/obsidian/SKILL.md": [
-      1778471610459908342,
-      2919
+      1781449895976239146,
+      2935
     ],
     "performance-optimization/SKILL.md": [
       1779165382455029020,
@@ -766,8 +762,8 @@
       3056
     ],
     "productivity/airtable/SKILL.md": [
-      1778471610459990676,
-      11302
+      1781449895976361647,
+      11334
     ],
     "productivity/default-project-hub-pattern/SKILL.md": [
       1781313139000695566,
@@ -785,25 +781,21 @@
       1778471609351348776,
       6726
     ],
-    "productivity/nano-pdf/SKILL.md": [
-      1778471610460557928,
-      1414
-    ],
     "productivity/notion/SKILL.md": [
-      1778944754002990686,
-      14597
+      1781449895976632774,
+      14629
     ],
     "productivity/ocr-and-documents/SKILL.md": [
-      1778471609351965028,
-      5280
+      1781415422626926915,
+      7917
     ],
     "productivity/powerpoint/SKILL.md": [
       1778471610460840512,
       9298
     ],
     "productivity/teams-meeting-pipeline/SKILL.md": [
-      1778403333698556527,
-      6867
+      1781449895976757775,
+      6883
     ],
     "productivity/voice-setup/SKILL.md": [
       1780151804767822519,
@@ -834,8 +826,8 @@
       5111
     ],
     "research/llm-wiki/SKILL.md": [
-      1778471610461247180,
-      20113
+      1781449895976884860,
+      20129
     ],
     "research/polymarket/SKILL.md": [
       1778471609360544266,
@@ -896,6 +888,10 @@
     "software-development/requesting-code-review/SKILL.md": [
       1780667046915314828,
       8465
+    ],
+    "software-development/simplify-code/SKILL.md": [
+      1781449895977006485,
+      8505
     ],
     "software-development/spike/SKILL.md": [
       1780667046915433703,
@@ -1731,6 +1727,19 @@
       }
     },
     {
+      "skill_name": "hermes-daily-backup",
+      "category": "devops",
+      "frontmatter_name": "hermes-daily-backup",
+      "description": "Daily cron-driven backup of an EXISTING git repo to its O...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "kanban-orchestrator",
       "category": "devops",
       "frontmatter_name": "kanban-orchestrator",
@@ -2028,23 +2037,6 @@
       "frontmatter_name": "git-workflow-and-versioning",
       "description": "Structures git workflow practices. Use when making any co...",
       "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "codebase-inspection",
-      "category": "github",
-      "frontmatter_name": "codebase-inspection",
-      "description": "Inspect codebases w/ pygount: LOC, languages, ratios.",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -3127,23 +3119,10 @@
       }
     },
     {
-      "skill_name": "mcporter",
+      "skill_name": "mcp-integration",
       "category": "mcp",
-      "frontmatter_name": "mcporter",
-      "description": "Use the mcporter CLI to list, configure, auth, and call M...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "native-mcp",
-      "category": "mcp",
-      "frontmatter_name": "native-mcp",
-      "description": "MCP client: connect servers, register tools (stdio/HTTP).",
+      "frontmatter_name": "mcp-integration",
+      "description": "Use MCP (Model Context Protocol) servers with Hermes — co...",
       "platforms": [
         "linux",
         "macos",
@@ -3829,23 +3808,6 @@
       }
     },
     {
-      "skill_name": "nano-pdf",
-      "category": "productivity",
-      "frontmatter_name": "nano-pdf",
-      "description": "Edit PDF text/typos/titles via nano-pdf CLI (NL prompts).",
-      "platforms": [
-        "linux",
-        "macos",
-        "windows"
-      ],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
       "skill_name": "notion",
       "category": "productivity",
       "frontmatter_name": "notion",
@@ -3866,7 +3828,7 @@
       "skill_name": "ocr-and-documents",
       "category": "productivity",
       "frontmatter_name": "ocr-and-documents",
-      "description": "Extract text from PDFs/scans (pymupdf, marker-pdf).",
+      "description": "PDF and document workflow — extract text from PDFs/scans ...",
       "platforms": [
         "linux",
         "macos",
@@ -4242,6 +4204,23 @@
       "category": "software-development",
       "frontmatter_name": "requesting-code-review",
       "description": "Pre-commit review: security scan, quality gates, auto-fix.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "simplify-code",
+      "category": "software-development",
+      "frontmatter_name": "simplify-code",
+      "description": "Parallel 3-agent cleanup of recent code changes.",
       "platforms": [
         "linux",
         "macos",

@@ -404,3 +404,42 @@
 - **Style:** Outdoor, middle-aged expert, goatee, pointing finger, modern building background
 - **Why viral:** "Ám ảnh" (haunting) targets specific creator fears + finger-point = direct address
 - **Visual:** "ÁM ẢNH" in bright yellow = pain point emphasis
+
+## 2026-06-14 Updates
+
+### New patterns found:
+
+#### 1. Exclusive Opportunity Hook ("Core Team Recruitment")
+- **Pattern:** "MÌNH ĐANG THÀNH LẬP RA MỘT NHÓM CORE TEAM" — announcement + exclusivity
+- **Style:** Office/whiteboard background, talking head, yellow text with black outline, black t-shirt
+- **Why viral:** "Core team" = professional aspiration, FOMO for those wanting in
+- **Visual:** Whiteboard + clean office = expert/agency owner positioning
+- **TikTok Shop angle:** Recruitment content = building authority + email list potential
+
+#### 2. Numbered List + Fear Hook ("20 Điều Bị Lừa")
+- **Pattern:** Big number list + fear of scams/mistakes → save-worthy format
+- **Style:** Gray pill header box, teal accent on key words, numbered 1-20 grid at bottom
+- **Why viral:** "BỊ LỪA" (scammed) = strong negative urgency, listicle = completion drive
+- **Visual:** Car vlog = authentic "insider" feel
+- **TikTok Shop angle:** Scam education = trust building for new creators
+
+#### 3. Industry-Specific Niche Hook ("Bất Động Sản")
+- **Pattern:** "Xây kênh bất động sản" — industry + platform + action
+- **Style:** Floating video thumbnails as social proof, professional interview, navy blue outfits
+- **Why viral:** Filters exact audience (real estate professionals), visual proof of success
+- **Visual:** Three floating thumbnails = results/proof, dual speaker = expert interview format
+- **TikTok Shop angle:** Real estate = high-ticket, industry-specific creator education
+
+#### 4. POV Product Reveal + Social Proof
+- **Pattern:** POV drink handoff + "chỉ đơn giản là quay lại" = social proof
+- **Style:** POV first-person, vibrant product colors (orange/red), street food aesthetic
+- **Why viral:** POV = immersive authenticity, social proof = trust, product = visual appeal
+- **Visual:** Cup branding visible ("Cô Dần" logo), credit line = creator collaboration
+- **TikTok Shop angle:** POV product content = high conversion, creator collabs = amplified reach
+
+#### 5. Name Drop + Question Loop Hook ("Steve Jobs Việt Nam")
+- **Pattern:** "Steve Jobs Việt Nam" → question → curiosity gap → "Làm thế nào để xây kênh?"
+- **Style:** Extreme close-up talking head, gradient text (orange/yellow/green), white/black base
+- **Why viral:** Big name drop = authority + curiosity, question = open loop
+- **Visual:** Bold gradient text with thick black outline = modern TikTok aesthetic
+- **Gen Z:** Inspirational figure comparison = aspirational hook

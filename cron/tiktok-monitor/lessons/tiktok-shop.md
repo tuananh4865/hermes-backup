@@ -420,6 +420,40 @@
 #### 10. Pain Point Solutions = High-Intent Products
 - **Pattern:** "CÂU HỎI 'ÁM ẢNH'" → creator fears addressed
 - **TikTok Shop angle:** Products that solve specific creator problems
-- **Why viral:** Pain point acknowledgment = emotional connection
+- **Why it works:** Pain point acknowledgment = emotional connection
 - **Shop format:** "This solves exactly that problem"
+
+## 2026-06-14 Updates
+
+### New patterns found:
+
+#### 1. Recruitment Content = Authority Building
+- **Pattern:** "Core team" recruitment → expert/agency positioning
+- **TikTok Shop angle:** Recruitment = authority + email list for future launches
+- **Why viral:** Professional aspiration + exclusivity
+- **Products:** Courses, coaching, community access
+
+#### 2. Scam Education = Trust Building
+- **Pattern:** "20 điều bị lừa" → new creator protection
+- **TikTok Shop angle:** Trust = more likely to buy from trusted creator
+- **Why viral:** Fear-based education = saves for reference
+- **Products:** Creator tools, platform courses, security products
+
+#### 3. Industry-Specific Content = High-Ticket Niches
+- **Pattern:** "Xây kênh bất động sản" → real estate industry
+- **TikTok Shop angle:** High-ticket industry = premium products
+- **Why viral:** Industry-specific filters high-intent audience
+- **Products:** Real estate tools, property tech, industry courses
+
+#### 4. POV Product Collabs = Authentic Reach
+- **Pattern:** POV product + "chỉ đơn giản là quay lại" = social proof
+- **TikTok Shop angle:** Creator collabs = amplified reach + authentic conversion
+- **Why viral:** POV = immersive, social proof = trust
+- **Products:** Food/beverage, lifestyle, local brands
+
+#### 5. Aspiration Content = Follow Conversion
+- **Pattern:** "Steve Jobs Việt Nam" → aspirational figure + question loop
+- **TikTok Shop angle:** Follow for answers = trust building = conversion
+- **Why viral:** Inspiration + curiosity gap
+- **Products:** Courses, personal branding, creator education
 

@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/Users/tuananh4865/.hermes/logs/curator/20260607-044006",
-  "last_run_at": "2026-06-07T04:40:06.526967+00:00",
-  "last_run_duration_seconds": 1159.429149,
-  "last_run_summary": "auto: no changes; llm: I've completed the major consolidation passes. Let me compile the final summary:\n\n**Consolidation summary:**\n\n**Cluster 1 — GitHub** (4 → 1):\n- `github-pr-workflow`, `github-auth`, `github-code-review`, `github-repo-management` → absorbed i…\narchived 16 skill(s):\n  • ascii-video → ascii-art\n  • node-inspect-debugger → systematic-debugging\n  • python-debugpy → systematic-debugging\n  • test-driven-development → systematic-debugging\n  • tiktok-shop-product-research → tiktok-viral-script\n  • apple-notes — pruned (stale)\n  • apple-reminders — pruned (stale)\n  • codex — pruned (stale)\n  • findmy — pruned (stale)\n  • github-auth — pruned (stale)\n  … and 6 more\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin ascii-art",
-  "last_run_summary_shown_at": "2026-05-31T03:41:19.310235+00:00",
+  "last_report_path": "/Users/tuananh4865/.hermes/logs/curator/20260614-052706",
+  "last_run_at": "2026-06-14T05:27:06.324389+00:00",
+  "last_run_duration_seconds": 1045.53885,
+  "last_run_summary": "auto: no changes; llm: ## Curator Pass Summary\n\nI processed 62 candidate skills and identified three real umbrella opportunities, performing 5 consolidations into 3 umbrellas. All work is on disk and verified intact.\n\n### Clusters Processed\n\n**1. `github-operatio…\narchived 2 skill(s):\n  • nano-pdf → ocr-and-documents\n  • codebase-inspection — pruned (stale)\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin ocr-and-documents",
+  "last_run_summary_shown_at": "2026-06-14T05:27:06.324389+00:00",
   "paused": false,
-  "run_count": 5
+  "run_count": 6
 }

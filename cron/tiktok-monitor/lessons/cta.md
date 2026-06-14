@@ -379,3 +379,37 @@
 - **Why it works:** Pain point acknowledgment = emotional connection
 - **TikTok Shop angle:** Products that solve creator "haunting questions"
 
+## 2026-06-14 Updates
+
+### New patterns found:
+
+#### 1. Exclusive Offer + Urgency CTA
+- **Pattern:** "Core team" recruitment → follow to join
+- **Style:** Announcement format, exclusive opportunity, FOMO-driven
+- **Why it works:** Limited opportunity = immediate follow action
+- **TikTok Shop angle:** Recruitment = list building for future product launches
+
+#### 2. Save + Share Dual CTA
+- **Pattern:** "20 điều" listicle → save for reference + share with friends
+- **Style:** Numbered grid at bottom, high-value educational content
+- **Why it works:** Dual CTA = maximum engagement signal to algorithm
+- **TikTok Shop angle:** Educational content = saves = future conversion opportunity
+
+#### 3. Industry Filter CTA
+- **Pattern:** "Xây kênh bất động sản" → specific industry targeting
+- **Style:** Professional interview, niche-specific
+- **Why it works:** Filters high-intent audience for industry content
+- **TikTok Shop angle:** Industry-specific = products for real estate creators
+
+#### 4. Credit/Acknowledgment CTA
+- **Pattern:** "cre: @handle" → creator collaboration acknowledgment
+- **Style:** POV product content with credit line
+- **Why it works:** Creator collaboration = amplified reach + trust
+- **TikTok Shop angle:** Product collabs = community growth + sales
+
+#### 5. Aspiration + Question CTA
+- **Pattern:** "Làm thế nào để xây kênh?" → follow for answer
+- **Style:** Name drop + question loop, gradient text
+- **Why it works:** Open loop = must follow to find answer
+- **TikTok Shop angle:** Follow for education = trust = conversion
+

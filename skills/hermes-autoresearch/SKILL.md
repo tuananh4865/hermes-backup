@@ -181,7 +181,32 @@ relationships: [related-page-1, related-page-2]
 - **Signal:** "MCP server 'exa' is unreachable after 4 consecutive failures"
 - **Fix:** Stop retrying exa, fall back to `mcp_MiniMax_web_search` immediately
 
-## Three Research Focuses
+### arXiv Large Content Extraction (2026-06-15)
+When extracting arXiv HTML pages with `mcp_exa_web_fetch_exa`, large content (350KB+) is saved to temp JSON files at `/var/folders/.../hermes-results/call_function_*.txt`.
+
+**Reading the saved content:**
+```python
+import json
+with open('/var/folders/.../call_function_XXX.txt') as f:
+    data = json.load(f)
+# Key path is data['result'], NOT data['results']
+content = data['result']
+lines = content.split('\n')
+```
+**Parsing techniques from survey references:**
+```python
+# Find arXiv references in lines
+for i, line in enumerate(lines):
+    if 'arXiv' in line and len(line) < 250:
+        print(line.strip()[:200])  # paper citations
+
+# Find section headings
+for i, line in enumerate(lines):
+    if ('##' in line or '###' in line) and len(line) < 150:
+        print(f'[{i}] {line.strip()}')
+```
+
+### Phase 2: Extract Key Content
 
 ### 1. Skills Improvement (PRIMARY — every night)
 Improve skills in `~/.hermes/skills/`
@@ -484,7 +509,7 @@ New upgrade reference: `references/hermes-upgrade-v0.15-may-2026.md`
 
 **TDP pattern recommended for Hermes:** 60% context reduction via DAG sub-goals directly applicable to multi-agent orchestration.
 
-**Total self-improvement techniques documented: 35** (June 11, 2026 — added SR2AM, WebXSkill)
+**Total self-improvement techniques documented: 37** (June 15, 2026 — added Q-Evolve, Human-Agent Interaction)
 
 **2 NEW Techniques (June 11, 2026):**
 | Technique | arXiv | Key Metric | Hermes Applicability |
@@ -1013,6 +1038,29 @@ Read: ~/.hermes/state.db  # SQLite session DB — NOT ~/Library/Application Supp
 
 **⚠️ CRITICAL (2026-06-06):** The path `~/Library/Application Support/hermes-agent/sessions/` DOES NOT EXIST on this system. Session DB is `~/.hermes/state.db`. Always verify session path before querying.
 
+**⚠️ CRITICAL: Daily Session Review Cron Date Filter Bug (2026-06-15)**
+The Daily Session Review cron (`5aea298eb0a8`) has a hardcoded date `2026-05-07` instead of dynamically computing "previous day." This causes it to review the WRONG date and report false "data gap" errors (sessions from that date appear missing because they're not from May 7).
+
+**Symptom:** Cron reports "Found 0 sessions from 2026-05-07" and "CRON DATA GAP — session files missing since 2026-05-28" — but this is a FILTER bug, not an actual data loss.
+
+**Fix needed:** Update the cron prompt to compute previous day dynamically:
+```bash
+# WRONG (hardcoded):
+Filter sessions from ngày hôm qua (2026-05-07).
+
+# CORRECT (dynamic):
+TODAY=$(date +%Y-%m-%d)
+YESTERDAY=$(date -j -v-1d +%Y-%m-%d 2>/dev/null || date --date="yesterday" +%Y-%m-%d)
+# Use $YESTERDAY for date filtering
+```
+
+**Verification pattern after cron fires:**
+```python
+# Check the cron output for the date it actually reviewed:
+# If output contains "2026-05-07" → WRONG date filter, cron reviewed wrong day
+# If output contains "2026-06-14" (yesterday) → CORRECT
+```
+
 **Pattern for all health checks:**
 1. Monitoring says "X is broken" → Don't report broken yet
 2. Check the actual data source directly (db, file, process)
@@ -1444,7 +1492,8 @@ cronjob create --name "Job Name" --prompt "..." --schedule "..." --skills [...] 
 - `references/self-improving-agents-may-2026.md` — **12 NEW arXiv techniques** (May 13): ERL, Polaris, Self-Consolidation, ReflexiCoder, RetroAgent, MARS, AEL, DeepVerifier, ICPO, MemPO, EMPO², MCMA. Self-improvement paradigm shift from heuristic → RL-trained policies.
 - `references/self-improving-agents-may-2026-session.md` — **3 key techniques** (May 23): SICA (17→53% SWE-Bench), ERL (+7.8% Gaia2), DGM-Hyperagents. CVE-2026-7396 security note.
 - `references/self-debugging-techniques-may-2026.md` — **7 self-debugging techniques** (May 17): ReflexiCoder, Polaris, DebugRepair, SelfHeal, ErrorProbe, DeepVerifier, ERL. Paradigm shift: external feedback → self-generated verification, response-level → policy-level changes, single → multi-agent diagnosis teams.
-- `references/self-improving-agents-june-2026.md` — **6 NEW techniques (June 3)**: SE-Agent, Focus/Active Context, Memory Survey, ETO, Multi-Agent Evolve, Context Curation RL. **2 MORE (June 11)**: SR2AM (2605.22138, 25-95% fewer tokens), WebXSkill (2604.13318, 3-stage skill extraction). 35 total techniques documented.
+- `references/self-improving-agents-june-2026.md` — **6 NEW techniques (June 3)**: SE-Agent, Focus/Active Context, Memory Survey, ETO, Multi-Agent Evolve, Context Curation RL. **2 MORE (June 11)**: SR2AM (2605.22138, 25-95% fewer tokens), WebXSkill (2604.13318, 3-stage skill extraction). 35 total techniques.
+- `references/self-evolving-agents-june-2026.md` — **Self-evolving agents June 2026 (June 15)**: Q-Evolve (2606.07367), Human-Agent Interaction (2606.06114), comprehensive survey 2507.21046, 3x3 evolution matrix. 37+ total techniques.
 - `references/self-debugging-techniques-june-2026.md` — **3 NEW self-debugging techniques (June 8)**: Debug2Fix (2602.18571, PDB/JDB debugger integration, HIGH applicability), PyCapsule (2502.02928v2, dual-agent runtime tracing), Self-Improving Coding Agent (2504.15228, autonomous code editing). Total 33+ techniques documented.
 - `references/memory-optimization-agents-may-2026.md` — 8 NEW arXiv memory techniques (May 10)
 - `references/memento-skills-may-2026.md` — **Tool Creation: Memento-Skills** (May 26): frozen LLM + editable skill library, 80% task success (+78%), arXiv:2603.18743

@@ -447,3 +447,42 @@
 - **Why viral:** Emotional validation creates connection
 - **Story arc:** Empathy → understanding → resolution
 
+## 2026-06-14 Updates
+
+### New patterns found:
+
+#### 1. Announcement + Exclusive Opportunity Structure
+- **Pattern:** "Core team" recruitment announcement → exclusivity + opportunity
+- **Structure:** Hook (announcement) → Value proposition → CTA (follow to join)
+- **Style:** Office whiteboard, talking head, yellow text overlay
+- **Why viral:** FOMO + professional aspiration
+- **Story arc:** Opportunity → exclusivity → call to action
+
+#### 2. Numbered List + Fear Education Structure
+- **Pattern:** "20 điều bị lừa" → big number + fear of mistakes
+- **Structure:** Hook (fear) → List delivery (1-20) → Save CTA
+- **Style:** Car vlog, teal accent text, gray pill header, numbered grid
+- **Why viral:** Scam education + listicle completeness drive
+- **Story arc:** Fear → education → resolution
+
+#### 3. Social Proof + Niche Industry Structure
+- **Pattern:** "Xây kênh bất động sản" → industry-specific + floating thumbnails
+- **Structure:** Niche targeting → visual social proof → expert interview
+- **Style:** Floating video thumbnails, professional interview, navy blue outfits
+- **Why viral:** Filters exact audience, visual proof
+- **Story arc:** Niche → proof → education
+
+#### 4. POV Product + Social Proof Structure
+- **Pattern:** POV drink handoff + "chỉ đơn giản là quay lại"
+- **Structure:** Immersive POV → product → social proof claim
+- **Style:** First-person, vibrant colors, street food aesthetic, credit line
+- **Why viral:** Immersive + authentic + social proof
+- **Story arc:** Immersion → product → proof
+
+#### 5. Name Drop + Question Arc Structure
+- **Pattern:** "Steve Jobs Việt Nam" → question loop → channel building answer
+- **Structure:** Name drop → question → curiosity → answer (implied)
+- **Style:** Extreme close-up, gradient text, talking head
+- **Why viral:** Authority + curiosity gap + aspiration
+- **Story arc:** Inspiration → question → curiosity → resolution
+
