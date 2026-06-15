@@ -120,4 +120,5 @@ git diff --shortstat HEAD~1 HEAD   # "N files changed, I insertions(+), D deleti
 - `git-workflow-and-versioning` — General commit/push/branch discipline
 
 ## Support Files
-- `references/report-example.md` — Real output from a successful daily backup run (file counts, push SHA format, common error messages and how they were handled).
+- `references/report-example.md` — Real output from a 2026-06-14 daily backup run (file counts, push SHA format, common error messages and how they were handled).
+- `references/report-example-2026-06-15.md` — Real output from a 2026-06-15 run showing large-diff day (state-snapshot rotation, curator backup rotation) — useful as a baseline for "lượng changes lớn ≠ corruption".

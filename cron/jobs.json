@@ -18,7 +18,7 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": 365,
-        "completed": 47
+        "completed": 48
       },
       "enabled": true,
       "state": "scheduled",
@@ -26,10 +26,10 @@
       "paused_reason": null,
       "created_at": "2026-04-27T21:38:04.126445+07:00",
       "next_run_at": "2026-06-16T03:00:00+07:00",
-      "last_run_at": "2026-06-14T03:02:02.412798+07:00",
+      "last_run_at": "2026-06-15T03:01:12.067974+07:00",
       "last_status": "ok",
       "last_error": null,
-      "last_delivery_error": "delivery error: Telegram send failed: Timed out",
+      "last_delivery_error": null,
       "deliver": "telegram:1132914873:3764041476",
       "origin": null
     },
@@ -104,7 +104,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-04T13:51:06.979177+07:00",
-      "next_run_at": "2026-06-15T07:00:00+07:00",
+      "next_run_at": "2026-06-16T07:00:00+07:00",
       "last_run_at": "2026-06-14T07:02:30.870604+07:00",
       "last_status": "ok",
       "last_error": null,
@@ -181,15 +181,15 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 28
+        "completed": 29
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-18T01:09:51.272803+07:00",
-      "next_run_at": "2026-06-15T04:00:00+07:00",
-      "last_run_at": "2026-06-14T04:00:00.916777+07:00",
+      "next_run_at": "2026-06-16T04:00:00+07:00",
+      "last_run_at": "2026-06-15T04:00:43.292773+07:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -290,5 +290,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-15T03:00:35.063646+07:00"
+  "updated_at": "2026-06-15T07:00:07.445869+07:00"
 }
