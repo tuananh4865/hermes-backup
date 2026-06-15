@@ -30,6 +30,16 @@ Load this skill whenever the user asks to:
 
 Also apply this skill to **your own** output when writing user-facing prose — release notes, PR descriptions, documentation, long-form explanations, summaries. Hermes's baseline voice already strips most of these, but a focused pass catches what slips through.
 
+### Voice & pronoun calibration (2026-06-13 user preference)
+
+When user explicitly states a voice preference (e.g. "remove 'anh' + 'mấy con vợ' pronouns"), treat that as a **persistent style rule**:
+- Apply to MỌI output for that user across sessions (already captured in `~/.hermes/memories/USER.md`)
+- Check `USER.md` at session start for current voice rules
+- Do NOT re-ask "what pronouns?" — assume the memory is authoritative unless user signals otherwise
+- Only switch voice if user explicitly requests a change in a new session
+
+**Default fallback for Vietnamese user-facing content** (when no memory rule exists): trung tính, chuyên nghiệp. Dùng "mình" / "bạn" hoặc neutral. Tránh xưng hô thân mật trừ khi user yêu cầu.
+
 ## How to use it in Hermes
 
 The text usually arrives one of three ways:

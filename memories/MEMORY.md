@@ -6,8 +6,10 @@ Vietnamese casual, concise. TikTok voice: TRUNG TÍNH, chuyên nghiệp (loại 
 §
 Modified files: wiki/concepts/tiktok-channel-building-strategy-hi-imdung-style.md, /Volumes/Storage-1/Hermes/wiki/concepts/tiktok-channel-building-strategy-hi-imdung-style.md, /Volumes/Storage-1/Hermes/wiki/concepts/tiktok-content-guideline-hi-imdung-style.md, /Volumes/Storage-1/Hermes/wiki/log.md, /Volumes/Storage-1/Hermes/wiki/index.md
 §
-Default project = Content Creator (13/06, hệ thống số mới). Path: /Volumes/Storage-1/Workspace/Claude/Projects/Content Creator/. Hub: hub.md. 19 files + 3 folders. Hệ thống SỐ: 00/01/02/03 + bo-cong-thuc-viral. Mỗi session: load hub.md + 00-ban-do-tong.md + Trend_Updates/. Skills patched 13/06: default-project-hub-pattern (pitfalls 7+8: refresh-existing-project + sibling memory write detection), youtube-transcript-extractor (pitfalls 6+7: auto-sub-before-Whisper + TikTok no auto-sub).
+QUALITY BAR (13/06 BẮT BUỘC MỌI RESPONSE): (1) KHÔNG trả lời chung chung. (2) KHÔNG tự đoán. (3) KHÔNG bịa đặt. (4) Mọi thông tin phải có research rõ ràng: URL nguồn chính thức + ngày truy cập + đối chiếu ≥2 nguồn độc lập. (5) Không chắc → PHẢI đặt câu hỏi khai thác trước khi trả lời. Sai lầm cũ: cung cấp info thiếu sâu, chung chung, không nguồn — sửa triệt để.
 §
-Task 'Transcript cho anh video này' — 4 turns
+5 CHẶNG HÀNH TRÌNH (Bản đồ tổng file 00): 0 Chuẩn bị (~90% xong, còn đăng ký Shopee Affiliate + Accesstrade + chân dung khán giả + vào 1 cộng đồng) → 1 Khởi động (30 video đầu, 4-5 tuần, mục tiêu 1.000 follower mở giỏ TikTok) → 2 Tìm Creator-Market Fit (tuần 5-8, 4-6k follower + đơn affiliate đầu tiên) → 3 Tăng tốc (tuần 9-12, 10k follower + 50tr GMV/tháng + 5k sub YT) → 4 Bền vững (tháng 4-12, đa nguồn thu + cộng đồng riêng).
 §
-IMPORTANT (2026-06-13): Anh muốn LOẠI BỎ HOÀN TOÀN voice "anh" + "mấy con vợ" khỏi TẤT CẢ output. Dùng giọng trung tính, chuyên nghiệp, không xưng hô thân mật. Cập nhật: hub.md (project), content-creator-project.md (wiki), guideline TikTok. Từ giờ không dùng "mấy con vợ", không tự xưng "em" gọi "anh" — dùng giọng neutral hoặc tự xưng "mình" gọi "bạn".
+Task 'Mục tiêu của anh là trở thành một content creator uy tín trên mạng xã hội tiktok và YouTube ở ngách công nghệ và phụ kiệ' — 2 turns
+§
+Task 'ngày thứ 2 đầu tuần á! đọc hết file rồi xem nên làm gì phù hơp' — 1 turns

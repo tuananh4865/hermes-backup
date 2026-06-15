@@ -443,3 +443,28 @@
 - **Why viral:** Big name drop = authority + curiosity, question = open loop
 - **Visual:** Bold gradient text with thick black outline = modern TikTok aesthetic
 - **Gen Z:** Inspirational figure comparison = aspirational hook
+
+## [2026-06-15] Updates
+
+### New patterns found:
+- **"DỞ CŨNG ĐƯỢC" Anxiety-Reduction Hook**
+  - Hook type: Encouragement/lowering inhibitions
+  - Text: Red banner "DỞ CŨNG ĐƯỢC" (It's okay even if it's bad)
+  - Strategy: Removes fear of imperfection → encourages action
+  - Style: Yellow/Green/Red primary color boxes, casual selfie camera
+  - Gen Z slang: None, but message resonates with perfectionism anxiety
+  - Why viral: Addresses viewer's internal barrier to try
+
+- **Monetization Hook with Visual Symbol**
+  - Hook type: Stakes/money
+  - Text: "lượt xem trên TikTok" (views on TikTok)
+  - Visual: Floating $ money bag emoji + hands gesture
+  - Strategy: Direct monetization promise, book shelf background = authority
+  - Why viral: Money hook = high stakes, professional setting = credibility
+  - CTA: Follow for monetization tips
+
+- **Emotion-Centric Encouragement Pattern**
+  - Hook type: Emotional support + bold statement
+  - Pattern: "DỞ CŨNG ĐƯỢC" = permission to fail
+  - Storytelling: Encouraging without gatekeeping
+  - TikTok Shop angle: Courses on creativity/self-expression

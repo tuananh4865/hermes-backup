@@ -194,6 +194,27 @@ Trải nghiệm timeline — kể chuyện, KHÔNG liệt kê specs
 - Nếu user explicitly request voice cũ cho content marketing riêng → dùng voice cũ cho script đó
 - Nếu không rõ → MẶC ĐỊNH voice trung tính, chuyên nghiệp
 
+### ⚠️ CRITICAL UPDATE (2026-06-13) — QUALITY BAR
+
+**HARD RULE — applies to EVERY response, not just scripts:**
+
+1. **KHÔNG trả lời chung chung.** Every claim must be specific, cited, and actionable.
+2. **KHÔNG tự đoán.** If user asks "gợi ý kịch bản cho hôm nay ngày thứ 2" and you don't know which timeline → ASK with `clarify` (3-4 concrete options). Don't count days yourself and assume.
+3. **KHÔNG bịa đặt thông tin.** No invented numbers, no fake stats, no made-up guideline rules. If you cite a rule, it must trace to a file you read.
+4. **Research phải có bằng chứng** (for external research beyond the project's own files): URL nguồn chính thức + ngày truy cập + đối chiếu ≥2 nguồn độc lập.
+5. **Khi không chắc → PHẢI đặt câu hỏi khai thác trước khi trả lời.** Max 1-3 sharp questions, not 6 generic ones.
+
+**Embed in the response pattern for "gợi ý kịch bản" / "đề xuất nội dung" type tasks:**
+```
+1. Identify ambiguity in the request (which timeline? which day? which goal?)
+2. If ambiguity is HIGH → use `clarify` first with 3-4 sharp options
+3. If ambiguity is LOW (e.g. user named the file directly) → read the file, then recommend
+4. Recommendation MUST cite: file path + section + the verifiable criteria used
+5. End with 3-5 concrete next-step options (never "anh muốn gì?")
+```
+
+**Real failure (2026-06-13) to avoid:** User said "vào project content creator, đọc file, gợi ý kịch bản cho hôm nay là ngày thứ 2". I assumed "ngày thứ 2" meant day 2 of the Pocket 3 timeline without asking. Project has 3 parallel timelines (Series 0 đồng / Lớp vỡ lòng / Pocket 3 + phụ kiện) — assumption was wrong. User had to ask a second time. Fix: ALWAYS use `clarify` for ambiguous time/position references in multi-timeline projects.
+
 ### Script Style (vẫn giữ — KHÔNG liên quan voice)
 - Hook: Cầu cứu hốt hoảng + tình huống cụ thể HOẶC drama tension
 - Body: Kể chuyện, storytelling — KHÔNG liệt kê specs
@@ -429,6 +450,7 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - Trends: https://35express.org (search "trend")
 - Slang: https://trykaiwa.com/blog/vietnamese-gen-z-slang-phrases-2026
 - `references/tiktok-algorithm-may-2026.md` — comprehensive CHR, fee math, commerce signals, completion rate, demographic split
+- **`references/quality-bar-and-clarify-protocol.md` — HARD RULE 13/06: KHÔNG chung chung / KHông tự đoán / KHÔNG bịa / research có bằng chứng / đặt câu hỏi khai thác khi cần. Real failures + lessons. ✅ NEW this session**
 - `references/tiktok-shop-product-links-may-2026.md` — Real TikTok Shop product links by trending keyword (May 14-15, 2026). Affiliate-ready PDP links for cooling products, beauty, lifestyle. Built from actual Shopee/TikTok search data.
 - `references/tiktok-trending-products-may-13-2026.md` — Body Mist LACOON, Cooling Neck Ring, Mini Cooler 2nd push, #StandBanhMi, "thơm vãi" sensory intensifier (May 13 session findings)
 - `references/may-14-2026-findings.md` — LỌ vs LỎ critical distinction, Summer Cooling margins, FindNiche top products, Gen Z slang update (May 14 orchestrator session)
@@ -444,6 +466,7 @@ From academic research (Tra Vinh University, 394 respondents, SEM analysis):
 - `references/youtube-tiktok-adaptation.md` — YouTube → TikTok adaptation lessons from Evan Carmichael's "YouTube Is Not Too Crowded" (Pattern Disrupt Hook, Audience of One, 350 Videos Persistence, Belief Framework, Signature CTA) ✅ NEW this session
 - `references/tiktok-lesson-learn-system.md` — Lesson-learn accumulation system: 4 topic files (hooks, cta, storytelling, tiktok-shop), append-only update protocol, source channels, how-to-use guide (2026-06-07) ✅ NEW
 - `references/video-to-telegram-delivery.md` — Universal video → Telegram pipeline (TikTok + YouTube + others): probe streams, HEVC→H.264 conversion, 720p compress, silent video handling, YouTube Shorts short-file pattern (2026-06-12, renamed+extended) ✅
+- `references/tiktok-monitor-findings-june-15-2026.md` — June 15 nightly monitor: 3 new videos (goccontent × 2, tam_thefox × 1), "DỞ CŨNG ĐƯỢC" anxiety-reduction hook, monetization $ hook, permission-based CTA, storytelling structures, TikTok Shop recommendations ✅ NEW
 - **Ecom_Linus AI UGC Model:** See `references/ecom-linus-affiliate-model.md` — Glitchy setup, Vietnam affiliate networks, AI tools stack, angle research methodology
 - Gen Z Research: Tra Vinh University Journal of Science — "Factors Affecting Gen Z Online Purchase Intention on TikTok Shop"
 - Product research: https://findniche.com/tiktok/trending-products-vn

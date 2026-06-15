@@ -457,3 +457,24 @@
 - **Why viral:** Inspiration + curiosity gap
 - **Products:** Courses, personal branding, creator education
 
+## [2026-06-15] Updates
+
+### New patterns found:
+- **Creativity/Self-Expression Products**
+  - Pattern: "DỞ CŨNG ĐƯỢC" → storytelling, creativity courses
+  - TikTok Shop angle: Creative courses, confidence building, self-expression
+  - Why viral: Addresses universal fear of imperfection
+  - Products: Storytelling courses, creativity workshops, confidence coaching
+
+- **Creator Economy Tools**
+  - Pattern: $ + views = monetization education
+  - TikTok Shop angle: Creator tools, analytics, monetization courses
+  - Why viral: Direct money promise for creators
+  - Products: Analytics tools, monetization courses, creator education
+
+- **Permission-Based Marketing**
+  - Pattern: "It's okay to be bad" = reduces purchase anxiety
+  - TikTok Shop angle: Beginner-friendly products, low barrier entry
+  - Why viral: Removes fear of failure
+  - Products: Starter kits, beginner courses, trial offers
+

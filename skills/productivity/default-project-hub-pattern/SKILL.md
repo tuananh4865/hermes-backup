@@ -175,6 +175,33 @@ memory(action="add", target="memory",
 
 ## Pitfalls
 
+### 0. (NEW 2026-06-13) Hard Rule: QUALITY BAR — research must have evidence, never guess
+
+When working on Content Creator (or any project with a "đọc file → đề xuất" workflow), user has set a **HARD RULE** that overrides the default "just be helpful" agent behavior:
+
+1. **KHÔNG trả lời chung chung.** Every claim must be specific.
+2. **KHÔNG tự đoán.** If the user's request has ambiguity (which timeline? which day? which file?), ASK before recommending — use `clarify` with 3-4 concrete options.
+3. **KHÔNG bịa đặt thông tin.** If you cite a number, a stat, a guideline rule, or a date, it must trace back to a file you actually read.
+4. **Mọi research phải có bằng chứng:** URL nguồn chính thức + ngày truy cập + đối chiếu ≥2 nguồn độc lập (for external research beyond the project's own files).
+5. **Không chắc → PHẢI đặt câu hỏi khai thác trước khi trả lời.** Max 1-3 focused questions, not 6 generic ones.
+
+**Anti-pattern (DO NOT REPEAT — session 2026-06-13):**
+- User: "vào project content creator, đọc file, gợi ý kịch bản cho hôm nay là ngày thứ 2"
+- BAD: I read 3 timeline files, picked "ngày thứ 2" by counting from 13/06/2026 (assumed), and built a recommendation WITHOUT asking which timeline (Series 0 đồng vs Pocket 3 vs Lớp vỡ lòng).
+- GOOD: I used `clarify` with 4 timeline options. User picked "tự chọn tối ưu nhất" → then I read the files, analyzed by 4 verifiable criteria (setup, momentum, viral potential, CTA strength), and recommended E2 with the file path + section + reasoning all cited.
+
+**Embed in hub.md** (under "Quy tắc BẮT BUỘC") for any project where this rule applies:
+```markdown
+## 📐 Quy tắc BẮT BUỘC
+- [Quality Bar] KHÔNG trả lời chung chung / KHÔNG tự đoán / KHÔNG bịa đặt
+- [Quality Bar] Mọi research phải có bằng chứng (URL + ngày truy cập + ≥2 nguồn)
+- [Quality Bar] Không chắc → đặt câu hỏi khai thác trước khi hành động
+```
+
+**Embed in memory** (as QUALITY BAR entry, marked BẮT BUỘC MỌI RESPONSE) so it survives across sessions and overrides any "be helpful, just guess" default.
+
+**Lesson (the user's frustration, captured 2026-06-13):** "Em không trả lời chung chung hoặc tự đoán hoặc bịa đặt thông tin mà mọi thông tin em cung cấp cho anh cần phải qua kiểm tra kĩ lường cũng như có bằng chứng research rõ ràng!" — this was a real correction after I made a bad assumption about "ngày thứ 2" in the Content Creator project. The fix is NOT to ask 6 questions (user finds that annoying too), it's to ask 1-3 sharp questions when ambiguity is high.
+
 ### 1. Treating it as a one-off
 If you only create hub.md without the wiki entity + memory entry, the next session won't know the project exists. Always wire all three tiers.
 

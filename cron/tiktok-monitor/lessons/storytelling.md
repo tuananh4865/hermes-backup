@@ -486,3 +486,20 @@
 - **Why viral:** Authority + curiosity gap + aspiration
 - **Story arc:** Inspiration → question → curiosity → resolution
 
+## [2026-06-15] Updates
+
+### New patterns found:
+- **Permission to Fail Structure**
+  - Pattern: "DỞ CŨNG ĐƯỢC" → encourages action despite fear
+  - Structure: Hook (permission) → Topic intro → Implicit CTA
+  - Style: Casual selfie, bright color boxes, friendly expert
+  - Why viral: Universal anxiety about imperfection
+  - Story arc: Permission → topic → action
+
+- **Monetization Education Structure**
+  - Pattern: $ → views → TikTok earnings
+  - Structure: Visual hook → topic → implicit follow CTA
+  - Style: Professional setting, money symbol, gradient banner
+  - Why viral: Direct financial benefit promise
+  - Story arc: Attention → value → follow
+

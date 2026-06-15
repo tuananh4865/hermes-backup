@@ -413,3 +413,21 @@
 - **Why it works:** Open loop = must follow to find answer
 - **TikTok Shop angle:** Follow for education = trust = conversion
 
+## [2026-06-15] Updates
+
+### New patterns found:
+- **Empowerment CTA**
+  - Pattern: "KỂ ĐI" (Just tell it) = direct action + encouragement
+  - Strategy: Removes overthinking barrier, immediate action
+  - Why it works: Encourages without pressure
+
+- **Monetization-Focused CTA**
+  - Pattern: $ emoji + "lượt xem" = views = money
+  - Strategy: Monetization promise drives follow
+  - Why it works: Direct value proposition for creators
+
+- **Permission-Based CTA**
+  - Pattern: "DỞ CŨNG ĐƯỢC" = permission to be bad at something
+  - Strategy: Removes fear → enables action
+  - TikTok Shop angle: Creative courses, self-expression products
+

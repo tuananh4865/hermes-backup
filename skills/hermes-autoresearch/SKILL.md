@@ -509,7 +509,14 @@ New upgrade reference: `references/hermes-upgrade-v0.15-may-2026.md`
 
 **TDP pattern recommended for Hermes:** 60% context reduction via DAG sub-goals directly applicable to multi-agent orchestration.
 
-**Total self-improvement techniques documented: 37** (June 15, 2026 — added Q-Evolve, Human-Agent Interaction)
+**Total self-improvement techniques documented: 40+** (June 16, 2026 — added Self-Correction Illusion, CoSE, Self-Organizing Agents)
+
+**3 NEW Techniques (June 16, 2026):**
+| Technique | arXiv | Key Metric | Hermes Applicability |
+|-----------|-------|------------|---------------------|
+| Self-Correction Illusion | 2606.05976 | 23-93pp boost via role relabeling | **VERY HIGH** — self-correction |
+| CoSE (Collaborative Self-Evolution) | 2605.29790 | Multi-agent collaborative improvement | HIGH |
+| Self-Organizing Agents | 2603.28990 | 25K tasks: self-organize > designed | HIGH |
 
 **2 NEW Techniques (June 11, 2026):**
 | Technique | arXiv | Key Metric | Hermes Applicability |
@@ -1014,6 +1021,13 @@ Karpathy-style autonomy requires TREMENDOUS specificity:
 
 **KEY INSIGHT**: "Workers configured" ≠ "Workers running". SOUL.md files exist but cron prompts still run `hermes-autoresearch`. The orchestrator must fix the cron prompts.
 
+**Key Insight — Self-Correction Illusion (June 16, 2026):**
+LLMs CAN self-correct, but fail due to chat-template role-label artifact — NOT cognitive deficit. Wrapping self-generated errors in external role labels (user message, tool response) improves correction rates by **23-93 percentage points**. This means Hermes's self-correction capability can be dramatically boosted by feeding errors back as external reviews rather than expecting the model to self-correct its own output.
+
+See: `references/self-improvement-june-2026-new.md`
+
+---
+
 ## ⚠️ CRITICAL PITFALL: False Alarms from Stale Monitoring Output
 
 **SYMPTOM (June 1, 2026):** Autoresearch claimed "session recording broken since May 28 (4 days)". This was interpreted as a system failure.
@@ -1493,6 +1507,7 @@ cronjob create --name "Job Name" --prompt "..." --schedule "..." --skills [...] 
 - `references/self-improving-agents-may-2026-session.md` — **3 key techniques** (May 23): SICA (17→53% SWE-Bench), ERL (+7.8% Gaia2), DGM-Hyperagents. CVE-2026-7396 security note.
 - `references/self-debugging-techniques-may-2026.md` — **7 self-debugging techniques** (May 17): ReflexiCoder, Polaris, DebugRepair, SelfHeal, ErrorProbe, DeepVerifier, ERL. Paradigm shift: external feedback → self-generated verification, response-level → policy-level changes, single → multi-agent diagnosis teams.
 - `references/self-improving-agents-june-2026.md` — **6 NEW techniques (June 3)**: SE-Agent, Focus/Active Context, Memory Survey, ETO, Multi-Agent Evolve, Context Curation RL. **2 MORE (June 11)**: SR2AM (2605.22138, 25-95% fewer tokens), WebXSkill (2604.13318, 3-stage skill extraction). 35 total techniques.
+- `references/self-improvement-june-2026-new.md` — **Self-Correction Illusion (June 16)**: 23-93pp self-correction boost via role relabeling (2606.05976), CoSE (2605.29790), Self-Organizing Agents (2603.28990). 40+ techniques.
 - `references/self-evolving-agents-june-2026.md` — **Self-evolving agents June 2026 (June 15)**: Q-Evolve (2606.07367), Human-Agent Interaction (2606.06114), comprehensive survey 2507.21046, 3x3 evolution matrix. 37+ total techniques.
 - `references/self-debugging-techniques-june-2026.md` — **3 NEW self-debugging techniques (June 8)**: Debug2Fix (2602.18571, PDB/JDB debugger integration, HIGH applicability), PyCapsule (2502.02928v2, dual-agent runtime tracing), Self-Improving Coding Agent (2504.15228, autonomous code editing). Total 33+ techniques documented.
 - `references/memory-optimization-agents-may-2026.md` — 8 NEW arXiv memory techniques (May 10)

@@ -30,6 +30,34 @@ Confidence Score Check:
 
 **Trigger:** Trước khi deliver result — checklist.
 
+## Research Quality Bar (2026-06-13 — HARD RULE)
+
+User explicit yêu cầu: **mọi thông tin em cung cấp phải qua kiểm tra kỹ lưỡng + có bằng chứng research rõ ràng**. Áp dụng MỌI response có data/research, không riêng API/model questions.
+
+### Research checklist (áp dụng mỗi khi trả lời có data, số liệu, claim, recommendation)
+
+```
+□ Có URL nguồn chính thức không? (VD: docs provider, gov site, official blog)
+□ Có ghi ngày truy cập nguồn không? (chính sách thay đổi liên tục)
+□ Có đối chiếu ≥2 nguồn độc lập không? (1 chính thức + 1 bên thứ ba)
+□ Nếu không chắc → NÓI THẲNG "em chưa chắc, cần research thêm" + đặt câu hỏi khai thác
+```
+
+### Pitfall — "General Knowledge Trap"
+
+**Sai lầm cũ xảy ra trong session 13/06:** Em tự tin trả lời dựa trên general knowledge nhưng KHÔNG research lại nguồn chính thức, dẫn đến info chung chung, không có evidence.
+
+**Cách tránh:** Khi answer về:
+- Hoa hồng affiliate TikTok Shop → check TikTok Ads Help center
+- Luật quảng cáo 2026 → check Cổng TTĐT Chính phủ + báo VN news gần đây
+- Spec API/sản phẩm → check official docs + community forum
+- Trend/algorithm → check TikTok Business Blog / YouTube Creators blog gần đây
+
+### Câu trả lời MẪU khi không chắc
+
+❌ SAI: "TikTok Shop hoa hồng thiết bị quay phim khoảng 5-10%."
+✅ ĐÚNG: "Em chưa có số chính thức cho ngách thiết bị quay phim trên TikTok Shop VN 2026. Để em check TikTok Ads Help Center (URL) + đối chiếu 1 nguồn bên thứ ba (Accesstrade/draerp.vn) rồi báo lại với URL + ngày truy cập. Trong lúc đó, anh muốn em tập trung vào SP nào trước để giới hạn research?"
+
 ## API/Model Compatibility — ALWAYS Web-Search First
 
 **Never answer without web search:**
