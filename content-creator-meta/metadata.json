@@ -1,0 +1,41 @@
+{
+  "synced_at": "2026-06-17T03:00:00+07:00",
+  "root": "/Users/tuananh4865/Workspace/Claude/Projects/Content Creator/",
+  "note": "Metadata only — no file content. Use this for structure tracking.",
+  "structure": [
+    {
+      "path": "Research/",
+      "type": "directory",
+      "size_bytes": 96,
+      "children": [
+        {
+          "path": "Research/2026-06-17/",
+          "type": "directory",
+          "size_bytes": 96,
+          "children": [
+            {
+              "path": "Research/2026-06-17/daily-session-review.md",
+              "type": "file",
+              "size_bytes": 4584,
+              "modified": "2026-06-17T00:01:00+07:00",
+              "purpose": "Session review metadata (research summaries, decisions, lessons)",
+              "content_class": "metadata"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "directories": 3,
+    "files": 1,
+    "total_size_bytes": 8192,
+    "content_files": 0,
+    "metadata_files": 1
+  },
+  "anti_pattern_compliance": {
+    "no_full_content": true,
+    "no_secrets": true,
+    "structure_only": true
+  }
+}

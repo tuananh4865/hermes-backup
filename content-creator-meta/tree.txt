@@ -1,0 +1,4 @@
+Content Creator/
+└── Research/
+    └── 2026-06-17/
+        └── daily-session-review.md  (4584 bytes, metadata)
