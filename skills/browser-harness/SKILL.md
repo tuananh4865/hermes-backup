@@ -14,10 +14,58 @@ relationships: [browser-use, browser]
 
 Direct browser control via CDP. For task-specific edits, use `~/Developer/browser-harness/agent-workspace/agent_helpers.py` and `~/Developer/browser-harness/agent-workspace/domain-skills/`. For setup, install, or connection problems, read `browser-install`.
 
+## ⛔ macOS COOKIE EXTRACTION — READ FIRST
+
+**On macOS, Chrome encrypts auth cookies via the System Keychain. browser-harness CANNOT extract them** — not via CDP `Network.getCookies`, not via the headless daemon, not via `pkill Chrome + relaunch with --remote-debugging-port`. You will only get GUEST cookies (`gt`, `guest_id`, `personalization_id`). NEVER `auth_token` / `ct0` / `twid`.
+
+**This is a hard macOS security boundary, not a browser-harness bug. No tool can bypass it.**
+
+**If the task is "extract cookies so I can use them for auth"** — the answer is: don't. Use the platform's official API (e.g. `xurl` for X/Twitter — see `~/.hermes/skills/social-media/xurl/`). Pushing harder on browser extraction wastes the user's session and time.
+
+**If the task is just CDP-based UI driving, screenshots, or `document.cookie` for session diagnostics** — this skill is fine. See the working `cdp()` patterns below and `references/cdp-cookie-extraction.md` for the verified Python websocket-client template.
+
+This pitfall cost a real session in 2026-06-01 (X automation request). Read it before promising the user "I'll extract your Chrome cookies."
+
 ## Quick test
 
 ```bash
 browser-harness -c 'print(page_info())'
+```
+
+**⚠️ Chrome ≥ 2026.x: `--remote-allow-origins=*` required for WebSocket clients**
+
+If you launch Chrome with `--remote-debugging-port=9222` and try to connect via WebSocket (Python `websocket-client`, Node `ws`, etc.), you will get:
+
+```
+Handshake status 403 Forbidden
+'Re jected an incoming WebSocket connection from the http://localhost:9222 origin.
+ Use the command line flag --remote-allow-origins=http://localhost:9222 to allow
+ connections from this origin or --remote-allow-origins=* to allow all origins.'
+```
+
+**Fix:** launch Chrome with both flags:
+
+```bash
+open -a "Google Chrome" --args \
+  --remote-debugging-port=9222 \
+  --remote-allow-origins=* \
+  --user-data-dir="$HOME/Library/Application Support/Google/Chrome/Default"
+```
+
+This is a 2026 Chrome security change — not a bug in browser-harness or your client. `browser-harness --doctor` may still report "ok" because it uses HTTP /json, not WebSocket.
+
+**Verified pattern (2026-06-16):** Use `http://localhost:9222/json` to get tab list, then connect via WebSocket with `suppress_origin=True`:
+
+```python
+import urllib.request, websocket, json
+
+tabs = json.loads(urllib.request.urlopen("http://localhost:9222/json").read())
+x_tab = next(t for t in tabs if "x.com" in t.get("url", ""))
+ws = websocket.create_connection(x_tab["webSocketDebuggerUrl"], suppress_origin=True)
+ws.send(json.dumps({"id": 1, "method": "Network.getCookies",
+                     "params": {"urls": ["https://x.com"]}}))
+print(json.loads(ws.recv()))
+ws.close()
 ```
 
 ## Usage pattern
@@ -117,16 +165,19 @@ all_videos = js("""
 
 Chrome on macOS stores cookies encrypted via the system Keychain. browser-harness CANNOT read these cookies even when Chrome is logged into a site.
 
-**Symptom:** CDP `Network.getCookies` returns empty or only session cookies, but the browser shows you logged in.
+**Symptom:** CDP `Network.getCookies` returns empty or only session cookies (guest cookies: `gt`, `guest_id`, `personalization_id`, `g_state`, `__cuid`, `__cf_bm`). NEVER returns auth cookies like `auth_token`, `ct0`, `twid`.
 
-**Why:** macOS Keychain encryption is independent of Chrome's process — browser-harness CDP runs in a separate headless Chrome instance that doesn't have access to the user's Keychain.
+**Why:** macOS Keychain encryption is independent of Chrome's process — even when you `pkill Chrome` and relaunch with `--remote-debugging-port=9222 --user-data-dir="$HOME/Library/Application Support/Google/Chrome/Default"`, the new process cannot decrypt the original Keychain-protected cookies. This is a hard macOS security boundary.
 
 **Solutions:**
-1. **Use xurl API** — for X/Twitter posts, use `xurl` which handles auth differently
-2. **Use computer_use** — the user's actual Chrome instance can be controlled via `computer_use` which operates at the macOS window level
-3. **Export manually** — user exports cookies from Chrome DevTools → you import into Playwright
+1. **For X/Twitter automation:** Use `xurl` (OAuth 2.0 PKCE) — see `~/.hermes/skills/social-media/xurl/SKILL.md`. The OAuth token auto-refreshes and works around the Keychain limit. This is the only reliable path on macOS.
+2. **For session-state diagnostics** (e.g. "is Chrome logged into X right now?"): use CDP `Runtime.evaluate` on `document.cookie` / `localStorage.getItem('utk')` — these work for guest-cookie checks but not for auth extraction. See `references/cdp-cookie-extraction.md` for the working Python websocket-client template.
+3. **For UI driving** (clicks, screenshots, scrolling on public pages): browser-harness works fine, the Keychain limit only affects cookie-based auth.
+4. **Export manually** as a last resort: user exports cookies from Chrome DevTools → you import into Playwright. Tedious, session-based, expires often.
 
-**Note:** This is NOT a browser-harness bug — it's a fundamental macOS security boundary. No automation tool can bypass this.
+**Note:** This is NOT a browser-harness bug — it's a fundamental macOS security boundary. No automation tool can bypass it.
+
+**Lesson learned (2026-06-01):** When the user asks "use browser to extract cookies for auth," try the diagnostic path ONCE (CDP `getAllCookies` + `document.cookie` + `localStorage.utk` check) so you can show the guest-only result with evidence. Then immediately switch to the platform's official API. Do not loop on `pkill + relaunch + new profile dir + new debug port` combinations — they all hit the same wall.
 
 Location: `~/Developer/browser-harness/interaction-skills/`
 - cookies, cross-origin-iframes, dialogs, downloads, drag-and-drop, dropdowns

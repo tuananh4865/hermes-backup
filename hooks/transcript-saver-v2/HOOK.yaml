@@ -1,0 +1,8 @@
+name: transcript-saver-v2
+description: "Entity-based transcript saver v2.0 — auto-extract entities, generate wikilinks, mirror to Obsidian iCloud. Backward compatible with v1.0."
+version: 2.0.0
+author: Hermes Agent (Loop Engineering system)
+events:
+  - agent:end
+enabled: true
+priority: 50  # Run after loop-engineering (which sets verdict in state)

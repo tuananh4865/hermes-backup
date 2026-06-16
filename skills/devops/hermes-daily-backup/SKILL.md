@@ -101,6 +101,8 @@ Note: `|| true` trên commit để cron job không fail nếu không có gì tha
 5. **Commit message có `$(date +%Y-%m-%d)`** — Backup identity là NGÀY, không phải SHA. Nếu cron chạy 2 lần cùng ngày, commit message giống nhau — OK, không phải lỗi. SHA vẫn khác.
 6. **Không verify branch** — Nếu cron job chạy lúc đang ở branch khác (e.g. `feature/xyz`), sẽ push nhầm branch. Luôn `git rev-parse --abbrev-ref HEAD` trước.
 7. **Credentials trong cron** — HTTPS remote cần token trong credential helper. Nếu push fail với 403, kiểm tra `git config credential.helper` (macOS: `osxkeychain`).
+8. **`.bak.<timestamp>` files in working tree** — Some agent processes (notably `write_file` patches that pre-stage a backup) leave files like `memories/USER.md.bak.1781489455` in the working tree. These are NOT in `.gitignore` and will get committed/pushed. Options: (a) let them through (low cost, <1KB each), (b) add `*.bak.*` to `.gitignore` if size becomes a concern, (c) have the producing process use a tmp dir + cleanup. Default behavior (a) is fine for a few per day.
+9. **`cron/output/<job-hash>/<timestamp>.md` grows unbounded** — Every cron run writes a markdown report into a per-job subdirectory. Nothing prunes these. After months of daily backups the `cron/output/` tree can be 10s of MB. Not a backup failure — just monitor `du -sh ~/.hermes/cron/output/` and prune manually if repo size matters.
 
 ## Verification
 ```bash
@@ -122,3 +124,4 @@ git diff --shortstat HEAD~1 HEAD   # "N files changed, I insertions(+), D deleti
 ## Support Files
 - `references/report-example.md` — Real output from a 2026-06-14 daily backup run (file counts, push SHA format, common error messages and how they were handled).
 - `references/report-example-2026-06-15.md` — Real output from a 2026-06-15 run showing large-diff day (state-snapshot rotation, curator backup rotation) — useful as a baseline for "lượng changes lớn ≠ corruption".
+- `references/report-example-2026-06-16.md` — Real output from a 2026-06-16 run showing a **moderate** day (88 files, 4.5K/117) with the `cron/output/<hash>/` accumulation pattern and a `*.bak.*` file observation. Useful as a contrast to the 1530-file 06-15 day.

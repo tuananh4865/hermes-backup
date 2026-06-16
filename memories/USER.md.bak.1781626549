@@ -1,0 +1,42 @@
+§ [PREFERENCES] — explicit preferences discovered over sessions
+- communication: Vietnamese casual
+- response_style: concise, no fluff
+- tiktok_script_style: "anh" + "mấy con vợ"
+§ [PROJECTS] — ongoing work
+- tiktok-content: active
+- hermes-agent: memory-optimizing
+§ [FACTS] — durable facts about user, environment, tools
+- [preference] quote dài, scale vừa đủ |
+- [file] duy [HIGH]
+- [file] skills/plugins/cron/memories [HIGH]
+- [file] `/Users/tuananh4865/.hermes/SOUL.md` [HIGH]
+- [preference] em làm A, B, C hay D?
+- [file] để
+- [preference] làm giảm chất lượng của agent!
+- [file] ~/.hermes/profiles/coder/SOUL.md`
+- [file] ~/.hermes/profiles/content-director/SOUL.md`
+- [file] ~/.hermes/profiles/research-lead/SOUL.md`
+- [file] ~/.hermes/scripts/check-fable5-compliance.sh`
+- [file] ~/.hermes/scripts/add-fable5-to-soul.sh`
+- [file] ~/.hermes/profiles/_shared/fable5-patterns.md`
+- [file] sh
+- [preference] tự động inherit SOU
+- 2026-06-16: [The user sent a text document: 'CLAUDE-FABLE-5.md'. Its content has been included below. The file i
+- [file] video
+- [file] thì
+- 2026-06-16: [Tuấn Anh] phân tích từng frame của video này!
+- 2026-06-16: [Tuấn Anh] c
+- [file] 1422
+- [file] md
+- [tool] to [HIGH]
+- [file] /Users/tuananh4865/.hermes/config.yaml [HIGH]
+- [file] ~/.hermes/config.yaml [HIGH]
+- [file] yaml [HIGH]
+- [tool] TH [HIGH]
+- [file] CÓ [HIGH]
+- [file] mới [HIGH]
+- [preference] có. Sau khi restart gateway → cache reload → `✓ allowed`. [HIGH]
+§ [SESSIONS] — session history summaries
+- 2026-06-16: [Tuấn Anh] c
+§ [ENTITY_INDEX] — cross-session entity tracking
+§ [GROWTH_LOG] — how user/agent improved

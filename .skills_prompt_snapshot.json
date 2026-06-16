@@ -25,6 +25,10 @@
       1778471609741039186,
       5083
     ],
+    "autonomous-ai-agents/ai-agent-frameworks/SKILL.md": [
+      1781610809283209880,
+      8198
+    ],
     "autonomous-ai-agents/claude-code/SKILL.md": [
       1780808005598718961,
       35634
@@ -46,8 +50,8 @@
       3347
     ],
     "browser-harness/SKILL.md": [
-      1780802950518471809,
-      10853
+      1781613356882454613,
+      14736
     ],
     "browser-testing-with-devtools/SKILL.md": [
       1779165382096573701,
@@ -174,8 +178,8 @@
       4425
     ],
     "devops/hermes-daily-backup/SKILL.md": [
-      1781467349444690287,
-      6442
+      1781553777375003804,
+      7527
     ],
     "devops/kanban-orchestrator/SKILL.md": [
       1779942642842791161,
@@ -184,6 +188,14 @@
     "devops/kanban-worker/SKILL.md": [
       1779942634443368625,
       16851
+    ],
+    "devops/loop-engineering-deployment/SKILL.md": [
+      1781635083974741248,
+      59549
+    ],
+    "devops/self-verify-after-workaround/SKILL.md": [
+      1781635913829342963,
+      17928
     ],
     "devops/webhook-subscriptions/SKILL.md": [
       1778471610457372667,
@@ -553,9 +565,13 @@
       1779165369844746848,
       719
     ],
+    "hermes-agent-decision-guard/SKILL.md": [
+      1781626625473287181,
+      8808
+    ],
     "hermes-autoresearch/SKILL.md": [
-      1781550274540763731,
-      82607
+      1781580844868113700,
+      88040
     ],
     "hermes-github-backup/SKILL.md": [
       1780689751599215086,
@@ -593,9 +609,13 @@
       1778471609748467128,
       3088
     ],
+    "loop-goal/SKILL.md": [
+      1781614446271887709,
+      6368
+    ],
     "mcp/mcp-integration/SKILL.md": [
-      1781415369349059753,
-      14383
+      1781628920112447774,
+      15548
     ],
     "media/gif-search/SKILL.md": [
       1781449895975705809,
@@ -612,6 +632,10 @@
     "media/spotify/SKILL.md": [
       1778471610458800255,
       6319
+    ],
+    "media/telegram-video-analysis/SKILL.md": [
+      1781614952328944992,
+      20887
     ],
     "media/video-download-yt-dlp/SKILL.md": [
       1781311014688012540,
@@ -734,8 +758,8 @@
       2272
     ],
     "multi-agent-orchestrator/SKILL.md": [
-      1781311038939804675,
-      51158
+      1781614757786209182,
+      55735
     ],
     "note-taking/obsidian/SKILL.md": [
       1781449895976239146,
@@ -766,12 +790,16 @@
       11334
     ],
     "productivity/default-project-hub-pattern/SKILL.md": [
-      1781497316749938724,
-      15393
+      1781578219200264800,
+      24981
     ],
     "productivity/google-workspace/SKILL.md": [
       1778471609350554440,
       13411
+    ],
+    "productivity/hermes-cron-management/SKILL.md": [
+      1781582235382598649,
+      9997
     ],
     "productivity/linear/SKILL.md": [
       1778471610460402177,
@@ -806,8 +834,12 @@
       3251
     ],
     "qa-gate/SKILL.md": [
-      1781489620800255800,
-      5327
+      1781626652788535374,
+      10196
+    ],
+    "quality-checker/SKILL.md": [
+      1781614459436436332,
+      8002
     ],
     "red-teaming/godmode/SKILL.md": [
       1780667046914480617,
@@ -829,6 +861,10 @@
       1781449895976884860,
       20129
     ],
+    "research/mcp-search-workarounds/SKILL.md": [
+      1781635197324855995,
+      5726
+    ],
     "research/polymarket/SKILL.md": [
       1778471609360544266,
       2985
@@ -845,6 +881,10 @@
       1779165382500942225,
       11301
     ],
+    "security/agent-prompt-injection-defense/SKILL.md": [
+      1781610113240509881,
+      13018
+    ],
     "setup-matt-pocock-skills/SKILL.md": [
       1779165369630731354,
       6861
@@ -858,12 +898,12 @@
       2713
     ],
     "social-media/tiktok-viral-script/SKILL.md": [
-      1781542462202325955,
-      47414
+      1781628948358644716,
+      64552
     ],
     "social-media/xurl/SKILL.md": [
-      1780286195960559658,
-      20591
+      1781610755017471507,
+      23917
     ],
     "software-development/debugging-hermes-tui-commands/SKILL.md": [
       1778471610461529722,
@@ -917,6 +957,14 @@
       1779165382570006763,
       7784
     ],
+    "strict-system-qa-protocol/SKILL.md": [
+      1781635798345853802,
+      12674
+    ],
+    "system-wide-mandate-enforcement/SKILL.md": [
+      1781628643952395867,
+      14910
+    ],
     "tdd/SKILL.md": [
       1779165369676966063,
       4395
@@ -928,6 +976,10 @@
     "test-driven-development/SKILL.md": [
       1779165382595303583,
       14976
+    ],
+    "tiktok-competitor-deep-analysis/SKILL.md": [
+      1781577626580333338,
+      12172
     ],
     "to-issues/SKILL.md": [
       1779165369701307078,
@@ -1157,6 +1209,19 @@
       "category": "autonomous-ai-agents",
       "frontmatter_name": "agentic-company-setup",
       "description": "Setup multiple Hermes agents as company employees - each ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "ai-agent-frameworks",
+      "category": "autonomous-ai-agents",
+      "frontmatter_name": "ai-agent-frameworks",
+      "description": "Research, analyze, and apply AI coding agent frameworks —...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1762,6 +1827,35 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "loop-engineering-deployment",
+      "category": "devops",
+      "frontmatter_name": "loop-engineering-deployment",
+      "description": "Deploy Loop Engineering patterns (Maker→Checker→Orchestra...",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "self-verify-after-workaround",
+      "category": "devops",
+      "frontmatter_name": "self-verify-after-workaround",
+      "description": "When user demands strict QA (\"verify\", \"tự check\", \"QA ng...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -2989,6 +3083,19 @@
       }
     },
     {
+      "skill_name": "hermes-agent-decision-guard",
+      "category": "hermes-agent-decision-guard",
+      "frontmatter_name": "hermes-agent-decision-guard",
+      "description": "Meta-rule for when to ask the user vs when to decide. Tuấ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "hermes-autoresearch",
       "category": "hermes-autoresearch",
       "frontmatter_name": "hermes-autoresearch",
@@ -3119,6 +3226,22 @@
       }
     },
     {
+      "skill_name": "loop-goal",
+      "category": "loop-goal",
+      "frontmatter_name": "loop-goal",
+      "description": "Universal loop runner — chạy task lặp lại tới khi đạt ver...",
+      "platforms": [
+        "macos",
+        "linux"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "mcp-integration",
       "category": "mcp",
       "frontmatter_name": "mcp-integration",
@@ -3196,6 +3319,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "telegram-video-analysis",
+      "category": "media",
+      "frontmatter_name": "telegram-video-analysis",
+      "description": "When Tuấn Anh sends a video file (screen recording, downl...",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
@@ -3772,6 +3908,19 @@
       }
     },
     {
+      "skill_name": "hermes-cron-management",
+      "category": "productivity",
+      "frontmatter_name": "hermes-cron-management",
+      "description": "Manage Hermes cron jobs — create, update delivery targets...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "linear",
       "category": "productivity",
       "frontmatter_name": "linear",
@@ -3914,6 +4063,22 @@
       }
     },
     {
+      "skill_name": "quality-checker",
+      "category": "quality-checker",
+      "frontmatter_name": "quality-checker",
+      "description": "Universal quality gate — verify mọi output từ maker agent...",
+      "platforms": [
+        "macos",
+        "linux"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "godmode",
       "category": "red-teaming",
       "frontmatter_name": "godmode",
@@ -3995,6 +4160,19 @@
       }
     },
     {
+      "skill_name": "mcp-search-workarounds",
+      "category": "research",
+      "frontmatter_name": "mcp-search-workarounds",
+      "description": "Workarounds for MCP web search backend limitations — when...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "polymarket",
       "category": "research",
       "frontmatter_name": "polymarket",
@@ -4042,6 +4220,19 @@
       "category": "security-and-hardening",
       "frontmatter_name": "security-and-hardening",
       "description": "Hardens code against vulnerabilities. Use when handling u...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "agent-prompt-injection-defense",
+      "category": "security",
+      "frontmatter_name": "agent-prompt-injection-defense",
+      "description": "Defend against prompt injection, identity override, and u...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -4328,6 +4519,35 @@
       }
     },
     {
+      "skill_name": "strict-system-qa-protocol",
+      "category": "strict-system-qa-protocol",
+      "frontmatter_name": "strict-system-qa-protocol",
+      "description": "Run 9 concrete tool-based verifies with evidence when use...",
+      "platforms": [
+        "linux",
+        "macos"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "system-wide-mandate-enforcement",
+      "category": "system-wide-mandate-enforcement",
+      "frontmatter_name": "system-wide-mandate-enforcement",
+      "description": "Enforce a system-wide mandate (rule/policy/pattern) acros...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "tdd",
       "category": "tdd",
       "frontmatter_name": "tdd",
@@ -4358,6 +4578,19 @@
       "category": "test-driven-development",
       "frontmatter_name": "test-driven-development",
       "description": "Drives development with tests. Use when implementing any ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "tiktok-competitor-deep-analysis",
+      "category": "tiktok-competitor-deep-analysis",
+      "frontmatter_name": "tiktok-competitor-deep-analysis",
+      "description": "Deep competitor analysis on TikTok using stratified sampl...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

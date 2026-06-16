@@ -1342,6 +1342,105 @@ python3 scripts/wiki_lint.py
 
 17. **Before creating cron → CHECK existing** — `cronjob list` first. If similar exists, UPDATE don't CREATE.
 
+## Content Creator Cron Prompts — Quality Bar & Scope Discipline (2026-06-16)
+
+**Trigger:** Khi anh đặt mục tiêu content creator chuyên ngành (TikTok/YouTube niche) + yêu cầu "không chung chung, không tự đoán, không bịa đặt" — bất kỳ cron prompts nào liên quan đến research content/affiliate/sản phẩm PHẢI tuân thủ 3 nguyên tắc cứng dưới đây.
+
+### 3 Nguyên tắc cứng (Anh's quality bar)
+
+| Nguyên tắc | Ý nghĩa thực thi |
+|------------|------------------|
+| **Không chung chung** | Mỗi cron phải có scope CỤ THỂ (sub-niche + persona + format) trong prompt. KHÔNG viết "research trending products" chung. PHẢI ghi rõ: ngách nào, audience nào, loại sản phẩm nào |
+| **Không tự đoán/bịa** | Mọi con số, chính sách, giá, trend đều PHẢI có URL + ngày truy cập + ≥2 nguồn. Nếu không có dữ liệu → ghi "KHÔNG CÓ DỮ LIỆU ĐÁNG TIN" thay vì bịa |
+| **Không chắc → clarify** | Nếu agent chưa chắc 1 thông tin gì, PHẢI hỏi anh TRƯỚC khi viết vào prompt. KHÔNG tự quyết định scope |
+
+### Mandatory Clarify Questions Trước Khi Viết Cron Prompts
+
+Anh đã trả lời các câu hỏi mẫu sau cho content creator niche (2026-06-16). Khi bất kỳ session nào tương lai cần redesign cron prompts cho content creator / affiliate / sản phẩm, PHẢI hỏi lại 5 câu này (trừ khi anh đã trả lời gần đây và confirm dùng lại):
+
+1. **Sub-niche chính xác** — ngách cụ thể (lighting/audio/gimbal/combo kit/etc.)
+2. **Audience** — sinh viên / người đi làm / seller / mix
+3. **Platform priority** — TikTok-first / YouTube-first / 50-50
+4. **Tiêu chí "uy tín"** — test thực tế / review người mua / so sánh giá / analytics
+5. **Affiliate network** — TikTok Shop / Shopee / Accesstrade / Amazon / mix
+
+**Câu hỏi bổ sung (chọn 1):** Format output — short text / dashboard / file .md / structured dài
+
+### Standard Cron Prompt Structure (Template)
+
+Khi redesign batch cron prompts, dùng template này cho MỌI job:
+
+```
+# MISSION: <tên job>
+
+## CONTEXT (không thay đổi)
+Anh Tuấn Anh = content creator Việt Nam, TikTok + YouTube
+Niche: <sub-niche cụ thể từ clarify>
+Audience: <3 personas từ clarify>
+Uy tín = <tiêu chí từ clarify>
+Revenue: <affiliate networks từ clarify>
+
+## SCOPE HÔM NAY (đổi theo job)
+- <sub-niche cụ thể>
+- <persona/audience nhắm tới>
+- <output cụ thể>
+
+## RESEARCH RULES (BẮT BUỘC)
+1. Mọi con số phải có nguồn URL + ngày truy cập
+2. ≥2 nguồn cho mỗi claim
+3. KHÔNG tự đoán/bịa — nếu không tìm được nguồn → ghi "KHÔNG CÓ DỮ LIỆU ĐÁNG TIN"
+4. Ưu tiên nguồn: <official platform> > <KOL uy tín> > <review sites> > <Reddit>
+5. Ngày tham chiếu: PHẢI dùng dữ liệu mới nhất (tối đa 7 ngày tuổi, trừ timeless data)
+
+## DELIVERABLE
+1. File .md ở: ~/Workspace/Claude/Projects/<ProjectName>/Research/{YYYY-MM-DD}/{ten-job}.md
+2. Format: Markdown với bảng, code block cho snippet, link inline
+3. Sections bắt buộc:
+   - TL;DR (3-5 dòng)
+   - Top findings (bảng)
+   - Phân tích chi tiết
+   - Nguồn (cuối file: [Tên](URL) — truy cập YYYY-MM-DD)
+4. Gửi về Telegram: link file path + TL;DR 3 dòng
+
+## ANTI-PATTERNS (KHÔNG ĐƯỢC)
+- KHÔNG chung chung ("tốt nhất", "xu hướng hot")
+- KHÔNG liệt kê specs không kiểm chứng
+- KHÔNG dùng nguồn cũ >7 ngày
+- KHÔNG tự review sản phẩm — chỉ TỔNG HỢP từ nguồn có uy tín
+```
+
+### Workflow Khi Redesign Batch Cron Prompts
+
+1. `cronjob list` — xem tất cả jobs hiện tại
+2. Đánh giá job nào match scope mới, job nào cần viết lại 100%
+3. **CLARIFY với anh TRƯỚC** về 5 câu hỏi (sub-niche, audience, platform, uy tín, affiliate)
+4. Hỏi thêm 1 câu về output format
+5. **Present bản thiết kế TRƯỚC** (bảng tên job + schedule + mục đích mới) cho anh duyệt
+6. CHỈ apply sau khi anh OK
+7. Sau khi apply → `cronjob list` lại để verify
+
+**Anti-pattern:** KHÔNG tự ý redesign và apply ngay — luôn show anh bản thiết kế trước.
+
+### Path chuẩn lưu file research
+
+- `~/Workspace/Claude/Projects/Content Creator/Research/{YYYY-MM-DD}/{ten-job}.md`
+
+Đây là path đã được anh confirm sử dụng cho content creator research. Mọi cron output file PHẢI vào path này (KHÔNG dùng `~/.hermes/cron/output/{job_id}/` cho content research — chỉ dùng cho log/debug).
+
+### Source Priority (cho content/affiliate/product research)
+
+| Rank | Source type | Ví dụ |
+|------|-------------|-------|
+| 1 | Official platform newsroom | TikTok Newsroom, Shopee Seller Center, YouTube Creator Blog |
+| 2 | Affiliate platform official | TikTok Shop Seller Center, Shopee Affiliate Dashboard |
+| 3 | KOL uy tín trong ngách | Channels đã verify chuyên gear review |
+| 4 | Review sites uy tín VN | Tinh tế, Voz, Tinhte.vn |
+| 5 | International review | Reddit r/videography, r/YouTubers, DPReview |
+| 6 | E-commerce reviews | Shopee reviews (lọc verified purchase), Amazon reviews |
+| 7 | Aggregator/SEO sites | Blog Đứng Tim, Tự Học, etc. (CHỈ dùng khi không có nguồn tốt hơn) |
+
+**Rule:** Càng cao rank càng ưu tiên. Cite ≥2 nguồn, prefer mix ranks (1+4 hoặc 2+5).
+
 ## Key Lessons Learned (2026-05-06 UPDATE)
 
 ### LESSON 1: Cron Prompt ≠ Skill — Different tools, different purposes

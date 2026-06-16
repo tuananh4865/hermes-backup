@@ -1,242 +1,26 @@
 [
   {
+    "path": "/Users/tuananh4865/.hermes/cache/documents/doc_75c9fb3d695b_CLAUDE-FABLE-5.md",
+    "timestamp": "2026-06-16T11:22:59.917886+00:00",
+    "category": "temp",
+    "size": 122750
+  },
+  {
+    "path": "/Users/tuananh4865/.hermes/cache/documents/doc_186c508b25af_CLAUDE-FABLE-5.md",
+    "timestamp": "2026-06-16T16:36:11.510249+00:00",
+    "category": "temp",
+    "size": 122750
+  },
+  {
     "path": "/Users/tuananh4865/.hermes/cron/output",
-    "timestamp": "2026-05-15T17:04:10.122145+00:00",
+    "timestamp": "2026-06-16T17:37:04.436834+00:00",
     "category": "cron-output",
     "size": 0
   },
   {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-15.md",
-    "timestamp": "2026-05-15T17:06:15.884954+00:00",
+    "path": "/Users/tuananh4865/.hermes/cron/output/5aea298eb0a8/2026-06-17_00-02-29.md",
+    "timestamp": "2026-06-16T17:37:47.579186+00:00",
     "category": "cron-output",
-    "size": 2119
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-16.md",
-    "timestamp": "2026-05-16T17:05:03.684389+00:00",
-    "category": "cron-output",
-    "size": 5259
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-17.md",
-    "timestamp": "2026-05-17T17:07:30.156997+00:00",
-    "category": "cron-output",
-    "size": 3546
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-18.md",
-    "timestamp": "2026-05-18T17:03:44.455121+00:00",
-    "category": "cron-output",
-    "size": 3579
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/5aea298eb0a8/2026-05-19_00-04-13.md",
-    "timestamp": "2026-05-18T19:01:29.995539+00:00",
-    "category": "cron-output",
-    "size": 3486
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-19.md",
-    "timestamp": "2026-05-19T17:05:32.612837+00:00",
-    "category": "cron-output",
-    "size": 3196
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-20.md",
-    "timestamp": "2026-05-20T17:03:49.245698+00:00",
-    "category": "cron-output",
-    "size": 1536
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/7cba6ba5f52a/2026-05-21_03-01-17.md",
-    "timestamp": "2026-05-21T00:01:41.896871+00:00",
-    "category": "cron-output",
-    "size": 1978
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-21.md",
-    "timestamp": "2026-05-22T17:04:36.715186+00:00",
-    "category": "cron-output",
-    "size": 1859
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-23.md",
-    "timestamp": "2026-05-23T17:05:42.111253+00:00",
-    "category": "cron-output",
-    "size": 2319
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-24.md",
-    "timestamp": "2026-05-23T17:06:16.594380+00:00",
-    "category": "cron-output",
-    "size": 2370
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-25.md",
-    "timestamp": "2026-05-25T17:03:49.767983+00:00",
-    "category": "cron-output",
-    "size": 2845
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-26.md",
-    "timestamp": "2026-05-26T17:07:52.842570+00:00",
-    "category": "cron-output",
-    "size": 3529
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/wiki_forget_2026-05-28.md",
-    "timestamp": "2026-05-28T04:22:33.728121+00:00",
-    "category": "cron-output",
-    "size": 94246
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-28.md",
-    "timestamp": "2026-05-28T17:02:51.548768+00:00",
-    "category": "cron-output",
-    "size": 3480
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/a4b8e528983f",
-    "timestamp": "2026-05-29T17:02:35.677217+00:00",
-    "category": "cron-output",
-    "size": 0
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/a2786fb20bac",
-    "timestamp": "2026-05-29T17:02:35.680701+00:00",
-    "category": "cron-output",
-    "size": 0
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/5aea298eb0a8",
-    "timestamp": "2026-05-29T17:02:35.682413+00:00",
-    "category": "cron-output",
-    "size": 0
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/a5c02f2f0d87",
-    "timestamp": "2026-05-29T17:02:35.684081+00:00",
-    "category": "cron-output",
-    "size": 0
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/7cba6ba5f52a",
-    "timestamp": "2026-05-29T17:02:35.685718+00:00",
-    "category": "cron-output",
-    "size": 0
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-29.md",
-    "timestamp": "2026-05-29T17:04:18.903921+00:00",
-    "category": "cron-output",
-    "size": 3341
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-30.md",
-    "timestamp": "2026-05-30T17:05:45.800867+00:00",
-    "category": "cron-output",
-    "size": 3173
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-31.md",
-    "timestamp": "2026-05-31T17:08:10.224283+00:00",
-    "category": "cron-output",
-    "size": 3375
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-02.md",
-    "timestamp": "2026-06-01T17:02:50.224311+00:00",
-    "category": "cron-output",
-    "size": 5251
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/e92dd2490973",
-    "timestamp": "2026-06-03T17:02:01.947272+00:00",
-    "category": "cron-output",
-    "size": 0
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-05-07.md",
-    "timestamp": "2026-06-04T17:03:21.601714+00:00",
-    "category": "cron-output",
-    "size": 3956
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/5aea298eb0a8/2026-06-05_00-03-53.md",
-    "timestamp": "2026-06-05T17:04:53.072810+00:00",
-    "category": "cron-output",
-    "size": 3374
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-05",
-    "timestamp": "2026-06-05T17:05:30.053002+00:00",
-    "category": "cron-output",
-    "size": 0
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-05.md",
-    "timestamp": "2026-06-05T17:06:52.032916+00:00",
-    "category": "cron-output",
-    "size": 1995
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/7cba6ba5f52a/2026-06-06_03-01-26.md",
-    "timestamp": "2026-06-06T17:06:03.990341+00:00",
-    "category": "cron-output",
-    "size": 1865
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/a5c02f2f0d87/2026-06-06_07-02-01.md",
-    "timestamp": "2026-06-06T17:06:05.207429+00:00",
-    "category": "cron-output",
-    "size": 87280
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/a4b8e528983f/2026-06-06_02-03-49.md",
-    "timestamp": "2026-06-06T17:08:56.654458+00:00",
-    "category": "cron-output",
-    "size": 83779
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-06.md",
-    "timestamp": "2026-06-06T17:09:20.592479+00:00",
-    "category": "cron-output",
-    "size": 1992
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-07.md",
-    "timestamp": "2026-06-06T17:10:11.988643+00:00",
-    "category": "cron-output",
-    "size": 1739
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/546c141c8fb9",
-    "timestamp": "2026-06-07T03:56:16.478636+00:00",
-    "category": "cron-output",
-    "size": 0
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-08.md",
-    "timestamp": "2026-06-08T17:14:40.634306+00:00",
-    "category": "cron-output",
-    "size": 4307
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-12.md",
-    "timestamp": "2026-06-12T17:03:18.792409+00:00",
-    "category": "cron-output",
-    "size": 2754
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-14.md",
-    "timestamp": "2026-06-13T17:07:37.931416+00:00",
-    "category": "cron-output",
-    "size": 2384
-  },
-  {
-    "path": "/Users/tuananh4865/.hermes/cron/output/daily_review_2026-06-15.md",
-    "timestamp": "2026-06-14T17:02:09.923655+00:00",
-    "category": "cron-output",
-    "size": 3543
+    "size": 4278
   }
 ]

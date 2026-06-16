@@ -400,13 +400,90 @@ When looking for recently-generated video files (e.g., Remotion renders), check 
 
 | `media processing failed` on image upload | Default category is `amplify_video` | Add `--category tweet_image --media-type image/png` |
 
-## Browser Fallback Pitfalls (2026-05-21)
+## Browser Fallback Pitfalls (2026-05-21, updated 2026-06-01)
 
 | Symptom | Cause | Fix |
 |---------|-------|-----|
 | `xurl auth status` shows credentials but post fails | Credentials may be expired or misconfigured | Use `browser-harness` to visually verify session state — screenshot first |
 | Cookie auth works in browser-harness but fails in Playwright | Separate browser instances have separate sessions | Use browser-harness's own automation helpers instead of separate Playwright |
 | User asks "chụp hình xem" (take screenshot) | Wants visual confirmation, not text explanation | Screenshot → send via `MEDIA:/path.png` → short text summary. Never long paragraphs. |
+| `browser-harness cdp Network.getCookies` returns empty on macOS | macOS Keychain encrypts Chrome cookies | Switch to xurl OAuth — see `references/browser-workflow.md` |
+| `pkill Chrome + open with --remote-debugging-port=9222 + same profile` returns GUEST cookies | macOS Keychain blocks new Chrome process from reading own auth cookies | This is a hard macOS security boundary — xurl OAuth is the only path |
+| CDP WebSocket handshake 403 with "Rejected an incoming WebSocket connection" | Chrome requires `--remote-allow-origins=*` flag in newer versions | Add `--remote-allow-origins=*` to Chrome launch args |
+
+### CDP Cookie Extraction — What ACTUALLY Works (2026-06-01)
+
+Verified in production session: even when Chrome is logged in, CDP only returns
+**guest cookies** (`gt`, `guest_id`, `personalization_id`, `g_state`). NEVER returns
+`auth_token`, `ct0`, `twid` — those are Keychain-protected.
+
+**Working CDP discovery pattern (for verifying session state, NOT for auth):**
+
+```python
+# Python websocket-client — connect to existing Chrome's debug port
+import websocket, json
+ws = websocket.create_connection(ws_url, suppress_origin=True)
+
+# Get all cookies (returns guest cookies only on macOS)
+ws.send(json.dumps({"id": 1, "method": "Network.getAllCookies"}))
+cookies = json.loads(ws.recv())["result"]["cookies"]
+auth_token_present = any(c["name"] == "auth_token" for c in cookies)
+# → False on macOS even when Chrome is logged in
+
+# Check via document.cookie
+ws.send(json.dumps({
+    "id": 2,
+    "method": "Runtime.evaluate",
+    "params": {"expression": "document.cookie.includes('auth_token')"}
+}))
+auth_in_doc = json.loads(ws.recv())["result"]["result"]["value"]
+# → False on macOS
+
+# Check localStorage for utk (X's user token key)
+ws.send(json.dumps({
+    "id": 3,
+    "method": "Runtime.evaluate",
+    "params": {"expression": "localStorage.getItem('utk')"}
+}))
+utk = json.loads(ws.recv())["result"]["result"]["value"]
+# → None on macOS
+
+ws.close()
+```
+
+**If `auth_token` is missing from all three → switch to xurl OAuth immediately.**
+Do not waste time trying alternative cookie paths.
+
+### Chrome Launch with Debug Port (working command)
+
+```bash
+# Quit existing Chrome
+osascript -e 'tell application "Google Chrome" to quit'
+sleep 2
+
+# Launch with debug port + remote-allow-origins (REQUIRED for newer Chrome)
+open -a "Google Chrome" --args \
+  --remote-debugging-port=9222 \
+  --remote-allow-origins=* \
+  --user-data-dir="$HOME/Library/Application Support/Google/Chrome/Default"
+
+sleep 4
+
+# Verify
+curl -s http://localhost:9222/json | python3 -c "import sys, json; print(len(json.load(sys.stdin)), 'tabs')"
+# → N tabs
+
+# Get list of tabs (for ws_url extraction)
+curl -s http://localhost:9222/json
+```
+
+See `references/cdp-cookie-extraction.md` for full working code template.
+
+### Use `computer_use` for UI driving, NOT for auth
+
+`computer_use` can drive Chrome's UI (clicks, typing, screenshots) but cannot
+read Keychain-protected cookies. **Only use for tasks that don't require
+authentication** (e.g. viewing public tweets, capturing screenshots).
 
 ## Notes
 
@@ -418,9 +495,10 @@ When looking for recently-generated video files (e.g., Remotion renders), check 
 - **Token storage:** `~/.xurl` is YAML. Never read or send this file to LLM context.
 - **Cost:** X API access is typically paid for meaningful usage. Many failures are plan/permission problems, not code problems.
 
-- **Video post workflow:** See `references/video-post-quick.md` — step-by-step video upload + post with caption
+- **Video post workflow:** See `references/video-post-quick.md` — step-to-step video upload + post with caption
 - **Video file location:** `/tmp/` for Remotion outputs, `~/Downloads/` for user downloads
 - **Browser fallback:** When CLI is unavailable or unconfigured, see `references/browser-workflow.md` for browser-based repost workflow.
+- **CDP cookie extraction code:** See `references/cdp-cookie-extraction.md` for verified working Python code to extract Chrome's cookies via CDP, plus the guest-cookie tell (when Keychain blocks auth cookies).
 
 ---
 

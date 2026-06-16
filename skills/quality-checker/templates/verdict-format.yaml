@@ -1,0 +1,67 @@
+# Verdict Format — Template
+# Output schema cho quality-checker skill
+# Khi invoke skill, output PHẢI theo format này
+
+verdict: PASS  # PASS | FAIL | WARN
+score: 9.2     # 0.0 - 10.0
+timestamp: "2026-06-16T19:30:00+07:00"
+task_type: content  # content | research | code | report | script
+worker: "content-creator"  # optional, nếu có
+
+# === Verdict logic (CRITICAL OVERRIDE) ===
+# 1. Nếu có bất kỳ issue với severity: critical → verdict = FAIL (bất kể score)
+# 2. Nếu score >= 9.0 → PASS
+# 3. Nếu score 7.0-8.9 → WARN
+# 4. Nếu score 5.0-6.9 → FAIL
+# 5. Nếu score < 5.0 → FAIL critical
+#
+# Critical issues: banned words, missing required sections, fabricated data,
+#                  security violations, broken contracts.
+
+# === Per-category scores (mỗi cái 0-10) ===
+scores:
+  format: 9
+  voice: 10
+  sources: 9
+  quality: 9
+  project_specific: 9
+  actionability: 10
+
+# === Critical override flag (NEW) ===
+# Set true nếu verdict được quyết định bởi critical issue, không phải score
+critical_override: false
+# critical_override_reason: "Banned word 'mấy con vợ' detected 3x in content-creator"
+
+# === Issues (empty nếu PASS) ===
+# Mỗi issue có: category, severity, description, location, suggestion
+issues: []
+
+# Example issues (uncomment to use):
+# - category: sources
+#   severity: critical  # → triggers critical_override
+#   description: "Data point #3 không có URL nguồn"
+#   location: "section 'Top 5 sản phẩm', row #3"
+#   suggestion: "Thêm link TikTok Shop product page + ngày truy cập"
+#
+# - category: voice
+#   severity: critical  # → triggers critical_override
+#   description: "Dùng 'mấy con vợ' thay vì 'các bạn'"
+#   location: "line 12, 15, 18"
+#   suggestion: "Sửa thành 'các bạn' theo voice profile"
+
+# === Suggestions (luôn có, kể cả khi PASS) ===
+suggestions:
+  - "Bổ sung thêm 1 nguồn từ Group Facebook review"
+  - "Sửa voice: thay 'mấy con vợ' → 'các bạn' (3 chỗ)"
+
+# === Overall reasoning ===
+reasoning: |
+  Output đạt chất lượng tốt về format và voice.
+  Sources đầy đủ, score trung bình 9.2.
+  Verdict: PASS — ready to deliver.
+
+# === Action items ===
+# next_action: deliver | re_run | escalate
+# next_action: deliver
+# re_run_feedback: |
+#   Specific feedback cho maker nếu FAIL

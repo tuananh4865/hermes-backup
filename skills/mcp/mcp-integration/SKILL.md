@@ -103,7 +103,7 @@ mcp_servers:
 | `args`            | list   | `[]`    | Arguments passed to the command                   |
 | `env`             | dict   | `{}`    | Extra environment variables for the subprocess    |
 | `url`             | string | --      | Server URL (HTTP transport, required)             |
-| `headers`         | dict   | `{}`    | HTTP headers sent with every request              |
+| `headers`         | dict   | `{}`    | HTTP headers sent with every request               |
 | `timeout`         | int    | `120`   | Per-tool-call timeout in seconds                  |
 | `connect_timeout` | int    | `60`    | Timeout for initial connection and discovery      |
 
@@ -161,8 +161,8 @@ Sampling is **enabled by default**. Configure per server:
 ```yaml
 mcp_servers:
   my_server:
-    command: "npx"
-    args: ["-y", "my-mcp-server"]
+    command: "uvx"
+    args: ["mcp-server-my-server"]
     sampling:
       enabled: true           # default: true
       model: "gemini-3-flash" # model override (optional)
@@ -205,6 +205,8 @@ Tracking: https://github.com/NousResearch/hermes-agent/issues/36264
 
 **Connection keeps dropping** — client retries up to 5 times with exponential backoff (1s, 2s, 4s, 8s, 16s, capped at 60s). Gives up after 5 attempts.
 
+**MCP web search returns `1027-output new_sensitive` for `site:` operator** — the backend's content moderation layer flags Google `site:` queries with trending/product keywords. Workaround: use the brand name as a plain keyword (e.g., "findniche tiktok shop" instead of `site:findniche.com`). Date filtering also doesn't work via `maxAgeHours` parameter — use natural language date hints ("june 2026", "last 30 days") instead. See `references/mcp-search-content-moderation-quirks.md` for the full 4-quirk reference with verification table (tested 2026-06-16).
+
 ### Examples
 
 **Time Server (uvx):**
@@ -217,13 +219,20 @@ mcp_servers:
 Registers tools like `mcp_time_get_current_time`.
 
 **Filesystem Server (npx):**
-```yaml
+```bash
+# 1) Scaffold a project workspace
+mkdir -p ~/Projects/mcp-sandbox && cd ~/Projects/mcp-sandbox
+# 2) Add the server to config.yaml
+cat >> ~/.hermes/config.yaml <<'YAML'
 mcp_servers:
   filesystem:
     command: "npx"
     args: ["-y", "@modelcontextprotocol/server-filesystem", "/home/user/documents"]
     timeout: 30
+YAML
+# 3) Restart Hermes Agent — tools appear prefixed `mcp_filesystem_*`
 ```
+Tool surface includes `mcp_filesystem_read_file`, `mcp_filesystem_write_file`, `mcp_filesystem_list_directory`.
 
 **GitHub Server with Authentication:**
 ```yaml
@@ -331,6 +340,7 @@ mcporter config list
 mcporter config get <key>
 mcporter config add <server>
 mcporter config remove <server>
+mcporter config update <server>
 mcporter config import <path>
 ```
 
@@ -372,3 +382,4 @@ mcporter emit-ts <server> --mode types
 ## References
 
 - `references/exa-mcp-advanced-tools.md` — How to enable Exa advanced tools (`web_search_advanced_exa`) via URL query param config
+- `references/mcp-search-content-moderation-quirks.md` — Backend moderation quirks: `site:` operator blocked, `maxAgeHours` ignored, stale results, mixed-language bias. 4 workarounds with verification table.

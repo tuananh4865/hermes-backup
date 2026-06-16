@@ -261,6 +261,134 @@ When a sibling subagent patches a memory entry, the replacement string may be SH
 
 **Signal:** `memory` tool returns `Entry replaced` or `Entry removed` from another agent. Verify with `read_file ~/.hermes/memories/MEMORY.md` before relying on memory contents in the same turn.
 
+### 9. (NEW 2026-06-16) "User added new files, review + restructure" — extends Pattern #7
+
+When user says "anh mới thêm file mới, hãy review lại project" AND/OR "truy cập kênh TikTok X, xem video, rút bài học, tái cấu trúc" — this is a 2-part compound task:
+
+**Part A: Re-review project** (follow Pattern #7)
+1. `ls -la` + sort by mtime → find files newer than hub.md
+2. `read_file` the new files (titles + first 50 lines)
+3. Detect sub-system pattern (numbered 00-03, or pattern like "X phần 1/2/3")
+4. Rewrite ONLY the file index + log section of hub.md
+5. Update memory if sub-system changed the project's mental model
+
+**Part B: Competitor analysis + restructure** (NEW pattern from 2026-06-16 session)
+
+Trigger: User shares a TikTok/YouTube channel URL + "xem tất cả video + rút bài học + tái cấu trúc project"
+
+Workflow:
+```
+1. yt-dlp --flat-playlist → get metadata for ALL videos (URL, title, view_count)
+2. Sort by view_count → pick top 3-5 viral + 1-2 recent
+3. For each video:
+   - yt-dlp -F → list formats
+   - **Use `h264_540p_*-0` format** (TikTok không có audio-only standalone)
+   - ffmpeg -ar 16000 -ac 1 → extract audio for Whisper
+   - mlx_whisper --model mlx-community/whisper-large-v3-mlx --output-format srt → transcript (cached local)
+   - ffmpeg -vf "fps=1/15,scale=320:-1" -vframes 4 → 4 frames
+   - mcp_MiniMax_understand_image → visual analysis (NOT vision_analyze)
+4. Tổng hợp: 5 bài học lõi + so sánh project + đề xuất tái cấu trúc
+5. ASK USER FIRST: "Anh muốn em sửa trực tiếp hay tạo file mới chứa đề xuất?"
+6. After user choice: patch 1 file phân tích mới + update 1-2 file guideline có bài học liên quan
+7. Update wiki log + memory nếu cần
+```
+
+**Real failure (2026-06-16) to avoid:** Em assumed "anh muốn em sửa trực tiếp" mà không hỏi trước. User đã chọn option "sửa trực tiếp" (option 2) khi em clarify, nhưng lesson là: ALWAYS clarify before structural changes to existing files. Ngay cả khi có vẻ obvious.
+
+**Step 5 MUST USE `clarify` tool** with options:
+- A) Tạo file mới chứa bài học, KHÔNG sửa file cũ
+- B) Sửa trực tiếp hub + 1-3 file guideline có bài học liên quan
+- C) Gửi tóm tắt trước, anh quyết sau
+- D) Chỉ cần phân tích, KHÔNG tái cấu trúc
+
+**Update tiktok-viral-script skill** with reference file `competitor-u40hoc-xaykenh-analysis.md` (5 bài học + 5 hook mới #13-17 + workflow pitfalls). This skill update ensures the next session knows how to do competitor analysis without re-deriving the workflow.
+
+**Sibling skill for DEEP analysis:** Use `tiktok-competitor-deep-analysis` skill when user explicitly asks for 50+ clip stratified sampling (not just 4 viral). Created 2026-06-16 from the 50-clip @u40hoc.xay.kenh session. See `references/50-clip-workflow-notes.md` for full workflow.
+
+**Real failure (2026-06-16) — sample size matters:** User asked for "ít nhất 50 clip" but the first analysis only covered 4 viral clips. The 4-clip sample produced a wrong conclusion (CTA "provoke" listed as pattern #5), corrected by 50-clip analysis (CTA "specific action" 42%, provoke 4%). Pattern #5 in 04-phan-tich-khoa-hoc-u40hoc-xaykenh.md must be treated as DEPRECATED. Always cross-check viral-only analysis against a larger stratified sample before committing to conclusions.
+
+### 10. (NEW 2026-06-16) Folder-based Restructure — distinct from Pattern #9
+
+When user says **"cấu trúc lại file trong project"** / "tổ chức lại folder" / "move file vào folder cho gọn" — this is a **different task** from Pattern #9 (which is about updating hub after new files appear). This pattern is about **moving existing files into folder structure + fixing broken wikilinks**.
+
+**Trigger phrases:**
+- "cấu trúc lại file trong project" / "tổ chức lại folder"
+- "gộp file theo mục đích" / "phân loại lại"
+- "root directory có quá nhiều file, dọn lại"
+- "move mấy file nghiên cứu vào folder riêng"
+
+**When to use this pattern vs Pattern #9:**
+
+| User intent | Pattern |
+|---|---|
+| "anh mới thêm file mới, review + update hub" | Pattern #9 (light touch) |
+| "cấu trúc lại project, move file vào folder" | **Pattern #10** (this — heavy restructure) |
+| "viết thêm file mới X" | Just write file + update hub |
+| "dọn dẹp project" | Could be either — clarify |
+
+**Workflow: 5-step folder restructure**
+
+1. **Inventory + classify** — `ls -la` root, sort by mtime. Categorize each file by PURPOSE (not by name):
+   - `Analysis/` — research, case studies, competitor analysis, roadmap research
+   - `Operations/` — progress, SOP, voice profile, tiến độ tracker
+   - `Trend_Updates/` — date-based trend files (already exists in most projects)
+   - `Raw/` — data thô: transcripts, contact sheet, screen recordings
+   - `Archive/` — workflow artifacts, old versions, deprecation
+   - Root: keep only "system" files (hub + numbered system 00-03 + main guidelines + scripts + UI tools)
+
+2. **Create folders + move files** — use `mv` in a single batch:
+   ```bash
+   mkdir -p Analysis Operations Raw Archive
+   mv <file1> Analysis/ && mv <file2> Analysis/ && ...
+   ```
+   For dated workflow artifacts (e.g. `compass_artifact_wf-*.md`):
+   ```bash
+   mkdir -p Archive/2026-06-15-compass-artifacts
+   mv compass_artifact_*.md Archive/2026-06-15-compass-artifacts/
+   ```
+   ⚠️ **Preserve date in archive folder name** — enables future "find old workflow by date".
+
+3. **Fix broken wikilinks** — every `[[file]]` and `path/to/file.md` reference in the project must be updated:
+   - `search_files(pattern=<moved_file>, target=content)` — find all references
+   - For each match, update path: `[[old]]` → `[[Analysis/old]]` and `path/old.md` → `Analysis/old.md`
+   - **HTML files** have relative paths: `./SOP_Proof_Shot_3_San_Pham.md` → `./Operations/SOP_Proof_Shot_3_San_Pham.md`
+   - **Use `patch` for markdown, `execute_code` with `read_file` + `str.replace` for HTML** (the `patch` tool fails on HTML)
+   - **Pitfall**: when wikilinks use just filename (`[[phan-tich-kenh-hi-imdung]]` without path), `patch` may fail repeatedly if surrounding context matches multiple places. **Fallback**: use `execute_code` with Python `str.replace` for replace_all=True cases.
+
+4. **Rewrite hub.md** with the new folder structure:
+   - Lead with a tree diagram of the new layout
+   - Add a "Quy tắc vào project" section explaining when to open which folder
+   - Update file index to use folder prefixes (`Analysis/04-phan-tich-...`)
+   - Append a "📝 Log" entry with: date + intent + new structure summary
+
+5. **Verify no broken references remain** — run `search_files` for each moved file. If 0 matches, references are clean. ⚠️ **Don't skip this step** — broken links silently accumulate.
+
+**Real session example (2026-06-16, Content Creator project):**
+
+User: "Cấu trúc lại file trong project với những cái em vừa phân tích được đi sau đó đề xuất kịch bản ngày 1 cho anh!"
+
+**What I did (single turn):**
+1. `ls -la` → 28 files + 4 folders
+2. Classified into 4 new folders: `Analysis/` (7 research files), `Operations/` (4 ops files), `Raw/` (transcripts + screenshots), `Archive/2026-06-15-compass-artifacts/` (2 old workflow files)
+3. Kept at root: 16 system files (hub + 00-03 + main guidelines + 3 UI tools + 3 script files)
+4. Moved 11 files via batch `mv` commands
+5. Fixed 4 broken wikilinks (3 in 8-dang-content-chi-dan.md, 1 in checklist-4-tru-cot.html)
+6. Rewrote hub.md with new tree + "Quy tắc vào project" section
+7. Used `execute_code` with Python `str.replace` for the 2 stubborn wikilinks in 8-dang-content (the `patch` tool kept failing despite unique context)
+8. Wrote kịch bản "Ngày 1" → `Operations/kich-ban-ngay-1-5-cai-dat-camera.md`
+
+**Verification step I added:** `search_files(pattern=<moved_file>, target=content)` for each moved file, ensure 0 remaining references with old path. If found → patch.
+
+**Pitfalls specific to this pattern:**
+
+- ⚠️ **HTML files use different patch strategy** — `patch` tool's fuzzy matching often fails on HTML minified strings. Use `execute_code` with `read_file` + `str.replace` instead.
+- ⚠️ **Don't move UI tools** — `tram-dieu-hanh-kenh.html` and `checklist-4-tru-cot.html` are referenced by 3+ other files. Keep at root unless you're also updating all references in the same turn.
+- ⚠️ **Don't move `Trend_Updates/` content** — it has its own organic date-based naming convention. Leave it alone.
+- ⚠️ **Compass artifact files** (from `claude-code` orchestrator workflows) are session-specific — archive with date, don't keep at root.
+- ⚠️ **Backup before bulk `mv`** — if project uses git, the moves will be detected as renames. If not, just trust the `mv` (it's atomic on same filesystem).
+
+**Compound task signal:** When user says "cấu trúc lại X, sau đó [action Y]" — treat as 2-part task. The "sau đó" indicates the user wants BOTH done, not just one. In the 2026-06-16 session, "sau đó đề xuất kịch bản ngày 1" meant: restructure FIRST, then write script. Don't merge into one step.
+
 ## Verification
 
 After wiring, confirm in the same turn:
@@ -302,3 +430,5 @@ Voice embedded: "anh" + "mấy con vợ" (the user's TikTok voice) → next sess
 - `using-agent-skills` — how to discover and load skills
 - `wiki-maintenance` — wiki cleanup and structure
 - `tiktok-viral-script` — example of a project that benefits from a hub.md
+- `tiktok-competitor-deep-analysis` — DEEP 50-clip stratified sampling variant (sibling skill, 2026-06-16)
+- `references/sweet-spot-script-workflow.md` — 6-step workflow for writing kịch bản "Ngày 1" from competitor research data (sweet spot driven, voice-aware, shot-list detailed) — NEW 2026-06-16

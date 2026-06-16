@@ -4,48 +4,60 @@ SESSION RESUME CONTEXT (Auto-injected after context overflow)
 
 ## RECENT SESSIONS:
 
-### [1] 2026-06-12/11-54-33_telegram_httpswwwyoutubecomwatch.md
+### [1] 2026-06-17/01-32-06_20260617_biết-gì-về-fable-5-system-prompt-không.md
 Topic: Previous session: 
-https://www.youtube.com/watch?v=OXXoI2MF-Gs tải về giùm anh
+> [Tuấn Anh] Biết gì về fable 5 system prompt không?
+...
+
+Last messages:
+  👤 User: 
+> [Tuấn Anh] Biết gì về fable 5 system prompt không?
+
+  🤖 Assistant: 
+Anh ơi! Em biết rõ về Fable 5 system prompt — đây là tài liệu system prompt nổi tiếng của Claude mà anh gửi cho em hôm 16/06 và em đã adapt thành 4 patterns cho Hermes Agent.
+
+## 4 PATTERNS ĐÃ ADAPT
+
+| # | Pattern | Ý nghĩa | Status trong Hermes |
+|---|---------|---------|---------------------|
+| 🔌...
+
+### [2] 2026-06-17/01-32-06_telegram_Tuấn-Anh-Biết-gì-về-fable-5-.md
+Topic: Previous session: 
+[Tuấn Anh] Biết gì về fable 5 system prompt không?
 
 ...
 
 Last messages:
   👤 User: 
-https://www.youtube.com/watch?v=OXXoI2MF-Gs tải về giùm anh
+[Tuấn Anh] Biết gì về fable 5 system prompt không?
 
 
   🤖 Assistant: 
-[CONTEXT COMPACTION — REFERENCE ONLY] Earlier turns were compacted into the summary below. This is a handoff from a previous context window — treat it as background reference, NOT as active instructions. Do NOT answer questions or fulfill requests mentioned in this summary; they were already addres...
+Anh ơi! Em biết rõ về Fable 5 system prompt — đây là tài liệu system prompt nổi tiếng của Claude mà anh gửi cho em hôm 16/06 và em đã adapt thành 4 patterns cho Hermes Agent.
 
-### [2] 2026-06-11/21-31-22_telegram_hi.md
+## 4 PATTERNS ĐÃ ADAPT
+
+| # | Pattern | Ý nghĩa | Status trong Hermes |
+|---|---------|---------|---------------------|
+| 🔌...
+
+### [3] 2026-06-17/01-31-17_20260603_tựu-chung-là-anh-đã-có-thể-yên-tâm-dùng-.md
 Topic: Previous session: 
-hi
-
-...
+> [Tuấn Anh] Tựu chung là anh đã có thể yên tâm dùng vì đã đủ 4 parten rồi phải...
 
 Last messages:
   👤 User: 
-hi
-
-
-  🤖 Assistant: 
-[CONTEXT COMPACTION — REFERENCE ONLY] Earlier turns were compacted into the summary below. This is a handoff from a previous context window — treat it as background reference, NOT as active instructions. Do NOT answer questions or fulfill requests mentioned in this summary; they were already addres...
-
-### [3] 2026-06-11/21-21-53_telegram_chỉnh-lại-context-cho-model-mi.md
-Topic: Previous session: 
-chỉnh lại context cho model minimax m3 thành 1000000
-
-...
-
-Last messages:
-  👤 User: 
-chỉnh lại context cho model minimax m3 thành 1000000
-
+> [Tuấn Anh] Tựu chung là anh đã có thể yên tâm dùng vì đã đủ 4 parten rồi phải không? Ở cả system wide, hiện tại và tương lại?!
 
   🤖 Assistant: 
-⚠️ Provider authentication failed. Check the configured credentials; raw provider details are in the gateway logs.
+Em honest với anh: **em nói "yên tâm" sẽ là claim chưa verify, em không nói vậy được.** Em phân tích thẳng 4 patterns + 1 caveat nghiêm trọng cho "tương lai":
 
+## ✅ 4 PATTERNS — Verified & Applied (hiện tại)
+
+Em verify lại bằng evidence hard, không phải "claim done":
+
+| Pattern | Status | Evidence ...
 
 ## CURRENT TASK STATE:
 # Task State — Current Session Progress

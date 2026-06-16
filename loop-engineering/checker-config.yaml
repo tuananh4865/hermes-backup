@@ -1,0 +1,109 @@
+# Quality Checker — Configuration
+# File này định nghĩa thresholds và rules cho quality-checker skill.
+# Được đọc bởi loop-engineering-hook khi auto-invoke.
+
+quality_checker:
+  enabled: true
+  auto_trigger: true
+  
+  # === Thresholds ===
+  pass_threshold: 9.0    # ≥9.0 → PASS
+  warn_threshold: 7.0    # 7.0-8.9 → WARN (deliver + log)
+  fail_threshold: 5.0    # 5.0-6.9 → FAIL (re-run maker)
+  # <5.0 → FAIL critical (reject, escalate)
+  
+  # === Composite score weights ===
+  weights:
+    format: 0.10
+    voice: 0.15
+    sources: 0.25       # highest weight
+    quality: 0.25      # highest weight
+    project_specific: 0.15
+    actionability: 0.10
+  
+  # === Auto-trigger conditions ===
+  # Hook sẽ tự động invoke checker khi output match conditions
+  trigger_on:
+    file_outputs_count: ">=1"     # có file output
+    content_keywords:              # keywords trong output
+      - "report"
+      - "script"
+      - "research"
+      - "analysis"
+      - "tổng hợp"
+      - "phân tích"
+    project_match:                 # thuộc project nào
+      - "content-creator"
+      - "autoloop"
+      - "research"
+      - "any"                       # catch-all
+  
+  # === Skip conditions (KHÔNG check) ===
+  skip_on:
+    task_types:
+      - "qa"                       # simple Q&A
+      - "navigation"               # file/path navigation
+      - "system_check"             # status checks
+      - "conversation"             # casual chat
+    output_size: "<100_chars"      # quá ngắn
+    is_question: true              # user chỉ hỏi
+  
+  # === Project-specific rules ===
+  project_rules:
+    content-creator:
+      voice: "các bạn"
+      forbidden_words:
+        - "mấy con vợ"
+        - "mấy đứa"
+        - "mấy chị"
+        - "mấy má"
+        - "quất một phát"
+        - "đỉnh nóc kịch trần"
+      required_sections:
+        - "Hook"
+        - "Body"
+        - "CTA"
+      max_duration_seconds: 30
+      min_sources: 5
+      must_have:
+        - affiliate_label          # gắn nhãn tiếp thị liên kết
+        - real_test_proof          # test thật
+        - cons_list                # ≥1 nhược điểm
+    
+    research:
+      min_sources: 5
+      max_source_age_days: 7       # trending data freshness
+      require_methodology: true
+      require_confidence: true     # high/medium/low
+    
+    code:
+      require_lint_pass: true
+      require_tests: true
+      forbid_secrets: true
+      require_readme: true
+  
+  # === Universal banned patterns (across all projects) ===
+  universal_banned:
+    phrases:
+      - "có thể là"
+      - "thường thì"
+      - "nhiều khi"
+      - "khá nhiều"
+      - "khá tốt"
+      - "em nghĩ là"  # OK trong opinion, không OK trong facts
+    fabricated_data: true          # không chấp nhận số liệu bịa
+    unverified_urls: true          # URL phải accessible
+  
+  # === Output settings ===
+  output:
+    format: "yaml"                 # yaml | json | markdown
+    include_reasoning: true
+    include_suggestions: true
+    log_to_state_file: true        # log vào worker state.md
+  
+  # === State persistence ===
+  state:
+    enabled: true
+    file_pattern: "~/.hermes/workers/{worker_name}/state.md"
+    log_section: "## Checker Verdicts"
+    keep_last_n: 50                # chỉ giữ 50 verdicts gần nhất

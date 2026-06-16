@@ -1,0 +1,294 @@
+{
+  "jobs": [
+    {
+      "id": "7cba6ba5f52a",
+      "name": "Hermes Daily Backup",
+      "prompt": "# Hermes Daily Backup \u2014 3AM (Content Creator + Hermes Infra)\n\n## Mission\nBackup to\u00e0n b\u1ed9 `~/.hermes/` l\u00ean GitHub m\u1ed7i ng\u00e0y. Ngo\u00e0i ra, backup ri\u00eang folder `~/Workspace/Claude/Projects/Content Creator/` (ch\u1ec9 metadata, kh\u00f4ng ph\u1ea3i full data).\n\n## Context (KH\u00d4NG THAY \u0110\u1ed4I)\n- Repo: github.com/tuananh4865/hermes-backup\n- Hermes home: ~/.hermes\n- Content Creator workspace: ~/Workspace/Claude/Projects/Content Creator/\n\n## Scope h\u00f4m nay\n1. **B\u01b0\u1edbc 1 (B\u1eaeT BU\u1ed8C):** Backup `~/.hermes/` (skills, config, memory, plugins) l\u00ean repo `hermes-backup`\n2. **B\u01b0\u1edbc 2 (M\u1edaI):** Sync Content Creator folder structure (ch\u1ec9 metadata, kh\u00f4ng full content) l\u00ean repo `content-creator-meta` ho\u1eb7c branch ri\u00eang\n\n## Routing\n- KH\u00d4NG delegate \u2014 internal infrastructure\n- KH\u00d4NG research\n\n## Deliverable\n\n### File 1: Backup log\nL\u01b0u v\u00e0o `~/.hermes/backups/backup-{YYYY-MM-DD}.log`\n\n### File 2: Telegram message\n```\n\ud83d\udcbe Daily Backup \u2014 {YYYY-MM-DD}\n\n\u2705 Hermes home: {MB} backed up\n\u2705 Content Creator metadata: synced\n\ud83d\udcc1 Commit: {short hash}\n\ud83d\udd17 {github commit URL}\n```\n\n## Anti-patterns\n- KH\u00d4NG backup Content Creator full data (ch\u1ec9 metadata)\n- KH\u00d4NG commit secrets/API keys\n- KH\u00d4NG fail n\u1ebfu Content Creator folder kh\u00f4ng t\u1ed3n t\u1ea1i (skip)\n\n---\n\n## \ud83d\udd04 LOOP ENGINEERING HOOK (auto-appended 2026-06-16)\n\n**Mandatory:** Before delivering results, run this hook to log to state.md:\n\n```bash\npython3 ~/.hermes/loop-engineering/profile_state.py run default \"<goal summary>\" 1 <PASS|FAIL> <score>\n```\n\nThis hook is part of the system-wide Loop Engineering pattern. Don't skip it.\n",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "0 3 * * *"
+      },
+      "schedule_display": "0 3 * * *",
+      "repeat": {
+        "times": 365,
+        "completed": 49
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-04-27T21:38:04.126445+07:00",
+      "next_run_at": "2026-06-17T03:00:00+07:00",
+      "last_run_at": "2026-06-16T03:01:11.271145+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-1003764041476:604",
+      "origin": null
+    },
+    {
+      "id": "a4b8e528983f",
+      "name": "Hermes Autoresearch Nightly",
+      "prompt": "# Job 1: TikTok Shop Trending Gear \u2014 Daily Research\n\n## Mission\nM\u1ed7i s\u00e1ng 7h, scan TikTok Shop Vietnam, t\u00ecm top **5 s\u1ea3n ph\u1ea9m thi\u1ebft b\u1ecb quay d\u1ef1ng / c\u00f4ng ngh\u1ec7 content creator** \u0111ang trending 24h qua, k\u00e8m:\n- Gi\u00e1 hi\u1ec7n t\u1ea1i tr\u00ean TikTok Shop\n- S\u1ed1 \u0111\u00e3 b\u00e1n / rating / s\u1ed1 review\n- Video review t\u1eeb KOL TikTok (n\u1ebfu c\u00f3)\n- Commission rate t\u1eeb TikTok Shop Affiliate\n- Link affiliate\n\n## Context (KH\u00d4NG THAY \u0110\u1ed4I)\n- Anh Tu\u1ea5n Anh: content creator Vi\u1ec7t Nam TikTok + YouTube\n- Ng\u00e1ch: thi\u1ebft b\u1ecb quay d\u1ef1ng phim (mic, \u0111\u00e8n, gimbal, lens, action cam, flycam, m\u00e1y quay) + c\u00f4ng b\u1ecb c\u00f4ng ngh\u1ec7 content creator + thi\u1ebft b\u1ecb chuy\u00ean nghi\u1ec7p\n- 3 nh\u00f3m kh\u00e1n gi\u1ea3: (1) sinh vi\u00ean 18-22 TikTok, (2) ng\u01b0\u1eddi \u0111i l\u00e0m 25-35 YouTube, (3) seller TikTok Shop\n- Ti\u00eau ch\u00ed uy t\u00edn: test th\u1ef1c t\u1ebf + review t\u1eeb ng\u01b0\u1eddi \u0111\u00e3 mua th\u1eadt\n- Affiliate: TikTok Shop + Shopee Affiliate (Shopee \u01b0u ti\u00ean ch\u00ednh)\n\n## Scope h\u00f4m nay\n**Sub-niche rotation** (xen k\u1ebd theo ng\u00e0y trong tu\u1ea7n):\n- Th\u1ee9 2: Micro thu \u00e2m (mic thu \u00e2m, shotgun, lav, USB)\n- Th\u1ee9 3: \u0110\u00e8n LED quay d\u1ef1ng (ring light, softbox, LED panel)\n- Th\u1ee9 4: Gimbal & Stabilizer (DJI OM, Zhiyun, Feiyu)\n- Th\u1ee9 5: Lens & m\u00e1y quay (lens cho mirrorless, action cam, flycam)\n- Th\u1ee9 6: Ph\u1ee5 ki\u1ec7n quay (tripod, monitor, microphone accessories)\n- Th\u1ee9 7: Thi\u1ebft b\u1ecb chuy\u00ean nghi\u1ec7p \u0111\u01b0\u1ee3c KOL tin d\u00f9ng\n- Ch\u1ee7 nh\u1eadt: T\u1ed5ng h\u1ee3p tu\u1ea7n + trending t\u1ed5ng qu\u00e1t\n\n## Research Rules\n- M\u1ed7i s\u1ea3n ph\u1ea9m PH\u1ea2I c\u00f3 \u22655 ngu\u1ed3n:\n  1. TikTok Shop product page (URL + ng\u00e0y)\n  2. TikTok Shop affiliate commission rate (Seller Center)\n  3. \u22651 KOL TikTok review (link video, view count, ng\u00e0y)\n  4. \u22651 review t\u1eeb ng\u01b0\u1eddi \u0111\u00e3 mua th\u1eadt (comment TikTok Shop, group Facebook, Voz, Tinh t\u1ebf)\n  5. So s\u00e1nh gi\u00e1 ng\u1eafn v\u1edbi Shopee (\u0111\u1ec3 confirm TikTok Shop c\u00f3 c\u1ea1nh tranh kh\u00f4ng)\n\n- D\u1eef li\u1ec7u trending: t\u1ed1i \u0111a 7 ng\u00e0y tu\u1ed5i\n- Specs k\u1ef9 thu\u1eadt: l\u1ea5y t\u1eeb trang ch\u00ednh h\u00e3ng\n- N\u1ebfu s\u1ea3n ph\u1ea9m n\u00e0o ch\u1ec9 c\u00f3 <5 ngu\u1ed3n \u2192 LO\u1ea0I kh\u1ecfi Top 5\n\n## Routing Rule\n- N\u1ebfu c\u1ea7n crawl >10 s\u1ea3n ph\u1ea9m \u2192 delegate cho Researcher_Clawd_Bot\n- N\u1ebfu ch\u1ec9 c\u1ea7n top 5 \u2192 t\u1ef1 research b\u1eb1ng web_search + exa\n\n## Deliverable\n\n### File 1: `~/Workspace/Claude/Projects/Content Creator/Research/{YYYY-MM-DD}/tiktok-shop-{niche}-trending.md`\nC\u1ea5u tr\u00fac:\n```markdown\n---\ntitle: TikTok Shop Trending \u2014 {Niche} \u2014 {YYYY-MM-DD}\ndate: {YYYY-MM-DD}\njob: tiktok-shop-trending\nniche: {mic|led|gimbal|lens|accessory|pro|weekly-summary}\nsources_count: {N}\nconfidence: high | medium | low\n---\n\n# Top 5 Trending {Niche} tr\u00ean TikTok Shop VN \u2014 {YYYY-MM-DD}\n\n## TL;DR\n- Top pick: {s\u1ea3n ph\u1ea9m} v\u00ec {l\u00fd do c\u1ee5 th\u1ec3}\n- Xu h\u01b0\u1edbng ch\u00ednh h\u00f4m nay: ...\n- C\u01a1 h\u1ed9i affiliate \u0111\u00e1ng ch\u00fa \u00fd: ...\n\n## Top 5 s\u1ea3n ph\u1ea9m trending\n\n| # | S\u1ea3n ph\u1ea9m | Gi\u00e1 | \u0110\u00e3 b\u00e1n | Rating | Review | Commission | Affiliate link | Ngu\u1ed3n |\n|---|----------|-----|--------|--------|--------|------------|----------------|--------|\n| 1 | ... | ... | ... | ... | ... | ... | ... | ... |\n\n## Ph\u00e2n t\u00edch chi ti\u1ebft\n### #1. {S\u1ea3n ph\u1ea9m}\n- **Gi\u00e1 & shop:** ...\n- **Video KOL review n\u1ed5i b\u1eadt:** {link, view, KOL n\u00e0o}\n- **Review t\u1eeb ng\u01b0\u1eddi mua th\u1eadt:** {tr\u00edch d\u1eabn 2-3 comment}\n- **So s\u00e1nh v\u1edbi Shopee:** ...\n- **\u0110\u00e1nh gi\u00e1 uy t\u00edn:** Test th\u1ef1c t\u1ebf {c\u00f3/kh\u00f4ng}, review th\u1eadt {c\u00f3/kh\u00f4ng}\n- **K\u1ebft lu\u1eadn cho content c\u1ee7a anh:** {g\u1ee3i \u00fd c\u00f3 n\u00ean review kh\u00f4ng}\n\n### #2. ...\n(C\u00e1c s\u1ea3n ph\u1ea9m c\u00f2n l\u1ea1i format t\u01b0\u01a1ng t\u1ef1, ng\u1eafn g\u1ecdn h\u01a1n)\n\n## Cross-platform comparison\n- S\u1ea3n ph\u1ea9m n\u00e0o c\u00f3 tr\u00ean c\u1ea3 TikTok Shop + Shopee?\n- Ch\u00eanh l\u1ec7ch gi\u00e1 bao nhi\u00eau %?\n- N\u00ean promote k\u00eanh n\u00e0o c\u00f3 commission cao h\u01a1n?\n\n## Ngu\u1ed3n\n- [1] [TikTok Shop product page](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [2] [TikTok Shop affiliate dashboard](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [3] [KOL TikTok review video](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [4] [Review t\u1eeb ng\u01b0\u1eddi mua - Group Facebook](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [5] [So s\u00e1nh gi\u00e1 Shopee](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n{T\u1ed1i thi\u1ec3u 5 ngu\u1ed3n, c\u00f3 th\u1ec3 nhi\u1ec1u h\u01a1n n\u1ebfu c\u00f3 data phong ph\u00fa}\n\n## Khuy\u1ebfn ngh\u1ecb cho anh Tu\u1ea5n Anh\n- Video TikTok ng\u1eafn: review top pick\n- Video YouTube d\u00e0i: so s\u00e1nh top 3\n- Content affiliate: link {s\u1ea3n ph\u1ea9m} c\u00f3 commission {X}%\n```\n\n### File 2: Telegram message (O-Lab topic 604)\n```\n\ud83d\udd25 TikTok Shop Trending \u2014 {Niche} \u2014 {YYYY-MM-DD}\n\nTop pick: {s\u1ea3n ph\u1ea9m} ({gi\u00e1}) \u2014 Commission {X}%\n\n\ud83d\udcc1 Full report: ~/Workspace/Claude/Projects/Content Creator/Research/{date}/tiktok-shop-{niche}-trending.md\n\nSources: {N} | Confidence: {high/medium/low}\n```\n\n## Anti-patterns\n- KH\u00d4NG li\u1ec7t k\u00ea s\u1ea3n ph\u1ea9m ch\u1ec9 c\u00f3 1-2 ngu\u1ed3n\n- KH\u00d4NG t\u1ef1 \u0111o\u00e1n \"s\u1ea3n ph\u1ea9m n\u00e0y t\u1ed1t\" \u2014 ph\u1ea3i c\u00f3 KOL review th\u1eadt\n- KH\u00d4NG d\u00f9ng data TikTok Shop c\u0169 >7 ng\u00e0y\n- KH\u00d4NG t\u1ef1 tin v\u00e0o specs n\u1ebfu kh\u00f4ng t\u1eeb trang ch\u00ednh h\u00e3ng\n\n## Timing & Budget\n- T\u1ed1i \u0111a 30 ph\u00fat execution\n- 50 tool calls max\n- N\u1ebfu qu\u00e1 budget \u2192 top 3 thay v\u00ec top 5 + ghi \"BUDGET EXCEEDED\"\n\n---\n\n## \ud83d\udd04 LOOP ENGINEERING HOOK (auto-appended 2026-06-16)\n\n**Mandatory:** Before delivering results, run this hook to log to state.md:\n\n```bash\npython3 ~/.hermes/loop-engineering/profile_state.py run research-lead \"<goal summary>\" 1 <PASS|FAIL> <score>\n```\n\nThis hook is part of the system-wide Loop Engineering pattern. Don't skip it.\n",
+      "skills": [
+        "hermes-autoresearch"
+      ],
+      "skill": "hermes-autoresearch",
+      "model": "MiniMax-M2.7",
+      "provider": "minimax",
+      "base_url": null,
+      "script": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "display": "0 7 * * *"
+      },
+      "schedule_display": "0 7 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 41
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-04T10:33:31.370315+07:00",
+      "next_run_at": "2026-06-17T07:00:00+07:00",
+      "last_run_at": "2026-06-16T02:03:30.616825+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-1003764041476:604",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "603"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "a5c02f2f0d87",
+      "name": "Hermes Agent X Research Daily",
+      "prompt": "# Job 2: Shopee Affiliate Trending Deals \u2014 Daily Research\n\n## Mission\nM\u1ed7i s\u00e1ng 7h30, scan **Shopee.vn** (\u01b0u ti\u00ean ch\u00ednh v\u00ec kh\u00f4ng ch\u1eb7n automation) v\u00e0 **Shopee Affiliate Seller Center** t\u00ecm top 5 deals hot nh\u1ea5t trong ng\u00e1ch thi\u1ebft b\u1ecb quay d\u1ef1ng + c\u00f4ng ngh\u1ec7 content creator \u0111ang c\u00f3:\n- Commission rate cao (\u22655%)\n- Voucher h\u1ea5p d\u1eabn\n- T\u1ef7 l\u1ec7 ch\u1ed1t \u0111\u01a1n cao\n- \u0110\u01b0\u1ee3c nhi\u1ec1u seller ch\u1ea1y affiliate\n\n## Context (KH\u00d4NG THAY \u0110\u1ed4I)\n- Anh Tu\u1ea5n Anh: content creator Vi\u1ec7t Nam TikTok + YouTube\n- Ng\u00e1ch: thi\u1ebft b\u1ecb quay d\u1ef1ng phim (mic, \u0111\u00e8n, gimbal, lens, action cam, flycam, m\u00e1y quay) + c\u00f4ng ngh\u1ec7 content creator + thi\u1ebft b\u1ecb chuy\u00ean nghi\u1ec7p\n- 3 nh\u00f3m kh\u00e1n gi\u1ea3: (1) sinh vi\u00ean 18-22 TikTok, (2) ng\u01b0\u1eddi \u0111i l\u00e0m 25-35 YouTube, (3) seller TikTok Shop\n- Ti\u00eau ch\u00ed uy t\u00edn: test th\u1ef1c t\u1ebf + review t\u1eeb ng\u01b0\u1eddi \u0111\u00e3 mua th\u1eadt\n- **Affiliate: Shopee \u01b0u ti\u00ean CH\u00cdNH, TikTok Shop l\u00e0 ngu\u1ed3n ph\u1ee5**\n\n## Scope h\u00f4m nay\n**Sub-niche rotation** (xoay theo ng\u00e0y, \u0111\u1ed1i x\u1ee9ng v\u1edbi job TikTok Shop):\n- Th\u1ee9 2: Combo beginner kit (g\u00f3i ph\u1ee5 ki\u1ec7n cho ng\u01b0\u1eddi m\u1edbi)\n- Th\u1ee9 3: Mic + audio gear\n- Th\u1ee9 4: \u0110\u00e8n + lighting gear\n- Th\u1ee9 5: Gimbal + camera support\n- Th\u1ee9 6: Tripod, mount, accessories\n- Th\u1ee9 7: Flycam + action cam\n- Ch\u1ee7 nh\u1eadt: Weekly deal summary\n\n## Research Rules\n- **M\u1ed7i s\u1ea3n ph\u1ea9m ph\u1ea3i c\u00f3 \u22655 ngu\u1ed3n:**\n  1. **Shopee.vn product page** (URL + gi\u00e1 hi\u1ec7n t\u1ea1i + rating + s\u1ed1 \u0111\u00e3 b\u00e1n) \u2014 NGU\u1ed2N CH\u00cdNH\n  2. **Shopee Affiliate Seller Center** (commission rate + cookie window + EPC) \u2014 NGU\u1ed2N CH\u00cdNH\n  3. **Voucher hi\u1ec7n c\u00f3** (Shopee Voucher, Free Ship, Flash Sale) \u2014 NGU\u1ed2N CH\u00cdNH\n  4. **KOL TikTok/YouTube review** (link video, view, ng\u00e0y) \u2014 verify uy t\u00edn\n  5. **Review t\u1eeb ng\u01b0\u1eddi mua th\u1eadt** (comment Shopee, group Facebook, Voz, Tinh t\u1ebf)\n\n- D\u1eef li\u1ec7u deal: t\u1ed1i \u0111a 7 ng\u00e0y tu\u1ed5i\n- Commission rate: verify tr\u00ean Seller Center ng\u00e0y h\u00f4m nay\n- N\u1ebfu deal ch\u1ec9 c\u00f3 <5 ngu\u1ed3n \u2192 LO\u1ea0I\n\n## Routing Rule\n- N\u1ebfu c\u1ea7n crawl >10 s\u1ea3n ph\u1ea9m \u2192 delegate cho Researcher_Clawd_Bot\n- Top 5 th\u00ec t\u1ef1 research\n\n## Deliverable\n\n### File 1: `~/Workspace/Claude/Projects/Content Creator/Research/{YYYY-MM-DD}/shopee-deal-{niche}.md`\n```markdown\n---\ntitle: Shopee Affiliate Trending \u2014 {Niche} \u2014 {YYYY-MM-DD}\ndate: {YYYY-MM-DD}\njob: shopee-affiliate-trending\nniche: {kit|mic|light|gimbal|accessory|flycam|weekly-summary}\nsources_count: {N}\nconfidence: high | medium | low\n---\n\n# Top 5 Shopee Deals \u2014 {Niche} \u2014 {YYYY-MM-DD}\n\n## TL;DR\n- Best commission: {s\u1ea3n ph\u1ea9m} v\u1edbi {X}%\n- Deal t\u1ed1t nh\u1ea5t cho ng\u01b0\u1eddi m\u1edbi: {s\u1ea3n ph\u1ea9m} (gi\u00e1 g\u1ed1c \u2192 gi\u00e1 sale)\n- C\u01a1 h\u1ed9i convert cao: {s\u1ea3n ph\u1ea9m} (v\u00ec {l\u00fd do})\n\n## Top 5 deals\n\n| # | S\u1ea3n ph\u1ea9m | Gi\u00e1 g\u1ed1c | Gi\u00e1 sale | Voucher | Commission | Cookie | \u0110\u00e3 b\u00e1n | Rating | Affiliate link | Ngu\u1ed3n |\n|---|----------|---------|----------|---------|------------|--------|--------|--------|----------------|--------|\n| 1 | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |\n\n## Ph\u00e2n t\u00edch chi ti\u1ebft\n### #1. {S\u1ea3n ph\u1ea9m}\n- **Gi\u00e1 & Voucher:** {chi ti\u1ebft gi\u1ea3m gi\u00e1}\n- **Commission:** {X}% trong {Y} ng\u00e0y cookie\n- **KOL \u0111\u00e3 review:** {link video TikTok/YouTube + view count + KOL n\u00e0o}\n- **Review t\u1eeb ng\u01b0\u1eddi mua th\u1eadt:** {tr\u00edch 2-3 comment c\u00f3 verify \"\u0111\u00e3 mua\"}\n- **So s\u00e1nh v\u1edbi TikTok Shop:** {c\u00f3/kh\u00f4ng c\u00f3, ch\u00eanh gi\u00e1 bao nhi\u00eau}\n- **\u0110\u00e1nh gi\u00e1 uy t\u00edn cho content:** Test th\u1ef1c t\u1ebf {c\u00f3/kh\u00f4ng}, Review th\u1eadt {c\u00f3/kh\u00f4ng}\n- **K\u1ebft lu\u1eadn affiliate:** N\u00ean push kh\u00f4ng? V\u00ec sao?\n\n### #2. ...\n(C\u00e1c s\u1ea3n ph\u1ea9m c\u00f2n l\u1ea1i format t\u01b0\u01a1ng t\u1ef1)\n\n## Conversion Tips\n- Hook n\u00e0o ph\u00f9 h\u1ee3p v\u1edbi s\u1ea3n ph\u1ea9m n\u00e0y (g\u1ee3i \u00fd 2-3 hook pattern)\n- Audience segment n\u00e0o n\u00ean nh\u1eafm (sinh vi\u00ean / ng\u01b0\u1eddi \u0111i l\u00e0m / seller)\n\n## Ngu\u1ed3n\n- [1] [Shopee product page](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [2] [Shopee Affiliate dashboard](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [3] [Shopee Voucher page](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [4] [KOL review video](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [5] [Review t\u1eeb ng\u01b0\u1eddi mua - Group Facebook](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n\n## Khuy\u1ebfn ngh\u1ecb cho anh Tu\u1ea5n Anh\n- Video TikTok: hook \"{g\u1ee3i \u00fd hook}\" + show deal n\u00e0y\n- Video YouTube: so s\u00e1nh v\u1edbi \u0111\u1ed1i th\u1ee7\n- Affiliate link n\u00ean \u0111\u1eb7t \u1edf \u0111\u00e2u trong content\n```\n\n### File 2: Telegram message (O-Lab topic 604)\n```\n\ud83d\udcb0 Shopee Hot Deals \u2014 {Niche} \u2014 {YYYY-MM-DD}\n\nBest commission: {s\u1ea3n ph\u1ea9m} ({X}%)\nTop pick: {s\u1ea3n ph\u1ea9m} \u2014 Gi\u00e1 {Y}k (gi\u1ea3m {Z}%)\n\n\ud83d\udcc1 ~/Workspace/Claude/Projects/Content Creator/Research/{date}/shopee-deal-{niche}.md\n\nSources: {N} | Confidence: {high/medium/low}\n```\n\n## Anti-patterns\n- KH\u00d4NG ch\u1ec9 d\u00f9ng 1 ngu\u1ed3n Shopee\n- KH\u00d4NG t\u1ef1 \u0111o\u00e1n commission rate (ph\u1ea3i verify Seller Center)\n- KH\u00d4NG skip verify KOL uy t\u00edn\n- KH\u00d4NG push deal kh\u00f4ng c\u00f3 review th\u1eadt\n\n## Timing & Budget\n- 30 ph\u00fat max\n- 50 tool calls max\n- N\u1ebfu qu\u00e1 budget \u2192 top 3 + ghi BUDGET EXCEEDED\n\n---\n\n## \ud83d\udd04 LOOP ENGINEERING HOOK (auto-appended 2026-06-16)\n\n**Mandatory:** Before delivering results, run this hook to log to state.md:\n\n```bash\npython3 ~/.hermes/loop-engineering/profile_state.py run research-lead \"<goal summary>\" 1 <PASS|FAIL> <score>\n```\n\nThis hook is part of the system-wide Loop Engineering pattern. Don't skip it.\n",
+      "skills": [
+        "hermes-autoresearch"
+      ],
+      "skill": "hermes-autoresearch",
+      "model": "MiniMax-M2.7",
+      "provider": "minimax",
+      "base_url": null,
+      "script": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 7 * * *",
+        "display": "30 7 * * *"
+      },
+      "schedule_display": "30 7 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 41
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-04T13:51:06.979177+07:00",
+      "next_run_at": "2026-06-17T07:30:00+07:00",
+      "last_run_at": "2026-06-16T07:02:15.358962+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-1003764041476:604",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "603"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "5aea298eb0a8",
+      "name": "Hermes Daily Session Review",
+      "prompt": "# Hermes Daily Session Review \u2014 0AM (Content Creator Context)\n\n## Mission\nM\u1ed7i s\u00e1ng 0h, review t\u1ea5t c\u1ea3 session logs t\u1eeb h\u00f4m qua, extract:\n1. Nh\u1eefng research n\u00e0o \u0111\u00e3 l\u00e0m v\u1ec1 thi\u1ebft b\u1ecb quay d\u1ef1ng / c\u00f4ng ngh\u1ec7 content creator\n2. Nh\u1eefng khuy\u1ebfn ngh\u1ecb n\u00e0o \u0111\u00e3 \u0111\u01b0a cho anh Tu\u1ea5n Anh v\u1ec1 content/affiliate\n3. Nh\u1eefng gap n\u00e0o c\u1ea7n research ti\u1ebfp trong ng\u00e0y h\u00f4m nay\n\n## Context (KH\u00d4NG THAY \u0110\u1ed4I)\n- Anh Tu\u1ea5n Anh: content creator Vi\u1ec7t Nam TikTok + YouTube\n- Ng\u00e1ch: thi\u1ebft b\u1ecb quay d\u1ef1ng phim + c\u00f4ng ngh\u1ec7 content creator\n- 3 nh\u00f3m kh\u00e1n gi\u1ea3: (1) sinh vi\u00ean 18-22 TikTok, (2) ng\u01b0\u1eddi \u0111i l\u00e0m 25-35 YouTube, (3) seller TikTok Shop\n- Ti\u00eau ch\u00ed uy t\u00edn: test th\u1ef1c t\u1ebf + review t\u1eeb ng\u01b0\u1eddi \u0111\u00e3 mua th\u1eadt\n- Affiliate: TikTok Shop + Shopee Affiliate (Shopee \u01b0u ti\u00ean ch\u00ednh v\u00ec kh\u00f4ng ch\u1eb7n automation)\n\n## Scope h\u00f4m nay\n**Ch\u1ec9 trong context Content Creator**, review session logs 24h qua:\n- Filter ra nh\u1eefng tool calls c\u00f3 keyword: \"mic\", \"\u0111\u00e8n\", \"gimbal\", \"lens\", \"flycam\", \"action cam\", \"TikTok Shop\", \"Shopee Affiliate\", \"review\", \"test\"\n- B\u1ecf qua c\u00e1c session v\u1ec1 AI agent, coding, system admin\n\n## Research Rules\n- KH\u00d4NG c\u1ea7n research ngo\u00e0i \u2014 ch\u1ec9 t\u1ed5ng h\u1ee3p t\u1eeb session logs\n- T\u1ed1i \u0111a 30 ph\u00fat execution\n- N\u1ebfu session DB tr\u1ed1ng/corrupt \u2192 ghi \"NO SESSION DATA\" v\u00e0 skip\n\n## Routing\n- KH\u00d4NG delegate cho Researcher bot (\u0111\u00e2y l\u00e0 internal review, kh\u00f4ng c\u1ea7n external research)\n- KH\u00d4NG d\u00f9ng web_search (ch\u1ec9 \u0111\u1ecdc local data)\n\n## Deliverable\n### File 1: `~/Workspace/Claude/Projects/Content Creator/Research/{YYYY-MM-DD}/daily-session-review.md`\nFormat:\n```markdown\n# Daily Session Review \u2014 {YYYY-MM-DD}\n\n## TL;DR\n- {s\u1ed1 session li\u00ean quan Content Creator h\u00f4m qua}\n- {top insight/decision \u0111\u00e3 \u0111\u01b0a ra}\n- {gap c\u1ea7n x\u1eed l\u00fd h\u00f4m nay}\n\n## Sessions li\u00ean quan\n| Th\u1eddi gian | Topic ch\u00ednh | Output \u0111\u00e3 t\u1ea1o | Decision/Khuy\u1ebfn ngh\u1ecb |\n|-----------|-------------|---------------|----------------------|\n| ... | ... | ... | ... |\n\n## Research \u0111\u00e3 l\u00e0m h\u00f4m qua\n- ...\n\n## Gaps c\u1ea7n fill h\u00f4m nay\n- ...\n\n## Action items cho h\u00f4m nay\n- [ ] ...\n```\n\n### File 2: Telegram message (g\u1eedi v\u1ec1 O-Lab topic 604)\n```\n\ud83d\udccb Daily Review \u2014 {YYYY-MM-DD}\n\n{1 d\u00f2ng t\u00f3m t\u1eaft h\u00f4m qua}\n{1 d\u00f2ng gap quan tr\u1ecdng nh\u1ea5t c\u1ea7n x\u1eed l\u00fd h\u00f4m nay}\n\n\ud83d\udcc1 {path to file}\n```\n\n## Anti-patterns\n- KH\u00d4NG t\u1ed5ng h\u1ee3p session v\u1ec1 AI/coding/system \u2014 ch\u1ec9 Content Creator\n- KH\u00d4NG \u0111\u01b0a ra khuy\u1ebfn ngh\u1ecb m\u1edbi \u2014 ch\u1ec9 REPORT nh\u1eefng g\u00ec \u0111\u00e3 l\u00e0m\n- KH\u00d4NG research ngo\u00e0i \u2014 ch\u1ec9 internal review\n\n## Verification Checklist\n- [ ] File \u0111\u01b0\u1ee3c save \u0111\u00fang path\n- [ ] Telegram message ng\u1eafn g\u1ecdn <5 d\u00f2ng\n- [ ] Ch\u1ec9 ch\u1ee9a data t\u1eeb session logs (kh\u00f4ng t\u1ef1 b\u1ecba)\n- [ ] Action items r\u00f5 r\u00e0ng, c\u00f3 th\u1ec3 th\u1ef1c thi ngay\n\n---\n\n## \ud83d\udd04 LOOP ENGINEERING HOOK (auto-appended 2026-06-16)\n\n**Mandatory:** Before delivering results, run this hook to log to state.md:\n\n```bash\npython3 ~/.hermes/loop-engineering/profile_state.py run default \"<goal summary>\" 1 <PASS|FAIL> <score>\n```\n\nThis hook is part of the system-wide Loop Engineering pattern. Don't skip it.\n",
+      "skills": [],
+      "skill": null,
+      "model": "MiniMax-M2.7",
+      "provider": "minimax",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 * * *",
+        "display": "0 0 * * *"
+      },
+      "schedule_display": "0 0 * * *",
+      "repeat": {
+        "times": 999,
+        "completed": 41
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-08T08:42:19.421587+07:00",
+      "next_run_at": "2026-06-18T00:00:00+07:00",
+      "last_run_at": "2026-06-17T00:02:31.390234+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-1003764041476:604",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "603"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "a2786fb20bac",
+      "name": "Wiki Health Daily",
+      "prompt": "# Wiki Health Daily \u2014 Content Creator Wiki\n\n## Mission\nM\u1ed7i s\u00e1ng 4h, ki\u1ec3m tra s\u1ee9c kh\u1ecfe c\u1ee7a `~/Workspace/Claude/Projects/Content Creator/` wiki:\n- Files broken links\n- Files thi\u1ebfu frontmatter\n- Files outdated > 30 ng\u00e0y\n- Orphan files (kh\u00f4ng ai link t\u1edbi)\n\n## Context (KH\u00d4NG THAY \u0110\u1ed4I)\n- Wiki path: `~/Workspace/Claude/Projects/Content Creator/`\n- Bao g\u1ed3m: Analysis/, Operations/, hub.md, Research/, v\u00e0 c\u00e1c sub-folder kh\u00e1c\n- Wiki n\u00e0y ph\u1ee5c v\u1ee5 m\u1ee5c ti\u00eau Content Creator c\u1ee7a anh Tu\u1ea5n Anh\n\n## Scope h\u00f4m nay\n- Ch\u1ec9 check folder Content Creator, KH\u00d4NG check `/Volumes/Storage-1/Hermes/wiki/`\n- Output b\u00e1o c\u00e1o t\u00ecnh tr\u1ea1ng wiki + \u0111\u1ec1 xu\u1ea5t actions\n\n## Routing\n- KH\u00d4NG delegate \u2014 internal infrastructure check\n- KH\u00d4NG crawl web\n\n## Deliverable\n\n### File 1: `~/Workspace/Claude/Projects/Content Creator/Research/{YYYY-MM-DD}/wiki-health.md`\n```markdown\n# Wiki Health Report \u2014 {YYYY-MM-DD}\n\n## TL;DR\n- T\u1ed5ng files: {N}\n- Healthy: {N} | C\u00f3 v\u1ea5n \u0111\u1ec1: {N}\n- {1 issue nghi\u00eam tr\u1ecdng nh\u1ea5t c\u1ea7n fix ngay}\n\n## T\u1ed5ng quan\n- Total markdown files: {N}\n- Total size: {MB}\n- Last modified: {date}\n\n## Issues\n### Broken links ({N})\n| File | Missing target | Priority |\n|------|----------------|----------|\n| ... | ... | high/medium/low |\n\n### Missing frontmatter ({N})\n| File | Missing fields |\n|------|----------------|\n| ... | ... |\n\n### Outdated >30 ng\u00e0y ({N})\n| File | Last modified | Days old |\n|------|---------------|----------|\n| ... | ... | ... |\n\n### Orphans ({N})\n| File | Reason orphan |\n|------|---------------|\n| ... | ... |\n\n## Recommended Actions\n- [ ] Fix broken link trong {file}\n- [ ] Add frontmatter cho {file}\n- [ ] ...\n\n## Auto-fixed (n\u1ebfu c\u00f3)\n- \u0110\u00e3 t\u1ef1 s\u1eeda: {list}\n```\n\n### File 2: Telegram message\n```\n\ud83c\udfe5 Wiki Health \u2014 {YYYY-MM-DD}\n\nTotal: {N} files | {Healthy}/{C\u00f3 v\u1ea5n \u0111\u1ec1}\n\u26a0\ufe0f Critical: {N issue nghi\u00eam tr\u1ecdng}\n\n\ud83d\udcc1 {path}\n```\n\n## Anti-patterns\n- KH\u00d4NG modify files (ch\u1ec9 report, kh\u00f4ng t\u1ef1 fix)\n- KH\u00d4NG check folder ngo\u00e0i Content Creator\n- KH\u00d4NG crawl web\n\n---\n\n## \ud83d\udd04 LOOP ENGINEERING HOOK (auto-appended 2026-06-16)\n\n**Mandatory:** Before delivering results, run this hook to log to state.md:\n\n```bash\npython3 ~/.hermes/loop-engineering/profile_state.py run memory-curator \"<goal summary>\" 1 <PASS|FAIL> <score>\n```\n\nThis hook is part of the system-wide Loop Engineering pattern. Don't skip it.\n",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "wiki_health.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
+      },
+      "schedule_display": "0 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 30
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-18T01:09:51.272803+07:00",
+      "next_run_at": "2026-06-17T04:00:00+07:00",
+      "last_run_at": "2026-06-16T04:00:41.240799+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-1003764041476:604",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "603"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "e92dd2490973",
+      "name": "Wiki Memory Forget Daily",
+      "prompt": "# Wiki Memory Forget Daily \u2014 Cleanup c\u0169 (NO AGENT)\n\nScript: `/Users/tuananh4865/.hermes/scripts/wiki_forget_14days.py`\n\n## Mission\nM\u1ed7i ng\u00e0y 3h s\u00e1ng, d\u1ecdn d\u1eb9p c\u00e1c file .md c\u0169 h\u01a1n 14 ng\u00e0y trong `~/Workspace/Claude/Projects/Content Creator/Research/` (tr\u1eeb c\u00e1c file quan tr\u1ecdng).\n\n## Gi\u1eef nguy\u00ean h\u00e0nh vi hi\u1ec7n t\u1ea1i c\u1ee7a script\n- KH\u00d4NG thay \u0111\u1ed5i logic\n- KH\u00d4NG th\u00eam research rules\n- \u0110\u00e2y l\u00e0 infrastructure job, kh\u00f4ng c\u1ea7n LLM\n\n## Deliverable\n- KH\u00d4NG g\u1eedi Telegram (gi\u1eef `local` delivery)\n- Ch\u1ec9 ghi log ra file\n\n---\n\n## \ud83d\udd04 LOOP ENGINEERING HOOK (auto-appended 2026-06-16)\n\n**Mandatory:** Before delivering results, run this hook to log to state.md:\n\n```bash\npython3 ~/.hermes/loop-engineering/profile_state.py run memory-curator \"<goal summary>\" 1 <PASS|FAIL> <score>\n```\n\nThis hook is part of the system-wide Loop Engineering pattern. Don't skip it.\n",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "wiki_forget_14days.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "0 3 * * *"
+      },
+      "schedule_display": "0 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 19
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-28T11:21:27.451539+07:00",
+      "next_run_at": "2026-06-17T03:00:00+07:00",
+      "last_run_at": "2026-06-16T03:00:32.906825+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "-1003764041476",
+        "chat_name": "O-Lab",
+        "thread_id": "1"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "546c141c8fb9",
+      "name": "TikTok 5-Channel Nightly Monitor",
+      "prompt": "# Job 3: YouTube Search Trends \u2014 Content Creator Gear\n\n## Mission\nM\u1ed7i s\u00e1ng 8h, track **YouTube Search** trending v\u1ec1 \"review mic/\u0111\u00e8n/gimbal cho ng\u01b0\u1eddi m\u1edbi l\u00e0m content creator\":\n- Top videos trending 24-72h qua\n- Search volume t\u0103ng/gi\u1ea3m\n- Channel n\u00e0o \u0111ang push m\u1ea1nh\n- Content format n\u00e0o viewer th\u00edch (so s\u00e1nh, h\u01b0\u1edbng d\u1eabn, unbox)\n\n## Context (KH\u00d4NG THAY \u0110\u1edeI)\n- Anh Tu\u1ea5n Anh: content creator Vi\u1ec7t Nam TikTok + YouTube\n- Ng\u00e1ch: thi\u1ebft b\u1ecb quay d\u1ef1ng phim + c\u00f4ng ngh\u1ec7 content creator\n- 3 nh\u00f3m kh\u00e1n gi\u1ea3: (1) sinh vi\u00ean 18-22 TikTok, (2) ng\u01b0\u1eddi \u0111i l\u00e0m 25-35 YouTube, (3) seller TikTok Shop\n- Ti\u00eau ch\u00ed uy t\u00edn: test th\u1ef1c t\u1ebf + review t\u1eeb ng\u01b0\u1eddi \u0111\u00e3 mua th\u1eadt\n- Affiliate: TikTok Shop + Shopee Affiliate (Shopee \u01b0u ti\u00ean ch\u00ednh)\n\n## Scope h\u00f4m nay\n**Sub-niche keywords rotation** (xoay theo ng\u00e0y, b\u1ed5 sung cho TikTok Shop + Shopee jobs):\n- Th\u1ee9 2: \"review mic thu \u00e2m cho ng\u01b0\u1eddi m\u1edbi\"\n- Th\u1ee9 3: \"\u0111\u00e8n LED quay video gi\u00e1 r\u1ebb\"\n- Th\u1ee9 4: \"gimbal \u0111i\u1ec7n tho\u1ea1i n\u00e0o t\u1ed1t\"\n- Th\u1ee9 5: \"flycam cho ng\u01b0\u1eddi m\u1edbi b\u1eaft \u0111\u1ea7u\"\n- Th\u1ee9 6: \"action cam n\u00e0o \u0111\u00e1ng mua\"\n- Th\u1ee9 7: \"lens cho m\u00e1y quay vlog\"\n- Ch\u1ee7 nh\u1eadt: \"best gear cho content creator 2026\"\n\n## Research Rules\n- **M\u1ed7i video trending ph\u1ea3i c\u00f3 \u22655 ngu\u1ed3n:**\n  1. **YouTube search result** (URL video, view count, ng\u00e0y upload)\n  2. **YouTube channel info** (s\u1ed1 subscriber, niche c\u1ee7a channel)\n  3. **Engagement metrics** (like, comment count, retention n\u1ebfu th\u1ea5y)\n  4. **So s\u00e1nh tr\u00ean TikTok** (c\u00f9ng s\u1ea3n ph\u1ea9m c\u00f3 KOL TikTok n\u00e0o review ch\u01b0a)\n  5. **Search trend data** (Google Trends ho\u1eb7c YouTube trending list)\n\n- D\u1eef li\u1ec7u trending: t\u1ed1i \u0111a 7 ng\u00e0y tu\u1ed5i\n- Channel uy t\u00edn: \u226510K subscribers + engagement >3%\n- N\u1ebfu kh\u00f4ng t\u00ecm \u0111\u1ee7 5 ngu\u1ed3n cho 1 video \u2192 ghi CH\u01afA \u0110\u1ee6 D\u1eee LI\u1ec6U\n\n## Routing Rule\n- Crawl nhi\u1ec1u video \u2192 delegate cho Researcher_Clawd_Bot\n- Top 5-10 video th\u00ec t\u1ef1 research\n\n## Deliverable\n\n### File 1: `~/Workspace/Claude/Projects/Content Creator/Research/{YYYY-MM-DD}/youtube-trending-{niche}.md`\n```markdown\n---\ntitle: YouTube Trending \u2014 {Niche} \u2014 {YYYY-MM-DD}\ndate: {YYYY-MM-DD}\njob: youtube-trending\nniche: {mic|light|gimbal|flycam|action-cam|lens|weekly}\nsources_count: {N}\nconfidence: high | medium | low\n---\n\n# YouTube Trending \u2014 {Niche} \u2014 {YYYY-MM-DD}\n\n## TL;DR\n- Video trending nh\u1ea5t: \"{title}\" b\u1edfi {channel} \u2014 {views} views\n- Format \u0111ang hot: {so s\u00e1nh|h\u01b0\u1edbng d\u1eabn|unbox|review}\n- Search keyword t\u0103ng m\u1ea1nh: \"{keyword}\" +{X}%\n- C\u01a1 h\u1ed9i cho anh: {g\u1ee3i \u00fd video n\u00ean l\u00e0m}\n\n## Top 10 YouTube videos trending\n\n| # | Title | Channel | Subs | Views | Posted | Format | Affiliate? | Ngu\u1ed3n |\n|---|-------|---------|------|-------|--------|--------|------------|--------|\n| 1 | ... | ... | ... | ... | ... | ... | ... | ... |\n\n## Ph\u00e2n t\u00edch chi ti\u1ebft\n### #1. \"{Title}\"\n- **Channel:** {name + subs + verification}\n- **Engagement:** {likes/comments + retention n\u1ebfu c\u00f3}\n- **Content format:** {so s\u00e1nh 2 s\u1ea3n ph\u1ea9m / h\u01b0\u1edbng d\u1eabn s\u1eed d\u1ee5ng / unbox / review chi ti\u1ebft}\n- **Hook pattern:** {c\u00e1ch m\u1edf \u0111\u1ea7u video}\n- **S\u1ea3n ph\u1ea9m ch\u00ednh:** {list s\u1ea3n ph\u1ea9m \u0111\u01b0\u1ee3c review}\n- **C\u00f3 affiliate link kh\u00f4ng:** {c\u00f3/kh\u00f4ng, n\u1ebfu c\u00f3 th\u00ec d\u1eabn t\u1edbi \u0111\u00e2u}\n- **B\u00e0i h\u1ecdc cho anh:** {r\u00fat ra \u0111i\u1ec1u g\u00ec cho content c\u1ee7a m\u00ecnh}\n\n### #2-#10: ...\n(T\u00f3m t\u1eaft ng\u1eafn g\u1ecdn)\n\n## Search Trend Analysis\n- **Keyword t\u0103ng m\u1ea1nh:** \"{keyword}\" t\u0103ng {X}% trong 7 ng\u00e0y\n- **Keyword \u0111ang gi\u1ea3m:** \"{keyword}\" gi\u1ea3m {X}%\n- **Keyword m\u1edbi n\u1ed5i:** \"{keyword}\"\n\n## So s\u00e1nh v\u1edbi TikTok\n- C\u00f9ng s\u1ea3n ph\u1ea9m, KOL TikTok n\u00e0o \u0111\u00e3 review?\n- Format n\u00e0o trending tr\u00ean TikTok nh\u01b0ng ch\u01b0a c\u00f3 tr\u00ean YouTube?\n- C\u01a1 h\u1ed9i cross-post?\n\n## Ngu\u1ed3n\n- [1] [YouTube search results](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [2] [YouTube channel page](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [3] [YouTube Studio analytics](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [4] [Google Trends data](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n- [5] [TikTok comparison search](URL) \u2014 truy c\u1eadp {YYYY-MM-DD}\n\n## Khuy\u1ebfn ngh\u1ecb cho anh Tu\u1ea5n Anh\n- Video n\u00ean l\u00e0m h\u00f4m nay: \"{topic g\u1ee3i \u00fd}\"\n- Hook n\u00ean d\u00f9ng: \"{hook pattern}\"\n- Cross-post sang TikTok kh\u00f4ng? {c\u00f3/kh\u00f4ng, format c\u1ea7n ch\u1ec9nh g\u00ec}\n```\n\n### File 2: Telegram message (O-Lab topic 604)\n```\n\ud83d\udcfa YouTube Trending \u2014 {Niche} \u2014 {YYYY-MM-DD}\n\nHot: \"{video title}\" ({views} views, {channel})\nTrend \u2191: \"{keyword}\" +{X}%\n\n\ud83d\udcc1 ~/Workspace/Claude/Projects/Content Creator/Research/{date}/youtube-trending-{niche}.md\n\nSources: {N} | Confidence: {high/medium/low}\n```\n\n## Anti-patterns\n- KH\u00d4NG ch\u1ec9 d\u1ef1a v\u00e0o view count (c\u00f2n c\u1ea7n check channel uy t\u00edn)\n- KH\u00d4NG b\u1ecf qua retention metric\n- KH\u00d4NG g\u1ee3i \u00fd copy nguy\u00ean format (ch\u1ec9 h\u1ecdc pattern)\n- KH\u00d4NG skip cross-platform comparison\n\n## Timing & Budget\n- 30 ph\u00fat max\n- 50 tool calls max\n- N\u1ebfu qu\u00e1 budget \u2192 top 5 + ghi BUDGET EXCEEDED\n\n---\n\n## \ud83d\udd04 LOOP ENGINEERING HOOK (auto-appended 2026-06-16)\n\n**Mandatory:** Before delivering results, run this hook to log to state.md:\n\n```bash\npython3 ~/.hermes/loop-engineering/profile_state.py run content-director \"<goal summary>\" 1 <PASS|FAIL> <score>\n```\n\nThis hook is part of the system-wide Loop Engineering pattern. Don't skip it.\n",
+      "skills": [],
+      "skill": null,
+      "model": "MiniMax-M2.7",
+      "provider": "minimax",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "display": "0 8 * * *"
+      },
+      "schedule_display": "0 8 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 10
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-07T10:17:54.908279+07:00",
+      "next_run_at": "2026-06-17T08:00:00+07:00",
+      "last_run_at": "2026-06-15T23:52:55.666721+07:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-1003764041476:604",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "1132914873",
+        "chat_name": "Tu\u1ea5n Anh",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-06-17T00:02:31.390882+07:00"
+}

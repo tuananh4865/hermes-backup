@@ -1,0 +1,25 @@
+{
+  "approvals": [
+    {
+      "command": "/Users/tuananh4865/.hermes/loop-engineering/hook_wrapper.sh --event on_session_start",
+      "event": "on_session_start",
+      "matcher": null
+    },
+    {
+      "command": "/Users/tuananh4865/.hermes/loop-engineering/hook_wrapper.sh --event on_session_end --output $RESPONSE",
+      "event": "on_session_end",
+      "matcher": null
+    },
+    {
+      "command": "/Users/tuananh4865/.hermes/loop-engineering/hook_wrapper.sh --event post_tool_call --output $TOOL_RESULT --goal $TOOL_NAME",
+      "event": "post_tool_call",
+      "matcher": null
+    },
+    {
+      "approved_at": "2026-06-16T16:02:22.279864Z",
+      "command": "/Users/tuananh4865/.hermes/hooks/transcript-saver-v2/hook_wrapper.sh --event agent_end --output \"$RESPONSE\" --message \"$MESSAGE\" --session_id \"$SESSION_ID\" --platform \"$PLATFORM\" --user_id \"$USER_ID\"",
+      "event": "on_session_end",
+      "script_mtime_at_approval": "2026-06-16T14:51:44.866651Z"
+    }
+  ]
+}

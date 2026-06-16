@@ -339,6 +339,36 @@ If you see `[CONTEXT COMPACTION]` and are confused about current task:
 
 ---
 
+## 🆕 PATTERNS ADAPTED FROM CLAUDE FABLE 5 (2026-06-03, system mandate 2026-06-16)
+
+> **Source:** CLAUDE-FABLE-5.md (HARVEST PATTERNS mode).
+> **Rule:** Adapt concept, never copy verbatim. Keep Anh's preferences supreme.
+> **Full detail:** [`~/.hermes/profiles/_shared/fable5-patterns.md`](profiles/_shared/fable5-patterns.md)
+> **CI gate:** `bash ~/.hermes/scripts/check-fable5-compliance.sh`
+
+**4 patterns (summary):**
+
+| # | Pattern | Hermes implementation |
+|---|---------|----------------------|
+| 🔌 | **MCP Connector** | Check `mcp_*` tools trước khi browser |
+| 💾 | **Persistent Storage** | Key `domain:date`, tiered save (memories→wiki→raw) |
+| 📚 | **Skills-First** | `skill_view()` TRƯỚC khi làm complex task |
+| 🔍 | **Search Discipline** | Scale: 1/3-5/5-10, copyright <15 từ/source |
+
+**Quick decision tree:**
+```
+Anh hỏi X
+  ├─ Đã có trong wiki? → Dùng luôn, link tới source
+  ├─ Có MCP match? → Dùng MCP
+  ├─ Cần current data? → web_search (1-5 calls)
+  ├─ Research sâu? → delegate_task parallel
+  └─ Cần xem trang web? → web_extract → browser_navigate
+```
+
+📖 **Xem chi tiết + examples + edge cases** tại `profiles/_shared/fable5-patterns.md`
+
+---
+
 ## SELF-LEARNING REMINDER
 
 After completing a task (especially new types of tasks), ask yourself:
@@ -351,4 +381,77 @@ If yes → save to `entities/learned-about-tuananh.md` or the relevant project w
 
 ---
 
-*Last updated: 2026-04-25*
+## 📋 CHANGE LOG
+
+### 2026-06-16 — System-wide Fable-5 mandate
+- Tuấn Anh: 4 patterns PHẢI áp dụng toàn hệ thống
+- Created `~/.hermes/scripts/check-fable5-compliance.sh` (CI gate)
+- Created `~/.hermes/scripts/add-fable5-to-soul.sh` (idempotent injector)
+- Created `~/.hermes/profiles/_shared/fable5-patterns.md` (shared reference)
+- Refactored 3 profile SOUL.md: inline 38 dòng → reference 12 dòng (~68% token reduction)
+- Refactored main SOUL.md: inline 154 dòng → reference 22 dòng (~86% token reduction)
+
+### 2026-06-03 — Initial harvest
+**Added (from Claude Fable 5 analysis):**
+- § "MCP Connector Awareness" — check MCPs trước khi dùng browser
+- § "Persistent Storage Pattern" — wiki key conventions, tiered storage
+- § "Skills-First Protocol" — load skill TRƯỚC khi execute complex task
+- § "Search Discipline" — when/search/scale/copyright rules
+
+**Removed (not applicable to Hermes):**
+- Claude identity / Mythos class tier
+- Claude-specific tools (places, recipes, weather, sports)
+- Claude's child-safety, refusal handling (Anh's use case = content creator)
+- Tool definitions (Hermes có tools riêng)
+- Tone "warm + bullet-light" (Anh's style = Vietnamese casual, Telegram format)
+
+**Kept unchanged:**
+- Core philosophy (4 rules)
+- Operating language (Vietnamese)
+- Wiki session start protocol
+- All 6 automatic subsystems
+- Confidence scoring + QA gate
+- Task lifecycle, memory checkpoint
+- Skills list (auto-injected từ `available_skills`)
+
+---
+
+*Last updated: 2026-06-16 (Fable-5 system mandate + harness engineering refactor)*
+
+---
+
+## 🆕 FABLE-5 PATTERNS (BẮT BUỘC — 2026-06-16)
+
+> **Source:** Adapted from Claude Fable 5 system prompt (HARVEST PATTERNS mode).
+> **Mandate:** Tuấn Anh yêu cầu 4 patterns này PHẢI áp dụng trong MỌI agent context.
+> **Enforcement:** `~/.hermes/scripts/check-fable5-compliance.sh` chạy CI gate.
+
+### 1. 🔌 MCP CONNECTOR AWARENESS
+- Trước khi dùng browser, CHECK MCP tools đã config (mcp_MiniMax_*, mcp_exa_*, etc.)
+- MCP nhanh hơn + data đầy đủ hơn web_search
+- Map: research → mcp_MiniMax_web_search, code → mcp__github__*, image → mcp_MiniMax_understand_image
+
+### 2. 💾 PERSISTENT STORAGE PATTERN
+- Key convention: `domain:identifier` (không random)
+- Tiered: memories (fast) → wiki (persistent) → archive (raw)
+- Save findings ngay khi research xong — không để cuối session
+
+### 3. 📚 SKILLS-FIRST PROTOCOL
+- TRƯỚC khi làm task phức tạp, load skill tương ứng (skill_view)
+- Bảng 9+ task types → skills (xem SOUL.md mặc định để biết chi tiết)
+- Nếu không load skill → dễ miss insight quan trọng (đã chứng minh với voice 13/06)
+
+### 4. 🔍 SEARCH DISCIPLINE
+- Search khi cần CURRENT info, KHÔNG search timeless facts
+- Scale: 1 fact → 1 search / medium task → 3-5 / deep research → 5-10
+- Tool priority: Wiki → MCP → web_search → browser
+- Copyright: <15 từ/source, 1 quote MAX, paraphrase phần còn lại
+
+---
+
+## 🔒 COMPLIANCE
+- File này được kiểm tra bởi: `~/.hermes/scripts/check-fable5-compliance.sh`
+- Cron enforcement: chạy mỗi session start (TODO: add hook)
+- Manual check: `bash ~/.hermes/scripts/check-fable5-compliance.sh`
+
+*Updated: 2026-06-16 by Tuấn Anh mandate*

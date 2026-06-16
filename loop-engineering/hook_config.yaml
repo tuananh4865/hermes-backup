@@ -1,0 +1,69 @@
+# Loop Engineering Hook Configuration
+# File: ~/.hermes/loop-engineering/hook_config.yaml
+# Đọc bởi hook.py
+
+hook:
+  enabled: true
+  
+  # === Events to subscribe ===
+  events:
+    - "agent:end"
+    - "cron:job:done"
+    - "session:start"
+  
+  # === Quality Checker thresholds ===
+  quality_checker:
+    enabled: true
+    pass_threshold: 9.0
+    warn_threshold: 7.0
+    fail_threshold: 5.0
+    critical_issue_fail: true  # any critical = FAIL
+  
+  # === /goal primitive auto-trigger ===
+  goal_primitive:
+    enabled: true
+    max_runs_default: 5
+    detect_pattern: "/goal|until|loop until|keep running"
+  
+  # === State file management ===
+  state:
+    enabled: true
+    auto_log:
+      - "agent:end"
+      - "cron:job:done"
+    keep_last_n_runs: 100
+    archive_after_days: 30
+  
+  # === Skip conditions ===
+  skip:
+    output_too_short: 100  # chars
+    task_types: ["qa", "navigation", "system_check"]
+  
+  # === Per-profile overrides ===
+  profiles:
+    content-director:
+      voice: "các bạn"  # trung tính
+      banned_words:
+        - "mấy con vợ"
+        - "mấy đứa"
+        - "mấy chị"
+        - "quất một phát"
+        - "đỉnh nóc kịch trần"
+      min_sources: 5
+    
+    research-lead:
+      voice: "người dùng, khán giả"
+      min_sources: 5
+      max_source_age_days: 7
+    
+    coder:
+      require_tests: true
+      require_lint: true
+      forbid_secrets: true
+    
+    default:
+      voice: "anh, em"
+      banned_words:
+        - "mấy con vợ"
+        - "mấy đứa"
+        - "mấy chị"

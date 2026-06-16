@@ -1,0 +1,5 @@
+name: fable5-compliance-check
+description: Auto-verify Fable-5 patterns present in all SOUL.md files on session start. Warn-only, never block.
+events:
+  - session:start
+version: "1.0"

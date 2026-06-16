@@ -1,0 +1,9 @@
+name: loop-engineering
+description: "Auto quality-check + state persistence cho mọi Hermes profile. Pattern: Maker → Checker → Orchestrator → User."
+version: 1.0.0
+author: Hermes Agent (Loop Engineering system)
+events:
+  - agent:end
+  - session:start
+  - agent:start
+enabled: true

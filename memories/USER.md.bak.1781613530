@@ -1,0 +1,42 @@
+§ [PREFERENCES] — explicit preferences discovered over sessions
+- communication: Vietnamese casual
+- response_style: concise, no fluff
+- tiktok_script_style: "anh" + "mấy con vợ"
+§ [PROJECTS] — ongoing work
+- tiktok-content: active
+- hermes-agent: memory-optimizing
+§ [FACTS] — durable facts about user, environment, tools
+- [file] md
+- [model] claude
+- [file] có
+- [preference] rõ** | File không ghi cutoff cho Fable 5 |
+- [preference] tồn tại |
+- [preference] NÊN làm nguyên văn
+- [tool] definitions
+- [file] MCP
+- [file] ngon
+- [file] ~/.hermes/SOUL.md`
+- [file] ~/.hermes/SOUL.md.harvest-v1.bak`
+- [preference] random)
+- [project] anh
+- [project] hi
+- [preference] quote dài, scale vừa đủ |
+- [file] duy [HIGH]
+- [file] skills/plugins/cron/memories [HIGH]
+- [file] `/Users/tuananh4865/.hermes/SOUL.md` [HIGH]
+- [preference] em làm A, B, C hay D?
+- [file] để
+- [preference] làm giảm chất lượng của agent!
+- [file] mới
+- [file] ~/.hermes/profiles/coder/SOUL.md`
+- [file] ~/.hermes/profiles/content-director/SOUL.md`
+- [file] ~/.hermes/profiles/research-lead/SOUL.md`
+- [file] ~/.hermes/scripts/check-fable5-compliance.sh`
+- [file] ~/.hermes/scripts/add-fable5-to-soul.sh`
+- [file] ~/.hermes/profiles/_shared/fable5-patterns.md`
+- [file] sh
+- [preference] tự động inherit SOU
+§ [SESSIONS] — session history summaries
+- 2026-06-16: [The user sent a text document: 'CLAUDE-FABLE-5.md'. Its content has been included below. The file i
+§ [ENTITY_INDEX] — cross-session entity tracking
+§ [GROWTH_LOG] — how user/agent improved

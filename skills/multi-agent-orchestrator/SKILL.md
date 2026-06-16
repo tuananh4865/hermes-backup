@@ -875,8 +875,8 @@ When checking agent status, look for:
 
 12. **QA-CORRECT-BEFORE-DELIVERY (2026-05-08 lesson):** When a script QA check fails, CORRECT the script inline BEFORE reporting to Anh. Never flag a QA failure without fixing it first. "Flagged for correction" is not a valid end state — the corrected version must be what gets delivered.
 
-### CRON ORCHESTRATOR — Authoritative Rule Source
-### CRON ORCHESTRATOR — Authoritative Rule Source
+## CRON ORCHESTRATOR — Authoritative Rule Source
+## CRON ORCHESTRATOR — Authoritative Rule Source
 
 **⚠️ MANDATORY STARTUP SEQUENCE (2026-05-09):** Every orchestrator cron run MUST begin by loading the briefing doc:
 ```
@@ -887,6 +887,8 @@ This is NOT optional. The briefing doc is the "source of truth" and contains:
 - [SILENT] decision tree (ONLY when ALL dirs empty + no changes)
 - TRÁHN QA enforcement gate (block delivery if violations found)
 - Worker output gap detection (workers → cron output dirs, NOT shared outputs/)
+
+**⚠️ PATH CORRECTION (2026-06-16):** `~/hermes/workers/*/` paths referenced throughout this skill are LEGACY from May 2026. After audit, "Worker" is NOT an official Hermes concept — only **Profile** (`hermes profile create`) and **Sub-agent** (`delegate_task`) are. The infrastructure at `~/hermes/workers/` and `~/.hermes/workers/` was deleted on 2026-06-16. Where this skill says "worker" it now means **profile-specific agent** running under `~/.hermes/profiles/<name>/`. See PITFALL 24 below for the full lesson.
 
 **⚠️ KNOWN CONFLICT (2026-05-08):** The orchestrator cron job may use `HEARTBEAT.md` which says:
 > "If ALL sources empty → [SILENT]"
@@ -1081,6 +1083,55 @@ curl -s "https://api.telegram.org/bot${BOT_TOKEN}/getMe"
 ```
 
 **Bot2Bot rule**: Only mention other bots when REALLY NEED TO WORK. Don't mention just to chat!
+
+## PITFALL 24 (2026-06-16): "Worker" is NOT an Official Hermes Concept — Use Profile or Sub-agent
+
+**Symptom**: Built `~/hermes/workers/{content-creator,research-agent,orchestrator}/SOUL.md` + `HEARTBEAT.md` + `outputs/` directories from May 2026 as if they were real worker agents. Injected Fable-5 into them. Wrote skill templates recommending "Worker SOUL.md" as a pattern. All built on a non-existent concept.
+
+**Root cause**: Built infrastructure based on a term in earlier memory without checking Hermes official docs (`hermes-agent.nousresearch.com/docs/`). "Worker" sounds generic but is NOT a Hermes concept.
+
+**Hermes official concepts only:**
+- **Profile** (`hermes profile create <name>`) — independent Hermes instance, OS process riêng, config/memory/sessions riêng, command alias `<name> chat`
+- **Sub-agent** (`delegate_task`) — ephemeral parallel subagent in current session, isolated context
+- **Cron** (`hermes cron create`) — scheduled autonomous agent
+- **Profile Distributions** (shared profile across machines) — covered in docs
+
+**User instruction (2026-06-16)**: "không có concept worker chính thức thì loại bỏ hoàn toàn worker và những memory & wiki liên quan đến worker đi"
+
+**Cleanup executed:**
+- Deleted 25 files: `~/hermes/workers/{content-creator,research-agent,orchestrator,memory}/*` + `~/.hermes/workers/{test-runner-*,content-creator}/*`
+- Updated `check-fable5-compliance.sh` to remove worker scan path
+- Updated `system-wide-mandate-enforcement` skill to remove Worker SOUL.md template + add Phase 0 verification
+
+**Rule for path proposals (hermes-pattern):**
+| Path | Status | Use for |
+|------|--------|---------|
+| `~/.hermes/profiles/<name>/` | ✅ Official (Profile) | Worker-like persistent agent |
+| `~/.hermes/cron/`, `~/.hermes/skills/`, `~/.hermes/hooks/`, `~/.hermes/memories/`, `~/.hermes/kanban/`, `~/.hermes/plugins/` | ✅ Official | Cron, Skills, Hooks, Memory, Kanban, Plugins |
+| `~/.hermes/workers/`, `~/.hermes/agents/`, `~/.hermes/nodes/`, `~/.hermes/team/` | ❌ NOT official | Likely built on a non-canonical concept — verify before using |
+| Anything else | ⚠️ Verify | Search `hermes-agent.nousresearch.com/docs/` before using |
+
+**Rule for next time (Phase 0 verification):** When scaffolding any new path or file under `~/.hermes/`, FIRST confirm the path matches an official Hermes docs concept. If the term isn't in canonical docs, surface this to the user BEFORE building files. The system-wide-mandate-enforcement skill now embeds this as Phase 0.
+
+**PITFALL 25 (2026-06-16): Don't Ask When User Already Gave Clear Instruction**
+
+**User signal**: "em muốn hỏi anh cái gì?" — fired when I used `clarify` tool to ask 4 options for cleanup choices after user said "verify từng bước". User had already given a clear instruction; my role was to verify and decide, not to ask.
+
+**Root cause**: I treated "verify từng bước" as ambiguous and offered 4 paths. User's intent was "do the verification step yourself, then act on what you find."
+
+**Rule (this is a Hermes operating rule, not just a multi-agent rule):**
+- When user says "verify", "check", "look at this" → do the verification and ACT on findings
+- When user gives a clear instruction → do NOT ask clarification questions to confirm what they already said
+- Ask ONLY when: (a) multiple valid interpretations, (b) destructive action with no undo, (c) the instruction is genuinely impossible to execute
+
+**Anti-pattern to avoid:**
+- `clarify` tool after user said "verify từng bước" → user meant "you verify, not me"
+- "Anh muốn X hay Y?" when X or Y are both inferable from context
+- "Em nên làm A, B, hay C?" when 1 of the 3 is clearly best per the data
+
+**Hermes rule #2 (already in SOUL.md):** "Em cần hỏi thêm" is a prohibited behavior. The 2026-06-16 incident shows this rule needs to be applied to `clarify` tool calls too, not just to chat questions.
+
+**Companion skill**: `hermes-agent-decision-guard` — class-level rule for when to ask vs decide.
 
 ---
 
