@@ -45,3 +45,8 @@ state.db
 auth.json
 profiles/**/auth.json
 state-snapshots/**/auth.json
+
+# Env files (contain secrets)
+.env
+profiles/**/.env
+state-snapshots/**/.env
