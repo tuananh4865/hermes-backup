@@ -1,0 +1,22 @@
+{
+  "synced_at": "2026-06-18T03:00:00+07:00",
+  "source_root": "~/Workspace/Claude/Projects/Content Creator/",
+  "total_size_bytes": 30398,
+  "total_files": 4,
+  "total_dirs": 3,
+  "tree": [
+    "Research",
+      "2026-06-17",
+        "daily-session-review.md",
+        "shopee-deal-lighting.md",
+        "tiktok-shop-gimbal-trending.md",
+        "youtube-trending-gimbal.md",
+  ],
+  "files": [
+    {"path": "Research/2026-06-17/daily-session-review.md", "size_bytes": 4584},
+    {"path": "Research/2026-06-17/shopee-deal-lighting.md", "size_bytes": 7222},
+    {"path": "Research/2026-06-17/tiktok-shop-gimbal-trending.md", "size_bytes": 8388},
+    {"path": "Research/2026-06-17/youtube-trending-gimbal.md", "size_bytes": 10204},
+  ],
+  "note": "Metadata only — full content NOT synced (per backup policy)"
+}
