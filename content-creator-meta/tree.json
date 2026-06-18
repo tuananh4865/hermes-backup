@@ -1,0 +1,31 @@
+{
+  "by_directory": {
+    "Research/2026-06-17": {
+      "file_count": 4,
+      "total_bytes": 30398
+    },
+    "Research/2026-06-18": {
+      "file_count": 3,
+      "total_bytes": 24450
+    }
+  },
+  "by_extension": {
+    "md": 7
+  },
+  "date": "2026-06-19",
+  "file_list": [
+    "Research/2026-06-18/youtube-trending-gimbal.md",
+    "Research/2026-06-18/shopee-deal-gimbal.md",
+    "Research/2026-06-18/tiktok-shop-lens-actioncam-trending.md",
+    "Research/2026-06-17/youtube-trending-gimbal.md",
+    "Research/2026-06-17/daily-session-review.md",
+    "Research/2026-06-17/tiktok-shop-gimbal-trending.md",
+    "Research/2026-06-17/shopee-deal-lighting.md"
+  ],
+  "source_path": "/Users/tuananh4865/Workspace/Claude/Projects/Content Creator/",
+  "totals": {
+    "dir_count": 4,
+    "file_count": 7,
+    "total_bytes": 54848
+  }
+}
