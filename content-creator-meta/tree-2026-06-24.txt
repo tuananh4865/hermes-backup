@@ -1,0 +1,28 @@
+[D] Content Creator/
+  [D] Research/
+    [D] 2026-06-17/
+      [F   4584B] daily-session-review.md
+      [F   7222B] shopee-deal-lighting.md
+      [F   8388B] tiktok-shop-gimbal-trending.md
+      [F  10204B] youtube-trending-gimbal.md
+    [D] 2026-06-18/
+      [F   6133B] shopee-deal-gimbal.md
+      [F   8609B] tiktok-shop-lens-actioncam-trending.md
+      [F   9708B] youtube-trending-gimbal.md
+    [D] 2026-06-19/
+      [F   7843B] shopee-deal-tripod-mount-accessory.md
+    [D] 2026-06-20/
+      [F   8565B] shopee-deal-flycam-actioncam.md
+      [F  11298B] youtube-trending-lens.md
+    [D] 2026-06-21/
+      [F   4744B] daily-session-review.md
+      [F   8040B] shopee-deal-weekly-summary.md
+      [F   9891B] tiktok-shop-weekly-summary.md
+    [D] 2026-06-22/
+      [F   9858B] tiktok-shop-mic-trending.md
+    [D] 2026-06-23/
+      [F   2574B] daily-session-review.md
+      [F   6619B] shopee-deal-mic-audio.md
+      [F  10703B] tiktok-shop-gimbal-trending.md
+    [D] 2026-06-24/
+      [F   4335B] daily-session-review.md

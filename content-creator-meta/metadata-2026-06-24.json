@@ -1,0 +1,123 @@
+{
+  "snapshot_date": "2026-06-24",
+  "generated_at": "2026-06-23T20:01:39.646610+00:00",
+  "source_dir": "/Users/tuananh4865/Workspace/Claude/Projects/Content Creator",
+  "totals": {
+    "files": 18,
+    "dirs": 10,
+    "bytes": 139318,
+    "file_types": {
+      ".md": 18
+    }
+  },
+  "files": [
+    {
+      "path": "Content Creator/Research/2026-06-17/daily-session-review.md",
+      "size": 4584,
+      "mtime": "2026-06-16T17:01:56.959248+00:00",
+      "sha1_4k": "ec46d5a69317"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-17/shopee-deal-lighting.md",
+      "size": 7222,
+      "mtime": "2026-06-17T00:32:56.244772+00:00",
+      "sha1_4k": "e951fba8c14f"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-17/tiktok-shop-gimbal-trending.md",
+      "size": 8388,
+      "mtime": "2026-06-17T00:04:53.801683+00:00",
+      "sha1_4k": "28a508e06a1c"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-17/youtube-trending-gimbal.md",
+      "size": 10204,
+      "mtime": "2026-06-17T01:03:38.483344+00:00",
+      "sha1_4k": "5f5ca34cd9f2"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-18/shopee-deal-gimbal.md",
+      "size": 6133,
+      "mtime": "2026-06-18T00:32:52.543697+00:00",
+      "sha1_4k": "900964277f9b"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-18/tiktok-shop-lens-actioncam-trending.md",
+      "size": 8609,
+      "mtime": "2026-06-18T00:05:43.890777+00:00",
+      "sha1_4k": "00248aac88ad"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-18/youtube-trending-gimbal.md",
+      "size": 9708,
+      "mtime": "2026-06-18T01:04:04.172508+00:00",
+      "sha1_4k": "fa737f0683ab"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-19/shopee-deal-tripod-mount-accessory.md",
+      "size": 7843,
+      "mtime": "2026-06-19T00:33:31.463234+00:00",
+      "sha1_4k": "ef1e78f35926"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-20/shopee-deal-flycam-actioncam.md",
+      "size": 8565,
+      "mtime": "2026-06-20T00:34:44.795444+00:00",
+      "sha1_4k": "e2ef248b6000"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-20/youtube-trending-lens.md",
+      "size": 11298,
+      "mtime": "2026-06-20T01:04:46.287063+00:00",
+      "sha1_4k": "18d0a7dd3bfa"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-21/daily-session-review.md",
+      "size": 4744,
+      "mtime": "2026-06-20T17:03:57.191136+00:00",
+      "sha1_4k": "692eed1b6652"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-21/shopee-deal-weekly-summary.md",
+      "size": 8040,
+      "mtime": "2026-06-21T00:33:25.762127+00:00",
+      "sha1_4k": "370a98d71df0"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-21/tiktok-shop-weekly-summary.md",
+      "size": 9891,
+      "mtime": "2026-06-21T00:06:17.612980+00:00",
+      "sha1_4k": "44a269ab0c05"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-22/tiktok-shop-mic-trending.md",
+      "size": 9858,
+      "mtime": "2026-06-22T15:47:12.323441+00:00",
+      "sha1_4k": "5385c9cdb3b8"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-23/daily-session-review.md",
+      "size": 2574,
+      "mtime": "2026-06-22T17:01:55.914210+00:00",
+      "sha1_4k": "e2cc935f3679"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-23/shopee-deal-mic-audio.md",
+      "size": 6619,
+      "mtime": "2026-06-23T00:35:09.875463+00:00",
+      "sha1_4k": "e942259757b0"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-23/tiktok-shop-gimbal-trending.md",
+      "size": 10703,
+      "mtime": "2026-06-23T00:04:44.300281+00:00",
+      "sha1_4k": "f1fae615a5da"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-24/daily-session-review.md",
+      "size": 4335,
+      "mtime": "2026-06-23T17:04:14.786156+00:00",
+      "sha1_4k": "5e6e8053e2cc"
+    }
+  ]
+}
