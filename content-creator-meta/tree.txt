@@ -29,3 +29,5 @@
       [F    7849B] shopee-deal-lighting.md
     [D] 2026-06-25/
       [F    5342B] daily-session-review.md
+      [F    9606B] shopee-deal-gimbal.md
+      [F    8611B] tiktok-shop-lens-trending.md

@@ -1,13 +1,13 @@
 {
   "snapshot_date": "2026-06-25",
-  "generated_at": "2026-06-24T20:02:59.617840+00:00",
+  "generated_at": "2026-06-25T13:14:49.290432+00:00",
   "source_dir": "/Users/tuananh4865/Workspace/Claude/Projects/Content Creator",
   "totals": {
-    "files": 20,
+    "files": 22,
     "dirs": 11,
-    "bytes": 152509,
+    "bytes": 170726,
     "file_types": {
-      ".md": 20
+      ".md": 22
     }
   },
   "files": [
@@ -46,6 +46,18 @@
       "size": 5342,
       "mtime": "2026-06-24T17:02:32.960506+00:00",
       "sha1_4k": "148bfc6bcf33"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-25/shopee-deal-gimbal.md",
+      "size": 9606,
+      "mtime": "2026-06-25T00:33:11.669643+00:00",
+      "sha1_4k": "171021b0a2a4"
+    },
+    {
+      "path": "Content Creator/Research/2026-06-25/tiktok-shop-lens-trending.md",
+      "size": 8611,
+      "mtime": "2026-06-25T00:04:29.487047+00:00",
+      "sha1_4k": "a5d8c3acfc79"
     },
     {
       "path": "Content Creator/Research/2026-06-22/tiktok-shop-mic-trending.md",
@@ -132,5 +144,5 @@
       "sha1_4k": "5f5ca34cd9f2"
     }
   ],
-  "notes": "METADATA ONLY — no file contents. fingerprint = sha1 of first 4KB."
+  "notes": "METADATA ONLY \u2014 no file contents. fingerprint = sha1 of first 4KB."
 }
