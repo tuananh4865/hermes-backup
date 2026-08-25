@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.tuananh.miy-checklist-api</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/tuananh4865/.local/bin/uv</string>
+        <string>run</string>
+        <string>--with</string>
+        <string>fastapi</string>
+        <string>--with</string>
+        <string>uvicorn</string>
+        <string>python</string>
+        <string>/Volumes/Storage-1/Hermes/mi-y-checklist/backend/main.py</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/tmp/miy-checklist-api.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/miy-checklist-api.err.log</string>
+    <key>WorkingDirectory</key>
+    <string>/Volumes/Storage-1/Hermes/mi-y-checklist/backend</string>
+</dict>
+</plist>

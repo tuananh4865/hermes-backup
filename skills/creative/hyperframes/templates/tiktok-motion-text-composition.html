@@ -1,0 +1,185 @@
+<template id="tiktok-motion-text-template">
+  <!--
+    TikTok Motion Text composition — em đã verify hoạt động 2026-07-16.
+
+    Use case: Hiệu ứng chữ chuyển động + hiện ra theo lời thoại (motion text,
+    KHÔNG PHẢI subtitle tĩnh). Mỗi từ pop-in với bounce + slide-up + glow khi
+    đang được nói.
+
+    Workflow:
+      1. Copy file này vào project/compositions/tiktok-motion-text.html
+      2. Replace __PHRASES_DATA__ bằng array [{start, end, text}, ...]
+         (tối đa 30 phrases sau khi merge từ Whisper word-level timestamps)
+      3. Thêm sub-composition vào index.html host root:
+         <div data-composition-id="tiktok-motion-text"
+              data-composition-src="compositions/tiktok-motion-text.html"
+              data-start="0" data-duration="<clip-duration>"
+              data-track-index="1" data-width="1080" data-height="1920"
+              style="position:absolute;inset:0;z-index:1;pointer-events:none"></div>
+      4. Render: npx hyperframes render --quality draft --output final.mp4
+
+    Render time: ~3.5 min cho clip 110s @ 1080x1920 (verified macOS M-series).
+  -->
+  <div
+    data-composition-id="tiktok-motion-text"
+    data-width="1080"
+    data-height="1920"
+    data-duration="110"
+  >
+    <div id="phrases-layer"></div>
+    <div id="brand-watermark">@tuancuaban</div>
+
+    <style>
+      [data-composition-id="tiktok-motion-text"] {
+        background: transparent;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+        color: white;
+        overflow: hidden;
+      }
+
+      #phrases-layer { position: absolute; inset: 0; z-index: 10; pointer-events: none; }
+
+      .phrase {
+        position: absolute;
+        left: 50%;
+        bottom: 380px;
+        transform: translateX(-50%);
+        max-width: 940px;
+        text-align: center;
+        z-index: 50;
+        opacity: 0;
+      }
+
+      .phrase-text {
+        display: inline-block;
+        padding: 24px 40px;
+        background: rgba(0, 0, 0, 0.82);
+        backdrop-filter: blur(20px);
+        border-radius: 28px;
+        font-size: 56px;
+        font-weight: 900;
+        line-height: 1.3;
+        color: #FFFFFF;
+        text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9);
+        letter-spacing: 0.005em;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      }
+
+      .word {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(40px) scale(0.5);
+        margin: 0 4px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .word.active {
+        color: #FFD700 !important;
+        transform: translateY(0) scale(1.15) !important;
+        text-shadow:
+          0 0 24px rgba(255, 215, 0, 0.9),
+          0 0 48px rgba(255, 215, 0, 0.5),
+          0 4px 16px rgba(0, 0, 0, 0.9) !important;
+      }
+
+      .word.spoken {
+        color: rgba(255, 255, 255, 0.7);
+        transform: translateY(0) scale(1);
+      }
+
+      #brand-watermark {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 30px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.92);
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+        letter-spacing: 0.06em;
+        z-index: 60;
+        opacity: 0;
+      }
+    </style>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["tiktok-motion-text"] = tl;
+
+      const phrasesData = [
+__PHRASES_DATA__
+      ];
+
+      console.log('[motion-text] Loaded, phrases:', phrasesData.length);
+
+      const layer = document.querySelector('[data-composition-id="tiktok-motion-text"] #phrases-layer');
+
+      // Build phrase DOM
+      phrasesData.forEach((phrase, pIdx) => {
+        const phraseDiv = document.createElement('div');
+        phraseDiv.className = 'phrase';
+
+        const textDiv = document.createElement('div');
+        textDiv.className = 'phrase-text';
+
+        const textStr = (phrase && phrase.text) ? String(phrase.text) : '';
+        const words = textStr.split(/\s+/).filter(w => w.length > 0);
+
+        words.forEach((w) => {
+          const wordSpan = document.createElement('span');
+          wordSpan.className = 'word';
+          wordSpan.textContent = w;
+          textDiv.appendChild(wordSpan);
+        });
+
+        phraseDiv.appendChild(textDiv);
+        layer.appendChild(phraseDiv);
+      });
+
+      // Motion text animation timeline
+      const phraseEls = layer.querySelectorAll('.phrase');
+
+      phrasesData.forEach((phrase, pIdx) => {
+        const phraseEl = phraseEls[pIdx];
+        const words = phraseEl.querySelectorAll('.word');
+        const phraseDur = phrase.end - phrase.start;
+        const numWords = words.length;
+
+        if (numWords === 0) return;
+        const wordDur = phraseDur / numWords;
+
+        gsap.set(phraseEl, { opacity: 0 });
+        gsap.set(words, { opacity: 0, y: 40, scale: 0.5 });
+
+        // 1. Container fade in
+        tl.to(phraseEl, { opacity: 1, duration: 0.15, ease: "power2.out" }, phrase.start);
+
+        // 2. Word-by-word pop-in
+        words.forEach((wordEl, wIdx) => {
+          const wordStart = phrase.start + (wIdx * wordDur);
+          tl.to(wordEl, {
+            opacity: 1, y: 0, scale: 1,
+            duration: 0.15,
+            ease: "back.out(2)"
+          }, wordStart);
+
+          tl.call(() => {
+            words.forEach(w => w.classList.add('spoken'));
+            wordEl.classList.add('active');
+          }, [], wordStart + 0.001);
+        });
+
+        // 3. Container fade out
+        tl.to(phraseEl, { opacity: 0, y: -20, duration: 0.2, ease: "power2.in" }, phrase.end);
+      });
+
+      // Watermark
+      tl.fromTo('#brand-watermark',
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" },
+        0
+      );
+    </script>
+  </div>
+</template>

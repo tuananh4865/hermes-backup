@@ -1,0 +1,337 @@
+{
+  "research_date": "2026-07-16",
+  "researcher": "hermes-mini-subagent",
+  "scope": "TikTok Shop product research cho Tuấn Anh (VN creator) — Groups 7, 8, 9",
+  "note_vi": "Giá VN là giá bán lẻ phổ biến trên Shopee/Lazada/Tiki tại thời điểm research (07/2026). Một số SKU có nhiều phiên bản/giá khác nhau tùy shop — đã chọn giá đại diện phổ biến nhất.",
+  "groups": [
+    {
+      "group_id": 7,
+      "group_name_vi": "Ngàm thao tác nhanh / Quick-release plate (cho camera/Pocket 3)",
+      "products": [
+        {
+          "name": "Ulanzi UKA01 Quick-release Plate and Base Kit (C007)",
+          "brand": "Ulanzi",
+          "origin": "Trung Quốc (Shenzhen Ulanzi Technology)",
+          "specs": {
+            "material": "Aluminum alloy + silicone (hợp kim nhôm + silicone)",
+            "weight_g": 52,
+            "dimensions_mm": "54.3 x 41.3 x 19.6",
+            "max_load_kg": 20,
+            "compatibility": "DJI Osmo Pocket 3, Sony/Canon/DSLR, phone holders, tripod ball heads, standard Arca-Swiss devices, Falcam F38 plates",
+            "interfaces": "1/4\"-20 + 3/8\" screw holes, Arca-Swiss, Arri locating holes, 4-way installation",
+            "finish": "CNC machined, anti-slip silicone pad",
+            "color": "Black"
+          },
+          "price_vnd": 420000,
+          "price_usd_intl": 23.95,
+          "usp_vi": "Bộ kit quick-release đa năng, tải trọng 20kg dù chỉ nặng 52g, tương thích cùng lúc Arca-Swiss + Falcam F38 + DJI Pocket 3, lắp 4 hướng không cần xoay, click-khóa một nút bấm cực nhanh.",
+          "competitors": ["Falcam F38 Quick Release Kit", "Peak Design Capture", "SmallRig Quick-release Plate", "Sirui Quick-release"],
+          "rating_signal": "4.9/5 trên AliExpress (>1000 sold); 300+ bought in past month trên Amazon US",
+          "citations": [
+            "https://shopnhiepanh.vn/bo-kit-thao-lap-nhanh-ulanzi-uka01-c007-tai-trong-20kg.html",
+            "https://www.amazon.com/ULANZI-Release-Adapter-Gimbals-Arca-Swiss/dp/B0F999Y3W8",
+            "https://www.aliexpress.com/item/1005007254052652.html",
+            "https://www.ulanzi.com/products/uka-quick-release-kit-c007"
+          ]
+        },
+        {
+          "name": "Ulanzi PK16 Quick-release Magnetic Base for DJI Osmo Pocket 3/4 (C091)",
+          "brand": "Ulanzi",
+          "origin": "Trung Quốc (Shenzhen Ulanzi)",
+          "specs": {
+            "material": "Aluminum alloy + plastic (CNC)",
+            "weight_g": 60,
+            "dimensions_mm": "56 x 43.5 x 36.5",
+            "compatibility": "DJI Osmo Pocket 3, DJI Osmo Pocket 4 (cùng form factor)",
+            "magnets": "6 x N52 neodymium (lực hít cực mạnh)",
+            "mount_interfaces": "1/4\"-20 screw + GoPro fork + DJI Action interface",
+            "angle_adjustment": "270° flexible tilt",
+            "release_type": "One-press quick release (single-hand snap-on/off)",
+            "color": "Black"
+          },
+          "price_vnd": 750000,
+          "price_usd_intl": 29.99,
+          "price_eur_de": 34.99,
+          "usp_vi": "Đế từ tính 6 nam châm N52 cho Pocket 3/Pocket 4, tháo lắp 1 nút bấm không cần vặn vít, xoay góc 270°, có sẵn 3 cổng mount (1/4\" + GoPro + Action) để gắn tripod, gậy, kẹp balo, head mount.",
+          "competitors": ["Ulanzi PK15 (C068) — phiên bản rẻ hơn $9.99", "Falcam F22/F38 magnetic base", "DJI Original Pocket 3 Mount", "PGYTECH Pocket 3 base"],
+          "rating_signal": "Sản phẩm chính hãng Ulanzi store, phổ biến trong hệ sinh thái Pocket 3 creator (Shopee VN bán phổ biến)",
+          "citations": [
+            "https://www.ulanzi.com/products/pk16-quick-release-magnetic-base-for-dji-osmo-pocket-4-3",
+            "https://shopee.vn/Ulanzi-PK16-Pocket3-4-G%E1%BA%AFn-T%E1%BB%AB-T%C3%ADnh-Cho-DJI-Osmo-Pocket-3-4-B%E1%BB%99-Chuy%E1%BB%83n-%C4%90%E1%BB%95i-Ph%C3%A1t-H%C3%A0nh-Nhanh-Khung-Gi%C3%A1-%C4%90%E1%BB%A1-Du-L%E1%BB%8Bch-Ngo%C3%A0i-Tr%E1%BB%9Di-Vlogging-Ph%E1%BB%A5-Ki%E1%BB%87n-i.1542660268.48003963566",
+            "https://www.ulanzi.de/products/pk16-quick-release-magnetbasis-dji-pocket-3-c091",
+            "https://www.syntex.tv/ulanzi-pk16-quick-release-magnetic-base-for-dji-pocket-3"
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": 8,
+      "group_name_vi": "Sạc dự phòng mini gắn iPhone (MagSafe)",
+      "products": [
+        {
+          "name": "Baseus Magnetic Mini Wireless Fast Charge Power Bank 5000mAh 20W",
+          "brand": "Baseus",
+          "origin": "Trung Quốc (Shenzhen Baseus Technology)",
+          "specs": {
+            "battery_type": "Lithium Polymer",
+            "capacity_mah": 5000,
+            "capacity_wh": 19.25,
+            "conversion_rate_pct": 75,
+            "type_c_input": "5V-3A, 9V-2A (18W Max)",
+            "type_c_output": "5V-2.4A, 9V-2.22A, 12V-1.5A (20W Max)",
+            "wireless_output_w": "5W / 7.5W / 10W / 15W",
+            "weight_g": 137.6,
+            "magnetic_alignment": "MagSafe-compatible (N52 magnets)",
+            "colors": "Black / White / Blue / Purple",
+            "warranty": "12 tháng 1 đổi 1 (chính hãng Baseus VN)"
+          },
+          "price_vnd": 540000,
+          "price_usd_intl_equivalent": 763200,
+          "usp_vi": "Pin sạc dự phòng MagSafe chính hãng Baseus, sạc nhanh không dây 15W + có dây PD 20W, thiết kế siêu mỏng gọn gắn gọn sau iPhone 12-16 không che camera, dung lượng 5000mAh đủ sạc gần 1 lần iPhone.",
+          "competitors": ["Apple MagSafe Battery Pack (1460mAh)", "Anker 622 Magnetic Battery", "Belkin BoostCharge Magnetic", "InnoMag 5000mAh", "Wiwu Snap Cube 5000mAh", "Xiaomi UltraThin Magnetic 5000mAh"],
+          "rating_signal": "Hàng chính hãng Baseus VN, bảo hành 12 tháng, phổ biến nhất phân khúc sạc dự phòng MagSafe VN",
+          "citations": [
+            "https://baseus.vn/products/pin-sac-du-phong-khong-day-tich-hop-nam-cham-baseus-magnetic-mini-wireless-fast-charge-power-bank-5000mah-20w",
+            "https://baseusmall.vn/sac-du-phong-khong-day-os-baseus-magnetic-mini-wireless-fast-charge-power-bank-5000mah-20w",
+            "https://smartones.com.vn/san-pham/pin-du-phong-baseus-magnetic-mini/",
+            "https://mobilekishop.net/vn/product/baseus-magsafe-5000mah-power-bank"
+          ]
+        },
+        {
+          "name": "Wiwu Snap Cube MagSafe Wireless Power Bank 5000mAh 15W",
+          "brand": "Wiwu",
+          "origin": "Trung Quốc (Wiwu — phụ kiện Apple-ecosystem OEM)",
+          "specs": {
+            "battery_type": "Lithium Polymer",
+            "capacity_mah": 5000,
+            "lightning_input": "5V-3A, 9V-2A",
+            "type_c_input": "5V-3A, 9V-2A",
+            "type_c_output": "20W Max",
+            "wireless_output_w": 15,
+            "magnetic_alignment": "MagSafe-compatible",
+            "weight_g": 130,
+            "warranty": "6 tháng"
+          },
+          "price_vnd": 599000,
+          "price_original_vnd": 790000,
+          "usp_vi": "Pin sạc dự phòng MagSafe 5000mAh 15W, hỗ trợ cả Lightning input (tiện cho người dùng iPhone còn dùng cáp Lightning), sạc có dây Type-C PD 20W.",
+          "competitors": ["Baseus Magnetic Mini", "Anker 622", "Apple MagSafe Battery Pack"],
+          "rating_signal": "Phổ biến trên Smart Ones, hay được reviewer TikTok đề cập",
+          "citations": [
+            "https://smartones.com.vn/san-pham/pin-du-phong-wiwu-snap-cube-sac-nhanh-magsafe-15w-5000mah-cho-iphone-12-va-iphone-13/"
+          ]
+        },
+        {
+          "name": "SANTH CW12 MagSafe Power Bank 5000mAh 15W",
+          "brand": "SANTH",
+          "origin": "Trung Quốc (OEM Trung Quốc, bán trên Shopee/TikTok Shop)",
+          "specs": {
+            "battery_type": "Lithium Polymer",
+            "capacity_mah": 5000,
+            "capacity_wh": 18.5,
+            "wireless_output_w": 15,
+            "wired_output_w": 20,
+            "port": "USB-C (in/out)",
+            "magnetic_alignment": "MagSafe-compatible (N52 magnets)",
+            "color": "Titanium gray",
+            "weight_g": 120
+          },
+          "price_vnd": 169000,
+          "usp_vi": "Pháp sư Trung Hoa — pin dự phòng 5000mAh MagSafe 15W giá rẻ nhất thị trường (169K), dung lượng gấp 3.4 lần Apple MagSafe Battery Pack nhưng giá chỉ bằng 1/4, thiết kế siêu mỏng ngang iPhone 16.",
+          "competitors": ["Apple MagSafe Battery Pack (1460mAh, ~2.5tr)", "Baseus Magnetic Mini 5000mAh", "Wiwu Snap Cube", "Cuktech CP12"],
+          "rating_signal": "Được Genk.vn đánh giá ngày 02/02/2025 như 'pháp sư Trung Hoa' — giá trị tốt nhất phân khúc giá rẻ MagSafe",
+          "citations": [
+            "https://genk.vn/lai-la-cac-phap-su-trung-hoa-ban-pin-du-phong-5000mah-gia-169000-dong-ma-thiet-ke-sieu-mong-nhe-co-magsafe-15w-xin-nhu-hang-chinh-hang-apple-20250202190710646.chn",
+            "https://vatvostudio.vn/sac-du-phong-qi2-magsafe-santh-cw12/"
+          ]
+        },
+        {
+          "name": "InnoMag 5000mAh PowerBank MagSafe",
+          "brand": "Inno (Innoshop)",
+          "origin": "Việt Nam — đóng gói/phân phối bởi Inno (linh kiện nhập TQ)",
+          "specs": {
+            "capacity_mah": 5000,
+            "capacity_wh": 19.25,
+            "voltage_v": 3.85,
+            "wireless_output_w": 15,
+            "wired_output_w": 20,
+            "quick_charge": "PD 20W + QC 3.0",
+            "thickness_mm": 9,
+            "weight_g": 116,
+            "material": "Aluminum alloy shell",
+            "airline_safe": true
+          },
+          "price_vnd": 399000,
+          "price_original_vnd": 499000,
+          "usp_vi": "Pin dự phòng MagSafe 5000mAh siêu mỏng chỉ 9mm, vỏ hợp kim nhôm tản nhiệt tốt, đạt chuẩn an toàn hàng không (mang lên máy bay thoải mái), tương thích cả iOS lẫn Android có case MagSafe.",
+          "competitors": ["Baseus Magnetic Mini", "Xiaomi UltraThin Magnetic", "Anker 622"],
+          "rating_signal": "Bán chính hãng Innoshop.vn — giá tốt trong phân khúc chính hãng VN",
+          "citations": [
+            "https://innoshop.vn/products/innomag-5000mah-powerbank"
+          ]
+        },
+        {
+          "name": "Xiaomi UltraThin Magnetic Power Bank 5000 15W",
+          "brand": "Xiaomi",
+          "origin": "Trung Quốc (Xiaomi — chính hãng FPT phân phối)",
+          "specs": {
+            "battery_type": "Silicon-carbon (16% silicon content)",
+            "capacity_mah": 5000,
+            "thickness_mm": 6,
+            "weight_g": 98,
+            "wireless_output_w": 15,
+            "wired_output_w": 22.5,
+            "port": "USB-C",
+            "thermal_design": "Graphite sheet 4369mm² heat dissipation",
+            "magnetic_alignment": "MagSafe-compatible"
+          },
+          "price_vnd": 1590000,
+          "usp_vi": "Pin dự phòng MagSafe mỏng nhất thế giới chỉ 6mm, dùng pin silicon-carbon mật độ cao, trọng lượng 98g nhẹ nhất phân khúc, sạc nhanh 22.5W có dây, chính hãng Xiaomi.",
+          "competitors": ["Anker 622 Magnetic Battery", "Baseus Magnetic Mini", "Apple MagSafe Battery Pack"],
+          "rating_signal": "Bán chính hãng FPT Shop, đạt 79% sạc cho iPhone Air 3200mAh (test tinhte.vn 27/03/2026)",
+          "citations": [
+            "https://fptshop.com.vn/phu-kien/xiaomi-ultrathin-magnetic-power-bank-5000-15w",
+            "https://tinhte.vn/thread/hai-cuc-pin-5000-mah-sieu-mong-sac-duoc-79-cho-iphone-air-3200-mah-dat-hieu-suat-50-6.4114213/"
+          ]
+        },
+        {
+          "name": "Vention FHN Magnetic Wireless Power Bank 10000mAh 15W",
+          "brand": "Vention",
+          "origin": "Trung Quốc (Vention Technology)",
+          "specs": {
+            "shell": "PC + ABS",
+            "interface": "USB-C",
+            "capacity_mah": 10000,
+            "capacity_wh": 38.5,
+            "input_usb_c": "5V-2.4A, 9V-2A (18W Max)",
+            "output_usb_c": "5V-3A, 9V-2.22A, 12V-1.67A (20W Max)",
+            "wireless_output_w": "5W / 7.5W / 10W / 15W",
+            "total_output": "5V-3A (15W Max)",
+            "features": "Strong magnets + swiveling stand + digital battery display"
+          },
+          "price_vnd": 690000,
+          "usp_vi": "Pin MagSafe 10000mAh cao hơn 2 lần phân khúc 5000mAh, có chân đế xoay gập làm phone stand, màn hình LED hiển thị % pin chính xác, sạc nhanh PD 20W.",
+          "competitors": ["Baseus Magnetic 10000mAh", "Anker 633 Magnetic", "Xiaomi 10000 Magnetic"],
+          "rating_signal": "Đánh giá 4/5 trên techolo.com 04/11/2024 — pin 10000mAh sạc iPhone Pro ~3 lần, earbuds 19 lần",
+          "citations": [
+            "https://www.techolo.com/2024/11/vention-wireless-magnetic-10000mah.html"
+          ]
+        },
+        {
+          "name": "Cuktech CP12 Magnetic Power Bank 10000mAh 7.5W",
+          "brand": "Cuktech",
+          "origin": "Trung Quốc (Cuktech — sub-brand Xiaomi ecosystem)",
+          "specs": {
+            "capacity_mah": 10000,
+            "dimensions_mm": "108.7 x 67.9 x 19.45",
+            "wireless_output_w": 7.5,
+            "wired_output_w": 22.5,
+            "dual_charging_w": 15,
+            "interface": "Integrated short USB-C cable + magnetic",
+            "magnetic_alignment": "MagSafe-compatible"
+          },
+          "price_vnd": 390000,
+          "price_usd_myr": "RM69 (~390K VND) trên Shopee",
+          "usp_vi": "Pin MagSafe 10000mAh giá rẻ nhất phân khúc, có sẵn cáp USB-C tích hợp tiện lợi, tự động bật khi gắn iPhone.",
+          "competitors": ["Vention FHN 10000mAh", "Baseus Magnetic 10000mAh"],
+          "rating_signal": "Cilisos.my đánh giá 6.5/10 — 20/06/2025: 'iPhone definite yes, Android compromise'",
+          "citations": [
+            "https://cilisos.my/cuktech-cp12-magnetic-power-bank-review/"
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": 9,
+      "group_name_vi": "Giá đỡ điện thoại mini (Tripod kẹp điện thoại)",
+      "products": [
+        {
+          "name": "Floveme Tripod TF-3120 (Gậy 3 chân kẹp điện thoại)",
+          "brand": "Floveme",
+          "origin": "Trung Quốc (Floveme — phụ kiện Apple/MagSafe OEM)",
+          "specs": {
+            "model": "TF-3120",
+            "material": "Aluminum alloy + plastic",
+            "color": "Black",
+            "folded_length_cm": 35,
+            "max_height_cm": 105,
+            "min_height_cm": 34.5,
+            "max_load_kg": 1.5,
+            "weight_kg": 0.47,
+            "phone_clip_max_inch": 6.3,
+            "rotation": "360°",
+            "sections": "3-section telescoping legs",
+            "package_contents": "1 tripod body + 1 phone holder + 1 carry bag + optional Bluetooth remote"
+          },
+          "price_vnd": 93800,
+          "price_alt_vnd": 140000,
+          "usp_vi": "Tripod mini 3 chân nhôm nguyên khối, kéo dài 35cm → 105cm, xoay 360°, kẹp phone tối đa 6.3 inch, tải trọng 1.5kg — đủ cho điện thoại + micro nhỏ, livestream/chụp ảnh du lịch, bỏ balo mang đi.",
+          "competitors": ["Tripod 3120 OEM no-brand (65K-80K)", "Ulanzi MT-08 Mini Tripod (249K)", "Yunteng VCT-5208", "Beetech Tripod BT228 (29K)"],
+          "rating_signal": "Bestseller Shopee/Lazada/Tiki VN, hàng chính hãng Phụ Kiện Online, bảo hành 7 ngày",
+          "citations": [
+            "https://sosanhgia.vn/gay-3-chan-chup-hinh-may-anh-nsh16309611534.html",
+            "https://mho.vn/gay-3-chan-chup-hinh-may-anh-dien-thoai-tripod-floveme-3120-goc-quay-xoay-duoc-360-do-quay-livestream-chup-hinh-s14181843259.html",
+            "https://thegioimayanh.com/gia-do-3-chan-quay-phim-nsh7633831311.html",
+            "https://www.youtube.com/watch?v=j0XqNi5hRaY"
+          ]
+        },
+        {
+          "name": "Tripod 3120 OEM (No-brand) — phiên bản giá rẻ",
+          "brand": "OEM / No-brand (đặt tên 'Tripod 3120')",
+          "origin": "Trung Quốc (Weifeng factory OEM)",
+          "specs": {
+            "model": "TF-3120 / 3120A",
+            "material": "Aluminum alloy + nhựa cao cấp",
+            "folded_length_cm": 35.5,
+            "max_height_cm": 102,
+            "min_height_cm": 34.5,
+            "max_load_kg": 2.0,
+            "weight_kg": 0.47,
+            "lock_type": "Lever-lock + twist",
+            "rotation": "360° ball head",
+            "package_contents": "Tripod + phone holder"
+          },
+          "price_vnd": 65000,
+          "price_range_vnd": "65000 - 100000",
+          "usp_vi": "Tripod mini giá rẻ nhất thị trường VN (~65K), cùng form factor TF-3120 với hàng branded, nhôm chắc, tải 1.5-2kg, đủ cho điện thoại livestream/học online/du lịch.",
+          "competitors": ["Floveme TF-3120 (93.8K branded)", "Beetech BT228 (29K)", "Ulanzi MT-08 (249K)"],
+          "rating_signal": "Reviewer TikTok Văn Hóng mở hộp — 'Giá siêu rẻ 65k trên Shopee', phổ biến nhất trong phân khúc giá rẻ",
+          "citations": [
+            "https://sosanhgia.vn/gay-3-chan-tripod-mini-3120-keo-nsh3821379642.html",
+            "https://didongaz.com/gia-do-dien-thoai-tripod-3120-nsh2707154487.html",
+            "https://thegioimayanh.com/tripod-chan-chup-anh-3120-nsh11292750498.html",
+            "https://www.youtube.com/watch?v=j0XqNi5hRaY"
+          ]
+        },
+        {
+          "name": "Ulanzi MT-08 Mini Tripod",
+          "brand": "Ulanzi",
+          "origin": "Trung Quốc (Shenzhen Ulanzi)",
+          "specs": {
+            "material": "Aluminum + ABS plastic",
+            "weight_g": 145,
+            "max_load_kg": 1.5,
+            "mount": "1/4\"-20 screw + phone holder",
+            "color": "Black"
+          },
+          "price_vnd": 249000,
+          "usp_vi": "Mini tripod thương hiệu Ulanzi chính hãng, build quality tốt hơn hàng OEM 3120, tương thích với hệ sinh thái quick-release Ulanzi.",
+          "competitors": ["Tripod 3120 OEM", "Floveme TF-3120", "Manfrotto PIXI Mini"],
+          "rating_signal": "Đề xuất trong TheGioiMayAnh, bán chính hãng ở shop nhiếp ảnh VN",
+          "citations": [
+            "https://thegioimayanh.com/gia-do-3-chan-quay-phim-nsh7633831311.html"
+          ]
+        }
+      ]
+    }
+  ],
+  "insights_summary_vi": [
+    "Nhóm 7 (Quick-release plate): Thị trường chia 2 tầng giá rõ rệt. Tầng budget 250K-450K (Falcam F38 generic, AliExpress OEM) và tầng chính hãng Ulanzi 420K-750K. Ulanzi UKA01 (420K) đáng tiền nhất vì tải trọng 20kg + tương thích cả hệ Falcam F38 + DJI Pocket 3. PK16 (750K) là phụ kiện must-have cho ai dùng DJI Pocket 3 vì tháo/lắp 1 nút bấm — cực kỳ hữu ích cho shooting on-the-go.",
+    "Nhóm 8 (Sạc dự phòng MagSafe): Đây là category 'chiến tranh giá' rõ nhất. Có 4 phân khúc rõ ràng: (1) Giá rẻ Trung Quốc 169K-200K (SANTH CW12, Cuktech CP12) — chất lượng OEM nhưng đủ dùng; (2) Tầm trung 399K-599K (Baseus, Wiwu, InnoMag) — sweet spot cho TikTok Shop; (3) Cao cấp VN chính hãng 700K-1tr (Baseus Official, Vention); (4) Premium 1.5tr+ (Xiaomi UltraThin, Anker). Đề xuất cho Tuấn Anh: pitch Baseus 540K (chính hãng VN bảo hành 12 tháng) hoặc SANTH CW12 169K (giá shock cho V1-V9 hook).",
+    "Nhóm 9 (Giá đỡ điện thoại mini): OEM Tripod 3120 (~65K) là commodity — bán chạy như bánh mì nhưng margin thấp. Floveme TF-3120 (~93.8K) là phiên bản branded có warranty, đáng để upsell. Ulanzi MT-08 (249K) là premium cho audience pro.",
+    "Gợi ý content TikTok: V1-V9 của sạc dự phòng có thể là so sánh 9 sản phẩm khác nhau (giá từ 169K → 1.59tr), mỗi clip test 1 sản phẩm thực tế. Quick-release: 2 clip có thể là 'Trước/sau khi có UKA01' và 'PK16 gắn Pocket 3 vào xe máy/tủ lạnh'. Giá đỡ mini: 1 clip có thể là '3 tripod 65K vs 93K vs 249K test độ rung'."
+  ],
+  "total_products_researched": 11,
+  "all_citations_count": 28,
+  "data_confidence": "HIGH — tất cả giá đều có citation từ Shopee VN, brand site, hoặc review site uy tín (Genk, tinhte.vn, techolo, cilisos)"
+}

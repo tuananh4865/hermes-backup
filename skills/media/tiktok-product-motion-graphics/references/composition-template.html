@@ -1,0 +1,175 @@
+# Composition Template — 8-phase HyperFrames talking-head infographic
+
+Drop-in skeleton for an 8-phase composition. Customize the data and visuals.
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title><Product> Motion Graphics</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* Copy CSS from references/ios26-glass-card.css + your custom styles */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { background: #050508; overflow: hidden; width: 100vw; height: 100vh; font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #000;
+      }
+      .video-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+      .pip { position: absolute; z-index: 2; left: 0; top: 0; width: 50%; height: 60%; overflow: hidden; border-radius: 0 0 32px 0; opacity: 0; }
+      .pip video { width: 200%; height: 100%; object-fit: cover; object-position: right center; }
+      .watermark { position: absolute; top: 40px; right: 40px; z-index: 11; font-size: 26px; font-weight: 600; color: rgba(255, 255, 255, 0.85); text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); }
+      .watermark .at { color: #FFD700; font-weight: 800; }
+
+      /* PHASE 1: HOOK pulse */
+      .hook { position: absolute; z-index: 10; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 140px; font-weight: 900; color: #FFD700; text-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 8px 32px rgba(0, 0, 0, 0.6); letter-spacing: -4px; opacity: 0; white-space: nowrap; }
+
+      /* PHASE 2: PROBLEM text */
+      .problem { position: absolute; z-index: 10; left: 50%; top: 18%; transform: translateX(-50%); text-align: center; color: #fff; width: 100%; opacity: 0; }
+      .problem-eyebrow { font-size: 36px; font-weight: 700; color: rgba(255, 255, 255, 0.7); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; }
+      .problem-highlight { display: inline-block; font-size: 180px; font-weight: 900; color: #FFD700; letter-spacing: -6px; margin-bottom: 24px; }
+      .problem-sub { font-size: 56px; font-weight: 600; line-height: 1.3; padding: 0 60px; }
+
+      /* PHASE 3: BAR CHART */
+      .bar-chart { position: absolute; z-index: 10; right: 60px; bottom: 28%; width: 480px; background: rgba(15, 20, 30, 0.75); backdrop-filter: blur(20px); border: 1.5px solid rgba(255, 255, 255, 0.18); border-radius: 28px; padding: 36px 32px; opacity: 0; }
+      .chart-title { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 24px; text-align: center; }
+      .chart-row { display: flex; align-items: center; margin-bottom: 22px; }
+      .chart-label { font-size: 24px; font-weight: 700; color: rgba(255, 255, 255, 0.9); width: 140px; }
+      .chart-bar-wrap { flex: 1; background: rgba(255, 255, 255, 0.08); border-radius: 12px; height: 36px; overflow: hidden; }
+      .chart-bar { height: 100%; border-radius: 12px; width: 0%; }
+      .chart-bar.old { background: linear-gradient(90deg, #ff5757 0%, #ff8a5b 100%); }
+      .chart-bar.new { background: linear-gradient(90deg, #00e676 0%, #00bfa5 100%); }
+      .chart-value { font-size: 28px; font-weight: 800; color: #fff; width: 110px; text-align: right; }
+
+      /* PHASE 4: STAMP */
+      .stamp { position: absolute; z-index: 10; left: 50%; top: 45%; transform: translate(-50%, -50%) rotate(-15deg); text-align: center; opacity: 0; }
+      .stamp-emoji { font-size: 180px; }
+      .stamp-text { font-size: 80px; font-weight: 900; color: #ff5757; letter-spacing: -2px; margin-top: 16px; text-shadow: 0 0 24px rgba(255, 87, 87, 0.7), 0 4px 0 #fff, -4px 4px 0 #fff, 4px -4px 0 #fff, -4px -4px 0 #fff, 4px 4px 0 #fff; }
+
+      /* PHASE 5: PRODUCT CARD (use ios26-glass-card.css) */
+      .product-card { /* see references/ios26-glass-card.css */ }
+
+      /* PHASE 6: iPhone mockup */
+      .iphone-mockup { position: absolute; z-index: 10; right: 80px; top: 28%; text-align: center; opacity: 0; }
+      .iphone-frame { width: 320px; height: 640px; background: #1a1a1a; border-radius: 56px; border: 6px solid #2a2a2a; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), inset 0 0 0 2px rgba(255, 255, 255, 0.1); margin: 0 auto; }
+      .iphone-screen { position: absolute; inset: 8px; background: linear-gradient(135deg, #1e1e2e 0%, #0a0a14 100%); border-radius: 48px; overflow: hidden; }
+      .iphone-notch { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 100px; height: 26px; background: #000; border-radius: 16px; z-index: 5; }
+      .charger-attached { position: absolute; bottom: 16%; left: 50%; transform: translateX(-50%); width: 200px; height: 80px; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); border-radius: 16px; box-shadow: 0 0 32px rgba(255, 215, 0, 0.6); display: flex; align-items: center; justify-content: center; }
+      .charger-bolt { font-size: 36px; }
+
+      /* PHASE 7: USP LIST */
+      .usp-list { position: absolute; z-index: 10; right: 60px; bottom: 35%; width: 500px; opacity: 0; }
+      .usp-item { background: rgba(15, 20, 30, 0.7); backdrop-filter: blur(16px); border: 1.5px solid rgba(255, 215, 0, 0.4); border-radius: 20px; padding: 20px 28px; margin-bottom: 16px; color: #fff; font-size: 32px; font-weight: 700; display: flex; align-items: center; gap: 20px; opacity: 0; transform: translateX(80px); }
+      .usp-check { width: 56px; height: 56px; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-size: 32px; font-weight: 900; flex-shrink: 0; }
+      .usp-text-wrap .bold { font-size: 36px; font-weight: 900; color: #FFD700; display: block; margin-bottom: 4px; }
+
+      /* PHASE 8: CTA */
+      .cta { position: absolute; z-index: 10; left: 60px; right: 60px; bottom: 100px; text-align: center; opacity: 0; }
+      .cta-button { display: inline-block; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #000; font-size: 56px; font-weight: 900; padding: 32px 90px; border-radius: 60px; box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5), inset 0 -4px 0 rgba(0, 0, 0, 0.2); letter-spacing: 2px; text-transform: uppercase; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="<product>-infographic" data-start="0" data-width="1080" data-height="1920" data-duration="<N>">
+      <video id="talking-head-bg" class="video-bg" data-start="0" data-duration="<N>" src="talking_head_bg.mp4" muted playsinline></video>
+      <div class="pip" data-class="pip">
+        <video id="pip-video" data-start="0" data-duration="<N>" src="talking_head_bg.mp4" muted playsinline></video>
+      </div>
+
+      <div class="watermark" data-class="watermark"><span class="at">@</span>tuancuaban</div>
+
+      <div class="hook" data-class="hook"><HOOK_TEXT></div>
+
+      <div class="problem" data-class="problem">
+        <div class="problem-eyebrow">⚡ <EYEBROW_TEXT></div>
+        <div class="problem-highlight"><HIGHLIGHT_TEXT></div>
+        <div class="problem-sub"><SUB_TEXT></div>
+      </div>
+
+      <div class="bar-chart" data-class="bar-chart">
+        <div class="chart-title"><CHART_TITLE></div>
+        <div class="chart-row">
+          <div class="chart-label">Sạc cũ</div>
+          <div class="chart-bar-wrap"><div class="chart-bar old" data-class="bar-old"></div></div>
+          <div class="chart-value">500g</div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">Sạc này</div>
+          <div class="chart-bar-wrap"><div class="chart-bar new" data-class="bar-new"></div></div>
+          <div class="chart-value">80g</div>
+        </div>
+      </div>
+
+      <div class="stamp" data-class="stamp">
+        <div class="stamp-emoji"><EMOJI></div>
+        <div class="stamp-text"><LABEL_TEXT></div>
+      </div>
+
+      <!-- PRODUCT CARD with iOS 26 glass class -->
+      <div class="glass-card product-card" data-class="product-card">
+        <div class="brand">⚡ <BRAND></div>
+        <div class="name"><PRODUCT_NAME></div>
+        <div class="tagline"><TAGLINE></div>
+      </div>
+
+      <div class="iphone-mockup" data-class="iphone-mockup">
+        <div class="iphone-frame">
+          <div class="iphone-screen">
+            <div class="iphone-notch"></div>
+            <div class="charger-attached"><span class="charger-bolt">⚡</span></div>
+          </div>
+        </div>
+        <div class="label">GẮN VÀO LÀ SẠC</div>
+      </div>
+
+      <div class="usp-list" data-class="usp-list">
+        <div class="usp-item" data-class="usp-1">
+          <div class="usp-check">✓</div>
+          <div class="usp-text-wrap"><span class="bold"><USP_1_BOLD></span><span class="desc"><USP_1_DESC></span></div>
+        </div>
+        <div class="usp-item" data-class="usp-2">...</div>
+        <div class="usp-item" data-class="usp-3">...</div>
+        <div class="usp-item" data-class="usp-4">...</div>
+      </div>
+
+      <div class="cta" data-class="cta">
+        <div class="cta-button">MUA NGAY</div>
+        <div class="cta-price"><span class="old"><OLD_PRICE></span><NEW_PRICE></div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const COMPOSITION_ID = document.querySelector('[data-composition-id]').dataset.compositionId;
+        const root = document.querySelector('[data-composition-id]');
+        const videos = root.querySelectorAll('video');
+        videos.forEach(v => v.pause());
+
+        const tl = gsap.timeline({ paused: true });
+
+        // Build timeline - copy from /Users/tuananh4865/.hermes/skills/media/tiktok-product-motion-graphics/references/visual-phases-catalog.md
+        // PHASE 0: watermark always-on
+        tl.fromTo('[data-class="watermark"]', { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.3);
+
+        // ... (PHASE 1-8 from catalog)
+
+        // Sync to video + composition ready
+        function syncVideo(timeSec) { videos.forEach(v => { if (v.duration > 0) v.currentTime = Math.min(timeSec, v.duration); }); }
+        function seekTo(timeSec) { tl.seek(timeSec); syncVideo(timeSec); }
+        window.__seekTo = seekTo;
+        window.__compositionReady = true;
+        window.__timelines = window.__timelines || {};
+        window.__timelines[COMPOSITION_ID] = tl;
+        tl.seek(0);
+      })();
+    </script>
+  </body>
+</html>
+```
+
+Replace `<...>` placeholders. Use `references/visual-phases-catalog.md` for the full GSAP timeline snippets per phase.

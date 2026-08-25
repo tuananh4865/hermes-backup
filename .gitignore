@@ -1,0 +1,132 @@
+# ===== Secrets (CRITICAL — GitHub blocks push) =====
+.env
+.env.*
+*.env
+auth.json
+profiles/**/auth.json
+state-snapshots/**/auth.json
+*.key
+*.pem
+secrets/
+credentials/
+api_key
+MINIMAX_API_KEY
+GITHUB_PAT
+TELEGRAM_BOT_TOKEN
+
+# ===== Media files (exclude khỏi backup) =====
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.m4a
+*.mp3
+*.wav
+*.aac
+*.ogg
+*.flac
+*.zip
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.pdf
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.python-version
+*.egg-info/
+
+# ===== Node =====
+node_modules/
+.npm/
+.yarn/
+
+# ===== macOS =====
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== Logs =====
+*.log
+logs/
+cron/output/
+
+# ===== Large data (heavy files) =====
+*.safetensors
+*.bin
+*.gguf
+*.pt
+*.pth
+*.onnx
+.search_index.json
+.processed/
+fine-tuned-wiki/
+sessions/
+
+# ===== Raw footages + work artifacts (too big, not source data) =====
+Pocket3/
+Footages/
+Edit/
+scratch/
+voice-test-output/
+downloads/
+OpenMontage/
+Workspace/
+dam-me-sage/
+dam-me-api/
+dflash/
+rowboat/
+orchestrator-agent-projects/
+
+# ===== Archive (cleanup logs + old skills, not needed for restore) =====
+_archive/
+archive/
+
+# ===== Local app data (config caches, recordings) =====
+.config/
+.cache/
+.claude/
+.claude.json.backup
+.claude.json
+.npm/
+.yarn/
+.tmp.driveupload/
+.tmp/
+
+# ===== Wiki EXCLUDE entirely (already backed up to my-llm-wiki repo) =====
+wiki/
+
+# ===== Embedded git repos (avoid nested git warnings) =====
+projects/*/
+wiki/**/.git/
+**/.git/
+
+# ===== Outputs + processed data =====
+output/
+outputs/
+.cache/
+.claude/
+.next/
+dist/
+build/

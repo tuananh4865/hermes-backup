@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "Hermes Browser Control",
+  "version": "0.1.0",
+  "description": "Let Hermes Agent control your browser \u2014 automate tasks, fill forms, read pages, take screenshots. Native messaging bridge to Hermes CLI. Self-signed for personal use.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting",
+    "sidePanel",
+    "nativeMessaging",
+    "storage",
+    "contextMenus",
+    "notifications",
+    "webRequest",
+    "http://localhost:9876/*",
+    "ws://localhost:9876/*"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/content-script.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "side_panel": {
+    "default_path": "src/side-panel.html"
+  },
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Hermes Browser Control",
+    "default_icon": {
+      "16": "src/icons/16.png",
+      "32": "src/icons/32.png",
+      "48": "src/icons/48.png",
+      "128": "src/icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "src/icons/16.png",
+    "32": "src/icons/32.png",
+    "48": "src/icons/48.png",
+    "128": "src/icons/128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/icons/*.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

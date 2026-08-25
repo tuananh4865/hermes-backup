@@ -1,0 +1,9 @@
+{
+  "name": "hermes-browser",
+  "version": "0.2.0",
+  "description": "Hermes Browser Control - native host + tools",
+  "private": true,
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

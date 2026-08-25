@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hermes Browser Control</title>
+  <style>
+    :root {
+      --bg: #0e0f12;
+      --surface: #1a1c20;
+      --text: #e6e6e6;
+      --muted: #8a8d93;
+      --accent: #d97706;
+      --ok: #10b981;
+      --err: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 12px 16px;
+      background: var(--surface);
+      border-bottom: 1px solid #2a2d33;
+    }
+    header h1 { font-size: 14px; font-weight: 600; color: var(--accent); }
+    .status-row { font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .status-dot {
+      display: inline-block; width: 8px; height: 8px;
+      border-radius: 50%; margin-right: 6px;
+      background: var(--muted);
+    }
+    .status-dot.connected { background: var(--ok); box-shadow: 0 0 6px var(--ok); }
+    .status-dot.error { background: var(--err); }
+
+    main { flex: 1; overflow-y: auto; padding: 12px; }
+
+    .status-panel, .tools-panel {
+      background: var(--surface);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+    .status-panel dl, .tools-panel dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 8px; }
+    .status-panel dt, .tools-panel dt { color: var(--muted); }
+    .status-panel dd, .tools-panel dd { font-family: ui-monospace, "SF Mono", monospace; word-break: break-all; }
+
+    .section-title {
+      font-size: 11px; color: var(--muted);
+      text-transform: uppercase; margin: 12px 0 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .button-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 6px; }
+    button {
+      padding: 8px 10px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    button:hover { background: #f59e0b; }
+    button:disabled { background: var(--muted); cursor: not-allowed; }
+    button.secondary { background: var(--surface); border: 1px solid #3a3d43; }
+    button.secondary:hover { background: #2a2d33; }
+    button.danger { background: #7f1d1d; }
+
+    .message {
+      padding: 8px 10px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      background: var(--surface);
+      word-break: break-word;
+      font-size: 12px;
+    }
+    .message.user { background: #1f2937; border-left: 3px solid #6b7280; }
+    .message.assistant { background: #292524; border-left: 3px solid var(--accent); }
+    .message.system { background: #1c1917; border-left: 3px solid var(--err); font-style: italic; }
+    .message .meta { font-size: 10px; color: var(--muted); margin-bottom: 3px; }
+    pre {
+      margin: 4px 0 0;
+      font-size: 10px;
+      white-space: pre-wrap;
+      max-height: 200px;
+      overflow: auto;
+      background: rgba(0,0,0,0.3);
+      padding: 4px;
+      border-radius: 3px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 6px 8px;
+      background: #15171b;
+      border: 1px solid #2a2d33;
+      border-radius: 5px;
+      color: var(--text);
+      font-size: 12px;
+    }
+    input[type="text"]:focus { outline: none; border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🔥 Hermes Browser</h1>
+    <div class="status-row">
+      <span class="status-dot" id="statusDot"></span>
+      <span id="statusText">connecting...</span>
+    </div>
+  </header>
+
+  <main id="messages">
+    <div class="status-panel">
+      <dl>
+        <dt>Extension:</dt><dd id="extVersion">—</dd>
+        <dt>Native host:</dt><dd id="hostStatus">checking...</dd>
+        <dt>Active tab:</dt><dd id="activeTab">—</dd>
+      </dl>
+    </div>
+
+    <div class="section-title">TIER 1 — Read</div>
+    <div class="button-row">
+      <button id="tabsBtn">📑 List tabs</button>
+      <button id="readBtn" class="secondary">📄 Read page</button>
+    </div>
+    <div class="button-row">
+      <button id="textBtn" class="secondary">📝 Get text</button>
+      <button id="getStatusBtn" class="secondary">🔍 Status</button>
+    </div>
+
+    <div class="section-title">TIER 2 — Navigate</div>
+    <div class="button-row">
+      <button id="navigateBtn">🌐 Navigate</button>
+      <button id="newTabBtn" class="secondary">➕ New tab</button>
+    </div>
+    <div class="button-row">
+      <button id="closeTabBtn" class="danger">❌ Close tab</button>
+      <button id="pingBtn" class="secondary">🔌 Ping</button>
+    </div>
+
+    <div class="tools-panel" style="margin-top: 12px;">
+      <div class="section-title">Available tools</div>
+      <dd id="toolsList" style="font-size: 10px;">—</dd>
+    </div>
+
+    <div class="section-title">Quick commands</div>
+    <input type="text" id="input" placeholder='Try: "navigate https://example.com"'>
+  </main>
+
+  <div style="padding: 8px 12px; border-top: 1px solid #2a2d33;">
+    <button id="clearBtn" class="secondary" style="width: 100%;">🗑️ Clear messages</button>
+  </div>
+
+  <script src="side-panel.js"></script>
+</body>
+</html>

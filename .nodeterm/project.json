@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "rev": 170,
+  "savedAt": "2026-08-19T15:56:03.856Z",
+  "id": "project-3sj65f",
+  "name": "Hermes",
+  "color": "#32d74b",
+  "viewport": {
+    "x": 412.4207822166681,
+    "y": 707.8153600399983,
+    "zoom": 1
+  },
+  "nodes": [
+    {
+      "id": "term-mrzw8mi2-8",
+      "kind": "terminal",
+      "position": {
+        "x": 66.98652365983367,
+        "y": 79.17496841671722
+      },
+      "size": {
+        "width": 1270,
+        "height": 758
+      },
+      "title": "tìm skill tiktok-video-edit",
+      "titleAuto": true,
+      "color": "#d97757",
+      "group": null,
+      "tags": [],
+      "collapsed": false,
+      "cwd": ".",
+      "agentId": "claude"
+    },
+    {
+      "id": "term-mrzw93ue-9",
+      "kind": "terminal",
+      "position": {
+        "x": 1511.912826097358,
+        "y": -114.87491396576002
+      },
+      "size": {
+        "width": 1015,
+        "height": 765
+      },
+      "title": "Acknowledge Claude Code link",
+      "titleAuto": true,
+      "color": "#d97757",
+      "group": null,
+      "tags": [],
+      "collapsed": false,
+      "cwd": ".",
+      "agentId": "claude"
+    },
+    {
+      "id": "editor-mrzwbhwk-10",
+      "kind": "editor",
+      "position": {
+        "x": -222.63230889616494,
+        "y": -627.8153600399983
+      },
+      "size": {
+        "width": 660,
+        "height": 460
+      },
+      "title": "CLAUDE.md",
+      "titleAuto": true,
+      "color": "#6ac4dc",
+      "group": null,
+      "collapsed": false,
+      "filePath": "/Volumes/Storage-1/Hermes/Workspace/.claude/CLAUDE.md"
+    },
+    {
+      "id": "sticky-ms00ym41-11",
+      "kind": "sticky",
+      "position": {
+        "x": -332.4207822166681,
+        "y": 2.7737966319277803
+      },
+      "size": {
+        "width": 240,
+        "height": 200
+      },
+      "title": "CLAUDE.md",
+      "titleAuto": true,
+      "color": "#ffd60a",
+      "group": null,
+      "collapsed": false,
+      "text": "# LLM Wiki — Schema\n\nThis vault is a persistent, compounding knowledge base. The LLM maintains it; the human curates sources and asks questions.\n\n---\n\n## Structure\n\n```\nMy_Brain/\n├── .claude/\n│   └── CLAUDE.md      ← You are here. Schema and workflows.\n├── raw/               ← Source documents (immutable)\n│   └── [files]\n├── wiki/              ← LLM-owned wiki pages\n│   ├── entities/     ← People, places, orgs, products\n│   ├── concepts/     ← Ideas, frameworks, terms\n│   ├── sources/      ← Document summaries\n│   ├── synthesis/    ← Analyses, comparisons, answers\n│   └── projects/     ← Active projects with status tracking\n├── index.md          ← Wiki catalog\n└── log.md            ← Chronological log\n```\n\n**Raw** = immutable source of truth. **Wiki** = LLM-generated, fully maintained.\n\n---\n\n## Page Format\n\nEvery wiki page has this frontmatter:\n\n```yaml\n---\ntitle: <Page Title>\ntype: entity | concept | source | synthesis | project\ntags: [tag1, tag2, tag3]\nsource-ref: raw/<filename>  # only for source pages\ncreated: YYYY-MM-DD\nupdated: YYYY-MM-DD\n---\n\nFor **project** pages only, add these frontmatter fields:\n\n```yaml\nstatus: active | paused | completed | archived\nphase: <current phase or milestone>\nmilestones:\n  - [YYYY-MM-DD] <milestone description>\nnext: <what needs to happen next>\n```\n\nBody is markdown. Use `[[wikilinks]]` for cross-references.\n\n### Naming\n\n- Filename: lowercase-kebab-case.md (e.g., `attention-mechanism.md`)\n- Page title: Title Case in frontmatter\n- Wikilinks: match the page title exactly\n\n### Tags\n\n- Use lowercase, hyphenated tags\n- Standard tags: `[[#attention]]`, `[[#llm]]`, `[[#memory]]`\n- Tags in frontmatter enable Dataview queries\n\n---\n\n## Operations\n\n### Ingest\n\nTriggered when a source is dropped in `raw/` and you ask me to process it.\n\n**Step 1 — Read**\nRead the source file fully. If it's a long document, read it in chunks and track what you've absorbed.\n\n**Step 2 — Summarize**\nCreate `wiki/sources/<filename>.md`:\n- Key claims and findings\n- Important entities mentioned\n- Key concepts and frameworks\n- Source metadata (title, date, URL if available)\n- Notable quotes or data points\n\n**Step 3 — Update entities**\nCheck if the source introduces new people, places, organizations, or products.\n- Create or update pages in `wiki/entities/`\n- Link entity pages to the new source page\n\n**Step 4 — Update concepts**\nCheck for key ideas, frameworks, or terms.\n- Create or update pages in `wiki/concepts/`\n- Link concept pages to the new source page\n\n**Step 5 — Cross-reference**\nRead `index.md` to find existing pages that connect to the new source.\n- Add links from existing pages to the new source\n- Add links from new pages to existing relevant pages\n\n**Step 6 — Flag contradictions**\nIf the source contradicts existing knowledge, note it in the source page:\n```markdown\n## Contradictions\n- [[wiki/concepts/old-idea]] claims X, but this source says Y\n```\n\n**Step 7 — Update index**\nAdd all new pages to `index.md` under their category with a one-line summary.\n\n**Step 8 — Log**\nAppend to `log.md`:\n```markdown\n## [YYYY-MM-DD] ingest | Source Title\n```\n\n---\n\n### Query\n\n**Step 1 — Check index**\nRead `index.md` to find relevant pages.\n\n**Step 2 — Read relevant pages**\nRead the wiki pages that relate to your question.\n\n**Step 3 — Synthesize**\nGenerate an answer.\n\n**Step 4 — Deliver**\n- Factual, quick questions → respond in chat\n- Analysis, comparisons, complex explorations → create `wiki/synthesis/question-topic.md` and show the markdown\n- If an answer is particularly valuable, ask: \"Should I save this to the wiki?\"\n\n---\n\n### Lint\n\nRun on request or periodically.\n\nCheck for:\n1. **Contradictions** — Do any pages contradict each other?\n2. **Stale claims** — Has newer information superseded older claims?\n3. **Orphan pages** — Any pages with no inbound links?\n4. **Missing concept pages** — Concepts mentioned in multiple places but not given their own page?\n5. **Missing cross-references** — Pages that should link but don't?\n6. **Data gaps** — Areas worth investigating further?\n\nReport findings and propose fixes. I will make changes after you approve.\n\n---\n\n## Index Format\n\n`index.md` is the wiki catalog. Keep it updated on every ingest.\n\n```markdown\n# Index\n\n## Entities\n- [[wiki/entities/name]] — one-line summary | sources: N\n\n## Concepts\n- [[wiki/concepts/name]] — one-line summary | sources: N\n\n## Sources\n- [[wiki/sources/title]] — one-line summary | ingested: YYYY-MM-DD\n\n## Synthesis\n- [[wiki/synthesis/title]] — one-line summary\n\n## Projects\n- [[wiki/projects/name]] — status | phase | next: <what's next>\n```\n\nUpdate atomically — if a page is updated, update its index entry at the same time.\n\n---\n\n## Log Format\n\n`log.md` is append-only. Never edit past entries.\n\n```markdown\n## [YYYY-MM-DD] ingest | Title\n## [YYYY-MM-DD] query | Question summary\n## [YYYY-MM-DD] lint | Findings summary\n## [YYYY-MM-DD] note | Something worth noting\n## [YYYY-MM-DD] project | Created project <name>\n```\n\nEntries start with `## [YYYY-MM-DD]` — parseable with:\n```bash\ngrep \"^## \\[\" log.md | tail -10\n```\n\n---\n\n## Conventions\n\n- **One topic per page** — If a page gets too large, split it\n- **Cross-link liberally** — If page A mentions topic B, link to `[[wiki/concepts/b]]`\n- **Cite sources** — Always link to the `source-ref` when making claims\n- **Update on every ingest** — Don't let the index or log fall behind\n- **Contradictions are features** — Flag them, don't hide them; they lead to insight\n- **Wikilinks over URLs** — Use `[[page]]` syntax, not bare URLs\n\n---\n\n## Co-evolution\n\nThis schema evolves. As the wiki grows, we discover better conventions. When that happens, update this file and the affected existing pages. The schema is the source of truth for how the wiki works.                   "
+    },
+    {
+      "id": "term-ms42dcal-1",
+      "kind": "terminal",
+      "position": {
+        "x": 1496.492776566315,
+        "y": 680.9705834116085
+      },
+      "size": {
+        "width": 640,
+        "height": 440
+      },
+      "title": "Acknowledge Claude Code link",
+      "titleAuto": true,
+      "color": "#d97757",
+      "group": null,
+      "tags": [],
+      "collapsed": false,
+      "cwd": ".",
+      "agentId": "claude"
+    }
+  ],
+  "bridges": [
+    {
+      "id": "bridge-term-mrzw8mi2-8-term-mrzw93ue-9",
+      "source": "term-mrzw8mi2-8",
+      "target": "term-mrzw93ue-9"
+    },
+    {
+      "id": "bridge-term-mrzw8mi2-8-term-ms42dcal-1",
+      "source": "term-mrzw8mi2-8",
+      "target": "term-ms42dcal-1"
+    }
+  ],
+  "ropes": []
+}

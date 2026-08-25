@@ -1,0 +1,43 @@
+{
+  "research_date": "YYYY-MM-DD",
+  "researcher": "Hermes Subagent",
+  "purpose": "Vietnam TikTok Shop product data for script writing",
+  "groups": [
+    {
+      "group": "GROUP_NAME",
+      "products": [
+        {
+          "name": "FULL_PRODUCT_NAME (brand + model + variant)",
+          "brand": "BRAND_NAME",
+          "origin": "COUNTRY/CITY – parent company, founded year",
+          "specs": {
+            "key1": "value1",
+            "key2": "value2"
+          },
+          "price_vnd": 0,
+          "price_note": "Retailer1: Xk; Retailer2: Yk; Sale: Zk",
+          "usp": "1-2 sentence value proposition in Vietnamese",
+          "competitors": [
+            "Competitor 1 (brand, price range)",
+            "Competitor 2 (brand, price range)"
+          ],
+          "user_reviews": "Quote from review site 2026: '...'",
+          "citations": [
+            "https://brand-official.com/product",
+            "https://vn-retailer.vn/product"
+          ]
+        }
+      ]
+    }
+  ],
+  "summary_insights": [
+    "Key takeaway 1 across groups",
+    "Key takeaway 2 about price positioning",
+    "Key takeaway 3 about competitive landscape"
+  ],
+  "limitations": [
+    "OEM product X has no brand website",
+    "Model Y has multiple OEM variants (A = B in different markets)",
+    "VN prices volatile ±20-30% on TikTok Shop"
+  ]
+}

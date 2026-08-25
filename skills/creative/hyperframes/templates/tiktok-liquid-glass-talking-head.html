@@ -1,0 +1,359 @@
+<!--
+  Template: tiktok-liquid-glass-talking-head
+  Purpose: iOS 26 liquid glass card overlay trên talking head hoặc close-up product clip
+  Use case: Anh muốn overlay thẻ kính trên video Pocket3 talking head / demo sản phẩm
+  Verified working: 2026-07-17 (Nate Herk reference applied cho clip sạc dự phòng 32.6s)
+
+  Workflow dùng template này:
+  1. Copy template vào <project>/compositions/<name>.html
+  2. Move file ra <project>/index.html (rename thành index.html — HyperFrames yêu cầu)
+  3. Scale source video 1728×3072 (Pocket3 4K portrait) về 1080×1920 (TikTok spec):
+     ffmpeg -y -i source.MP4 -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2" \
+       -c:v libx264 -preset fast -crf 23 -c:a aac -b:a 128k -movflags +faststart \
+       -t <duration> assets/source/clip_1080x1920.mp4
+  4. Edit copy trong index.html:
+     - Sửa copy card (USP bullets, giá, title)
+     - Sửa hook text (3s đầu)
+     - Sửa CTA button
+     - Sửa product name + giá
+  5. Customize timing trong GSAP timeline:
+     - HOOK (0-3s)
+     - LIQUID GLASS CARD (5-21s)
+     - CTA (24-end)
+  6. Run validation:
+     - npx hyperframes lint        → 0 errors
+     - npx hyperframes check       → PASS (contrast warnings OK)
+     - npx hyperframes render --quality draft --output preview.mp4
+  7. Ship final → copy to /Volumes/Storage-1/Tiktok-Tuan-Anh/<name>_v1_<duration>s.mp4
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Liquid Glass Talking Head Template</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        background: #050508;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+      }
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #000;
+      }
+
+      /* Layer 1: Video background */
+      .video-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      /* Layer 2: Dim overlay (khi card hiện) */
+      .dim-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        opacity: 0;
+      }
+
+      /* Layer 3: iOS 26 Liquid Glass card */
+      .glass-card {
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 880px;
+        min-height: 480px;
+        padding: 56px 60px;
+        border-radius: 40px;
+        background: rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(40px) saturate(180%);
+        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        border: 1.5px solid rgba(255, 255, 255, 0.32);
+        box-shadow:
+          0 32px 64px rgba(0, 0, 0, 0.45),
+          inset 0 1px 0 rgba(255, 255, 255, 0.5),
+          inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+        color: #fff;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+        opacity: 0;
+      }
+
+      .glass-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 40px;
+        background:
+          radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.4) 0%, transparent 40%),
+          radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0.18) 0%, transparent 35%);
+        pointer-events: none;
+        mix-blend-mode: overlay;
+      }
+
+      .card-eyebrow {
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        color: rgba(255, 215, 0, 0.95);
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        text-shadow: 0 2px 12px rgba(255, 215, 0, 0.4);
+      }
+      .card-title {
+        font-size: 78px;
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: -1.5px;
+        margin-bottom: 24px;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+      }
+      .card-subtitle {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 32px;
+      }
+      .card-usp-list { list-style: none; padding: 0; margin: 0; }
+      .card-usp-list li {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.5;
+        padding: 10px 0 10px 48px;
+        position: relative;
+        color: rgba(255, 255, 255, 0.92);
+      }
+      .card-usp-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255, 215, 0, 0.92);
+        color: #000;
+        font-weight: 800;
+        font-size: 24px;
+        box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
+      }
+      .card-price {
+        margin-top: 32px;
+        font-size: 42px;
+        font-weight: 700;
+        color: #FFD700;
+        text-shadow: 0 2px 16px rgba(255, 215, 0, 0.5);
+      }
+      .card-price-old {
+        font-size: 28px;
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: line-through;
+        margin-right: 16px;
+        font-weight: 500;
+      }
+
+      /* Layer 4: Top watermark */
+      .watermark {
+        position: absolute;
+        top: 64px;
+        right: 64px;
+        z-index: 4;
+        font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.7);
+        letter-spacing: 0.4px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+      }
+      .watermark .at { color: rgba(255, 255, 255, 0.95); font-weight: 700; }
+
+      /* Layer 5: HOOK text (3s opening) */
+      .hook-text {
+        position: absolute;
+        z-index: 4;
+        left: 60px;
+        right: 60px;
+        top: 280px;
+        text-align: left;
+        font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        color: #fff;
+        opacity: 0;
+      }
+      .hook-line-1 {
+        font-size: 96px;
+        font-weight: 900;
+        line-height: 1.05;
+        letter-spacing: -2px;
+        text-shadow: 0 6px 32px rgba(0, 0, 0, 0.5);
+        margin-bottom: 16px;
+      }
+      .hook-line-1 .highlight {
+        color: #FFD700;
+        text-shadow: 0 6px 32px rgba(255, 215, 0, 0.5);
+      }
+      .hook-line-2 {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 1.3;
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Layer 6: CTA at end */
+      .cta-block {
+        position: absolute;
+        z-index: 4;
+        left: 60px;
+        right: 60px;
+        bottom: 120px;
+        text-align: center;
+        opacity: 0;
+      }
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+        color: #000;
+        font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        padding: 28px 80px;
+        border-radius: 50px;
+        box-shadow:
+          0 12px 40px rgba(255, 215, 0, 0.4),
+          inset 0 -4px 0 rgba(0, 0, 0, 0.15);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+      .cta-sub {
+        font-size: 28px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 20px;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="tiktok-liquid-glass"
+      data-start="0"
+      data-width="1080"
+      data-height="1920"
+      data-duration="32"
+    >
+      <video
+        id="talking-head-bg"
+        class="video-bg"
+        data-start="0"
+        data-duration="32"
+        src="assets/source/clip_1080x1920.mp4"
+        muted
+        playsinline
+      ></video>
+
+      <div class="dim-overlay" data-class="dim-overlay"></div>
+
+      <div class="hook-text" data-class="hook-text">
+        <div class="hook-line-1">
+          __HOOK_LINE_1__ <span class="highlight">__HOOK_HIGHLIGHT__</span><br />
+          __HOOK_LINE_1_BREAK__
+        </div>
+        <div class="hook-line-2">
+          __HOOK_LINE_2__
+        </div>
+      </div>
+
+      <div class="glass-card" data-class="glass-card">
+        <div class="card-eyebrow">__CARD_EYEBROW__</div>
+        <div class="card-title">
+          __CARD_TITLE_LINE_1__<br />
+          __CARD_TITLE_LINE_2__
+        </div>
+        <div class="card-subtitle">
+          __CARD_SUBTITLE_LINE_1__<br />
+          __CARD_SUBTITLE_LINE_2__
+        </div>
+        <ul class="card-usp-list">
+          <li>__USP_1__</li>
+          <li>__USP_2__</li>
+          <li>__USP_3__</li>
+          <li>__USP_4__</li>
+        </ul>
+        <div class="card-price">
+          <span class="card-price-old">__PRICE_OLD__</span>__PRICE_NEW__
+        </div>
+      </div>
+
+      <div class="cta-block" data-class="cta-block">
+        <div class="cta-button">__CTA_TEXT__</div>
+        <div class="cta-sub">__CTA_SUB__</div>
+      </div>
+
+      <div class="watermark" data-class="watermark">
+        <span class="at">@</span>__HANDLE__
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const COMPOSITION_ID = "tiktok-liquid-glass";
+        const root = document.querySelector('[data-composition-id="tiktok-liquid-glass"]');
+        const video = root.querySelector("video.video-bg");
+        const dim = root.querySelector('[data-class="dim-overlay"]');
+        const card = root.querySelector('[data-class="glass-card"]');
+        const hook = root.querySelector('[data-class="hook-text"]');
+        const cta = root.querySelector('[data-class="cta-block"]');
+        const watermark = root.querySelector('[data-class="watermark"]');
+
+        video.pause();
+
+        const tl = gsap.timeline({ paused: true });
+
+        // PHASE 1: HOOK (0-3s) — text fly-in + fade-out
+        tl.fromTo(hook, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0);
+        tl.to(hook, { opacity: 0, y: -40, duration: 0.4, ease: "power2.in" }, 2.4);
+
+        // Watermark fade-in (always-on, subtle)
+        tl.fromTo(watermark, { opacity: 0 }, { opacity: 0.85, duration: 0.6, ease: "power2.out" }, 0.3);
+
+        // PHASE 2: PRODUCT USP CARD (5-21s) — slide-in + dim
+        tl.fromTo(card, { opacity: 0, scale: 0.85, x: 80 }, { opacity: 1, scale: 1, x: 0, duration: 0.8, ease: "back.out(1.2)" }, 5);
+        tl.fromTo(dim, { opacity: 0 }, { opacity: 1, duration: 0.5 }, 5);
+        tl.to(card, { opacity: 0, scale: 0.95, x: 50, duration: 0.5, ease: "power2.in" }, 21);
+        tl.to(dim, { opacity: 0, duration: 0.5 }, 21);
+
+        // PHASE 3: CTA (24-end) — pop-up
+        tl.fromTo(cta, { opacity: 0, y: 60, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "back.out(1.5)" }, 24);
+
+        const duration = parseFloat(root.dataset.duration) || 32;
+        function seekTo(timeSec) {
+          tl.seek(timeSec);
+          if (video.duration > 0) video.currentTime = Math.min(timeSec, video.duration);
+        }
+        window.__seekTo = seekTo;
+        window.__compositionReady = true;
+        window.__timelines = window.__timelines || {};
+        window.__timelines[COMPOSITION_ID] = tl;
+        tl.seek(0);
+      })();
+    </script>
+  </body>
+</html>

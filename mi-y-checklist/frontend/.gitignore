@@ -1,0 +1,12 @@
+# Build artifacts
+.next/
+node_modules/
+*.tsbuildinfo
+
+# Logs
+*.log
+.DS_Store
+
+# Local env
+.env*.local
+.vercel

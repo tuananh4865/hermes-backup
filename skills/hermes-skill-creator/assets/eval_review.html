@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Hermes Description Eval Review</title>
+<style>
+body { font-family: monospace; max-width: 900px; margin: 2em auto; padding: 0 1em; background: #faf9f5; color: #141413; }
+h1 { border-bottom: 2px solid #141413; padding-bottom: 0.5em; }
+.query { border: 1px solid #b0aea5; padding: 1em; margin: 1em 0; border-radius: 8px; }
+label { margin-right: 1em; }
+button { padding: 0.5em 1em; background: #d97757; color: white; border: none; border-radius: 4px; cursor: pointer; }
+pre { background: #e8e6dc; padding: 1em; border-radius: 4px; overflow-x: auto; }
+</style>
+</head>
+<body>
+<h1>Hermes Description Eval Review</h1>
+<p><strong>Skill:</strong> <span id="skill-name">__SKILL_NAME_PLACEHOLDER__</span></p>
+<p><strong>Current Description:</strong></p>
+<pre id="skill-desc">__SKILL_DESCRIPTION_PLACEHOLDER__</pre>
+
+<h2>Eval Queries</h2>
+<p>Toggle each query's should_trigger based on whether the skill SHOULD or SHOULD NOT trigger for that prompt. After editing, click "Export Eval Set" to download JSON.</p>
+<div id="queries"></div>
+<button onclick="exportEvalSet()">Export Eval Set</button>
+
+<script>
+const SKILL_NAME = "__SKILL_NAME_PLACEHOLDER__";
+const EVAL_DATA = __EVAL_DATA_PLACEHOLDER__;
+
+function renderQueries() {
+  const container = document.getElementById('queries');
+  EVAL_DATA.forEach((item, idx) => {
+    const div = document.createElement('div');
+    div.className = 'query';
+    div.innerHTML = `
+      <p><strong>Query ${idx+1}:</strong></p>
+      <p>${item.query}</p>
+      <label><input type="radio" name="trigger-${idx}" value="true" ${item.should_trigger ? 'checked' : ''}> SHOULD trigger</label>
+      <label><input type="radio" name="trigger-${idx}" value="false" ${!item.should_trigger ? 'checked' : ''}> SHOULD NOT trigger</label>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function exportEvalSet() {
+  const result = EVAL_DATA.map((item, idx) => {
+    const radio = document.querySelector(`input[name="trigger-${idx}"]:checked`);
+    return { query: item.query, should_trigger: radio.value === 'true' };
+  });
+  const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'eval_set.json';
+  a.click();
+}
+
+renderQueries();
+</script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!-- tiktok-diverse-motion.html — 8-phase diverse motion text for TikTok (verified 2026-07-16) -->
+<!-- Drop into compositions/ folder. Replace __PHASES_DATA__ with your phase array. -->
+<template id="tiktok-diverse-motion-template">
+  <div
+    data-composition-id="tiktok-diverse-motion"
+    data-width="1080"
+    data-height="1920"
+    data-duration="110"
+  >
+    <div id="phrases-layer"></div>
+    <div id="watermark">@ tuancuaban</div>
+
+    <style>
+      [data-composition-id="tiktok-diverse-motion"] {
+        background: transparent;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+        color: white;
+        overflow: hidden;
+      }
+
+      #phases-layer {
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      /* CRITICAL: phase container stays visible (opacity: 1) — animate TEXT inside */
+      .phase {
+        position: absolute;
+        inset: 0;
+        opacity: 1;
+        z-index: 5;
+        pointer-events: none;
+      }
+
+      /* PHASE 1: HOOK — huge fullscreen dark */
+      .phase-hook {
+        background: rgba(0, 0, 0, 0.95);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .phase-hook .text {
+        font-weight: 900;
+        font-size: 92px;
+        color: #FFD700;
+        text-align: center;
+        line-height: 1.2;
+        text-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+        max-width: 900px;
+        padding: 0 40px;
+      }
+
+      /* PHASE 2: PROBLEM — overlay around person */
+      .phase-problem { background: transparent; }
+      .phase-problem .text {
+        font-weight: 800;
+        font-size: 64px;
+        color: #FFFFFF;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.95), 0 0 30px rgba(255, 0, 0, 0.4);
+        max-width: 700px;
+        line-height: 1.15;
+        padding: 0 20px;
+      }
+      .phase-problem .text.tl { position: absolute; top: 200px; left: 60px; }
+      .phase-problem .text.tr { position: absolute; top: 200px; right: 60px; text-align: right; }
+      .phase-problem .text.ml { position: absolute; top: 50%; left: 60px; transform: translateY(-50%); }
+      .phase-problem .text.mr { position: absolute; top: 50%; right: 60px; text-align: right; transform: translateY(-50%); }
+
+      /* PHASE 3: USP_BULLET — checklist left */
+      .phase-usp_bullet {
+        background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 60%, transparent 100%);
+      }
+      .phase-usp_bullet .text {
+        font-family: Menlo, monospace;
+        font-weight: 800;
+        font-size: 52px;
+        color: #00E5FF;
+        text-shadow: 0 2px 12px rgba(0, 229, 255, 0.7), 0 4px 16px rgba(0, 0, 0, 0.9);
+        position: absolute;
+        left: 80px;
+        line-height: 1.3;
+        max-width: 750px;
+        padding: 16px 24px;
+        background: rgba(0, 0, 0, 0.5);
+        border-left: 6px solid #00E5FF;
+        border-radius: 4px;
+      }
+      .phase-usp_bullet .text.t1 { top: 250px; }
+      .phase-usp_bullet .text.t2 { top: 430px; }
+      .phase-usp_bullet .text.t3 { top: 610px; }
+      .phase-usp_bullet .text.t4 { top: 790px; }
+      .phase-usp_bullet .text.warning {
+        color: #FF4444 !important;
+        border-left-color: #FF4444 !important;
+      }
+
+      /* PHASE 4: SOLUTION — split screen swap */
+      .phase-solution { background: transparent; }
+      .phase-solution .text {
+        font-weight: 800;
+        font-size: 58px;
+        color: #FFFFFF;
+        text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9);
+        max-width: 800px;
+        line-height: 1.2;
+        padding: 20px 28px;
+        border-radius: 12px;
+      }
+      .phase-solution .text.left {
+        position: absolute;
+        left: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 68, 68, 0.25);
+        border: 3px solid rgba(255, 68, 68, 0.8);
+      }
+      .phase-solution .text.right {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 215, 0, 0.25);
+        border: 3px solid rgba(255, 215, 0, 0.95);
+        color: #FFD700;
+        font-size: 70px;
+        text-align: center;
+      }
+
+      /* PHASE 5: INTRO_PRODUCT — overlay bottom caption */
+      .phase-intro_product { background: transparent; }
+      .phase-intro_product .text {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        color: #FFD700;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.95), 0 0 40px rgba(255, 215, 0, 0.5);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        line-height: 1.2;
+        max-width: 950px;
+        padding: 0 30px;
+      }
+      .phase-intro_product .text.t1 {
+        bottom: 320px;
+        font-size: 90px;
+        font-style: normal;
+        font-weight: 900;
+      }
+      .phase-intro_product .text.t2 {
+        bottom: 250px;
+        font-size: 50px;
+      }
+      .phase-intro_product .text.t3 {
+        bottom: 190px;
+        font-size: 56px;
+      }
+      .phase-intro_product .text.t4 {
+        bottom: 130px;
+        font-size: 50px;
+      }
+
+      /* PHASE 6: HOW_TO_USE — step counter bottom */
+      .phase-how_to_use { background: transparent; }
+      .phase-how_to_use .text {
+        font-family: Menlo, monospace;
+        font-weight: 800;
+        font-size: 56px;
+        color: #FFFFFF;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.95);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 280px;
+        text-align: center;
+        line-height: 1.2;
+        padding: 18px 32px;
+        background: rgba(0, 0, 0, 0.82);
+        backdrop-filter: blur(16px);
+        border-radius: 16px;
+        border-left: 6px solid #00FF88;
+        max-width: 920px;
+      }
+      .phase-how_to_use .text .step-num {
+        display: inline-block;
+        background: #00FF88;
+        color: #000;
+        padding: 4px 16px;
+        border-radius: 8px;
+        margin-right: 16px;
+        font-size: 48px;
+      }
+
+      /* PHASE 7: CTA — corner call to action */
+      .phase-cta { background: transparent; }
+      .phase-cta .text {
+        font-weight: 900;
+        color: #FF1493;
+        text-shadow: 0 4px 24px rgba(255, 20, 147, 0.8), 0 0 40px rgba(255, 20, 147, 0.5);
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+        line-height: 1.1;
+        padding: 24px 36px;
+        background: rgba(0, 0, 0, 0.85);
+        border: 4px solid #FF1493;
+        border-radius: 16px;
+        max-width: 480px;
+      }
+      .phase-cta .text.pulse {
+        animation: ctaPulse 1.2s ease-in-out infinite;
+      }
+      @keyframes ctaPulse {
+        0%, 100% { transform: translateY(-50%) scale(1); }
+        50% { transform: translateY(-50%) scale(1.08); box-shadow: 0 8px 40px rgba(255, 20, 147, 0.6); }
+      }
+
+      /* PHASE 8: CLOSING — fullscreen dark final */
+      .phase-closing {
+        background: rgba(0, 0, 0, 0.92);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .phase-closing .text {
+        font-weight: 900;
+        color: #FFD700;
+        text-align: center;
+        line-height: 1.15;
+        text-shadow: 0 0 60px rgba(255, 215, 0, 0.9), 0 0 100px rgba(255, 215, 0, 0.5);
+      }
+
+      /* Watermark — keep `<space>` between @ and tên to avoid font aliasing */
+      #watermark {
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+        z-index: 100;
+        opacity: 0;
+        white-space: pre;
+      }
+    </style>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["tiktok-diverse-motion"] = tl;
+
+      const phasesData = [
+__PHASES_DATA__
+      ];
+
+      console.log('[diverse-motion] Loaded phases:', phasesData.length);
+
+      // Build phase DOMs
+      const layer = document.querySelector('[data-composition-id="tiktok-diverse-motion"] #phrases-layer');
+
+      phasesData.forEach((phase) => {
+        const phaseDiv = document.createElement('div');
+        phaseDiv.className = `phase phase-${phase.id.toLowerCase()}`;
+        phaseDiv.dataset.id = phase.id;
+
+        phase.phrases.forEach((phrase) => {
+          const textDiv = document.createElement('div');
+          textDiv.className = `text ${phrase.position || ''} ${phrase.type || ''}`;
+          textDiv.dataset.phaseId = phase.id;
+          textDiv.dataset.start = phrase.start;
+          textDiv.dataset.end = phrase.end;
+          textDiv.textContent = phrase.text;
+
+          if (phrase.size) {
+            textDiv.style.fontSize = phrase.size + 'px';
+          }
+          if (phrase.step) {
+            const stepNum = document.createElement('span');
+            stepNum.className = 'step-num';
+            stepNum.textContent = phrase.step;
+            textDiv.insertBefore(stepNum, textDiv.firstChild);
+          }
+
+          phaseDiv.appendChild(textDiv);
+        });
+
+        layer.appendChild(phaseDiv);
+      });
+
+      // Per-phase animation dispatcher
+      phasesData.forEach((phase) => {
+        const phaseEl = layer.querySelector(`[data-id="${phase.id}"]`);
+
+        // Fade phase background only for opaque-bg phases
+        if (phase.bg && phase.bg !== 'transparent' && !phase.bg.startsWith('rgba(0,0,0')) {
+          tl.to(phaseEl, { opacity: 1, duration: 0.3 }, phase.start);
+          tl.to(phaseEl, { opacity: 0, duration: 0.3 }, phase.end);
+        }
+
+        phase.phrases.forEach((phrase) => {
+          const textEl = phaseEl.querySelector(`[data-start="${phrase.start}"]`);
+          if (!textEl) return;
+
+          const start = phrase.start;
+          const end = phrase.end;
+
+          switch (phase.id) {
+            case 'HOOK':
+              gsap.set(textEl, { opacity: 0, scale: 0.7 });
+              tl.to(textEl, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.5)" }, start);
+              tl.to(textEl, { opacity: 0, duration: 0.2 }, end);
+              break;
+
+            case 'PROBLEM':
+              gsap.set(textEl, { opacity: 0, x: phrase.position?.includes('right') ? 100 : -100 });
+              tl.to(textEl, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, start);
+              tl.to(textEl, { opacity: 0, x: phrase.position?.includes('right') ? 100 : -100, duration: 0.25 }, end);
+              break;
+
+            case 'USP_BULLET':
+              gsap.set(textEl, { opacity: 0, x: -50, scale: 0.8 });
+              tl.to(textEl, { opacity: 1, x: 0, scale: 1, duration: 0.3, ease: "back.out(1.5)" }, start);
+              tl.to(textEl, { opacity: 0.4, duration: 0.2 }, end);
+              break;
+
+            case 'SOLUTION':
+              gsap.set(textEl, { opacity: 0, x: -200 });
+              tl.to(textEl, { opacity: 1, x: 0, duration: 0.4, ease: "power2.out" }, start);
+              tl.to(textEl, { opacity: 0, x: -100, duration: 0.25 }, end);
+              break;
+
+            case 'INTRO_PRODUCT':
+              gsap.set(textEl, { opacity: 0, scale: 0.6 });
+              tl.to(textEl, { opacity: 1, scale: 1, duration: 0.4, ease: "elastic.out(1, 0.5)" }, start);
+              tl.to(textEl, { opacity: 0, scale: 0.8, duration: 0.25 }, end);
+              break;
+
+            case 'HOW_TO_USE':
+              gsap.set(textEl, { opacity: 0, y: 40 });
+              tl.to(textEl, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, start);
+              tl.to(textEl, { opacity: 0, y: -20, duration: 0.2 }, end);
+              break;
+
+            case 'CTA':
+              if (phrase.text && phrase.text.includes('BẤM LINK')) {
+                textEl.classList.add('pulse');
+              }
+              gsap.set(textEl, { opacity: 0, scale: 0.5 });
+              tl.to(textEl, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, start);
+              tl.to(textEl, { opacity: 0, scale: 0.7, duration: 0.3 }, end);
+              break;
+
+            case 'CLOSING':
+              gsap.set(textEl, { opacity: 0, scale: 0.3 });
+              tl.to(textEl, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2.5)" }, start);
+              tl.to(textEl, { opacity: 0, scale: 1.2, duration: 0.3 }, end);
+              break;
+
+            default:
+              gsap.set(textEl, { opacity: 0 });
+              tl.to(textEl, { opacity: 1, duration: 0.2 }, start);
+              tl.to(textEl, { opacity: 0, duration: 0.2 }, end);
+          }
+        });
+      });
+
+      // Watermark fade in/out
+      tl.fromTo('#watermark', { opacity: 0 }, { opacity: 1, duration: 0.5 }, 1);
+      tl.to('#watermark', { opacity: 0, duration: 0.5 }, 108);
+    </script>
+  </div>
+</template>

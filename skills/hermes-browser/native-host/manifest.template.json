@@ -1,0 +1,9 @@
+{
+  "name": "com.hermes.browser_extension",
+  "description": "Hermes Browser Control — bridge between Chrome extension and Hermes CLI",
+  "path": "__HOST_SCRIPT_PATH__",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://__EXTENSION_ID__/"
+  ]
+}

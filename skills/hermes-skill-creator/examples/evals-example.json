@@ -1,0 +1,23 @@
+{
+  "skill_name": "hermes-skill-creator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Anh muốn em viết skill mới để edit video TikTok theo flow 9 bước (transcript → cut → speed → render). Trigger khi user nói 'edit clip', 'làm clip', 'TikTok edit'.",
+      "expected_output": "Một skill folder hoàn chỉnh với SKILL.md (frontmatter + body), scripts/ cho 9 bước, examples/ cho 1 sample transcript. Skill trigger được khi user nói 'edit clip'.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Em build xong skill X nhưng không trigger khi user nói 'tạo skill'. Hãy giúp em optimize description để trigger đúng contexts.",
+      "expected_output": "eval_set.json với 20 queries (10 should + 10 should-not), benchmark.json so sánh old vs new description trigger rate, best_description mới với 'pushy' trigger contexts.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "So sánh 2 version skill: V1 có 4 bước manual, V2 có 9 bước tự động. Output nào tốt hơn cho user edit video TikTok?",
+      "expected_output": "Blind A/B comparison report: V2 wins vì user edit TikTok cần flow 9 bước tự động (Whisper + speed + render), V1 manual dễ miss steps.",
+      "files": []
+    }
+  ]
+}

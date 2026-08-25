@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/Users/tuananh4865/.hermes/logs/curator/20260726-083523",
+  "last_run_at": "2026-07-26T08:35:23.991635+00:00",
+  "last_run_duration_seconds": 4.148525,
+  "last_run_summary": "auto: 5 marked stale, 3 reactivated; llm: skipped (consolidation off)",
+  "last_run_summary_shown_at": "2026-07-26T08:35:23.991635+00:00",
+  "paused": false,
+  "run_count": 12
+}

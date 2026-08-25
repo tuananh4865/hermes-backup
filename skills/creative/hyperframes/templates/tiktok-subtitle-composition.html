@@ -1,0 +1,127 @@
+<template id="tiktok-subtitle-template">
+  <div
+    data-composition-id="tiktok-subtitle"
+    data-width="1080"
+    data-height="1920"
+    data-duration="110"
+  >
+    <div id="phrases-layer"></div>
+    <div id="brand-watermark">@tuancuaban</div>
+
+    <style>
+      [data-composition-id="tiktok-subtitle"] {
+        background: transparent;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+        color: white;
+        overflow: hidden;
+      }
+      #phrases-layer { position: absolute; inset: 0; z-index: 10; pointer-events: none; }
+      .phrase {
+        position: absolute;
+        left: 50%;
+        bottom: 280px;
+        transform: translateX(-50%) translateY(20px) scale(0.95);
+        max-width: 920px;
+        text-align: center;
+        opacity: 0;
+        z-index: 50;
+      }
+      .phrase-text {
+        display: inline-block;
+        padding: 16px 32px;
+        background: rgba(0, 0, 0, 0.78);
+        backdrop-filter: blur(16px);
+        border-radius: 20px;
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1.4;
+        color: #FFFFFF;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+      }
+      .word {
+        display: inline-block;
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0 2px;
+      }
+      .word.active {
+        color: #FFD700 !important;
+        transform: scale(1.15);
+        text-shadow: 0 0 24px rgba(255, 215, 0, 0.9);
+      }
+      .word.spoken { color: rgba(255, 255, 255, 0.95); }
+      #brand-watermark {
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.9);
+        z-index: 60;
+        opacity: 0;
+      }
+    </style>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["tiktok-subtitle"] = tl;
+
+      // Phrases array: [{start, end, text}, ...]
+      // Generated from Whisper word-level timestamps
+      // KEEP ≤ 30 PHRASES (HyperFrames DOM limit)
+      const phrasesData = [
+__PHRASES_DATA__
+      ];
+
+      // Build phrase DOM
+      const layer = document.querySelector('[data-composition-id="tiktok-subtitle"] #phrases-layer');
+
+      phrasesData.forEach((phrase, pIdx) => {
+        const phraseDiv = document.createElement('div');
+        phraseDiv.className = 'phrase';
+        phraseDiv.dataset.index = pIdx;
+
+        const textDiv = document.createElement('div');
+        textDiv.className = 'phrase-text';
+
+        const textStr = (phrase && phrase.text) ? String(phrase.text) : '';
+        const words = textStr.split(/\s+/).filter(w => w.length > 0);
+        words.forEach((w) => {
+          const wordSpan = document.createElement('span');
+          wordSpan.className = 'word';
+          wordSpan.textContent = w;
+          textDiv.appendChild(wordSpan);
+        });
+
+        phraseDiv.appendChild(textDiv);
+        layer.appendChild(phraseDiv);
+      });
+
+      // Animate: fade in/out + word-by-word highlight
+      const phraseEls = layer.querySelectorAll('.phrase');
+      phrasesData.forEach((phrase, pIdx) => {
+        const phraseEl = phraseEls[pIdx];
+        const words = phraseEl.querySelectorAll('.word');
+
+        tl.to(phraseEl, { opacity: 1, y: 0, scale: 1, duration: 0.2, ease: "power2.out" }, phrase.start);
+        tl.to(phraseEl, { opacity: 0, duration: 0.15, ease: "power2.in" }, phrase.end);
+
+        const phraseDur = phrase.end - phrase.start;
+        if (phraseDur > 0 && words.length > 0) {
+          const wordDur = phraseDur / words.length;
+          words.forEach((wordEl, wIdx) => {
+            const wordStart = phrase.start + (wIdx * wordDur);
+            tl.call(() => {
+              words.forEach(w => w.classList.remove('active'));
+              wordEl.classList.add('active');
+              wordEl.classList.add('spoken');
+            }, [], wordStart);
+          });
+        }
+      });
+
+      tl.fromTo('#brand-watermark', { opacity: 0 }, { opacity: 1, duration: 0.5 }, 0);
+    </script>
+  </div>
+</template>

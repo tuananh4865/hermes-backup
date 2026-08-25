@@ -1,0 +1,85 @@
+# iOS 26 Liquid Glass Card CSS
+
+Reusable CSS for the "iOS 26 frosted glass" card style (referenced in Nate Herk video reference and Tuấn Anh's preferred aesthetic).
+
+```css
+.glass-card {
+  position: absolute;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 32px;
+  padding: 40px 36px;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+  opacity: 0;
+}
+
+/* Corner shine (iOS 26 signature: light gradient from top-left + soft from bottom-right) */
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.4) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0.2) 0%, transparent 35%);
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* Variant: smaller card */
+.glass-card-compact {
+  /* Same as above with smaller padding + radius */
+  border-radius: 20px;
+  padding: 20px 24px;
+}
+
+/* Variant: with backdrop dim effect */
+.glass-card-overlay {
+  /* Use with a 0.5-opacity black overlay underneath to make card "pop" */
+  background: rgba(255, 255, 255, 0.12);  /* slightly more transparent */
+  backdrop-filter: blur(40px) saturate(200%);
+}
+```
+
+## Alternative: iOS 26 Notification style (smaller, denser)
+
+For bullet lists and notification-like elements:
+
+```css
+.glass-notification {
+  background: rgba(40, 40, 50, 0.55);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  padding: 20px 28px;
+  color: #fff;
+}
+
+.glass-notification-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.glass-notification-body {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+```
+
+## Tips
+
+- Always include `-webkit-backdrop-filter` for Safari compatibility
+- Use `mix-blend-mode: overlay` on the ::before corner shine for the right Apple look
+- For text on glass cards, use bold weight (700+) and slightly larger size for readability
+- Avoid placing text near the rounded corners (clip artifact risk)

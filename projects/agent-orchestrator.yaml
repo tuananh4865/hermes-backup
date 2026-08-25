@@ -1,0 +1,17 @@
+port: 3001
+defaults:
+  runtime: tmux
+  agent: claude-code
+  workspace: worktree
+  notifiers: []
+projects:
+  orchestrator-agent-projects:
+    name: Orchestrator Agent Projects
+    sessionPrefix: pft
+    repo: tuananh4865/orchestrator-agent-projects
+    path: /Volumes/Storage-1/Hermes/projects/orchestrator-agent-projects
+    defaultBranch: main
+    agentRules: |-
+      Always run tests before pushing.
+      Use conventional commits (feat:, fix:, chore:, docs:, refactor:, test:).
+      Write clear commit messages.
